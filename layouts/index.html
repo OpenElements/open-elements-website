@@ -1,0 +1,65 @@
+{{ define "main" }}
+
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+
+      <section class="section">
+        <div class="container">
+            <article class="media icon-box">
+                <figure class="media-left">
+                  <p class="image">
+                    <img src="{{ printf "/images/laptop-globe.svg" | relURL }}">
+                  </p>
+                </figure>
+                <div class="media-content mt-50">
+                  <div class="content">
+                    <p>
+                      <span class="icon-box-title">Open Doors</span>
+                      <span class="icon-box-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="media icon-box">
+                <figure class="media-left">
+                  <p class="image">
+                    <img src="{{ printf "/images/laptop-globe.svg" | relURL }}">
+                  </p>
+                </figure>
+                <div class="media-content mt-50">
+                  <div class="content">
+                    <p>
+                      <span class="icon-box-title">Open Doors</span>
+                      <span class="icon-box-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="media icon-box">
+                <figure class="media-left">
+                  <p class="image">
+                    <img src="{{ printf "/images/laptop-globe.svg" | relURL }}">
+                  </p>
+                </figure>
+                <div class="media-content mt-50">
+                  <div class="content">
+                    <p>
+                      <span class="icon-box-title">Open Doors</span>
+                      <span class="icon-box-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+        </div>
+      </section>
+
+
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+{{ end }}
