@@ -1,0 +1,19 @@
+{
+  "name": "hugo-fresh",
+  "version": "1.0.0",
+  "description": "[![Documentation](https://img.shields.io/badge/Documentation-red)](https://stefma.github.io/hugo-fresh) \r [![Live Demo](https://img.shields.io/badge/Live%20Demo-blue)](https://hugo-fresh.vercel.app)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css",
+    "watch": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
