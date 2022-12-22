@@ -43,7 +43,9 @@ params:
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: about us
-    url: /posts/my-first-post
+    url: /articles/first-article
+  - title: about
+    url: /about/
   - title: Sign up
     url: /
     button: true
