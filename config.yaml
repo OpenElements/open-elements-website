@@ -1,7 +1,7 @@
 baseURL: http://something-fresh.org/
 languageCode: en-us
-title: Hugo Fresh Theme
-theme: hugo-fresh
+title: Open Elements
+theme: open-elements
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
 # Disables warnings
 disableKinds:
@@ -27,8 +27,8 @@ params:
     width: 260
     height: 32
   font:
-    name: "Open Sans"
-    sizes: [400,600]
+    name: "Montserrat"
+    sizes: [300,400,500,600,700,800,900]
   hero:
     # Main hero title
     title: Manage. Deploy.
