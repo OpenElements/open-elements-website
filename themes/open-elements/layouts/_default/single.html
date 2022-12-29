@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class=" scroll-smooth" lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "css.html" . }}
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+  </head>
+  <body class="bg-slate antialiased">
+    <main id="top">
+      {{ block "main" . }}
+
+      {{ partial "single/single.html" . }}
+  
+      {{ end }}
+    </main>
+
+
+    {{ partial "javascript.html" . }}
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    var swiper = new Swiper(".gallerySwiper", {
+        slidesPerView: 3,
+        grid: {
+          rows: 2,
+        },
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".next",
+          prevEl: ".prev",
+        },
+
+
+    });
+  </script>
+  </body>
+</html>
