@@ -21,6 +21,7 @@
 {{ $textBg := resources.Get "/illustrations/text-bg-1.svg" }}
 {{ $textBg2 := resources.Get "/illustrations/text-bg-2.svg" }}
 {{ $connectedLine := resources.Get "/illustrations/connected-line.svg" }}
+{{ $connectedLineVertical := resources.Get "/illustrations/vertical-line.svg" }}
 {{ $line1 := resources.Get "/illustrations/line-1.svg" }}
 {{ $line2 := resources.Get "/illustrations/line-2.svg" }}
 {{ $line3 := resources.Get "/illustrations/line-3.svg" }}
@@ -29,32 +30,45 @@
 {{ $randomStar := resources.Get "/illustrations/random-star.svg" }}
 {{ $bullet := resources.Get "/illustrations/bullet.svg" }}
 
+{{ $mArrow1 := resources.Get "/illustrations/m-arrow-1.svg" }}
+{{ $mArrow2 := resources.Get "/illustrations/m-arrow-2.svg" }}
+{{ $click := resources.Get "/illustrations/click.svg" }}
+{{ $click2 := resources.Get "/illustrations/click-2.svg" }}
+{{ $section5m := resources.Get "/illustrations/section-5m.svg" }}
+{{ $section5m2 := resources.Get "/illustrations/section-5m2.svg" }}
+
 
 <div class="relative">
-    <div class="container max-w-7xl mx-auto mt-12">
-        <div class="flex items-center">
-            <div class="w-full relative mt-16">
-                <img class="absolute 2xl:right-20 right-12 -top-28" src="{{ $arrow1.RelPermalink }}" />
-                <img class="absolute right-0 -bottom-64" src="{{ $arrow2.RelPermalink }}" />
-                <p class="text-[28px] font-medium text-green mb-3">
+    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
+        <div class="flex lg:flex-row flex-col items-center gap-8">
+            <div class="w-full relative sm:mt-16 mt-6">
+                <img class="absolute 2xl:right-20 right-12 -top-28 lg:block hidden" src="{{ $arrow1.RelPermalink }}" />
+                <img class="absolute right-0 -bottom-64 lg:block hidden xl:w-60 w-48" src="{{ $arrow2.RelPermalink }}" />
+                
+                <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3">
                     Open Source for you
                 </p>
                 <h1 class="h1 max-w-2xl">
-                    <span class="relative inline z-10">We trust in the</span>
-                    <div class="relative justify-center inline-flex items-center px-20 -ml-20 -mr-20 z-0">
-                        <img class="absolute w-56 inset-0 ml-12 -mt-2.5" src="{{ $heroTextBg.RelPermalink }}" />
-                        <span class="relative">power</span>
+                    <div class="lg:inline sm:block inline">
+                        <span class="relative inline z-10">We trust in the</span>
+                        <div class="relative justify-center inline-flex items-center sm:px-20 px-5 -ml-5 -mr-5 sm:-ml-20 sm:-mr-20 z-0">
+                            <img class="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-12 sm:-mt-2.5 -mt-1" src="{{ $heroTextBg.RelPermalink }}" />
+                            <span class="relative">power</span>
+                        </div>
                     </div>
-                    <span class="relative inline">of Open Source!</span>
+                    <span>of</span>
+                    <span class="relative sm:inline block"> Open Source!</span>
                 </h1>
             </div>
-            <div class="2xl:max-w-md max-w-sm w-full shrink-0">
+            <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative">
+                <img class="absolute sm:-right-24 md:-right-40 -right-8 sm:bottom-2 bottom-0 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
+                <img class="absolute -bottom-6 md:-left-40 sm:-left-24 -left-10 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
                 <img src="{{ $heroCircle.RelPermalink }}" alt="" class="w-full">
             </div>
         </div>
     </div>
 
-    <div class="container max-w-7xl mx-auto mt-20 relative">
+    <div class="container mx-auto xl:mt-20 mt-12 relative lg:block hidden">
         <div class="flex items-center gap-2 flex-wrap justify-center">
             <span class="badge-purple">Open Knowledge</span>
             <span class="badge-purple">Open Events</span>
@@ -66,23 +80,30 @@
         </div>
     </div>
 
-    <div class="container mt-24 relative pb-20">
-        <div class="flex items-center justify-between gap-28">
-            <div class="w-1/2 relative">
-                <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute -bottom-72 right-0">
-                <img src="{{ $section2.RelPermalink }}" alt="" class=" w-full">
+    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm sm:mt-24 mt-16 relative sm:pb-20 pb-14">
+        <div class="flex lg:flex-row flex-col items-center justify-between 2xl:gap-28 xl:gap-16 sm:gap-12 gap-6">
+            <div class="lg:w-1/2 w-full relative">
+                <div class="lg:hidden flex items-start gap-6 sm:mb-12 mb-7 relative">
+                    <h2 class="h2">
+                        Open Knowledge
+                    </h2>
+                    <img src="{{ $star.RelPermalink }}" alt="" class="absolute sm:w-20 w-14 sm:-top-20 -top-12 sm:right-28 right-0">
+                </div>
+                <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute xl:-bottom-64 -bottom-48 right-0 xl:w-64 w-48 lg:block hidden">
+                <img src="{{ $section2.RelPermalink }}" alt="" class=" lg:w-full sm:max-w-sm mx-auto">
             </div>
-            <div class="w-1/2 relative">
-                <img src="{{ $section2bg.RelPermalink }}" alt="" class="absolute w-96 top-14 -right-40">
+            <div class="lg:w-1/2 w-full relative">
+                <img src="{{ $section2bg.RelPermalink }}" alt="" class="absolute w-96 lg:top-14 -right-40">
+                <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute sm:w-32 w-20 right-0 sm:-bottom-36 -bottom-24 lg:hidden">
                 <div class="relative">
-                    <div class="flex items-start gap-6">
+                    <div class="lg:flex items-start gap-6 hidden">
                         <h2 class="h2">
                             Open <br /> Knowledge
                         </h2>
                         <img src="{{ $star.RelPermalink }}" alt="" class="w-16 -mt-8">
                     </div>
 
-                    <p class="mt-5">
+                    <p class="lg:mt-5">
                         The open availability of well prepared knowledge is essential for us, that's why we share most
                         of our know-how in
                     </p>
@@ -120,20 +141,20 @@
     </div>
 
     <div class="bg-slate">
-        <div class="container max-w-7xl mx-auto py-16">
-            <div class="flex items-center justify-between gap-28">
+        <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:py-16 py-12">
+            <div class="flex items-center lg:flex-row flex-col-reverse justify-between xl:gap-28 lg:gap-20 gap-5">
 
-                <div class="w-1/2 relative">
-                    <img src="{{ $arrow4.RelPermalink }}" alt="" class=" absolute -bottom-80 -right-32">
+                <div class="lg:w-1/2 w-full relative">
+                    <img src="{{ $arrow4.RelPermalink }}" alt="" class=" absolute 2xl:w-52 xl:w-44 lg:w-36 sm:w-40 w-32 2xl:-bottom-72 xl:-bottom-56 lg:-bottom-48 lg:-right-20 lg:left-auto -left-14 sm:-bottom-32 -bottom-24">
                     <div class="">
-                        <div class="bg-rose-100 border border-rose inline-block px-6 py-3 rounded-sm relative">
+                        <div class="bg-rose-100 border border-rose lg:inline-block px-6 py-3 rounded-sm relative hidden">
                             <h2 class="h2 text-rose">
                                 Open Events
                             </h2>
                             <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6"
                                 data-icon="clarity:cursor-arrow-solid"></span>
                         </div>
-                        <p class="mt-8">
+                        <p class="lg:mt-8">
                             We organize the <a href="" class="link-rose">Java User Group Dortmund</a> and enable with
                             our sponsoring the realization of free meetups and physical events in the metropolitan
                             region Rhein-Ruhr. At the <a href="" class="link-rose">JavaLand conference</a> and the one
@@ -142,25 +163,40 @@
                             basis in the <a href="" class="link-rose">German-speaking Java</a> and IT scene.
                         </p>
                     </div>
-
                 </div>
-
-                <div class="w-1/2 ">
-                    <img src="{{ $section3.RelPermalink }}" alt="" class="w-full">
+                <div class="lg:w-1/2 w-full flex flex-col items-center justify-center">
+                    <div class="bg-rose-100 border border-rose lg:hidden inline-block px-6 py-3 rounded-sm relative sm:mb-12 mb-7 ">
+                        <h2 class="h2 text-rose">
+                            Open Events
+                        </h2>
+                        <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6 sm:block hidden"
+                            data-icon="clarity:cursor-arrow-solid"></span>
+                            <img src="{{ $click.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                    </div>
+                    <img src="{{ $section3.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container max-w-7xl mx-auto relative py-28">
-        <div class="flex items-center justify-between gap-28">
-            <div class="w-1/2 relative">
-                <img src="{{ $arrow5.RelPermalink }}" alt="" class=" absolute left-0 -top-20">
-                <img src="{{ $section4.RelPermalink }}" alt="" class=" w-full">
+    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">
+        <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-5">
+            <div class="lg:w-1/2 w-full relative">
+                <img src="{{ $arrow5.RelPermalink }}" alt="" class=" absolute left-0 -top-20 lg:block hidden">
+
+                <h2 class="h2 lg:hidden sm:mb-12 mb-7">
+                    <div class="relative inline">
+                        <img src="{{ $textBg.RelPermalink }}" alt="" class="absolute w-full bottom-0 -mr-2">
+                        <span class="relative">Open</span>
+                    </div>
+                    Source
+                </h2>
+
+                <img src="{{ $section4.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2 w-full">
                 <div class="">
-                    <h2 class="h2">
+                    <h2 class="h2 lg:block hidden">
                         <div class="relative inline">
                             <img src="{{ $textBg.RelPermalink }}" alt="" class="absolute w-full bottom-0 -mr-2">
                             <span class="relative">Open</span>
@@ -168,7 +204,7 @@
                         Source
                     </h2>
 
-                    <p class="mt-6">
+                    <p class="lg:mt-6">
                         Open Source is a matter of the heart for us. We are of the opinion that software must be
                         available as openly as possible in order to advance society. (By establishing open standards,
                         vendor independence and transparent security audits among other things &lt;- That would actually
@@ -184,43 +220,48 @@
                         components ourselves as <a href="" class="link-purple">open source software</a>
                     </p>
                 </div>
-
             </div>
         </div>
 
-        <div class="pt-36">
-            <div class="bg-purple-100 border border-purple inline-block pl-6 pr-11 py-3 rounded-sm relative ">
-                <h2 class="h2 text-purple">
-                    Open Doors
-                </h2>
-                <span class="iconify text-purple text-3xl absolute -right-6 -bottom-6"
-                    data-icon="clarity:cursor-arrow-solid"></span>
+        <div class="lg:pt-36 pt-16 sm:pb-0 pb-3">
+            <div class="flex lg:items-start lg:justify-start justify-center items-center">
+                <div class="bg-purple-100 border border-purple inline-block pl-6 pr-6 lg:pr-11 py-3 rounded-sm relative ">
+                    <h2 class="h2 text-purple">
+                        Open Doors
+                    </h2>
+                    <span class="iconify text-purple text-3xl absolute -right-6 -bottom-6 sm:block hidden"
+                        data-icon="clarity:cursor-arrow-solid"></span>
+                        <img src="{{ $click2.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                </div>
             </div>
 
-            <div class="relative -mt-16 flex gap-6 justify-between h-[480px]">
+            <div class="relative lg:-mt-16 flex lg:flex-row flex-col lg:gap-5 sm:gap-24 gap-11 lg:h-[480px] lg:max-w-full mx-auto max-w-lg">
                 <img src="{{ $connectedLine.RelPermalink }}" alt=""
-                    class="absolute inset-0  w-full max-w-5xl mx-auto">
+                    class="absolute inset-0  lg:block hidden w-full max-w-[1400px] mx-auto">
 
-                <div class="flex justify-end items-end relative mb-12">
+                    <img src="{{ $connectedLineVertical.RelPermalink }}" alt=""
+                    class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
+
+                <div class="flex lg:justify-end lg:items-end relative xl:mb-12 lg:mb-16 mt-20 lg:place-self-auto place-self-center">
                     <div
-                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-60 h-32 flex items-center justify-center text-center">
+                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-60 lg:w-48 sm:w-96 w-full h-32 flex items-center justify-center text-center">
                         <p>
                             We always have an open ear for others.
                         </p>
                     </div>
                 </div>
-                <div class="mt-12 relative ml-36">
+                <div class="xl:mt-12 lg:mt-24 relative xl:ml-20 lg:ml-0 lg:place-self-auto place-self-center">
                     <div
-                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-[370px] h-56 flex items-center justify-center text-center">
+                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[360px] sm:w-96 w-full h-56 flex items-center justify-center text-center">
                         <p>
                             This puts us on an equal footing with interested applicants, existing and new customers,
                             potential partner companies, and people for whom our main topics are of interest.
                         </p>
                     </div>
                 </div>
-                <div class="flex items-end relative">
+                <div class="flex items-end relative lg:place-self-auto place-self-center">
                     <div
-                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-96 h-48 flex items-center justify-center text-center">
+                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-80 lg:w-64 sm:w-96 w-full h-48 flex items-center justify-center text-center">
                         <p>
                             Anyone can easily book a <a href="" class="link-purple">free appointment</a> with us to
                             discuss topics such as <a href="" class="link-purple">Open Source</a> or <a href=""
@@ -233,61 +274,77 @@
     </div>
 
     <div class="bg-slate">
-        <div class="container max-w-7xl mx-auto pt-28 relative">
-            <img src="{{ $thunder.RelPermalink }}" alt="" class="absolute w-7 right-96 top-8">
-            <div class="flex flex-col items-center justify-center relative">
-                <img src="{{ $randomStar.RelPermalink }}" alt="" class="absolute w-8 left-32 top-0">
-                <img src="{{ $line1.RelPermalink }}" alt="" class="absolute w-24 -left-24">
-                <img src="{{ $line2.RelPermalink }}" alt="" class="absolute w-24 -right-24 top-20">
-                <h2 class="h2 text-center">
-                    <span class="inline-block">Open</span>
-                    <div class="relative inline pr-20">
-                        <img src="{{ $textBg2.RelPermalink }}" alt="" class="absolute w-full -bottom-2 right-0 ">
-                        <span class="inline-block">Data</span>
+        <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto lg:pt-28 sm:pt-20 pt-12 lg:pb-0 sm:pb-16 pb-12 relative">
+            <div class="flex lg:flex-col flex-col-reverse">
+                <img src="{{ $thunder.RelPermalink }}" alt="" class="absolute sm:w-7 w-4 sm:right-1/3 right-5 sm:top-8 top-12">
+                <img src="{{ $randomStar.RelPermalink }}" alt="" class="absolute sm:w-8 w-6 lg:left-32 lg:top-24 sm:left-16 left-4 sm:top-32 top-28">
+                <div class="flex flex-col items-center justify-center relative">
+                   
+                    <img src="{{ $line1.RelPermalink }}" alt="" class="absolute lg:w-24 w-24 lg:-left-24 lg:right-auto lg:bottom-auto -right-5 -bottom-8 ">
+                    <img src="{{ $line2.RelPermalink }}" alt="" class="absolute w-24 2xl:-right-24 -right-16 top-20 lg:block hidden">
+                    <h2 class="h2 text-center lg:block hidden">
+                        <span class="inline-block">Open</span>
+                        <div class="relative inline pr-20">
+                            <img src="{{ $textBg2.RelPermalink }}" alt="" class="absolute w-full -bottom-2 right-0 ">
+                            <span class="inline-block">Data</span>
+                        </div>
+                    </h2>
+                    <p class="mt-8 lg:text-center max-w-5xl mx-auto w-full">
+                        Openness is not only important to us in the area of software. As Open Data, we make, among other
+                        things, the key business figures of Open Elements GmbH openly available every year. In doing so, we
+                        would like to set a positive example and advocate greater transparency. In doing so, we are happy to
+                        make the open source platform we use available to other companies free of charge. In this way, we
+                        also follow our words with corresponding actions.
+                    </p>
+                </div>
+                <div class="-mr-16 -ml-10 sm:ml-auto sm:mr-auto sm:w-full">
+                    <div class="flex items-center justify-center">
+                        <h2 class="h2 text-center lg:hidden sm:mb-12 mb-7">
+                            <span class="inline-block">Open</span>
+                            <div class="relative inline sm:pr-20 pr-4">
+                                <img src="{{ $textBg2.RelPermalink }}" alt="" class="absolute w-full -bottom-2 right-0 ">
+                                <span class="inline-block">Data</span>
+                            </div>
+                        </h2>
                     </div>
-                </h2>
-                <p class="mt-8 text-center max-w-5xl mx-auto w-full px-5">
-                    Openness is not only important to us in the area of software. As Open Data, we make, among other
-                    things, the key business figures of Open Elements GmbH openly available every year. In doing so, we
-                    would like to set a positive example and advocate greater transparency. In doing so, we are happy to
-                    make the open source platform we use available to other companies free of charge. In this way, we
-                    also follow our words with corresponding actions.
-                </p>
+
+                    <img src="{{ $section5.RelPermalink }}" alt="" class="w-full mt-8 lg:block hidden">
+                    <img src="{{ $section5m2.RelPermalink }}" alt="" class="max-w-lg sm:pl-5 mx-auto w-full lg:hidden  ">
+                </div>
             </div>
-            <img src="{{ $section5.RelPermalink }}" alt="" class="w-full mt-8">
         </div>
     </div>
 
-    <div class="container max-w-7xl mx-auto relative pb-24 pt-36">
-        <div class="flex items-center justify-between gap-28">
-            <div class="w-1/2">
-
-                <div class="relative mb-16">
-                    <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute -top-16  -right-5">
+    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:pb-24 xl:pt-32 lg:pt-24 sm:pt-16 sm:pb-16 pb-12 pt-12">
+        <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-16">
+            <div class="lg:w-1/2 w-full">
+                <div class="relative lg:mb-16 sm:mb-14 mb-10">
+                    <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute -top-16  -right-5 lg:block hidden">
                     <h2 class="h2">
                         Open <span class="text-purple">Office</span>
                     </h2>
                 </div>
-                <img src="{{ $section6.RelPermalink }}" alt="" class=" w-full">
+                <img src="{{ $section6.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2 w-full">
 
                 <div class="">
-                    <div class="flex items-center gap-6 relative">
-                        <img src="{{ $line3.RelPermalink }}" alt="" class="absolute -bottom-10 w-full">
-                        <h2 class="text-purple text-[100px] font-bold">
+                    <div class="flex xl:flex-row flex-col xl:items-center lg:gap-6 sm:gap-5 gap-3 relative">
+                        <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute sm:-top-20 -top-16 sm:w-72 w-48 -left-1/3 lg:hidden">
+                        <img src="{{ $line3.RelPermalink }}" alt="" class="absolute lg:-bottom-10 sm:-bottom-8 -bottom-5 w-full">
+                        <h2 class="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">
                             100%
                         </h2>
-                        <p class="leading-6">
+                        <p class="leading-6 xl:mt-0 sm:mt-4 mt-2">
                             Every employee has a 100% free choice of the workplace at our company.
                         </p>
                     </div>
 
-                    <p class="mt-20">
+                    <p class="lg:mt-20 sm:mt-16 mt-8">
                         We would like to offer all employees the most comfortable integration of working time into their
                         individual life concept.
                     </p>
-                    <p class="h3 text-purple mt-7">
+                    <p class="xl:text-[32px] text-xl font-bold xl:leading-10 leading-8 text-purple sm:mt-7 mt-5">
                         In a home office or somewhere in the world in a co-working space: for us, "open office" is not a
                         status symbol but a lived value.
                     </p>

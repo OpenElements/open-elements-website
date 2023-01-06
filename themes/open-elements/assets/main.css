@@ -8,7 +8,7 @@
 @layer base{
 
     html{
-        @apply font-sans text-lg text-blue
+        @apply font-sans sm:text-lg text-base text-blue
     }
 
     .nav-link{
@@ -22,11 +22,11 @@
         @apply text-3xl leading-none  text-white hover:text-rose transition-colors ease-in-out duration-150
     }
     .h1{
-        @apply text-[52px] font-bold leading-snug
+        @apply lg:text-[52px] sm:text-4xl text-[32px] font-bold lg:leading-snug sm:leading-snug leading-snug
     }
 
     .h2{
-        @apply text-[44px] font-bold leading-10
+        @apply sm:text-[44px] text-[28px] font-bold leading-10
     }
 
     .h3{

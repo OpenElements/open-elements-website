@@ -1,20 +1,22 @@
 {{ $image := resources.Get "/images/logo.png" }}
 {{ $herobg := resources.Get "/illustrations/home-bg-2.svg" }}
 {{ $herobg2 := resources.Get "/illustrations/hero-bg-2.svg" }}
+{{ $mBgHero := resources.Get "/illustrations/m-bg-hero.svg" }}
 
 <div class="bg-blue relative ">
     {{ if trim .Page.RelPermalink "/"}}
-    <img class="absolute inset-0 object-cover object-center w-full" src="{{ $herobg2.RelPermalink }}" />
-      {{ else }}
-      <img class="absolute inset-0 object-cover object-center w-full" src="{{ $herobg.RelPermalink }}" />
-      {{ end }}
+        <img class="absolute top-5 inset-0 object-cover object-center w-full" src="{{ $herobg2.RelPermalink }}" />
+    {{ else }}
+        <img class="absolute top-5 inset-0 object-cover object-center w-full lg:block hidden" src="{{ $herobg.RelPermalink }}" />
+        <img class="absolute md:-top-28 sm:-top-24 -top-5 inset-0 object-cover object-center w-full lg:hidden" src="{{ $mBgHero.RelPermalink }}" />
+    {{ end }}
    
-    <div class="container max-w-7xl mx-auto relative">
-        <nav class="flex items-center justify-between py-5">
+    <div class="container mx-auto max-w-7xl relative">
+        <nav class="flex items-center justify-between pt-5 pb-3">
             <a href="/">
-                <img src="{{ $image.RelPermalink }}" alt="" class="h-7">
+                <img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5">
             </a>
-            <div class="flex items-center gap-24">
+            <div class="lg:flex hidden items-center gap-24">
                 <div class="flex items-center gap-7">
                     <a href="/articles/first-article/" class="nav-link">Open Source</a>
                     <a href="/about" class="nav-link">About</a>
