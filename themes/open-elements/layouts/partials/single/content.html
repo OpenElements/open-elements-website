@@ -1,11 +1,12 @@
 {{ $underline1 := resources.Get "/illustrations/underline-1.svg" }}
 {{ $articleImg := resources.Get "/illustrations/article-img.png" }}
+{{ $articleImgMb := resources.Get "/illustrations/article-img-mb.svg" }}
 {{ $textBg3 := resources.Get "/illustrations/text-bg-3.svg" }}
 <div class=" bg-slate">
-  <div class="container max-w-5xl mx-auto pt-28">
+  <div class="container lg:max-w-5xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:pt-28 pt-16">
     <div class="">
       <div class="flex items-center justify-center">
-        <div class="relative">
+        <div class="relative -ml-8">
           <h2 class="h2 text-center">
             Title of the article
           </h2>
@@ -24,12 +25,13 @@
       </p>
     </div>
   </div>
-  <div class="container">
-    <img src="{{ $articleImg.RelPermalink }}" alt="" class="w-full py-12">
+  <div class="container px-0">
+    <img src="{{ $articleImg.RelPermalink }}" alt="" class="w-full sm:block hidden py-12">
+    <img src="{{ $articleImgMb.RelPermalink }}" alt="" class="w-full sm:hidden py-8">
   </div>
-  <div class="container max-w-5xl mx-auto pb-20">
+  <div class="container lg:max-w-5xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto pb-20">
     <p>
-      Aenean et tortor nulla. Nullam eu risus eros. Pellentesque vestibulum, metus id tempus congue, orci quam bibendum
+      Aenean et tortor nulla. Nullam eu risus eros. Pellentesque vestibuÂlum, metus id tempus congue, orci quam bibendum
       ligula, ultrices tristique nisl lorem sed nibh. Orci varius natoque penatibus et magnis dis parturient montes,
       nascetur ridiculus mus. Proin id magna libero. Proin sed luctus metus. Pellentesque eu egestas augue, et tristique
       tortor. Nulla facilisi. Sed varius tempor lorem. Sed lobortis ligula ac metus aliquam, sit amet fringilla mauris
@@ -39,7 +41,7 @@
     </p>
   </div>
 
-  <div class="container max-w-7xl mx-auto">
+  <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:block hidden">
     <div class="flex items-center justify-center">
       <h2 class="h2 max-w-2xl">
         <span class="relative inline z-10">Related</span>
@@ -50,7 +52,7 @@
       </h2>
     </div>
 
-    <div class="swiper gallerySwiper mt-24 mb-16 overflow-hidden">
+    <div class="swiper gallerySwiper mt-10 mb-16 overflow-hidden pt-5">
       <div class="swiper-wrapper flex flex-wrap">
         <div class="swiper-slide w-full inline drop-shadow-card group shrink-0 even:mt-5 odd:mt-5 even:mt-5 odd:mt-5">
           <div class=" rounded-[28px] overflow-hidden hover:-translate-y-6 transition-all ease-in-out duration-200">
@@ -63,7 +65,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -84,7 +86,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -105,7 +107,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -126,7 +128,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -147,7 +149,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -168,7 +170,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -189,7 +191,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -210,7 +212,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -231,7 +233,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -252,7 +254,7 @@
               </button>
             </div>
             <div class="bg-white px-5 pt-4 pb-5">
-              <h2 class="h4 mb-2">
+              <h2 class="h4-card mb-2">
                 Title of the videos
               </h2>
               <p class="text-sm">
@@ -272,6 +274,111 @@
           <span class="iconify text-4xl text-white -mr-1" data-icon="iconoir:nav-arrow-right"></span>
         </div>
       </div>
+    </div>
+
+
+  </div>
+  <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:hidden">
+    <div class="flex items-center justify-center">
+      <h2 class="h2 max-w-2xl">
+        <span class="relative inline z-10">Related</span>
+        <div class="relative justify-center inline-flex items-center px-6 -ml-6 -mr-6 z-0">
+          <img class="absolute w-56 inset-0 -mt-[10px]" src="{{ $textBg3.RelPermalink }}" />
+          <span class="relative">videos</span>
+        </div>
+      </h2>
+    </div>
+
+    <div class="mb-20 mt-8">
+      <div class="flex flex-col flex-wrap">
+        <div class="swiper-slide w-full inline drop-shadow-card group shrink-0 even:mt-5 odd:mt-5 even:mt-5 odd:mt-5">
+          <div class=" rounded-[28px] overflow-hidden hover:-translate-y-6 transition-all ease-in-out duration-200">
+            <div class="relative">
+              <div class="aspect-w-16 aspect-h-9 ">
+                <img src="https://images.unsplash.com/photo-1573166918385-7d4308892300?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="..." class="w-full h-full object-center object-cover" />
+              </div>
+              <button class="bg-green rounded-full w-14 h-14 items-center justify-center absolute right-5 top-4 flex">
+                <span class="iconify text-3xl text-white" data-icon="fluent:play-24-filled"></span>
+              </button>
+            </div>
+            <div class="bg-white px-5 pt-4 pb-5">
+              <h2 class="h4-card mb-2">
+                Title of the videos
+              </h2>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit bibendum ligula, ultrices
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full inline drop-shadow-card group shrink-0 even:mt-5 odd:mt-5">
+          <div class=" rounded-[28px] overflow-hidden hover:-translate-y-6 transition-all ease-in-out duration-200">
+            <div class="relative">
+              <div class="aspect-w-16 aspect-h-9 ">
+                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80" alt="..." class="w-full h-full object-center object-cover" />
+              </div>
+              <button class="bg-green rounded-full w-14 h-14 items-center justify-center absolute right-5 top-4 flex">
+                <span class="iconify text-3xl text-white" data-icon="fluent:play-24-filled"></span>
+              </button>
+            </div>
+            <div class="bg-white px-5 pt-4 pb-5">
+              <h2 class="h4-card mb-2">
+                Title of the videos
+              </h2>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit bibendum ligula, ultrices
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full inline drop-shadow-card group shrink-0 even:mt-5 odd:mt-5">
+          <div class=" rounded-[28px] overflow-hidden hover:-translate-y-6 transition-all ease-in-out duration-200">
+            <div class="relative">
+              <div class="aspect-w-16 aspect-h-9 ">
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80" alt="..." class="w-full h-full object-center object-cover" />
+              </div>
+              <button class="bg-green rounded-full w-14 h-14 items-center justify-center absolute right-5 top-4 flex">
+                <span class="iconify text-3xl text-white" data-icon="fluent:play-24-filled"></span>
+              </button>
+            </div>
+            <div class="bg-white px-5 pt-4 pb-5">
+              <h2 class="h4-card mb-2">
+                Title of the videos
+              </h2>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit bibendum ligula, ultrices
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full inline drop-shadow-card group shrink-0 even:mt-5 odd:mt-5">
+          <div class=" rounded-[28px] overflow-hidden hover:-translate-y-6 transition-all ease-in-out duration-200">
+            <div class="relative">
+              <div class="aspect-w-16 aspect-h-9 ">
+                <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="..." class="w-full h-full object-center object-cover" />
+              </div>
+              <button class="bg-green rounded-full w-14 h-14 items-center justify-center absolute right-5 top-4 flex">
+                <span class="iconify text-3xl text-white" data-icon="fluent:play-24-filled"></span>
+              </button>
+            </div>
+            <div class="bg-white px-5 pt-4 pb-5">
+              <h2 class="h4-card mb-2">
+                Title of the videos
+              </h2>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit bibendum ligula, ultrices
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class=" mt-12 text-center w-full bg-rose-100 rounded-full px-6 py-3 border border-rose text-rose text-lg font-bold focus:outline-none transition-colors ease-in-out duration-200 active:bg-rose active:text-rose-100">
+        Show More
+      </button>
     </div>
 
 

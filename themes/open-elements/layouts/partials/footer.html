@@ -3,22 +3,21 @@
 {{ $round2 := resources.Get "/illustrations/round-2.svg" }}
 
 <div class="bg-blue">
-    <div class="container mx-auto max-w-7xl relative">
-        <div class="absolute -top-7 right-32 z-10">
+    <div class="container mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm relative">
+        <div class="absolute sm:-top-7 -top-6 sm:right-[12%] right-[8%] z-10">
             <a href="#top" alt="go up" name="go up"
-                class="rounded-full bg-purple w-14 h-14 flex items-center justify-center">
+                class="rounded-full bg-purple sm:w-14 sm:h-14 w-12 h-12 flex items-center justify-center">
                 <span class="iconify text-4xl text-white" data-icon="iconoir:nav-arrow-up"></span>
             </a>
         </div>
     </div>
-    <div class=" overflow-hidden">
-        <div class="container mx-auto max-w-7xl py-20 relative">
-
-
-            <img src="{{ $round1.RelPermalink }}" class="absolute max-w-sm w-full -right-32 -top-1/2" />
-            <img src="{{ $round2.RelPermalink }}" class="absolute w-32 right-80 top-16" />
-            <div class="flex gap-20">
-                <div class="w-64 shrink-0 flex flex-col justify-between gap-6">
+    <div class=" overflow-hidden">4
+        <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto lg:py-20 sm:py-16 py-12 relative">
+            <img src="{{ $round1.RelPermalink }}" class="absolute max-w-sm w-full lg:-right-32 -bottom-16 -right-16 lg:-top-1/2" />
+            <img src="{{ $round2.RelPermalink }}" class="absolute w-32 lg:right-80 lg:top-16 bottom-1/2 left-0 lg:left-auto" />
+            
+            <div class="flex lg:flex-row flex-col 2xl:gap-20 sm:gap-12 gap-5">
+                <div class="xl:w-64 lg:w-1/3 shrink-0 flex flex-col justify-between gap-6">
                     <a href="">
                         <img src="{{ $image.RelPermalink }}" alt="" class="h-8">
                     </a>
@@ -28,8 +27,8 @@
                         natus error sit voluptatem accnti.
                     </p>
 
-                    <div class="flex items-center gap-4">
-                        <a href=""
+                    <div class="lg:flex hidden items-center gap-4">
+                        <a href="" arget="_blank"
                             class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
                             <span class="iconify footer-icon" data-icon="uil:facebook-f"></span>
                         </a>
@@ -37,20 +36,20 @@
                             class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
                             <span class="iconify footer-icon" data-icon="carbon:logo-instagram"></span>
                         </a>
-                        <a href=""
+                        <a href="" arget="_blank"
                             class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
                             <span class="iconify footer-icon" data-icon="mdi:twitter"></span>
                         </a>
-                        <a href=""
+                        <a href="" arget="_blank"
                             class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
                             <span class="iconify footer-icon" data-icon="jam:pinterest"></span>
                         </a>
                     </div>
                 </div>
 
-                <div class="w-full grid grid-cols-4 gap-5">
+                <div class="xl:w-full lg:w-2/3 grid xl:grid-cols-4 grid-cols-2 xl:gap-x-5 gap-x-6 gap-y-10">
                     <div>
-                        <h4 class="h4 text-white font-semibold mb-6">Explore</h4>
+                        <h4 class="sm:text-2xl text-base font-bold leading-10 text-white font-semibold sm:mb-6 mb-4">Explore</h4>
                         <div class="flex flex-col gap-5">
                             <a href="" class="flex items-center gap-3 group">
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
@@ -76,7 +75,7 @@
                     </div>
 
                     <div>
-                        <h4 class="h4 text-white font-semibold mb-6">Quick Links</h4>
+                        <h4 class="sm:text-2xl text-base font-bold leading-10 text-white font-semibold sm:mb-6 mb-4">Quick Links</h4>
                         <div class="flex flex-col gap-5">
                             <a href="" class="flex items-center gap-3 group">
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
@@ -101,13 +100,13 @@
                         </div>
                     </div>
 
-                    <div class="col-span-2 ">
-                        <div class="flex justify-end items-end h-full">
-                            <div>
+                    <div class="xl:col-span-2 col-span-2 w-full relative">
+                        <div class="flex justify-end items-end lg:h-full w-full">
+                            <div class="w-full">
                                 <p class="text-sm text-white font-medium mb-2">Send Us Newsletter to get Update</p>
                                 <div class="flex items-stretch">
                                     <input type="email"
-                                        class="bg-white py-3 text-sm text-blue font-semibold placeholder:text-blue rounded-lg rounded-tr-none rounded-br-none focus:outline-none px-4 max-w-xs" placeholder="Enter E-mail" />
+                                        class="bg-white py-3 text-sm text-blue font-semibold placeholder:text-blue rounded-lg rounded-tr-none rounded-br-none focus:outline-none px-4 xl:max-w-xs lg:max-w-sm w-full" placeholder="Enter E-mail" />
                                     <button type="button" class="bg-green rounded-lg rounded-l-none px-6 py-3">
                                         <svg class="w-5 h-5" width="23" height="22" viewBox="0 0 23 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +117,25 @@
                                     </button>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="lg:hidden flex items-center sm:justify-start justify-between gap-4 mt-6">
+                            <a href="" target="_blank"
+                                class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
+                                <span class="iconify footer-icon" data-icon="uil:facebook-f"></span>
+                            </a>
+                            <a href="" arget="_blank"
+                                class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
+                                <span class="iconify footer-icon" data-icon="carbon:logo-instagram"></span>
+                            </a>
+                            <a href="" arget="_blank"
+                                class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
+                                <span class="iconify footer-icon" data-icon="mdi:twitter"></span>
+                            </a>
+                            <a href="" arget="_blank"
+                                class=" focus:outline-none bg-white/40 rounded w-11 h-11 flex items-center justify-center">
+                                <span class="iconify footer-icon" data-icon="jam:pinterest"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
