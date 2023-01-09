@@ -1,0 +1,5 @@
+[build]
+
+publish = "public"
+
+command = "hugo --baseURL $DEPLOY_PRIME_URL"
