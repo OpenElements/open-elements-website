@@ -1770,6 +1770,10 @@ html{
   line-height: 2.5rem;
 }
 
+.tracking-tight{
+  letter-spacing: -0.025em;
+}
+
 .text-green{
   --tw-text-opacity: 1;
   color: rgb(92 186 158 / var(--tw-text-opacity));
@@ -2030,6 +2034,22 @@ html{
     margin-bottom: 1.5rem;
   }
 
+  .sm\:-mr-16{
+    margin-right: -4rem;
+  }
+
+  .sm\:-ml-16{
+    margin-left: -4rem;
+  }
+
+  .sm\:ml-10{
+    margin-left: 2.5rem;
+  }
+
+  .sm\:ml-8{
+    margin-left: 2rem;
+  }
+
   .sm\:block{
     display: block;
   }
@@ -2151,6 +2171,11 @@ html{
   .sm\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .sm\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .sm\:pb-20{
