@@ -3,8 +3,10 @@
   {{ partial "head.html" . }}
   <body >
     <main class="overflow-hidden antialiased bg-gray" id="top">
+      {{ partial "navbar.html" . }}
       {{ block "main" . }}
       {{ end }}
+      {{ partial "footer.html" . }}
     </main>
   </body>
 </html>

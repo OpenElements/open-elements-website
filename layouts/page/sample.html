@@ -1,3 +1,4 @@
+{{ define "main" }}
 {{ $underline1 := resources.Get "/illustrations/underline-1.svg" }}
 {{ $articleImg := resources.Get "/illustrations/article-img.png" }}
 {{ $articleImgMb := resources.Get "/illustrations/article-img-mb.svg" }}
@@ -385,3 +386,52 @@
   </div>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    var swiper = new Swiper(".gallerySwiper", {
+        slidesPerView: 1,
+        grid: {
+              rows: 2,
+            },
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".next",
+          prevEl: ".prev",
+        },
+        breakpoints: {
+          640: {
+
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+
+
+    });
+  </script>
+{{ end }}

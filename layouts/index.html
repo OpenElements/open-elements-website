@@ -1,7 +1,4 @@
 {{ define "main" }}
-
-{{ partial "navbar.html" . }}
-
 {{ $heroCircle := resources.Get "/illustrations/home-circle.svg" }}
 {{ $heroTextBg := resources.Get "/illustrations/text-bg.svg" }}
 {{ $arrow1 := resources.Get "/illustrations/arrow-1.svg" }}
@@ -359,8 +356,4 @@
     </div>
 
 </div>
-
-
-{{ partial "footer.html" . }}
-
 {{ end }}
