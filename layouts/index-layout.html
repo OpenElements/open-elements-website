@@ -46,19 +46,19 @@
                 <img class="absolute right-0 -bottom-64 lg:block hidden xl:w-60 w-48" src="{{ $arrow2.RelPermalink }}" />
                 
                 <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3">
-                    Open Source made right
+                    {{ $.Param "hero_subheader" }}
                 </p>
                 <h1 class="h1 max-w-2xl">
                     <div class="lg:inline sm:block inline tracking-tight">
-                        <span class="relative inline z-10">We trust in the</span>
+                        <span class="relative inline z-10">{{ $.Param "hero_header_line_1_start" }}</span>
                         <div class="relative justify-center inline-flex items-center sm:px-16 px-5 -ml-5 -mr-5 sm:-ml-16 sm:-mr-16 z-0">
                             <img class="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-8 sm:-mt-2.5 -mt-1" src="{{ $heroTextBg.RelPermalink }}" />
-                            <span class="relative">power</span>
+                            <span class="relative">{{ $.Param "hero_header_line_1_underlines" }}</span>
                         </div>
                     </div>
                     <div class="relative inline">
-                        <span>of</span>
-                        <span class="relative sm:inline block"> Open Collaboration!</span>
+                        <span>{{ $.Param "hero_header_line_1_end" }}</span>
+                        <span class="relative sm:inline block">{{ $.Param "hero_header_line_2" }}</span>
                     </div>
 
                 </h1>
@@ -73,17 +73,17 @@
 
     <div class="container mx-auto xl:mt-20 mt-12 relative lg:block hidden">
         <div class="flex items-center gap-2 flex-wrap justify-center">
-            <span class="badge-purple">Open Knowledge</span>
-            <span class="badge-purple">Open Events</span>
-            <span class="badge-purple">Open Source</span>
-            <span class="badge-purple">Open Doors</span>
-            <span class="badge-purple">Open Data</span>
-            <span class="badge-purple">Open Office</span>
-            <span class="badge-purple">Open Diversity</span>
+            <span class="badge-purple"><a href="#open-knowledge-section">Open Knowledge</a></span>
+            <span class="badge-purple"><a href="#open-events-section">Open Events</a></span>
+            <span class="badge-purple"><a href="#open-source-section">Open Source</a></span>
+            <span class="badge-purple"><a href="#open-doors-section">Open Doors</a></span>
+            <span class="badge-purple"><a href="#open-data-section">Open Data</a></span>
+            <span class="badge-purple"><a href="#open-office-section">Open Office</a></span>
+            <span class="badge-purple"><a href="#open-diversity-section">Open Diversity</a></span>
         </div>
     </div>
 
-    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm sm:mt-24 mt-16 relative sm:pb-20 pb-14">
+    <div id="open-knowledge-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm sm:mt-24 mt-16 relative sm:pb-20 pb-14">
         <div class="flex lg:flex-row flex-col items-center justify-between 2xl:gap-28 xl:gap-16 sm:gap-12 gap-6">
             <div class="lg:w-1/2 w-full relative">
                 <div class="lg:hidden flex items-start gap-6 sm:mb-12 mb-7 relative">
@@ -105,35 +105,27 @@
                         </h2>
                         <img src="{{ $star.RelPermalink }}" alt="" class="w-16 -mt-8">
                     </div>
-
-                    <p class="lg:mt-5">
-                        The open availability of well-prepared knowledge is essential for us, so we share a lot of our know-how in 
-                    </p>
-
+                    <p class="lg:mt-5">{{ $.Param "section_open_knowledge_section1_start" }}</p>
                     <div class="flex flex-col gap-3 mt-5">
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-rose" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">
-                                blog posts
-                            </a>
+                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_blog_posts" }}</a>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-green" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">
-                                professional articles
-                            </a>
+                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_articles" }}</a>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-sky" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">
-                                lectures
-                            </a>
+                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_lectures" }}</a>
                         </div>
                     </div>
 
                     <p class="mt-5">
                         although - or rather - because we earn our money with expertise.
-                        The free accessibility of knowledge is very important to us, even outside our area of expertise. Therefore, we act as a sponsor of Wikimedia.
+                    </p>
+                    <p class="mt-5">
+                       The free accessibility of knowledge is very important to us, even outside our area of expertise. Therefore, we act as a sponsor of Wikimedia.
                     </p>
                 </div>
 
@@ -141,7 +133,7 @@
         </div>
     </div>
 
-    <div class="bg-slate">
+    <div id="open-events-section" class="bg-slate">
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:py-16 py-12">
             <div class="flex items-center lg:flex-row flex-col-reverse justify-between xl:gap-28 lg:gap-20 gap-5">
 
@@ -175,7 +167,7 @@
         </div>
     </div>
 
-    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">
+    <div id="open-source-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">
         <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-5">
             <div class="lg:w-1/2 w-full relative">
                 <img src="{{ $arrow5.RelPermalink }}" alt="" class=" absolute left-0 -top-20 lg:block hidden">
@@ -211,7 +203,7 @@
             </div>
         </div>
 
-        <div class="lg:pt-36 pt-16 sm:pb-0 pb-3">
+        <div id="open-doors-section" class="lg:pt-36 pt-16 sm:pb-0 pb-3">
             <div class="flex lg:items-start lg:justify-start justify-center items-center">
                 <div class="bg-purple-100 border border-purple inline-block pl-6 pr-6 lg:pr-11 py-3 rounded-sm relative sm:w-auto w-full text-center">
                     <h2 class="h2 text-purple">
@@ -250,7 +242,7 @@
                     <div
                         class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-80 lg:w-64 sm:w-96 w-full h-48 flex items-center justify-center text-center">
                         <p>
-                            Anyone can easily book a free appointment to chat with us about topics like open source and Java or discuss technical issues with us.
+                            Anyone can easily <a class="link-purple" href="https://cal.com/open-elements/30min" target="_blank">book a free appointment</a> to chat with us about topics like open source and Java or discuss technical issues with us.
                         </p>
                     </div>
                 </div>
@@ -258,7 +250,7 @@
         </div>
     </div>
 
-    <div class="bg-slate">
+    <div id="open-data-section" class="bg-slate">
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto lg:pt-28 sm:pt-20 pt-12 lg:pb-0 sm:pb-16 pb-12 relative">
             <div class="flex lg:flex-col flex-col-reverse">
                 <img src="{{ $thunder.RelPermalink }}" alt="" class="absolute sm:w-7 w-4 sm:right-1/3 right-5 sm:top-8 top-12">
@@ -296,7 +288,7 @@
         </div>
     </div>
 
-    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:pb-24 xl:pt-32 lg:pt-24 sm:pt-16 sm:pb-16 pb-12 pt-12">
+    <div id="open-office-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:pb-24 xl:pt-32 lg:pt-24 sm:pt-16 sm:pb-16 pb-12 pt-12">
         <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-16">
             <div class="lg:w-1/2 w-full">
                 <div class="relative lg:mb-16 sm:mb-14 mb-10">
@@ -333,7 +325,7 @@
         </div>
     </div>
 
-    <div class="bg-slate">
+    <div id="open-diversity-section" class="bg-slate">
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto lg:pt-24 lg:pb-24 sm:pt-16 sm:pb-20 pt-12 pb-16">
             <div class="flex items-center lg:flex-row flex-col-reverse justify-between xl:gap-28 lg:gap-20 gap-5">
                 <div class="lg:w-1/2 relative">

@@ -1,0 +1,21 @@
+<head>
+  {{ $style := resources.Get "style.css" }}  
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ if eq .Site.Params.openGraph true }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ end }}
+  <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Hardcoded description; the author should update :){{ end }}" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <link rel="stylesheet" href="{{ $style.Permalink }}"> 
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+  <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"countryDetection":true,"enableUspr":true,"floatingPreferencesButtonDisplay":"bottom-right","gdprAppliesGlobally":false,"invalidateConsentWithoutLog":true,"lang":"de","perPurposeConsent":true,"siteId":2724482,"whitelabel":false,"cookiePolicyId":15787680, "banner":{ "acceptButtonColor":"#5CBA9E","acceptButtonDisplay":true,"backgroundColor":"#03026F","closeButtonDisplay":false,"customizeButtonColor":"#15649F","customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"logo":null,"position":"bottom","rejectButtonColor":"#15649F","rejectButtonDisplay":true }};
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+</head>

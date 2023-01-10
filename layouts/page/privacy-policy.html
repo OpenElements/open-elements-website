@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ partial "navbar.html" . }}
+<div class=" bg-slate">
+    <div class="container lg:max-w-5xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:pt-28 pt-16">
+       <div class="pt-16">
+        <a href="https://www.iubenda.com/privacy-policy/15787680" class="iubenda-white no-brand iubenda-noiframe iubenda-embed iub-no-markup iubenda-noiframe iub-body-embed" title="Datenschutzerklärung">Datenschutzerklärung</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>    </div>
+  </div>
+{{ partial "footer.html" . }}
+
+{{ end }}
