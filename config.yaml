@@ -1,7 +1,15 @@
-baseURL: http://open-elements.de/
-languageCode: en-us
+defaultContentLanguage: en
+languages:
+  en:
+    weight: 1
+    baseURL: http://open-elements.com/
+    languageCode: en-us
+  de:
+    weight: 2
+    baseURL: http://open-elements.de/
+    languageCode: de
+
 title: Open Elements
-theme: open-elements
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
 # Disables warnings
 disableKinds:
@@ -11,7 +19,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true # Allows you to write raw html in your md files
-
 params:
   # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
   openGraph: true
@@ -19,52 +26,3 @@ params:
   description:
   # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
   # preloader: false
-  navbarlogo:
-  # Logo (from static/images/logos/___)
-    image: logos/open-elements-logo.svg
-    link: /
-    # Default width/height. Uncomment if you need to change
-    width: 260
-    height: 32
-  font:
-    name: "Montserrat"
-    sizes: [300,400,500,600,700,800,900]
-  hero:
-    # Main hero title
-    title: Manage. Deploy.
-    # Hero subtitle (optional)
-    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
-    # Button text
-    buttontext: Get started
-    # Where the main hero button links to
-    buttonlink: "#"
-    # Hero image (from static/images/___)
-    image: illustrations/worker.svg
-  # Customizable navbar. For a dropdown, add a "sublinks" list.
-  navbar:
-  - title: about us
-    url: /articles/first-article
-  - title: about
-    url: /about/
-  - title: Sign up
-    url: /
-    button: true
-  footer:
-    # Logo (from /images/logos/___)
-    logo: fresh-white-alt.svg
-    # Social Media Title
-    socialmediatitle: Follow Us
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmedia:
-    - link: https://github.com/lucperkins/github-fresh
-      # Icons are from Font Awesome
-      icon: github
-    - link: https://dribbble.com/#
-      icon: dribbble
-    - link: https://facebook.com/#
-      icon: facebook
-    - link: https://twitter.com/lucperkins
-      icon: twitter
-    - link: https://bitbucket.org/#
-      icon: bitbucket
-    bulmalogo: true

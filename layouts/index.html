@@ -36,28 +36,25 @@
 
 
 <div class="relative">
+
     <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
         <div class="flex lg:flex-row flex-col items-center gap-8">
             <div class="w-full relative sm:mt-16 mt-6">
                 <img class="absolute 2xl:right-20 right-12 -top-28 lg:block hidden" src="{{ $arrow1.RelPermalink }}" />
                 <img class="absolute right-0 -bottom-64 lg:block hidden xl:w-60 w-48" src="{{ $arrow2.RelPermalink }}" />
-                
-                <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3">
-                    {{ $.Param "hero_subheader" }}
-                </p>
+                <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3">{{ $.Param "hero_subheader" | safeHTML }}</p>
                 <h1 class="h1 max-w-2xl">
                     <div class="lg:inline sm:block inline tracking-tight">
-                        <span class="relative inline z-10">{{ $.Param "hero_header_line_1_start" }}</span>
+                        <span class="relative inline z-10">{{ $.Param "hero_header_line_1_start" | safeHTML }}</span>
                         <div class="relative justify-center inline-flex items-center sm:px-16 px-5 -ml-5 -mr-5 sm:-ml-16 sm:-mr-16 z-0">
                             <img class="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-8 sm:-mt-2.5 -mt-1" src="{{ $heroTextBg.RelPermalink }}" />
-                            <span class="relative">{{ $.Param "hero_header_line_1_underlines" }}</span>
+                            <span class="relative">{{ $.Param "hero_header_line_1_underlines" | safeHTML }}</span>
                         </div>
                     </div>
                     <div class="relative inline">
-                        <span>{{ $.Param "hero_header_line_1_end" }}</span>
-                        <span class="relative sm:inline block">{{ $.Param "hero_header_line_2" }}</span>
+                        <span>{{ $.Param "hero_header_line_1_end" | safeHTML }}</span>
+                        <span class="relative sm:inline block">{{ $.Param "hero_header_line_2" | safeHTML }}</span>
                     </div>
-
                 </h1>
             </div>
             <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative">
@@ -97,35 +94,27 @@
                 <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute sm:w-32 w-20 right-0 sm:-bottom-36 -bottom-24 lg:hidden">
                 <div class="relative">
                     <div class="lg:flex items-start gap-6 hidden">
-                        <h2 class="h2">
-                            Open <br /> Knowledge
-                        </h2>
+                        <h2 class="h2">Open <br /> Knowledge</h2>
                         <img src="{{ $star.RelPermalink }}" alt="" class="w-16 -mt-8">
                     </div>
-                    <p class="lg:mt-5">{{ $.Param "section_open_knowledge_section1_start" }}</p>
+                    <p class="lg:mt-5">{{ $.Param "section_open_knowledge_section1_start" | safeHTML }}</p>
                     <div class="flex flex-col gap-3 mt-5">
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-rose" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_blog_posts" }}</a>
+                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_blog_posts" | safeHTML }}</a>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-green" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_articles" }}</a>
+                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_articles" | safeHTML }}</a>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-sky" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_lectures" }}</a>
+                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_lectures" | safeHTML }}</a>
                         </div>
                     </div>
-
-                    <p class="mt-5">
-                        although - or rather - because we earn our money with expertise.
-                    </p>
-                    <p class="mt-5">
-                       The free accessibility of knowledge is very important to us, even outside our area of expertise. Therefore, we act as a sponsor of Wikimedia.
-                    </p>
+                    <p class="mt-5">{{ $.Param "section_open_knowledge_section1_end" | safeHTML }}</p>
+                    <p class="mt-5">{{ $.Param "section_open_knowledge_section2" | safeHTML }}</p>
                 </div>
-
             </div>
         </div>
     </div>
@@ -133,30 +122,21 @@
     <div id="open-events-section" class="bg-slate">
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:py-16 py-12">
             <div class="flex items-center lg:flex-row flex-col-reverse justify-between xl:gap-28 lg:gap-20 gap-5">
-
                 <div class="lg:w-1/2 w-full relative">
                     <img src="{{ $arrow4.RelPermalink }}" alt="" class=" absolute 2xl:w-52 xl:w-44 lg:w-36 sm:w-40 w-32 2xl:-bottom-72 xl:-bottom-56 lg:-bottom-48 lg:-right-20 lg:left-auto -left-14 sm:-bottom-32 -bottom-24">
                     <div class="">
                         <div class="bg-rose-100 border border-rose lg:inline-block px-6 py-3 rounded-sm relative hidden">
-                            <h2 class="h2 text-rose">
-                                Open Events
-                            </h2>
-                            <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6"
-                                data-icon="clarity:cursor-arrow-solid"></span>
+                            <h2 class="h2 text-rose">Open Events</h2>
+                            <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6" data-icon="clarity:cursor-arrow-solid"></span>
                         </div>
-                        <p class="lg:mt-8">
-                            We organize the Java User Group Dortmund and enable with our sponsoring the realization of free meetups and physical events in the metropolitan region Rhine-Ruhr. For the JavaLand conference and the one in the Cyberland initiative, we actively participate in the leadership. In this way, we support the offer of free events or events calculated on a cost basis in the German-speaking Java and IT scene.
-                        </p>
+                        <p class="lg:mt-8">{{ $.Param "section_open_events_section" | safeHTML }}</p>
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full flex flex-col items-center justify-center">
                     <div class="bg-rose-100 border border-rose lg:hidden inline-block px-6 py-3 sm:w-auto w-full text-center rounded-sm relative sm:mb-12 mb-7 ">
-                        <h2 class="h2 text-rose">
-                            Open Events
-                        </h2>
-                        <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6 sm:block hidden"
-                            data-icon="clarity:cursor-arrow-solid"></span>
-                            <img src="{{ $click.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                        <h2 class="h2 text-rose">Open Events</h2>
+                        <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6 sm:block hidden" data-icon="clarity:cursor-arrow-solid"></span>
+                        <img src="{{ $click.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                     </div>
                     <img src="{{ $section3.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
                 </div>
@@ -168,7 +148,6 @@
         <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-5">
             <div class="lg:w-1/2 w-full relative">
                 <img src="{{ $arrow5.RelPermalink }}" alt="" class=" absolute left-0 -top-20 lg:block hidden">
-
                 <h2 class="h2 lg:hidden sm:mb-12 mb-7">
                     <div class="relative inline">
                         <img src="{{ $textBg.RelPermalink }}" alt="" class="absolute w-full bottom-0 -mr-2">
@@ -176,7 +155,6 @@
                     </div>
                     Source
                 </h2>
-
                 <img src="{{ $section4.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
             </div>
             <div class="lg:w-1/2 w-full">
@@ -188,14 +166,8 @@
                         </div>
                         Source
                     </h2>
-
-                    <p class="lg:mt-6">
-                        Open source is a matter of the heart for us. We believe that software should be available as openly as possible to advance society - by establishing open standards, vendor independence, and transparent security audits, among other things. 
-                    </p>
-
-                    <p class="mt-4">
-                        Therefore, we are a member of the Eclipse Foundation and also actively work with others on key projects in the Java ecosystem, such as Eclipse Adoptium and JakartaEE. Furthermore, we support small OS projects and develop core components ourselves as open source software.
-                    </p>
+                    <p class="lg:mt-6">{{ $.Param "section_open_source_section1" | safeHTML }}</p>
+                    <p class="mt-4">{{ $.Param "section_open_source_section2" | safeHTML }}</p>
                 </div>
             </div>
         </div>
@@ -203,44 +175,30 @@
         <div id="open-doors-section" class="lg:pt-36 pt-16 sm:pb-0 pb-3">
             <div class="flex lg:items-start lg:justify-start justify-center items-center">
                 <div class="bg-purple-100 border border-purple inline-block pl-6 pr-6 lg:pr-11 py-3 rounded-sm relative sm:w-auto w-full text-center">
-                    <h2 class="h2 text-purple">
-                        Open Doors
-                    </h2>
+                    <h2 class="h2 text-purple">Open Doors</h2>
                     <span class="iconify text-purple text-3xl absolute -right-6 -bottom-6 sm:block hidden"
                         data-icon="clarity:cursor-arrow-solid"></span>
                         <img src="{{ $click2.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                 </div>
             </div>
-
             <div class="relative lg:-mt-16 flex lg:flex-row flex-col lg:gap-5 sm:gap-24 gap-11 lg:h-[480px] lg:max-w-full mx-auto max-w-lg">
-                <img src="{{ $connectedLine.RelPermalink }}" alt=""
-                    class="absolute inset-0  lg:block hidden w-full max-w-[1400px] mx-auto">
-
-                    <img src="{{ $connectedLineVertical.RelPermalink }}" alt=""
-                    class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
-
+                <img src="{{ $connectedLine.RelPermalink }}" alt="" class="absolute inset-0  lg:block hidden w-full max-w-[1400px] mx-auto">
+                    <img src="{{ $connectedLineVertical.RelPermalink }}" alt="" class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
                 <div class="flex lg:justify-end lg:items-end relative xl:mb-12 lg:mb-16 mt-20 lg:place-self-auto place-self-center">
-                    <div
-                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-60 lg:w-48 sm:w-96 w-full h-32 flex items-center justify-center text-center">
-                        <p>
-                            We always have an open ear for others.
-                        </p>
+                    <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-60 lg:w-48 sm:w-96 w-full h-32 flex items-center justify-center text-center">
+                        <p>{{ $.Param "section_open_doors_section1" | safeHTML }}</p>
                     </div>
                 </div>
                 <div class="xl:mt-12 lg:mt-24 relative xl:ml-20 lg:ml-0 lg:place-self-auto place-self-center">
                     <div
                         class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[360px] sm:w-96 w-full h-56 flex items-center justify-center text-center">
-                        <p>
-                            This puts us on an equal footing with interested applicants, existing and new customers, potential partner companies, and people for whom our main topics are of interest. 
-                        </p>
+                        <p>{{ $.Param "section_open_doors_section2" | safeHTML }}</p>
                     </div>
                 </div>
                 <div class="flex items-end relative lg:place-self-auto place-self-center">
                     <div
                         class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-80 lg:w-64 sm:w-96 w-full h-48 flex items-center justify-center text-center">
-                        <p>
-                            Anyone can easily <a class="link-purple" href="https://cal.com/open-elements/30min" target="_blank">book a free appointment</a> to chat with us about topics like open source and Java or discuss technical issues with us.
-                        </p>
+                        <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
                     </div>
                 </div>
             </div>
@@ -253,7 +211,6 @@
                 <img src="{{ $thunder.RelPermalink }}" alt="" class="absolute sm:w-7 w-4 sm:right-1/3 right-5 sm:top-8 top-12">
                 <img src="{{ $randomStar.RelPermalink }}" alt="" class="absolute sm:w-8 w-6 lg:left-32 lg:top-24 sm:left-16 left-4 sm:top-32 top-28">
                 <div class="flex flex-col items-center justify-center relative">
-                   
                     <img src="{{ $line1.RelPermalink }}" alt="" class="absolute lg:w-24 w-24 lg:-left-24 lg:right-auto lg:bottom-auto -right-5 -bottom-8 ">
                     <img src="{{ $line2.RelPermalink }}" alt="" class="absolute w-24 2xl:-right-24 -right-16 top-20 lg:block hidden">
                     <h2 class="h2 text-center lg:block hidden">
@@ -263,9 +220,7 @@
                             <span class="inline-block">Data</span>
                         </div>
                     </h2>
-                    <p class="mt-8 lg:text-center max-w-5xl mx-auto w-full">
-                        Openness is not only essential to us in the area of software. Among other things, we make the key business figures of Open Elements GmbH openly available every year as open data. In this way, we want to set a positive example and promote greater transparency. We are happy to make the open source platform we use available to other companies free of charge. In this way, we also follow up our words with corresponding actions.
-                    </p>
+                    <p class="mt-8 lg:text-center max-w-5xl mx-auto w-full">{{ $.Param "section_open_data_section" | safeHTML }}</p>
                 </div>
                 <div class="-mr-16 -ml-10 sm:ml-auto sm:mr-auto sm:w-full">
                     <div class="flex items-center justify-center -ml-4">
@@ -277,7 +232,6 @@
                             </div>
                         </h2>
                     </div>
-
                     <img src="{{ $section5.RelPermalink }}" alt="" class="w-full mt-8 lg:block hidden">
                     <img src="{{ $section5m2.RelPermalink }}" alt="" class="max-w-lg sm:pl-5 mx-auto w-full lg:hidden  ">
                 </div>
@@ -290,34 +244,21 @@
             <div class="lg:w-1/2 w-full">
                 <div class="relative lg:mb-16 sm:mb-14 mb-10">
                     <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute -top-16  -right-5 lg:block hidden">
-                    <h2 class="h2">
-                        Open <span class="text-purple">Office</span>
-                    </h2>
+                    <h2 class="h2">Open <span class="text-purple">Office</span></h2>
                 </div>
                 <img src="{{ $section6.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
             </div>
             <div class="lg:w-1/2 w-full">
-
                 <div class="">
                     <div class="flex xl:flex-row flex-col xl:items-center lg:gap-6 sm:gap-5 gap-3 relative">
                         <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute sm:-top-20 -top-16 sm:w-72 w-48 -left-1/3 lg:hidden">
                         <img src="{{ $line3.RelPermalink }}" alt="" class="absolute lg:-bottom-10 sm:-bottom-8 -bottom-5 w-full">
-                        <h2 class="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">
-                            100%
-                        </h2>
-                        <p class="leading-6 xl:mt-0 sm:mt-4 mt-2">
-                            Every employee has a 100% free choice of a workplace with us.
-                        </p>
+                        <h2 class="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">100%</h2>
+                        <p class="leading-6 xl:mt-0 sm:mt-4 mt-2">{{ $.Param "section_open_office_section1" | safeHTML }}</p>
                     </div>
-
-                    <p class="lg:mt-20 sm:mt-16 mt-8">
-                        We want to offer all employees the most comfortable integration of working time into their individual life concept.
-                    </p>
-                    <p class="xl:text-[32px] text-xl font-bold xl:leading-10 leading-8 text-purple sm:mt-7 mt-5">
-                        In a home office or somewhere in the world in a co-working space: for us, "open office" is not a status symbol but a lived value.
-                    </p>
+                    <p class="lg:mt-20 sm:mt-16 mt-8">{{ $.Param "section_open_office_section2" | safeHTML }}</p>
+                    <p class="xl:text-[32px] text-xl font-bold xl:leading-10 leading-8 text-purple sm:mt-7 mt-5">{{ $.Param "section_open_office_section3" | safeHTML }}</p>
                 </div>
-
             </div>
         </div>
     </div>
@@ -329,24 +270,17 @@
                     <img src="{{ $line4.RelPermalink }}" alt="" class=" absolute lg:-bottom-16 lg:w-24 w-20 lg:-right-24 -bottom-10">
                     <div class="">
                         <div class="bg-rose-100 border border-rose inline-block xl:px-6 px-5 py-3 rounded-sm relative lg:block hidden">
-                            <h2 class="h2 text-rose shrink-0">
-                                Open Diversity
-                            </h2>
-                            <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6"
-                                data-icon="clarity:cursor-arrow-solid"></span>
+                            <h2 class="h2 text-rose shrink-0">Open Diversity</h2>
+                            <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6" data-icon="clarity:cursor-arrow-solid"></span>
                         </div>
                         <div class="mt-8 space-y-5">
                             <div class="flex items-start gap-4">
                                 <img src="{{ $bullet.RelPermalink }}" alt="" class="sm:w-16 w-10 mt-0.5">
-                                <p>
-                                    For us, diversity belongs in a logical grouping with openness and transparency. Even as a small company, strengthening diversity is an essential topic for us.
-                                </p>
+                                <p>{{ $.Param "section_open_diversity_section1" | safeHTML }}</p>
                             </div>
                             <div class="flex items-start gap-4">
                                 <img src="{{ $bullet.RelPermalink }}" alt="" class="sm:w-16 w-10 mt-0.5">
-                                <p>
-                                    We have signed the "Diversity Charter" and thus made a voluntary commitment to implement the 6 points of the charter in our companies and to provide public information about this once a year.
-                                </p>
+                                <p>{{ $.Param "section_open_diversity_section2" | safeHTML }}</p>
                             </div>
                         </div>
                     </div>
@@ -354,6 +288,5 @@
             </div>
         </div>
     </div>
-
 </div>
 {{ end }}
