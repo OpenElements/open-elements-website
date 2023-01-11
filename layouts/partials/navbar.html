@@ -9,44 +9,27 @@
 
 <div class="bg-blue relative " x-data="{ open:false }">
     {{ if trim .Page.RelPermalink "/"}}
-    <img class="absolute top-5 inset-0 object-cover object-center w-full sm:block hidden"
-        src="{{ $herobg2.RelPermalink }}" />
-    <img class="absolute -top-[20%] inset-0 object-contain object-center w-full sm:hidden"
-        src="{{ $smBgHero.RelPermalink }}" />
+    <img class="absolute top-5 inset-0 object-cover object-center w-full sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
+    <img class="absolute -top-[20%] inset-0 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
     {{ else }}
-    <img class="absolute top-5 inset-0 object-cover object-center w-full lg:block hidden"
-        src="{{ $herobg.RelPermalink }}" />
-    <img class="absolute md:-top-28 sm:-top-24 -top-5 inset-0 object-cover object-center w-full lg:hidden block"
-        src="{{ $mBgHero.RelPermalink }}" />
-
+    <img class="absolute top-5 inset-0 object-cover object-center w-full lg:block hidden" src="{{ $herobg.RelPermalink }}" />
+    <img class="absolute md:-top-28 sm:-top-24 -top-5 inset-0 object-cover object-center w-full lg:hidden block" src="{{ $mBgHero.RelPermalink }}" />
     {{ end }}
-
     <div class="container mx-auto max-w-7xl relative">
         <nav class="flex items-center justify-between pt-5 pb-3 ">
-            <a href="/">
-                <img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5">
-            </a>
+            <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
             <div class="lg:flex hidden items-center gap-24">
                 <div class="flex items-center gap-7">
                     <a href="/open-source" class="nav-link">Open Source</a>
-                    <a href="/sample" class="nav-link">Sample</a>
-                    <a href="/about" class="nav-link">About</a>
+                    <a href="/about" class="nav-link">About us</a>
                 </div>
                 <div class="flex items-center gap-5">
-                    <a href="" class=" focus:outline-none">
-                        <span class="iconify nav-icon" data-icon="iconoir:youtube"></span>
-                    </a>
-                    <a href="" class=" focus:outline-none">
-                        <span class="iconify nav-icon" data-icon="carbon:logo-instagram"></span>
-                    </a>
-                    <a href="" class=" focus:outline-none">
-                        <span class="iconify nav-icon" data-icon="ri:facebook-circle-line"></span>
-                    </a>
+                    <a href="https://github.com/OpenElements" class=" focus:outline-none"><span class="iconify nav-icon" data-icon="mdi:github"></span></a>
+                    <a href="https://twitter.com/hendrikebbers" class=" focus:outline-none"><span class="iconify nav-icon" data-icon="mdi:twitter"></span></a>
                 </div>
             </div>
             <button class="lg:hidden">
                 <img class="w-7" @click="open = true" src="{{ $menu.RelPermalink }}" />
-
             </button>
         </nav>
     </div>
@@ -58,35 +41,22 @@
         x-transition:leave-end="transform opacity-0 scale-95">
         <div class="relative w-full bg-rose h-screen">
             <img class="absolute inset-0 w-full object-cover h-full" src="{{ $menuBg.RelPermalink }}" />
-
             <nav class="flex items-center justify-between sm:pt-5 pt-4 pb-3 relative container max-w-7xl mx-auto">
-                <a href="/">
-                    <img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5">
-                </a>
+                <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
                 <button class="lg:hidden">
                     <img class="w-7" @click="open = false" src="{{ $close.RelPermalink }}" />
                 </button>
             </nav>
-
-            <div
-                class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
+            <div class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
                 <div class="flex flex-col sm:items-center gap-7">
                     <a href="/articles/first-article/" class="nav-link">Open Source</a>
-                    <a href="/about" class="nav-link">About</a>
+                    <a href="/about" class="nav-link">About us</a>
                 </div>
                 <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">
-                    <a href="" class=" focus:outline-none ">
-                        <span class="iconify nav-icon-mb" data-icon="iconoir:youtube"></span>
-                    </a>
-                    <a href="" class=" focus:outline-none">
-                        <span class="iconify nav-icon-mb" data-icon="carbon:logo-instagram"></span>
-                    </a>
-                    <a href="" class=" focus:outline-none">
-                        <span class="iconify nav-icon-mb" data-icon="ri:facebook-circle-line"></span>
-                    </a>
+                    <a href="https://github.com/OpenElements" class=" focus:outline-none "><span class="iconify nav-icon-mb" data-icon="mdi:github"></span></a>
+                    <a href="https://twitter.com/hendrikebbers" class=" focus:outline-none"><span class="iconify nav-icon-mb" data-icon="mdi:twitter"></span></a>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
