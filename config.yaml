@@ -4,10 +4,12 @@ languages:
     weight: 1
     baseURL: http://open-elements.com/
     languageCode: en-us
+    languageName: "English"
   de:
     weight: 2
     baseURL: http://open-elements.de/
     languageCode: de
+    languageName: "Deutsch"
 
 title: Open Elements
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...

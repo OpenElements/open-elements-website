@@ -22,10 +22,14 @@
                 <div class="flex items-center gap-7">
                     <a href="/open-source" class="nav-link">Open Source</a>
                     <a href="/about" class="nav-link">About us</a>
+                    <a href="/contact" class="nav-link">Contact us</a>
                 </div>
+                <div><span class="nav-link">Change Language:</span><a href="" class="focus:outline-none"><span class="iconify nav-icon" data-icon="mdi:translate"></span></a></div>
                 <div class="flex items-center gap-5">
-                    <a href="https://github.com/OpenElements" class=" focus:outline-none"><span class="iconify nav-icon" data-icon="mdi:github"></span></a>
-                    <a href="https://twitter.com/hendrikebbers" class=" focus:outline-none"><span class="iconify nav-icon" data-icon="mdi:twitter"></span></a>
+                    {{ $social := site.Data.social }}
+                    {{ range $social }}
+                    <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon" data-icon="{{ .icon | safeURL }}"></span></a>
+                    {{ end }}
                 </div>
             </div>
             <button class="lg:hidden">
@@ -52,9 +56,11 @@
                     <a href="/articles/first-article/" class="nav-link">Open Source</a>
                     <a href="/about" class="nav-link">About us</a>
                 </div>
-                <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">
-                    <a href="https://github.com/OpenElements" class=" focus:outline-none "><span class="iconify nav-icon-mb" data-icon="mdi:github"></span></a>
-                    <a href="https://twitter.com/hendrikebbers" class=" focus:outline-none"><span class="iconify nav-icon-mb" data-icon="mdi:twitter"></span></a>
+                <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">123
+                    {{ $social := site.Data.social }}
+                    {{ range $social }}
+                    <a href="{{ .link }}" class="focus:outline-none "><span class="iconify nav-icon-mb" data-icon="{{ .icon }}"></span></a>
+                    {{ end }}
                 </div>
             </div>
         </div>
