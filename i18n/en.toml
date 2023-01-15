@@ -1,2 +1,18 @@
+[home]
+other = "Home"
+[openSource]
+other = "Open Source"
+[aboutUs]
+other = "About us"
+[contactUs]
+other = "Contact us"
 [footerPhrase]
 other = "Open Source made right"
+[privacy]
+other = "Privacy"
+[privacyPolicy]
+other = "Privacy Policy"
+[privacySettings]
+other = "Privacy Config"
+[impressum]
+other = "Impressum"

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Home",
+        "i18nKey": "home",
+        "altI18nKey": "homeDescription",
+        "link": "/",
+        "visibleInNavigation": false,
+        "visibleInFooter": true
+    },
+    {
+        "name": "Open Source",
+        "i18nKey": "openSource",
+        "altI18nKey": "openSourceDescription",
+        "link": "/open-source",
+        "visibleInNavigation": true,
+        "visibleInFooter": true
+    },
+    {
+        "name": "About us",
+        "i18nKey": "aboutUs",
+        "altI18nKey": "aboutUsDescription",
+        "link": "/about",
+        "visibleInNavigation": true,
+        "visibleInFooter": true
+    },
+    {
+        "name": "Contact us",
+        "i18nKey": "contactUs",
+        "altI18nKey": "contactUsDescription",
+        "link": "/contact",
+        "visibleInNavigation": true,
+        "visibleInFooter": true
+    }
+]

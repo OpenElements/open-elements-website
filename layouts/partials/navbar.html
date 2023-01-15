@@ -20,11 +20,16 @@
             <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
             <div class="lg:flex hidden items-center gap-24">
                 <div class="flex items-center gap-7">
-                    <a href="/open-source" class="nav-link">Open Source</a>
-                    <a href="/about" class="nav-link">About us</a>
-                    <a href="/contact" class="nav-link">Contact us</a>
+                    {{ $mainMenu := site.Data.mainMenu }}
+                    {{ range $mainMenu }}
+                    {{ if .visibleInNavigation }}
+                    <a href="{{ .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                    {{ end }}
+                    {{ end }}
                 </div>
-                <div><span class="nav-link">Change Language:</span><a href="" class="focus:outline-none"><span class="iconify nav-icon" data-icon="mdi:translate"></span></a></div>
+                <div>
+                <span class="nav-link flex flex-row"><span class="iconify nav-icon" data-icon="mdi:translate"></span>Language: DE|EN</span>
+                </div>
                 <div class="flex items-center gap-5">
                     {{ $social := site.Data.social }}
                     {{ range $social }}
@@ -53,8 +58,10 @@
             </nav>
             <div class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
                 <div class="flex flex-col sm:items-center gap-7">
-                    <a href="/articles/first-article/" class="nav-link">Open Source</a>
-                    <a href="/about" class="nav-link">About us</a>
+                    {{ $mainMenu := site.Data.mainMenu }}
+                    {{ range $mainMenu }}
+                    <a href="{{ .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                    {{ end }}
                 </div>
                 <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">123
                     {{ $social := site.Data.social }}
