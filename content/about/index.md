@@ -17,6 +17,8 @@ We are Member of AdoptOpenJDK
 We are Member of the JakartaEE Working Group
 We are Member of the OSPO Alliance
 We are Member of the JCP and expert groups
+We are sponsor of the Wikimedia foundation
+We are sponsor of several small Open Source libraries
 
 ## Our Customers & Partners
 
