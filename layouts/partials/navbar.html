@@ -7,7 +7,7 @@
 {{ $close := resources.Get "/illustrations/close.svg" }}
 {{ $menuBg := resources.Get "/illustrations/menu-bg.svg" }}
 
-<div class="bg-blue relative " x-data="{ open:false }">
+<div class="bg-blue relative pt-16" x-data="{ open:false }">
     {{ if trim .Page.RelPermalink "/"}}
     <img class="absolute top-5 inset-0 object-cover object-center w-full sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
     <img class="absolute -top-[20%] inset-0 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
@@ -15,33 +15,36 @@
     <img class="absolute top-5 inset-0 object-cover object-center w-full lg:block hidden" src="{{ $herobg.RelPermalink }}" />
     <img class="absolute md:-top-28 sm:-top-24 -top-5 inset-0 object-cover object-center w-full lg:hidden block" src="{{ $mBgHero.RelPermalink }}" />
     {{ end }}
-    <div class="container mx-auto max-w-7xl relative">
-        <nav class="flex items-center justify-between pt-5 pb-3 ">
-            <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
-            <div class="lg:flex hidden items-center gap-24">
-                <div class="flex items-center gap-7">
-                    {{ $mainMenu := site.Data.mainMenu }}
-                    {{ range $mainMenu }}
-                    {{ if .visibleInNavigation }}
-                    <a href="{{ .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
-                    {{ end }}
-                    {{ end }}
+    <div class="fixed top-0 bg-blue w-full pb-4 z-30">
+        <div class="container mx-auto max-w-7xl relative">
+            <nav class="flex items-center justify-between pt-5 pb-3 ">
+                <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
+                <div class="lg:flex hidden items-center gap-24">
+                    <div class="flex items-center gap-7">
+                        {{ $mainMenu := site.Data.mainMenu }}
+                        {{ range $mainMenu }}
+                        {{ if .visibleInNavigation }}
+                        <a href="{{ .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                    <div>
+                    <span class="nav-link flex flex-row"><span class="iconify nav-icon" data-icon="mdi:translate"></span>Language: DE|EN</span>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        {{ $social := site.Data.social }}
+                        {{ range $social }}
+                        <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon" data-icon="{{ .icon | safeURL }}"></span></a>
+                        {{ end }}
+                    </div>
                 </div>
-                <div>
-                <span class="nav-link flex flex-row"><span class="iconify nav-icon" data-icon="mdi:translate"></span>Language: DE|EN</span>
-                </div>
-                <div class="flex items-center gap-5">
-                    {{ $social := site.Data.social }}
-                    {{ range $social }}
-                    <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon" data-icon="{{ .icon | safeURL }}"></span></a>
-                    {{ end }}
-                </div>
-            </div>
-            <button class="lg:hidden">
-                <img class="w-7" @click="open = true" src="{{ $menu.RelPermalink }}" />
-            </button>
-        </nav>
+                <button class="lg:hidden">
+                    <img class="w-7" @click="open = true" src="{{ $menu.RelPermalink }}" />
+                </button>
+            </nav>
+        </div>
     </div>
+   
 
     <div class=" fixed top-0 inset-0 z-30 bg-blue h-full lg:hidden" x-show="open"
         x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95"
@@ -60,7 +63,7 @@
                 <div class="flex flex-col sm:items-center gap-7">
                     {{ $mainMenu := site.Data.mainMenu }}
                     {{ range $mainMenu }}
-                    <a href="{{ .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                    <a href="{{ .link }}" class="nav-link tracking-wider">{{ print .i18nKey | i18n }}</a>
                     {{ end }}
                 </div>
                 <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">123
