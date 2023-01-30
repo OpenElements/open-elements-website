@@ -3,18 +3,18 @@
 {{ $articleImg := resources.Get "/illustrations/article-img.png" }}
 {{ $articleImgMb := resources.Get "/illustrations/article-img-mb.svg" }}
 {{ $textBg3 := resources.Get "/illustrations/text-bg-3.svg" }}
-<div class=" bg-slate">
+<div class=" bg-slate uuu">
   <div class="container lg:max-w-5xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:pt-28 pt-16">
     <div class="">
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-center mt-8">
         <div class="relative -ml-8">
           <h2 class="h2 text-center">{{.Title}}</h2>
-          <img src="{{ $underline1.RelPermalink }}" alt="" class=" absolute -bottom-4 -right-8">
+          <img src="{{ $underline1.RelPermalink }}" alt="" class=" absolute -bottom-3 -right-8">
         </div>
       </div>
-      <p class="mt-10">
+      <div class="mt-10 prose mx-auto pb-16">
         {{.Content}}
-      </p>
+      </div>
     </div>
   </div>
 </div>

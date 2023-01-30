@@ -9,17 +9,17 @@
 
 <div class="bg-blue relative pt-16" x-data="{ open:false }">
     {{ if trim .Page.RelPermalink "/"}}
-    <img class="absolute top-5 inset-0 object-cover object-center w-full sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
+    <img class="absolute md:top-5 top-10 inset-0 object-cover object-center w-full sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
     <img class="absolute -top-[20%] inset-0 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
     {{ else }}
     <img class="absolute top-5 inset-0 object-cover object-center w-full lg:block hidden" src="{{ $herobg.RelPermalink }}" />
     <img class="absolute md:-top-28 sm:-top-24 -top-5 inset-0 object-cover object-center w-full lg:hidden block" src="{{ $mBgHero.RelPermalink }}" />
     {{ end }}
-    <div class="fixed top-0 bg-blue w-full pb-4 z-30">
+    <div class="fixed top-0 bg-blue w-full pb-3 z-30">
         <div class="container mx-auto max-w-7xl relative">
             <nav class="flex items-center justify-between pt-5 pb-3 ">
                 <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
-                <div class="lg:flex hidden items-center gap-24">
+                <div class="xl:flex hidden items-center gap-24">
                     <div class="flex items-center gap-7">
                         {{ $mainMenu := site.Data.mainMenu }}
                         {{ range $mainMenu }}
@@ -38,15 +38,15 @@
                         {{ end }}
                     </div>
                 </div>
-                <button class="lg:hidden">
-                    <img class="w-7" @click="open = true" src="{{ $menu.RelPermalink }}" />
+                <button class="xl:hidden">
+                    <img class="w-8" @click="open = true" src="{{ $menu.RelPermalink }}" />
                 </button>
             </nav>
         </div>
     </div>
    
 
-    <div class=" fixed top-0 inset-0 z-30 bg-blue h-full lg:hidden" x-show="open"
+    <div class=" fixed top-0 inset-0 z-30 bg-blue h-full xl:hidden" x-show="open"
         x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95"
         x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
         x-transition:leave-start="transform opacity-100 scale-100"
@@ -55,7 +55,7 @@
             <img class="absolute inset-0 w-full object-cover h-full" src="{{ $menuBg.RelPermalink }}" />
             <nav class="flex items-center justify-between sm:pt-5 pt-4 pb-3 relative container max-w-7xl mx-auto">
                 <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
-                <button class="lg:hidden">
+                <button class="xl:hidden">
                     <img class="w-7" @click="open = false" src="{{ $close.RelPermalink }}" />
                 </button>
             </nav>
@@ -66,7 +66,7 @@
                     <a href="{{ .link }}" class="nav-link tracking-wider">{{ print .i18nKey | i18n }}</a>
                     {{ end }}
                 </div>
-                <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">123
+                <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">
                     {{ $social := site.Data.social }}
                     {{ range $social }}
                     <a href="{{ .link }}" class="focus:outline-none "><span class="iconify nav-icon-mb" data-icon="{{ .icon }}"></span></a>
