@@ -29,7 +29,17 @@
                         {{ end }}
                     </div>
                     <div>
-                    <span class="nav-link flex flex-row"><span class="iconify nav-icon" data-icon="mdi:translate"></span>Language: DE|EN</span>
+                    <div class="flex items-center gap-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>  
+                        <div class="flex items-center gap-1">
+                            <button class="bg-white rounded-full px-2 py-[3px] text-xs leading-none text-center
+                             text-blue">EN</button>
+                             <button class="bg-transparent rounded-full px-2 py-[3px] text-xs leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150
+                             text-white">DE</button>
+                        </div>
+                    </div>
                     </div>
                     <div class="flex items-center gap-5">
                         {{ $social := site.Data.social }}
@@ -51,7 +61,7 @@
         x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
         x-transition:leave-start="transform opacity-100 scale-100"
         x-transition:leave-end="transform opacity-0 scale-95">
-        <div class="relative w-full bg-rose h-screen">
+        <div class="relative w-full h-screen">
             <img class="absolute inset-0 w-full object-cover h-full" src="{{ $menuBg.RelPermalink }}" />
             <nav class="flex items-center justify-between sm:pt-5 pt-4 pb-3 relative container max-w-7xl mx-auto">
                 <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
@@ -60,18 +70,34 @@
                 </button>
             </nav>
             <div class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
-                <div class="flex flex-col sm:items-center gap-7">
-                    {{ $mainMenu := site.Data.mainMenu }}
-                    {{ range $mainMenu }}
-                    <a href="{{ .link }}" class="nav-link tracking-wider">{{ print .i18nKey | i18n }}</a>
-                    {{ end }}
+                <div class="flex flex-col gap-11 sm:items-center">
+                    <div class="flex flex-col sm:items-center gap-7">
+                        {{ $mainMenu := site.Data.mainMenu }}
+                        {{ range $mainMenu }}
+                        <a href="{{ .link }}" class="nav-link tracking-wider">{{ print .i18nKey | i18n }}</a>
+                        {{ end }}
+                    </div>
+                    <div class="flex items-center gap-4 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>  
+                        <div class="flex items-center gap-3">
+                            <button class="bg-white rounded-full px-2 py-[3px] text-xs leading-none text-center
+                            text-blue">EN</button>
+                            <button class="bg-transparent rounded-full px-2 py-[3px] text-xs leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150
+                            text-white">DE</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center sm:justify-center justify-between sm:gap-12 gap-5 w-full">
+               
+                <div class="flex items-center gap-6">
                     {{ $social := site.Data.social }}
                     {{ range $social }}
-                    <a href="{{ .link }}" class="focus:outline-none "><span class="iconify nav-icon-mb" data-icon="{{ .icon }}"></span></a>
+                    <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon" data-icon="{{ .icon | safeURL }}"></span></a>
                     {{ end }}
                 </div>
+               
+                
             </div>
         </div>
     </div>
