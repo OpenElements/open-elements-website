@@ -577,6 +577,27 @@ html{
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(148 146 253 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge-purple:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(117 115 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 2px 4px 22px rgba(117, 115, 255, 0.64);
+  --tw-shadow-colored: 2px 4px 22px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.badge-purple:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 146 253 / var(--tw-bg-opacity));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .link-simple{
@@ -1861,8 +1882,8 @@ html{
   gap: 2.75rem;
 }
 
-.gap-16{
-  gap: 4rem;
+.gap-20{
+  gap: 5rem;
 }
 
 .gap-4{
@@ -1875,10 +1896,6 @@ html{
 
 .gap-24{
   gap: 6rem;
-}
-
-.gap-20{
-  gap: 5rem;
 }
 
 .gap-x-5{

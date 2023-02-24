@@ -39,7 +39,8 @@ module.exports = {
       },
       'purple': {
         DEFAULT: '#9492FD',
-        100: '#D4D4FE'
+        100: '#D4D4FE',
+        700: '#7573FF',
       },
     },
     extend: {
@@ -48,6 +49,9 @@ module.exports = {
       },
       dropShadow: {
         'card' : '0px 0px 24px rgba(190, 227, 216, 0.6)',
+      },
+      boxShadow: {
+        3 : '2px 4px 22px rgba(117, 115, 255, 0.64)',
       }
     },
   },
