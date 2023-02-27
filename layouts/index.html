@@ -3,6 +3,7 @@
 {{ $heroTextBg := resources.Get "/illustrations/text-bg.svg" }}
 {{ $arrow1 := resources.Get "/illustrations/arrow-1.svg" }}
 {{ $arrow2 := resources.Get "/illustrations/arrow-2.svg" }}
+{{ $arrow2sm := resources.Get "/illustrations/arrow-sm.svg" }}
 {{ $arrow3 := resources.Get "/illustrations/arrow-3.svg" }}
 {{ $arrow4 := resources.Get "/illustrations/arrow-4.svg" }}
 {{ $arrow5 := resources.Get "/illustrations/arrow-5.svg" }}
@@ -37,13 +38,13 @@
 
 <div class="relative">
 
-    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
-        <div class="flex lg:flex-row flex-col items-center gap-8">
-            <div class="w-full relative sm:mt-16 mt-6">
-                <img class="absolute 2xl:right-20 right-12 -top-28 lg:block hidden" src="{{ $arrow1.RelPermalink }}" />
-                <img class="absolute right-0 -bottom-64 lg:block hidden xl:w-60 w-48" src="{{ $arrow2.RelPermalink }}" />
-                <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3">{{ $.Param "hero_subheader" | safeHTML }}</p>
-                <h1 class="h1 max-w-2xl">
+    <div class="lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
+        <div class="flex lg:flex-row flex-col items-center gap-8 lg:mt-32 mt-20">
+            <div class="w-full relative ">
+                <img class="absolute 2xl:right-20 right-12 -top-24 lg:block hidden" src="{{ $arrow1.RelPermalink }}" />
+                <img class="absolute right-[20%] -bottom-64 lg:block hidden w-20" src="{{ $arrow2sm.RelPermalink }}" />
+                <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3 lg:px-0 md:px-12 sm:px-8 px-6">{{ $.Param "hero_subheader" | safeHTML }}</p>
+                <h1 class="h1 max-w-2xl lg:px-0 md:px-12 sm:px-8 px-6">
                     <div class="lg:inline sm:block inline tracking-tight">
                         <span class="relative inline z-10">{{ $.Param "hero_header_line_1_start" | safeHTML }}</span>
                         <div class="relative justify-center inline-flex items-center sm:px-16 px-5 -ml-5 -mr-5 sm:-ml-16 sm:-mr-16 z-0">
@@ -56,24 +57,45 @@
                         <span class="relative sm:inline block">{{ $.Param "hero_header_line_2" | safeHTML }}</span>
                     </div>
                 </h1>
+
+                <p class="2xl:text-lg text-bse text-blue mt-4 lg:px-0 md:px-12 sm:px-8 px-6">
+                    "As a modern and open company, we believe that opennes and
+                    transparency produce significant added value for companies, projects
+                    and people. Therebefore, through open collaboration and open
+                    exchange, we help our partners to establish important concepts such as
+                    open source and open data, thereby improving and promoting core
+                    aspects such as standarts,. secutitv and communication in software
+                    landscape."
+                </p>
             </div>
-            <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative">
-                <img class="absolute sm:-right-24 md:-right-40 -right-8 sm:bottom-2 bottom-0 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
-                <img class="absolute -bottom-6 md:-left-40 sm:-left-24 -left-10 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
+            <div class="lg:container mx-auto relative lg:hidden -mt-8">
+                <div class="flex items-center gap-2 lg:px-0 sm:px-12 py-6 px-5 xl:justify-center overflow-x-auto scrollbar-none">
+                    <a href="#open-knowledge-section" class="badge-purple">Open Knowledge</a>
+                    <a href="#open-events-section" class="badge-purple">Open Events</a>
+                    <a href="#open-source-section" class="badge-purple">Open Source</a>
+                    <a href="#open-doors-section" class="badge-purple">Open Doors</a>
+                    <a href="#open-data-section" class="badge-purple">Open Data</a>
+                    <a href="#open-office-section" class="badge-purple">Open Office</a>
+                    <a href="#open-diversity-section" class="badge-purple">Open Diversity</a>
+                </div>
+            </div>
+            <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative sm:px-0 px-6">
+                <img class="absolute sm:-right-24 md:-right-40 -right-2 sm:bottom-2 bottom-0 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
+                <img class="absolute -bottom-6 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
                 <img src="{{ $heroCircle.RelPermalink }}" alt="" class="w-full">
             </div>
         </div>
     </div>
 
-    <div class="container mx-auto xl:mt-20 mt-12 relative lg:block hidden">
-        <div class="flex items-center gap-2 flex-wrap justify-center">
-            <span class="badge-purple"><a href="#open-knowledge-section">Open Knowledge</a></span>
-            <span class="badge-purple"><a href="#open-events-section">Open Events</a></span>
-            <span class="badge-purple"><a href="#open-source-section">Open Source</a></span>
-            <span class="badge-purple"><a href="#open-doors-section">Open Doors</a></span>
-            <span class="badge-purple"><a href="#open-data-section">Open Data</a></span>
-            <span class="badge-purple"><a href="#open-office-section">Open Office</a></span>
-            <span class="badge-purple"><a href="#open-diversity-section">Open Diversity</a></span>
+    <div class="lg:container mx-auto xl:mt-5 mt-7 relative lg:block hidden">
+        <div class="flex items-center gap-2 lg:px-0 sm:px-8 px-5 py-5 xl:justify-center overflow-x-auto scrollbar-none">
+            <a href="#open-knowledge-section" class="badge-purple">Open Knowledge</a>
+            <a href="#open-events-section" class="badge-purple">Open Events</a>
+            <a href="#open-source-section" class="badge-purple">Open Source</a>
+            <a href="#open-doors-section" class="badge-purple">Open Doors</a>
+            <a href="#open-data-section" class="badge-purple">Open Data</a>
+            <a href="#open-office-section" class="badge-purple">Open Office</a>
+            <a href="#open-diversity-section" class="badge-purple">Open Diversity</a>
         </div>
     </div>
 
@@ -87,7 +109,7 @@
                     <img src="{{ $star.RelPermalink }}" alt="" class="absolute sm:w-20 w-14 sm:-top-20 -top-12 sm:right-28 right-0">
                 </div>
                 <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute xl:-bottom-64 -bottom-48 right-0 xl:w-64 w-48 lg:block hidden">
-                <img src="{{ $section2.RelPermalink }}" alt="" class=" lg:w-full sm:max-w-sm mx-auto">
+                <img src="{{ $section2.RelPermalink }}" alt="" class=" lg:w-full sm:max-w-md mx-auto">
             </div>
             <div class="lg:w-1/2 w-full relative">
                 <img src="{{ $section2bg.RelPermalink }}" alt="" class="absolute w-96 lg:top-14 -right-40">
@@ -138,7 +160,7 @@
                         <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6 sm:block hidden" data-icon="clarity:cursor-arrow-solid"></span>
                         <img src="{{ $click.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                     </div>
-                    <img src="{{ $section3.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
+                    <img src="{{ $section3.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
                 </div>
             </div>
         </div>
@@ -155,7 +177,7 @@
                     </div>
                     Source
                 </h2>
-                <img src="{{ $section4.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
+                <img src="{{ $section4.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
             </div>
             <div class="lg:w-1/2 w-full">
                 <div class="">
@@ -240,13 +262,13 @@
     </div>
 
     <div id="open-office-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:pb-24 xl:pt-32 lg:pt-24 sm:pt-16 sm:pb-16 pb-12 pt-12">
-        <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-16">
+        <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-20">
             <div class="lg:w-1/2 w-full">
                 <div class="relative lg:mb-16 sm:mb-14 mb-10">
                     <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute -top-16  -right-5 lg:block hidden">
                     <h2 class="h2">Open <span class="text-purple">Office</span></h2>
                 </div>
-                <img src="{{ $section6.RelPermalink }}" alt="" class="lg:w-full sm:max-w-sm mx-auto">
+                <img src="{{ $section6.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
             </div>
             <div class="lg:w-1/2 w-full">
                 <div class="">

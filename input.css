@@ -45,7 +45,7 @@
     }
 
     .badge-purple{
-        @apply px-2.5 py-1 bg-purple-100 border border-purple text-center text-purple rounded-full font-bold
+        @apply px-2.5 py-1 shrink-0 bg-purple-100 border border-purple text-center text-purple rounded-full font-bold hover:bg-purple-700 hover:text-white hover:shadow-3 active:shadow-none active:bg-purple transition-all ease-in-out duration-150
     }
 
     .link-simple{
