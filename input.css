@@ -53,11 +53,19 @@
     }
 
     .link-rose{
-        @apply text-rose underline hover:no-underline focus:outline-none
+        @apply text-rose uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
     }
 
     .link-purple{
-        @apply text-purple underline hover:no-underline focus:outline-none
+        @apply text-purple uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
+    }
+
+    .link-sky{
+        @apply text-sky uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
+    }
+
+    .link-green{
+        @apply text-green uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
     }
     .footer-link{
         @apply font-medium text-white text-sm group-hover:text-rose transition-colors ease-in-out duration-150
