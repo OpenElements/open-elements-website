@@ -8,12 +8,11 @@
 {{ $arrow4 := resources.Get "/illustrations/arrow-4.svg" }}
 {{ $arrow5 := resources.Get "/illustrations/arrow-5.svg" }}
 {{ $arrow6 := resources.Get "/illustrations/arrow-6.svg" }}
-{{ $section2 := resources.Get "/illustrations/section-2.png" }}
+{{ $section2 := resources.Get "/illustrations/section-2.svg" }}
 {{ $section3 := resources.Get "/illustrations/section-3.svg" }}
-{{ $section4 := resources.Get "/illustrations/section-4.png" }}
+{{ $section4 := resources.Get "/illustrations/section-4.svg" }}
 {{ $section5 := resources.Get "/illustrations/section-5.svg" }}
 {{ $section6 := resources.Get "/illustrations/section-6.svg" }}
-{{ $section7 := resources.Get "/illustrations/section-7.png" }}
 {{ $section2bg := resources.Get "/illustrations/section-2-bg.svg" }}
 {{ $star := resources.Get "/illustrations/star.svg" }}
 {{ $textBg := resources.Get "/illustrations/text-bg-1.svg" }}
@@ -34,6 +33,10 @@
 {{ $click2 := resources.Get "/illustrations/click-2.svg" }}
 {{ $section5m := resources.Get "/illustrations/section-5m.svg" }}
 {{ $section5m2 := resources.Get "/illustrations/section-5m2.svg" }}
+
+{{ $bullet1 := resources.Get "/illustrations/bullet-1.svg" }}
+{{ $bullet2 := resources.Get "/illustrations/bullet-2.svg" }}
+{{ $openDiversity := resources.Get "/illustrations/open-diversity.svg" }}
 
 
 <div class="relative">
@@ -123,15 +126,15 @@
                     <div class="flex flex-col gap-3 mt-5">
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-rose" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_blog_posts" | safeHTML }}</a>
+                            <a href="" class=" uppercase text-rose link-rose">{{ $.Param "section_open_knowledge_section1_blog_posts" | safeHTML }}</a>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-green" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_articles" | safeHTML }}</a>
+                            <a href="" class="link-green uppercase">{{ $.Param "section_open_knowledge_section1_articles" | safeHTML }}</a>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-sky" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-simple capitalize">{{ $.Param "section_open_knowledge_section1_lectures" | safeHTML }}</a>
+                            <a href="" class="link-sky uppercase">{{ $.Param "section_open_knowledge_section1_lectures" | safeHTML }}</a>
                         </div>
                     </div>
                     <p class="mt-5">{{ $.Param "section_open_knowledge_section1_end" | safeHTML }}</p>
@@ -254,7 +257,7 @@
                             </div>
                         </h2>
                     </div>
-                    <img src="{{ $section5.RelPermalink }}" alt="" class="w-full mt-8 lg:block hidden">
+                    <img src="{{ $section5.RelPermalink }}" alt="" class="w-full mt-14 mb-8 lg:block hidden">
                     <img src="{{ $section5m2.RelPermalink }}" alt="" class="max-w-lg sm:pl-5 mx-auto w-full lg:hidden  ">
                 </div>
             </div>
@@ -288,24 +291,41 @@
     <div id="open-diversity-section" class="bg-slate">
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto lg:pt-24 lg:pb-24 sm:pt-16 sm:pb-20 pt-12 pb-16">
             <div class="flex items-center lg:flex-row flex-col-reverse justify-between xl:gap-28 lg:gap-20 gap-5">
-                <div class="lg:w-1/2 relative">
-                    <img src="{{ $line4.RelPermalink }}" alt="" class=" absolute lg:-bottom-16 lg:w-24 w-20 lg:-right-24 -bottom-10">
+                <div class="lg:w-1/2">
+                    
                     <div class="">
-                        <div class="bg-rose-100 border border-rose inline-block xl:px-6 px-5 py-3 rounded-sm relative lg:block hidden">
+                        <div class="bg-rose-100 border border-rose lg:inline-block xl:px-6 px-5 py-3 rounded-sm relative hidden">
                             <h2 class="h2 text-rose shrink-0">Open Diversity</h2>
                             <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6" data-icon="clarity:cursor-arrow-solid"></span>
                         </div>
                         <div class="mt-8 space-y-5">
                             <div class="flex items-start gap-4">
-                                <img src="{{ $bullet.RelPermalink }}" alt="" class="sm:w-16 w-10 mt-0.5">
+                                <div class="flex items-center justify-center bg-rose-100 shrink-0 rounded-full p-1">
+                                    <div class=" border border-dashed rounded-full border-rose w-14 h-14 flex items-center justify-center">
+                                        <img src="{{ $bullet1.RelPermalink }}" alt="" class="w-8 h-8">
+                                    </div>
+                                </div>
+                               
                                 <p>{{ $.Param "section_open_diversity_section1" | safeHTML }}</p>
                             </div>
                             <div class="flex items-start gap-4">
-                                <img src="{{ $bullet.RelPermalink }}" alt="" class="sm:w-16 w-10 mt-0.5">
+                                <div class="flex items-center justify-center bg-rose-100 shrink-0 rounded-full p-1">
+                                    <div class=" border border-dashed rounded-full border-rose w-14 h-14 flex items-center justify-center">
+                                        <img src="{{ $bullet2.RelPermalink }}" alt="" class="w-8 h-8">
+                                    </div>
+                                </div>
                                 <p>{{ $.Param "section_open_diversity_section2" | safeHTML }}</p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="lg:w-1/2 w-full relative">
+                    <img src="{{ $line4.RelPermalink }}" alt="" class=" absolute xl:top-0 xl:-left-12 lg:-top-12 top-24 sm:w-24 w-20">
+                    <div class="bg-rose-100 border border-rose inline-block xl:px-6 px-5 py-3 rounded-sm relative mb-12 lg:hidden">
+                        <h2 class="h2 text-rose shrink-0">Open Diversity</h2>
+                        <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6" data-icon="clarity:cursor-arrow-solid"></span>
+                    </div>
+                    <img src="{{ $openDiversity.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
                 </div>
             </div>
         </div>
