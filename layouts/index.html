@@ -17,7 +17,7 @@
 {{ $star := resources.Get "/illustrations/star.svg" }}
 {{ $textBg := resources.Get "/illustrations/text-bg-1.svg" }}
 {{ $textBg2 := resources.Get "/illustrations/text-bg-2.svg" }}
-{{ $connectedLine := resources.Get "/illustrations/connected-line.svg" }}
+{{ $connectedLine := resources.Get "/illustrations/connected-line-2.svg" }}
 {{ $connectedLineVertical := resources.Get "/illustrations/vertical-line.svg" }}
 {{ $line1 := resources.Get "/illustrations/line-1.svg" }}
 {{ $line2 := resources.Get "/illustrations/line-2.svg" }}
@@ -37,6 +37,8 @@
 {{ $bullet1 := resources.Get "/illustrations/bullet-1.svg" }}
 {{ $bullet2 := resources.Get "/illustrations/bullet-2.svg" }}
 {{ $openDiversity := resources.Get "/illustrations/open-diversity.svg" }}
+{{ $openDoor := resources.Get "/illustrations/opendoor.svg" }}
+{{ $callIcon := resources.Get "/icons/call.svg" }}
 
 
 <div class="relative">
@@ -198,35 +200,49 @@
         </div>
 
         <div id="open-doors-section" class="lg:pt-36 pt-16 sm:pb-0 pb-3">
-            <div class="flex lg:items-start lg:justify-start justify-center items-center">
+            <div class="flex lg:items-start lg:flex-row flex-col lg:justify-start justify-center items-center gap-10">
                 <div class="bg-purple-100 border border-purple inline-block pl-6 pr-6 lg:pr-11 py-3 rounded-sm relative sm:w-auto w-full text-center">
                     <h2 class="h2 text-purple">Open Doors</h2>
                     <span class="iconify text-purple text-3xl absolute -right-6 -bottom-6 sm:block hidden"
                         data-icon="clarity:cursor-arrow-solid"></span>
                         <img src="{{ $click2.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                 </div>
+
+                <img src="{{ $openDoor.RelPermalink }}" alt="" class="sm:max-w-md lg:hidden">
             </div>
-            <div class="relative lg:-mt-16 flex lg:flex-row flex-col lg:gap-5 sm:gap-24 gap-11 lg:h-[480px] lg:max-w-full mx-auto max-w-lg">
-                <img src="{{ $connectedLine.RelPermalink }}" alt="" class="absolute inset-0  lg:block hidden w-full max-w-[1400px] mx-auto">
-                    <img src="{{ $connectedLineVertical.RelPermalink }}" alt="" class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
-                <div class="flex lg:justify-end lg:items-end relative xl:mb-12 lg:mb-16 mt-20 lg:place-self-auto place-self-center">
-                    <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-60 lg:w-48 sm:w-96 w-full h-32 flex items-center justify-center text-center">
-                        <p>{{ $.Param "section_open_doors_section1" | safeHTML }}</p>
+
+            <div class="flex xl:flex-row flex-col items-end w-full mx-auto">
+                <div class="relative lg:-mt-16 flex  flex-col lg:gap-5 sm:gap-24 gap-11 2xl:max-w-3xl xl:max-w-[800px] mx-auto shrink-0 w-full ml-0">
+                    <img src="{{ $connectedLine.RelPermalink }}" alt="" class="absolute inset-0  lg:block hidden w-full max-w-[700px] top-20 ml-10">
+                        <img src="{{ $connectedLineVertical.RelPermalink }}" alt="" class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
+                    <div class="relative flex justify-end lg:order-1 order-2 lg:mx-0 mx-auto lg:mt-0 mt-8">
+                        <div
+                            class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[380px] sm:w-96 w-full h-56 flex items-center justify-center text-center">
+                            <p>{{ $.Param "section_open_doors_section2" | safeHTML }}</p>
+                        </div>
+                    </div>
+                    <div class="flex relative lg:mt-[-12%] lg:order-2 order-1 lg:ml-0 mx-auto mt-12">
+                        <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-60 lg:w-56 sm:w-96 w-full h-32 flex items-center justify-center text-center">
+                            <p>{{ $.Param "section_open_doors_section1" | safeHTML }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex  relative lg:ml-[25%] lg:mt-20 mt-4 lg:order-3 order-3 mx-auto">
+                        <div
+                            class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
+                            <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
+
+                            <a href="" class="flex items-center justify-center gap-3 capitalize text-white font-bold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                                <img src="{{ $callIcon.RelPermalink }}" />
+                                schedule appointment
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="xl:mt-12 lg:mt-24 relative xl:ml-20 lg:ml-0 lg:place-self-auto place-self-center">
-                    <div
-                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[360px] sm:w-96 w-full h-56 flex items-center justify-center text-center">
-                        <p>{{ $.Param "section_open_doors_section2" | safeHTML }}</p>
-                    </div>
-                </div>
-                <div class="flex items-end relative lg:place-self-auto place-self-center">
-                    <div
-                        class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-80 lg:w-64 sm:w-96 w-full h-48 flex items-center justify-center text-center">
-                        <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
-                    </div>
-                </div>
+                <img src="{{ $openDoor.RelPermalink }}" alt="" class="max-w-md xl:absolute right-5 2xl:bottom-14  mx-auto lg:block xl:mt-0 mt-16 hidden">
             </div>
+            
         </div>
     </div>
 
