@@ -29,6 +29,12 @@ Neben den Eclipse-bezogenen Projekten trägt Hendrik auch zu anderen OSS bei. Zu
 
 **Open Source Bibliotheken**: Heutzutage hängt fast jede Software von Open-Source-Komponenten ab. Aber leider werden solche Teile oft nicht erkannt oder analysiert. Daher kann es vorkommen, dass kritische Software von einer Komponente abhängt, die nicht mehr oder nur noch von einer Handvoll einzelner Personen gepflegt wird. Wir unterstützen solche Projekte individuell über GitHub Sponsoring.
 
+**Cyberland**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua
+
+**JavaLand**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+
+**JUG Dortmund**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+
 ## Unsere Kunden & Partner
 
 **Heise Gruppe:** Heise ist einer der größten deutschen Medienkonzerne und mit seinem IT-Nachrichtenportal heise.de führend im deutschsprachigen Raum. OpenElements ist verantwortlich für den Java-Blog auf heise.de.
