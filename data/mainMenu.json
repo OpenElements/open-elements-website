@@ -12,8 +12,8 @@
         "i18nKey": "openSource",
         "altI18nKey": "openSourceDescription",
         "link": "/open-source",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
+        "visibleInNavigation": false,
+        "visibleInFooter": false
     },
     {
         "name": "About us",

@@ -46,7 +46,7 @@ engagements:
     cyberland:
         title: 'Cyberland'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
-        logo: '/illustrations/javaland.svg'
+        logo: '/illustrations/logo-cyberland.svg'
     javaland:
         title: 'JavaLand'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
@@ -54,7 +54,7 @@ engagements:
     jug:
         title: 'Java User Group Dortmund'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
-        logo: '/illustrations/javaland.svg'
+        logo: '/illustrations/logo-jug-dortmund.svg'
     ijug:
         title: 'iJUG e.V.'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
@@ -63,14 +63,14 @@ engagements:
 customers:
     heise:
         title: 'Heise Group'
-        text: 'Heise is one of the largest German media conglomerates, and its IT news portal heise.de is leading in German-speaking countries. OpenElements is responsible for the Java blog on heise.de.'
+        text: 'Heise is one of the largest German media conglomerates, and its IT news portal <a class="link-purple" href="https://www.heise.de" target="_blank">heise.de</a> is leading in German-speaking countries. <b>OpenElements</b> is responsible for the Java blog on <a class="link-purple" href="https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html" target="_blank">heise.de</a>.'
         logo: '/illustrations/heise.svg'
     hedera:
         title: 'Hedera'
-        text: 'Hedera is the company behind the Hedera Hashgraph, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is OSS and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including Google, Boeing, IBM, Deutsche Telekom, LG, Dell, Ubisoft, and several others. OpenElements contribute to the base implementation and services of the Hedera Hashgraph OSS.'
+        text: ' <a class="link-purple" href="https://hedera.com" target="_blank">Hedera</a> is the company behind the <b>Hedera Hashgraph</b>, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is open source software (OSS) and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b>, and several others. <b>OpenElements</b> contribute to <a class="link-purple" href="https://github.com/hashgraph/hedera-services" target="_blank">the base implementation and services</a> of the Hedera Hashgraph OSS.'
         logo: '/illustrations/hedera.svg'
     swirldsLabs:
         title: 'Swirlds Labs'
-        text: 'Swirlds Labs is a company that provides development and support for the Hedera network and builds open-source components that enable faster deployment of industry solutions. OpenElements helps Swirlds Labs to build the platform of the Hedera Hashgraph.'
+        text: '<a class="link-purple" href="https://swirldslabs.com" target="_blank">Swirlds Labs</a> is a company that provides development and support for the <b>Hedera Hashgraph</b> and builds open-source components that enable faster deployment of industry solutions. <b>OpenElements</b> helps Swirlds Labs to build the platform of the Hedera Hashgraph.'
         logo: '/illustrations/swirlds.svg'
 ---
