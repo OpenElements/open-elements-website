@@ -57,7 +57,7 @@
             <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
             <div class="pt-20 flex w-full justify-center flex-wrap">
                 {{ range .Params.engagements }}
-                    {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text )}}
+                    {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
                 {{ end }}
             </div>
         </div>  
@@ -70,7 +70,7 @@
             <div class="lg:pt-20 pt-12 flex w-full justify-center flex-wrap relative">
                 <img class="absolute -left-5 top-4 w-full sm:hidden" src="{{ $dashlineM2.RelPermalink }}" />
                 {{ range .Params.customers }}
-                    {{ partial "partials/about-customer.html" (dict "logo" .logo "title"  .title "description" .text )}}
+                    {{ partial "partials/about-customer.html" (dict "logo" .logo "title"  .title "description" .text "link" .link)}}
                 {{ end }}
             </div>
         </div>
