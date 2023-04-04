@@ -1,7 +1,7 @@
 ---
 title: "Contact us"
 Description: "Making the Complex Simple and Easy to Understand!"
-layout: "article"
+layout: "contact"
 ---
 The easiest way to get in touch with us is by booking a free 30 min slot in our open calender. By doing so we can start a discussion and talk about your concerns, interest or problems regarding any of our focused topics like Open Source and Java.
 
