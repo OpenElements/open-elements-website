@@ -39,7 +39,7 @@ engagements:
     jcp:
         title: 'Java Community Process'
         text: 'The Java Community Process (JCP) is the formalized process to define new standards and specifications for Java in so-called Java Specification Requests (JSRs). We are part of the working group of several JSRs and, for example, helped to standardize the Java Bean Validation.'
-        logo: '/illustrations/java.svg'
+        logo: '/illustrations/logo-jcp.svg'
         link: 'https://www.jcp.org'
     wikimedia:
         title: 'Wikimedia Foundation'
