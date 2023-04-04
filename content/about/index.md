@@ -14,7 +14,7 @@ engagements:
     eclipse:
         title: 'Eclipse Foundation'
         text: 'The Eclipse Foundation is a crucial player in the open source ecosystem that allows individual open source enthusiasts and companies – big or small – to work together at eye level by providing centralized and independent management for open source projects. We contribute to the foundation and its projects.'
-        logo: '/illustrations/eclipse.svg'
+        logo: '/illustrations/logo-eclipse.svg'
         link: 'https://www.eclipse.org'
     adoptium:
         title: 'Eclipse Adoptium'
@@ -29,7 +29,7 @@ engagements:
     jakartaEE:
         title: 'JakartaEE'
         text: 'We are a member of the JakartaEE Working Group: We already contributed to Java enterprise specs before JavaEE was moved to the Eclipse foundation and became JakartaEE. The move to the Eclipse foundation was quite positive since the standards for enterprise Java can now be defined in a 100% vendor-independent environment.'
-        logo: '/illustrations/jakarta.svg'
+        logo: '/illustrations/logo-jakarta.svg'
         link: 'https://jakarta.ee'
     ospo:
         title: 'OSPO Alliance'
@@ -44,7 +44,7 @@ engagements:
     wikimedia:
         title: 'Wikimedia Foundation'
         text: 'Open collaboration is an essential aspect of our lives, and Wikipedia is the best known example for such collaboration. Therefore, we sponsor the Wikimedia foundation monthly to support this critical project.'
-        logo: '/illustrations/wiki.svg'
+        logo: '/illustrations/logo-wikimedia.svg'
         link: 'https://wikimediafoundation.org'
     oss:
         title: 'Open Source Libraries'
@@ -59,7 +59,7 @@ engagements:
     javaland:
         title: 'JavaLand'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
-        logo: '/illustrations/javaland.svg'
+        logo: '/illustrations/logo-javaland.svg'
         link: 'https://www.javaland.eu/de/javaland-2023/'
     jug:
         title: 'Java User Group Dortmund'
@@ -69,7 +69,7 @@ engagements:
     ijug:
         title: 'iJUG e.V.'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
-        logo: '/illustrations/javaland.svg'
+        logo: '/illustrations/logo-javaland.svg'
         link: 'https://www.ijug.eu/de/home/'
 
 customers:
