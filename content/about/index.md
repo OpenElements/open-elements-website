@@ -2,37 +2,75 @@
 title: "About us"
 Description: "Making the Complex Simple and Easy to Understand!"
 layout: "about-us"
+
+section_intro: 'Hendrik Ebbers founded the OpenElements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.'
+
+section_engagement_title: 'Our Engagements'
+
+section_customers_title_prefix: 'Our'
+section_customers_title: 'Customers & Partners'
+
+engagements:
+    eclipse:
+        title: 'Eclipse Foundation'
+        text: 'The Eclipse Foundation is a crucial player in the open source ecosystem that allows individual open source enthusiasts and companies – big or small – to work together at eye level by providing centralized and independent management for open source projects. We contribute to the foundation and its projects.'
+        logo: '/illustrations/eclipse.svg'
+    adoptium:
+        title: 'Eclipse Adoptium'
+        text: 'For the Java ecosystem, Adoptium is one of the essential top-level projects in the Eclipse foundation since it provides free and enterprise-ready LTS versions of Java.'
+        logo: '/illustrations/adoptium.svg'
+    adoptOpenJDK:
+        title: 'AdoptOpenJDK'
+        text: 'While the Temurin binaries have been migrated to the Adoptium Working Group, the idea to provide vendor-independent and free-to-use Java binaries has been started in AdoptOpenJDK. We are part of the project and have a seat on the technical steering committee (TCS).'
+        logo: '/illustrations/adoptJDK.svg'
+    jakartaEE:
+        title: 'JakartaEE'
+        text: 'We are a member of the JakartaEE Working Group: We already contributed to Java enterprise specs before JavaEE was moved to the Eclipse foundation and became JakartaEE. The move to the Eclipse foundation was quite positive since the standards for enterprise Java can now be defined in a 100% vendor-independent environment.'
+        logo: '/illustrations/jakarta.svg'
+    ospo:
+        title: 'OSPO Alliance'
+        text: 'Open source has become such an essential part of most IT departments that establishing an open source program office (OSPO) is a critical step for companies today. Within the OSPO Alliance, we share our knowledge to define best practices and structures to establish open source program offices.'
+        logo: '/illustrations/ospo.svg'
+    jcp:
+        title: 'Java Community Process'
+        text: 'The Java Community Process (JCP) is the formalized process to define new standards and specifications for Java in so-called Java Specification Requests (JSRs). We are part of the working group of several JSRs and, for example, helped to standardize the Java Bean Validation.'
+        logo: '/illustrations/java.svg'
+    wikimedia:
+        title: 'Wikimedia Foundation'
+        text: 'Open collaboration is an essential aspect of our lives, and Wikipedia is the best known example for such collaboration. Therefore, we sponsor the Wikimedia foundation monthly to support this critical project.'
+        logo: '/illustrations/wiki.svg'
+    oss:
+        title: 'Open Source Libraries'
+        text: 'Today, mostly all software depends on open source components. But unfortunately, such parts are often not recognized or analyzed. Therefore, critical software may depend on a component that is not maintained anymore or only by a handful of individual people. We support such projects by using GitHub sponsorship.'
+        logo: '/illustrations/opensource.svg'
+    cyberland:
+        title: 'Cyberland'
+        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        logo: '/illustrations/javaland.svg'
+    javaland:
+        title: 'JavaLand'
+        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        logo: '/illustrations/javaland.svg'
+    jug:
+        title: 'Java User Group Dortmund'
+        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        logo: '/illustrations/javaland.svg'
+    ijug:
+        title: 'iJUG e.V.'
+        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        logo: '/illustrations/javaland.svg'
+
+customers:
+    heise:
+        title: 'Heise Group'
+        text: 'Heise is one of the largest German media conglomerates, and its IT news portal heise.de is leading in German-speaking countries. OpenElements is responsible for the Java blog on heise.de.'
+        logo: '/illustrations/heise.svg'
+    hedera:
+        title: 'Hedera'
+        text: 'Hedera is the company behind the Hedera Hashgraph, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is OSS and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including Google, Boeing, IBM, Deutsche Telekom, LG, Dell, Ubisoft, and several others. OpenElements contribute to the base implementation and services of the Hedera Hashgraph OSS.'
+        logo: '/illustrations/hedera.svg'
+    swirldsLabs:
+        title: 'Swirlds Labs'
+        text: 'Swirlds Labs is a company that provides development and support for the Hedera network and builds open-source components that enable faster deployment of industry solutions. OpenElements helps Swirlds Labs to build the platform of the Hedera Hashgraph.'
+        logo: '/illustrations/swirlds.svg'
 ---
-Hendrik Ebbers founded the OpenElements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.
-
-## Our Engagements
-
-**Eclipse Foundation**: The Eclipse Foundation is a crucial player in the open source ecosystem that allows individual open source enthusiasts and companies – big or small – to work together at eye level by providing centralized and independent management for open source projects. We contribute to the foundation and its projects.
-
-**Eclipse Adoptium**: For the Java ecosystem, Adoptium is one of the essential top-level projects in the Eclipse foundation since it provides free and enterprise-ready LTS versions of Java. 
-
-**AdoptOpenJDK**: While the Temurin binaries have been migrated to the Adoptium Working Group, the idea to provide vendor-independent and free-to-use Java binaries has been started in AdoptOpenJDK. We are part of the project and have a seat on the technical steering committee (TCS).
-
-**JakartaEE**: We are a member of the JakartaEE Working Group: We already contributed to Java enterprise specs before JavaEE was moved to the Eclipse foundation and became JakartaEE. The move to the Eclipse foundation was quite positive since the standards for enterprise Java can now be defined in a 100% vendor-independent environment.
-
-**OSPO Alliance**: Open source has become such an essential part of most IT departments that establishing an open source program office (OSPO) is a critical step for companies today. Within the OSPO Alliance, we share our knowledge to define best practices and structures to establish open source program offices.
-
-**Java Community Process**: The Java Community Process (JCP) is the formalized process to define new standards and specifications for Java in so-called Java Specification Requests (JSRs). We are part of the working group of several JSRs and, for example, helped to standardize the Java Bean Validation.
-
-**Wikimedia Foundation**: Open collaboration is an essential aspect of our lives, and Wikipedia is the best known example for such collaboration. Therefore, we sponsor the Wikimedia foundation monthly to support this critical project.
-
-**Open Source Libraries**: Today, mostly all software depends on open source components. But unfortunately, such parts are often not recognized or analyzed. Therefore, critical software may depend on a component that is not maintained anymore or only by a handful of individual people. We support such projects by using GitHub sponsorship.
-
-**Cyberland**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua
-
-**JavaLand**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-
-**JUG Dortmund**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-
-## Our Customers & Partners
-
-**Heise Gruppe:** Heise is one of the largest German media conglomerates, and its IT news portal heise.de is leading in German-speaking countries. OpenElements is responsible for the Java blog on heise.de.
-
-**Swirlds Labs:** Swirlds Labs is a company that provides development and support for the Hedera network and builds open-source components that enable faster deployment of industry solutions. OpenElements helps Swirlds Labs to build the platform of the Hedera Hashgraph.
-
-**Hedera:** Hedera is the company behind the Hedera Hashgraph, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is OSS and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including Google, Boeing, IBM, Deutsche Telekom, LG, Dell, Ubisoft, and several others. OpenElements contribute to the base implementation and services of the Hedera Hashgraph OSS.

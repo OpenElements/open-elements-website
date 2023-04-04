@@ -1,0 +1,11 @@
+<div class="2xl:w-1/3 lg:w-1/2 w-full sm:p-3">
+    <div class="bg-gray rounded-[30px] shadow-4 p-6 pb-9 h-full">
+        <div class="flex items-center justify-start gap-3 pb-2">
+            <div class="w-24 h-32 flex items-center justify-start">
+                <img class="w-full" src="{{ .logo }}" />
+            </div>
+            <p class="text-blue font-bold text-lg pr-2">{{ .title }}</p>
+        </div>
+        <p class="sm:text-lg text-base">{{ .description | safeHTML }}</p>
+    </div>
+</div>
