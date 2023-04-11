@@ -80,7 +80,7 @@ customers:
         link: 'https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html'
     hedera:
         title: 'Hedera'
-        text: ' <a class="link-purple" href="https://hedera.com" target="_blank">Hedera</a> is the company behind the <b>Hedera Hashgraph</b>, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is open source software (OSS) and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b>, and several others. <b>OpenElements</b> contribute to <a class="link-purple" href="https://github.com/hashgraph/hedera-services" target="_blank">the base implementation and services</a> of the Hedera Hashgraph OSS.'
+        text: '<a class="link-purple" href="https://hedera.com" target="_blank">Hedera</a> is the company behind the <b>Hedera Hashgraph</b>, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is open source software (OSS) and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b>, and several others. <b>OpenElements</b> contribute to <a class="link-purple" href="https://github.com/hashgraph/hedera-services" target="_blank">the base implementation and services</a> of the Hedera Hashgraph OSS.'
         logo: '/illustrations/hedera.svg'
         link: 'https://hedera.com'
     swirldsLabs:

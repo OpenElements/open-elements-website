@@ -7,6 +7,7 @@ hero_header_line_1_start: 'We trust in the'
 hero_header_line_1_underlines: 'power'
 hero_header_line_1_end: 'of'
 hero_header_line_2: 'Open Collaboration!'
+hero_text: 'As a modern and open company, we believe that opennes and transparency produce significant added value for companies, projects and people. Therebefore, through open collaboration and open exchange, we help our partners to establish important concepts such as open source and open data, thereby improving and promoting core aspects such as standarts,. secutitv and communication in software landscape.'
 
 section_open_knowledge_section1_start: 'The open availability of well-prepared knowledge is essential for us, so we share a lot of our know-how in'
 section_open_knowledge_section1_blog_posts: 'blog posts'

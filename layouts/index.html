@@ -26,14 +26,12 @@
 {{ $thunder := resources.Get "/illustrations/thunder.svg" }}
 {{ $randomStar := resources.Get "/illustrations/random-star.svg" }}
 {{ $bullet := resources.Get "/illustrations/bullet.svg" }}
-
 {{ $mArrow1 := resources.Get "/illustrations/m-arrow-1.svg" }}
 {{ $mArrow2 := resources.Get "/illustrations/m-arrow-2.svg" }}
 {{ $click := resources.Get "/illustrations/click.svg" }}
 {{ $click2 := resources.Get "/illustrations/click-2.svg" }}
 {{ $section5m := resources.Get "/illustrations/section-5m.svg" }}
 {{ $section5m2 := resources.Get "/illustrations/section-5m2.svg" }}
-
 {{ $bullet1 := resources.Get "/illustrations/bullet-1.svg" }}
 {{ $bullet2 := resources.Get "/illustrations/bullet-2.svg" }}
 {{ $openDiversity := resources.Get "/illustrations/open-diversity.svg" }}
@@ -42,7 +40,6 @@
 
 
 <div class="relative">
-
     <div class="lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
         <div class="flex lg:flex-row flex-col items-center gap-8 lg:mt-32 mt-20">
             <div class="w-full relative ">
@@ -62,16 +59,7 @@
                         <span class="relative sm:inline block">{{ $.Param "hero_header_line_2" | safeHTML }}</span>
                     </div>
                 </h1>
-
-                <p class="2xl:text-lg text-bse text-blue mt-4 lg:px-0 md:px-12 sm:px-8 px-6">
-                    "As a modern and open company, we believe that opennes and
-                    transparency produce significant added value for companies, projects
-                    and people. Therebefore, through open collaboration and open
-                    exchange, we help our partners to establish important concepts such as
-                    open source and open data, thereby improving and promoting core
-                    aspects such as standarts,. secutitv and communication in software
-                    landscape."
-                </p>
+                <p class="2xl:text-lg text-bse text-blue mt-4 lg:px-0 md:px-12 sm:px-8 px-6">{{ $.Param "hero_text" | safeHTML }}</p>
             </div>
             {{ if .Site.Data.landingpage.category_navbar_visible }}
             <div class="lg:container mx-auto relative lg:hidden -mt-8">
@@ -100,7 +88,6 @@
                 </div>
             </div>
             {{ end }}
-
             <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative sm:px-0 px-6">
                 <img class="absolute sm:-right-24 md:-right-40 -right-2 sm:bottom-2 bottom-0 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
                 <img class="absolute -bottom-6 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
@@ -113,26 +100,26 @@
     <div class="lg:container mx-auto xl:mt-5 mt-7 relative lg:block hidden">
         <div class="flex items-center gap-2 lg:px-0 sm:px-8 px-5 py-5 xl:justify-center overflow-x-auto scrollbar-none">
             {{ if .Site.Data.landingpage.open_knowledge_visible }}
-                    <a href="#open-knowledge-section" class="badge-purple">Open Knowledge</a>
-                    {{end}}
-                    {{ if .Site.Data.landingpage.open_events_visible }}
-                    <a href="#open-events-section" class="badge-purple">Open Events</a>
-                    {{end}}
-                    {{ if .Site.Data.landingpage.open_source_visible }}
-                    <a href="#open-source-section" class="badge-purple">Open Source</a>
-                    {{end}}
-                    {{ if .Site.Data.landingpage.open_doors_visible }}
-                    <a href="#open-doors-section" class="badge-purple">Open Doors</a>
-                    {{end}}
-                    {{ if .Site.Data.landingpage.open_data_visible }}
-                    <a href="#open-data-section" class="badge-purple">Open Data</a>
-                    {{end}}
-                    {{ if .Site.Data.landingpage.open_office_visible }}
-                    <a href="#open-office-section" class="badge-purple">Open Office</a>
-                    {{end}}
-                    {{ if .Site.Data.landingpage.open_diversity_visible }}
-                    <a href="#open-diversity-section" class="badge-purple">Open Diversity</a>
-                    {{end}}
+            <a href="#open-knowledge-section" class="badge-purple">Open Knowledge</a>
+            {{end}}
+            {{ if .Site.Data.landingpage.open_events_visible }}
+            <a href="#open-events-section" class="badge-purple">Open Events</a>
+            {{end}}
+            {{ if .Site.Data.landingpage.open_source_visible }}
+            <a href="#open-source-section" class="badge-purple">Open Source</a>
+            {{end}}
+            {{ if .Site.Data.landingpage.open_doors_visible }}
+            <a href="#open-doors-section" class="badge-purple">Open Doors</a>
+            {{end}}
+            {{ if .Site.Data.landingpage.open_data_visible }}
+            <a href="#open-data-section" class="badge-purple">Open Data</a>
+            {{end}}
+            {{ if .Site.Data.landingpage.open_office_visible }}
+            <a href="#open-office-section" class="badge-purple">Open Office</a>
+            {{end}}
+            {{ if .Site.Data.landingpage.open_diversity_visible }}
+            <a href="#open-diversity-section" class="badge-purple">Open Diversity</a>
+            {{end}}
         </div>
     </div>
     {{ end }}
@@ -162,15 +149,15 @@
                     <div class="flex flex-col gap-3 mt-5">
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-rose" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class=" uppercase text-rose link-rose">{{ $.Param "section_open_knowledge_section1_blog_posts" | safeHTML }}</a>
+                            {{ $.Param "section_open_knowledge_section1_blog_posts" | safeHTML }}
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-green" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-green uppercase">{{ $.Param "section_open_knowledge_section1_articles" | safeHTML }}</a>
+                            {{ $.Param "section_open_knowledge_section1_articles" | safeHTML }}
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="iconify text-lg text-sky" data-icon="teenyicons:tick-circle-solid"></span>
-                            <a href="" class="link-sky uppercase">{{ $.Param "section_open_knowledge_section1_lectures" | safeHTML }}</a>
+                            {{ $.Param "section_open_knowledge_section1_lectures" | safeHTML }}
                         </div>
                     </div>
                     <p class="mt-5">{{ $.Param "section_open_knowledge_section1_end" | safeHTML }}</p>
@@ -238,8 +225,6 @@
         </div>
     </div>
     {{end}}
-
-
 
     {{ if .Site.Data.landingpage.open_doors_visible }}
     <div id="open-doors-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">

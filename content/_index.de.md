@@ -7,6 +7,7 @@ hero_header_line_1_start: 'Wir vertrauen in'
 hero_header_line_1_underlines: 'offene'
 hero_header_line_1_end: ''
 hero_header_line_2: 'Zusammenarbeit!'
+hero_text: 'Als modernes und offenes Unternehmen glauben wir, dass Offenheit und Transparenz einen erheblichen Mehrwert für Unternehmen, Projekte und Menschen schaffen. Durch offene Zusammenarbeit und offenen Austausch helfen wir unseren Partnern, wichtige Konzepte wie Open Source und Open Data zu etablieren und dadurch Kernaspekte wie Standards, Sicherheit und Kommunikation in der Softwarelandschaft zu verbessern und zu fördern.'
 
 section_open_knowledge_section1_start: 'Die offene Verfügbarkeit von gut aufbereitetem Wissen ist für uns essenziell, daher teilen wir einen Großteil unseres Know-Hows in'
 section_open_knowledge_section1_blog_posts: 'Blogbeiträgen'
