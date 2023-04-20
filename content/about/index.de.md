@@ -77,16 +77,16 @@ customers:
     heise:
         title: 'Heise Group'
         text: 'Heise ist einer der größten deutschen Medienkonzerne und mit seinem IT-Nachrichtenportal <a class="link-purple" href="https://www.heise.de" target="_blank">heise.de</a> führend im deutschsprachigen Raum. OpenElements ist verantwortlich für den Java-Blog auf <a class="link-purple" href="https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html" target="_blank">heise.de</a>.'
-        logo: '/illustrations/heise.svg'
+        logo: '/illustrations/logo-heise.svg'
         link: 'https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html'
     hedera:
         title: 'Hedera'
         text: '<a class="link-purple" href="https://hedera.com" target="_blank">Hedera</a> ist das Unternehmen hinter dem Hedera Hashgraph, dem einzigen öffentlichen und verteilten Ledger, der auf dem Hashgraph-Algorithmus basiert. Hedera Hashgraph ist OSS und wurde in Java entwickelt. Hedera wird von einem Verwaltungsrat aus globalen Unternehmen und Einrichtungen verwaltet, darunter <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b> und einige andere. OpenElements trägt zur <a class="link-purple" href="https://github.com/hashgraph/hedera-services" target="_blank">Open Source Platform und der Implementierung der Services des Hedera Hashgraph</a> bei.'
-        logo: '/illustrations/hedera.svg'
+        logo: '/illustrations/logo-hedera.svg'
         link: 'https://hedera.com'
     swirldsLabs:
         title: 'Swirlds Labs'
         text: '<a class="link-purple" href="https://swirldslabs.com" target="_blank">Swirlds Labs</a> ist ein Unternehmen, das Entwicklung und Support rund um <b>Hedera Hashgraph</b> anbietet und deren Open-Source-Komponenten entwickelt. OpenElements hilft Swirlds Labs beim Aufbau der Plattform des Hedera Hashgraphs.'
-        logo: '/illustrations/swirlds.svg'
+        logo: '/illustrations/logo-swirlds.svg'
         link: 'https://swirldslabs.com'
 ---

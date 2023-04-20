@@ -76,16 +76,16 @@ customers:
     heise:
         title: 'Heise Group'
         text: 'Heise is one of the largest German media conglomerates, and its IT news portal <a class="link-purple" href="https://www.heise.de" target="_blank">heise.de</a> is leading in German-speaking countries. <b>OpenElements</b> is responsible for the Java blog on <a class="link-purple" href="https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html" target="_blank">heise.de</a>.'
-        logo: '/illustrations/heise.svg'
+        logo: '/illustrations/logo-heise.svg'
         link: 'https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html'
     hedera:
         title: 'Hedera'
         text: '<a class="link-purple" href="https://hedera.com" target="_blank">Hedera</a> is the company behind the <b>Hedera Hashgraph</b>, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is open source software (OSS) and developed in Java. Hedera is owned and managed by a "governing council" of global companies and entities, including <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b>, and several others. <b>OpenElements</b> contribute to <a class="link-purple" href="https://github.com/hashgraph/hedera-services" target="_blank">the base implementation and services</a> of the Hedera Hashgraph OSS.'
-        logo: '/illustrations/hedera.svg'
+        logo: '/illustrations/logo-hedera.svg'
         link: 'https://hedera.com'
     swirldsLabs:
         title: 'Swirlds Labs'
         text: '<a class="link-purple" href="https://swirldslabs.com" target="_blank">Swirlds Labs</a> is a company that provides development and support for the <b>Hedera Hashgraph</b> and builds open-source components that enable faster deployment of industry solutions. <b>OpenElements</b> helps Swirlds Labs to build the platform of the Hedera Hashgraph.'
-        logo: '/illustrations/swirlds.svg'
+        logo: '/illustrations/logo-swirlds.svg'
         link: 'https://swirldslabs.com'
 ---
