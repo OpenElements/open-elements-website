@@ -1,6 +1,6 @@
 ---
 title: "Hendrik Ebbers"
-Description: "Making the Complex Simple and Easy to Understand!"
+Description: "Hendrik Ebbers"
 layout: "about-hendrik"
 
 section_intro: 'Hendrik Ebbers gründete die OpenElements GmbH im Jahr 2022, um ein Unternehmen zu schaffen, das Open Source und offene Zusammenarbeit mit einem starken Fokus auf das Java-Ökosystem stärkt.'

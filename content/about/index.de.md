@@ -1,6 +1,6 @@
 ---
 title: "Über OpenElements"
-Description: "Making the Complex Simple and Easy to Understand!"
+Description: "Über OpenElements"
 layout: "about-us"
 
 
