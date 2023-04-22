@@ -4,7 +4,13 @@ This repo contains the website of Open Elements.
 The website is still work in progress.
 In future the website will be available at https://www.open-elements.de and https://www.open-elements.com.
 
-Netlify Status of English page: [![Netlify Status](https://api.netlify.com/api/v1/badges/0a7875a4-d4ba-4358-8616-87200dcbe7c5/deploy-status)](https://app.netlify.com/sites/open-elements-en/deploys)
+Netlify status of English page:
+
+[![Netlify status of English page](https://api.netlify.com/api/v1/badges/0a7875a4-d4ba-4358-8616-87200dcbe7c5/deploy-status)](https://app.netlify.com/sites/open-elements-en/deploys)
+
+Netlify status of German page:
+
+[![Netlify status of German page](https://api.netlify.com/api/v1/badges/935f5408-eef5-4889-9cb6-ee55a0990a0f/deploy-status)](https://app.netlify.com/sites/open-elements-de/deploys)
 
 
 ## Building the website
