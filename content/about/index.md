@@ -69,7 +69,7 @@ engagements:
     ijug:
         title: 'iJUG e.V.'
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
-        logo: '/illustrations/logo-javaland.svg'
+        logo: '/illustrations/logo-ijug.svg'
         link: 'https://www.ijug.eu/de/home/'
 
 customers:

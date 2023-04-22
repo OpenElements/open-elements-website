@@ -54,23 +54,23 @@ engagements:
         link: 'https://github.com/OpenElements'
     cyberland:
         title: 'Cyberland'
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        text: 'Mit bereits über 20 Events ist das Cyberland eine Serie von kostenlosen Online-Events für die Java Community mit einem großen Schwerpunkt auf Inklusion und Diversität. So gab es z.B. bereits mehrmals die Ladiesnight als Mini-Konferenz in der nur Sprecherinnen über IT-Themen vorgetragen haben oder die Newcomer Events in denen neue Sprecher eine Bühne für ihre ersten IT Talks bekommen. Hendrik Ebbers ist Begründer des Cyberlands und daher von Tag 1 Mitglied der Organisation.'
         logo: '/illustrations/logo-cyberland.svg'
         link: 'https://cyberland.ijug.eu'
     javaland:
         title: 'JavaLand'
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        text: 'Die JavaLand ist nicht nur die größte Java Konferenz im deutschsprachigen Raum sondern auch eine der wenigen Community-Konferenz. Dieses Konzept ermöglicht der JavaLand andere Wege als rein gewinnorientierte Konferenzen zu gehen und so z.B. einen Freizeitpart als Konferenzlocation zu nutzen. Hendrik Ebbers leitet das Programmkomitee der JavaLand und ist Mitglied in der Konferenzleitung.'
         logo: '/illustrations/logo-javaland.svg'
         link: 'https://www.javaland.eu/de/javaland-2023/'
     jug:
         title: 'Java User Group Dortmund'
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+        text: 'Die JUG Dortmund wurde 2012 von Hendrik Ebbers zusammen mit Ansgar Brauner gegründet. Seid dem ist Hendrik für die Leitung der JUG Mitverantwortlich und organisert kostenlose Vortragsreihen und Meetups zusammen mit lokalen IT-Firmen in Dortmund.'
         logo: '/illustrations/logo-jug-dortmund.svg'
         link: 'https://www.meetup.com/de-DE/jug-dortmund/'
     ijug:
         title: 'iJUG e.V.'
-        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
-        logo: '/illustrations/logo-javaland.svg'
+        text: 'Der iJUG ist der Verein aller Java User Groups in Dortmund. Als Leiter der JUG Dortmund bringt Hendrik Ebbers sich hier aktiv ein und ist auch in die Leitung verschiedener Projekte des iJUG wie etwa der JavaLand oder der Cyberland involviert.'
+        logo: '/illustrations/logo-ijug.svg'
         link: 'https://www.ijug.eu/de/home/'
 
 customers:
