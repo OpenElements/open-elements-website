@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{ $underline := resources.Get "/illustrations/underline.svg" }}
+{{ $heroAbout := resources.Get "/illustrations/hero-about-1.svg" }}
+{{ $circles := resources.Get "/illustrations/circles.svg" }}
+{{ $arrow := resources.Get "/illustrations/arrow.svg" }}
+{{ $dashline := resources.Get "/illustrations/dash-line.svg" }}
+{{ $line6 := resources.Get "/illustrations/line-6.svg" }}
+{{ $line7 := resources.Get "/illustrations/line-7.svg" }}
+{{ $eclipse := resources.Get "/illustrations/eclipse.svg" }}
+{{ $adoptOpenJDK := resources.Get "/illustrations/adoptOpenJDK.svg" }}
+{{ $adoptium := resources.Get "/illustrations/adoptium.svg" }}
+{{ $adopt := resources.Get "/illustrations/adoptJDK.svg" }}
+{{ $jakarta := resources.Get "/illustrations/jakarta.svg" }}
+{{ $ospo := resources.Get "/illustrations/ospo.svg" }}
+{{ $java := resources.Get "/illustrations/java.svg" }}
+{{ $wiki := resources.Get "/illustrations/wiki.svg" }}
+{{ $opensource := resources.Get "/illustrations/opensource.svg" }}
+{{ $javaland := resources.Get "/illustrations/javaland.svg" }}
+{{ $itclub := resources.Get "/illustrations/itclub.svg" }}
+{{ $longline := resources.Get "/illustrations/longline.svg" }}
+{{ $swirlds := resources.Get "/illustrations/swirlds.svg" }}
+{{ $longline := resources.Get "/illustrations/longline.svg" }}
+{{ $hedera := resources.Get "/illustrations/hedera.svg" }}
+{{ $heise := resources.Get "/illustrations/heise.svg" }}
+{{ $arrow22 := resources.Get "/illustrations/arrow22.svg" }}
+{{ $dashlineM := resources.Get "/illustrations/dashline-m.svg" }}
+{{ $lineM := resources.Get "/illustrations/lineM.svg" }}
+{{ $lineM2 := resources.Get "/illustrations/lineM2.svg" }}
+{{ $click := resources.Get "/illustrations/click.svg" }}
+{{ $dashlineM2 := resources.Get "/illustrations/dashlineM.svg" }}
+
+<div class="relative">
+    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm">
+        <div class="flex items-center justify-center sm:pt-36 pt-16 sm:pb-12 pb-4">
+            <div class="relative w-full flex flex-col items-center justify-center">
+              <h1 class="h1 text-center">{{.Params.title}}</h1>
+              <img src="{{ $underline.RelPermalink }}" alt="" class="absolute -bottom-3 sm:w-72 w-48 sm:-mr-24 shrink-0">
+            </div>
+         </div>
+         <div class="flex flex-col gap-7 text-blue sm:text-lg mt-8">
+            <p>{{ $.Param "intro" | safeHTML }}</p>
+        </div>
+    </div>
+
+    <div class="pt-24">
+        <div class="container relative">
+            <img class="absolute lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline hidden" src="{{ $line6.RelPermalink }}" />
+            <img class="absolute top-20 -left-6 w-24 sm:hidden" src="{{ $lineM.RelPermalink }}" />
+            <img class="absolute lg:top-0 top-20 xl:w-44 lg:w-32 w-28 right-0 sm:inline hidden" src="{{ $line7.RelPermalink }}" />
+            <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
+            <div class="pt-20 flex w-full justify-center flex-wrap">
+                {{ range .Params.facts }}
+                    {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
+                {{ end }}
+            </div>
+        </div>  
+    </div>
+</div>
+{{ end }}
