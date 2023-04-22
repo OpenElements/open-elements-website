@@ -4,6 +4,9 @@ This repo contains the website of Open Elements.
 The website is still work in progress.
 In future the website will be available at https://www.open-elements.de and https://www.open-elements.com.
 
+Netlify Status of English page: [![Netlify Status](https://api.netlify.com/api/v1/badges/0a7875a4-d4ba-4358-8616-87200dcbe7c5/deploy-status)](https://app.netlify.com/sites/open-elements-en/deploys)
+
+
 ## Building the website
 
 The project is based on [Hugo](https://gohugo.io/) and you need to [install Hugo](https://gohugo.io/installation/) to build the website.
