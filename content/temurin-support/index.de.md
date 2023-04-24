@@ -5,6 +5,8 @@ layout: "product-overview"
 
 intro: 'In einer zunehmend digitalisierten Welt hat sich Java als eine der populärsten und weitverbreitetsten Programmiersprachen etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung von Java-Anwendungen auf der sicheren Seite zu sein. Eclipse Temurin ist ein Open-Source-Implementierung von OpenJDK, die von der Eclipse Foundation betrieben wird. Der Kauf von Eclipse Temurin Support bietet Ihnen eine Vielzahl von Vorteilen, die die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen und den Entwicklungsprozess optimieren.'
 
+contact_us_button_text: 'Kontaktieren Sie uns'
+
 facts:
     fact1:
         title: 'Professioneller Support'
@@ -69,6 +71,11 @@ facts:
     fact13:
         title: 'Angepasste Docker-Container für optimale Flexibilität'
         text: 'OpenElements Temurin Support & Care bieten wir auch angepasste Docker-Container an, die perfekt auf die Bedürfnisse unserer Kunden zugeschnitten sind. Sie enthalten die neuesten Versionen von Temurin und können auch weitere Java-Tools wie Maven enthalten. Wir sorgen für regelmäßige Aktualisierungen und Wartung, damit unsere Kunden stets auf dem neuesten Stand sind und ihre Java-Anwendungen in der Cloud oder in lokalen Umgebungen flexibel und effizient bereitstellen können.'
+        logo: '/illustrations/not-available.svg'
+        link: 'no-link'
+    fact14:
+        title: 'Erfahrene Temurin-Experten für Ihren Support'
+        text: 'Bei OpenElements finden Sie erfahrene Temurin-Experten, die Ihnen einen hochwertigen Support bieten können. Unser Gründer Hendrik Ebbers war bereits im Technischen Steering Committee von AdoptOpenJDK tätig und hat maßgeblich zur erfolgreichen Umsetzung von AdoptOpenJDK und Temurin beigetragen. Unsere Entwickler verfügen über umfassendes Know-how in der Erstellung von systemspezifischen Binaries von Temurin und unsere Java- und Open-Source-Experten sind anerkannte Experten in der Branche.'
         logo: '/illustrations/not-available.svg'
         link: 'no-link'
 ---

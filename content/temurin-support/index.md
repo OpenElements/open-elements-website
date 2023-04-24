@@ -5,6 +5,8 @@ layout: "product-overview"
 
 intro: 'In an increasingly digitized world, Java has established itself as one of the most popular and widely used programming languages. Therefore, it is all the more important to be able to rely on professional support to ensure that the development and maintenance of Java applications are secure. Eclipse Temurin is an open-source implementation of OpenJDK, operated by the Eclipse Foundation. Purchasing Eclipse Temurin support offers a variety of benefits that enhance the performance and security of your Java applications and optimize the development process.'
 
+contact_us_button_text: 'Contact us'
+
 facts:
     fact1:
         title: 'Professional support'
@@ -69,6 +71,11 @@ facts:
     fact13:
         title: 'Customized Docker containers for optimal flexibility'
         text: 'OpenElements Temurin Support & Care also offers customized Docker containers that are perfectly tailored to the needs of our customers. They include the latest versions of Temurin and can also include other Java tools such as Maven. We provide regular updates and maintenance to ensure that our customers are always up to date and can deploy their Java applications flexibly and efficiently in the cloud or in local environments.'
+        logo: '/illustrations/not-available.svg'
+        link: 'no-link'
+    fact14:
+        title: 'Experienced Temurin experts for your support'
+        text: 'At OpenElements, you will find experienced Temurin experts who can provide you with high-quality support. Our founder, Hendrik Ebbers, has already served on the Technical Steering Committee of AdoptOpenJDK and made a significant contribution to the successful implementation of AdoptOpenJDK and Temurin. Our developers have comprehensive knowledge in creating system-specific binaries of Temurin, and our Java and open-source experts are recognized industry experts.'
         logo: '/illustrations/not-available.svg'
         link: 'no-link'
 ---

@@ -40,6 +40,11 @@
          <div class="flex flex-col gap-7 text-blue sm:text-lg mt-8">
             <p>{{ $.Param "intro" | safeHTML }}</p>
         </div>
+        <div class="max-w-[1080px] pt-3 mx-auto">
+            <a href="" class="flex items-center justify-center gap-3 capitalize text-white font-bold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                {{ $.Param "contact_us_button_text" }}
+            </a>
+        </div>
     </div>
 
     <div class="pt-24">
