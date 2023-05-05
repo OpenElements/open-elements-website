@@ -1579,6 +1579,18 @@ html{
   top: -1.25rem;
 }
 
+.bottom-56{
+  bottom: 14rem;
+}
+
+.bottom-24{
+  bottom: 6rem;
+}
+
+.bottom-28{
+  bottom: 7rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -1610,6 +1622,11 @@ html{
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.-mx-12{
+  margin-left: -3rem;
+  margin-right: -3rem;
 }
 
 .mt-12{
@@ -2454,6 +2471,34 @@ html{
   padding-right: 0.5rem;
 }
 
+.pb-72{
+  padding-bottom: 18rem;
+}
+
+.pb-96{
+  padding-bottom: 24rem;
+}
+
+.pb-64{
+  padding-bottom: 16rem;
+}
+
+.pb-60{
+  padding-bottom: 15rem;
+}
+
+.pb-56{
+  padding-bottom: 14rem;
+}
+
+.pb-44{
+  padding-bottom: 11rem;
+}
+
+.pb-24{
+  padding-bottom: 6rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -3067,6 +3112,22 @@ html{
     padding-top: 1.25rem;
   }
 
+  .sm\:pb-44{
+    padding-bottom: 11rem;
+  }
+
+  .sm\:pb-96{
+    padding-bottom: 24rem;
+  }
+
+  .sm\:pb-72{
+    padding-bottom: 18rem;
+  }
+
+  .sm\:pb-64{
+    padding-bottom: 16rem;
+  }
+
   .sm\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3492,6 +3553,10 @@ html{
     padding-top: 5rem;
   }
 
+  .lg\:pb-56{
+    padding-bottom: 14rem;
+  }
+
   .lg\:text-center{
     text-align: center;
   }
@@ -3648,6 +3713,26 @@ html{
     padding-bottom: 9rem;
   }
 
+  .xl\:pb-28{
+    padding-bottom: 7rem;
+  }
+
+  .xl\:pb-32{
+    padding-bottom: 8rem;
+  }
+
+  .xl\:pb-44{
+    padding-bottom: 11rem;
+  }
+
+  .xl\:pb-96{
+    padding-bottom: 24rem;
+  }
+
+  .xl\:pb-72{
+    padding-bottom: 18rem;
+  }
+
   .xl\:text-\[32px\]{
     font-size: 32px;
   }
@@ -3680,6 +3765,10 @@ html{
 
   .\32xl\:block{
     display: block;
+  }
+
+  .\32xl\:hidden{
+    display: none;
   }
 
   .\32xl\:w-52{
@@ -3720,6 +3809,14 @@ html{
 
   .\32xl\:gap-20{
     gap: 5rem;
+  }
+
+  .\32xl\:pb-64{
+    padding-bottom: 16rem;
+  }
+
+  .\32xl\:pb-72{
+    padding-bottom: 18rem;
   }
 
   .\32xl\:text-lg{

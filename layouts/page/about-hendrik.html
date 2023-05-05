@@ -3,7 +3,7 @@
 {{ $heroAbout := resources.Get "/illustrations/hero-about.svg" }}
 {{ $circles := resources.Get "/illustrations/circles.svg" }}
 {{ $arrow := resources.Get "/illustrations/arrow.svg" }}
-{{ $dashline := resources.Get "/illustrations/dash-line.svg" }}
+{{ $dashline := resources.Get "/illustrations/dash-line-7.svg" }}
 {{ $line6 := resources.Get "/illustrations/line-6.svg" }}
 {{ $line7 := resources.Get "/illustrations/line-7.svg" }}
 {{ $eclipse := resources.Get "/illustrations/eclipse.svg" }}
@@ -23,11 +23,12 @@
 {{ $hedera := resources.Get "/illustrations/hedera.svg" }}
 {{ $heise := resources.Get "/illustrations/heise.svg" }}
 {{ $arrow22 := resources.Get "/illustrations/arrow22.svg" }}
-{{ $dashlineM := resources.Get "/illustrations/dashline-m.svg" }}
+{{ $dashlineM := resources.Get "/illustrations/dash-line-7-m.svg" }}
 {{ $lineM := resources.Get "/illustrations/lineM.svg" }}
 {{ $lineM2 := resources.Get "/illustrations/lineM2.svg" }}
 {{ $click := resources.Get "/illustrations/click.svg" }}
 {{ $dashlineM2 := resources.Get "/illustrations/dashlineM.svg" }}
+{{ $dashlineD := resources.Get "/illustrations/dash-line-7-d.svg" }}
 
 <div class="relative">
     <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm">
@@ -57,9 +58,10 @@
         </div>
     </div>
 
-    <div class="relative sm:pb-36 pb-20 sm:pt-10">
-        <img class="absolute bottom-0 w-full sm:block hidden" src="{{ $dashline.RelPermalink }}" />
-        <img class="absolute bottom-0 w-full sm:hidden" src="{{ $dashlineM.RelPermalink }}" />
+    <div class="relative xl:pb-72 lg:pb-56 sm:pb-44 pb-28">
+        <img class="absolute bottom-0 w-full 2xl:block hidden xl:pb-28 sm:pb-16 pb-12" src="{{ $dashline.RelPermalink }}" />
+        <img class="absolute bottom-0 w-full 2xl:hidden sm:block hidden xl:pb-28 sm:pb-16 pb-12" src="{{ $dashlineD.RelPermalink }}" />
+        <img class="absolute bottom-0 w-full sm:hidden sm:pb-16 pb-12" src="{{ $dashlineM.RelPermalink }}" />
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mt-20 relative">
             <div class="rounded-full w-5 h-5 top-6 bg-sky absolute right-[8%]"></div>
             <h1 class="h2 text-center text-blue">Our <span class="text-sky">Founder</span></h1>
