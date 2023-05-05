@@ -2049,6 +2049,10 @@ html{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -2311,6 +2315,10 @@ html{
 
 .p-1{
   padding: 0.25rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-6{
@@ -3052,6 +3060,11 @@ html{
     padding-right: 0.75rem;
   }
 
+  .sm\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .sm\:pb-20{
     padding-bottom: 5rem;
   }
@@ -3479,6 +3492,10 @@ html{
     max-width: 28rem;
   }
 
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -3797,6 +3814,10 @@ html{
 
   .\32xl\:shrink-0{
     flex-shrink: 0;
+  }
+
+  .\32xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .\32xl\:gap-28{
