@@ -1559,36 +1559,8 @@ html{
   top: 0px;
 }
 
-.-top-\[20\%\]{
-  top: -20%;
-}
-
 .-top-10{
   top: -2.5rem;
-}
-
-.top-10{
-  top: 2.5rem;
-}
-
-.top-2{
-  top: 0.5rem;
-}
-
-.-top-5{
-  top: -1.25rem;
-}
-
-.bottom-56{
-  bottom: 14rem;
-}
-
-.bottom-24{
-  bottom: 6rem;
-}
-
-.bottom-28{
-  bottom: 7rem;
 }
 
 .z-10{
@@ -1665,10 +1637,6 @@ html{
   margin-top: 1.75rem;
 }
 
-.mt-16{
-  margin-top: 4rem;
-}
-
 .mb-7{
   margin-bottom: 1.75rem;
 }
@@ -1695,6 +1663,10 @@ html{
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
 }
 
 .-mr-16{
@@ -1801,24 +1773,16 @@ html{
   margin-top: 1.5rem;
 }
 
-.mt-3{
-  margin-top: 0.75rem;
-}
-
 .-mt-4{
   margin-top: -1rem;
 }
 
-.-mt-3{
-  margin-top: -0.75rem;
+.mt-3{
+  margin-top: 0.75rem;
 }
 
-.-mt-12{
-  margin-top: -3rem;
-}
-
-.-mt-14{
-  margin-top: -3.5rem;
+.mr-12{
+  margin-right: 3rem;
 }
 
 .block{
@@ -2045,12 +2009,16 @@ html{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.snap-x{
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
 }
 
-.grid-cols-1{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+.snap-center{
+  scroll-snap-align: center;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -2317,10 +2285,6 @@ html{
   padding: 0.25rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2391,32 +2355,12 @@ html{
   padding-right: 2rem;
 }
 
-.pb-14{
-  padding-bottom: 3.5rem;
-}
-
-.pt-16{
-  padding-top: 4rem;
-}
-
-.pb-3{
-  padding-bottom: 0.75rem;
-}
-
 .pl-6{
   padding-left: 1.5rem;
 }
 
 .pr-6{
   padding-right: 1.5rem;
-}
-
-.pt-12{
-  padding-top: 3rem;
-}
-
-.pb-12{
-  padding-bottom: 3rem;
 }
 
 .pr-20{
@@ -2427,6 +2371,10 @@ html{
   padding-right: 1rem;
 }
 
+.pt-16{
+  padding-top: 4rem;
+}
+
 .pb-16{
   padding-bottom: 4rem;
 }
@@ -2435,8 +2383,12 @@ html{
   padding-bottom: 1rem;
 }
 
-.pb-20{
-  padding-bottom: 5rem;
+.pb-28{
+  padding-bottom: 7rem;
+}
+
+.pb-12{
+  padding-bottom: 3rem;
 }
 
 .pt-24{
@@ -2447,8 +2399,12 @@ html{
   padding-top: 5rem;
 }
 
-.pb-28{
-  padding-bottom: 7rem;
+.pt-12{
+  padding-top: 3rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
 }
 
 .pt-3{
@@ -2479,32 +2435,12 @@ html{
   padding-right: 0.5rem;
 }
 
-.pb-72{
-  padding-bottom: 18rem;
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
-.pb-96{
-  padding-bottom: 24rem;
-}
-
-.pb-64{
-  padding-bottom: 16rem;
-}
-
-.pb-60{
-  padding-bottom: 15rem;
-}
-
-.pb-56{
-  padding-bottom: 14rem;
-}
-
-.pb-44{
-  padding-bottom: 11rem;
-}
-
-.pb-24{
-  padding-bottom: 6rem;
+.pr-12{
+  padding-right: 3rem;
 }
 
 .text-center{
@@ -2873,10 +2809,6 @@ html{
     margin-top: -0.5rem;
   }
 
-  .sm\:mt-24{
-    margin-top: 6rem;
-  }
-
   .sm\:mb-12{
     margin-bottom: 3rem;
   }
@@ -3021,10 +2953,6 @@ html{
     gap: 1.25rem;
   }
 
-  .sm\:p-3{
-    padding: 0.75rem;
-  }
-
   .sm\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3065,32 +2993,12 @@ html{
     padding-bottom: 0.75rem;
   }
 
-  .sm\:pb-20{
-    padding-bottom: 5rem;
-  }
-
-  .sm\:pb-0{
-    padding-bottom: 0px;
-  }
-
-  .sm\:pt-20{
-    padding-top: 5rem;
-  }
-
-  .sm\:pb-16{
-    padding-bottom: 4rem;
-  }
-
   .sm\:pr-20{
     padding-right: 5rem;
   }
 
   .sm\:pl-5{
     padding-left: 1.25rem;
-  }
-
-  .sm\:pt-16{
-    padding-top: 4rem;
   }
 
   .sm\:pt-28{
@@ -3105,12 +3013,12 @@ html{
     padding-bottom: 3rem;
   }
 
-  .sm\:pb-36{
-    padding-bottom: 9rem;
+  .sm\:pb-44{
+    padding-bottom: 11rem;
   }
 
-  .sm\:pt-10{
-    padding-top: 2.5rem;
+  .sm\:pb-16{
+    padding-bottom: 4rem;
   }
 
   .sm\:pb-28{
@@ -3123,22 +3031,6 @@ html{
 
   .sm\:pt-5{
     padding-top: 1.25rem;
-  }
-
-  .sm\:pb-44{
-    padding-bottom: 11rem;
-  }
-
-  .sm\:pb-96{
-    padding-bottom: 24rem;
-  }
-
-  .sm\:pb-72{
-    padding-bottom: 18rem;
-  }
-
-  .sm\:pb-64{
-    padding-bottom: 16rem;
   }
 
   .sm\:text-2xl{
@@ -3176,10 +3068,6 @@ html{
 
   .md\:-top-28{
     top: -7rem;
-  }
-
-  .md\:top-5{
-    top: 1.25rem;
   }
 
   .md\:-ml-16{
@@ -3492,10 +3380,6 @@ html{
     max-width: 28rem;
   }
 
-  .lg\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -3542,36 +3426,20 @@ html{
     padding-bottom: 5rem;
   }
 
-  .lg\:pt-36{
-    padding-top: 9rem;
-  }
-
   .lg\:pr-11{
     padding-right: 2.75rem;
   }
 
-  .lg\:pt-28{
-    padding-top: 7rem;
-  }
-
-  .lg\:pb-0{
-    padding-bottom: 0px;
-  }
-
-  .lg\:pt-24{
-    padding-top: 6rem;
-  }
-
-  .lg\:pb-24{
-    padding-bottom: 6rem;
+  .lg\:pb-56{
+    padding-bottom: 14rem;
   }
 
   .lg\:pt-20{
     padding-top: 5rem;
   }
 
-  .lg\:pb-56{
-    padding-bottom: 14rem;
+  .lg\:pt-36{
+    padding-top: 9rem;
   }
 
   .lg\:text-center{
@@ -3718,36 +3586,16 @@ html{
     padding-right: 1.5rem;
   }
 
-  .xl\:pb-24{
-    padding-bottom: 6rem;
-  }
-
-  .xl\:pt-32{
-    padding-top: 8rem;
-  }
-
-  .xl\:pb-36{
-    padding-bottom: 9rem;
+  .xl\:pb-72{
+    padding-bottom: 18rem;
   }
 
   .xl\:pb-28{
     padding-bottom: 7rem;
   }
 
-  .xl\:pb-32{
-    padding-bottom: 8rem;
-  }
-
-  .xl\:pb-44{
-    padding-bottom: 11rem;
-  }
-
-  .xl\:pb-96{
-    padding-bottom: 24rem;
-  }
-
-  .xl\:pb-72{
-    padding-bottom: 18rem;
+  .xl\:pb-36{
+    padding-bottom: 9rem;
   }
 
   .xl\:text-\[32px\]{
@@ -3816,10 +3664,6 @@ html{
     flex-shrink: 0;
   }
 
-  .\32xl\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .\32xl\:gap-28{
     gap: 7rem;
   }
@@ -3830,14 +3674,6 @@ html{
 
   .\32xl\:gap-20{
     gap: 5rem;
-  }
-
-  .\32xl\:pb-64{
-    padding-bottom: 16rem;
-  }
-
-  .\32xl\:pb-72{
-    padding-bottom: 18rem;
   }
 
   .\32xl\:text-lg{

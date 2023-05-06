@@ -39,7 +39,7 @@
 {{ $callIcon := resources.Get "/icons/call.svg" }}
 
 
-<div class="relative">
+<div class="relative mx-auto">
     <div class="lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
         <div class="flex lg:flex-row flex-col items-center gap-8 lg:mt-32 mt-20">
             <div class="w-full relative ">
@@ -63,27 +63,27 @@
             </div>
             {{ if .Site.Data.landingpage.category_navbar_visible }}
             <div class="lg:container mx-auto relative lg:hidden -mt-8">
-                <div class="flex items-center gap-2 lg:px-0 sm:px-12 py-6 px-5 xl:justify-center overflow-x-auto scrollbar-none">
+                <div class="flex xl:items-center gap-2 lg:px-0 sm:px-12 py-6 px-5 xl:justify-center overflow-x-auto scrollbar-none">
                     {{ if .Site.Data.landingpage.open_knowledge_visible }}
-                    <a href="#open-knowledge-section" class="badge-purple">Open Knowledge</a>
+                    <a href="#open-knowledge-section" class="badge-purple ">Open Knowledge</a>
                     {{end}}
                     {{ if .Site.Data.landingpage.open_events_visible }}
-                    <a href="#open-events-section" class="badge-purple">Open Events</a>
+                    <a href="#open-events-section" class="badge-purple ">Open Events</a>
                     {{end}}
                     {{ if .Site.Data.landingpage.open_source_visible }}
-                    <a href="#open-source-section" class="badge-purple">Open Source</a>
+                    <a href="#open-source-section" class="badge-purple ">Open Source</a>
                     {{end}}
                     {{ if .Site.Data.landingpage.open_doors_visible }}
-                    <a href="#open-doors-section" class="badge-purple">Open Doors</a>
+                    <a href="#open-doors-section" class="badge-purple ">Open Doors</a>
                     {{end}}
                     {{ if .Site.Data.landingpage.open_data_visible }}
-                    <a href="#open-data-section" class="badge-purple">Open Data</a>
+                    <a href="#open-data-section" class="badge-purple ">Open Data</a>
                     {{end}}
                     {{ if .Site.Data.landingpage.open_office_visible }}
-                    <a href="#open-office-section" class="badge-purple">Open Office</a>
+                    <a href="#open-office-section" class="badge-purple ">Open Office</a>
                     {{end}}
                     {{ if .Site.Data.landingpage.open_diversity_visible }}
-                    <a href="#open-diversity-section" class="badge-purple">Open Diversity</a>
+                    <a href="#open-diversity-section" class="badge-purple ">Open Diversity</a>
                     {{end}}
                 </div>
             </div>
@@ -98,7 +98,7 @@
 
     {{ if .Site.Data.landingpage.category_navbar_visible }}
     <div class="lg:container mx-auto xl:mt-5 mt-7 relative lg:block hidden">
-        <div class="flex items-center gap-2 lg:px-0 sm:px-8 px-5 py-5 xl:justify-center overflow-x-auto scrollbar-none">
+        <div class="flex items-center justify-center mx-auto gap-2 lg:px-0 sm:px-8 px-5 py-5 xl:justify-center overflow-x-auto scrollbar-none">
             {{ if .Site.Data.landingpage.open_knowledge_visible }}
             <a href="#open-knowledge-section" class="badge-purple">Open Knowledge</a>
             {{end}}
