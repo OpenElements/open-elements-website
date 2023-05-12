@@ -1,6 +1,6 @@
 ---
-title: "Eclipse Temurin Support & Care"
-Description: "Eclipse Temurin Support & Care"
+title: "Temurin Support & Care"
+Description: "Temurin Support & Care"
 layout: "product-overview"
 
 intro: 'In einer zunehmend digitalisierten Welt hat sich Java als eine der populärsten und weitverbreitetsten Programmiersprachen etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung von Java-Anwendungen auf der sicheren Seite zu sein. Eclipse Temurin ist ein Open-Source-Implementierung von OpenJDK, die von der Eclipse Foundation betrieben wird. Der Kauf von Eclipse Temurin Support bietet Ihnen eine Vielzahl von Vorteilen, die die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen und den Entwicklungsprozess optimieren.'
