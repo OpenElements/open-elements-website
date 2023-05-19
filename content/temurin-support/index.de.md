@@ -3,8 +3,10 @@ title: "Temurin Support & Care"
 Description: "Temurin Support & Care"
 layout: "product-overview"
 
-intro: 'In einer zunehmend digitalisierten Welt hat sich Java als eine der populärsten und weitverbreitetsten Programmiersprachen etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung von Java-Anwendungen auf der sicheren Seite zu sein. Eclipse Temurin ist ein Open-Source-Implementierung von OpenJDK, die von der Eclipse Foundation betrieben wird. Der Kauf von Eclipse Temurin Support bietet Ihnen eine Vielzahl von Vorteilen, die die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen und den Entwicklungsprozess optimieren.'
-
+intro-1: 'In einer zunehmend digitalisierten Welt hat sich <span style="font-weight: 500;">Java™</span> als eine der populärsten und weitverbreitetsten Programmiersprachen etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung von Java-Anwendungen auf der sicheren Seite zu sein.'
+intro-2: '<span style="font-weight: 500;">Eclipse Temurin™</span> ist eine Java Laufzeitumgebung welche auf dem <span style="font-weight: 500;">OpenJDK™</span> basiert und von der <span style="font-weight: 500;">Eclipse Foundation</span> unter einer Open Source Lizenz vertrieben wird. Eclipse Temurin ist ein zentrales Projekt der <span style="font-weight: 500;">Adoptium™</span> WorkingGroup die hochqualitative Produkte und Technologien für das Java Ökosystem entwickelt und bereitstellt.
+Mit über 10 Millionen Downloads pro Monat ist Eclipse Temurin die meistgenutzte Java Laufzeitumgebung der Welt.'
+intro-3: 'Der Kauf von <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> bietet Ihnen eine Vielzahl von Vorteilen, die die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen, Ihren Entwicklungsprozess optimieren und Ihnen Informationen und Einblicke in die aktuelle und Zukünftige Entwicklung in der Eclipse Adoptium WorkingGroup sowie dem OpenJDK bieten.'
 contact_us_button_text: 'Kontaktieren Sie uns'
 
 facts:
@@ -14,8 +16,8 @@ facts:
         logo: '/images/temurin/icon-support.svg'
         link: 'no-link'
     fact2:
-        title: 'Sicherheitsupdates'
-        text: 'Die IT-Sicherheit ist für jedes Unternehmen von zentraler Bedeutung. <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> gewährleistet, dass Sie umgehend über sicherheitsrelevante Updates und Patches informiert werden und diese zeitnah installieren können. Somit reduzieren Sie das Risiko von Sicherheitslücken und schützen Ihre Anwendungen vor potenziellen Bedrohungen.'
+        title: 'Frühzeitige Warnungen und Sicherheitsupdates'
+        text: 'Die IT-Sicherheit ist für jedes Unternehmen von zentraler Bedeutung. <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> gewährleistet, dass Sie umgehend über sicherheitsrelevante Updates und Patches informiert werden und diese zeitnah installieren können. Somit reduzieren Sie das Risiko von Sicherheitslücken und schützen Ihre proaktiv Anwendungen vor potenziellen Bedrohungen.'
         logo: '/images/temurin/icon-security.svg'
         link: 'no-link'
     fact3:
@@ -24,13 +26,8 @@ facts:
         logo: '/images/temurin/icon-reliability.svg'
         link: 'no-link'
     fact4:
-        title: 'Zeitersparnis und Effizienz'
-        text: 'Durch den Zugriff auf professionelle Hilfe können Sie Entwicklungsprozesse beschleunigen und Ressourcen gezielter einsetzen. <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> hilft Ihnen dabei, technische Hürden zu überwinden und Ihr Team auf die wesentlichen Aufgaben im Entwicklungsprozess zu konzentrieren.'
-        logo: '/images/temurin/icon-cost.svg'
-        link: 'no-link'
-    fact5:
-        title: 'Langfristige Kosteneinsparungen'
-        text: 'Zwar ist der Kauf von <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> zunächst eine Investition, aber langfristig können Sie erhebliche Kosten einsparen. Durch die kontinuierliche Verbesserung und Wartung Ihrer Anwendungen verringern Sie das Risiko von Systemausfällen und kostspieligen Reparaturen, während Sie gleichzeitig die Effizienz und Produktivität Ihres Teams steigern.'
+        title: 'Kosteneinsparungen und gesteigerte Effizienz'
+        text: 'Mit OpenElements Temurin Support & Care erzielen Sie Zeitersparnis sowie langfristige Kosteneinsparungen. Durch die kontinuierliche Verbesserung und Wartung Ihrer Anwendungen auf Basis von Eclipse Adoptium Produkten verringern Sie das Risiko von Sicherheitslücken, minimieren Systemausfälle und beschleunigen Ihre Entwicklungsprozesse während Sie gleichzeitig die Effizienz und Produktivität Ihres Teams steigern'
         logo: '/images/temurin/icon-cost.svg'
         link: 'no-link'
     fact6:
@@ -38,29 +35,14 @@ facts:
         text: 'Mit <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> erhalten Sie frühzeitigen Zugang zu Informationen über bevorstehende Updates und Releases. Dadurch können Sie besser planen und sicherstellen, dass Ihre Systeme stets auf dem neuesten Stand sind, was die Leistung und Sicherheit Ihrer Java-Anwendungen verbessert.'
         logo: '/images/temurin/icon-expert.svg'
         link: 'no-link'
-    fact7:
-        title: 'Insiderwissen und Best Practices'
-        text: '<span style="font-weight: 500;">OpenElements Temurin Support & Care</span> ermöglichen Ihnen den Zugang zu Expertenwissen und bewährten Vorgehensweisen, die Ihnen helfen, Ihre Java-Anwendungen effizienter zu entwickeln und zu warten. Sie profitieren von den Erfahrungen anderer Unternehmen und können so Ihre Entwicklungs- und Betriebsprozesse optimieren.'
-        logo: '/images/temurin/icon-expert.svg'
-        link: 'no-link'
-    fact8:
-        title: 'Frühzeitige Warnungen vor potenziellen Problemen'
-        text: 'Durch den direkten Kontakt zu den Temurin-Entwicklern erhalten Sie frühzeitige Warnungen vor möglichen Problemen oder Inkompatibilitäten, die bei der Entwicklung oder beim Betrieb Ihrer Anwendungen auftreten könnten. Dies ermöglicht es Ihnen, proaktiv zu handeln und mögliche Schwierigkeiten frühzeitig zu beheben, bevor sie zu größeren Problemen werden.'
-        logo: '/images/temurin/icon-security.svg'
-        link: 'no-link'
-    fact9:
-        title: 'Individuelle Beratung und Lösungsansätze'
-        text: '<span style="font-weight: 500;">OpenElements Temurin Support & Care</span> gewährleistet, dass Sie individuelle Beratung und maßgeschneiderte Lösungsansätze für Ihre spezifischen Anforderungen erhalten. Diese persönliche Betreuung hilft Ihnen, Ihre Java-Anwendungen bestmöglich auf Ihre Geschäftsziele auszurichten und einen Wettbewerbsvorteil gegenüber anderen Unternehmen zu erlangen, die keine entsprechende Unterstützung haben.'
-        logo: '/images/temurin/icon-training.svg'
-        link: 'no-link'
     fact10:
         title: 'Wissenstransfer und Schulungen'
-        text: 'Ein weiterer Vorteil von <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> ist der Zugang zu Schulungen und Wissenstransfer. Sie erhalten die Möglichkeit, Ihr Entwicklerteam in den neuesten Java-Technologien und -Tools fortzubilden, was zu einer höheren Produktivität und besserer Codequalität führt.'
+        text: 'Ein weiterer Vorteil von <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> ist der Zugang zu wichtigen KnowHow und Fachwissen zu Eclipse Adoptium und dem OpenJDK. Sie erhalten die Möglichkeit, Ihr Entwicklerteam in den neuesten Java-Technologien und -Tools effizient fortzubilden und alle informationen über die aktuellen Entwicklungen im Java Ökosystem direkt aus erster Hand zu erhalten.'
         logo: '/images/temurin/icon-training.svg'
         link: 'no-link'
     fact11:
-        title: 'Hochwertiger Support und verbesserte Dokumentation'
-        text: '<span style="font-weight: 500;">OpenElements Temurin Support & Care</span> bietet Ihnen nicht nur direkten Zugang zu erfahrenen Java-Experten, sondern auch eine verbesserte und umfassende Dokumentation von Eclipse Temurin in deutscher und englischer Sprache. Diese Dokumentation ist speziell auf die Bedürfnisse unserer Kunden zugeschnitten und hilft Ihnen dabei, das volle Potenzial von Temurin auszuschöpfen.'
+        title: 'Hochwertige und verbesserte Dokumentation'
+        text: '<span style="font-weight: 500;">OpenElements Temurin Support & Care</span> bietet Ihnen nicht nur direkten Zugang zu erfahrenen Java-Experten, sondern liefert auch eine verbesserte und umfassende Dokumentation aller Eclipse Adoptium Projekte in deutscher und englischer Sprache. Diese Dokumentation wird basierend auf den Bedürfnissen unserer Kunden zugeschnitten und hilft Ihnen dabei, das volle Potenzial von Temurin auszuschöpfen.'
         logo: '/images/temurin/icon-documentation.svg'
         link: 'no-link'
     fact12:
@@ -72,10 +54,5 @@ facts:
         title: 'Angepasste Docker-Container für optimale Flexibilität'
         text: '<span style="font-weight: 500;">OpenElements Temurin Support & Care</span> bieten wir auch angepasste Docker-Container an, die perfekt auf die Bedürfnisse unserer Kunden zugeschnitten sind. Sie enthalten die neuesten Versionen von Temurin und können auch weitere Java-Tools wie Maven enthalten. Wir sorgen für regelmäßige Aktualisierungen und Wartung, damit unsere Kunden stets auf dem neuesten Stand sind und ihre Java-Anwendungen in der Cloud oder in lokalen Umgebungen flexibel und effizient bereitstellen können.'
         logo: '/images/temurin/icon-community.svg'
-        link: 'no-link'
-    fact14:
-        title: 'Erfahrene Temurin-Experten für Ihren Support'
-        text: 'Bei <span style="font-weight: 500;">OpenElements</span> finden Sie erfahrene Temurin-Experten, die Ihnen einen hochwertigen Support bieten können. Unser Gründer Hendrik Ebbers war bereits im Technischen Steering Committee von AdoptOpenJDK tätig und hat maßgeblich zur erfolgreichen Umsetzung von AdoptOpenJDK und Temurin beigetragen. Unsere Entwickler verfügen über umfassendes Know-how in der Erstellung von systemspezifischen Binaries von Temurin und unsere Java- und Open-Source-Experten sind anerkannte Experten in der Branche.'
-        logo: '/images/temurin/icon-expert.svg'
         link: 'no-link'
 ---
