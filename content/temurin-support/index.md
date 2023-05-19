@@ -16,42 +16,42 @@ facts:
     fact2:
         title: 'Security updates'
         text: 'IT security is of central importance for every company. OpenElements Temurin Support & Care ensures that you are promptly informed about security-related updates and patches and can install them in a timely manner. This reduces the risk of security vulnerabilities and protects your applications from potential threats.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-security.svg'
         link: 'no-link'
     fact3:
         title: 'Stability and reliability'
         text: 'OpenElements Temurin Support & Care ensures that your Java applications run on a stable and reliable platform. Through continuous support, you will receive updates and bug fixes that improve the performance of your applications and identify and resolve potential issues early on.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-reliability.svg'
         link: 'no-link'
     fact4:
         title: 'Time savings and efficiency'
         text: 'Access to professional help can accelerate development processes and help you target resources more effectively. OpenElements Temurin Support & Care helps you overcome technical obstacles and focus your team on the essential tasks in the development process, saving time and increasing efficiency.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-cost.svg'
         link: 'no-link'
     fact5:
         title: 'Long-term cost savings'
         text: 'Although purchasing OpenElements Temurin Support & Care is initially an investment, it can result in significant long-term cost savings. By continuously improving and maintaining your applications, you reduce the risk of system failures and costly repairs, while also increasing the efficiency and productivity of your team.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-cost.svg'
         link: 'no-link'
     fact6:
         title: 'Advance information about updates and releases'
         text: 'With OpenElements Temurin Support & Care, you will have early access to information about upcoming updates and releases. This allows you to better plan and ensure that your systems are always up to date, improving the performance and security of your Java applications.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-expert.svg'
         link: 'no-link'
     fact7:
         title: 'Insider knowledge and best practices'
         text: 'OpenElements Temurin Support & Care provides you with access to expert knowledge and best practices that help you develop and maintain your Java applications more efficiently. You benefit from the experiences of other companies and can optimize your development and operations processes accordingly.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-training.svg'
         link: 'no-link'
     fact8:
         title: 'Early warnings about potential issues'
         text: 'By having direct contact with the Temurin developers, you will receive early warnings about potential problems or incompatibilities that may arise during the development or operation of your applications. This allows you to take proactive measures and address any issues early on before they become larger problems.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-security.svg'
         link: 'no-link'
     fact9:
         title: 'Individual consultation and solution approaches'
         text: 'OpenElements Temurin Support & Care ensures that you receive individual consultation and tailored solution approaches for your specific requirements. This personalized support helps you align your Java applications with your business goals and gain a competitive advantage over other companies that do not have such support.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-expert.svg'
         link: 'no-link'
     fact10:
         title: 'Knowledge transfer and training'
@@ -76,6 +76,6 @@ facts:
     fact14:
         title: 'Experienced Temurin experts for your support'
         text: 'At OpenElements, you will find experienced Temurin experts who can provide you with high-quality support. Our founder, Hendrik Ebbers, has already served on the Technical Steering Committee of AdoptOpenJDK and made a significant contribution to the successful implementation of AdoptOpenJDK and Temurin. Our developers have comprehensive knowledge in creating system-specific binaries of Temurin, and our Java and open-source experts are recognized industry experts.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-expert.svg'
         link: 'no-link'
 ---
