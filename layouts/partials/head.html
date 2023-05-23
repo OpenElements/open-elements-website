@@ -5,6 +5,10 @@
   {{ if eq .Site.Params.openGraph true }}
   {{ template "_internal/opengraph.html" . }}
   {{ end }}
+  <link rel="icon" href="/icons/favicon.ico" sizes="any"><!-- 32×32 -->
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="manifest" href="/manifest.webmanifest">
   <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Hardcoded description; the author should update :){{ end }}" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
