@@ -12,17 +12,17 @@
     }
 
     .nav-link{
-        @apply font-medium text-gray hover:text-rose transition-colors ease-in-out duration-150 focus:outline-none
+        @apply font-medium text-gray hover:text-sky transition-colors ease-in-out duration-150 focus:outline-none
     }
 
     .nav-icon{
-        @apply text-2xl leading-none  text-white hover:text-rose transition-colors ease-in-out duration-150
+        @apply text-2xl leading-none  text-white hover:text-green transition-colors ease-in-out duration-150
     }
     .nav-icon-mb{
-        @apply text-4xl leading-none  text-white hover:text-rose transition-colors ease-in-out duration-150
+        @apply text-4xl leading-none  text-white hover:text-sky transition-colors ease-in-out duration-150
     }
     .footer-icon{
-        @apply text-3xl leading-none  text-white hover:text-rose transition-colors ease-in-out duration-150
+        @apply text-3xl leading-none  text-white hover:text-sky transition-colors ease-in-out duration-150
     }
     .h1{
         @apply lg:text-[52px] sm:text-4xl text-[32px] font-bold lg:leading-snug sm:leading-snug leading-snug
@@ -45,32 +45,32 @@
     }
 
     .badge-purple{
-        @apply px-2.5 py-1 shrink-0 bg-purple-100 border border-purple text-center text-purple rounded-full font-bold hover:bg-purple-700 hover:text-white hover:shadow-3 active:shadow-none active:bg-purple transition-all ease-in-out duration-150
+        @apply px-2.5 py-1 shrink-0 bg-purple-100 border border-purple text-center text-purple rounded-full font-semibold hover:bg-purple-700 hover:text-white hover:shadow-3 active:shadow-none active:bg-purple transition ease-in-out duration-150
     }
 
     .link-simple{
-        @apply underline hover:no-underline focus:outline-none
+        @apply hover:underline focus:outline-none
     }
 
     .link-rose{
-        @apply text-rose uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
+        @apply text-rose font-medium focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:underline
     }
 
     .link-purple{
-        @apply text-purple uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
+        @apply text-purple font-medium focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:underline
     }
 
     .link-sky{
-        @apply text-sky uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
+        @apply text-sky font-medium focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:underline
     }
 
     .link-green{
-        @apply text-green uppercase font-medium underline focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:no-underline hover:font-bold
+        @apply text-green font-medium focus:outline-none transition-all ease-in-out duration-150 active:font-medium hover:underline
     }
     .footer-link{
-        @apply font-medium text-white text-sm group-hover:text-rose transition-colors ease-in-out duration-150
+        @apply font-medium text-white text-sm group-hover:text-sky transition-colors ease-in-out duration-150
     }
     .footer-link-icon{
-        @apply shrink-0 text-white text-xl group-hover:text-rose transition-colors ease-in-out duration-150
+        @apply shrink-0 text-white text-xl group-hover:text-sky transition-colors ease-in-out duration-150
     }
 }

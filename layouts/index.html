@@ -40,7 +40,7 @@
 
 
 <div class="relative mx-auto">
-    <div class="lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12">
+    <div class="lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12 sm:pb-0 pb-14">
         <div class="flex lg:flex-row flex-col items-center gap-8 lg:mt-32 mt-20">
             <div class="w-full relative ">
                 <img class="absolute 2xl:right-20 right-12 -top-24 lg:block hidden" src="{{ $arrow1.RelPermalink }}" />
@@ -62,7 +62,7 @@
                 <p class="2xl:text-lg text-bse text-blue mt-4 lg:px-0 md:px-12 sm:px-8 px-6">{{ $.Param "hero_text" | safeHTML }}</p>
             </div>
             {{ if .Site.Data.landingpage.category_navbar_visible }}
-            <div class="lg:container mx-auto relative lg:hidden -mt-8">
+            <div class="mx-auto relative lg:hidden sm:block hidden -mt-8">
                 <div class="flex xl:items-center gap-2 lg:px-0 sm:px-12 py-6 px-5 xl:justify-center overflow-x-auto scrollbar-none">
                     {{ if .Site.Data.landingpage.open_knowledge_visible }}
                     <a href="#open-knowledge-section" class="badge-purple ">Open Knowledge</a>
@@ -89,8 +89,8 @@
             </div>
             {{ end }}
             <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative sm:px-0 px-6">
-                <img class="absolute sm:-right-24 md:-right-40 -right-2 sm:bottom-2 bottom-0 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
-                <img class="absolute -bottom-6 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
+                <img class="absolute sm:-right-24 md:-right-40 -right-2 sm:bottom-2 -bottom-6 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
+                <img class="absolute -bottom-12 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
                 <img src="{{ $heroCircle.RelPermalink }}" alt="" class="w-full">
             </div>
         </div>
@@ -261,7 +261,7 @@
                             class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
                             <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
 
-                            <a href="" class="flex items-center justify-center gap-3 capitalize text-white font-bold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                            <a href="" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
                                 <img src="{{ $callIcon.RelPermalink }}" />
                                 schedule appointment
                             </a>

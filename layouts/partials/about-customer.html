@@ -1,11 +1,11 @@
 <div class="w-full sm:px-3 py-3 relative">
     <div class="bg-gray rounded-[30px] shadow-4 p-6 pb-9 h-full">
-        <div class="flex items-center justify-start gap-3 pb-2">
-            <div class="w-24 h-32 flex items-center justify-start">
+        <div class="flex items-center justify-start gap-3">
+            <div class="w-24 h-28 flex items-center justify-start">
                 <a href="{{ .link }}" target="_blank" style="width: 100%"><img class="w-full" src="{{ .logo }}" /></a>
             </div>
             <p class="text-blue font-bold text-2xl pr-2">{{ .title }}</p>
         </div>
-        <p class="sm:text-lg text-base sm:leading-8 leading-7">{{ .description | safeHTML }}</p>
+        <p>{{ .description | safeHTML }}</p>
     </div>
 </div>
