@@ -7,19 +7,20 @@
 {{ $close := resources.Get "/illustrations/close.svg" }}
 {{ $menuBg := resources.Get "/illustrations/menu-bg.svg" }}
 <div class="relative">
-    <div class="flex items-start absolute top-0 inset-x-0">        
+    <div class="flex items-start absolute top-0 w-full">
         {{ if trim .Page.RelPermalink "/"}}
         <div class="bg-blue h-[274px] w-full 2xl:block hidden"></div>
         {{ else }}
         <div class="bg-blue h-[244px] w-full 2xl:block hidden"></div>
         {{ end }}
-        <div class="2xl:max-w-screen-2xl 2xl:w-auto w-full 2xl:shrink-0">
+        <div class="w-full 2xl:shrink-0">
             {{ if trim .Page.RelPermalink "/"}}
-            <img class="w-full xl:mt-0 md:mt-5 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
+            <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
             <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
             {{ else }}
             <img class="w-full xl:mt-0 mt-3 lg:block hidden" src="{{ $herobg.RelPermalink }}" />
-            <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block" src="{{ $mBgHero.RelPermalink }}" />
+            <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block"
+                src="{{ $mBgHero.RelPermalink }}" />
             {{ end }}
         </div>
         {{ if trim .Page.RelPermalink "/"}}
@@ -29,13 +30,13 @@
         {{ end }}
     </div>
 
-    <div class="bg-rose  pt-16 container" x-data="{ open:false }">
+    <div class="pt-16 container" x-data="{ open:false }">
         <div class="fixed top-0 bg-blue inset-x-0 w-full pb-3 z-30 ">
             <div class="container mx-auto max-w-7xl relative">
-                <nav class="flex items-center justify-between pt-5 pb-3 ">
+                <nav class="flex items-center justify-between pt-5 pb-3">
                     <a href="/"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
-                    <div class="xl:flex hidden items-center gap-24">
-                        <div class="flex items-center gap-7">
+                    <div class="xl:flex hidden items-center gap-9">
+                        <div class="flex items-center gap-9">
                             {{ $mainMenu := site.Data.mainMenu }}
                             {{ range $mainMenu }}
                             {{ if .visibleInNavigation }}
@@ -44,28 +45,35 @@
                             {{ end }}
                         </div>
                         <div>
-                        <div class="flex items-center gap-2.5">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                            </svg>  
-                            <div class="flex items-center gap-1">
-                                {{ if eq $.Site.Language.Lang "en" }}
-                                <a class="bg-white rounded-full px-2 py-[3px] text-xs leading-none text-center text-blue">EN</a>
-                                {{ else }}
-                                <a href="http://open-elements.com{{ .Page.RelPermalink }}" class="bg-transparent rounded-full px-2 py-[3px] text-xs leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150 text-white">EN</a>
-                                {{ end }}
-                                {{ if eq $.Site.Language.Lang "de" }}
-                                <a class="bg-white rounded-full px-2 py-[3px] text-xs leading-none text-center text-blue">DE</a>
-                                {{ else }}
-                                <a href="http://open-elements.de{{ .Page.RelPermalink }}" class="bg-transparent rounded-full px-2 py-[3px] text-xs leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150 text-white">DE</a>
-                                {{ end }}
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-green">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                                </svg>
+                                <div class="flex items-center gap-1">
+                                    {{ if eq $.Site.Language.Lang "en" }}
+                                    <a class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center
+                                    text-blue">EN</button>                                    
+                                    {{ else }}
+                                    <a href="http://open-elements.com{{ .Page.RelPermalink }}" class="bg-transparent rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150
+                                 text-white">EN</button>                                  
+                                    {{ end }}
+                                    {{ if eq $.Site.Language.Lang "de" }}
+                                    <a class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center
+                                    text-blue">DE</button>                                    
+                                    {{ else }}
+                                    <a href="http://open-elements.de{{ .Page.RelPermalink }}" class="bg-transparent rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150
+                                 text-white">DE</button>                                  
+                                    {{ end }}
+                                </div>
                             </div>
-                        </div>
                         </div>
                         <div class="flex items-center gap-5">
                             {{ $social := site.Data.social }}
                             {{ range $social }}
-                            <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon" data-icon="{{ .icon | safeURL }}"></span></a>
+                            <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon"
+                                    data-icon="{{ .icon | safeURL }}"></span></a>
                             {{ end }}
                         </div>
                     </div>
@@ -75,10 +83,11 @@
                 </nav>
             </div>
         </div>
-       
-    
+
+
         <div class=" fixed top-0 inset-0 z-30 bg-blue h-full xl:hidden" x-show="open"
-            x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
             x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
             x-transition:leave-start="transform opacity-100 scale-100"
             x-transition:leave-end="transform opacity-0 scale-95">
@@ -90,7 +99,8 @@
                         <img class="w-7" @click="open = false" src="{{ $close.RelPermalink }}" />
                     </button>
                 </nav>
-                <div class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
+                <div
+                    class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
                     <div class="flex flex-col gap-11 sm:items-center">
                         <div class="flex flex-col sm:items-center gap-7">
                             {{ $mainMenu := site.Data.mainMenu }}
@@ -99,24 +109,28 @@
                             {{ end }}
                         </div>
                         <div class="flex items-center gap-4 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                            </svg>  
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5 h-5 text-green">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                            </svg>
                             <div class="flex items-center gap-3">
-                                <button class="bg-white rounded-full px-2 py-[3px] text-xs leading-none text-center
+                                <button class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center
                                 text-blue">EN</button>
-                                <button class="bg-transparent rounded-full px-2 py-[3px] text-xs leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150
+                                <button class="bg-transparent rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150
                                 text-white">DE</button>
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="flex items-center gap-6">
                         {{ $social := site.Data.social }}
                         {{ range $social }}
-                        <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon" data-icon="{{ .icon | safeURL }}"></span></a>
+                        <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon"
+                                data-icon="{{ .icon | safeURL }}"></span></a>
                         {{ end }}
                     </div>
+                   
                     
                 </div>
             </div>
