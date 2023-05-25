@@ -1,10 +1,18 @@
-<svg width="1440" height="126" viewBox="0 0 1440 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_355)">
-<path d="M757.947 92.6653C279.462 120.277 -29.602 115.449 -42 61L-129.539 -44H1445.91C1558.14 22.3542 1709.12 133.002 1819.51 208.975C1909.94 237.934 1963.53 265.939 1966 285C1968.92 307.572 1906.95 269.15 1819.51 208.975C1607.1 140.945 1191.45 67.6492 757.947 92.6653Z" fill="#020144"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;fill:#FF815E;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#020144;}
+</style>
+<rect x="277.7" y="-36.7" class="st0" width="36.8" height="105.9"/>
+<rect x="54.7" y="126" class="st0" width="36.8" height="105.9"/>
+<rect x="1421.6" y="38.3" class="st0" width="36.8" height="105.9"/>
+<g>
+	<g>
+		<path class="st1" d="M757.9,92.7C279.5,120.3-29.6,115.4-42,61l-87.5-105h1575.4c112.2,66.4,263.2,177,373.6,253
+			c90.4,29,144,57,146.5,76c2.9,22.6-59.1-15.9-146.5-76C1607.1,140.9,1191.4,67.6,757.9,92.7z"/>
+	</g>
 </g>
-<defs>
-<clipPath id="clip0_1_355">
-<rect width="1440" height="126" fill="white"/>
-</clipPath>
-</defs>
 </svg>
