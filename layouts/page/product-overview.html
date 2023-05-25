@@ -28,6 +28,8 @@
 {{ $lineM2 := resources.Get "/illustrations/lineM2.svg" }}
 {{ $click := resources.Get "/illustrations/click.svg" }}
 {{ $dashlineM2 := resources.Get "/illustrations/dashlineM.svg" }}
+{{ $callIcon := resources.Get "/icons/call.svg" }}
+
 
 <div class="relative">
     <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm">
@@ -38,10 +40,13 @@
             </div>
          </div>
          <div class="flex flex-col gap-7 text-blue sm:text-lg mt-8">
-            <p>{{ $.Param "intro" | safeHTML }}</p>
+            <p>{{ $.Param "intro-1" | safeHTML }}</p>
+            <p>{{ $.Param "intro-2" | safeHTML }}</p>
+            <p>{{ $.Param "intro-3" | safeHTML }}</p>
         </div>
         <div class="max-w-[1080px] pt-3 mx-auto">
-            <a href="" class="flex items-center justify-center gap-3 capitalize text-white font-bold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+            <a href="/contact" class="flex items-center justify-center gap-3 capitalize text-white font-bold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                <img src="{{ $callIcon.RelPermalink }}" />
                 {{ $.Param "contact_us_button_text" }}
             </a>
         </div>

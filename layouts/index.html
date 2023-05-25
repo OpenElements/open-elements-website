@@ -227,6 +227,15 @@
     {{end}}
 
     {{ if .Site.Data.landingpage.open_doors_visible }}
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://app.cal.com"});
+    
+    // link: add `data-cal-link="open-elements/15min"` attribute to the element you want to open Cal on click
+    Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false});
+    </script>
+    <!-- Cal element-click embed code ends -->
     <div id="open-doors-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">
         <div class="">
             <div class="flex lg:items-start lg:flex-row flex-col lg:justify-start justify-center items-center gap-10">
@@ -261,7 +270,7 @@
                             class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
                             <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
 
-                            <a href="" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                            <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
                                 <img src="{{ $callIcon.RelPermalink }}" />
                                 schedule appointment
                             </a>
