@@ -58,9 +58,9 @@ engagements:
         link: 'https://cyberland.ijug.eu'
     javaland:
         title: 'JavaLand'
-        text: '<a class="link-purple" href="https://www.javaland.eu/de/javaland-2023/" target="_blank">JavaLand</a> is not only the largest Java conference in the German-speaking area but also one of the few community conferences. <a class="link-purple" href="/about-hendrik" target="_blank">Hendrik Ebbers</a> heads the program committee of JavaLand and is a member of the conference management.'
+        text: '<a class="link-purple" href="https://www.javaland.eu" target="_blank">JavaLand</a> is not only the largest Java conference in the German-speaking area but also one of the few community conferences. <a class="link-purple" href="/about-hendrik" target="_blank">Hendrik Ebbers</a> heads the program committee of JavaLand and is a member of the conference management.'
         logo: '/illustrations/logo-javaland.svg'
-        link: 'https://www.javaland.eu/de/javaland-2023/'
+        link: 'https://www.javaland.eu'
     jug:
         title: 'Java User Group Dortmund'
         text: 'The <a class="link-purple" href="https://www.meetup.com/jug-dortmund/" target="_blank">JUG Dortmund</a> was founded in 2012 by <a class="link-purple" href="/about-hendrik" target="_blank">Hendrik Ebbers</a> together with Ansgar Brauner. Since then, Hendrik has been co-responsible for managing the Dortmund JUG and organizes free lecture series and meetups - together with locally based IT companies.'
