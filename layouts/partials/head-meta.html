@@ -1,6 +1,6 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content='{{ .Site.BaseURL }}{{ trim .Page.RelPermalink "/"}}' />
-<meta property="og:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
+<meta property="og:image" content='{{ .Site.BaseURL }}open-graph/open-elements.png' />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
@@ -22,7 +22,7 @@
 {{ end }}
 <meta name="twitter:card" content='summary' />
 <meta name="twitter:url" content='{{ .Site.BaseURL }}{{ trim .Page.RelPermalink "/"}}' />
-<meta name="twitter:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
+<meta name="twitter:image" content='{{ .Site.BaseURL }}open-graph/open-elements.png' />
 
 {{ if .Page.Params.title }}
     <meta name="twitter:title" content='{{ .Site.Title }} - {{ .Page.Params.title }}' />
