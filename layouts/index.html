@@ -272,7 +272,7 @@
 
                             <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
                                 <img src="{{ $callIcon.RelPermalink }}" />
-                                schedule appointment
+                                {{ $.Param "section_open_doors_schedule_appointment" | safeHTML }}
                             </a>
                         </div>
                         

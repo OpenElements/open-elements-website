@@ -24,6 +24,7 @@ section_open_source_section2: 'Daher sind wir Mitglied in der <a class="link-pur
 section_open_doors_section1: 'Wir haben jederzeit ein offenes Ohr für andere.'
 section_open_doors_section2: 'Damit stellen wir uns mit interessierten Bewerberinnen und Bewerbern, Bestands- und Neukunden, potenziellen Partnerunternehmen sowie Menschen, für die unsere Themenschwerpunkte interessant sind, auf eine Stufe.'
 section_open_doors_section3: 'Jede Person kann ganz einfach <a class="link-purple" href="https://cal.com/open-elements/15min" target="_blank">einen kostenlosen Termin mit uns buchen</a>, um sich z. B. zu Themen wie Open Source oder Java auszutauschen oder fachliche Fragen mit uns zu besprechen.'
+section_open_doors_schedule_appointment: 'Termin vereinbaren'
 
 section_open_data_section: 'Offenheit ist uns nicht nur im Bereich der Software wichtig. Als Open Data stellen wir unter anderem die betriebswirtschaftlichen Kennzahlen der Open Elements GmbH jedes Jahr offen zur Verfügung. Damit möchten wir als positives Beispiel vorangehen und uns für eine größere Transparenz stark machen. Die von uns genutzte Open-Source-Plattform stellen wir hierbei gerne anderen Unternehmen kostenlos zur Verfügung. Damit lassen wir unseren Worten auch entsprechende Taten folgen.'
 
