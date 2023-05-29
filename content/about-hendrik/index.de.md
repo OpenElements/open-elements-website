@@ -1,6 +1,6 @@
 ---
 title: "Hendrik Ebbers"
-Description: "Hendrik Ebbers"
+description: "Hendrik Ebbers is der Gründer von OpenElements"
 layout: "about-hendrik"
 
 section_intro: 'Die OpenElements GmbH wurde im Jahr 2022 von Hendrik Ebbers gegründet, um ein Unternehmen zu schaffen, das Open Source und die gemeinschaftliche Zusammenarbeit in einem Java-Ökosystem in seinen Fokus nimmt und stärkt.'

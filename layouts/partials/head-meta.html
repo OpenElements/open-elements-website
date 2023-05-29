@@ -1,0 +1,33 @@
+<meta property="og:type" content="website" />
+<meta property="og:url" content='{{ .Site.BaseURL }}{{ trim .Page.RelPermalink "/"}}' />
+
+{{ if .Page.Params.title }}
+    <meta property="og:title" content='{{ .Site.Title }} - {{ .Page.Params.title }}' />
+{{ else }}
+    <meta property="og:title" content='{{ .Site.Title }}' />
+{{ end }}
+{{ if .Page.Params.description }}
+    <meta property="og:description" content='{{ .Page.Params.description }}' />
+{{ else }}
+    <meta property="og:description" content='{{ .Site.Params.Description }}' />
+{{ end }}
+<meta property="og:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
+{{ if eq $.Site.Language.Lang "en" }}
+    <meta property="og:locale" content="en_US" />
+{{ end }}
+{{ if eq $.Site.Language.Lang "de" }}
+    <meta property="og:locale" content="de_DE" />
+{{ end }}
+<meta name="twitter:card" content='summary' />
+<meta name="twitter:url" content='{{ .Site.BaseURL }}{{ trim .Page.RelPermalink "/"}}' />
+{{ if .Page.Params.title }}
+    <meta name="twitter:title" content='{{ .Site.Title }} - {{ .Page.Params.title }}' />
+{{ else }}
+    <meta name="twitter:title" content='{{ .Site.Title }}' />
+{{ end }}
+{{ if .Page.Params.description }}
+    <meta name="twitter:description" content='{{ .Page.Params.description }}' />
+{{ else }}
+    <meta name="twitter:description" content='{{ .Site.Params.Description }}' />
+{{ end }}
+<meta name="twitter:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />

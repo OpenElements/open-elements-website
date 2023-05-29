@@ -1,6 +1,6 @@
 ---
 title: "Temurin Support & Care"
-Description: "Temurin Support & Care"
+description: "Open Elements bietet mit 'Temurin Support & Care' eine leichtgewichtigen Support für die bekannteste Java Distribution."
 layout: "product-overview"
 
 intro-1: 'In einer zunehmend digitalisierten Welt hat sich <span style="font-weight: 500;">Java™</span> als eine der populärsten und weitverbreitetsten Programmiersprachen etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung von Java-Anwendungen auf der sicheren Seite zu sein.'

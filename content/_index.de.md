@@ -1,6 +1,5 @@
 ---
-title: 'Open Elements'
-Description: 'Open Source, aber richtig'
+description: 'Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java'
 
 hero_subheader: 'Open Source, aber richtig'
 hero_header_line_1_start: 'Wir vertrauen in'

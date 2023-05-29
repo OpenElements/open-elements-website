@@ -1,5 +1,5 @@
 ---
 title: "Privacy Policy"
-Description: "Privacy Policy"
+description: "Privacy Policy"
 layout: "privacy-policy"
 ---

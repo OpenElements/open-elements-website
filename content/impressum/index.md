@@ -1,6 +1,6 @@
 ---
 title: "Impressum"
-Description: "Impressum"
+description: "Impressum"
 layout: "article"
 ---
 Open Elements GmbH</br>

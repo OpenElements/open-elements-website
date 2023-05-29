@@ -1,6 +1,6 @@
 ---
 title: "Temurin Support & Care"
-Description: "Temurin Support & Care"
+description: "With 'Temurin Support & Care' OpenElements provide a lightweight support for the most prominent Java distribution."
 layout: "product-overview"
 
 intro-1: "In an increasingly digitalized world, <span style=\"font-weight: 500;\">Java™</span> has established itself as one of the most popular and widespread programming languages. Therefore, it's all the more important to be able to rely on professional support for the development and maintenance of Java applications, ensuring they are secure."

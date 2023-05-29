@@ -1,6 +1,6 @@
 ---
 title: "Über OpenElements"
-Description: "Über OpenElements"
+description: "Eine Übersicht der verschiedenen Bereiche in denen sich OpenElements einbringt sowie unserer Partner und Kunden."
 layout: "about-us"
 
 

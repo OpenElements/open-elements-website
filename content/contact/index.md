@@ -1,6 +1,6 @@
 ---
 title: "Contact us"
-Description: "Contact us"
+description: "Contact us"
 layout: "contact"
 intro: 'The easiest way to get in touch with us is by booking a free 30 min slot in our open calender. By doing so we can start a discussion and talk about your concerns, interest or problems regarding any of our focused topics like Open Source and Java.'
 schedule_button_text: 'schedule appointment'

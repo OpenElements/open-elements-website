@@ -1,6 +1,6 @@
 ---
 title: "Kontakt"
-Description: "Kontakt"
+description: "Kontakieren Sie uns"
 layout: "contact"
 intro: 'Der einfachste Weg, um mit uns in Kontakt zu treten, besteht darin, einen kostenlosen 30-minütigen Slot in unserem offenen Kalender zu buchen. Auf diese Weise können wir eine Diskussion beginnen und über Ihre Anliegen, Interessen oder Probleme bezüglich unserer Schwerpunktthemen wie Open Source und Java sprechen.'
 schedule_button_text: 'Termin vereinbaren'
