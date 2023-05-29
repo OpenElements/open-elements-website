@@ -1,5 +1,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content='{{ .Site.BaseURL }}{{ trim .Page.RelPermalink "/"}}' />
+<meta property="og:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
+<meta property="og:image:width" content='1200' />
+<meta property="og:image:height" content='627' />
 
 {{ if .Page.Params.title }}
     <meta property="og:title" content='{{ .Site.Title }} - {{ .Page.Params.title }}' />
@@ -11,7 +14,6 @@
 {{ else }}
     <meta property="og:description" content='{{ .Site.Params.Description }}' />
 {{ end }}
-<meta property="og:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
 {{ if eq $.Site.Language.Lang "en" }}
     <meta property="og:locale" content="en_US" />
 {{ end }}
@@ -20,6 +22,8 @@
 {{ end }}
 <meta name="twitter:card" content='summary' />
 <meta name="twitter:url" content='{{ .Site.BaseURL }}{{ trim .Page.RelPermalink "/"}}' />
+<meta name="twitter:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
+
 {{ if .Page.Params.title }}
     <meta name="twitter:title" content='{{ .Site.Title }} - {{ .Page.Params.title }}' />
 {{ else }}
@@ -30,4 +34,3 @@
 {{ else }}
     <meta name="twitter:description" content='{{ .Site.Params.Description }}' />
 {{ end }}
-<meta name="twitter:image" content='{{ .Site.BaseURL }}images/open-graph/open-elements.png' />
