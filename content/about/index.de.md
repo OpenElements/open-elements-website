@@ -69,7 +69,7 @@ engagements:
         link: 'https://www.meetup.com/de-DE/jug-dortmund/'
     ijug:
         title: 'iJUG e.V.'
-        text: 'Im <a class="link-purple" href="https://www.ijug.eu" target="_blank">iJUG e.V.</a> sind alle Java User Groups Deutschlands vereint. Als Leiter der JUG Dortmund bringt Hendrik Ebbers sich aktiv ein und ist auch bei der Leitung verschiedener Projekte des iJUG wie etwa der JavaLand oder der Cyberland involviert.'
+        text: 'Im <a class="link-purple" href="https://www.ijug.eu" target="_blank">iJUG e.V.</a> sind alle Java User Groups Deutschlands vereint. Als Leiter der JUG Dortmund bringt <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> sich aktiv ein und ist auch bei der Leitung verschiedener Projekte des iJUG wie etwa der JavaLand oder der Cyberland involviert.'
         logo: '/illustrations/logo-ijug.svg'
         link: 'https://www.ijug.eu/de/home/'
 
