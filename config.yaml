@@ -5,13 +5,13 @@ languages:
     baseURL: http://open-elements.com/
     languageCode: en-us
     languageName: "English"
-    description: "Open Elements Englisch description"
+    description: "Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java"
   de:
     weight: 2
     baseURL: http://open-elements.de/
     languageCode: de
     languageName: "Deutsch"
-    description: "Open Elements deutsche Beschreibung"
+    description: "Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java"
 
 title: Open Elements
 # Disables warnings
