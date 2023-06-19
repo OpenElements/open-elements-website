@@ -53,6 +53,6 @@ facts:
     fact13:
         title: 'Angepasste Docker-Container für optimale Flexibilität'
         text: '<span style="font-weight: 500;">OpenElements Temurin Support & Care</span> bieten wir auch angepasste Docker-Container an, die perfekt auf die Bedürfnisse unserer Kunden zugeschnitten sind. Sie enthalten die neuesten Versionen von Temurin und können auch weitere Java-Tools wie Maven enthalten. Wir sorgen für regelmäßige Aktualisierungen und Wartung, damit unsere Kunden stets auf dem neuesten Stand sind und ihre Java-Anwendungen in der Cloud oder in lokalen Umgebungen flexibel und effizient bereitstellen können.'
-        logo: '/images/temurin/icon-community.svg'
+        logo: '/images/temurin/icon-docker.svg'
         link: 'no-link'
 ---

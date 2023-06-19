@@ -2,7 +2,11 @@
     <div class="bg-gray rounded-[30px] shadow-4 p-6 pb-9 h-full">
         <div class="flex items-center justify-start gap-3">
             <div class="w-24 h-28 flex items-center justify-start">
+                {{ if (isset .Params "link") }}
                 <a href="{{ .link }}" target="_blank"><img class="w-full" src="{{ .logo }}" /></a>
+                {{else}}
+                <img class="w-full" src="{{ .logo }}" />
+                {{end}}
             </div>
             <h2 class="text-blue font-bold text-lg pr-2">{{ .title }}</h2>
         </div>
