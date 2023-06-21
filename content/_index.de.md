@@ -1,5 +1,6 @@
 ---
 description: 'Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java'
+layout: "index"
 
 hero_subheader: 'Open Source, aber richtig'
 hero_header_line_1_start: 'Wir vertrauen in'

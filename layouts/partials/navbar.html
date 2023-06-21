@@ -8,25 +8,25 @@
 {{ $menuBg := resources.Get "/illustrations/menu-bg.svg" }}
 <div class="relative">
     <div class="flex items-start absolute top-0 w-full">
-        {{ if trim .Page.RelPermalink "/"}}
-        <div class="bg-blue h-[274px] w-full 2xl:block hidden"></div>
-        {{ else }}
+        {{ if .IsHome }}
         <div class="bg-blue h-[244px] w-full 2xl:block hidden"></div>
+        {{ else }}
+        <div class="bg-blue h-[274px] w-full 2xl:block hidden"></div>
         {{ end }}
         <div class="w-full 2xl:shrink-0">
-            {{ if trim .Page.RelPermalink "/"}}
-            <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
-            <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
-            {{ else }}
+            {{ if .IsHome }}
             <img class="w-full xl:mt-0 mt-3 lg:block hidden" src="{{ $herobg.RelPermalink }}" />
             <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block"
                 src="{{ $mBgHero.RelPermalink }}" />
+            {{ else }}
+            <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
+            <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
             {{ end }}
         </div>
-        {{ if trim .Page.RelPermalink "/"}}
-        <div class="bg-blue h-[179.5px] w-full 2xl:block hidden"></div>
-        {{ else }}
+        {{ if .IsHome }}
         <div class="bg-blue h-[595px] w-full 2xl:block hidden"></div>
+        {{ else }}
+        <div class="bg-blue h-[179.5px] w-full 2xl:block hidden"></div>
         {{ end }}
     </div>
 

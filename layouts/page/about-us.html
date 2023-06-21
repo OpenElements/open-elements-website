@@ -38,7 +38,7 @@
             </div>
          </div>
          <div class="flex flex-col gap-7 text-blue mt-8">
-            <p>{{ $.Param "section_intro" | safeHTML }}</p>
+            <p>{{ $.Param "section_intro" | markdownify }}</p>
         </div>
     </div>
 
