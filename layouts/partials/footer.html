@@ -37,7 +37,7 @@
                             {{ $mainMenu := site.Data.mainMenu }}
                             {{ range $mainMenu }}
                             {{ if .visibleInFooter }}
-                            <a href="{{ .link }}" class="flex items-start gap-3 group">
+                            <a href="{{ relLangURL .link }}" class="flex items-start gap-3 group">
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
                                 <span class="footer-link">{{ print .i18nKey | i18n }}</span>
                             </a>
@@ -56,7 +56,7 @@
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
                                 <span class="footer-link">{{ T "privacySettings" }}</span>
                             </a>
-                            <a href="/impressum/" class="flex items-center gap-3 group">
+                            <a href="{{ relref . "/impressum" }}" class="flex items-center gap-3 group">
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
                                 <span class="footer-link">{{ T "impressum" }}</span>
                             </a>
