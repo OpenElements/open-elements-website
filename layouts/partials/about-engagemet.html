@@ -10,6 +10,6 @@
             </div>
             <h2 class="text-blue font-bold text-lg pr-2">{{ .title }}</h2>
         </div>
-        <p>{{ .description | safeHTML }}</p>
+        <p>{{ .description | markdownify }}</p>
     </div>
 </div>
