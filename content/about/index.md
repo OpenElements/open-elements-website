@@ -18,17 +18,17 @@ engagements:
         link: 'https://www.eclipse.org'
     adoptium:
         title: 'Eclipse Adoptium'
-        text: 'Within the Java ecosystem, <a class="link-purple" href="https://adoptium.net" target="_blank">Eclipse Adoptium</a> is one of the most important top-level projects of the Eclipse Foundation, as it provides free and enterprise-ready LTS versions of Java. As "Participant Members", OpenElements is a member of the Working Group.'
+        text: 'Within the Java ecosystem, <a class="link-purple" href="https://adoptium.net" target="_blank">Eclipse Adoptium</a> is one of the most important top-level projects of the Eclipse Foundation, as it provides free and enterprise-ready LTS versions of Java. As a "Participant Member", OpenElements particpates in the Working Group.'
         logo: '/illustrations/logo-adoptium.svg'
         link: 'https://adoptium.net'
     adoptOpenJDK:
         title: 'AdoptOpenJDK'
-        text: 'Even before the existence of the Eclipse Adoptium Working Group, the idea was born in <a class="link-purple" href="ttps://github.com/AdoptOpenJDK" target="_blank">AdoptOpenJDK</a> to provide manufacturer-independent and freely usable Java binaries. OpenElements is part of the project and has a seat on the Technical Steering Committee (TCS).'
+        text: 'Even before the existence of the Eclipse Adoptium Working Group, the idea was born in <a class="link-purple" href="ttps://github.com/AdoptOpenJDK" target="_blank">AdoptOpenJDK</a> to provide vendor-neutral and freely available Java binaries. OpenElements is part of the project and has a seat on the Technical Steering Committee (TSC).'
         logo: '/illustrations/logo-adoptopenjdk.svg'
         link: 'https://github.com/AdoptOpenJDK'
     jakartaEE:
         title: 'JakartaEE'
-        text: 'The founder of OpenElements GmbH had already contributed to the Java Enterprise Specifications before JavaEE was transferred to the Eclipse Foundation and became <a class="link-purple" href="https://jakarta.ee" target="_blank">JakartaEE</a>. The switch to the Eclipse Foundation was very positive, as the standards for Enterprise Java can now be defined in a 100% manufacturer-independent environment. As a "Participant Member", OpenElements continues to work on the standardization of Enterprise APIs for Java.'
+        text: 'The founder of OpenElements GmbH had already contributed to the Java Enterprise Specifications before JavaEE was transferred to the Eclipse Foundation and became <a class="link-purple" href="https://jakarta.ee" target="_blank">JakartaEE</a>. The switch to the Eclipse Foundation was very successful, as the standards for Enterprise Java can now be defined in a 100% vendor-neutral environment. As a "Participant Member", OpenElements continues to work on the standardization of Enterprise APIs for Java.'
         logo: '/illustrations/logo-jakarta.svg'
         link: 'https://jakarta.ee'
     ospo:
@@ -48,12 +48,12 @@ engagements:
         link: 'https://wikimediafoundation.org'
     oss:
         title: 'Open Source Libraries'
-        text: 'Today, almost every software depends on open-source components. But unfortunately, such components are often not recognized or analyzed. Therefore, it can happen that critical software depends on a component that is no longer maintained or only maintained by a handful of individuals. OpenElements supports such projects individually through <a class="link-purple" href="https://github.com/OpenElements" target="_blank">GitHub</a> Sponsoring.'
+        text: 'Today, almost every software depends on open-source components. But unfortunately, such components are often not recognized or analyzed. Therefore, there have been cases where critical software depends on a component that is no longer maintained or only maintained by a handful of individuals. OpenElements supports such projects individually through <a class="link-purple" href="https://github.com/OpenElements" target="_blank">GitHub</a> Sponsorship.'
         logo: '/illustrations/logo-opensource.svg'
         link: 'https://github.com/OpenElements'
     cyberland:
         title: 'Cyberland'
-        text: 'With already over 20 events, <a class="link-purple" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> is a series of free online events for the Java community - with a strong emphasis on inclusion and diversity. For example, there have been several Ladiesnight mini-conferences, where IT topics are presented exclusively by female speakers, or the Newcomer events, where new speakers are given a platform for their first IT talks. <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> is the founder of Cyberland and continues to be a member of the organization.'
+        text: 'With more than 20 events, <a class="link-purple" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> is a series of free online events for the Java community - with a strong emphasis on inclusion and diversity. For example, there have been several Ladiesnight mini-conferences, where IT topics are presented exclusively by female speakers, or the Newcomer events, where new speakers are given a platform for their first IT talks. <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> is the founder of Cyberland and continues to be a member of the organization.'
         logo: '/illustrations/logo-cyberland.svg'
         link: 'https://cyberland.ijug.eu'
     javaland:
