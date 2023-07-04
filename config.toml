@@ -1,7 +1,7 @@
 defaultContentLanguage = "en"
 title = "Open Elements"
 disableKinds = [ "taxonomy", "taxonomyTerm" ]
-baseURL = "http://open-elements.com/"
+baseURL = "https://open-elements.com/"
 
 [languages]
     [languages.en]
