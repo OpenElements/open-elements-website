@@ -3,10 +3,15 @@
         "name": "Github",
         "icon": "mdi:github",
         "link": "https://github.com/OpenElements"
+    },{
+        "name": "LinkedIn",
+        "icon": "mdi:linkedin",
+        "link": "https://www.linkedin.com/company/open-elements"
     },
     {
         "name": "Twitter",
         "icon": "mdi:twitter",
         "link": "https://twitter.com/hendrikebbers"
     }
+
 ]

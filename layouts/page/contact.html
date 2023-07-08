@@ -34,7 +34,7 @@ Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails"
             <div class="max-w-[1080px] w-full pt-3 mx-auto">
                 <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-full flex flex-col items-center justify-center text-center">
                     <p>{{ $.Param "intro" | safeHTML }}</p>
-                    <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                    <a data-cal-link="open-elements/15min" class="flex items-center justify-center cursor-pointer gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
                         <img src="{{ $callIcon.RelPermalink }}" />
                         {{ $.Param "schedule_button_text" }}
                     </a>
@@ -65,7 +65,7 @@ Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails"
 
                     <div class="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col lg:-mr-5 xl:place-self-end">
                         <p>{{ $.Param "address_intro" }}</p>
-                        <span class="link-purple flex items-start gap-2">
+                        <span class="text-purple flex items-start gap-2">
                             <svg class="w-6 h-6 stroke-2 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />

@@ -4,7 +4,7 @@ description: "Eine Übersicht der verschiedenen Bereiche in denen sich OpenEleme
 layout: "about-us"
 
 
-section_intro: 'Die OpenElements GmbH wurde im Jahr 2022 von <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> gegründet, um ein Unternehmen zu schaffen, das Open Source und die gemeinschaftliche Zusammenarbeit in einem Java-Ökosystem in seinen Fokus nimmt und stärkt.'
+section_intro: 'Die OpenElements GmbH wurde im Jahr 2022 von <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> gegründet, um ein Unternehmen zu schaffen, das Open Source und die gemeinschaftliche Zusammenarbeit in einem Java-Ökosystem in seinen Fokus nimmt und stärkt.'
 
 section_engagement_title: 'Unser Engagement'
 
@@ -14,7 +14,7 @@ section_customers_title: 'Kunden & Partner'
 engagements:
     eclipse:
         title: 'Eclipse Foundation'
-        text: 'Die <a class="link-purple" href="https://www.eclipse.org" target="_blank">Eclipse Foundation</a> ist ein wichtiger Akteur im Open-Source-Ökosystem, der es sowohl einzelnen Open-Source-Enthusiasten sowie großen und kleinen Unternehmen ermöglicht, auf Augenhöhe zusammenzuarbeiten. Dazu stellt die Foundation ein zentrales und unabhängiges Management für Open-Source-Projekte bereit. Als „Contributing Member“ trägt OpenElements zur erfolgreichen Arbeit der Stiftung und ihren Projekten bei. Darüber hinaus ist <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> Mitglied des Board of Directors der Eclipse Foundation.'
+        text: 'Die <a class="link-purple" href="https://www.eclipse.org" target="_blank">Eclipse Foundation</a> ist ein wichtiger Akteur im Open-Source-Ökosystem, der es sowohl einzelnen Open-Source-Enthusiasten sowie großen und kleinen Unternehmen ermöglicht, auf Augenhöhe zusammenzuarbeiten. Dazu stellt die Foundation ein zentrales und unabhängiges Management für Open-Source-Projekte bereit. Als „Contributing Member“ trägt OpenElements zur erfolgreichen Arbeit der Stiftung und ihren Projekten bei. Darüber hinaus ist <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> Mitglied des Board of Directors der Eclipse Foundation.'
         logo: '/illustrations/logo-eclipse.svg'
         link: 'https://www.eclipse.org'
     adoptium:
@@ -54,22 +54,22 @@ engagements:
         link: 'https://github.com/OpenElements'
     cyberland:
         title: 'Cyberland'
-        text: 'Mit bereits über 20 Events ist das <a class="link-purple" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> eine Serie von kostenlosen Online-Events für die Java Community – mit einem großen Schwerpunkt auf Inklusion und Diversität. So gab es z. B. bereits mehrmals die Ladiesnight als Mini-Konferenz, in denen IT-Themen ausschließlich von Sprecherinnen vorgetragen werden, oder die Newcomer Events, in denen neue Sprecher eine Bühne für ihre ersten IT-Talks bekommen. <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> ist Begründer des Cyberlands und weiterhin Mitglied der Organisation.'
+        text: 'Mit bereits über 20 Events ist das <a class="link-purple" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> eine Serie von kostenlosen Online-Events für die Java Community – mit einem großen Schwerpunkt auf Inklusion und Diversität. So gab es z. B. bereits mehrmals die Ladiesnight als Mini-Konferenz, in denen IT-Themen ausschließlich von Sprecherinnen vorgetragen werden, oder die Newcomer Events, in denen neue Sprecher eine Bühne für ihre ersten IT-Talks bekommen. <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> ist Begründer des Cyberlands und weiterhin Mitglied der Organisation.'
         logo: '/illustrations/logo-cyberland.svg'
         link: 'https://cyberland.ijug.eu'
     javaland:
         title: 'JavaLand'
-        text: 'Die <a class="link-purple" href="https://www.javaland.eu" target="_blank">JavaLand</a> ist nicht nur die größte Java-Konferenz im deutschsprachigen Raum, sondern auch eine der wenigen Community-Konferenzen. <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> leitet das Programmkomitee der JavaLand und ist Mitglied in der Konferenzleitung.'
+        text: 'Die <a class="link-purple" href="https://www.javaland.eu" target="_blank">JavaLand</a> ist nicht nur die größte Java-Konferenz im deutschsprachigen Raum, sondern auch eine der wenigen Community-Konferenzen. <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> leitet das Programmkomitee der JavaLand und ist Mitglied in der Konferenzleitung.'
         logo: '/illustrations/logo-javaland.svg'
         link: 'https://www.javaland.eu/de/javaland-2023/'
     jug:
         title: 'Java User Group Dortmund'
-        text: 'Die <a class="link-purple" href="https://www.meetup.com/jug-dortmund/" target="_blank">JUG Dortmund</a> wurde 2012 von <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> zusammen mit Ansgar Brauner gegründet. Seitdem ist Hendrik für die Leitung der Dortmunder JUG mitverantwortlich und organisiert kostenlose Vortragsreihen und Meetups – zusammen mit lokal ansässigen IT-Unternehmen.'
+        text: 'Die <a class="link-purple" href="https://www.meetup.com/jug-dortmund/" target="_blank">JUG Dortmund</a> wurde 2012 von <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> zusammen mit Ansgar Brauner gegründet. Seitdem ist Hendrik für die Leitung der Dortmunder JUG mitverantwortlich und organisiert kostenlose Vortragsreihen und Meetups – zusammen mit lokal ansässigen IT-Unternehmen.'
         logo: '/illustrations/logo-jug-dortmund.svg'
         link: 'https://www.meetup.com/de-DE/jug-dortmund/'
     ijug:
         title: 'iJUG e.V.'
-        text: 'Im <a class="link-purple" href="https://www.ijug.eu" target="_blank">iJUG e.V.</a> sind alle Java User Groups Deutschlands vereint. Als Leiter der JUG Dortmund bringt <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> sich aktiv ein und ist auch bei der Leitung verschiedener Projekte des iJUG wie etwa der JavaLand oder der Cyberland involviert.'
+        text: 'Im <a class="link-purple" href="https://www.ijug.eu" target="_blank">iJUG e.V.</a> sind alle Java User Groups Deutschlands vereint. Als Leiter der JUG Dortmund bringt <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> sich aktiv ein und ist auch bei der Leitung verschiedener Projekte des iJUG wie etwa der JavaLand oder der Cyberland involviert.'
         logo: '/illustrations/logo-ijug.svg'
         link: 'https://www.ijug.eu/de/home/'
 
