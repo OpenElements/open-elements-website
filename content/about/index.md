@@ -3,7 +3,7 @@ title: "About us"
 description: "An overview of the engagement of OpenElements and its partners and customers."
 layout: "about-us"
 
-section_intro: '<a class="link-purple" href="{{< relref "/about-hendrik" >}}">Hendrik Ebbers</a> founded the OpenElements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.'
+section_intro: '<a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> founded the OpenElements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.'
 
 section_engagement_title: 'Our Engagements'
 
@@ -13,7 +13,7 @@ section_customers_title: 'Customers & Partners'
 engagements:
     eclipse:
         title: 'Eclipse Foundation'
-        text: 'The <a class="link-purple" href="https://www.eclipse.org" target="_blank">Eclipse Foundation</a> is a significant player in the open-source ecosystem, enabling both individual open-source enthusiasts and large and small companies to collaborate on an equal footing. The Foundation provides central and independent management for open-source projects. As a "Contributing Member", OpenElements contributes to the successful work of the Foundation and its projects. Furthermore, <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> is a member of the Board of Directors of the Eclipse Foundation.'
+        text: 'The <a class="link-purple" href="https://www.eclipse.org" target="_blank">Eclipse Foundation</a> is a significant player in the open-source ecosystem, enabling both individual open-source enthusiasts and large and small companies to collaborate on an equal footing. The Foundation provides central and independent management for open-source projects. As a "Contributing Member", OpenElements contributes to the successful work of the Foundation and its projects. Furthermore, <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> is a member of the Board of Directors of the Eclipse Foundation.'
         logo: '/illustrations/logo-eclipse.svg'
         link: 'https://www.eclipse.org'
     adoptium:
@@ -53,22 +53,22 @@ engagements:
         link: 'https://github.com/OpenElements'
     cyberland:
         title: 'Cyberland'
-        text: 'With more than 20 events, <a class="link-purple" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> is a series of free online events for the Java community - with a strong emphasis on inclusion and diversity. For example, there have been several Ladiesnight mini-conferences, where IT topics are presented exclusively by female speakers, or the Newcomer events, where new speakers are given a platform for their first IT talks. <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> is the founder of Cyberland and continues to be a member of the organization.'
+        text: 'With more than 20 events, <a class="link-purple" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> is a series of free online events for the Java community - with a strong emphasis on inclusion and diversity. For example, there have been several Ladiesnight mini-conferences, where IT topics are presented exclusively by female speakers, or the Newcomer events, where new speakers are given a platform for their first IT talks. <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> is the founder of Cyberland and continues to be a member of the organization.'
         logo: '/illustrations/logo-cyberland.svg'
         link: 'https://cyberland.ijug.eu'
     javaland:
         title: 'JavaLand'
-        text: '<a class="link-purple" href="https://www.javaland.eu" target="_blank">JavaLand</a> is not only the largest Java conference in the German-speaking area but also one of the few community conferences. <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> heads the program committee of JavaLand and is a member of the conference management.'
+        text: '<a class="link-purple" href="https://www.javaland.eu" target="_blank">JavaLand</a> is not only the largest Java conference in the German-speaking area but also one of the few community conferences. <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> heads the program committee of JavaLand and is a member of the conference management.'
         logo: '/illustrations/logo-javaland.svg'
         link: 'https://www.javaland.eu'
     jug:
         title: 'Java User Group Dortmund'
-        text: 'The <a class="link-purple" href="https://www.meetup.com/jug-dortmund/" target="_blank">JUG Dortmund</a> was founded in 2012 by <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> together with Ansgar Brauner. Since then, Hendrik has been co-responsible for managing the Dortmund JUG and organizes free lecture series and meetups - together with locally based IT companies.'
+        text: 'The <a class="link-purple" href="https://www.meetup.com/jug-dortmund/" target="_blank">JUG Dortmund</a> was founded in 2012 by <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> together with Ansgar Brauner. Since then, Hendrik has been co-responsible for managing the Dortmund JUG and organizes free lecture series and meetups - together with locally based IT companies.'
         logo: '/illustrations/logo-jug-dortmund.svg'
         link: 'https://www.meetup.com/jug-dortmund/'
     ijug:
         title: 'iJUG e.V.'
-        text: 'In <a class="link-purple" href="https://www.ijug.eu" target="_blank">iJUG e.V.</a>, all Java User Groups in Germany are united. As the leader of the JUG Dortmund, <a class="link-purple" href="/about-hendrik">Hendrik Ebbers</a> is actively involved and also contributes to the leadership of various projects of the iJUG, such as JavaLand or Cyberland.'
+        text: 'In <a class="link-purple" href="https://www.ijug.eu" target="_blank">iJUG e.V.</a>, all Java User Groups in Germany are united. As the leader of the JUG Dortmund, <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> is actively involved and also contributes to the leadership of various projects of the iJUG, such as JavaLand or Cyberland.'
         logo: '/illustrations/logo-ijug.svg'
         link: 'https://www.ijug.eu'
 

@@ -15,12 +15,12 @@
         {{ end }}
         <div class="w-full 2xl:shrink-0">
             {{ if .IsHome }}
-            <img class="w-full xl:mt-0 mt-3 lg:block hidden" src="{{ $herobg.RelPermalink }}" />
-            <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block"
-                src="{{ $mBgHero.RelPermalink }}" />
-            {{ else }}
             <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
             <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
+            {{ else }}
+            <img class="w-full xl:mt-0 mt-3 lg:block hidden" src="{{ $herobg.RelPermalink }}" />
+            <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block"
+                src="{{ $mBgHero.RelPermalink }}" alt="hero background for mobile" />
             {{ end }}
         </div>
         {{ if .IsHome }}
@@ -34,7 +34,7 @@
         <div class="fixed top-0 bg-blue inset-x-0 w-full pb-3 z-30 ">
             <div class="container mx-auto max-w-7xl relative">
                 <nav class="flex items-center justify-between pt-5 pb-3">
-                    <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
+                    <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="logo" class="sm:h-7 h-5"></a>
                     <div class="xl:flex hidden items-center gap-9">
                         <div class="flex items-center gap-9">
                             {{ $mainMenu := site.Data.mainMenu }}
@@ -66,13 +66,13 @@
                         <div class="flex items-center gap-5">
                             {{ $social := site.Data.social }}
                             {{ range $social }}
-                            <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon"
+                            <a href="{{ .link }}" aria-label="{{ .name }}" target="_blank" class="focus:outline-none"><span class="iconify nav-icon"
                                     data-icon="{{ .icon | safeURL }}"></span></a>
                             {{ end }}
                         </div>
                     </div>
                     <button class="xl:hidden">
-                        <img class="w-8" @click="open = true" src="{{ $menu.RelPermalink }}" />
+                        <img class="w-8" @click="open = true" alt="burger" src="{{ $menu.RelPermalink }}" />
                     </button>
                 </nav>
             </div>
@@ -86,11 +86,11 @@
             x-transition:leave-start="transform opacity-100 scale-100"
             x-transition:leave-end="transform opacity-0 scale-95">
             <div class="relative w-full h-screen">
-                <img class="absolute inset-0 w-full object-cover h-full" src="{{ $menuBg.RelPermalink }}" />
+                <img class="absolute inset-0 w-full object-cover h-full" alt="menu background" src="{{ $menuBg.RelPermalink }}" />
                 <nav class="flex items-center justify-between sm:pt-5 pt-4 pb-3 relative container max-w-7xl mx-auto">
                     <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
                     <button class="xl:hidden">
-                        <img class="w-7" @click="open = false" src="{{ $close.RelPermalink }}" />
+                        <img class="w-7" @click="open = false" alt="close button icon" src="{{ $close.RelPermalink }}" />
                     </button>
                 </nav>
                 <div
@@ -125,7 +125,7 @@
                     <div class="flex items-center gap-6">
                         {{ $social := site.Data.social }}
                         {{ range $social }}
-                        <a href="{{ .link }}" class="focus:outline-none"><span class="iconify nav-icon"
+                        <a href="{{ .link }}" aria-label="{{ .name }}" target="_blank" class="focus:outline-none"><span class="iconify nav-icon"
                                 data-icon="{{ .icon | safeURL }}"></span></a>
                         {{ end }}
                     </div>
