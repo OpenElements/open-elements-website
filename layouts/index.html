@@ -43,14 +43,14 @@
     <div class="lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto mt-12 sm:pb-0 pb-14">
         <div class="flex lg:flex-row flex-col items-center gap-8 lg:mt-32 mt-20">
             <div class="w-full relative ">
-                <img class="absolute 2xl:right-20 right-12 -top-24 lg:block hidden" src="{{ $arrow1.RelPermalink }}" />
-                <img class="absolute right-[20%] -bottom-64 lg:block hidden w-20" src="{{ $arrow2sm.RelPermalink }}" />
+                <img class="absolute 2xl:right-20 right-12 -top-24 lg:block hidden" alt="arrow" src="{{ $arrow1.RelPermalink }}" />
+                <img class="absolute right-[20%] -bottom-64 lg:block hidden w-20" alt="arrow" src="{{ $arrow2sm.RelPermalink }}" />
                 <p class="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3 lg:px-0 md:px-12 sm:px-8 px-6">{{ $.Param "hero_subheader" | safeHTML }}</p>
                 <h1 class="h1 max-w-2xl lg:px-0 md:px-12 sm:px-8 px-6">
                     <div class="lg:inline sm:block inline tracking-tight">
                         <span class="relative inline z-10">{{ $.Param "hero_header_line_1_start" | safeHTML }}</span>
                         <div class="relative justify-center inline-flex items-center sm:px-16 px-5 -ml-5 -mr-5 sm:-ml-16 sm:-mr-16 z-0">
-                            <img class="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-8 sm:-mt-2.5 -mt-1" src="{{ $heroTextBg.RelPermalink }}" />
+                            <img class="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-8 sm:-mt-2.5 -mt-1" alt="hero text background" src="{{ $heroTextBg.RelPermalink }}" />
                             <span class="relative">{{ $.Param "hero_header_line_1_underlines" | safeHTML }}</span>
                         </div>
                     </div>
@@ -89,9 +89,9 @@
             </div>
             {{ end }}
             <div class="2xl:max-w-md max-w-sm w-full shrink-0 relative sm:px-0 px-6">
-                <img class="absolute sm:-right-24 md:-right-40 -right-2 sm:bottom-2 -bottom-6 md:w-28 sm:w-24 w-16 lg:hidden" src="{{ $mArrow1.RelPermalink }}" />
-                <img class="absolute -bottom-12 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 w-20 lg:hidden" src="{{ $mArrow2.RelPermalink }}" />
-                <img src="{{ $heroCircle.RelPermalink }}" alt="" class="w-full">
+                <img class="absolute sm:-right-24 md:-right-40 -right-2 sm:bottom-2 -bottom-6 md:w-28 sm:w-24 w-16 lg:hidden" alt="Arrow" src="{{ $mArrow1.RelPermalink }}" />
+                <img class="absolute -bottom-12 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 w-20 lg:hidden" alt="Arrow" src="{{ $mArrow2.RelPermalink }}" />
+                <img src="{{ $heroCircle.RelPermalink }}" alt="hero circle" class="w-full">
             </div>
         </div>
     </div>
@@ -132,18 +132,18 @@
                     <h2 class="h2">
                         Open Knowledge
                     </h2>
-                    <img src="{{ $star.RelPermalink }}" alt="" class="absolute sm:w-20 w-14 sm:-top-20 -top-12 sm:right-28 right-0">
+                    <img src="{{ $star.RelPermalink }}" alt="Stars" class="absolute sm:w-20 w-14 sm:-top-20 -top-12 sm:right-28 right-0">
                 </div>
-                <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute xl:-bottom-64 -bottom-48 right-0 xl:w-64 w-48 lg:block hidden">
-                <img src="{{ $section2.RelPermalink }}" alt="" class=" lg:w-full sm:max-w-md mx-auto">
+                <img src="{{ $arrow3.RelPermalink }}" alt="arrow" class=" absolute xl:-bottom-64 -bottom-48 right-0 xl:w-64 w-48 lg:block hidden">
+                <img src="{{ $section2.RelPermalink }}" alt="section 2" class=" lg:w-full sm:max-w-md mx-auto">
             </div>
             <div class="lg:w-1/2 w-full relative">
-                <img src="{{ $section2bg.RelPermalink }}" alt="" class="absolute w-96 lg:top-14 -right-40">
-                <img src="{{ $arrow3.RelPermalink }}" alt="" class=" absolute sm:w-32 w-20 right-0 sm:-bottom-36 -bottom-24 lg:hidden">
+                <img src="{{ $section2bg.RelPermalink }}" alt="section 2 background" class="absolute w-96 lg:top-14 -right-40">
+                <img src="{{ $arrow3.RelPermalink }}" alt="arrow" class=" absolute sm:w-32 w-20 right-0 sm:-bottom-36 -bottom-24 lg:hidden">
                 <div class="relative">
                     <div class="lg:flex items-start gap-6 hidden">
                         <h2 class="h2">Open <br /> Knowledge</h2>
-                        <img src="{{ $star.RelPermalink }}" alt="" class="w-16 -mt-8">
+                        <img src="{{ $star.RelPermalink }}" alt="Star" class="w-16 -mt-8">
                     </div>
                     <p class="lg:mt-5">{{ $.Param "section_open_knowledge_section1_start" | safeHTML }}</p>
                     <div class="flex flex-col gap-3 mt-5">
@@ -173,7 +173,7 @@
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto sm:py-16 py-12">
             <div class="flex items-center lg:flex-row flex-col-reverse justify-between xl:gap-28 lg:gap-20 gap-5">
                 <div class="lg:w-1/2 w-full relative">
-                    <img src="{{ $arrow4.RelPermalink }}" alt="" class=" absolute 2xl:w-52 xl:w-44 lg:w-36 sm:w-40 w-32 2xl:-bottom-72 xl:-bottom-56 lg:-bottom-48 lg:-right-20 lg:left-auto -left-14 sm:-bottom-32 -bottom-24">
+                    <img src="{{ $arrow4.RelPermalink }}" alt="Arrow" class=" absolute 2xl:w-52 xl:w-44 lg:w-36 sm:w-40 w-32 2xl:-bottom-72 xl:-bottom-56 lg:-bottom-48 lg:-right-20 lg:left-auto -left-14 sm:-bottom-32 -bottom-24">
                     <div class="">
                         <div class="bg-rose-100 border border-rose lg:inline-block px-6 py-3 rounded-sm relative hidden">
                             <h2 class="h2 text-rose">Open Events</h2>
@@ -186,9 +186,9 @@
                     <div class="bg-rose-100 border border-rose lg:hidden inline-block px-6 py-3 sm:w-auto w-full text-center rounded-sm relative sm:mb-12 mb-7 ">
                         <h2 class="h2 text-rose">Open Events</h2>
                         <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6 sm:block hidden" data-icon="clarity:cursor-arrow-solid"></span>
-                        <img src="{{ $click.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                        <img src="{{ $click.RelPermalink }}" alt="Click SVG" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                     </div>
-                    <img src="{{ $section3.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
+                    <img src="{{ $section3.RelPermalink }}" alt="Section 3" class="lg:w-full sm:max-w-md mx-auto">
                 </div>
             </div>
         </div>
@@ -199,21 +199,21 @@
     <div id="open-source-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">
         <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-5">
             <div class="lg:w-1/2 w-full relative">
-                <img src="{{ $arrow5.RelPermalink }}" alt="" class=" absolute left-0 -top-20 lg:block hidden">
+                <img src="{{ $arrow5.RelPermalink }}" alt="arrow" class=" absolute left-0 -top-20 lg:block hidden">
                 <h2 class="h2 lg:hidden sm:mb-12 mb-7">
                     <div class="relative inline">
-                        <img src="{{ $textBg.RelPermalink }}" alt="" class="absolute w-full bottom-0 -mr-2">
+                        <img src="{{ $textBg.RelPermalink }}" alt="text background" class="absolute w-full bottom-0 -mr-2">
                         <span class="relative">Open</span>
                     </div>
                     Source
                 </h2>
-                <img src="{{ $section4.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
+                <img src="{{ $section4.RelPermalink }}" alt="section 4" class="lg:w-full sm:max-w-md mx-auto">
             </div>
             <div class="lg:w-1/2 w-full">
                 <div class="">
                     <h2 class="h2 lg:block hidden">
                         <div class="relative inline">
-                            <img src="{{ $textBg.RelPermalink }}" alt="" class="absolute w-full bottom-0 -mr-2">
+                            <img src="{{ $textBg.RelPermalink }}" alt="text background" class="absolute w-full bottom-0 -mr-2">
                             <span class="relative">Open</span>
                         </div>
                         Source
@@ -243,16 +243,16 @@
                     <h2 class="h2 text-purple">Open Doors</h2>
                     <span class="iconify text-purple text-3xl absolute -right-6 -bottom-6 sm:block hidden"
                         data-icon="clarity:cursor-arrow-solid"></span>
-                        <img src="{{ $click2.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                        <img src="{{ $click2.RelPermalink }}" alt="click svg" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                 </div>
 
-                <img src="{{ $openDoor.RelPermalink }}" alt="" class="sm:max-w-md lg:hidden">
+                <img src="{{ $openDoor.RelPermalink }}" alt="Open door image" class="sm:max-w-md lg:hidden">
             </div>
 
             <div class="flex xl:flex-row flex-col items-end w-full mx-auto">
                 <div class="relative lg:-mt-16 flex  flex-col lg:gap-5 sm:gap-24 gap-11 2xl:max-w-3xl xl:max-w-[800px] mx-auto shrink-0 w-full ml-0">
-                    <img src="{{ $connectedLine.RelPermalink }}" alt="" class="absolute inset-0  lg:block hidden w-full max-w-[700px] top-20 ml-10">
-                        <img src="{{ $connectedLineVertical.RelPermalink }}" alt="" class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
+                    <img src="{{ $connectedLine.RelPermalink }}" alt="lines" class="absolute inset-0  lg:block hidden w-full max-w-[700px] top-20 ml-10">
+                        <img src="{{ $connectedLineVertical.RelPermalink }}" alt="vertical lines" class="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20">
                     <div class="relative flex justify-end lg:order-1 order-2 lg:mx-0 mx-auto lg:mt-0 mt-8">
                         <div
                             class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[380px] sm:w-96 w-full h-56 flex items-center justify-center text-center">
@@ -271,14 +271,14 @@
                             <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
 
                             <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
-                                <img src="{{ $callIcon.RelPermalink }}" />
+                                <img src="{{ $callIcon.RelPermalink }}" alt="call icon" />
                                 {{ $.Param "section_open_doors_schedule_appointment" | safeHTML }}
                             </a>
                         </div>
                         
                     </div>
                 </div>
-                <img src="{{ $openDoor.RelPermalink }}" alt="" class="max-w-md xl:absolute right-5 2xl:bottom-14  mx-auto lg:block xl:mt-0 mt-16 hidden">
+                <img src="{{ $openDoor.RelPermalink }}" alt="open door image" class="max-w-md xl:absolute right-5 2xl:bottom-14  mx-auto lg:block xl:mt-0 mt-16 hidden">
             </div>
         </div>
     </div>
@@ -288,15 +288,15 @@
     <div id="open-data-section" class="bg-slate">
         <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto xl:py-28 sm:py-16 py-12 relative">
             <div class="flex lg:flex-col flex-col-reverse">
-                <img src="{{ $thunder.RelPermalink }}" alt="" class="absolute sm:w-7 w-4 sm:right-1/3 right-5 sm:top-8 top-12">
-                <img src="{{ $randomStar.RelPermalink }}" alt="" class="absolute sm:w-8 w-6 lg:left-32 lg:top-24 sm:left-16 left-4 sm:top-32 top-28">
+                <img src="{{ $thunder.RelPermalink }}" alt="thunder" class="absolute sm:w-7 w-4 sm:right-1/3 right-5 sm:top-8 top-12">
+                <img src="{{ $randomStar.RelPermalink }}" alt="randomStar" class="absolute sm:w-8 w-6 lg:left-32 lg:top-24 sm:left-16 left-4 sm:top-32 top-28">
                 <div class="flex flex-col items-center justify-center relative">
-                    <img src="{{ $line1.RelPermalink }}" alt="" class="absolute lg:w-24 w-24 lg:-left-24 lg:right-auto lg:bottom-auto -right-5 -bottom-8 ">
-                    <img src="{{ $line2.RelPermalink }}" alt="" class="absolute w-24 2xl:-right-24 -right-16 top-20 lg:block hidden">
+                    <img src="{{ $line1.RelPermalink }}" alt="Lines" class="absolute lg:w-24 w-24 lg:-left-24 lg:right-auto lg:bottom-auto -right-5 -bottom-8 ">
+                    <img src="{{ $line2.RelPermalink }}" alt="lines" class="absolute w-24 2xl:-right-24 -right-16 top-20 lg:block hidden">
                     <h2 class="h2 text-center lg:block hidden">
                         <span class="inline-block">Open</span>
                         <div class="relative inline pr-20">
-                            <img src="{{ $textBg2.RelPermalink }}" alt="" class="absolute w-full -bottom-2 right-0 ">
+                            <img src="{{ $textBg2.RelPermalink }}" alt="text background" class="absolute w-full -bottom-2 right-0 ">
                             <span class="inline-block">Data</span>
                         </div>
                     </h2>
@@ -307,13 +307,13 @@
                         <h2 class="h2 text-center lg:hidden sm:mb-12 mb-7">
                             <span class="inline-block">Open</span>
                             <div class="relative inline sm:pr-20 pr-4">
-                                <img src="{{ $textBg2.RelPermalink }}" alt="" class="absolute w-full -bottom-2 right-0 ">
+                                <img src="{{ $textBg2.RelPermalink }}" alt="text background" class="absolute w-full -bottom-2 right-0 ">
                                 <span class="inline-block">Data</span>
                             </div>
                         </h2>
                     </div>
-                    <img src="{{ $section5.RelPermalink }}" alt="" class="w-full mt-14 mb-8 lg:block hidden">
-                    <img src="{{ $section5m2.RelPermalink }}" alt="" class="max-w-lg sm:pl-5 mx-auto w-full lg:hidden  ">
+                    <img src="{{ $section5.RelPermalink }}" alt="section 5" class="w-full mt-14 mb-8 lg:block hidden">
+                    <img src="{{ $section5m2.RelPermalink }}" alt="section 5" class="max-w-lg sm:pl-5 mx-auto w-full lg:hidden  ">
                 </div>
             </div>
         </div>
@@ -325,16 +325,16 @@
         <div class="flex lg:flex-row flex-col items-center justify-between xl:gap-28 lg:gap-20 gap-20">
             <div class="lg:w-1/2 w-full">
                 <div class="relative lg:mb-16 sm:mb-14 mb-10">
-                    <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute -top-16  -right-5 lg:block hidden">
+                    <img src="{{ $arrow6.RelPermalink }}" alt="arrow" class="absolute -top-16  -right-5 lg:block hidden">
                     <h2 class="h2">Open <span class="text-purple">Office</span></h2>
                 </div>
-                <img src="{{ $section6.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
+                <img src="{{ $section6.RelPermalink }}" alt="Section 6" class="lg:w-full sm:max-w-md mx-auto">
             </div>
             <div class="lg:w-1/2 w-full">
                 <div class="">
                     <div class="flex xl:flex-row flex-col xl:items-center lg:gap-6 sm:gap-5 gap-3 relative">
-                        <img src="{{ $arrow6.RelPermalink }}" alt="" class="absolute sm:-top-20 -top-16 sm:w-72 w-48 -left-1/3 lg:hidden">
-                        <img src="{{ $line3.RelPermalink }}" alt="" class="absolute lg:-bottom-10 sm:-bottom-8 -bottom-5 w-full">
+                        <img src="{{ $arrow6.RelPermalink }}" alt="arrow" class="absolute sm:-top-20 -top-16 sm:w-72 w-48 -left-1/3 lg:hidden">
+                        <img src="{{ $line3.RelPermalink }}" alt="line" class="absolute lg:-bottom-10 sm:-bottom-8 -bottom-5 w-full">
                         <h2 class="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">100%</h2>
                         <p class="leading-6 xl:mt-0 sm:mt-4 mt-2">{{ $.Param "section_open_office_section1" | safeHTML }}</p>
                     </div>
@@ -361,7 +361,7 @@
                             <div class="flex items-start gap-4">
                                 <div class="flex items-center justify-center bg-rose-100 shrink-0 rounded-full p-1">
                                     <div class=" border border-dashed rounded-full border-rose w-14 h-14 flex items-center justify-center">
-                                        <img src="{{ $bullet1.RelPermalink }}" alt="" class="w-8 h-8">
+                                        <img src="{{ $bullet1.RelPermalink }}" alt="bullet point" class="w-8 h-8">
                                     </div>
                                 </div>
                                
@@ -370,7 +370,7 @@
                             <div class="flex items-start gap-4">
                                 <div class="flex items-center justify-center bg-rose-100 shrink-0 rounded-full p-1">
                                     <div class=" border border-dashed rounded-full border-rose w-14 h-14 flex items-center justify-center">
-                                        <img src="{{ $bullet2.RelPermalink }}" alt="" class="w-8 h-8">
+                                        <img src="{{ $bullet2.RelPermalink }}" alt="bullet point" class="w-8 h-8">
                                     </div>
                                 </div>
                                 <p>{{ $.Param "section_open_diversity_section2" | safeHTML }}</p>
@@ -379,13 +379,13 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full relative">
-                    <img src="{{ $line4.RelPermalink }}" alt="" class=" absolute xl:top-0 xl:-left-12 lg:-top-12 top-24 sm:w-24 w-20">
+                    <img src="{{ $line4.RelPermalink }}" alt="line" class=" absolute xl:top-0 xl:-left-12 lg:-top-12 top-24 sm:w-24 w-20">
                     <div class="bg-rose-100 border border-rose lg:hidden inline-block px-6 py-3 sm:w-auto w-full text-center rounded-sm relative sm:mb-12 mb-7 ">
                         <h2 class="h2 text-rose">Open Diversity</h2>
                         <span class="iconify text-rose text-3xl absolute -right-6 -bottom-6 sm:block hidden" data-icon="clarity:cursor-arrow-solid"></span>
-                        <img src="{{ $click.RelPermalink }}" alt="" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                        <img src="{{ $click.RelPermalink }}" alt="click" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                     </div>
-                    <img src="{{ $openDiversity.RelPermalink }}" alt="" class="lg:w-full sm:max-w-md mx-auto">
+                    <img src="{{ $openDiversity.RelPermalink }}" alt="Open Diversity" class="lg:w-full sm:max-w-md mx-auto">
                 </div>
             </div>
         </div>
