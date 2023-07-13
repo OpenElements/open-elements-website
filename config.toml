@@ -1,17 +1,17 @@
 defaultContentLanguage = "en"
 title = "Open Elements"
 disableKinds = [ "taxonomy", "taxonomyTerm" ]
+baseURL = "https://open-elements.com/"
+
 
 [languages.en]
 weight = 1
-baseURL = "https://open-elements.com/"
 languageCode = "en-us"
 languageName = "EN"
 description = "Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java"
 
 [languages.de]
 weight = 2
-baseURL = "https://open-elements.de/"
 languageCode = "de"
 languageName = "DE"
 description = "Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java"
