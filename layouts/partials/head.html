@@ -9,7 +9,8 @@
   gtag('config', 'G-MYPMHW7YG2');
 </script>
   {{ $bullet := resources.Get "/illustrations/bullet.svg" }}
-  {{ $style := resources.Get "/css/style.css" }}  
+  {{ $css := resources.Get "/css/style.css" }}  
+  {{ $style := $css | resources.Minify }}
   {{ template "_internal/google_analytics_async.html" . }}
   {{ if eq .Site.Params.openGraph true }}
   {{ template "_internal/opengraph.html" . }}
