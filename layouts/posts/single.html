@@ -1,42 +1,19 @@
 {{ define "main" }}
-
-<!-- Page Header -->
-<!-- Set your background image for this header on the line below. -->
-{{ if isset .Params "image" }}
-  <header
-    class="intro-header"
-    style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
-  >
-{{ else }}
-  <header
-    class="intro-header"
-    style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.defaultHeaderImage }}')"
-  >
-{{ end }}
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-heading">
-            <h1>{{ .Title }}</h1>
-            <h2 class="subheading">{{ .Description }}</h2>
-          </div></span>
-
-        </div>
-      </div>
-    </div>
-</header>
-
+<<div class="relative">
+  <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm relative xl:pb-36 pb-28">
   <!-- Post Content -->
   <article>
-    <div class="container">
-      <div class="row post-content">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          {{ .Content }}
-        </div>
-      </div>
+    <div class="flex items-center justify-center lg:pt-36 md:pt-28 sm:pt-24 pt-16 sm:pb-12 pb-4">
+      <h1 class="h1 text-center flex items-center justify-center w-full">
+        {{ .Title }}
+      </h1>
+    </div>
+    <div class="relative flex flex-col">
+      {{ .Content }}
     </div>
   </article>
-
-  {{ end }}
+  </div>
+  </div>
+{{ end }}
 
 
