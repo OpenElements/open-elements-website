@@ -19,7 +19,7 @@ Based on Polymer and web components it's very easy to create a web application t
 
 Here is a short example that shows how a Google maps web component can be integrated in any web page:
 
-{% highlight html %}
+{{< highlight html >}}
 <!-- Polyfill Web Components support for older browsers -->
 <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
@@ -28,7 +28,7 @@ Here is a short example that shows how a Google maps web component can be integr
 
 <!-- Use element -->
 <google-map latitude="37.790" longitude="-122.390"></google-map>
-{% endhighlight %}
+{{< / highlight >}}
 
 ![map](/assets/posts/guigarage-legacy/map-300x287.png)
 
@@ -49,7 +49,7 @@ To use the Polymer paper components we only need 1 dependency to `PolymerElement
 
 Once you have added the dependency your bower.json file like look like this:
 
-{% highlight json %}
+{{< highlight json >}}
 {
   "name": "polymer-interaction",
   "version": "1.0.0",
@@ -68,7 +68,7 @@ Once you have added the dependency your bower.json file like look like this:
     "paper-elements": "PolymerElements/paper-elements#1.0.5"
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 After calling `bower install` all dependencies are downloaded to the `bower_components` folder. This includes:
 
@@ -79,7 +79,7 @@ After calling `bower install` all dependencies are downloaded to the `bower_comp
 
 Once this is done we can create the initial `index.html` file. Here we will start to provide the functionality of the web components spec by adding the polypill. To do so we include the script in our page:
 
-{% highlight html %}
+{{< highlight html >}}
 <html>
 <head>
     <meta charset="utf-8">
@@ -90,11 +90,11 @@ Once this is done we can create the initial `index.html` file. Here we will star
 <body>
 </body>
 </html>
-{% endhighlight %}
+{{< / highlight >}}
 
 Now we can start using the new features. We want to start with the import. In our example we need the Polymer API and some paper components. Therefore we add imports to all these dependencies:
 
-{% highlight html %}
+{{< highlight html >}}
 <html>
 <head>
     <meta charset="utf-8">
@@ -110,7 +110,7 @@ Now we can start using the new features. We want to start with the import. In ou
 <body>
 </body>
 </html>
-{% endhighlight %}
+{{< / highlight >}}
 
 The paper elements already depends on the Polymer API and therefore we don't need to add it explicitly.
 
@@ -118,7 +118,7 @@ The paper elements already depends on the Polymer API and therefore we don't nee
 
 Since Polymer is a framework for web components we will create a component that wraps our complete application view. To do so we need a html template and some JavaScript for the Polymer boostrap / configuration. A first simple example of such a component looks like this:
 
-{% highlight html %}
+{{< highlight html >}}
 <dom-module id="app-view">
     <template>
         CONTENT
@@ -130,18 +130,17 @@ Since Polymer is a framework for web components we will create a component that 
         is: "app-view"
     });
 </script>
-{% endhighlight %}
+{{< / highlight >}}
 
 This code snippet defines a Polymer based web component that can be added to a html page by using the `<app-view>` tag (as defined in the polymer id). This web component only contains the static text "Content". Let's add this code snippet and the custom tag to our `index.html`:
 
-{% highlight html %}
+{{< highlight html >}}
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
 
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-
 
     <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
     <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
@@ -165,7 +164,7 @@ This code snippet defines a Polymer based web component that can be added to a h
 </script>
 
 </html>
-{% endhighlight %}
+{{< / highlight >}}
 
 Here is a pic of the current state in chrome:
 
@@ -183,7 +182,7 @@ Let's add some first Polymer paper elements. Here I want to start with a [`paper
 
 In this header panel we want to add a toolbar with a title and a slider. For all these components Polymer paper offers ready to use web components. How this components can be used is documented in the [Polymer elements catalog](https://elements.polymer-project.org). Once this is done our code look like this:
 
-{% highlight html %}
+{{< highlight html >}}
 <html>
 <head>
     <meta charset="utf-8">
@@ -220,7 +219,7 @@ In this header panel we want to add a toolbar with a title and a slider. For all
 </script>
 
 </html>
-{% endhighlight %}
+{{< / highlight >}}
 
 In chrome we can already see the toolbar but the layout doesn't look that perfect:
 
@@ -228,7 +227,7 @@ In chrome we can already see the toolbar but the layout doesn't look that perfec
 
 Polymer provides a [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) based layout that can be simply modified by using custom attributes that are [provided by Polymer](https://elements.polymer-project.org/guides/flex-layout). I don't want to dive deep here in flexbox and Polymer layout (since this post is already very long) and simply show the final code:
 
-{% highlight html %}
+{{< highlight html >}}
 <html>
 <head>
     <meta charset="utf-8">
@@ -268,20 +267,20 @@ Polymer provides a [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flex
 </script>
 
 </html>
-{% endhighlight %}
+{{< / highlight >}}
 
 ![preview3](/assets/posts/guigarage-legacy/preview3-1024x814.png)
 
 Ok, as a next step I want to add some static images. Therefore I will use [lorempixel.com](http://lorempixel.com) that is a perfect service to get some random images. After adding some images to the content as shown in the following code snippet our application already look like some kind of image viewer:
 
-{% highlight html %}
+{{< highlight html >}}
 <div class="horizontal layout center-justified wrap">
   <img src="http://lorempixel.com/320/320/animals/1/">
   <img src="http://lorempixel.com/320/320/animals/2/">
   <img src="http://lorempixel.com/320/320/animals/3/">
   ...
 </div>
-{% endhighlight %}
+{{< / highlight >}}
 
 ![with-images](/assets/posts/guigarage-legacy/with-images-1024x656.png)
 
@@ -289,7 +288,7 @@ Thanks to the flex box layout that is used in Polymer the images are aligned in 
 
 As a next step I want to finalize the styling of our application by adding some CSS. Here is the final html file:
 
-{% highlight html %}
+{{< highlight html >}}
 <html>
 <head>
     <meta charset="utf-8">
@@ -357,7 +356,7 @@ As a next step I want to finalize the styling of our application by adding some 
 </script>
 
 </html>
-{% endhighlight %}
+{{< / highlight >}}
 
 ![preview5](/assets/posts/guigarage-legacy/preview5-1024x577.png)
 

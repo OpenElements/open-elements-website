@@ -11,13 +11,13 @@ With this post I will give a short "Getting Started" documentation for everyone 
 
 You can easily add a dependency to DataFX 1.0 to any Maven project. With doing so a JavaFX 2.2 dependency is added to your project, too. Just add the following dependency to your Maven pom:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <dependency>
    <groupId>org.javafxdata</groupId>
    <artifactId>datafx-core</artifactId>
    <version>1.0</version>
 </dependency>
-{% endhighlight %}
+{{< / highlight >}}
 
 Since all datafx-core artifacts are available at [Maven Central Repository](http://search.maven.org) the provision of DataFX will work automatically.
 

@@ -15,7 +15,7 @@ The following pictures shows the two views of the tutorial and its interaction:
 
 As shown in the first tutorial we want to start by defining the views in __FXML__. Here is the __FXML__ file for the first view:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <?xml version="1.0" encoding="UTF-8"?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -40,7 +40,7 @@ As shown in the first tutorial we want to start by defining the views in __FXML_
     <insets />
   </padding>
 </stackpane>
-{% endhighlight %}
+{{< / highlight >}}
 
 This defines a view that looks like this:
 
@@ -48,7 +48,7 @@ This defines a view that looks like this:
 
 The second view differ only in a few points from the first one. Here is the FXML definition of the second view:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <?xml version="1.0" encoding="UTF-8"?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -73,7 +73,7 @@ The second view differ only in a few points from the first one. Here is the FXML
     <insets />
   </padding>
 </stackpane>
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see in the code there is a style addition in the __VBox__ tag. Here the red background color of the view is defined by __CSS__. The rendered view will look like this:
 
@@ -81,27 +81,27 @@ As you can see in the code there is a style addition in the __VBox__ tag. Here t
 
 As a next step we create __view controllers__ for the views. As shown in the last tutorial you have to define a class for each view that acts as its controller. In a first step we create some empty controller classes that are only annotated by `@FXMLController`:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController("view1.fxml")
 public class View1Controller {
     @FXML
     private Button actionButton;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Only the button that is defined by the `fx:id` attribute in the FXML file is part of the first controller class. The second one will look similar:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController("view2.fxml")
 public class View2Controller {
     @FXML
     private Button actionButton;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done an application that is based on a flow can be created. As learned in tutorial 1 there is an easy way to create an application that only contains one flow. We will use it here, too. The main class of this example will look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 public class Tutorial2Main extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -111,31 +111,31 @@ public class Tutorial2Main extends Application {
         new Flow(View1Controller.class).startInStage(primaryStage);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 By doing so a new flow is created that defines `view1` as its start view. If you start the application you will already see the first view but the button won't trigger any action. To add an action that links to the second view DataFX provides a special annotation called <`@LinkAction`. This annotation is working like the `@ActionTrigger` annotation that was introduced in tutorial 1. Once the button is clicked an action event will be fired and handled by the DataFX container. When using the `@LinkAction` annotation the controller of the target view must be specified. Therefore the Annotations provides a value that can be defined as the controller class. Here is the updated code of the first controller class:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController("view1.fxml")
 public class View1Controller {
     @FXML
     @LinkAction(View2Controller.class)
     private Button actionButton;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Whenever the button is pressed the flow will navigate to the second view that is defined by the `View2Controller` class. The `@LinkAction` can be added to any JavaFX Node. If the component extends the `ButtonBase` class or the `MenuItem` class a handler for action events will be added to the control. Otherwise the action will be called once the control is clicked by mouse. By using the annotation a developer doesn't need to handle the complete navigation like changing the view or create a new data model. DataFX will handle all these steps automatically and the defined view will appear on screen once the action is triggered.
 
 Maybe you can already imagine how the final code for the second view controller will look like ;)
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController("view2.fxml")
 public class View2Controller {
     @FXML
     @LinkAction(View1Controller.class)
     private Button actionButton;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done you have created the first simply flow with DataFX. By using the `@LinkAction` annotation you can create big flows that contain a lot different views. In later tutorials you will that DataFX provides some other cool features to manage the navigation in a flow.
 

@@ -21,7 +21,7 @@ When creating a JavaFX client you will normally use FXML to create your view. Ne
 
 When talking about the dolphin Platform this view controller is the perfect point to bind the view to the synchronized model and the server side controller. Therefore we call this class the "Binder". There are several ways how you can define such a binding but the most easy one is to use extend the AbstractBinder class that is part of the Dolphin Platform JavaFX library. This class already implements the complete lifecycle of the view and you can simply bind the synchronized presentation model to your view properties. Here is a small example for a view that contains only one textfield and a button:
 
-{% highlight java %}
+{{< highlight java >}}
 public class MyBinder extends AbstractBinder<MyModel> {
   
   @FXML
@@ -41,11 +41,11 @@ public class MyBinder extends AbstractBinder<MyModel> {
   }
   
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once the view binder is instantiated the server controller and the model will automatically be created on the server. Since the model will be synchronized all the time between client and server you don't need to create it on the client. After this initialization is done the `onInit()` method of the binder will called. Here we bind the the `name property` that is part of the synchronized model to the text property of the textfield. In addition we define an action handler for the button. When the button is pressed a action in the server side controller should be called. Top do so the abstract binder provides the `invoke(String name)` method that triggers actions on the server controller. In this specific case the server controller might look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController
 public class Controller {
   
@@ -61,7 +61,7 @@ public class Controller {
   }
   
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see we never send any data to the server. Since the model will be automatically synchronized we can directly store the name string in the model to the database. The Dolphin Platform guarantee that the model will be the same as it's on the client when pressing the button.
 

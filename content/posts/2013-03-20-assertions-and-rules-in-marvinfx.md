@@ -7,7 +7,7 @@ excerpt: 'Today I added some new features to MarvinFX. For all basic property ty
 ---
 Today I added some new features to [MarvinFX]({{ site.baseurl }}{% post_url 2013-03-17-introducing-marvinfx %}). For all basic property types (String, Number, Boolean, etc...) MarvinFX will provide methods to check some common assertions for this properties. All this methods will be part of the PropertySupervisor classes. Here is a short example that tests a String property:
 
-{% highlight Java %}
+{{< highlight java >}}
 @Test
 public void test5() {
 	TextField textField = new TextField("Hello MarvFX");
@@ -20,11 +20,11 @@ public void test5() {
 	supervisor.assertStringLenghtIsGreaterThan(11);
 	supervisor.assertStringLenghtIsLessThan(13);
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 All this methods work internally with so called MarvinFXRules. For every assertion MarvinFX provides a special rule. You can simply write your own rules and check them with the supervisor:
 
-{% highlight Java %}
+{{< highlight java >}}
 @Test
 public void test5() {
 	TextField textField = new TextField("Hello MarvFX");
@@ -35,11 +35,11 @@ public void test5() {
 	StringEndsWithRule rule = new StringEndsWithRule("MarvFX");
 	supervisor.checkAssertion(rule);
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Because every assertion is encapsulated in a MarvinRule you can use a underlying API and boolean logic to combine them:
 
-{% highlight Java %}
+{{< highlight java >}}
 @Test
 public void test5() {
 	TextField textField = new TextField("Hello MarvFX");
@@ -56,6 +56,6 @@ public void test5() {
 	supervisor.checkAssertion(rule1.and(rule2).or(wrongRule1));
 	supervisor.checkAssertion(rule1.and(rule2).or(wrongRule1.or(rule2)));
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Hope you like this ;)

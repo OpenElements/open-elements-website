@@ -29,7 +29,7 @@ As a first step I will create the layout of the application by using the SceneBu
 
 Once this is is saved as a view.fxml file we can use it in JavaFX. Here is the content of the fxml file:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
@@ -59,7 +59,7 @@ Once this is is saved as a view.fxml file we can use it in JavaFX. Here is the c
       <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
    </padding>
 </StackPane>
-{% endhighlight %}
+{{< / highlight >}}
 
 As a next step we need a controller class that add some interaction and bindings to our view. In JavaFX you can create a view by bundling a controller class and a fxml file. By doing so you can inject controls that are defined in the fxml description directly in your Java controller.
 
@@ -67,7 +67,7 @@ As a next step we need a controller class that add some interaction and bindings
 
 Let's start with a controller that injects all controls that we need for our use case:
 
-{% highlight java %}
+{{< highlight java >}}
 public class CalculatorController {
 
     @FXML
@@ -86,13 +86,13 @@ public class CalculatorController {
     public void initialize() {
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In this class I already add a `initialize()` method that will automatically be called by JavaFX after all controls has been injected in the controller instance. Sadly this is done by some kind of magic and JavaFX don't provide an default interface for this behavior. You need to know that you can add this method to your controller class by reading the FXML documentation.
 
 For this small example we don't need to add any other methods to the controller. Everything we want to do can be defined in the init method. Here we need to add an action to the reset button and define an binding for the values to automatically update the result value. I don't want to describe the JavaFX API in deep and just show the final source code of the method:
 
-{% highlight java %}
+{{< highlight java >}}
 public void initialize() {
     resultField.textProperty().bind(Bindings.createStringBinding(() -> {
         try {
@@ -117,11 +117,11 @@ public void initialize() {
         valueBField.setText(null);
     });
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 As a last step we need to create or view and show it on screen. Here is the main application class that does everything that we need:
 
-{% highlight java %}
+{{< highlight java >}}
 public class CalculatorApplication extends Application {
 
     @Override
@@ -134,7 +134,7 @@ public class CalculatorApplication extends Application {
         primaryStage.show();
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done we can start our application and it's working as expected:
 
@@ -144,7 +144,7 @@ Once this is done we can start our application and it's working as expected:
 
 When creating an application based on the Dolphin Platform I start to define the model and code the basic controller functionality. Let's start with the model definition (A first description of the Dolphin Platform model API ca be found [here]({{ site.baseurl }}{% post_url 2015-10-06-dolphin-platform-a-sneak-peek-of-the-model-api %})). In the given example the model is quite small and a matching Dolphin Platform model will look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinBean
 public class CalculatorModel {
 
@@ -166,11 +166,11 @@ public class CalculatorModel {
         return result;
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 If you want to simply use getter and setter methods when working with the model you can add some convenience methods:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinBean
 public class CalculatorModel {
 
@@ -216,13 +216,13 @@ public class CalculatorModel {
         resultProperty().set(result);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The model class should be defined in a module that is shared between the client and server sources.
 
 Once the model is done we can start working on the controller. As described in the [first overview]({{ site.baseurl }}{% post_url 2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api %}) a controller will be managed by the web container on server side. Based on this all the well known Spring and JavaEE specifications can be used in Dolphin Platform controllers. In this example we will make use of the `@PostContruct` annotation that marks our `init()` method. This method will automatically be called once the controller has been created. In the `init()` method we can add some listeners to our model since the model instance is already created and injected in the controller instance when the `@PostContruct` is handled.
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController(Constants.CONTROLLER_NAME)
 public class CalculatorController {
 
@@ -239,11 +239,11 @@ public class CalculatorController {
        //TODO: calc
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done we need to add some additional features to the controller class. Let's start with the calculation. Here we can reuse most of the code that we already used in the JavaFX only example since the Dolphin Platform `Property` definition is similar to the JavaFX one:
 
-{% highlight java %}
+{{< highlight java >}}
 private void calc() {
     try {
         int valueA = 0;
@@ -261,11 +261,11 @@ private void calc() {
         model.resultProperty().set("Error");
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The last think that is missing is the "reset" functionality. Here we create a Dolphin Action that can be triggered by a client. To do so the `@DolphinAction` annotation can be used. Once we created the action our controller is done and will look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController(Constants.CONTROLLER_NAME)
 public class CalculatorController {
 
@@ -303,11 +303,11 @@ public class CalculatorController {
         }
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Now we are mostly done with the server side of our example. Since we want to use Spring Boot to run the server we need to add a main class to our application. Dolphin Platform adds Spring Boot support and therefore such a class is quite small:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinPlatformApplication
 public class CalculatorServer extends SpringBootServletInitializer {
 
@@ -315,13 +315,13 @@ public class CalculatorServer extends SpringBootServletInitializer {
         SpringApplication.run(new Class[]{CalculatorServer.class}, args);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Spring Boot will automatically find the Dolphin controller and create a new instance whenever a client creates a matching view.
 
 For the JavaFX client we will create an application class that extends the `javafx.application.Application` as any other JavaFX application. Here we directly create the connection to our Dolphin Platform based server application that is defined by the `ClientContext` class:
 
-{% highlight java %}
+{{< highlight java >}}
 public class CalculatorClient extends Application {
 
     private ClientContext clientContext;
@@ -341,11 +341,11 @@ public class CalculatorClient extends Application {
         launch(args);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 For the view we will use the same MVC and FXML based approach as in the first JavaFx example. Here we can reuse the FXML file ("view.fxml") since the UI won't change. But by using Dolphin Platform the controller will be much smaller. Since the real controller class is already defined on the server we only need to define some bindings here. To do so we can extend the Dolphin Platform class `AbstractViewBinder` that defines all information that we need to create an interactive UI. Here we will inject all UI elements by using the `@FXML` annotation like before. The `AbstractViewBinder` class defines the abstract `init()` method that we need to implement in our class:
 
-{% highlight java %}
+{{< highlight java >}}
 public class CalculatorViewBinder extends AbstractViewBinder<CalculatorModel> {
 
     @FXML
@@ -369,11 +369,11 @@ public class CalculatorViewBinder extends AbstractViewBinder<CalculatorModel> {
         //TODO
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 I will define the content of the `init()` method later and finish the application class first. Here we can now load the FXML with the given controller and show it on screen:
 
-{% highlight java %}
+{{< highlight java >}}
 public class CalculatorClient extends Application {
 
     private ClientContext clientContext;
@@ -399,19 +399,19 @@ public class CalculatorClient extends Application {
         launch(args);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see we only use well known JavaFX APIs here. Once this is done you can already start the server and client applications. But you won't see any data on the client since the binding is still missing. To create a binding in JavaFX the Dolphin Platform offers a helper class called `FXBinder`. By using the class you can define (bidirectional) bindings between Dolphin Platform properties and JavaFX properties:
 
-{% highlight java %}
+{{< highlight java >}}
 FXBinder.bind(valueAField.textProperty()).bidirectionalTo(getModel().firstValueProperty());
 FXBinder.bind(valueBField.textProperty()).bidirectionalTo(getModel().secondValueProperty());
 FXBinder.bind(resultField.textProperty()).bidirectionalTo(getModel().resultProperty());
-{% endhighlight %}
+{{< / highlight >}}
 
 As a last step we need to define the rest function. To do so we can add an action handler to the button. In the handler we will trigger the Dolphin Action on server side. Here is the code of the final view binder class:
 
-{% highlight java %}
+{{< highlight java >}}
 public class CalculatorViewBinder extends AbstractViewBinder<CalculatorModel> {
 
     @FXML
@@ -438,7 +438,7 @@ public class CalculatorViewBinder extends AbstractViewBinder<CalculatorModel> {
         resetButton.setOnAction(e -> invoke("reset"));
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Now we can use the client and the calculation and reset will be done on the server :). Well, this might not be necessary for the given small example but for more complex applications this handling is awesome.  There are several benefits:
 
@@ -451,7 +451,7 @@ I will blog in more detail about all these benefits in future posts
 
 I think you will see the benefit when thinking about an additional feature. Let's say the data of the application should be stored in a database whenever an calculation has been done. When doing this with JavaFX we need to connect to a database, handle transactions in the client and do a lot of more stuff. Server frameworks already contain all those features and since the Dolphin Platform example is based on Spring Boot we can simply use [Spring Data](http://Spring Data) here. In this case we only need to inject a Spring Data repository in our controller class and simply store the calculation in the DB. All challenges like transaction support will be handled by Spring in this case. When doing so your controller might look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController(Constants.CONTROLLER_NAME)
 public class CalculatorController {
 
@@ -493,7 +493,7 @@ public class CalculatorController {
         }
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 This was the first complete "getting started" example of the Dolphin Platform and I hope that you like the basic concepts. We plan to upload the Dolphin Platform sources to GitHub in the next days and deploy a first preview release to Maven Central before JavaOne.
 

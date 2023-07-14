@@ -17,7 +17,7 @@ Bower is an open source tool that is created by Twitter and helps you to manage 
 
 Bower can be [installed by using NPM](http://bower.io/#install-bower) and once it's on your system you can create a bower configuration for your project by simply calling `bower init`. By doing so you need to define some metadata for your project and bower will create a json file (`bower.json`) in your project folder. This file contains the definition of your project and might look like this:
 
-{% highlight json %}
+{{< highlight json >}}
 {
   "name": "bootstrap-layout",
   "version": "0.0.0",
@@ -33,7 +33,7 @@ Bower can be [installed by using NPM](http://bower.io/#install-bower) and once i
     "tests"
   ]
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Developers who are familiar with [Maven](http://maven.apache.org) might notice some parallels. Once the file is created you can add dependencies to your project by calling a bower command like `bower install --save webcomponentsjs` that installs the web components polyfill (I plan to blog later about that module). When looking at the bower file you will find a dependencies section that contains the added module. In addition a `bower_components` folder was created in your project that contains the defined dependency. Once this is done you can simply use any content of the `bower_components` folder in your application. But don't forget to add the `bower_components` folder to `.gitignore` ;) When checking out the project from git you only need to call `bower install` and the cool little tool will download all the defined dependencies for you and add them to the `bower_components` folder automatically. So from a Java developer point of view this is mostly what Maven does for my Java project.
 

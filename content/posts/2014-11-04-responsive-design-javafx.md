@@ -27,22 +27,22 @@ The core concept of ReponsiveFX is copied from [Twitter Boostrap](http://getboot
 
 By adding one of these style classes to a component the visibility of the component depends on the current frame size. Here is a small example how this can be used in HTML:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <div class="hidden-xs">big text<div>
 <div class="visible-xs">small text<div>
-{% endhighlight %}
+{{< / highlight >}}
 
 ## Responsive Design & JavaFX
 
 By default JavaFX doesn't provide an API for responsive design. Thankfully JavaFX supports CSS and therefore we can add this feature. This is exactly what ReponsiveFX does. By using the API you can simply use the same style classes as in HTML in your JavaFX application. To add the responsive support to an application you only need one line of Java code:
 
-{% highlight java %}
+{{< highlight java >}}
 ResponsiveHandler.addResponsiveToWindow(primaryStage);
-{% endhighlight %}
+{{< / highlight >}}
 
 This adds the support for responsive design to the given stage. All nodes that are in this stage can now use the described style classes. Therefore you can simply do the following in Java code:
 
-{% highlight java %}
+{{< highlight java >}}
 TableView table = new TableView(items);
 table.getStyleClass().addAll("visible-lg", "visible-md");
 
@@ -50,7 +50,7 @@ ListView list = new ListView(items);
 list.getStyleClass().addAll("visible-xs", "visible-sm");
 
 pane.getChildren().addAll(table, list);
-{% endhighlight %}
+{{< / highlight >}}
 
 In the example a table and a list are defined that will visualize the same set of data (`items`). Depending on the size of the application the list or the table will be shown on screen. Here is a short video that shows the behavior:
 
@@ -62,16 +62,16 @@ By adding this API to your JavaFX application you will have the same possibiliti
 
 By using the given classes you can hide and show components depending to the frame size in your application but often you want to show different sizes of controls depending on the screen size. Let's think about a toolbar that should have a different size in all supported screen sizes. In HTML you would do the following:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <div class="visible-xs">...<div> <!--extra small-->
 <div class="visible-sm">...<div> <!--small-->
 <div class="visible-md">...<div> <!--medium-->
 <div class="visible-lg">...<div> <!--large-->
-{% endhighlight %}
+{{< / highlight >}}
 
 In JavaFX this would correspond the following code snippet:
 
-{% highlight java %}
+{{< highlight java >}}
 Toolbar extraSmallToolbar = new Toolbar(...);
 extraSmallToolbar.getStyleClass().add("visible-xs");
 
@@ -85,7 +85,7 @@ Toolbar largeToolbar = new Toolbar(...);
 largeToolbar.getStyleClass().add("visible-lg");
 
 pane.getChildren().add(extraSmallToolbar, smallToolbar, mediumToolbar, largeToolbar);
-{% endhighlight %}
+{{< / highlight >}}
 
 This is very bad practive because Java must handle all 4 instances in this case. Even if only one toolbar will be displayed on screen all are part of the scene graph. If you will do this with controls that contains images you will blow up your memory for example. Therefore you shouldn't do this. I thinks it's clear that we need a better solution and ResponsiveFX contains one :)
 
@@ -98,7 +98,7 @@ Next to the style classes ReponsiveFX provides pseudo classes for all supported 
 
 By using this pseudo classes you can define the visualization of a node depending on the current application size. The pseudo classes will automatically be added and removed for each node inside the scene graph of a windows that is handled by the ResponsiveHandler. Thanks to this you can define the following CSS rules for a control:
 
-{% highlight css %}
+{{< highlight css >}}
 #toolbar {
     -fx-background-color: deepskyblue;
 }
@@ -119,15 +119,15 @@ By using this pseudo classes you can define the visualization of a node dependin
     -fx-padding: 6 6 1 6;
     -fx-background-image: url(blue-background.png);
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In your Java code you can now define one control and set its ID to match the CSS rules:
 
-{% highlight java %}
+{{< highlight java >}}
 Toolbar myToolbar = new Toolbar(...);
 myToolbar.setId(toolbar);
 pane.getChildren().add(myToolbar);
-{% endhighlight %}
+{{< / highlight >}}
 
 Whenever the size of the application will change the matching pseudo class will be set to the control and the visualization of the control will change depending on the CSS attributes. By doing so you can create applications that will look different on the specified frame sizes. This will be helpful when developing applications that should work for desktop and mobile or on embedded devices. Here is a short video that shows how a responsive application might look:
 

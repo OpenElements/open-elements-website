@@ -9,20 +9,20 @@ In my last [post]({{ site.baseurl }}{% post_url 2011-07-28-fun-with-gestures %})
 
 Here is how:
 
-{% highlight Java %}
+{{< highlight java >}}
 try {
   GestureUtilities.add(panel, gestureRotationListener);
 } catch (GesturesNotSupportedException e) {
   System.out.println("Gestures-API not Supported!");
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Or you can just check if the Apple API is supported:
 
-{% highlight Java %}
+{{< highlight java >}}
 if(!GestureUtilities.isSupported()) {
   System.out.println("Gestures-API not Supported!");
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 I will add javadoc to the source and update the gestures demo next week. You can check out the source @ [https://code.google.com/p/gestures-wrapper/](https://code.google.com/p/gestures-wrapper/).

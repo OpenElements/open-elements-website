@@ -19,7 +19,7 @@ If DataFX should become an implementation of the JSR specification it must imple
 
 JWrap contains a [UIToolkit class](https://github.com/guigarage/jwrap/blob/master/src/main/java/com/guigarage/uif/concurrent/UIToolkit.java) that can be used to work with the event and rendering thread of the underlying UI toolkit. Here are the methods that are defined in the class:
 
-{% highlight java %}
+{{< highlight java >}}
 void runAndWait(Runnable runnable)
 
 void runLater(Runnable runnable)
@@ -27,17 +27,17 @@ void runLater(Runnable runnable)
 boolean isToolkitThread()
 
 <T> T runCallableAndWait(Callable<T> callable)
-{% endhighlight %}
+{{< / highlight >}}
 
 By using these methods you can interact with the event and rendering thread of the used UI toolkit. To do so you must configure JWrap. This can be done by only one line of code. Here is an example how you configure JWrap to use the Swing EDT:
 
-{% highlight java %}
+{{< highlight java >}}
 UIToolkit.setPlatform(SwingPlatform.getInstance());
-{% endhighlight %}
+{{< / highlight >}}
 
 There are several other concurrency classes in JWrap that all depend on the UIToolkit class. By doing so you can now use all the concurrency helpers in JWrap and automatically the EDT will be used as application thread. I ported the [ProcessChain]({{ site.baseurl }}{% post_url 2014-10-22-datafx-8-released %}) of DataFX to JWarp and now you can code the following in your Swing application:
 
-{% highlight java %}
+{{< highlight java >}}
 ProcessChain.create().
     addSupplierInPlatformThread(() -> myTextField.getText()).
     addFunctionInExecutor((t) -> WeatherService.getWeather(t)).
@@ -45,7 +45,7 @@ ProcessChain.create().
         myLabel.setText("Error");
         e.printStackTrace();
     }).run();
-{% endhighlight %}
+{{< / highlight >}}
 
 I think this code is much better than using the SwingWorker. You can easily use the `ProcessChain` in any Swing application that supports Java 8.
 
@@ -55,7 +55,7 @@ DataFX contains the [controller and flow API]({{ site.baseurl }}{% post_url 2014
 
 Let's start with the swim example. As a first step we define the view and define names for all the UI components:
 
-{% highlight java %}
+{{< highlight java >}}
 public class SwingDemoView extends JPanel {
 
     public SwingDemoView() {
@@ -75,11 +75,11 @@ public class SwingDemoView extends JPanel {
         add(myLabel, BorderLayout.SOUTH);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The second class of the dialog will be the controller class. In this class JWrap annotations can be sued to inject view components in the controller and define interaction:
 
-{% highlight java %}
+{{< highlight java >}}
 public class SwingDemoController {
 
     @ViewNode
@@ -108,13 +108,13 @@ public class SwingDemoController {
         System.out.println("TADA");
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The `@ViewNode` annotation can be compared to the `@FXML` annotation that is used in JavaFX and DataFX to inject view nodes that are defined in FXML in a controller. The `@ViewNode` annotation has some benefits because it can be used for FXML based view and for coded view (this is one of the features that I will integrate in DataFX 8.1).
 
 The JavaFX version looks mainly the same. Here is the code for the view class:
 
-{% highlight java %}
+{{< highlight java >}}
 public class JavaFXDemoView extends VBox {
 
     public JavaFXDemoView() {
@@ -134,11 +134,11 @@ public class JavaFXDemoView extends VBox {
 
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 And here we have the controller class:
 
-{% highlight java %}
+{{< highlight java >}}
 public class JavaFXDemoController {
 
     @ViewNode
@@ -167,7 +167,7 @@ public class JavaFXDemoController {
         System.out.println("TADA");
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see the Swing controller class and the JavaFX controller looks mainly the same. Annotations like `@ViewNode` can be used in Swing and JavaFX.
 

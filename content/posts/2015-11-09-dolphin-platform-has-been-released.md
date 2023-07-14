@@ -15,22 +15,22 @@ As a first step we uploaded the [Dolphin Platform website](http://www.dolphin-pl
 If you want to try Dolphin Platform you can create your first application by simply adding the following dependencies:
 
 For a Spring Boot based server you only need to add the following dependency:
-{% highlight xml %}
+{{< highlight xml >}}
 <dependency>
     <groupId>com.canoo.dolphin-platform</groupId>
     <artifactId>dolphin-platform-server-spring</artifactId>
     <version>0.6.1</version>
 </dependency>
-{% endhighlight %}
+{{< / highlight >}}
 
 For a JavaFX based client you need to add the following dependency:
-{% highlight xml %}
+{{< highlight xml >}}
 <dependency>
     <groupId>com.canoo.dolphin-platform</groupId>
     <artifactId>dolphin-platform-client-javafx</artifactId>
     <version>0.6.1</version>
 </dependency>
-{% endhighlight %}
+{{< / highlight >}}
 
 If you are new to Dolphin Platform you can find some post about the API [in my blog]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}). In addition we spend some time to create the [JavaDoc of the public API](http://www.dolphin-platform.io/javadoc/index.html). If you have any questions please leave a comment or [ask us on twitter](https://twitter.com/DolphinPlatform). For news about Dolphin Platform you should follow the official twitter account [@DolphinPlatform](https://twitter.com/DolphinPlatform).
 

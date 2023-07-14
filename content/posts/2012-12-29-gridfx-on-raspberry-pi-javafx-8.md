@@ -14,15 +14,15 @@ Both issues were fixed very fast and an GridFX demo was running on my Mac where 
 
 So I created a log file for the java output by adding some parameters to the shell command:
 
-{% highlight shell %}
+{{< highlight shell >}}
 java -cp myApp.jar com.guigarage.Demo >log 2>&1
-{% endhighlight %}
+{{< / highlight >}}
 
 The logging showed me the cause of my problems:
 
-{% highlight shell %}
+{{< highlight shell >}}
 java.lang.NoSuchMethodError: javafx.scene.control.SkinBase.(Ljavafx/scene/control/Control;)V at com.guigarage.fx.grid.skin.GridViewSkin.(GridViewSkin.java:24)
-{% endhighlight %}
+{{< / highlight >}}
 
 While everything compiled perfectly on my Mac, the Pi has a different JavaFX compilation / version ("build 1.8.0-ea-b36e"). As a first solution I downloaded the "jfxrt.jar" file from my Pi and included it to the GridFX project on my Mac. After doing so I saw all the compilation problems in Eclipse and had a change to resolve them. It would be very nice to have a real 1.8.0-ea-b36 build installed on my Mac. Any idea where to get it?
 

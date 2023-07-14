@@ -21,9 +21,9 @@ A list of items should be cut in little peaces so that each part fits exactly in
 
 You can see how the Pagination animates through all pages and the page count is computed every time the size of the cells is changing. You can see the problems that the implementation has at this stage, too. Sometimes the navigation bar flickers or disappear for a moment. This a very strange behavior and I can't find the cause. Then I can not access the size of the page inside the Pagination Control. At the moment I'm working with the following hack:
 
-{% highlight Java %}
+{{< highlight java >}}
 pageHeight = pagination.getHeight() - 64;
-{% endhighlight %}
+{{< / highlight >}}
 
 There is another limitation of the Pagination Control. You can not deactivate the animation. When the cell size changes the current page index may change while showing the same cells. At this moment the animation should be deactivated.
 

@@ -26,7 +26,7 @@ Based on this definition we would create a presentation model that might look li
 
 When defining such a model in JavaFX you can use the cool property API and the observable collections that are part of JavaFX. Modern javaScript frameworks like AngularJS or Polymer provide a similar behavior and therefore we decided to offer the same benefits when defining model with the Dolphin Platform. Since [Michael Heinrichs](https://twitter.com/net0pyr) was the project lead of the property and bindings APIs of JavaFX at Oracle we had a lot of knowledge in this area that helped us creating the model API: In Dolphin Platform you work with properties and observable collections, too. Therefore it really easy to define a hierarchical model for your view. A model for the shown view might look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinBean
 public class PhotoOverviewModel {
   
@@ -50,19 +50,19 @@ public class PhotoModel {
   //getter & setter
   
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 All properties and collections in Dolphin Platform are observable and therefore it's quite easy to observe them on the client and the server:
 
-{% highlight java %}
+{{< highlight java >}}
 myModel.getTitleProperty().onChange(e -> System.out.println("New title: " + e.getNewValue()));
-{% endhighlight %}
+{{< / highlight >}}
 
 For all client APIs we support first class support for the Dolphin Platform properties. When working with JavaFX for example it's quite easy and intuitive to bind a synchronized Dolphin Platform property to a JavaFX property:
 
-{% highlight java %}
+{{< highlight java >}}
 FXBinder.bind(booleanJavaFXProperty).bidirectionalTo(booleanDolphinProperty);
-{% endhighlight %}
+{{< / highlight >}}
 
 On JavaScript clients the handling is even more elegant as you can bind the Dolphin Platform model directly in HTML.
 

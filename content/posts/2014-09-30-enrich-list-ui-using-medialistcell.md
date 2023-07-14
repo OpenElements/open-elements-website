@@ -19,11 +19,11 @@ The `StructuredListCell` defines a cell that splits a cell in 3 regions: left, c
 
 You can add any content to the cell by calling the following methods:
 
-{% highlight java %}
+{{< highlight java >}}
 setRightContent(Node node)
 setRightContent(Node node)
 setRightContent(Node node)
-{% endhighlight %}
+{{< / highlight >}}
 
 In addition the cell provides some new CSS attributes to style it:
 
@@ -49,7 +49,7 @@ In addition the class provides two new CSS properties:
 
 If you want the UI as shown in the demo you should use the `SimpleMediaListCell` class. This adds a rounded image view as the left content. By using this cell its very easy to create a list view like you know from many modern applications. To make the use of the cell even easier I introduced the `Media` interface. The `SimpleMediaListCell` is defined as `SimpleMediaListCell<t extends media />` and therefore it can only used with data that implements the `Media` interface. This interface is quite simple as you can see in its source:
 
-{% highlight java %}
+{{< highlight java >}}
 public interface Media {
 
     StringProperty titleProperty();
@@ -58,11 +58,11 @@ public interface Media {
 
     ObjectProperty<Image> imageProperty();
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The properties of the nodes in the cell are automatically bound to the properties that are provided by the interface and therefore the `SimpleMediaListCell` class can be used like shown in the following example:
 
-{% highlight java %}
+{{< highlight java >}}
 public class Album implements Media {
 
     private String artist;
@@ -94,17 +94,17 @@ public class Album implements Media {
 ListView<Album>listView = new ListView<>();
 listView.setCellFactory(v -> new SimpleMediaListCell<>());
 listView.setItems(dataModel.getAlbums());
-{% endhighlight %}
+{{< / highlight >}}
 
 All the cell classes are part of the `ui-basics` module that can be found at github:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <dependency>
   <groupId>com.guigarage</groupId>
   <artifactId>ui-basics</artifactId>
   <version>X.Y</version>
 </dependency>
-{% endhighlight %}
+{{< / highlight >}}
 
 ## further development
 

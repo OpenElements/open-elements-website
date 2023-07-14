@@ -13,9 +13,9 @@ While in theory, everybody can build it's own JDK based on the OpenJDK sources y
 
 A lot of Linux users do not care about that problem since they used OpenJDK builds that were downloaded from an APT repository, for example. On Linux distributions like ubuntu you only need the following command to add a ready-to-use JDK installation to your system:
 
-{% highlight shell %}
+{{< highlight shell >}}
 sudo apt-get install openjdk
-{% endhighlight %}
+{{< / highlight >}}
 
 While this sounds like a really easy solution there are several points that you normally can not answer based on this approach:
 

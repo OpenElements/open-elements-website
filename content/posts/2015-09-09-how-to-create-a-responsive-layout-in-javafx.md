@@ -19,7 +19,7 @@ Let's discuss several approaches that we can use to create this behavior.
 
 One suggested solution is to switch between an HBox and a VBox at runtime. This means that on a big screen you will see the image and text wrapped in an HBox and when the size becomes smaller the HBox will be replaced by a VBox. By doing so we need to discuss if we want to reuse the text and image component in both layouts or create a separate instance for each layout. Here I think that recycling of the components is a good idea. If you use 2 instances you need to sync them. By using the JavaFX property API this isn't as hard as it sounds in the first moment but it can still create some errors. So let's have a look at a code snippet that creates the basic view:
 
-{% highlight java %}
+{{< highlight java >}}
 public class ResponsiveLayoutDemo extends Application {
 
   private Label textLabel;
@@ -55,7 +55,7 @@ public class ResponsiveLayoutDemo extends Application {
     launch(args);
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 When running this example the view will be shown with the text and image next to each other:
 
@@ -63,7 +63,7 @@ When running this example the view will be shown with the text and image next to
 
 As a next step we want to refactor the code by using a VBox:
 
-{% highlight java %}
+{{< highlight java >}}
 public class ResponsiveLayoutDemo extends Application {
 
   private Label textLabel;
@@ -99,7 +99,7 @@ public class ResponsiveLayoutDemo extends Application {
     launch(args);
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In this example the text will be displayed under the image as it should look on small devices:
 
@@ -107,7 +107,7 @@ In this example the text will be displayed under the image as it should look on 
 
 As a last step we want to modify the code and create an application that will change it's layout dynamically:
 
-{% highlight java %}
+{{< highlight java >}}
 public class ResponsiveLayoutDemo extends Application {
 
     private Label textLabel;
@@ -172,7 +172,7 @@ public class ResponsiveLayoutDemo extends Application {
         launch(args);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In this first try, the mainPane contains the hBox or the vBox depending on the width of the scene. To do so a lister is attached to the width property. In addition, the children of the vBox and hBox will be cleared and the text and image will be attached to the currently visible panel. As you can see in this video the view already behaves as it should:
 
@@ -180,7 +180,7 @@ In this first try, the mainPane contains the hBox or the vBox depending on the w
 
 <p>There are still some ugly parts in the code. As you might have noticed the listener will be called for each repaint of our stage. therefore nodes will be replaced and added to the scene graph all the time. Here we can use the JavaFX binding API to create a more performant binding. Here is the code snippet that shows the changed code:
 
-{% highlight java %}
+{{< highlight java >}}
 primaryStage.widthProperty().greaterThan(600).addListener((obs, oldValue, newValue) -> {
             if (!newValue) {
                 changeToSmallLayout();
@@ -188,7 +188,7 @@ primaryStage.widthProperty().greaterThan(600).addListener((obs, oldValue, newVal
                 changeToLargeLayout();
             }
         });
-{% endhighlight %}
+{{< / highlight >}}
 
 Now the scene graph will only be changed if the size will become greater or smaller than 600 pixels.
 

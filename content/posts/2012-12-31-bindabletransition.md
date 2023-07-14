@@ -7,15 +7,15 @@ excerpt: 'JavaFX supports a lot of transition and animation classes. But sometim
 ---
 JavaFX supports a lot of [transition and animation](http://docs.oracle.com/javafx/2/animations/basics.htm#CJAJJAGI) classes for Node properties like the [`javafx.animation.ScaleTransition`](http://docs.oracle.com/javafx/2/api/javafx/animation/ScaleTransition.html). But sometimes you need a special animation for that no default transition is provided by JavaFX. Currently the best pratice is to extend [`javafx.animation.Transition`](http://docs.oracle.com/javafx/2/api/javafx/animation/Transition.html) and override the `interpolate(double frac)` method:
 
-{% highlight Java %}
+{{< highlight java >}}
 protected void interpolate(double frac) {
   myProperty.set(frac);
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Because JavaFX offers [PropertyBinding](http://docs.oracle.com/javafx/2/binding/jfxpub-binding.htm) I created a `BindableTransition` which current fraction is a `Property` and can be bind to any other `NumberProperty`. Here is an example:
 
-{% highlight Java %}
+{{< highlight java >}}
 Button button = new Button("BindableTransition");
 DropShadow shadow = DropShadowBuilder.create().build();
 button.setEffect(shadow);
@@ -30,7 +30,7 @@ shadow.offsetYProperty().bind(transition.fractionProperty().multiply(32));
 button.translateXProperty().bind(transition.fractionProperty().multiply(-32));
 
 transition.play();
-{% endhighlight %}
+{{< / highlight >}}
 
 The `fractionProperty` of the `BindableTransition` is bound to three different properties and the result will look like this:
 

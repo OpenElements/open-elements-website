@@ -11,16 +11,16 @@ Since Java 8 we have a new date & time API as part of Java. The API is really go
 
 Let's have a look at a simple code snippet:
 
-{% highlight java %}
+{{< highlight java >}}
 final LocalDate myDate = LocalDate.of(2015, 11, 30);
 final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.YYYY");
 final String formattedDate = formatter.format(myDate);
 System.out.println("The date is " + formattedDate);
-{% endhighlight %}
+{{< / highlight >}}
 
 Even if you have not used the API that often it's quite easy to understand that the code will print `The date is 30.11.2015` to the console. Based on this experience we can create a method like this:
 
-{% highlight java %}
+{{< highlight java >}}
 /**
 * Prints the given date in the format that is normally used in Europe.
 * The format is described as 
@@ -33,7 +33,7 @@ public static void printDate(final LocalDate date) {}
   final String formattedDate = formatter.format(myDate);
   System.out.println("The date is " + formattedDate);
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 What if I tell you that this code already contains a common problem, that I've seen in several projects within the last years? To understand that problem we should call the method with a set of
 different dates:
@@ -121,7 +121,7 @@ Java supports different calendar systems next to the Gregorian Calendar. You can
 
 When using the 'Japanese Imperial calendar system' Java offers some additional classes to define time information. The following code creates a date based on the calendar and prints it based on different format pattern strings:
 
-{% highlight java %}
+{{< highlight java >}}
 final JapaneseDate japaneseDate = JapaneseDate.of(JapaneseEra.MEIJI, 7, 3, 17);
 
 final String format1 = DateTimeFormatter.ofPattern("dd.MM.uuuu").format(japaneseDate);
@@ -131,7 +131,7 @@ final String format3 = DateTimeFormatter.ofPattern("dd.MM.yyyy G").format(japane
 System.out.println(format1);  // prints '17.03.1874'
 System.out.println(format2);  // prints '17.03.0007'
 System.out.println(format3);  // prints '17.03.0007 Meiji'
-{% endhighlight %}
+{{< / highlight >}}
 
 In this sample the usage between the two pattern `yyyy` and `uuuu` ends in a totally different result.
 

@@ -9,7 +9,7 @@ This is a short overview of the controller and flow API of DataFX that I have wr
 
 DataFX provides a MVC approach that adds a lot of API sugar to the FXML API of JavaFX. As a first example you can find a simple controller here:
 
-{% highlight java %}
+{{< highlight java >}}
 @ViewController("view.fxml")
 public class MyController {
   
@@ -31,13 +31,13 @@ public class MyController {
   }
   
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 DataFX Controllers supports a lot of standard annotations like `@PostConstruct`. In addition the `@ViewNode` and `@ViewController` Annotation can be used to provide a link to the view. `@ViewNode` does mainly the same as `@FXML` but provides additional functionalities. Actions can be defined by an unique id. Therefore you can use Annotations to bind controls to actions. If you want a action to be called in a background thread you only need to add the `@Async` Annotation to the method.
 
 Next to this there are some special annotations to inject DataFX related Objects like an exception handler or the DataFX concurrency toolkit. Here is an example:
 
-{% highlight java %}
+{{< highlight java >}}
 @ViewController("view.fxml")
 public class MyController {
   
@@ -55,17 +55,17 @@ public class MyController {
     run();
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 On top of the MVC API is the Flow API. By using this API you can define flows in your application. By doing so you can define links between views or actions that will open a specific view. A Flow can easily defined by using the controller classes:
 
-{% highlight java %}
+{{< highlight java >}}
 Flow flow = new Flow(WizardView1Controller.class).
                 withLink(WizardView1Controller.class, "next", WizardView2Controller.class).
                 withLink(WizardView2Controller.class, "next", WizardView3Controller.class).
                 withLink(WizardView3Controller.class, "next", WizardView4Controller.class).
                 withLink(WizardView4Controller.class, "next", WizardView5Controller.class);
-{% endhighlight %}
+{{< / highlight >}}
 
 When using a flow you can define actions as global actions for the flow or actions that are view specific.
 
@@ -80,7 +80,7 @@ In addition the Flow API provides CDI by using `@Inject`. To do so 4 different s
 
 In addition DataFX provides a event system. This can be used to handle events between 2 separated flows, for example. Each event type is defined by a unique id. The following code snippet defines two controllers that can be used in complete different parts of the application and don’t know each other. By using the event system the first controller can send events to the second one by clicking the button:
 
-{% highlight java %}
+{{< highlight java >}}
 @ViewController("producer.fxml")
 public class ProducerController {
 
@@ -109,7 +109,7 @@ public class ReceiverController {
         messageLabel.setText(e.getContent());
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 If you want the async events you only need to add the `@Async` annotation to the producer or / and receiver. By doing so you can create events on a background thread that will be received on the platform thread.
 
@@ -119,14 +119,14 @@ DataFX provides a PlugIn API that can be used to define additional components / 
 
 DataFX provides a plugin for feature driven development. By doing so you can define nodes in your controller like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @HideByFeature("PLAY_FEATURE")
 private Button playButton;
 
 @ViewNode
 @DisabledByFeature("FEATURE2")
 private Button button2;
-{% endhighlight %}
+{{< / highlight >}}
 
 Now you can use the [togglz API](http://www.togglz.org/documentation/overview.html) to define feature toggles and change them at runtime. If you for example disable the `PLAY_FEATURE` the playButton will become hidden. This is en example for a plugin that provides handler annotations.
 
@@ -134,7 +134,7 @@ Now you can use the [togglz API](http://www.togglz.org/documentation/overview.ht
 
 DataFX provides a Plugin for remote EJBs. By using the plugin you can inject a Remote-EJB-Proxy in your controller:
 
-{% highlight java %}
+{{< highlight java >}}
 @ViewController("view.fxml")
 public class EjbViewController {
 
@@ -152,8 +152,8 @@ public class EjbViewController {
     }
 
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In this case the EJB Wrapper / Proxy will be injected by using the custom / plugin annotation
 
-If you want to now more you should have a look at [the DataFX tutorials]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}) or ask me :)
+If you want to now more you should have a look at [the DataFX tutorials]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}) or ask me :)

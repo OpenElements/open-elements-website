@@ -14,11 +14,11 @@ As already said the controller are defined on the server. If you already used JS
 
 Each controller must be annotated with the `@DolphinController` annotation and therefore the most simple controller might look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController
 public class MyController {
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Even if this class don't make that much sense we created a complete runnable Dolphin Platform server application here. Once this is deployed the underlying platform (currently JavaEE or Spring) will automatically find your container and manage its lifecycle. This is done by the architecture of Dolphin Platform that provides a public API and specific bootstrap implementations for __JavaEE and Spring__. As a developer you will always code against the public API and only need to add the needed bootrap module as a dependency to your server application.
 
@@ -28,7 +28,7 @@ This means that the shown controller will __work in any Spring or JavaEE 7 envir
 
 Since the controllers managed by the container you automatically get all the benefits that comes with it. This means that you can use `@Inject` or `@PostContruct` annotations, for example:
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController
 public class MyController {
 
@@ -41,11 +41,11 @@ public class MyController {
   }
 
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Next to this Dolphin Platform provides addition features for the controller API. Any method that is annotated by `@DolphinAction` can be called from the client view to trigger some actions on user interaction, for example.
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController
 public class MyController {
 
@@ -63,13 +63,13 @@ public class MyController {
   }
 
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 By doing so it's very easy to handle the business logic that will be triggered by a user action. Since the methods are defined on the server you benefit of security and transaction support, for example.
 
 Next to the actions a main concept of the Dolphin Platform is the presentation model (or view model). Each view-controller-pair can define it's own model that can simply be injected in the controller by using the `@DolphinModel` annotation. We will see later how such a model can be defined. When injecting a model to the controller its lifecycle is bound to the lifecycle of the controller and will be automatically managed by the underlying platform.
 
-{% highlight java %}
+{{< highlight java >}}
 @DolphinController
 public class MyController {
 
@@ -85,7 +85,7 @@ public class MyController {
   }
   
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 By doing so the model instance will automatically be created when a new controller instance will be created. If the controller will be destroyed by the container the model will be destroyed, too. In addition the model will automatically be synchronized between the server controller and the view on the client side. How the model can be accessed and handled on the client will part of a future post.
 

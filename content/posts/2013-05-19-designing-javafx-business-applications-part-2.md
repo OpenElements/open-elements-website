@@ -13,13 +13,13 @@ In this post I will show you a simply and modern way to bind your data model to 
 
 CDI is a modern design pattern that is for example part of JEE. By using dependency injection you can remove hard coded dependencies  in your code. Here is a short example:
 
-{% highlight Java %}
+{{< highlight java >}}
 public class Controller {
     @Inject
     Model model;
     public void action() {...}
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 If the Controller will be created by a CDI-Container the model field will be injected. This means that the CDI-Container will fill the field with a suitable instance of Model. How this model is created is not part of the Controller class. The controller only knows that he will get a injected instance of Model and can work with it.
 
@@ -45,18 +45,18 @@ I will try to solve this problems with a new approach of JavaFX client developme
 
 To create a real modern and modular version of this we will do some inversion of control. First of all I don't like that the controller class for a fxml-view is defined inside the fxml. This is a refactoring killer. Cause if you rename the class or move it to another package this binding is broken. In addition I like it more to define the used view in the controller. Maybe this is not 100% compatible with the MVC pattern where different views can easily share one controller but we can define all dependencies in java code. To inverse this dependency I created a FXMLController annotation:
 
-{% highlight Java %}
+{{< highlight java >}}
 @FXMLController("/com/guigarage/application/views/MyView.fxml")
 public class MyController {
 ...
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The internal path to the fxml file is defined by the annotation. By doing so I can simply create a view:
 
-{% highlight Java %}
+{{< highlight java >}}
 Node myView FXMLHelper.create(MyController.class);
-{% endhighlight %}
+{{< / highlight >}}
 
 FXMLHelper.create(..) is a Method that I created to do some magic (Don't be afraid, I will release a code for this design pattern later). The method creates the controller instance and the view and bind them.
 
@@ -74,16 +74,16 @@ A first project that shows the use of CDI in JavaFX is [afterburner.fx](http://a
 
 I created a new API that is currently based on [Weld](http://seamframework.org/Weld) (the JEE default implementation for CDI) and provides all the default CDI features. By using it you can use the @Inject annotation in you view controllers:
 
-{% highlight Java %}
+{{< highlight java >}}
 public class MyController {
    @Inject
    Model myModel;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The model will be injected to your controller as mentioned above. Other CDI Annotations will work, too. Here is an example of a more complex version of a controller:
 
-{% highlight Java %}
+{{< highlight java >}}
 public class MyController {
    @Inject
    @ModelQualifier
@@ -98,7 +98,7 @@ public class ModelFactory {
         ....
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In this example the model has a custom [Qualifier](https://blogs.oracle.com/arungupta/entry/totd_161_java_ee_6) annotation (@ModelQualifier). This will define a special Model type. This type is created by the ModelFactory. The getModel() method has a @Producer annotation that defines this method as a producer for the model class. Additionally the init() method of the controller has a [PostConstruct](http://docs.oracle.com/javaee/6/tutorial/doc/gmgkd.html) annotation. This method will automatically called once a controller is created.
 
@@ -106,9 +106,9 @@ In this example the model has a custom [Qualifier](https://blogs.oracle.com/arun
 
 After I added the @FXMLController annotation and CDI to my basic application it is really easy to create new views. The UI can be easily created by using the [Scene Builder](http://docs.oracle.com/javafx/scenebuilder/1/get_started/jsbpub-get_started.htm). Once this is done you can create the controller class and use CDI inside it. Cause you can inject everything that is needed it will be very easy to capsulate a view-controller-union as a single module. To create this I only need a line of code (as mentioned above):
 
-{% highlight Java %}
+{{< highlight java >}}
 Node myView FXMLCDI.create(MyController.class);
-{% endhighlight %}
+{{< / highlight >}}
 
 The FXMLCDI util class (my custom one) handles all the FXML and CDI stuff.
 
@@ -124,7 +124,7 @@ In the default CDI Scope a new instance of a class is created for every injectio
 
 Let's think about a dialog with some very important business values. This values should only be accessed by this dialog. But your application offers a twitter integration to post some stuff. The Twitter configuration is defined globally for the whole application. If you want to add a function to twitter the business values by just clicking a button in your dialog the controller could look like this:
 
-{% highlight Java %}
+{{< highlight java >}}
 @FXMLController("/com/guigarage/application/views/ImportantDialog.fxml")
 public class ImportantDialogController {
    @Inject
@@ -142,7 +142,7 @@ public class ImportantDialogController {
       twitter.post(importantModel.getImportantBusinessValues());
    }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 ## And how can I use this stuff?
 

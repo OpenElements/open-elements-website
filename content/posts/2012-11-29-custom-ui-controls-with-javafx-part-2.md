@@ -13,23 +13,23 @@ JavaFX uses a Scene Graph as the structure for all graphical nodes. This graph s
 
 In Swing it is easy to translate a panel with all its children in x or y direction. In JavaFX you can now translate, scale or rotate a parent node with all children according to the x, y an z axes. But before we take a look at this transformations I will show you the simple way of setting bounds in JavaFX. There are three important methodes that every Node in JavaFX provides:
 
-{% highlight Java %}
+{{< highlight java >}}
 void relocate(double x, double y)
 
 void resize(double width, double height)
 
 void resizeRelocate(double x, double y, double width, double height)
-{% endhighlight %}
+{{< / highlight >}}
 
 This methods are equivalent to the following ones that a provided by JComponent:
 
-{% highlight Java %}
+{{< highlight java >}}
 void setLocation(int x, int y)
 
 void setSize(int width, int height)
 
 void setBounds(int x, int y, int width, int height)
-{% endhighlight %}
+{{< / highlight >}}
 
 The difference between them is that JavaFX uses "double" as parameter type. The methods of JComponent have it's historical background in AWT. I think at the time of implementation no one thought about rectangles that were arranged between pixels and were drawn with antialiasing. The JavaFX methods provides this functionality and once transformation comes into play everyone should understand why this is essential.
 
@@ -47,19 +47,19 @@ You can read about the different layout containers and their special scopes [her
 
 A LayoutManager in Swing computes the bounds of all children by three properties:
 
-{% highlight Java %}
+{{< highlight java >}}
 Dimension getMaximumSize()
 
 Dimension getPreferredSize()
 
 Dimension getMinimumSize()
-{% endhighlight %}
+{{< / highlight >}}
 
 A LayoutManager can use this properties of every child to compute its bounds inside the layout. When using FlowLayout for example every child has exactly its preferred dimension. So when you created your custom JComponent you needed to override this methods. This mechanism has one big problem: You can not calculate a dynamic aspect ratio of the children. Ever asked yourself why JLabel do not support automatic word wrapping? I think the leak of aspect ratio calculation in swing is the reason for this limitation. You can only calculate the preferred bounds of a component but you can not calculate the preferred width dependent to its height by using the default Swing workflow and APIs.
 
 With JavaFX you can do this calculations. Each Node in JavaFX provides the following methodes:
 
-{% highlight Java %}
+{{< highlight java >}}
 double computeMinHeight(double width)
 
 double computeMinWidth(double height)
@@ -71,13 +71,13 @@ double computeMaxWidth(double height)
 double computePrefHeight(double width)
 
 double computePrefWidth(double height)
-{% endhighlight %}
+{{< / highlight >}}
 
 By overriding this methods you can control how your custom control will be layouted in a pane. At the first moment everything looks right and easy. You can calculate the components height by its width and vice versa. But to use this calculations JavaFX needs a hint how the bias of a component is working. This is the point where the content bias comes into play. With this property every node can define if its width depends on the height or in opposite way. The current value is defined by this method:
 
-{% highlight Java %}
+{{< highlight java >}}
 Orientation getContentBias()
-{% endhighlight %}
+{{< / highlight >}}
 
 If the node is resizable and its height depends on its width the method should return Orientation.HORIZONTAL. If its width depends on its height return Orientation.VERTICAL. If your custom component do not need a width/height dependency you can even return null for its content bias. In this case -1 will always be passed to all methodes (computePrefWidth, etc.). Now your calculations will not depend on this value and we will have the same behavior as in Swing. The component do not use aspect ratio.
 
@@ -87,7 +87,7 @@ So it is no problem anymore to provide a word wrap in a Textcomponent when using
 
 With swing we would only have a few different ways/dimensions to create such a component:
 
-{% highlight Java %}
+{{< highlight java >}}
 Dimension getPreferredSize() {
    return new Dimension(24,1);
    //All other different versions
@@ -99,7 +99,7 @@ Dimension getPreferredSize() {
    //return new Dimension(6,4);
    //return new Dimension(4,6);
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 In reality there is a unlimited count of rectangles that have a area of 24 pixels. For example a rectangle with a width of 4,7 and a height of 5,105... has exact this area.
 
@@ -107,7 +107,7 @@ In reality there is a unlimited count of rectangles that have a area of 24 pixel
 
 With JavaFX and the extended ways to calculate the dimension of components and the use of double values we can create all of this rectangles (this is only limited by the range of double values). First of all we need to implement all this different methods for dimension calculation:
 
-{% highlight Java %}
+{{< highlight java >}}
 @Override
 protected double computeMaxHeight(double width) {
    if (width > 0) {
@@ -161,7 +161,7 @@ protected double computePrefWidth(double height) {
       return 24.0 / height;
    }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 All methodes can handle -1 as parameter and returns a default value in that case.
 
@@ -179,26 +179,26 @@ As mentioned in my last post each Custom Control needs a Skin. To do things righ
 
 If your component should has a constant dimension you can easily set all properties instead of overriding all the methods:
 
-{% highlight Java %}
+{{< highlight java >}}
 myControl.setPrefWidth(4);
 myControl.setPrefHeight(6);
 
 //myControl.setPrefSize(4, 6);
-{% endhighlight %}
+{{< / highlight >}}
 
 By default Control.USE_COMPUTED_SIZE is set for this properties. This indicates JavaFX to calculate the dimension by using mecanisms mentioned above.
 
 Another hint is to set Control.USE_PREF_SIZE to max/min size instead of overriding all methods. This will use the preferred size for min/max size:
 
-{% highlight Java %}
+{{< highlight java >}}
 myControl.setMaxSize(USE_PREF_SIZE, USE_PREF_SIZE);
-{% endhighlight %}
+{{< / highlight >}}
 
 Once a component is layouted you can access it's current bounds with:
 
-{% highlight Java %}
+{{< highlight java >}}
 myControl.getBoundsInLocal()
-{% endhighlight %}
+{{< / highlight >}}
 
 You can find more information about JavaFX layout [here](http://amyfowlersblog.wordpress.com/2011/06/02/javafx2-0-layout-a-class-tour/).
 
@@ -206,9 +206,9 @@ You can find more information about JavaFX layout [here](http://amyfowlersblog.w
 
 The JavaFX layout mechanism even supports this feature. Every Node has this method:
 
-{% highlight Java %}
+{{< highlight java >}}
 boolean isResizable()
-{% endhighlight %}
+{{< / highlight >}}
 
 When this method returns false all (official) layout panes will not resize your control. In this case the layout only handles the location of your control.
 
@@ -216,7 +216,7 @@ When this method returns false all (official) layout panes will not resize your 
 
 As I mentioned before Nodes support transformation. In special translation, rotation and scaling are currently supported. Very important is to not equalize transformation with layouting. A transform in JavaFX changes the visual bounds of a layouted component. Every component needs to be layouted as descripted above. Once this is done the control can be transformed by a mouse event, for example. Here is a short example that rotates a node by mouse over event:
 
-{% highlight Java %}
+{{< highlight java >}}
 myControl.setOnMouseEntered(new EventHandler() {
 
    @Override
@@ -232,7 +232,7 @@ myControl.setOnMouseExited(new EventHandler() {
       setRotate(0);
    }
 });
-{% endhighlight %}
+{{< / highlight >}}
 
 To measure the current visual bounds of a components once it is transformed we have the additional method getBoundsInParent(). Other than getBoundsInLocal() this method returns the bounds which include the transforms of the component.
 

@@ -9,7 +9,7 @@ While planning [AquaFX]({{ site.baseurl }}{% link pages/projects/aquafx.md %}) w
 
 This enum contains all fetch able images that we found:
 
-{% highlight java %}
+{{< highlight java >}}
 public enum NsImageIcon {
     QUICK_LOOK_TEMPLATE("NSQuickLookTemplate"),
     BLUETOOTH_TEMPLATE("NSBluetoothTemplate"),
@@ -81,11 +81,11 @@ public enum NsImageIcon {
         return name;
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 And here is the loader class:
 
-{% highlight java %}
+{{< highlight java >}}
 import java.awt.Graphics;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
@@ -112,7 +112,7 @@ public class NsImageIconLoader {
         return SwingFXUtils.toFXImage(bufferedImage, null);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Here is a overview of all icons that we have found:
 

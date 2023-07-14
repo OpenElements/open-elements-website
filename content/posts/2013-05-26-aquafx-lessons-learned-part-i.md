@@ -59,9 +59,9 @@ AquaFX is based on Caspian.css, which means I took the CSS and reworked it compl
 
 So, in my code there showed up the following line without being recognized:
 
-{% highlight css %}
+{{< highlight css >}}
 -fx-text-fill : -fx-text-fill;
-{% endhighlight %}
+{{< / highlight >}}
 
 As soon as the component, it belonged to, was used in a dialog my VM crashed and a nice greeting from Mac OS X welcomed me:
 
@@ -93,24 +93,24 @@ One control, which require SVG paths is the indeterminate ProgressIndicator.
 
 Caspian has a different number of 'rotating' graphics. But, no problem for JavaFX!
 
-{% highlight css %}
+{{< highlight css >}}
 -fx-indeterminate-segment-count: 12.0;
-{% endhighlight %}
+{{< / highlight >}}
 
 This solves the problem.. What you have to do then, is defining every single path with:
 
-{% highlight css %}
+{{< highlight css >}}
 .progress-indicator:indeterminate .segment0 { -fx-shape:"...";}
 .progress-indicator:indeterminate .segment1 { -fx-shape:"...";}
 ...
 .progress-indicator:indeterminate .segment11 { -fx-shape:"...";}
-{% endhighlight %}
+{{< / highlight >}}
 
 and a little color
 
-{% highlight css %}
+{{< highlight css >}}
 .progress-indicator:indeterminate .segment { -fx-background-color: ...;}
-{% endhighlight %}
+{{< / highlight >}}
 
 and you are done.
 

@@ -23,7 +23,7 @@ As shown in the other tutorials we will start the the view layout and generate a
 
 Thanks to FXML we don't need to implement the toolbar for every view. For this purpose FXML provides the `fx:include` tag that can be used to interleave vxml defined views. So we can define the toolbar as a separate FXML file:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <?xml version="1.0" encoding="UTF-8"?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -41,13 +41,13 @@ Thanks to FXML we don't need to implement the toolbar for every view. For this p
         <insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
     </padding>
 </hbox>
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see the buttons for the 3 defined actions ("back", "next" and "finish") are defined in the toolbar. As described in the earlier tutorials these components can be injected in the controller class instances by using the `@FXML` annotation and a field name that matches the value of the `fx:id` attribute.
 
 The FXML of the toolbar (actionBar.fxml) can now included in all the FXML files that defines the different views of the wizard. Here is the code of the first view as an example:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -73,21 +73,21 @@ The FXML of the toolbar (actionBar.fxml) can now included in all the FXML files 
         </stackpane>
     </center>
 </borderpane>
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see the toolbar is integrated in the bottom of the central `BorderPane`.
 Once all FXML files are created we can start to create the view controller as described in the earlier tutorials. Therefore we create a Java class for each view and bind the class to the corresponding FXML file by using the `@FXMLController` annotation:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
 public class Wizard1Controller {
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 When looking at the `@FXMLController` annotation of the class you can find a new feature. Next to the fxml file that defines the view of the wizard step a `title` attribute is added. This defines the title of the view. Because the wizard will be added to a `Stage` by using the `Flow.startInStage()` method (see [tutorial 1]({{ site.baseurl }}{% post_url 2014-05-20-datafx-tutorial-1 %})) the title of the flow is automatically bound to the window title of the `Stage`. So whenever the view in the flow changes the title of the application window will change to the defined title of the view. As you will learn in future tutorial you can easily change the title of a view in code. In addition to the title other metadata like a icon can be defined for a view or flow.
 As a next step the buttons of the toolbar should be injected in the controller classes and the specific actions for them should be defined. Here a new annotation will be introduced: By using the `@BackAction` annotation the flow will automatically handle an action that navigates to the last visible view. The annotation can be used like the `@ActionTrigger` and `@LinkAction` annotations that were introduced in tutorial 1 and 2. Therefore the controller class for the a view in the wizard could be defined like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
 public class Wizard1Controller {
     @FXML
@@ -100,11 +100,11 @@ public class Wizard1Controller {
     @LinkAction(WizardDoneController.class)
     private Button finishButton;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 When all controllers would be designed like this we would create some duplicate code. The definition of the back button and the finish button would look the same in each controller class. Therefore we will create an abstract class that contains these definitions and all other view controllers will depend on it:
 
-{% highlight java %}
+{{< highlight java >}}
 public class AbstractWizardController {
     @FXML
     @BackAction
@@ -119,23 +119,23 @@ public class AbstractWizardController {
         return finishButton;
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Now a controller for the wizard will look like this:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
 public class Wizard1Controller extends AbstractWizardController {
     @FXML
     @LinkAction(Wizard2Controller.class)
     private Button nextButton;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Note: The injection of private nodes in super classes is a feature of DataFX. So if you will try this by using the default `FXMLLoader` of JavaFX this won't work. In addition the `FXMLLoader` doesn't support the injection of FXML nodes that are defined in a sub-fxml that is included by using the `fx:include` tag. As a limitation this nodes must not have a CSS id defined because this will override the `fx:id` in the java object and in that case DataFX can't inject them. I plan to open a issue at OpenJFX for this.
 As a last step we need to disable the "back" button on the first view and the "next" and "finish" buttons on the last view. This can be done in the view controller by defining a method with the `@PostConstruct` annotation that will be called once the controller instance is created:
 
-{% highlight java %}
+{{< highlight java >}}
 @FXMLController(value="wizardDone.fxml", title = "Wizard: Finish")
 public class WizardDoneController extends AbstractWizardController {
     @FXML
@@ -146,11 +146,11 @@ public class WizardDoneController extends AbstractWizardController {
         getFinishButton().setDisable(true);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done the wizard is completed an can be displayed in a JavaFX application. Therefore we define the following main class:
 
-{% highlight java %}
+{{< highlight java >}}
 public class Tutorial3Main extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -160,7 +160,7 @@ public class Tutorial3Main extends Application {
         new Flow(WizardStartController.class).startInStage(primaryStage);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The complete source of this tutorial can be found [here](https://bitbucket.org/datafx/datafx/src/b25aa30116e80c83d02a4b2a46c76fd603c0c7f4/datafx-tutorial3).
 

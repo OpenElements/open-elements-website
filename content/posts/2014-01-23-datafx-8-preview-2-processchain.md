@@ -32,7 +32,7 @@ The ProcessChain is a fluent API that can be used to create this workflows in Ja
 
 Here is a simple example:
 
-{% highlight java %}
+{{< highlight java >}}
 Label label = new Label("No data");
 Button button = new Button("Press me“);
 button.setOnAction(new EventHandler() {
@@ -45,7 +45,7 @@ button.setOnAction(new EventHandler() {
             .run();
     }
 });
-{% endhighlight %}
+{{< / highlight >}}
 
 As you can see in the example it is very easy to create a chain with the API. By using the `inExecutor(...)` or `inPlatformThread(...)` method a developer can choose if a task should run on the "JavaFX Application Thread" or in background.
 

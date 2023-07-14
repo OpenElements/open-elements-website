@@ -31,7 +31,7 @@ The "Messages" app supports emojis like you know it from an iPhone. Here you can
 
 This successful test shows that the operation system supports emojis. Let's try Java as a next step. To do so I created a small and easy JavaFX application that contains only a simple TextField:
 
-{% highlight java %}
+{{< highlight java >}}
 public class EmojiTest extends Application {
 
     @Override
@@ -45,7 +45,7 @@ public class EmojiTest extends Application {
         launch(args);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once the application is running we can do the same as before: Create a text with emoji chars, copy the text and past it into the JavaFX textfield:
 
@@ -59,7 +59,7 @@ As you can see in the image something went terrible wrong. We don't see any smil
 
 You shouldn't be scared ;) JavaFX isn't the problem. The strange issue is based on the font of the textfield. Let's think about the functionality of a font: it interprets a character and draws a (vector based) icon for the char on the screen. In the example no specify font is defined for the textfield. Therefore the default font will be used that is "Lucida Grande" on a Mac ([see this post for more details](http://mail.openjdk.java.net/pipermail/openjfx-dev/2013-August/009912.html)). Lucida Grande doesn't contain a visual representation for the emoji unicode characters and therefore the strange icons will be shown. Th show emojis on the screen we need a font that supports them. One open source font that supports emojis is OpenSansEmoji. The font can be found at [github](https://github.com/MorbZ/OpenSansEmoji). Once you downloaded the font you can define it for your textfield [as described in an earlier post]({{ site.baseurl }}{% post_url 2014-10-01-integrate-custom-fonts-javafx-application-using-css %}):
 
-{% highlight java %}
+{{< highlight java >}}
 @font-face {
     font-family: 'OpenSansEmoji';
     src: url('OpenSansEmoji.ttf');
@@ -69,7 +69,7 @@ You shouldn't be scared ;) JavaFX isn't the problem. The strange issue is based 
     -fx-font-family: OpenSansEmoji;
     -fx-font-size: 32;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done we can use emojis in JavaFX applications - but only on windows without problems. On Mac OS there is a bug in the os depended clipboard code. Therefore you can't paste any text with emojis in a JavaFX textfield. I will describe this problem in detail later. Let's add a emoji character directly in code to the textfield. This will work on any OS.
 
@@ -77,10 +77,10 @@ Once this is done we can use emojis in JavaFX applications - but only on windows
 
 As you can see [on this page](http://apps.timwhitlock.info/emoji/tables/unicode) a emoji is defined by 4 bytes in UTF-8. In Java all Strings are defined in UTF-8 by default and therefore we need to define a emoji this way:
 
-{% highlight java %}
+{{< highlight java >}}
 byte[] emojiBytes = new byte[]{(byte)0xF0, (byte)0x9F, (byte)0x98, (byte)0x81};
 String emojiAsString = new String(emojiBytes, Charset.forName("UTF-8"));
-{% endhighlight %}
+{{< / highlight >}}
 
 This code will create a string that contains the grinning emoji as you can see in the overview:
 

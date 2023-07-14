@@ -7,7 +7,7 @@ excerpt: 'This post describes how the Concurrency in UI Toolkits can be defined 
 ---
 In the [first post]({{ site.baseurl }}{% post_url 2015-01-19-concurrency-ui-toolkits-part-1 %}) of this series I showed how Concurrency is handled in UI Toolkits and how a generic approach to work with the toolkit specific thread may look like. This ends in the following interface:
 
-{% highlight java %}
+{{< highlight java >}}
 public interface UIThread {
   
   void runOnUiToolkitThread(Runnable runnable);
@@ -29,7 +29,7 @@ public interface UIThread {
         return runOnUiToolkitThread(callable).get();
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 But there are still some problems with this interface:
 
@@ -38,17 +38,17 @@ But there are still some problems with this interface:
 
 Let's start with the first problem. Before we can solve this another question must be answered: I it's a problem to call this methods on the toolkit thread we need a way to check if the current thread is the toolkit thread. To do so most toolkits provide a helper method that checks if the current thread is the toolkit Thread. Examples are shown in the following code snippet.
 
-{% highlight java %}
+{{< highlight java >}}
 //JavaFX Helper Method
 Platform.isFxApplicationThread();
 
 //Swing Helper Method
 SwingUtilities.isEventDispatchThread()
-{% endhighlight %}
+{{< / highlight >}}
 
 Because most Toolkits support this method we can simply add it to our interface:
 
-{% highlight java %}
+{{< highlight java >}}
 public interface UIThread {
   
   void runOnUiToolkitThread(Runnable runnable);
@@ -72,7 +72,7 @@ public interface UIThread {
         return runOnUiToolkitThread(callable).get();
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done we can have a deeper look at the methods that will block until a task was executed on the ui toolkit. In the defined interface the two methods that are named `runOnUiToolkitThreadAndWait` defines this behavior. Once the method is called a new task is created and added to the ui thread. Because the thread has a lot of work to do normally a queue will handle this tasks and execute them by using a first in first out approach. The following image shows an example.
 
@@ -82,7 +82,7 @@ By doing so our task will be added to the queue and executed once all task that 
 
 With the help of the new `isUIToolkitThread()` method we can avoid this behavior and refactor the methods to an more fail-safe version. With a simple if-statement we can add a special behavior if the `runOnUiToolkitThreadAndWait` method is called from the ui thread:
 
-{% highlight java %}
+{{< highlight java >}}
 default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedException, ExecutionException {
   if(isUIToolkitThread()) {
     //what should we do now?? 😰
@@ -93,7 +93,7 @@ default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedEx
     }).get();
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done we need to decide what we want to do if the method was called join the ui thread. In general there are two different ways how this is handled by ui toolkits:
 
@@ -102,7 +102,7 @@ Once this is done we need to decide what we want to do if the method was called 
 
 Here are the implementations for this approaches:
 
-{% highlight java %}
+{{< highlight java >}}
 //unchecked exception
 default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedException, ExecutionException {
   if(isUIToolkitThread()) {
@@ -142,7 +142,7 @@ default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedEx
     }).get();
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 The first 2 methods looks mostly the same. Only the exception type is different. The first method uses an unchecked exception that will end in a more readable code when using the method because you don't need to catch the new exception type all the time. But developers need to know that an unchecked exception will be thrown whenever the method is called on the ui thread to avoid errors at runtime.
 

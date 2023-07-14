@@ -27,7 +27,7 @@ Thankfully JavaFX contains support for cubic curves. The [Path](https://docs.ora
 
 As you can see in the picture the shapes look different in each of them. This is caused by the random values that are part of the algorithm. If you want to try this here is my one class gist that contains all the code:
 
-{% highlight java %}
+{{< highlight java >}}
 package com.guigarage.incubator.wobble;
 
 import javafx.application.Application;
@@ -111,4 +111,4 @@ public class WobbleTest extends Application {
         return path;
     }
 }
-{% endhighlight %}
+{{< / highlight >}}

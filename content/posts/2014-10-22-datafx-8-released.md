@@ -35,7 +35,7 @@ When developing an enterprise application with JavaFX you will need to define ba
 
 It's import to execute the server call (as any long running action) to a background thread. Doing this with the basic JavaSE concurrency tools will blow up your code and create methods that aren't readable. Here is a simple example of a function that will call a background task and show it's result on screen:
 
-{% highlight java %}
+{{< highlight java >}}
 Runnable backgroundRunnable = () -> {
 	try {
 		data = loadFromServer();
@@ -52,7 +52,7 @@ Runnable backgroundRunnable = () -> {
 		});
 	}
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 I hope you are with me when saying that this code isn't as readable as it should be. In Swing Java contains a good helper class called the [SwingWorker](http://docs.oracle.com/javase/tutorial/uiswing/concurrency/simple.html). By using this class it was easier to create background tasks that provide data for the fronted.
 
@@ -60,7 +60,7 @@ I hope you are with me when saying that this code isn't as readable as it should
 
 It's still a lot of code that is needed to create a working SwingWorker because anonymous classes are needed. But today we have Lambdas, functional interfaces and all this cool language features and therefore you wouldn't code a background tasks this way. In DataFX 8 we introduce the ProcessChain class that is like a SwingWorker on steroids. Here is a small example that shows how the top code can be refactored by using the ProcessChain:
 
-{% highlight java %}
+{{< highlight java >}}
 ProcessChain.create().
 addRunnableInPlatformThread(() -> blockUI()).
 addSupplierInExecutor(() -> loadFromServer()).
@@ -68,7 +68,7 @@ addConsumerInPlatformThread(d -> updateUI(d)).
 onException(e -> handleException(e)).
 withFinal(() -> unblockUI()).
 run();
-{% endhighlight %}
+{{< / highlight >}}
 
 Cool, isn't it. Now we can read the code and understand what's going on here. The ProcessChain uses all the new functional interfaces like Supplier or Consumer to define a chain of tasks that can be called on a background thread or on the JavaFX Application Thread. In addition the exception handling is directly included in the ProcessChain API. If you want to learn more about the ProcessChain you should check out our [slides](http://de.slideshare.net/HendrikEbbers/datafx-8-javaone-2014) or my [JavaFX Enterprise talk](http://de.slideshare.net/HendrikEbbers/javafx-enterprise-javaone-2014?related=1).
 

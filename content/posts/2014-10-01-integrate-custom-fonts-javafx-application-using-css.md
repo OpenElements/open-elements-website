@@ -9,10 +9,10 @@ This is one of the CSS tips that were part of my "Extreme Guimaker" talk at Java
 
 Before explaining the CSS solution I want to show a short example in Java code:
 
-{% highlight java %}
+{{< highlight java >}}
 Button b = new Button("Text");
 b.setFont(new Font("Arial", 24));
-{% endhighlight %}
+{{< / highlight >}}
 
 In the code, the font of a button is set to "Arial" with a size of 24. All basic nodes in JavaFX that contains a text provide a font property that can be simply used to define a new font for the node. I don't think that this is a best practice because the font is an attribute that styles the application and therefore it should be separated from the application code.
 
@@ -20,19 +20,20 @@ In the code, the font of a button is set to "Arial" with a size of 24. All basic
 
 Fortunately JavaFX supports CSS and therefore we can extract the font specification from the Java code and add it to CSS. I won't discuss how IDs and style classes in CSS work in this post (If you not familiar with CSS you should have a look in [my book]({{ site.baseurl }}{% link pages/mastering-javafx-controls.md %})). The font of a node can be defined by using the `-fx-font-*` attributes in CSS. You can find a documentation of these attributes [here](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html#typefont). Here is an example that defines the font for a button:
 
-{% highlight css %}
+{{< highlight css >}}
 #my-button {
   -fx-font-family: "Arial";
   -fx-font-size: 24;
-}{% endhighlight %}
+}
+{{< / highlight >}}
 
 If you want to define a global font for all controls in your application you can simply set the font to the `.text` style class. The Text shape in JavaFX contains this pseudo class by default and all nodes that render a text on the screen use the Text shape internally. Here is the css rule that will set the font for a complete application:
 
-{% highlight css %}
+{{< highlight css >}}
 .text {
     -fx-font-family: "Asap";
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 ## Adding custom fonts
 
@@ -42,7 +43,7 @@ In the examples "Arial" is used as the custom font. Normally you can assume that
 
 Once this is done the font can be defined in CSS by using the `@font-face` rule:
 
-{% highlight css %}
+{{< highlight css >}}
 @font-face {
     font-family: 'Roboto';
     src: url('Roboto-Medium.ttf');
@@ -51,7 +52,7 @@ Once this is done the font can be defined in CSS by using the `@font-face` rule:
 .text {
     -fx-font-family: "Roboto";
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Now the font will be used in our application even if it isn't installed on the OS:
 
@@ -63,7 +64,7 @@ As I learned today the shown code isn't working in Java versions >= 1.8u60. Star
 
 If you want to use the font “Birds of Paradis” that is contained in the file `demo.ttf`, for example, you have to use this CSS file:
 
-{% highlight css %}
+{{< highlight css >}}
 @font-face {
   src: url(“/ui/font/demo.ttf”);
 }
@@ -71,4 +72,4 @@ If you want to use the font “Birds of Paradis” that is contained in the file
 .label {
   -fx-font-family: “Birds of Paradise”;
 }
-{% endhighlight %}
+{{< / highlight >}}

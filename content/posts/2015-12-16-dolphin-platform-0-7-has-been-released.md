@@ -9,8 +9,8 @@ We released version 0.7 of the [Dolphin Platform](http://www.dolphin-platform.io
 
 If you want to create your new project from command line you can simply call this Maven command and select one of the shown Dolphin Platform archetypes:
 
-{% highlight shell %}
+{{< highlight shell >}}
 mvn archetype:generate -Dfilter=com.canoo.dolphin-platform:
-{% endhighlight %}
+{{< / highlight >}}
 
 Currently the projects contains only a JavaFX based client but it's planned to add a Polymer based client to the archetypes with the next release.

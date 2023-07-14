@@ -25,13 +25,13 @@ Once you have downloaded the last version of DataFX and added the jars to the cl
 
 Normally you won't download the dependencies of your application manually. Build tools like [Maven](http://maven.apache.org) or [Gradle](https://gradle.org) can do this job for you. By using one of the tools you only need to define the dependencies in your build file and the build tool will automatically download all needed jars. In addition the tools support transitive dependencies. This allows you to avoid needing to discover and specify the libraries that your own dependencies require, and including them automatically. If you Maven as build tool and you only want to add the DataFX Flow API to your application you only need to add one dependency:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <dependency>
     <groupId>io.datafx</groupId>
     <artifactId>flow</artifactId>
     <version>8.0</version>
 </dependency>
-{% endhighlight %}
+{{< / highlight >}}
 
 ## Use DataFX in your application
 

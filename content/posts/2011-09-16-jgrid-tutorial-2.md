@@ -9,7 +9,7 @@ After we created a simple JGrid (see [tutorial #1]({{ site.baseurl }}{% post_url
 
 Here is an example of changing colors and dimensions:
 
-{% highlight Java %}
+{{< highlight java >}}
 grid.setFont(grid.getFont().deriveFont(40.0f));
 grid.setFixedCellDimension(56);
 grid.setHorizonztalMargin(4);
@@ -19,7 +19,7 @@ grid.setBackground(Color.WHITE);
 grid.setSelectionBorderColor(Color.BLUE);
 grid.setSelectionBackground(Color.CYAN);
 grid.setCellBackground(Color.LIGHT_GRAY);
-{% endhighlight %}
+{{< / highlight >}}
 
 After setting all properties the grid looks like this:
 

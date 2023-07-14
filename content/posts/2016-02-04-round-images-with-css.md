@@ -9,22 +9,22 @@ In this post I will show the easiest way how a rounded image can be defined in C
 
 An image is defined by the `img` tag. To define some CSS for the image we should add a style class like "avatar":
 
-{% highlight html %}
+{{< highlight html >}}
 <img class="avatar" src="dude.png">
-{% endhighlight %}
+{{< / highlight >}}
 
 In this first example I will show how you can define a rounded image for a square image. To do so we define the size of the image in CSS:
 
-{% highlight css %}
+{{< highlight css >}}
 .avatar {
     width: 64px;
     height: 64px;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done it's quite easy to create the round effect by defining a rounded border. Here the radius of the border must be defined as the half width / height. In addition we could define a border color and a border width to add a visual contrast.
 
-{% highlight css %}
+{{< highlight css >}}
 .avatar {
     width: 64px;
     height: 64px;
@@ -33,7 +33,7 @@ Once this is done it's quite easy to create the round effect by defining a round
     border-width: 1px;
     border-color: lightgrey;
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Once this is done you could use the image on any background and it's looks quite nice:
 

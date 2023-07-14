@@ -13,7 +13,7 @@ In this tutorial we want to add zoom functionality to the JGrid. You can set the
 
 To add a zoom functionality to the grid you can set the dimension by using a JSlider. Here is the code:
 
-{% highlight Java %}
+{{< highlight java >}}
 final JSlider slider = new JSlider(32, 256);
 slider.setValue(grid.getFixedCellDimension());
 
@@ -23,7 +23,7 @@ slider.addChangeListener(new ChangeListener() {
     grid.setFixedCellDimension(slider.getValue());
   }
 });
-{% endhighlight %}
+{{< / highlight >}}
 
 Now you can edit the dimension dynamically. Here is the result:
 

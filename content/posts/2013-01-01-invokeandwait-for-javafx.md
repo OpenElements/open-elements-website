@@ -9,7 +9,7 @@ Swing offers the two methods `SwingUtilities.invokeAndWait(...)` and `SwingUtili
 
 As I currently know JavaFX provides only `Platform.runLater(...)` that is the equivalent of SwingUtilities.invokeLater(...). A "runAndWait" method doesn't exist at the moment. While developing some [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) stuff and my [first Raspberry Pi demo]({{ site.baseurl }}{% post_url 2012-12-28-my-first-steps-with-javafx-on-raspberry-pi %}) I needed this feature in JavaFX. So I created a `runAndWait` method that will hopefully be part of DataFX in some future. Until then you can use this code in your project:
 
-{% highlight Java %}
+{{< highlight java >}}
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -76,6 +76,6 @@ public class FXUtilities {
 		}
 	}
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 It's working for all my needs. Please give me some feedback if there are any problems or bug.
