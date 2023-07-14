@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Gesture Wrapper 0.1 released'
 author: hendrik
 categories: [General]

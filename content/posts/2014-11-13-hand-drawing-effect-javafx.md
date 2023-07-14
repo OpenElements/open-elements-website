@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Hand drawing effect with JavaFX'
 author: hendrik
 categories: [JavaFX]

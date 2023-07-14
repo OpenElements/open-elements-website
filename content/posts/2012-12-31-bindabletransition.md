@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'BindableTransition'
 author: hendrik
 categories: [General, JavaFX]

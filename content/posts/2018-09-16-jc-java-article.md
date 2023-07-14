@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'About the Java release model'
 author: hendrik
 excerpt: 'Based on the confusion and rumors about the new Java release model a group of Java Champions has written

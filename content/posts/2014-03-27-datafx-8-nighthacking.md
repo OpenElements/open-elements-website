@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX 8 @ Nighthacking'
 author: hendrik
 categories: [DataFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JGridFX First Demo'
 author: hendrik
 categories: [JavaFX]

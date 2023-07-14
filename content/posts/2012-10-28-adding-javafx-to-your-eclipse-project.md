@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Adding JavaFX to your Eclipse project'
 author: hendrik
 categories: [JavaFX]

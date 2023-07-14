@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Swing is dead'
 author: hendrik
 categories: [JavaFX, Swing]

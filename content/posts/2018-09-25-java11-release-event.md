@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'Java 11 release event'
 author: hendrik
 excerpt: 'Together with Oracle and Heise we will do a Java 11 release event.

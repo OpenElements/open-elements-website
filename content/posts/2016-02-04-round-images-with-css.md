@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Round Images with CSS'
 author: hendrik
 categories: [Web Frontends]

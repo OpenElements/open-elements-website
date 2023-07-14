@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Building JavaFX Applications with Maven'
 author: hendrik
 categories: [JavaFX]

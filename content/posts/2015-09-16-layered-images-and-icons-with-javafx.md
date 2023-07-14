@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Layered images and icons with JavaFX'
 author: hendrik
 categories: [JavaFX, Layout & UI]

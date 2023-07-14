@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'GridFX is moving forward'
 author: hendrik
 categories: [JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX 8 has been released & DataFX core overview'
 author: hendrik
 categories: [DataFX, JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'GuiGarage @ JavaOne'
 author: hendrik
 categories: [General]

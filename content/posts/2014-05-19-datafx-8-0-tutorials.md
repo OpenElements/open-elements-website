@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX 8.0 Tutorials'
 author: hendrik
 categories: [DataFX, JavaFX]

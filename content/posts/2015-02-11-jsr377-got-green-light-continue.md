@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JSR377 got green light to continue!'
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]

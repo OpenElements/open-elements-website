@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'More fun with layered icons in javaFX'
 author: hendrik
 categories: [JavaFX, Layout & UI]

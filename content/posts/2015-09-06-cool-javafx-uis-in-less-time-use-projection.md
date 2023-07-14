@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Cool JavaFX UIs in less time? Use projection!'
 author: hendrik
 categories: [JavaFX]

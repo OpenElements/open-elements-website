@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaOne Preview: Enterprise JavaFX'
 author: hendrik
 categories: [JavaFX]

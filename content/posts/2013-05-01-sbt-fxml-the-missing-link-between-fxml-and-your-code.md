@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'sbt-fxml: The missing link between FXML and your code'
 author: phdoerfler
 categories: [JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaOne Sessions at Canoo'
 author: hendrik
 categories: [JavaFX]

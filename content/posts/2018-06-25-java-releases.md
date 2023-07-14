@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'Do I need to pay for Java now?'
 author: hendrik
 excerpt: 'This post gives an overview of the new Java release train as it was announced by Oracle. Plus, the article provides some important 

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Responsive Design for JavaFX'
 author: hendrik
 categories: [JavaFX]

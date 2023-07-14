@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX 8 Preview 2: The ProcessChain'
 author: hendrik
 categories: [DataFX, JavaFX]

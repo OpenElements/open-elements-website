@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Simplify your app by using Bonjour'
 author: hendrik
 categories: [General]

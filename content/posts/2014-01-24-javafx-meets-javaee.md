@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX meets JavaEE'
 author: hendrik
 categories: [DataFX]

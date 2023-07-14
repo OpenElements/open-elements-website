@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaOne After Event with some cool talks'
 author: hendrik
 categories: [JavaFX]

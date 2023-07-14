@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'An overview of the Web Component specifications'
 author: hendrik
 categories: [General, WebComponents]

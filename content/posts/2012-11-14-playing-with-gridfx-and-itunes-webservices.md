@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Playing with GridFX and iTunes Webservices'
 author: hendrik
 categories: [JavaFX]

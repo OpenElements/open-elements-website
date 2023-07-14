@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX 8 Interview at JAX 2014'
 author: hendrik
 categories: [JavaFX]

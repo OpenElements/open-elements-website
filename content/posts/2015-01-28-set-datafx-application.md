@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'How to set up a DataFX application'
 author: hendrik
 categories: [DataFX, JavaFX]

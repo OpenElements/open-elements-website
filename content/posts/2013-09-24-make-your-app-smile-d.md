@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Make your app smile :D'
 author: hendrik
 categories: [JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Win a copy of "Mastering JavaFX 8 Controls"'
 author: hendrik
 categories: [General]

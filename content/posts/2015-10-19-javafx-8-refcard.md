@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX 8 RefCard'
 author: hendrik
 categories: [JavaFX]

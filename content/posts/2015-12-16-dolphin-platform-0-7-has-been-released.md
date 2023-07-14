@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform 0.7 has been released'
 author: hendrik
 categories: [Dolphin Platform]

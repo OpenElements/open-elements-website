@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'My first steps with JavaFX on Raspberry Pi'
 layout: post
 categories: [DataFX, IoT, JavaFX]

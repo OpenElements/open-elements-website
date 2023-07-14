@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Desktop & Embedded Application JSR'
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]

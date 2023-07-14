@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'AquaFX: lessons learned (Part I)'
 author: claudine
 categories: [AquaFX, JavaFX]

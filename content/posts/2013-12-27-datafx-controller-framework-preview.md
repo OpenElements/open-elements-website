@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX Controller Framework Preview'
 author: hendrik
 categories: [DataFX, General, JavaFX]

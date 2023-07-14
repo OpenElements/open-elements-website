@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform in 15 minutes @ Nighthacking'
 author: hendrik
 categories: [Dolphin Platform]

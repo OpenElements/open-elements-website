@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Guigarage Logo'
 author: hendrik
 categories: [General]

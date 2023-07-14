@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Maven support for DataFX'
 author: hendrik
 categories: [DataFX, JavaFX]

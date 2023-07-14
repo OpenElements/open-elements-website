@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Iconify your application the resolution independent way'
 author: hendrik
 categories: [JavaFX]

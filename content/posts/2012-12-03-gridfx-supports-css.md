@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'GridFX supports CSS'
 author: hendrik
 categories: [JavaFX]

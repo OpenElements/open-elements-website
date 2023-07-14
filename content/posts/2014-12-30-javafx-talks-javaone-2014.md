@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX Talks JavaOne 2014'
 author: hendrik
 categories: [JavaFX]

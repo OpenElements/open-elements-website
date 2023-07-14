@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Use native Aqua icons in JavaFX'
 author: hendrik
 categories: [AquaFX, JavaFX]

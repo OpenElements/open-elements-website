@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Vagrant-Binding-Demos'
 author: hendrik
 categories: [Vagrant-Binding]

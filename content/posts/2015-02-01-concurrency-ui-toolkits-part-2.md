@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Concurrency in UI Toolkits (Part 2)'
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]

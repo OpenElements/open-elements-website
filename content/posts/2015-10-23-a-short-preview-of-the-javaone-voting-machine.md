@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'A short preview of the JavaOne Voting Machine'
 author: hendrik
 categories: [IoT, JavaFX]

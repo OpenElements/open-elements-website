@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Let''s get wet'
 author: hendrik
 categories: [AquaFX, Flatter, JavaFX]

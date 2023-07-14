@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform Web Frontends with Polymer'
 author: hendrik
 categories: [Dolphin Platform, Polymer, Web Frontends, WebComponents]

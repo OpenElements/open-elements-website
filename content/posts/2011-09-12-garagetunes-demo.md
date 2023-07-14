@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'GarageTunes demo'
 author: hendrik
 categories: [Swing]

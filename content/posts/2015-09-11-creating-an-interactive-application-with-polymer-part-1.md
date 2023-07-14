@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Creating an interactive application with Polymer (Part 1)'
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]

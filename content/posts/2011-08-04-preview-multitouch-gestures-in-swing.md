@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Preview: Multitouch gestures in swing'
 author: hendrik
 categories: [General]

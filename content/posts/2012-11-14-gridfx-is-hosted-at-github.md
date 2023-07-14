@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'GridFX is hosted at github'
 layout: post
 categories: [JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'A quick overview to the DataFX MVC and Flow API'
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]

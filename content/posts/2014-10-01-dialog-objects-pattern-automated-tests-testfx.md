@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'The View Objects Pattern & automated tests with TestFX'
 author: hendrik
 categories: [JavaFX]

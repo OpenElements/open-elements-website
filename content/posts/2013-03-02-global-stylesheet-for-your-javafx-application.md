@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Global Stylesheet for your JavaFX Application'
 author: hendrik
 categories: [General, JavaFX]

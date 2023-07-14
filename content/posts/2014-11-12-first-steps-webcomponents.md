@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'First steps with WebComponents'
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]

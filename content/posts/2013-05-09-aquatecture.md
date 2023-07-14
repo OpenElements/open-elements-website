@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Aquatecture'
 author: hendrik
 categories: [AquaFX, General, JavaFX]

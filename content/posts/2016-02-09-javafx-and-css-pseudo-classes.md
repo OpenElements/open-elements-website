@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX and CSS: Pseudo Classes'
 author: hendrik
 categories: [JavaFX]

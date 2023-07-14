@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX: ObservableExecutor Preview'
 author: hendrik
 categories: [DataFX, JavaFX]

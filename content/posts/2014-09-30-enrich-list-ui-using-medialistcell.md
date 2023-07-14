@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Enrich your List UI by using the MediaListCell'
 author: hendrik
 categories: [JavaFX]

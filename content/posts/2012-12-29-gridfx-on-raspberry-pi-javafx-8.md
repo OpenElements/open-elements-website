@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'GridFX on Raspberry Pi & JavaFX 8'
 author: hendrik
 categories: [IoT, JavaFX]

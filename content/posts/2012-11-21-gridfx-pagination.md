@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'gridfx & pagination'
 author: hendrik
 categories: [JavaFX]

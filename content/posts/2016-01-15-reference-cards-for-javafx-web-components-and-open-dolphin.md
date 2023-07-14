@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Reference Cards for JavaFX, Web Components and Open Dolphin'
 author: hendrik
 categories: [JavaFX, Web Frontends, WebComponents]

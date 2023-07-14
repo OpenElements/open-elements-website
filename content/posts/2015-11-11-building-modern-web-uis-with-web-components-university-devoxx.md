@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Building modern web UIs with Web Components University @ Devoxx'
 author: hendrik
 categories: [Polymer, Web Frontends]

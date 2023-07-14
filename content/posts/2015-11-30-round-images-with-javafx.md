@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Round images with JavaFX'
 author: hendrik
 categories: [JavaFX, Layout & UI]

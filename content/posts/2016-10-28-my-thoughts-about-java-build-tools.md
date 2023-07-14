@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Maven vs. Gradle and the Best of Both Worlds'
 author: hendrik
 categories: [Java]

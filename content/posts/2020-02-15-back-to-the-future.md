@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'Back to the future - with Java'
 author: hendrik
 excerpt: "Each year several Java applications might show wrong date information for the days around New

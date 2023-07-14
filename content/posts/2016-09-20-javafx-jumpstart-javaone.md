@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX JumpStart @ JavaOne'
 author: hendrik
 categories: [JavaFX]

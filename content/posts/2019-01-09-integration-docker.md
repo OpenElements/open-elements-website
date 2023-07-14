@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'Integration tests with Docker'
 author: hendrik
 excerpt: 'This post gives an overview how we at Karakun use Docker to create integration tests for 

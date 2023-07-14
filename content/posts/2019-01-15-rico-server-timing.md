@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'Server Timing with Rico'
 author: hendrik
 excerpt: 'This post gives an overview about the new server timing specification of the w3c and how server timing can be used in any enterprise Java server by using Rico.'

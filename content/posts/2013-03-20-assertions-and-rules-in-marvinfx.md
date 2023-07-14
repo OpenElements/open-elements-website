@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Assertions and Rules in MarvinFX'
 author: hendrik
 categories: [JavaFX]

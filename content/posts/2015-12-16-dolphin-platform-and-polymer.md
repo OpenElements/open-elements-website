@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform and Polymer'
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer, Web Frontends, WebComponents]

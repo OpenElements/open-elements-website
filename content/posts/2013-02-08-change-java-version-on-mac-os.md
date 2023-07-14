@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Change Java version on Mac OS'
 author: hendrik
 categories: [JavaFX]

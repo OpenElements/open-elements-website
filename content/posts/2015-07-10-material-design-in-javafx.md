@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Material Design in JavaFX'
 author: hendrik
 categories: [JavaFX]

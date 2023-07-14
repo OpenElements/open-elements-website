@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform 0.8 has beed released'
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer]

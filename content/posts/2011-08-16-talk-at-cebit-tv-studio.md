@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Talk at CeBIT TV studio'
 author: hendrik
 categories: [General]

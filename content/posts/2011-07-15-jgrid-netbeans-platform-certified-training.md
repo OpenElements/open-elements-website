@@ -1,10 +1,8 @@
 ---
-layout: "article"
 title: 'JGrid @ NetBeans Platform Certified Training'
 author: hendrik
 categories: [Swing]
 excerpt: 'Together with Geertjan Wielenga from Oracle I will introduce the jGrid-Component and its integration into a NetBeans Platform app'
-layout: "article"
 ---
 If you are interested in JGrid & Netbeans here is a hint for you:
 

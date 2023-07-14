@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'How to choose the right color'
 author: hendrik
 categories: [General, Layout & UI]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Designing JavaFX Business Applications (Part 2)'
 author: hendrik
 categories: [General, JavaFX]

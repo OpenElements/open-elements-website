@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'AeroFX: It''s getting closer'
 author: hendrik
 categories: [AeroFX, JavaFX]

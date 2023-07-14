@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'A short introduction to Bower'
 author: hendrik
 categories: [Web Frontends]

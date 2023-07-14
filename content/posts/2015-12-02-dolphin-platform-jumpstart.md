@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform Jumpstart'
 author: hendrik
 categories: [Dolphin Platform, JavaFX]

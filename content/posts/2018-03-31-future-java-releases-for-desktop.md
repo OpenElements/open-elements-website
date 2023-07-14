@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'What future Java releases mean for legacy desktop apps'
 author: hendrik
 categories: [General]

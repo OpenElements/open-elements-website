@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Update for the native ones'
 author: claudine
 categories: [AquaFX, General, JavaFX]

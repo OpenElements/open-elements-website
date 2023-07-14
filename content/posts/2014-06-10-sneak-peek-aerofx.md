@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Sneak Peek: AeroFX'
 author: hendrik
 categories: [AeroFX, AquaFX, JavaFX]

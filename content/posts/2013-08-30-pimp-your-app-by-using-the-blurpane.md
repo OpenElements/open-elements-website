@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Pimp your App by using the BlurPane'
 author: hendrik
 categories: [JavaFX]

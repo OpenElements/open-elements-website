@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JGrid Tutorial #2'
 author: hendrik
 categories: [Swing]

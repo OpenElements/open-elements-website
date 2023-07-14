@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'invokeAndWait for JavaFX'
 author: hendrik
 categories: [DataFX, General, JavaFX]

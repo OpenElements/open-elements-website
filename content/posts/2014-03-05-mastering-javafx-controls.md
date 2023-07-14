@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Mastering JavaFX Controls'
 author: hendrik
 categories: [General]

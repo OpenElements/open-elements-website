@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Custom UI Controls with JavaFX - Part 1'
 author: hendrik
 categories: [JavaFX]

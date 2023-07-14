@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'My JavaOne 2014 Sessions'
 author: hendrik
 categories: [JavaFX]

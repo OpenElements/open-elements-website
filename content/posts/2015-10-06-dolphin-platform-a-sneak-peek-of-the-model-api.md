@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform: A Sneak Peek of the model API'
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Web Frontends]

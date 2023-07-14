@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform & KumuluzEE: JavaEE Microservices with dynamic and rich frontends'
 author: hendrik
 categories: [General]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX 8.0b3 has been released'
 author: hendrik
 categories: [DataFX, JavaFX]

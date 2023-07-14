@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'How to integrate custom fonts in your JavaFX application by using CSS'
 author: hendrik
 categories: [JavaFX]

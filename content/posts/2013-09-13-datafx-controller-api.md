@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX Controller API'
 author: hendrik
 categories: [DataFX, JavaFX]

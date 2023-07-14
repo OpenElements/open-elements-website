@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'How AdoptOpenJDK provides enterprise ready OpenJDK builds'
 author: hendrik
 excerpt: 'With the new licence of the Oracle JDK a lot of companies need to switch to a new JDK vendor.

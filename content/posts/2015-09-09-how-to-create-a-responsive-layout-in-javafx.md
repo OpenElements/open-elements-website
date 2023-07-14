@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'How to create a responsive layout in JavaFX'
 author: hendrik
 categories: [JavaFX, Layout & UI]

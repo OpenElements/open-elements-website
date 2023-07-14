@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Fun with gestures'
 author: hendrik
 categories: [General]

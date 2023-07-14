@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'BoxFX (JavaOne Preview 1)'
 author: hendrik
 categories: [IoT, JavaFX]

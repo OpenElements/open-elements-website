@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'This is for the native ones'
 author: hendrik
 categories: [AquaFX, General, JavaFX]

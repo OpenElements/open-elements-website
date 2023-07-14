@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'How to support Emojis (Part1)'
 author: hendrik
 categories: [JavaFX]

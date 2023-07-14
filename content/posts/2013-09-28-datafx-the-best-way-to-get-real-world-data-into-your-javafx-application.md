@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'DataFX: The best way to get real-world data into your JavaFX application'
 author: hendrik
 categories: [DataFX, JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Release & Update'
 author: hendrik
 categories: [General]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Vagrant-Binding talk @ Devoxx 2012'
 author: hendrik
 categories: [Vagrant-Binding]

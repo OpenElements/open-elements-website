@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Extreme Gui Makeover @ JavaOne'
 author: hendrik
 categories: [JavaFX]

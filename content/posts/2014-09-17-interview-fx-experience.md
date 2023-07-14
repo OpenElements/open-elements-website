@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Interview at FX Experience'
 author: hendrik
 categories: [JavaFX]

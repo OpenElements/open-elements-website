@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'An introduction to Open Dolphin'
 author: hendrik
 categories: [JavaFX]

@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Reactive Programming with JavaFX'
 author: hendrik
 categories: [JavaFX]

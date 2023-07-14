@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform: A Sneak Peek'
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), Dolphin Platform, JavaFX]

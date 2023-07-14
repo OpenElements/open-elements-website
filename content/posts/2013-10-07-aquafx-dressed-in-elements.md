@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'AquaFX dressed in Elements'
 author: claudine
 categories: [AquaFX, JavaFX]

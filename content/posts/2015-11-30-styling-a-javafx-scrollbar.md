@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Styling a JavaFX Scrollbar'
 author: hendrik
 categories: [General, JavaFX]

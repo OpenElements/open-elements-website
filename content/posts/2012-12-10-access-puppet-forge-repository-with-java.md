@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Access Puppet Forge Repository with Java'
 author: hendrik
 categories: [Vagrant-Binding]

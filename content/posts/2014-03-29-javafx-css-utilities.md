@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JavaFX CSS Utilities'
 author: hendrik
 categories: [JavaFX]

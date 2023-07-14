@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'JRating Preview'
 author: hendrik
 categories: [General]

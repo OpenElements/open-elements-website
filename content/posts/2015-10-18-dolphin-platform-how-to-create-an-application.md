@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Dolphin Platform: How to create an application'
 author: hendrik
 categories: [Dolphin Platform, JavaFX]

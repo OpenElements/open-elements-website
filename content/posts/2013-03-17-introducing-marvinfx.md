@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Introducing MarvinFx'
 author: hendrik
 categories: [JavaFX]

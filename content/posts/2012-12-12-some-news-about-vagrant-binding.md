@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'Some news about Vagrant-Binding'
 author: hendrik
 categories: [General, Vagrant-Binding]

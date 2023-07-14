@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title:  'AdoptOpenJDK Virtual Roadshow'
 author: hendrik
 excerpt: 'AdoptOpenJDK is doing a virtual roadshow of the Java User Groups. We plan to reach as many groups as possible but we will also live stream the event on YouTube.'

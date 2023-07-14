@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'The future of Vagrant-Binding'
 author: hendrik
 categories: [General, Vagrant-Binding]

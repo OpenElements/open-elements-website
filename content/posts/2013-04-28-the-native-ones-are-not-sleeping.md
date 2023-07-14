@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'The native ones are not sleeping'
 author: claudine
 categories: [AquaFX, JavaFX]

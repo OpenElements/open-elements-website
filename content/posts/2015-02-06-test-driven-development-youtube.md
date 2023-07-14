@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'How to test your JavaFX application'
 author: hendrik
 categories: [DataFX, JavaFX]

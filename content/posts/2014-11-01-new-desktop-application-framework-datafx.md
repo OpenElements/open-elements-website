@@ -1,5 +1,4 @@
 ---
-layout: "article"
 title: 'New Desktop Application Framework & DataFX'
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]
