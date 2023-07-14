@@ -21,7 +21,7 @@ You can easily add a dependency to DataFX 1.0 to any Maven project. With doing s
 
 Since all datafx-core artifacts are available at [Maven Central Repository](http://search.maven.org) the provision of DataFX will work automatically.
 
-If you are interested in how we added JavaFX as a dependency to DataFX you can read [here]({{ site.baseurl }}{% post_url 2012-10-13-building-javafx-applications-with-maven %}) about it.
+If you are interested in how we added JavaFX as a dependency to DataFX you can read [here]({{< ref "/posts/2012-10-13-building-javafx-applications-with-maven" >}}) about it.
 
 This description shows how to add DataFX to your dependency hierarchy. If you want to run or distribute your application we recommend this [Maven plugin](https://github.com/zonski/javafx-maven-plugin) that provides a lot of functionality to a JavaFX Maven project. You can find a tutorial about this plugin [here](http://www.zenjava.com/2012/11/24/from-zero-to-javafx-in-5-minutes/).
 

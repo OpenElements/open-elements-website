@@ -5,7 +5,7 @@ author: hendrik
 categories: [JavaFX]
 excerpt: 'Pseudo classes are a really cool CSS feature that you can use to define styles for different states of a component. This post gives an overview how pseudo classes can be used in JavaFX'
 ---
-In [my last post]({{ site.baseurl }}{% post_url 2016-02-07-javafx-and-css %}) I gave a quick overview of the how CSS can be used in JavaFX by styling nodes based on an id or style classes. Today I want to explain what a pseudo class is and how you can use it to style dynamic controls.
+In [my last post]({{< ref "/posts/2016-02-07-javafx-and-css" >}}) I gave a quick overview of the how CSS can be used in JavaFX by styling nodes based on an id or style classes. Today I want to explain what a pseudo class is and how you can use it to style dynamic controls.
 
 ## CSS Pseudo Classes
 

@@ -13,10 +13,10 @@ I will introduce all DataFX tutorials first here in my blog. Later I will add th
 
 The first tutorials are only. Here is a short list:
 
-* [How to set up a DataFX application]({{ site.baseurl }}{% post_url 2015-01-28-set-datafx-application %})
-* [Tutorial 1]({{ site.baseurl }}{% post_url 2014-05-20-datafx-tutorial-1 %})
-* [Tutorial 2]({{ site.baseurl }}{% post_url 2014-05-22-datafx-tutorial-2 %})
-* [Tutorial 3]({{ site.baseurl }}{% post_url 2014-05-31-datafx-tutorial-3 %})
-* [Tutorial 4]({{ site.baseurl }}{% post_url 2014-06-08-datafx-tutorial-4 %})
-* [Tutorial 5]({{ site.baseurl }}{% post_url 2014-06-27-datafx-tutorial-5 %})
-* [Tutorial 6]({{ site.baseurl }}{% post_url 2015-01-22-datafx-tutorial-6 %})
+* [How to set up a DataFX application]({{< ref "/posts/2015-01-28-set-datafx-application" >}})
+* [Tutorial 1]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}})
+* [Tutorial 2]({{< ref "/posts/2014-05-22-datafx-tutorial-2" >}})
+* [Tutorial 3]({{< ref "/posts/2014-05-31-datafx-tutorial-3" >}})
+* [Tutorial 4]({{< ref "/posts/2014-06-08-datafx-tutorial-4" >}})
+* [Tutorial 5]({{< ref "/posts/2014-06-27-datafx-tutorial-5" >}})
+* [Tutorial 6]({{< ref "/posts/2015-01-22-datafx-tutorial-6" >}})

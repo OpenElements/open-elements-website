@@ -5,7 +5,7 @@ author: hendrik
 categories: [AquaFX, General, JavaFX]
 excerpt: 'JavaFX provides the ability to style controls by CSS or code. We are using this functionallity to create native looking controls.'
 ---
-As you can read in an [earlier post]({{ site.baseurl }}{% post_url 2012-11-17-custom-ui-controls-with-javafx-part-1 %}), JavaFX provides the ability to style controls by CSS or code. Most of the techniques you can use to style components are described in [this great JavaOne talk by Gerrit Grunwald](https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=2425). The following graphic shows the basic relationship between all parts that are involved in component styling:
+As you can read in an [earlier post]({{< ref "/posts/2012-11-17-custom-ui-controls-with-javafx-part-1" >}}), JavaFX provides the ability to style controls by CSS or code. Most of the techniques you can use to style components are described in [this great JavaOne talk by Gerrit Grunwald](https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=2425). The following graphic shows the basic relationship between all parts that are involved in component styling:
 
 ![nativ1-1](/posts/guigarage-legacy/nativ1-1.png)
 

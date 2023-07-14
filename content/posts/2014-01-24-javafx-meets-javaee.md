@@ -9,7 +9,7 @@ At [JavaOne](http://www.oracle.com/javaone/) [Arun Gupta](https://www.java.net//
 
 ![book](/posts/guigarage-legacy/javaee-book.jpg)
 
-After reading the book you are ready to develop a web application that is based on JEE 7. Most of this applications will have a web frontend that is based on JSF as it is shown in the book, too. But as I mentioned in a [earlier post]({{ site.baseurl }}{% post_url 2013-05-11-designing-javafx-business-applications-part-1 %}), a modern business applications often needs support for mobile or desktop applications:
+After reading the book you are ready to develop a web application that is based on JEE 7. Most of this applications will have a web frontend that is based on JSF as it is shown in the book, too. But as I mentioned in a [earlier post]({{< ref "/posts/2013-05-11-designing-javafx-business-applications-part-1" >}}), a modern business applications often needs support for mobile or desktop applications:
 
 ![3tier](/posts/guigarage-legacy/3tier.png)
 
@@ -58,7 +58,7 @@ With DataFX 2.0 we will introduce the flow API. By using this API you can simply
 
 ## Contexts and Dependency Injection
 
-As shown in [one of my last posts]({{ site.baseurl }}{% post_url 2013-12-27-datafx-controller-framework-preview %}) DataFX supports context dependency injection in controllers. Currently Providers, etc. are not supported. This will be one of the next features that we want to add. DataFX currently support the following scopes:
+As shown in [one of my last posts]({{< ref "/posts/2013-12-27-datafx-controller-framework-preview" >}}) DataFX supports context dependency injection in controllers. Currently Providers, etc. are not supported. This will be one of the next features that we want to add. DataFX currently support the following scopes:
 
 * viewScope
 * flowScope
@@ -66,12 +66,12 @@ As shown in [one of my last posts]({{ site.baseurl }}{% post_url 2013-12-27-data
 
 ## Concurrency Utilities
 
-With JEE 7 you can use Executor instances in your business app. In DataFX we provide different classes and utility functions to provide a great support for concurrency. Next to invokeLater(...) method that is part of JavaFX you can find [invokeAndWait(...) utility methods in DataFX-core]({{ site.baseurl }}{% post_url 2013-01-01-invokeandwait-for-javafx %}). These can be used to create your own background task API. In addition DataFX provides a [new Executor class]({{ site.baseurl }}{% post_url 2013-02-09-datafx-observableexecutor-preview %}) that supports JavaFX properties. In most cases you can use the DataReader API of DataFX to handle background tasks. In some special cases you can use the [ProcessChain class]({{ site.baseurl }}{% post_url 2014-01-23-datafx-8-preview-2-processchain %}
+With JEE 7 you can use Executor instances in your business app. In DataFX we provide different classes and utility functions to provide a great support for concurrency. Next to invokeLater(...) method that is part of JavaFX you can find [invokeAndWait(...) utility methods in DataFX-core]({{< ref "/posts/2013-01-01-invokeandwait-for-javafx" >}}). These can be used to create your own background task API. In addition DataFX provides a [new Executor class]({{< ref "/posts/2013-02-09-datafx-observableexecutor-preview" >}}) that supports JavaFX properties. In most cases you can use the DataReader API of DataFX to handle background tasks. In some special cases you can use the [ProcessChain class]({{ site.baseurl }}{% post_url 2014-01-23-datafx-8-preview-2-processchain %}
 ) that will be new in DataFX 8.
 
 ## Bean Validation
 
-Thanks to JEE we have a [default specification](http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html) for bean validation. DataFX uses this specification, too. By doing so a developer doesn't need to learn new APIs. All the annotations and interfaces that are part of [JSR 303](http://beanvalidation.org/1.0/spec/) can be used in DataFX. A first example how bean validation works in DataFX can be found [here]({{ site.baseurl }}{% post_url 2013-12-27-datafx-controller-framework-preview %}).
+Thanks to JEE we have a [default specification](http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html) for bean validation. DataFX uses this specification, too. By doing so a developer doesn't need to learn new APIs. All the annotations and interfaces that are part of [JSR 303](http://beanvalidation.org/1.0/spec/) can be used in DataFX. A first example how bean validation works in DataFX can be found [here]({{< ref "/posts/2013-12-27-datafx-controller-framework-preview" >}}).
 
 ## Java Persistence
 

@@ -35,4 +35,4 @@ Normally you won't download the dependencies of your application manually. Build
 
 ## Use DataFX in your application
 
-Once you added DataFX as dependency to your application you can using it as described in the [tutorials]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}).
+Once you added DataFX as dependency to your application you can using it as described in the [tutorials]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}).

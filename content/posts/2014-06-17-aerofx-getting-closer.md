@@ -5,7 +5,7 @@ author: hendrik
 categories: [AeroFX, JavaFX]
 excerpt: 'This is a new preview of the AeroFX Theme for JavaFX. The theme creates a native look and feel for JavaFX applications on Windows.'
 ---
-As shown in [the sneak peek last week]({{ site.baseurl }}{% post_url 2014-06-10-sneak-peek-aerofx %}) a new JavaFX theme is in development. [Matthias Meidinger](http://sigpwr.de) is creating this skin as part of his bachelor thesis and since the last week he made some big improvements. So I think it's time for a new preview of the upcoming JavaFX theme. The following pics show dialogs that use the __AeroFX__ skin:
+As shown in [the sneak peek last week]({{< ref "/posts/2014-06-10-sneak-peek-aerofx" >}}) a new JavaFX theme is in development. [Matthias Meidinger](http://sigpwr.de) is creating this skin as part of his bachelor thesis and since the last week he made some big improvements. So I think it's time for a new preview of the upcoming JavaFX theme. The following pics show dialogs that use the __AeroFX__ skin:
 
 ![1](/posts/guigarage-legacy/j1.jpg)
 

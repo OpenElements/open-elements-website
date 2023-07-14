@@ -5,7 +5,7 @@ author: hendrik
 categories: [Dolphin Platform, JavaFX]
 excerpt: 'This post shows the view API of the Dolphin Platform. The Dolphin Platform is a MVC / MVP based open source framework for enterprise applications.'
 ---
-The last days I blogged about the [different APIs of the Dolphin Platform]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}). The Dolphin Platform is a new Open Source Framework by Canoo that will be released the next weeks. But one part is still missing: the view. Therefore I will show how you can create JavaFX based clients by using the Dolphin Platform. As already mentioned the Dolphin Platform will provide support for several client platforms like __JavaFX__, __AngularJS__ or __Polymer__.
+The last days I blogged about the [different APIs of the Dolphin Platform]({{< ref "/posts/2015-10-04-dolphin-platform-a-sneak-peek" >}}). The Dolphin Platform is a new Open Source Framework by Canoo that will be released the next weeks. But one part is still missing: the view. Therefore I will show how you can create JavaFX based clients by using the Dolphin Platform. As already mentioned the Dolphin Platform will provide support for several client platforms like __JavaFX__, __AngularJS__ or __Polymer__.
 
 ![clients](/posts/guigarage-legacy/clients.png)
 

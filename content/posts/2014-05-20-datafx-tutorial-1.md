@@ -5,7 +5,7 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this post I want to show you the first simple tutorial for DataFX 8. In thetutorial we want to create a simple view with only one point of interaction.'
 ---
-As mentioned [here]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}) I started a series of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) tutorials. In this post I want to show you the first simple tutorial.
+As mentioned [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}) I started a series of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) tutorials. In this post I want to show you the first simple tutorial.
 
 In this tutorial we want to create a simple view with only one point of interaction. The source of the tutorial can be found [here](https://bitbucket.org/datafx/datafx/src/940c9c9556c6/datafx-tutorial1/?at=default). The following figure shows how the example will look like:
 

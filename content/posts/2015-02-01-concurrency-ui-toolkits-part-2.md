@@ -5,7 +5,7 @@ author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'This post describes how the Concurrency in UI Toolkits can be defined in a unified way.'
 ---
-In the [first post]({{ site.baseurl }}{% post_url 2015-01-19-concurrency-ui-toolkits-part-1 %}) of this series I showed how Concurrency is handled in UI Toolkits and how a generic approach to work with the toolkit specific thread may look like. This ends in the following interface:
+In the [first post]({{< ref "/posts/2015-01-19-concurrency-ui-toolkits-part-1" >}}) of this series I showed how Concurrency is handled in UI Toolkits and how a generic approach to work with the toolkit specific thread may look like. This ends in the following interface:
 
 {{< highlight java >}}
 public interface UIThread {
@@ -150,4 +150,4 @@ The third method can be called on any thread. A developer doesn't need to think 
 
 ![stack](/posts/guigarage-legacy/stack.png)
 
-This will end in code that is unperformant, unstable and can't be maintained anymore. Therefore I would choose one of the first 2 implementations. But that's only how I see this things and maybe you have a complete different opinion. Therefore it would be great if you can leave a comment here about your favorite way how to handle this problems. [JSR-377]({{ site.baseurl }}{% post_url 2014-12-30-desktopembedded-application-api-jsr %}) will contain such a interface and we want to resolve all the shown problems in an ui toolkit independent way. If you are interested in the JSR or want to share your opinion about this topic you should have a look at the [JSR Mailing List](http://jsr377-api.40747.n7.nabble.com). In the next post I will have a deeper look at the `Future<>` interface in combination with ui threads.
+This will end in code that is unperformant, unstable and can't be maintained anymore. Therefore I would choose one of the first 2 implementations. But that's only how I see this things and maybe you have a complete different opinion. Therefore it would be great if you can leave a comment here about your favorite way how to handle this problems. [JSR-377]({{< ref "/posts/2014-12-30-desktopembedded-application-api-jsr" >}}) will contain such a interface and we want to resolve all the shown problems in an ui toolkit independent way. If you are interested in the JSR or want to share your opinion about this topic you should have a look at the [JSR Mailing List](http://jsr377-api.40747.n7.nabble.com). In the next post I will have a deeper look at the `Future<>` interface in combination with ui threads.

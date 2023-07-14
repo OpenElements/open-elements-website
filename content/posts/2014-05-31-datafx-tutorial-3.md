@@ -5,7 +5,7 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this tutorial I want to show how a wizard dialog can be created with DataFX.'
 ---
-In this tutorial I want to show how a wizard dialog can be created with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). This example depends on 2 other tutorials that can be found [here]({{ site.baseurl }}{% post_url 2014-05-20-datafx-tutorial-1 %}) and [here]({{ site.baseurl }}{% post_url 2014-05-22-datafx-tutorial-2 %}).
+In this tutorial I want to show how a wizard dialog can be created with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). This example depends on 2 other tutorials that can be found [here]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}}) and [here]({{< ref "/posts/2014-05-22-datafx-tutorial-2" >}}).
 
 The wizard that will be created in this tutorial contains 5 different views that are linked to each other:
 
@@ -84,7 +84,7 @@ public class Wizard1Controller {
 }
 {{< / highlight >}}
 
-When looking at the `@FXMLController` annotation of the class you can find a new feature. Next to the fxml file that defines the view of the wizard step a `title` attribute is added. This defines the title of the view. Because the wizard will be added to a `Stage` by using the `Flow.startInStage()` method (see [tutorial 1]({{ site.baseurl }}{% post_url 2014-05-20-datafx-tutorial-1 %})) the title of the flow is automatically bound to the window title of the `Stage`. So whenever the view in the flow changes the title of the application window will change to the defined title of the view. As you will learn in future tutorial you can easily change the title of a view in code. In addition to the title other metadata like a icon can be defined for a view or flow.
+When looking at the `@FXMLController` annotation of the class you can find a new feature. Next to the fxml file that defines the view of the wizard step a `title` attribute is added. This defines the title of the view. Because the wizard will be added to a `Stage` by using the `Flow.startInStage()` method (see [tutorial 1]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}})) the title of the flow is automatically bound to the window title of the `Stage`. So whenever the view in the flow changes the title of the application window will change to the defined title of the view. As you will learn in future tutorial you can easily change the title of a view in code. In addition to the title other metadata like a icon can be defined for a view or flow.
 As a next step the buttons of the toolbar should be injected in the controller classes and the specific actions for them should be defined. Here a new annotation will be introduced: By using the `@BackAction` annotation the flow will automatically handle an action that navigates to the last visible view. The annotation can be used like the `@ActionTrigger` and `@LinkAction` annotations that were introduced in tutorial 1 and 2. Therefore the controller class for the a view in the wizard could be defined like this:
 
 {{< highlight java >}}

@@ -57,7 +57,7 @@ As you can see in the image something went terrible wrong. We don't see any smil
 
 ## Emojis and fonts
 
-You shouldn't be scared ;) JavaFX isn't the problem. The strange issue is based on the font of the textfield. Let's think about the functionality of a font: it interprets a character and draws a (vector based) icon for the char on the screen. In the example no specify font is defined for the textfield. Therefore the default font will be used that is "Lucida Grande" on a Mac ([see this post for more details](http://mail.openjdk.java.net/pipermail/openjfx-dev/2013-August/009912.html)). Lucida Grande doesn't contain a visual representation for the emoji unicode characters and therefore the strange icons will be shown. Th show emojis on the screen we need a font that supports them. One open source font that supports emojis is OpenSansEmoji. The font can be found at [github](https://github.com/MorbZ/OpenSansEmoji). Once you downloaded the font you can define it for your textfield [as described in an earlier post]({{ site.baseurl }}{% post_url 2014-10-01-integrate-custom-fonts-javafx-application-using-css %}):
+You shouldn't be scared ;) JavaFX isn't the problem. The strange issue is based on the font of the textfield. Let's think about the functionality of a font: it interprets a character and draws a (vector based) icon for the char on the screen. In the example no specify font is defined for the textfield. Therefore the default font will be used that is "Lucida Grande" on a Mac ([see this post for more details](http://mail.openjdk.java.net/pipermail/openjfx-dev/2013-August/009912.html)). Lucida Grande doesn't contain a visual representation for the emoji unicode characters and therefore the strange icons will be shown. Th show emojis on the screen we need a font that supports them. One open source font that supports emojis is OpenSansEmoji. The font can be found at [github](https://github.com/MorbZ/OpenSansEmoji). Once you downloaded the font you can define it for your textfield [as described in an earlier post]({{< ref "/posts/2014-10-01-integrate-custom-fonts-javafx-application-using-css" >}}):
 
 {{< highlight java >}}
 @font-face {
@@ -90,4 +90,4 @@ Once this is done the emoji will be shown in the textfield and can simply be cop
 
 ![emoji-working](/posts/guigarage-legacy/emoji-working.png)
 
-The last posts ([like this one]({{ site.baseurl }}{% post_url 2015-01-19-concurrency-ui-toolkits-part-1 %})) I'm working on are very long and therefore I decided to split them in several smaller ones. In the next post I will discuss the problem on Mac. In addition I will show how emojis can be simply added to a text.
+The last posts ([like this one]({{< ref "/posts/2015-01-19-concurrency-ui-toolkits-part-1" >}})) I'm working on are very long and therefore I decided to split them in several smaller ones. In the next post I will discuss the problem on Mac. In addition I will show how emojis can be simply added to a text.

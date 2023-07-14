@@ -9,4 +9,4 @@ The Gesture Wrapper API is a wrapper around the Apple multitouch gestures API. I
 
 You can download the jar and documentation [here]({{ site.baseurl }}{% link pages/projects/gesture-wrapper.md %}).
 
-I posted a short [tutorial]({{ site.baseurl }}{% post_url 2011-08-04-preview-multitouch-gestures-in-swing %}).
+I posted a short [tutorial]({{< ref "/posts/2011-08-04-preview-multitouch-gestures-in-swing" >}}).

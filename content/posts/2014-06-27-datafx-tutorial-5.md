@@ -5,9 +5,9 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'This is the last tutorial about the basic flow and action API of DataFX.'
 ---
-This is the last tutorial about the basic flow and action API of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). I plan to start a second tutorial series about injection and resources in DataFX. But in those parts of DataFX 8 the APIs aren't final at the moment. So it will sadly take one or two month before I can continue the tutorials. An overview of all tutorials can be found [here]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}).
+This is the last tutorial about the basic flow and action API of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). I plan to start a second tutorial series about injection and resources in DataFX. But in those parts of DataFX 8 the APIs aren't final at the moment. So it will sadly take one or two month before I can continue the tutorials. An overview of all tutorials can be found [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}).
 
-In this tutorial I want to show how flows can be interlaced. Therefore we create a new variation of the wizard app that was shown in [tutorial 4]({{ site.baseurl }}{% post_url 2014-06-08-datafx-tutorial-4 %}). The application should provide a simple wizard with some steps. Here is an overview how the dialogs and the flow where defined in tutorial 4:
+In this tutorial I want to show how flows can be interlaced. Therefore we create a new variation of the wizard app that was shown in [tutorial 4]({{< ref "/posts/2014-06-08-datafx-tutorial-4" >}}). The application should provide a simple wizard with some steps. Here is an overview how the dialogs and the flow where defined in tutorial 4:
 
 ![flow3](/posts/guigarage-legacy/flow3.png)
 
@@ -179,7 +179,7 @@ public class WizardController {
 }
 {{< / highlight >}}
 
-All the Buttons are annotated by the @ActionTrigger annotation and will therefore trigger actions in the flow. But they won't trigger actions in the inner flow because they are defined in the global flow that is defined in the main class. To handle this actions we will create some methods that are annoted by the @ActionMethod() annotation. As seen in [tutorial 1]({{ site.baseurl }}{% post_url 2014-05-20-datafx-tutorial-1 %}) these methods will be called whenever the action with the matching unique id is called:
+All the Buttons are annotated by the @ActionTrigger annotation and will therefore trigger actions in the flow. But they won't trigger actions in the inner flow because they are defined in the global flow that is defined in the main class. To handle this actions we will create some methods that are annoted by the @ActionMethod() annotation. As seen in [tutorial 1]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}}) these methods will be called whenever the action with the matching unique id is called:
 
 {{< highlight java >}}
 @FXMLController("wizard.fxml")

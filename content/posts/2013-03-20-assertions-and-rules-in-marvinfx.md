@@ -5,7 +5,7 @@ author: hendrik
 categories: [JavaFX]
 excerpt: 'Today I added some new features to MarvinFX. For all basic property types (String, Number, Boolean, etc...) MarvinFX will provide methods to check some common assertions for this properties. '
 ---
-Today I added some new features to [MarvinFX]({{ site.baseurl }}{% post_url 2013-03-17-introducing-marvinfx %}). For all basic property types (String, Number, Boolean, etc...) MarvinFX will provide methods to check some common assertions for this properties. All this methods will be part of the PropertySupervisor classes. Here is a short example that tests a String property:
+Today I added some new features to [MarvinFX]({{< ref "/posts/2013-03-17-introducing-marvinfx" >}}). For all basic property types (String, Number, Boolean, etc...) MarvinFX will provide methods to check some common assertions for this properties. All this methods will be part of the PropertySupervisor classes. Here is a short example that tests a String property:
 
 {{< highlight java >}}
 @Test

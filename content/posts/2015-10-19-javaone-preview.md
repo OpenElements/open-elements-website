@@ -19,7 +19,7 @@ If you will attend JavaOne you will find Voting Machines in every room. If you c
 
 {% include posts/youtube.html id="6aLWyhp5F-s" %}
 
-Between the talks I would love to talk with you about the [Dolphin Platform]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}) :)
+Between the talks I would love to talk with you about the [Dolphin Platform]({{< ref "/posts/2015-10-04-dolphin-platform-a-sneak-peek" >}}) :)
 
 ![dp](/posts/guigarage-legacy/dp-1024x255.png)
 

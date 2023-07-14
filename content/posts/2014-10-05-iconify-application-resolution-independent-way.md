@@ -21,7 +21,7 @@ For me the best resource for vector based icons is [Font Awesome](http://fortawe
 
 ![awe](/posts/guigarage-legacy/video-player-icons.png)
 
-Because it is a font it can simply be integrated to any JavaFX application ([see this post]({{ site.baseurl }}{% post_url 2014-10-01-integrate-custom-fonts-javafx-application-using-css %})). Once the font is assigned to a control you can define an icon by setting the text of the control. Here a special unicode character need to be set as the text. The following example describes how to set the pen icon to a button:
+Because it is a font it can simply be integrated to any JavaFX application ([see this post]({{< ref "/posts/2014-10-01-integrate-custom-fonts-javafx-application-using-css" >}})). Once the font is assigned to a control you can define an icon by setting the text of the control. Here a special unicode character need to be set as the text. The following example describes how to set the pen icon to a button:
 
 {{< highlight java >}}
 button.setText('\uf040' + "");  

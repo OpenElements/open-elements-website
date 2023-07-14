@@ -5,7 +5,7 @@ author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'Some days ago I was asked at twitter about a responsive layout problem in JavaFX. Here I will show how a first solution to create such a responsive layout.'
 ---
-Some days ago [I was asked at twitter about a responsive layout problem in JavaFX](https://twitter.com/j_e_willis/status/641000236119257088). Based on the work that I did with [ResponsiveFX]({{ site.baseurl }}{% post_url 2014-11-04-responsive-design-javafx %}) I was asked how I would create a specific responsive behavior.
+Some days ago [I was asked at twitter about a responsive layout problem in JavaFX](https://twitter.com/j_e_willis/status/641000236119257088). Based on the work that I did with [ResponsiveFX]({{< ref "/posts/2014-11-04-responsive-design-javafx" >}}) I was asked how I would create a specific responsive behavior.
 
 In this special case, an image and a text should next to each other on a desktop. In a smaller (mobile) version the text should be placed under the image. You can find the [question at stackoverflow](http://stackoverflow.com/questions/32021293/javafx-creating-a-responsive-layout), too.
 

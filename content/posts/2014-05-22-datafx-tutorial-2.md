@@ -5,7 +5,7 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this DataFX tutorial I will show how navigation between different views can easily be managed with DataFX and its Flow API.'
 ---
-As I mentioned [here]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}) I started a series of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) tutorials. The first tutorial can be found [here]({{ site.baseurl }}{% post_url 2014-05-20-datafx-tutorial-1 %}).
+As I mentioned [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}) I started a series of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) tutorials. The first tutorial can be found [here]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}}).
 
 In this second tutorial I will show you the basics about __navigation in a DataFX flow__. In this example we will define two different views that are part of a flow and then navigate from one view to the other one. The source of the tutorial can be found[here](https://bitbucket.org/datafx/datafx/src/a92bddc1904a905be89205d5edf3a39015149227/datafx-tutorial2/?at=default).
 

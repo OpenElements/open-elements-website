@@ -5,7 +5,7 @@ author: hendrik
 categories: [General, JavaFX]
 excerpt: 'This is the second part of my series about JavaFX architecture and best practice for (business) application.'
 ---
-This is the second part of my series about JavaFX architecture and best practice for (business) application. You can find the first part about middleware [here]({{ site.baseurl }}{% post_url 2013-05-11-designing-javafx-business-applications-part-1 %}).
+This is the second part of my series about JavaFX architecture and best practice for (business) application. You can find the first part about middleware [here]({{< ref "/posts/2013-05-11-designing-javafx-business-applications-part-1" >}}).
 
 In this post I will show you a simply and modern way to bind your data model to your view by using [Context Dependency Injection (CDI)](http://en.wikipedia.org/wiki/Dependency_injection).
 

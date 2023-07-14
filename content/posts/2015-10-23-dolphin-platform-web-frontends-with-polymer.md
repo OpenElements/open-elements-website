@@ -5,9 +5,9 @@ author: hendrik
 categories: [Dolphin Platform, Polymer, Web Frontends, WebComponents]
 excerpt: 'For the Dolphin Platform release we plan to offer several demos and tutorials as a starting point. Today I want to give you an overview of this work'
 ---
-For the [Dolphin Platform]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}) release we plan to offer several demos and tutorials as a starting point. Currently I'm working on a simple chat app that contains a JavaFX and a web frontend. The web frontend is done by using [Google Polymer]({{ site.baseurl }}{% post_url 2015-09-11-creating-an-interactive-application-with-polymer-part-1 %}) and web components. In this post I will give a preview how you can create web applications with the Dolphin Platform by using Polymer.
+For the [Dolphin Platform]({{< ref "/posts/2015-10-04-dolphin-platform-a-sneak-peek" >}}) release we plan to offer several demos and tutorials as a starting point. Currently I'm working on a simple chat app that contains a JavaFX and a web frontend. The web frontend is done by using [Google Polymer]({{< ref "/posts/2015-09-11-creating-an-interactive-application-with-polymer-part-1" >}}) and web components. In this post I will give a preview how you can create web applications with the Dolphin Platform by using Polymer.
 
-All the main concepts are already described in the [post about JavaFX clients]({{ site.baseurl }}{% post_url 2015-10-18-dolphin-platform-how-to-create-an-application %}) and in this post I will show you that you can reuse all the concepts for a web application.
+All the main concepts are already described in the [post about JavaFX clients]({{< ref "/posts/2015-10-18-dolphin-platform-how-to-create-an-application" >}}) and in this post I will show you that you can reuse all the concepts for a web application.
 
 The following picture shows how the final application will look like:
 
@@ -65,7 +65,7 @@ To create a web component that acts as a Dolphin Platform you only need to add o
 </script>
 {{< / highlight >}}
 
-Polymer supports extending custom element prototypes with shared code modules called [behaviors](https://www.polymer-project.org/1.0/docs/devguide/behaviors.html). The Dolphin Platform client API provides such a base behavior and therefore you can connect a web component with a [Dolphin Platform controller]({{ site.baseurl }}{% post_url 2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api %}) by only adding one line of code. The `ThreadViewController` is the server side controller for this view. The code of this Java class looks like this:
+Polymer supports extending custom element prototypes with shared code modules called [behaviors](https://www.polymer-project.org/1.0/docs/devguide/behaviors.html). The Dolphin Platform client API provides such a base behavior and therefore you can connect a web component with a [Dolphin Platform controller]({{< ref "/posts/2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api" >}}) by only adding one line of code. The `ThreadViewController` is the server side controller for this view. The code of this Java class looks like this:
 
 {{< highlight java >}}
 @DolphinController("ThreadViewController")
@@ -95,7 +95,7 @@ public class ThreadViewController {
 }
 {{< / highlight >}}
 
-I don't want to discuss the [Dolphin Platform controller API]({{ site.baseurl }}{% post_url 2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api %}) here and therefore all the methods of the controller are empty at the moment. Here it's important to know that the controller instance and the view share one model that is defined by the `ChatThreadBean` class:
+I don't want to discuss the [Dolphin Platform controller API]({{< ref "/posts/2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api" >}}) here and therefore all the methods of the controller are empty at the moment. Here it's important to know that the controller instance and the view share one model that is defined by the `ChatThreadBean` class:
 
 {{< highlight java >}}
 @DolphinBean

@@ -83,4 +83,4 @@ Once the stylesheet is added to the scene the buttons in your application will l
 
 As you can see in the CSS definition all properties that are used until know are defined by the "-fx-" prefix. This is specific to JavaFX and defines a change against the CSS how you use it for styling in the web. Since most of the properties that you know from the web are supported all of them start with a `-fx-`. By doing so you could create a global stylesheet that styles your web frontend and JavaFX frontend.
 
-Based on this post I added a [second post]({{ site.baseurl }}{% post_url 2016-02-09-javafx-and-css-pseudo-classes %}) the shows how you can use pseudo classes in JavaFX.
+Based on this post I added a [second post]({{< ref "/posts/2016-02-09-javafx-and-css-pseudo-classes" >}}) the shows how you can use pseudo classes in JavaFX.

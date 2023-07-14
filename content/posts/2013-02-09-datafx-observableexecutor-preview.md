@@ -5,7 +5,7 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'Since December we are working on a new DataFX version. DataFX will provide a new low level API for multithreading and background tasks in JavaFX.'
 ---
-Since December we are working on a new [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) version. DataFX will provide a new low level API for multithreading and background tasks in JavaFX. With this API everyone can create new and custom DataSources that will fetch data in background and publish it to JavaFX properties (like you can do with the SwingWorker in Swing). Additionally we will provide some basic concurrency features like the [invokeAndWait-method]({{ site.baseurl }}{% post_url 2013-01-01-invokeandwait-for-javafx %}).
+Since December we are working on a new [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) version. DataFX will provide a new low level API for multithreading and background tasks in JavaFX. With this API everyone can create new and custom DataSources that will fetch data in background and publish it to JavaFX properties (like you can do with the SwingWorker in Swing). Additionally we will provide some basic concurrency features like the [invokeAndWait-method]({{< ref "/posts/2013-01-01-invokeandwait-for-javafx" >}}).
 
 Next to this features we created a new [Executor](http://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html) class that offers some additional features for the use with JavaFX. The `ObservableExecutor` holds a ListProperty with all currently scheduled or running tasks. By using this Property you can easily observe all tasks in your UI. We will provide a ListCell class to visualize the running tasks of the executor with only a few lines of code:
 

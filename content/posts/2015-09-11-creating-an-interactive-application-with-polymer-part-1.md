@@ -5,13 +5,13 @@ author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]
 excerpt: 'In this post I will create an interactive web application based on Polymer 1.0 to show how data binding can be used and how a basic app might look like.'
 ---
-Some time ago I created [my first post about web components]({{ site.baseurl }}{% post_url 2014-11-12-first-steps-webcomponents %}) and today I want to continue this series. In the last month I played a lot with this new technology since at Canoo we think that this will be very important for web development in the future. Therefore [Michael Heinrichs](https://twitter.com/net0pyr) and I will give [a university session at Devoxx](http://cfp.devoxx.be/2015/talk/OVY-1576/Building_modern_web_UIs_with_Web_Components) this year and plan to offer web component and Polymer training at Canoo.
+Some time ago I created [my first post about web components]({{< ref "/posts/2014-11-12-first-steps-webcomponents" >}}) and today I want to continue this series. In the last month I played a lot with this new technology since at Canoo we think that this will be very important for web development in the future. Therefore [Michael Heinrichs](https://twitter.com/net0pyr) and I will give [a university session at Devoxx](http://cfp.devoxx.be/2015/talk/OVY-1576/Building_modern_web_UIs_with_Web_Components) this year and plan to offer web component and Polymer training at Canoo.
 
 In this blog post I will create an interactive web application based on Google Polymer 1.0 to show how data binding can be used and how a basic Polymer application might look like. In this case I don't want to dive deep into the creation of custom components using Polymer but give a first introduction how you can design applications by using the Polymer paper elements.
 
 ## What is Polymer?
 
-[Google Polymer](https://www.polymer-project.org/1.0/) is an open source toolkit that is build based on the [web component specification]({{ site.baseurl }}{% post_url 2015-02-15-use-webcomponents-today %}) and provides some additional features. In addition Polymer provides it's own UI component suite that is based on the [Material Design style by Google](https://www.google.com/design/spec/material-design/introduction.html).
+[Google Polymer](https://www.polymer-project.org/1.0/) is an open source toolkit that is build based on the [web component specification]({{< ref "/posts/2015-02-15-use-webcomponents-today" >}}) and provides some additional features. In addition Polymer provides it's own UI component suite that is based on the [Material Design style by Google](https://www.google.com/design/spec/material-design/introduction.html).
 
 ![pol-arch](/posts/guigarage-legacy/pol-arch-1024x348.png)
 
@@ -45,7 +45,7 @@ Our final application should be a picture viewer that support some user interact
 
 ![app-design](/posts/guigarage-legacy/app-design-1024x760.png)
 
-To use the Polymer paper components we only need 1 dependency to `PolymerElements/paper-elements` in the bower file. If you are not familiar with [Bower](http://bower.io) you can find a short introduction [here]({{ site.baseurl }}{% post_url 2015-02-12-short-introduction-bower %}).
+To use the Polymer paper components we only need 1 dependency to `PolymerElements/paper-elements` in the bower file. If you are not familiar with [Bower](http://bower.io) you can find a short introduction [here]({{< ref "/posts/2015-02-12-short-introduction-bower" >}}).
 
 Once you have added the dependency your bower.json file like look like this:
 

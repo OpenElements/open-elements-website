@@ -5,7 +5,7 @@ author: hendrik
 categories: [Web Frontends]
 excerpt: 'Always wanted to create round images in your web page? Instead of doing this with a graphic editor by hand you can use CSS to show a rounded image based on a regular image on your page.'
 ---
-In this post I will show the easiest way how a rounded image can be defined in CSS. This example is for HTML. If you want to create a rounded image with JavaFX you should [read this post]({{ site.baseurl }}{% post_url 2015-11-30-round-images-with-javafx %}).
+In this post I will show the easiest way how a rounded image can be defined in CSS. This example is for HTML. If you want to create a rounded image with JavaFX you should [read this post]({{< ref "/posts/2015-11-30-round-images-with-javafx" >}}).
 
 An image is defined by the `img` tag. To define some CSS for the image we should add a style class like "avatar":
 

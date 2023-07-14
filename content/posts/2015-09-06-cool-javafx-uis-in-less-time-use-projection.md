@@ -28,7 +28,7 @@ Let's think about a possible visual presentation of this interface. When having 
 
 ![bootstrap-media](/posts/guigarage-legacy/bootstrap-media-1024x403.png)
 
-I already created a JavaFX list cell that specifies a layout that can be used for media objects. You can find a detailed description [here]({{ site.baseurl }}{% post_url 2014-09-30-enrich-list-ui-using-medialistcell %}). Based on this I created the MediaList that is completely ready to render media and don't need to be configured anymore.
+I already created a JavaFX list cell that specifies a layout that can be used for media objects. You can find a detailed description [here]({{< ref "/posts/2014-09-30-enrich-list-ui-using-medialistcell" >}}). Based on this I created the MediaList that is completely ready to render media and don't need to be configured anymore.
 
 {{< highlight java >}}
 MediaList<Media> list = new MediaList<>();

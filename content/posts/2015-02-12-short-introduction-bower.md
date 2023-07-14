@@ -5,7 +5,7 @@ author: hendrik
 categories: [Web Frontends]
 excerpt: 'This post gives a short introduction to Bower from a Java developers point of view.'
 ---
-Some weeks ago [I blogged about web components]({{ site.baseurl }}{% post_url 2014-11-12-first-steps-webcomponents %}). Since that post I did a lot of research about this topic and had a [talk about web components at JFokus](http://www.jfokus.se/jfokus/talks.jsp#WebComponents). I really like this new technology and therefore I plan to blog about it more often in future. All the JavaFX lovers and readers of my blog shouldn't be afraid. I will continue work with JavaFX ;)
+Some weeks ago [I blogged about web components]({{< ref "/posts/2014-11-12-first-steps-webcomponents" >}}). Since that post I did a lot of research about this topic and had a [talk about web components at JFokus](http://www.jfokus.se/jfokus/talks.jsp#WebComponents). I really like this new technology and therefore I plan to blog about it more often in future. All the JavaFX lovers and readers of my blog shouldn't be afraid. I will continue work with JavaFX ;)
 
 Before going deep in the web components topic I want to introduce a tool that I think is needed when working with this new technology: [bower](http://bower.io).
 

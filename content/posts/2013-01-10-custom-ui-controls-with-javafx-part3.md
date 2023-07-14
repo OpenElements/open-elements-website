@@ -93,7 +93,7 @@ If you are interested in BeansBinding with Swing I suggest you to [read](http://
 
 ## JavaFX Properties
 
-JavaFX includes the [`javafx.beans.property.Property`](http://docs.oracle.com/javafx/2/api/javafx/beans/property/Property.html) Interface that extend property handling and binding with some great features and a very simple but powerful API. All JavaFX controls use the property API to grant access to their fields. Normally next to the getter & setter methods there is a new method to access the property. Here is a example for the "double cellWidth" attribute of [GridView]({{ site.baseurl }}{% post_url 2012-11-29-gridfx-is-moving-forward %}):
+JavaFX includes the [`javafx.beans.property.Property`](http://docs.oracle.com/javafx/2/api/javafx/beans/property/Property.html) Interface that extend property handling and binding with some great features and a very simple but powerful API. All JavaFX controls use the property API to grant access to their fields. Normally next to the getter & setter methods there is a new method to access the property. Here is a example for the "double cellWidth" attribute of [GridView]({{< ref "/posts/2012-11-29-gridfx-is-moving-forward" >}}):
 
 {{< highlight java >}}
 private DoubleProperty cellWidth;

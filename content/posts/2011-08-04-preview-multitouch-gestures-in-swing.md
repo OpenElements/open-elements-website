@@ -5,7 +5,7 @@ author: hendrik
 categories: [General]
 excerpt: 'Apple added a listener based API for multitouch gestures to their eawt package. With this wrapper API you can easily integrate it in any app.'
 ---
-In my last [post]({{ site.baseurl }}{% post_url 2011-07-28-fun-with-gestures %}) I described Apples gestures API. Up to date I´m developing a wrapper API. With this API you can add multitouch-listeners to any swing component. On any OS unlike Mac OS a `GesturesNotSupportedException` is thrown if you try to register a listener. So you can use the API in every application. If the Applications runs on a Mac it supports gestures.
+In my last [post]({{< ref "/posts/2011-07-28-fun-with-gestures" >}}) I described Apples gestures API. Up to date I´m developing a wrapper API. With this API you can add multitouch-listeners to any swing component. On any OS unlike Mac OS a `GesturesNotSupportedException` is thrown if you try to register a listener. So you can use the API in every application. If the Applications runs on a Mac it supports gestures.
 
 Here is how:
 

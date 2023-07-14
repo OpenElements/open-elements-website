@@ -5,7 +5,7 @@ author: hendrik
 categories: [Dolphin Platform, JavaFX]
 excerpt: 'In this post I will show a first end to end example of the Dolphin Platform by creating an application that contains a Spring server and a JavaFX client.'
 ---
-In this post I will show a first end to end example of the Dolphin Platform. In my last posts I already gave an overview about the concepts and APIs of the Dolphin Platform. If you have missed this post you can find them [here]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}).
+In this post I will show a first end to end example of the Dolphin Platform. In my last posts I already gave an overview about the concepts and APIs of the Dolphin Platform. If you have missed this post you can find them [here]({{< ref "/posts/2015-10-04-dolphin-platform-a-sneak-peek" >}}).
 
 ## The calculator application
 
@@ -142,7 +142,7 @@ Once this is done we can start our application and it's working as expected:
 
 ## The Dolphin Platform based calculator application
 
-When creating an application based on the Dolphin Platform I start to define the model and code the basic controller functionality. Let's start with the model definition (A first description of the Dolphin Platform model API ca be found [here]({{ site.baseurl }}{% post_url 2015-10-06-dolphin-platform-a-sneak-peek-of-the-model-api %})). In the given example the model is quite small and a matching Dolphin Platform model will look like this:
+When creating an application based on the Dolphin Platform I start to define the model and code the basic controller functionality. Let's start with the model definition (A first description of the Dolphin Platform model API ca be found [here]({{< ref "/posts/2015-10-06-dolphin-platform-a-sneak-peek-of-the-model-api" >}})). In the given example the model is quite small and a matching Dolphin Platform model will look like this:
 
 {{< highlight java >}}
 @DolphinBean
@@ -220,7 +220,7 @@ public class CalculatorModel {
 
 The model class should be defined in a module that is shared between the client and server sources.
 
-Once the model is done we can start working on the controller. As described in the [first overview]({{ site.baseurl }}{% post_url 2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api %}) a controller will be managed by the web container on server side. Based on this all the well known Spring and JavaEE specifications can be used in Dolphin Platform controllers. In this example we will make use of the `@PostContruct` annotation that marks our `init()` method. This method will automatically be called once the controller has been created. In the `init()` method we can add some listeners to our model since the model instance is already created and injected in the controller instance when the `@PostContruct` is handled.
+Once the model is done we can start working on the controller. As described in the [first overview]({{< ref "/posts/2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api" >}}) a controller will be managed by the web container on server side. Based on this all the well known Spring and JavaEE specifications can be used in Dolphin Platform controllers. In this example we will make use of the `@PostContruct` annotation that marks our `init()` method. This method will automatically be called once the controller has been created. In the `init()` method we can add some listeners to our model since the model instance is already created and injected in the controller instance when the `@PostContruct` is handled.
 
 {{< highlight java >}}
 @DolphinController(Constants.CONTROLLER_NAME)

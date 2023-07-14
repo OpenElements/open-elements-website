@@ -5,7 +5,7 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'This is the 4th tutorial about DataFX. In this tutorial I will show how you can manage central actions and navigation of a flow.'
 ---
-This is the 4th tutorial about navigation with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) and the DataFX flow API. An overview of all tutorials can be found [here]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}). In this tutorial I will show how you can manage the action handling and navigation of a flow from outside of the flow. To do so we will refactor the wizard that was created in [tutorial 3]({{ site.baseurl }}{% post_url 2014-05-31-datafx-tutorial-3 %}).
+This is the 4th tutorial about navigation with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) and the DataFX flow API. An overview of all tutorials can be found [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}). In this tutorial I will show how you can manage the action handling and navigation of a flow from outside of the flow. To do so we will refactor the wizard that was created in [tutorial 3]({{< ref "/posts/2014-05-31-datafx-tutorial-3" >}}).
 
 As described in tutorial 3 the wizard will be composed of some views that define the steps of the wizard. In addition a toolbar with some buttons is placed on the bottom. The views will look like this:
 

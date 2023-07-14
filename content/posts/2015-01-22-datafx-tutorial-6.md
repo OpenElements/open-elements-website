@@ -80,7 +80,7 @@ As you can see in the code I don't use the @FXML annotation. With DataFX 8 we in
 private Button anyName;
 {{< / highlight >}}
 
-In addition the [JSR-377]({{ site.baseurl }}{% post_url 2014-12-30-desktopembedded-application-api-jsr %}) is currently planned and this will introduce a UI Toolkit independent annotation to inject view components. DataFX will implement the JSR once it is released and therefor we started to define our own basic annotations. SO maybe the name of the annotation will change once the JSR is released.
+In addition the [JSR-377]({{< ref "/posts/2014-12-30-desktopembedded-application-api-jsr" >}}) is currently planned and this will introduce a UI Toolkit independent annotation to inject view components. DataFX will implement the JSR once it is released and therefor we started to define our own basic annotations. SO maybe the name of the annotation will change once the JSR is released.
 
 Once the controller is finished we need to add the action handler and navigate to the selected view. The RadioButtons instances in the controller define the controller classes for all the subviews as user data. By doing so we can simply navigate to the selected user data. Here is the final code for the controller:
 

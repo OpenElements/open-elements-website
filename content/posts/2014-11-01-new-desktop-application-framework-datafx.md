@@ -35,7 +35,7 @@ By using these methods you can interact with the event and rendering thread of t
 UIToolkit.setPlatform(SwingPlatform.getInstance());
 {{< / highlight >}}
 
-There are several other concurrency classes in JWrap that all depend on the UIToolkit class. By doing so you can now use all the concurrency helpers in JWrap and automatically the EDT will be used as application thread. I ported the [ProcessChain]({{ site.baseurl }}{% post_url 2014-10-22-datafx-8-released %}) of DataFX to JWarp and now you can code the following in your Swing application:
+There are several other concurrency classes in JWrap that all depend on the UIToolkit class. By doing so you can now use all the concurrency helpers in JWrap and automatically the EDT will be used as application thread. I ported the [ProcessChain]({{< ref "/posts/2014-10-22-datafx-8-released" >}}) of DataFX to JWarp and now you can code the following in your Swing application:
 
 {{< highlight java >}}
 ProcessChain.create().
@@ -51,7 +51,7 @@ I think this code is much better than using the SwingWorker. You can easily use 
 
 ## JWrap MVC API
 
-DataFX contains the [controller and flow API]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorials %}) that can be used to define MVC based views in JavaFX. I ported some parts of this API to JWarp and created a UI toolkit independent way to define MVC based controllers. JWrap contains some annotations that can be used to create a link between the view and the controller of a dialog.
+DataFX contains the [controller and flow API]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}) that can be used to define MVC based views in JavaFX. I ported some parts of this API to JWarp and created a UI toolkit independent way to define MVC based controllers. JWrap contains some annotations that can be used to create a link between the view and the controller of a dialog.
 
 Let's start with the swim example. As a first step we define the view and define names for all the UI components:
 

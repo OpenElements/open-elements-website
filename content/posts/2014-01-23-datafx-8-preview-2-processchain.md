@@ -5,7 +5,7 @@ author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'This DataFX 8 preview introduces the ProcessChain. This uses Java 8 features like Lambda to provide multi threaded functionality in JavaFX'
 ---
-Some time ago I gave a [first preview of the new APIs and functions]({{ site.baseurl }}{% post_url 2013-12-27-datafx-controller-framework-preview %}) in [DataFX 8]({{ site.baseurl }}{% link pages/projects/datafx.md %}). We are currently plan to release DataFX 8 once JavaFX 8 is released. I plan to blog about the new features in DataFX in the next weeks. By doing so we hope to receive some useful feedback. In the last preview I described the [controller and flow API]({{ site.baseurl }}{% post_url 2013-12-27-datafx-controller-framework-preview %}) of DataFX. Today I will show you only only small class :)
+Some time ago I gave a [first preview of the new APIs and functions]({{< ref "/posts/2013-12-27-datafx-controller-framework-preview" >}}) in [DataFX 8]({{ site.baseurl }}{% link pages/projects/datafx.md %}). We are currently plan to release DataFX 8 once JavaFX 8 is released. I plan to blog about the new features in DataFX in the next weeks. By doing so we hope to receive some useful feedback. In the last preview I described the [controller and flow API]({{< ref "/posts/2013-12-27-datafx-controller-framework-preview" >}}) of DataFX. Today I will show you only only small class :)
 
 Next to new APIs we added some helpful classes to the DataFX core packages. The class that I want to show you today is one of these new classes: The ProcessChain.
 

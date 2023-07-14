@@ -63,7 +63,7 @@ As a next step you can create a `index.html` to test your custom components and 
 
 ## General structure of a WebComponent
 
-As said a web component is a custom control for web pages. Top define a component we only need one HTML file. As in other [languages or UT toolkits]({{ site.baseurl }}{% post_url 2012-11-17-custom-ui-controls-with-javafx-part-1 %}) a web component is composed of a layout definition, a style and controller logic. In the web world this means HTML (layout), CSS (style) and JavaScript (controller). By using polymer all 3 parts can combined in one file. Here is a skeleton for the file:
+As said a web component is a custom control for web pages. Top define a component we only need one HTML file. As in other [languages or UT toolkits]({{< ref "/posts/2012-11-17-custom-ui-controls-with-javafx-part-1" >}}) a web component is composed of a layout definition, a style and controller logic. In the web world this means HTML (layout), CSS (style) and JavaScript (controller). By using polymer all 3 parts can combined in one file. Here is a skeleton for the file:
 
 {{< highlight html >}}
 <link rel="import" href="../bower_components/polymer/polymer.html">

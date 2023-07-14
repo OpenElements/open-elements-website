@@ -5,7 +5,7 @@ author: hendrik
 categories: [General, JavaFX]
 excerpt: 'There is a way to set a global Stylesheet to all JavaFX Scenes in your app. By using the JavaFX 8 class StyleManager you can define the default CSS files.'
 ---
-You can style your JavaFX [Scene](http://docs.oracle.com/javafx/2/api/javafx/scene/Scene.html) by CSS as you can read [here]({{ site.baseurl }}{% post_url 2013-01-16-this-is-for-the-native-ones %}) and [here](http://docs.oracle.com/javafx/2/css_tutorial/jfxpub-css_tutorial.htm). All this examples show how to apply a specific Stylesheet to one Scene by using
+You can style your JavaFX [Scene](http://docs.oracle.com/javafx/2/api/javafx/scene/Scene.html) by CSS as you can read [here]({{< ref "/posts/2013-01-16-this-is-for-the-native-ones" >}}) and [here](http://docs.oracle.com/javafx/2/css_tutorial/jfxpub-css_tutorial.htm). All this examples show how to apply a specific Stylesheet to one Scene by using
 
 {{< highlight java >}}
 myScene.getStylesheets().add("path/to/custom.css");
@@ -25,7 +25,7 @@ But there is a way to set a global Stylesheet to all Scenes. By using the JavaFX
 StyleManager.getInstance().addUserAgentStylesheet(AQUA_CSS_NAME);
 {{< / highlight >}}
 
-Currently there is one bug with this. The default Stylesheet (currently [caspian]({{ site.baseurl }}{% post_url 2013-01-16-this-is-for-the-native-ones %})) is defined inside the StyleManger, too. But the default will not be set until a first Node is created. When adding a additional user defined Stylesheet a Exception is thrown. So to avoid problems you have to set the default CSS before adding a custom one. This can currently only done by calling a private API:
+Currently there is one bug with this. The default Stylesheet (currently [caspian]({{< ref "/posts/2013-01-16-this-is-for-the-native-ones" >}})) is defined inside the StyleManger, too. But the default will not be set until a first Node is created. When adding a additional user defined Stylesheet a Exception is thrown. So to avoid problems you have to set the default CSS before adding a custom one. This can currently only done by calling a private API:
 
 {{< highlight java >}}
 PlatformImpl.setDefaultPlatformUserAgentStylesheet();

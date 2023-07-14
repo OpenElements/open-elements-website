@@ -5,7 +5,7 @@ author: hendrik
 categories: [JavaFX]
 excerpt: 'I recorded a short video in that I introduce the talks and show a short preview of some JavaFX demos'
 ---
-As I mentioned [last week]({{ site.baseurl }}{% post_url 2014-08-26-javaone-2014-sessions %}) I will give 6 talks at [JavaOne](https://www.oracle.com/javaone/) this year. To get a better overview of this talks I recorded a short video in that I introduce the talks and show a short preview of some JavaFX demos:
+As I mentioned [last week]({{< ref "/posts/2014-08-26-javaone-2014-sessions" >}}) I will give 6 talks at [JavaOne](https://www.oracle.com/javaone/) this year. To get a better overview of this talks I recorded a short video in that I introduce the talks and show a short preview of some JavaFX demos:
 
 {% include posts/youtube.html id="6Qp5mezk4dA" %}
 

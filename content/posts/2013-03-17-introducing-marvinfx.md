@@ -5,7 +5,7 @@ author: hendrik
 categories: [JavaFX]
 excerpt: "For all my current JavaFX work I need a simple test framework to check the behavior of controls or complete scenes. Since I'm working more and more with the Property API I mainly wanted to to test the properties and their behavior of controls and scenes."
 ---
-For all my current JavaFX work I need a simple test framework to check the behavior of controls or complete scenes. Since I'm working more and more with the [Property API]({{ site.baseurl }}{% post_url 2013-01-10-custom-ui-controls-with-javafx-part3 %}) I mainly wanted to to test the properties and their behavior of controls and scenes.
+For all my current JavaFX work I need a simple test framework to check the behavior of controls or complete scenes. Since I'm working more and more with the [Property API]({{< ref "/posts/2013-01-10-custom-ui-controls-with-javafx-part3" >}}) I mainly wanted to to test the properties and their behavior of controls and scenes.
 
 [FEST](http://fest.easytesting.org) is doing a great job for automated tests in Swing and with [JemmyFX](http://jemmy.java.net/JemmyFXGuide/jemmy-guide.html) a first framework for JavaFX is available. But both of this framework don't have a (good) support for Properties.
 
