@@ -16,7 +16,7 @@ Unfortunately, real life is different. While the introduction is true for most o
 
 Let's assume you develop a library that adds [Server Timing](https://www.w3.org/TR/server-timing/) information to HTTP responses. Server Timing is a new W3C feature that allows you to add some metrics about the request handling to the response. The following image shows how such information would be rendered in the developer console of Chrome:
 
-![Server Timing](/assets/posts/2019-01-09-integration-docker/server-timing.png)
+![Server Timing](/posts/2019-01-09-integration-docker/server-timing.png)
 
 When developing such a feature for JavaEE an implementation of the `javax.servlet.Filter` interface is a good choice. In our library we could provide the following class:
 
@@ -70,7 +70,7 @@ createdFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true
 
 To check that the code snippet is working and your custom filter will be called for every request you need to test your library with an application server.
 
-![Server Timing](/assets/posts/2019-01-09-integration-docker/timing-request.png)
+![Server Timing](/posts/2019-01-09-integration-docker/timing-request.png)
 
 Since your library will be used in several applications soon it is important to test it with all application servers (and releases) that are used by your customers.
 
@@ -139,7 +139,7 @@ docker run -p 8080:8080
 
 After starting the containers in Docker we need to wait until the containers are started and the internal application is deployed. To do so we can write a small Java method that for example checks if a health-endpoint of the app can be reached.
 
-![Container in Docker](/assets/posts/2019-01-09-integration-docker/docker-container.png)
+![Container in Docker](/posts/2019-01-09-integration-docker/docker-container.png)
 
 Since we want to access the Docker containers for each test run they must be started automatically before the tests and shut down after the tests. In TestNG, we can use the `@BeforeClass` and `@AfterClass` (or `@BeforeGroup` and `@AfterGroup`) annotations to execute good before running the tests after and all tests are executed. Since we can start a native process in Java the following code gives an idea of how a first implementation to run our integration tests might look like:
 
@@ -179,7 +179,7 @@ public class DockerBasedTest() {
 
 With this class, we already defined a full workflow to test the internals of the sample app on several application servers. The following diagram gives an overview of the implemented steps:
 
-![Workflow](/assets/posts/2019-01-09-integration-docker/workflow1.png)
+![Workflow](/posts/2019-01-09-integration-docker/workflow1.png)
 
 By starting any test of the given test class the needed Docker containers will automatically be created and destroyed after the test was executed. To be true, you do not want to write the Docker commands in every test class. Here you can create your custom abstraction or use a library that provides such functionality.
 

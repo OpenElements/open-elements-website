@@ -13,17 +13,17 @@ After a long time without a post I will show you a first preview of the stuff I'
 
 Today I will give a sneak peak at one of the projects that will be mentioned in the talks: BoxFX
 
-![box1](/assets/posts/guigarage-legacy/box1.png)
+![box1](/posts/guigarage-legacy/box1.png)
 
 BoxFX is an application container for JavaFX applications that will run on the Raspberry Pi. It is optimized for HD resolution and can be controlled by a remote. You can simply convert any JavaFX application to BoxFX and simple install applications on a running instance. The main goal of this project is to offer a Set-Top-Box for your TV (like AppleTV or Google TV). But BoxFX will be open source and gives you the chance to develop your own applications for the TV.
 
 Each application will run in a sandbox with a special classloader and security manager. This will be very similar to JEE web applications that are running in a web container. BoxFX will provide an application profile that you can simply add as a provided dependency to your application. By using the BoxFX Maven plugin you can easily install a application on any remote BoxFX. Once an app is installed you can will see it on the BoxFX home screen:
 
-![homescreen](/assets/posts/guigarage-legacy/homescreen.png)
+![homescreen](/posts/guigarage-legacy/homescreen.png)
 
 You can control BoxFX with a remote. BoxFX will provide a open API for remotes so that you can easily create a iOS or Android app as a remote for BoxFX. I already created a JavaFX based remote:
 
-![remote](/assets/posts/guigarage-legacy/remote.png)
+![remote](/posts/guigarage-legacy/remote.png)
 
 I created a short movie about BoxFX. Hope you like it:
 

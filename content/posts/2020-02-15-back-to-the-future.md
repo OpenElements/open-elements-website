@@ -45,7 +45,7 @@ different dates:
 
 If you realized the mismatch and you are not aware of the problem you might ask yourself what the hell is happening here. While the first 3 example looks good the output of the last example contains a wrong year. You can easily try this on your own if you do not believe me ;)
 
-![Duke](/assets/posts/2020-02-15-back-to-the-future/duke-delorian.png)
+![Duke](/posts/2020-02-15-back-to-the-future/duke-delorian.png)
 
 ## It's not a bug, it's a feature
 
@@ -89,7 +89,7 @@ Since we found the problem and understood the 'ISO week date' we can say that th
 
 It might look like it won't make any difference if you use `y` or `u` as a letter for years. As long as the date is within the current era everything is fine. The Gregorian Calendar uses the "Common Era" notation. Here the 2 eras **"Common Era" (CE)** and **"Before the Common Era" (BCE)** are used. We are currently in the "Common Era" that started with year 0. An end of the "Common Era" is not defined. This definition is an alternative to Dionysian “Before Christ” (BC) and “Anno Domini” (AD) definition that is numerically equivalent but uses a different (non-religious based) wording.
 
-![Eras](/assets/posts/2020-02-15-back-to-the-future/eras.png)
+![Eras](/posts/2020-02-15-back-to-the-future/eras.png)
 
 When formatting a year by using the `DateTimeFormatter` class you can add the era to your custom pattern. The era is defined by the letter `G` as you can find out in the JavaDoc of `DateTimeFormatter`. The following table gives an overview how years will be formatted based on the 2 different types:
 

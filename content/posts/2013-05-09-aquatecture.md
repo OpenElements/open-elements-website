@@ -15,7 +15,7 @@ This will set the CSS Styles for all controls that are supported by AquaFX for y
 
 While working a lot with Aqua and reading all the Apple style guides, etc. we noticed that simply setting one style for every control type is not enough to provide a great Aqua Look and Feel for JavaFX. Many native applications use the default controls like Buttons in different variations. For example you can have smaller controls or buttons with a more rounded border than the default one. Here is good overview about the different size variations of components:
 
-![sizeVariant](/assets/posts/guigarage-legacy/sizeVariant.png)
+![sizeVariant](/posts/guigarage-legacy/sizeVariant.png)
 
 This Image is taken from the [Apple documentation of the native Swing Look&Feel for Mac OS](https://developer.apple.com/library/mac/#technotes/tn2007/tn2196.html).
 
@@ -55,6 +55,6 @@ AquaFx.skin(myButton, ButtonType.ROUND_RECT, ControlSizeVariant.SMALL);
 
 Cause all Enums implement the StyleDefinition interface you can commit as many as you want for a control. AquaFX will try to create the best look for you. Here is a example of some controls with a custom styling:
 
-![custom](/assets/posts/guigarage-legacy/custom.jpg)
+![custom](/posts/guigarage-legacy/custom.jpg)
 
 At the moment some combinations of StyleDefinition don't make sense and I gave Claudine the hint to think about a [fluent approach](http://en.wikipedia.org/wiki/Facade_pattern) for skinning this variations. So maybe this is not the final API. But I think it's at a good point to share this ideas and features with you. Hope you like it.

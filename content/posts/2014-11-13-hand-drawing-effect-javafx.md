@@ -7,23 +7,23 @@ excerpt: 'In this post I show how you can create JavaFX shapes that look like th
 ---
 Some days ago Thierry Wasylczenko blogged about [12 of his favorite JS libs](http://zeroturnaround.com/rebellabs/javascript-confessions-12-js-technologies-im-not-ashamed-of-loving/). On of the libs is [js-sequence-diagrams](http://bramp.github.io/js-sequence-diagrams/) that I did know. By using the library you can draw sequence diagrams in a browser. I really like the hand drawn theme of the tool that draw all the diagrams like they are sketched with a pen. Here is an example of the theme:
 
-![js-sequence-diagrams](/assets/posts/guigarage-legacy/js-sequence-diagrams.png)
+![js-sequence-diagrams](/posts/guigarage-legacy/js-sequence-diagrams.png)
 
 After having a look at the [source code](https://github.com/bramp/js-sequence-diagrams/blob/master/src/sequence-diagram.js) of js-sequence-diagrams I found the methods that render all the hand drawn lines. Cubic curves are used here and the control points of the curves are calculated by using random values. These two control points define the bend of the curve as you can see in the following picture:
 
-![cubic-curve](/assets/posts/guigarage-legacy/cubic-curve.png)
+![cubic-curve](/posts/guigarage-legacy/cubic-curve.png)
 
 Once I've seen this I wanted to try if I can do the same with JavaFX :)
 
 Thankfully JavaFX contains support for cubic curves. The [Path](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Path.html) shape can contain curves that can be defined by the [CubicCurveTo](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/CubicCurveTo.html) class. By using this class you can create lines and shapes that look like hand drawn onces by using the same algorithm as in js-sequence-diagrams. I created a simple test class that draws some arrows, lines and rectangles by using this algorithm. Here are some results:
 
-![sketch1](/assets/posts/guigarage-legacy/sketch1-1024x524.png)
+![sketch1](/posts/guigarage-legacy/sketch1-1024x524.png)
 
-![sketch2](/assets/posts/guigarage-legacy/sketch2.png)
+![sketch2](/posts/guigarage-legacy/sketch2.png)
 
-![sketch3](/assets/posts/guigarage-legacy/sketch3.png)
+![sketch3](/posts/guigarage-legacy/sketch3.png)
 
-![sketch4](/assets/posts/guigarage-legacy/sketch4.png)
+![sketch4](/posts/guigarage-legacy/sketch4.png)
 
 As you can see in the picture the shapes look different in each of them. This is caused by the random values that are part of the algorithm. If you want to try this here is my one class gist that contains all the code:
 

@@ -11,51 +11,51 @@ As time goes by, there are lots of freshly skinned controls, which are waiting t
 
 ### ComboBoxes
 
-![combobox](/assets/posts/guigarage-legacy/combobox.png)
+![combobox](/posts/guigarage-legacy/combobox.png)
 
-![combobox-editable](/assets/posts/guigarage-legacy/combobox-editable.png)
+![combobox-editable](/posts/guigarage-legacy/combobox-editable.png)
 
 ### ColorPickers
 
-![colorpicker](/assets/posts/guigarage-legacy/colorpicker.png)
+![colorpicker](/posts/guigarage-legacy/colorpicker.png)
 
 ### ProgressIndicator
 
-![progressIndocator-indeterminate](/assets/posts/guigarage-legacy/progressIndocator-indeterminate.png)
+![progressIndocator-indeterminate](/posts/guigarage-legacy/progressIndocator-indeterminate.png)
 
 ### Toggles & PillToggles
 
-![toggles_pills](/assets/posts/guigarage-legacy/toggles_pills.png)
+![toggles_pills](/posts/guigarage-legacy/toggles_pills.png)
 
 ### Sliders and TabPanes
 
-![tabpane-sliders](/assets/posts/guigarage-legacy/tabpane-sliders.png)
+![tabpane-sliders](/posts/guigarage-legacy/tabpane-sliders.png)
 
 ### Trees
 
-![tree](/assets/posts/guigarage-legacy/tree.png)
+![tree](/posts/guigarage-legacy/tree.png)
 
 ### Tables
 
-![tableview](/assets/posts/guigarage-legacy/tableview.png)
+![tableview](/posts/guigarage-legacy/tableview.png)
 
 ### TreeTables
 
-![treetable](/assets/posts/guigarage-legacy/treetable.png)
+![treetable](/posts/guigarage-legacy/treetable.png)
 
 ### Lists
 
-![listview](/assets/posts/guigarage-legacy/listview.png)
+![listview](/posts/guigarage-legacy/listview.png)
 
 ### Toolbar
 
-![toolbar](/assets/posts/guigarage-legacy/toolbar.png)
+![toolbar](/posts/guigarage-legacy/toolbar.png)
 
 Since MacOS has some special Controls that are not in JavaFX out-of-the-box, I started to add some of them, which will be available when using AquaFX.
 
 Here are some of them:
 
-![AquaFX-specials](/assets/posts/guigarage-legacy/AquaFX-specials.png)
+![AquaFX-specials](/posts/guigarage-legacy/AquaFX-specials.png)
 
 You can see some a HelpButton, a different rounded Variant for Buttons, a ShareButton and a GroupBox.
 
@@ -63,11 +63,11 @@ There are many more of them on my queue.
 
 So with those Buttons, you can start to make neat dialogs without any pain. This can result in:
 
-![network-demo](/assets/posts/guigarage-legacy/network-demo.png)
+![network-demo](/posts/guigarage-legacy/network-demo.png)
 
 or:
 
-![date-and-time-demo](/assets/posts/guigarage-legacy/date-and-time-demo.png)
+![date-and-time-demo](/posts/guigarage-legacy/date-and-time-demo.png)
 
 The SearchField is still missing, but since it is used so often in Mac OS in definitely will get this done, too. Just didn't want to keep back some results from you.
 

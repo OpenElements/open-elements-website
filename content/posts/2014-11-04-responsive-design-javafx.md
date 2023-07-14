@@ -11,19 +11,19 @@ Once of the new APIs that I have shown at JavaOne was __ResponsiveFX__ that can 
 
 Today software must fit a wide range of devices. When developing an application customers often want to use it on a desktop pc and on a tablet. In addition a subset of the features should be useable with a mobile phone. Oh, and maybe next year the first customers want to check information on a smart watch. Even if web apps and JavaFX applications can be distributed and used on most of this devices you can't simply use the same UI on them.
 
-![responsive1-1024x544](/assets/posts/guigarage-legacy/responsive1-1024x544.png)
+![responsive1-1024x544](/posts/guigarage-legacy/responsive1-1024x544.png)
 
 All these devices provide different screen sizes and resolutions. In addition the user interaction is in some parts completely different. While using a mouse and keyboard on a desktop pc you want to use touch and gestures on your mobile to navigate through the app.
 
 One approach to handle these issues is responsive design that can be used to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices. Responsive design was first introduced by web applications and influenced the development trends in this area. By defining different layout for specific screen sizes the fronted of a web application will look good on mostly all devices.
 
-![responsive2-1024x460](/assets/posts/guigarage-legacy/responsive2-1024x460.png)
+![responsive2-1024x460](/posts/guigarage-legacy/responsive2-1024x460.png)
 
 ## ResponsiveFX
 
 The core concept of ReponsiveFX is copied from [Twitter Boostrap](http://getbootstrap.com) that provides responsive design for HTML. Boostrap provides several CSS style classes that can be used to hide or show components on different screen sizes. Here is a short overview of all the style classes:
 
-![responsive-twitter](/assets/posts/guigarage-legacy/responsive-twitter.png)
+![responsive-twitter](/posts/guigarage-legacy/responsive-twitter.png)
 
 By adding one of these style classes to a component the visibility of the component depends on the current frame size. Here is a small example how this can be used in HTML:
 

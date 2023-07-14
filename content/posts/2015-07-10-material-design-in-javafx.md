@@ -9,9 +9,9 @@ The last weeks I worked on a prototype to create a [Material Design](https://www
 
 I tried to recreate some of the Material Design layouts and components in JavaFX. Here I don't won't to recreate everything but create a theme that is inspired by material design. By doing so I can feel free to change any point of the Material Design definition. I think the project is at a point were I can show it to you to receive some feedback and maybe contribution. Here are some pictures of a demo application that is based on the theme:
 
-![mat2](/assets/posts/guigarage-legacy/mat2-1024x819.png)
+![mat2](/posts/guigarage-legacy/mat2-1024x819.png)
 
-![mat1](/assets/posts/guigarage-legacy/mat1-711x1024.png)
+![mat1](/posts/guigarage-legacy/mat1-711x1024.png)
 
 The source of the project [can be found at GitHub](https://github.com/guigarage/sdkfx/tree/master). Currently this project provides more than the theme (and the name will change in future). The complete demo application is build without using any specific or complex layouts. By doing so it's very easy for a developer that isn't that good in layout and UI related stuff to create a cool looking application. How this can be done will be discussed in a future post.
 

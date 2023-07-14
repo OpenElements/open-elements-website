@@ -7,15 +7,15 @@ excerpt: 'The post gives a short introduction about the architecture and feature
 ---
 Last year I started to work at Canoo and some of you might know that Canoo provides the open source remoting middleware [Open Dolphin](http://open-dolphin.org/dolphin_website/Home.html). At the end of the last year I had the pleasure to work with Open Dolphin in a customer project. Based on the experience of this project I started to contribute to Open Dolphin because I think that it provides an interesting way to handle the remoting aspects of an application. In addition I will blog about Open Dolphin and how you can use it in (JavaFX) applications.
 
-![dheadt](/assets/posts/guigarage-legacy/dheadt.png)
+![dheadt](/posts/guigarage-legacy/dheadt.png)
 
 If I need to describe Open Dolphin in just a few words I would say that it is a library that syncs presentation models between a server and one or many clients. If you haven't seen such an approach before it's maybe hard to understand. Therefore I will start with a basic introduction of the core concepts with this post.
 
-![newA](/assets/posts/guigarage-legacy/newA.png)
+![newA](/posts/guigarage-legacy/newA.png)
 
 As you can see in the image the client and the server can access the same presentation model. Let's think about the presentation model as any data model. There are some best practices what kind of data should be defined in a presentation model but first of all let us define this as a model with any data in it. Both the client and the server can read data from the model or edit data in the model. Open Dolphin will automatically sync the model between the server and the client. In addition Open Dolphin supports multiple clients and therefore a more correct diagram would look something like this:
 
-![sync](/assets/posts/guigarage-legacy/sync.png)
+![sync](/posts/guigarage-legacy/sync.png)
 
 As you can see in the picture all the different clients don't know each other and the sync between the presentation models in centralized by the server. If client A edits a value in the presentation model it will be synchronized with the server. Once the server has updated it's own presentation model with the new value the server synchronizes this change with all other clients. By doing you can create applications that share exactly the same presentation model. The following video shows a short example:
 
@@ -29,7 +29,7 @@ One big benefit of Open Dolphin is its independence to UI Toolkits. By default O
 
 Next to the support of different client technologies Open Dolphin is based on the presentation model pattern. By doing so it combines many best practices to create MVC, MVP or MVVM applications. The following graphic shows how the MVC can be implemented by using Open Dolphin:
 
-![dolphin-mvc](/assets/posts/guigarage-legacy/dolphin-mvc.png)
+![dolphin-mvc](/posts/guigarage-legacy/dolphin-mvc.png)
 
 ## The presentation model
 
@@ -42,7 +42,7 @@ List<PresentationModel> allErrorModels = dolphin.findAllPresentationModelsByType
 
 A presentation model contains a set of attributes and each attribute defines a value in the presentation model. Let's have a look at the following example to describe how attributes can be defined:
 
-![attributes](/assets/posts/guigarage-legacy/attributes.png)
+![attributes](/posts/guigarage-legacy/attributes.png)
 
 In this example we have two different input fields and therefore we will define 2 different attributes:
 
@@ -74,7 +74,7 @@ Next to the name an Open Dolphin attribute is defined by a tag and a qualifier. 
 
 Another important feature of Open Dolphin is the support of server commands. On server side command handlers can be registered for a specific command. Each command is defined by a unique name and can be called from client side.
 
-![command](/assets/posts/guigarage-legacy/command.png)
+![command](/posts/guigarage-legacy/command.png)
 
 By doing so you can trigger server commands from client side. In a server command the presentation models can be accessed and modified. By doing so you can define a save command for example. Once the command is triggered you can convert the current content of the presentation model into business entities and persist them in a database.
 
@@ -98,7 +98,7 @@ By doing so the command will be called on server side.
 
 The 3 most important interfaces of Open Dolphin are Dolphin, PresentationModel and Attribute. All three interfaces are defined in the dolphin-core module. In addition to the core model Open Dolphin provides a module for the client and the server side. Each of this modules contains a specialization of the interfaces. The dolphin-client module contains the ClientDolphin, ClientPresentationModel and CLientAttribute interfaces that extend the base ones for example.
 
-![interfaces](/assets/posts/guigarage-legacy/interfaces.png)
+![interfaces](/posts/guigarage-legacy/interfaces.png)
 
 By doing so you need only one dependency for the client and one dependency for the server to use open dolphin:
 

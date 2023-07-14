@@ -7,7 +7,7 @@ excerpt: 'Today the Review Ballot Results for JSR377 (Desktop|Embedded Applicati
 ---
 Today [the Review Ballot Results for JSR377 (Desktop|Embedded Application API)](https://jcp.org/en/jsr/results?id=5744) were published. As you can see the JSR was well received:
 
-![votes](/assets/posts/guigarage-legacy/votes.png)
+![votes](/posts/guigarage-legacy/votes.png)
 
 Spec lead Andres Almiray published [the official web page](http://jsr377.github.io/site/) for the JSR today.
 

@@ -13,7 +13,7 @@ In this blog post I will create an interactive web application based on Google P
 
 [Google Polymer](https://www.polymer-project.org/1.0/) is an open source toolkit that is build based on the [web component specification]({{ site.baseurl }}{% post_url 2015-02-15-use-webcomponents-today %}) and provides some additional features. In addition Polymer provides it's own UI component suite that is based on the [Material Design style by Google](https://www.google.com/design/spec/material-design/introduction.html).
 
-![pol-arch](/assets/posts/guigarage-legacy/pol-arch-1024x348.png)
+![pol-arch](/posts/guigarage-legacy/pol-arch-1024x348.png)
 
 Based on Polymer and web components it's very easy to create a web application that is based on custom components instead falling in the `<div>` hell.
 
@@ -30,7 +30,7 @@ Here is a short example that shows how a Google maps web component can be integr
 <google-map latitude="37.790" longitude="-122.390"></google-map>
 {{< / highlight >}}
 
-![map](/assets/posts/guigarage-legacy/map-300x287.png)
+![map](/posts/guigarage-legacy/map-300x287.png)
 
 Polymer provides an [element catalog](https://elements.polymer-project.org) with documentation and many examples of all components that are part of the lib.
 
@@ -43,7 +43,7 @@ Let's start with a first project that uses Polymer and the Polymer paper compone
 
 Our final application should be a picture viewer that support some user interaction. I want to change the size of all images by using a slider. Here is a first sketch:
 
-![app-design](/assets/posts/guigarage-legacy/app-design-1024x760.png)
+![app-design](/posts/guigarage-legacy/app-design-1024x760.png)
 
 To use the Polymer paper components we only need 1 dependency to `PolymerElements/paper-elements` in the bower file. If you are not familiar with [Bower](http://bower.io) you can find a short introduction [here]({{ site.baseurl }}{% post_url 2015-02-12-short-introduction-bower %}).
 
@@ -168,17 +168,17 @@ This code snippet defines a Polymer based web component that can be added to a h
 
 Here is a pic of the current state in chrome:
 
-![content](/assets/posts/guigarage-legacy/content-1024x814.png)
+![content](/posts/guigarage-legacy/content-1024x814.png)
 
 As a Java developer I simply use IntelliJ to test my app. By opening the page from IntelliJ the IDE starts automatically a web server to provide the web app.
 
-![intellij](/assets/posts/guigarage-legacy/intellij-1024x771.png)
+![intellij](/posts/guigarage-legacy/intellij-1024x771.png)
 
 If you don't use IntelliJ there are [several](https://developers.google.com/web/tools/polymer-starter-kit/) [other](https://www.npmjs.com/package/gulp-webserver) [ways](http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python) how you can test your app.
 
 Let's add some first Polymer paper elements. Here I want to start with a [`paper-header-panel`](https://elements.polymer-project.org/elements/paper-header-panel) that defines a header and a content area. The header area is always on top and you can use it perfectly to display a toolbar. The content are will fill the rest of the page size and is scrollable by default.
 
-![content-panel](/assets/posts/guigarage-legacy/content-panel.png)
+![content-panel](/posts/guigarage-legacy/content-panel.png)
 
 In this header panel we want to add a toolbar with a title and a slider. For all these components Polymer paper offers ready to use web components. How this components can be used is documented in the [Polymer elements catalog](https://elements.polymer-project.org). Once this is done our code look like this:
 
@@ -223,7 +223,7 @@ In this header panel we want to add a toolbar with a title and a slider. For all
 
 In chrome we can already see the toolbar but the layout doesn't look that perfect:
 
-![preview2](/assets/posts/guigarage-legacy/preview2-1024x814.png)
+![preview2](/posts/guigarage-legacy/preview2-1024x814.png)
 
 Polymer provides a [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) based layout that can be simply modified by using custom attributes that are [provided by Polymer](https://elements.polymer-project.org/guides/flex-layout). I don't want to dive deep here in flexbox and Polymer layout (since this post is already very long) and simply show the final code:
 
@@ -269,7 +269,7 @@ Polymer provides a [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flex
 </html>
 {{< / highlight >}}
 
-![preview3](/assets/posts/guigarage-legacy/preview3-1024x814.png)
+![preview3](/posts/guigarage-legacy/preview3-1024x814.png)
 
 Ok, as a next step I want to add some static images. Therefore I will use [lorempixel.com](http://lorempixel.com) that is a perfect service to get some random images. After adding some images to the content as shown in the following code snippet our application already look like some kind of image viewer:
 
@@ -282,7 +282,7 @@ Ok, as a next step I want to add some static images. Therefore I will use [lorem
 </div>
 {{< / highlight >}}
 
-![with-images](/assets/posts/guigarage-legacy/with-images-1024x656.png)
+![with-images](/posts/guigarage-legacy/with-images-1024x656.png)
 
 Thanks to the flex box layout that is used in Polymer the images are aligned in a responsive grid. When resizing the browser windows the column count in each row will fit to the width of the browser. In addition a scrollbar automatically appears if all images can't be shown on screen.
 
@@ -358,7 +358,7 @@ As a next step I want to finalize the styling of our application by adding some 
 </html>
 {{< / highlight >}}
 
-![preview5](/assets/posts/guigarage-legacy/preview5-1024x577.png)
+![preview5](/posts/guigarage-legacy/preview5-1024x577.png)
 
 Ok, this will be enough for today :)
 

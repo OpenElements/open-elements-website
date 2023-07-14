@@ -7,7 +7,7 @@ excerpt: 'This post describes how the Concurrency in UI Toolkits can be defined 
 ---
 Today every UI toolkit that is not running in a browser needs an UI Thread the handle the repainting and the event handling of the UI. Examples for this kinds of UI Toolkits are iOS, Android, SWT, JavaFX or Swing. Each of this toolkits defines a thread that will handle all the ui specific calls. Let's call this thread "UI Thread".
 
-![ui-thread](/assets/posts/guigarage-legacy/ui-thread.png)
+![ui-thread](/posts/guigarage-legacy/ui-thread.png)
 
 By definition all calls that will affect the UI or get data of the UI must be called on this thread. Accessing the UI from another thread than the UI Thread will result in a lot of different problems.
 
@@ -19,7 +19,7 @@ button.setOnAction(event -> button.setEnabled(false));
 
 If you want to interact with the UI from outside of an event you need to invoke your code on the "UI Thread".
 
-![invokeLater](/assets/posts/guigarage-legacy/invokeLater.png)
+![invokeLater](/posts/guigarage-legacy/invokeLater.png)
 
 Each UI Toolkit provides a helper method to handle this invocation. In a UI Toolkit independent and unified way this method might look like this:
 
@@ -29,7 +29,7 @@ void runOnUiToolkitThread(Runnable runnable);
 
 By doing so any runnable can be called on the UI Thread. This is ok for some general use cases but it's definitely not enough to create an big application. One of the big problems is that you don't know when the code will be called and when the call is finished. The definition of this method only says that the code will be called in some future on the UI Thread. Therefore we need a second method that blocks until the call is finished.
 
-![invokeAndWait](/assets/posts/guigarage-legacy/invokeAndWait.png)
+![invokeAndWait](/posts/guigarage-legacy/invokeAndWait.png)
 
 In most cases this method will have the same signature as the previous one. Let's define the method in a unified way:
 
@@ -49,7 +49,7 @@ default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedEx
 
 This looks good so far but there is still a problem. As said the UI must only be accessed by using the UI Thread. Let's think about a background thread that want's to call a web service based on some user input. To do so the thread needs to know the input of a textfield, for example. Because we can't access the text from the background thread we need to invoke the call to the UI Thread:
 
-![access](/assets/posts/guigarage-legacy/access.png)
+![access](/posts/guigarage-legacy/access.png)
 
 The following code shows how such a call might look like:
 

@@ -7,15 +7,15 @@ excerpt: 'For JavaOne I created some JavaFX APIs that contains basic utilities a
 ---
 By default the cells of a `ListView` will show only a string representation of your data on screen. This is ok for a basic implementation and will work for a lot of use cases. But if you have a application that contains a big list like a news feed or a chat you need a better skin for the cells. For JavaOne I created some JavaFX APIs that contains basic utilities and controls that can be easily integrated in any JavaFX application. The `ui-basics` module contains some custom list cells that can be used to enrich your JavaFX application. By using this cells we can achieve the following UI change with only a few lines of Java code:
 
-![media-cell](/assets/posts/guigarage-legacy/media-cell.png)
+![media-cell](/posts/guigarage-legacy/media-cell.png)
 
 The following graphics shows the inheritance of the new cell classes:
 
-![ext-257x300](/assets/posts/guigarage-legacy/ext-257x300.png)
+![ext-257x300](/posts/guigarage-legacy/ext-257x300.png)
 
 The `StructuredListCell` defines a cell that splits a cell in 3 regions: left, center and right. The center region will grow by default:
 
-![cell-layout](/assets/posts/guigarage-legacy/cell-layout.png)
+![cell-layout](/posts/guigarage-legacy/cell-layout.png)
 
 You can add any content to the cell by calling the following methods:
 
@@ -35,7 +35,7 @@ In addition the cell provides some new CSS attributes to style it:
 
 The `MediaListCell` extends this cell definition. It sets the center content to a a title and a description label. If you want to use the cell you only need to call `setTitle(...)` and `setDescription(...)` to define the center content:
 
-![tite-desc](/assets/posts/guigarage-legacy/tite-desc.png)
+![tite-desc](/posts/guigarage-legacy/tite-desc.png)
 
 The class provides default style classes for both labels:
 
@@ -110,6 +110,6 @@ All the cell classes are part of the `ui-basics` module that can be found at git
 
 At the moment I plan some new features for the cells. As you might have registered the right region wasn't used in this example. In most UIs this is used to define a user action or hint like shown in this image:
 
-![showroom](/assets/posts/guigarage-legacy/showroom.png)
+![showroom](/posts/guigarage-legacy/showroom.png)
 
 I plan to add this as a default feature. In addition I will provide different styles for the image view. Maybe you don't want a rounded view. In this case it would be perfect to define a style by css. Please ping me if you have some other cool improvements :)

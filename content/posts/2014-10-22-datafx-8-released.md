@@ -15,7 +15,7 @@ I'm proud to announce that we have released DataFX 8.0 last week. With DataFX 2.
 
 I think one of the big benefits of DataFX is that it has hardly any external dependency. The following graph shows the internal and external dependencies of DataFX 8:
 
-![datafx-dep.016](/assets/posts/guigarage-legacy/datafx-dep.016.png)
+![datafx-dep.016](/posts/guigarage-legacy/datafx-dep.016.png)
 
 As you can see in the picture next to the javassist dependencies all other dependencies are Java specs.
 
@@ -31,7 +31,7 @@ When working with background tasks you will need a thread pool to manage all the
 
 When developing an enterprise application with JavaFX you will need to define background tasks to call some server endpoints or start batch processes. Normally you will react to the answer of the tasks and update the UI. For example if you call a REST endpoint to receive some data you want to display the data on screen once the call is done. Doing this in the JavaFX Application thread isn't the best idea. You don't know how long the task will need to execute and therefore the application can't be repainted while the call is executing. This will end in a frozen application and frustrated users.
 
-![frozen](/assets/posts/guigarage-legacy/frozen.png)
+![frozen](/posts/guigarage-legacy/frozen.png)
 
 It's import to execute the server call (as any long running action) to a background thread. Doing this with the basic JavaSE concurrency tools will blow up your code and create methods that aren't readable. Here is a simple example of a function that will call a background task and show it's result on screen:
 
@@ -56,7 +56,7 @@ Runnable backgroundRunnable = () -> {
 
 I hope you are with me when saying that this code isn't as readable as it should be. In Swing Java contains a good helper class called the [SwingWorker](http://docs.oracle.com/javase/tutorial/uiswing/concurrency/simple.html). By using this class it was easier to create background tasks that provide data for the fronted.
 
-![background-thread](/assets/posts/guigarage-legacy/background-thread.png)
+![background-thread](/posts/guigarage-legacy/background-thread.png)
 
 It's still a lot of code that is needed to create a working SwingWorker because anonymous classes are needed. But today we have Lambdas, functional interfaces and all this cool language features and therefore you wouldn't code a background tasks this way. In DataFX 8 we introduce the ProcessChain class that is like a SwingWorker on steroids. Here is a small example that shows how the top code can be refactored by using the ProcessChain:
 

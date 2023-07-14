@@ -18,11 +18,11 @@ An overview about this specs and how they can be used in HTML can be found in th
 
 By using the template tag you can define a reusable template of a HTML hierarchy that can be reused and added to your DOM. Let's say you define the following template:
 
-![template](/assets/posts/guigarage-legacy/template.png)
+![template](/posts/guigarage-legacy/template.png)
 
 Once you have defined this template you can create a instance in JavaScript and add it to the DOM of the page:
 
-![template_to_dom](/assets/posts/guigarage-legacy/template_to_dom.png)
+![template_to_dom](/posts/guigarage-legacy/template_to_dom.png)
 
 By doing so you can reuse the defined template several times in your page.</p>
 
@@ -30,7 +30,7 @@ By doing so you can reuse the defined template several times in your page.</p>
 
 Let's say you have defined a template (or a web component as we will see later) and use it in your application. By doing so the DOM of your component will be added to the page DOM. If you than want to style your page by using CSS or access the page by JavaScript there are some pitfalls. As an example the following DOM is created and a component (green) is added to the regular DOM (blue). A node in the page and in the component uses the same ID or style class:
 
-![shadow-1](/assets/posts/guigarage-legacy/shadow-1.png)
+![shadow-1](/posts/guigarage-legacy/shadow-1.png)
 
 Maybe the component was created by a different developer or it is part of a 3rd party module. In this case you maybe don't know about the internal IDs or style classes. When styling or modifying your application you would use the following code:
 
@@ -46,7 +46,7 @@ document.querySelector(".content")
 
 In both cases your code will affect the node in the regular DOM and in the component. But normally you don't want to change the component. Therefore the Shadow DOM was introduced. By using the shadow DOM the nodes of the component are separated from the regular DOM:
 
-![shadow-3](/assets/posts/guigarage-legacy/shadow-3.png)
+![shadow-3](/posts/guigarage-legacy/shadow-3.png)
 
 Once this is done CSS or JavaScript changes won't affect the component that is capsulated by the Shadow DOM. A component in a Shadow DOM can be created by using JavaScript:
 
@@ -62,7 +62,7 @@ The Custom Elements spec makes use of templates and the shadow DOM. By doing so 
 
 By using the Custom Elements spec you can define reusable tags for your components. Let's say you want to define a activity stream like in Facebook or Twitter. To do so we want to create a custom element for the entries in this stream.
 
-![elements-1](/assets/posts/guigarage-legacy/elements-1.png)
+![elements-1](/posts/guigarage-legacy/elements-1.png)
 
 Normally you need to define a div hierarchy for any entry in the stream. This ends in a lot of boilerplate code like shown in the following snippet:
 
@@ -159,6 +159,6 @@ A god starting point is the [webcomponents.org](http://webcomponents.org) page t
 
 When trying to create your first own web component you will maybe see a big problem: Today most of the modern browsers don't support this new specs.
 
-![wc-browser-support](/assets/posts/guigarage-legacy/wc-browser-support.png)
+![wc-browser-support](/posts/guigarage-legacy/wc-browser-support.png)
 
 As a workaround you can use the __webcomponents.js polypill__ that will add the support of the shown specs to mostly all evergreen browsers. I plan to give an introduction to this polypill in a separate post.

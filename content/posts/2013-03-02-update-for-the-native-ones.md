@@ -13,7 +13,7 @@ As Jonathan suggested, the whole project is realized in JavaFX 8.
 
 In the first step, the proof-of-concept dialog had to be migrated to be up-to-date again. Pretty soon, I could welcome my dialog in JavaFX8:
 
-![shutdown_fx81](/assets/posts/guigarage-legacy/shutdown_fx81.png)
+![shutdown_fx81](/posts/guigarage-legacy/shutdown_fx81.png)
 
 All components look like mountain lion again.
 
@@ -23,43 +23,43 @@ What about those neat components:
 
 TextField:
 
-![textfield-300x79](/assets/posts/guigarage-legacy/textfield-300x79.png)
+![textfield-300x79](/posts/guigarage-legacy/textfield-300x79.png)
 
 PasswordField:
 
-![pw-300x67](/assets/posts/guigarage-legacy/pw-300x67.png)
+![pw-300x67](/posts/guigarage-legacy/pw-300x67.png)
 
 TextArea:
 
-![textarea-300x91](/assets/posts/guigarage-legacy/textarea-300x91.png)
+![textarea-300x91](/posts/guigarage-legacy/textarea-300x91.png)
 
 RadioButton:
 
-![radio.png](/assets/posts/guigarage-legacy/radio.png.png)
+![radio.png](/posts/guigarage-legacy/radio.png.png)
 
 CheckBox:
 
-![check-242x300](/assets/posts/guigarage-legacy/check-242x300.png)
+![check-242x300](/posts/guigarage-legacy/check-242x300.png)
 
 ChoiceBox:
 
-![choice](/assets/posts/guigarage-legacy/choice.png)
+![choice](/posts/guigarage-legacy/choice.png)
 
 ToggleButton:
 
-![toggle-300x53](/assets/posts/guigarage-legacy/toggle-300x53.png)
+![toggle-300x53](/posts/guigarage-legacy/toggle-300x53.png)
 
 ScrollBar:
 
-![scrollbar1-300x51](/assets/posts/guigarage-legacy/scrollbar1-300x51.png)
+![scrollbar1-300x51](/posts/guigarage-legacy/scrollbar1-300x51.png)
 
-![scrollbar2-300x49](/assets/posts/guigarage-legacy/scrollbar2-300x49.png)
+![scrollbar2-300x49](/posts/guigarage-legacy/scrollbar2-300x49.png)
 
 Just for the moment, everything is crafted in a little dialog, where I have an overview over all results untill now.
 
 The good news in this context is, that all of this stuff works on retina- and non-retina macs and looks the same:
 
-![demodialog1-687x1024](/assets/posts/guigarage-legacy/demodialog1-687x1024.png)
+![demodialog1-687x1024](/posts/guigarage-legacy/demodialog1-687x1024.png)
 
 ## The development and different struggles
 

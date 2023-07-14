@@ -7,19 +7,19 @@ excerpt: 'Often icons are very important for a good UI. They will create a moder
 ---
 Often icons are very important for a good UI. They will create a modern and professional look and will help the user to understand the meaning of actions. Especially on small screens icons are important. For a mobile application you won't create a toolbar with 5 actions that are described by a long text. In the following screenshot 3 actions are defined in the toolbar by using only icon:
 
-![Bildschirmfoto](/assets/posts/guigarage-legacy/Bildschirmfoto-2014-09-16-um-21.21.04-744x1024.png)
+![Bildschirmfoto](/posts/guigarage-legacy/Bildschirmfoto-2014-09-16-um-21.21.04-744x1024.png)
 
 I think that mostly all users will understand that these actions defines a back action and 2 actions to change the volume.
 
 Today applications will be developed for different hardware and therefore for different screen resolutions. Let's think about the retina displays. Here you will have a 4x bigger resolution than on normal screens. In an ideal case an applications supports this devices and will fit its size and content. But that means, that all controls will have a 4x bigger size. Often you will use images for your icons. But resizing them will create a pixelated view. For a Mac retina display you can use the ["@2"-syntax](https://developer.apple.com/library/ios/qa/qa1686/_index.html) to provide retina images. But sometimes you want to scale an icon even bigger (Maybe you want to scale it in an animation, for example). Thats why you should use vector based icons:
 
-![pvv-300x141](/assets/posts/guigarage-legacy/pvv-300x141.png)
+![pvv-300x141](/posts/guigarage-legacy/pvv-300x141.png)
 
 Ok, that sounds reasonable but where can we find vector based icons and how can we integrate them in JavaFX?
 
 For me the best resource for vector based icons is [Font Awesome](http://fortawesome.github.io/Font-Awesome/) that is a font which contains over 450 vector based icons. Here is a short extract:
 
-![awe](/assets/posts/guigarage-legacy/video-player-icons.png)
+![awe](/posts/guigarage-legacy/video-player-icons.png)
 
 Because it is a font it can simply be integrated to any JavaFX application ([see this post]({{ site.baseurl }}{% post_url 2014-10-01-integrate-custom-fonts-javafx-application-using-css %})). Once the font is assigned to a control you can define an icon by setting the text of the control. Here a special unicode character need to be set as the text. The following example describes how to set the pen icon to a button:
 

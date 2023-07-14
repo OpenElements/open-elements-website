@@ -36,7 +36,7 @@ As you can see it is really easy to call DataFX actions in code. As a next step 
 
 Let's say we have a main view and 3 sub views. In the main view you can choose by using radio buttons to which view you want to navigate.
 
-![mainview](/assets/posts/guigarage-legacy/mainview.png)
+![mainview](/posts/guigarage-legacy/mainview.png)
 
 To do so we create a controller with the "navigate" buttons and the radio buttons. As a next step we need to define a ToggleGroup for all the radio buttons. This group manages the RadioButton instances. By doing so you can only select one RadioButton. This is a JavaFX basic feature. If you want to now more about RadioButtons and ToggleGroups you should [buy this book]({{ site.baseurl }}{% link pages/mastering-javafx-controls.md %}) or visit this training. After this is done the controller should look like this:
 
@@ -128,6 +128,6 @@ public class MainController {
 
 Once this is done you can select the wanted view in the UI and by clicking the "navigate" button the view will change to the selected one.
 
-![nav](/assets/posts/guigarage-legacy/nav.png)
+![nav](/posts/guigarage-legacy/nav.png)
 
 All the view controllers for the subviews are defined as shown in earlier tutorials. You can find the complete code of the example [here](https://bitbucket.org/datafx/datafx/src/0352a3543b378d8bd37a5f7f25d3137525e3a761/modules/tutorials/?at=default).

@@ -20,19 +20,19 @@ Last year Oracle announced a new release train for Java and this new schedule re
 
 Until now it was (for most developers) fairly simple to build and run an application on a supported version of Java. Until Java 8 all version had a quite long lifetime and free updates were still provided after the next version was released. Thus, the period in which a company could safely update Java to the newest version was quite long. The following diagram shows a time graph of the last Java releases and the time of its official support by oracle.
 
-![Java release train](/assets/posts/2018-06-25-java-releases/diagramm-past.png)
+![Java release train](/posts/2018-06-25-java-releases/diagramm-past.png)
 
 As you can see in the diagram the free support of a Java version was quite long and the timespan in which 2 versions were supported in parallel was long enough to plan and handle a migration of your software to the newest Java version. Even if this period was to short based on some constraints it was possible to extend it by buying commercial support for a Java version.
 
 As already said all this will change in the future because of the new release train for Java. The following image shows the release train as it was announced by Oracle.
 
-![Future Java release train](/assets/posts/2018-06-25-java-releases/diagramm-oracle-1.png)
+![Future Java release train](/posts/2018-06-25-java-releases/diagramm-oracle-1.png)
 
 Starting with Java 9 most Java version will only have a lifetime of 6 months. Updates won't be provided for the version after this period. Even if you have a commercial contract with Oracle you won’t get any additional updates for Java 9 or 10 after these 6 months. Plus, all 3 years a LTS (long term support) version of Java will be released. The first version with LTS support will be Java 11 that is scheduled for fall 2018. This LTS version will provide a commercial support with updates for 8 years. The most important fact is that updates for LTS versions can only be accessed and used by people that buy commercial support at Oracle. My experience is that today most companies that develop Java based software do not have commercial support since the release train of Java was quite „friendly“ and an adoption of the newest version was easily possible.
 
 But there is another important change in the licence model of the Oracle JDK. So far, most developers simply downloaded a single Java version from Oracle (JRE or JDK) and installed it into all environments (development, testing and production). Starting with Java 11, the Oracle JDK is restricted to development and testing environments. Oracle JDKs may only be used in production if you buy the commercial support. Instead, Oracle will provide Java builds based on OpenJDK for free which can be used in production. But for the official Oracle JDK the real roadmap will look like this:
 
-![Future Oracle JDK release train](/assets/posts/2018-06-25-java-releases/diagramm-oracle-2.png)
+![Future Oracle JDK release train](/posts/2018-06-25-java-releases/diagramm-oracle-2.png)
 
 ## Why is Oracle doing this?
 
@@ -40,7 +40,7 @@ You might ask why Oracle changes the releases of Java in such a big way. To be t
 
 The most important point for faster releases of Java is the early availability of new features. Between the release of Java 7 and Java 8 was a period of 3 years and that was more or less the time we as developers needed to wait for new features like e.g. lambdas. With the new release train, new features can easily be published every 6 month. To be true a feature like lambdas or the Java module system needs much more time than 6 month to be implemented but once it's ready it can be added to the next version that will be released at least 6 month later. In the past, Java releases were delayed since some important features simply were not production ready at the code freeze. Since Oracle didn't want to move that features to next release the complete JDK release was delayed. With a new release every 6 months skipping a feature and adding it to one of the next versions is no problem anymore.
 
-![Duke](/assets/posts/2018-06-25-java-releases/duke-11.jpg)
+![Duke](/posts/2018-06-25-java-releases/duke-11.jpg)
 
 There is a second point that will provide a big benefit to Oracle. With the new schedule, the period in which Oracle needs to provide free support for more than 1 Java version is completely gone. Therefore, companies need to plan migrating to new Java versions in a much stricter way than before. Because of internal constraints, like resources, not all companies will be able to update to a new Java version every 6 months. That's why Oracle provides an extended commercial support model for companies to use the LTS version of Java much longer than 6 months and to receive bugfixes and security updates after the end of the public support. Since the commercial support might become an important option for several companies in the near future we will have a deeper look at its conditions and price now.
 
@@ -101,7 +101,7 @@ The OpenJDK is the open source part of Java that is also used to build the Oracl
 
 Oracle and the OpenJDK itself are not the only players that provide native builds based on the open sources of Java. Some IT companies provide specific JDK builds for their products. A good example is IBM that provides its own JDK for AIX systems. Also the first companies with a business model based on native Java builds have recently shown up. The biggest player is definitely Azul. With the new release model of Java and the need for commercial support in the near future maybe more companies will emerge based on the business model of providing Java build artifacts for the different needs. While this might be an interesting future for Java no one knows today what impact this will have in IT companies. Therefore we should have a concrete look at the vendors that are already on the market today.
 
-![Duke](/assets/posts/2018-06-25-java-releases/duke-logos.jpg)
+![Duke](/posts/2018-06-25-java-releases/duke-logos.jpg)
 
 ### OpenJDK
 
@@ -111,7 +111,7 @@ Open JDK provides builds that are directly based on the open source part of Java
 
 It looks like Azul offers a really good support for all companies that do not want to skip all Java version between LTS releases but can not switch to the newest version every 6 month. In addition to the support for all LTS releases - Azul provides 1 more year of support than Oracle - Azul offers support for so called MTS (Medium Term Support) releases for the Zulu JDK. With this, companies can buy commercial support for every second Java version. The support duration of those versions are different. Azul tries to provide a good time range to prepare a migration to the next version and defines 3 different durations for support of Java versions. The following image gives an overview of the future Java version and the period supported by Azul.
 
-![Azul roadmap](/assets/posts/2018-06-25-java-releases/diagramm-azul.png)
+![Azul roadmap](/posts/2018-06-25-java-releases/diagramm-azul.png)
 
 Because Zulu is a Java distribution targeting server side applications, Azul does not provide any support model for Java on the desktop. Unlike Oracle the commercial support of Zulu is not defined per CPU but based on the number of systems. A system is defined as a physical or virtual server or a desktop PC. As you can see in the following table, the support model does not really make sense for desktop applications but is quite interesting for server side applications.
 

@@ -11,7 +11,7 @@ When developing an application you should add automated tests. Oh, sorry - I mea
 
 That's right but the JavaFX community is prepared for this problem by offering [TestFX](https://github.com/TestFX/TestFX). With TestFX you can create unit tests for JavaFX applications. Let's imagine you have an application that only contains a login dialog:
 
-![login](/assets/posts/guigarage-legacy/login.png)
+![login](/posts/guigarage-legacy/login.png)
 
 You can automatically test this dialog by using the TestFX API. I coded test might look like this:
 
@@ -47,7 +47,7 @@ Web developers already know this problem and introduced a pattern to avoid it: [
 
 Since we don't have pages in JavaFX applications I would call it __"View Objects Pattern"__ instead. By using this pattern you will define a class / object for each view in your application. Let's image we have a music application with the following workflow:
 
-![workflow](/assets/posts/guigarage-legacy/test-workflow.png)
+![workflow](/posts/guigarage-legacy/test-workflow.png)
 
 The applications contains 4 different views. To write tests for the application we should create a view object for each view. Here is an pseudo code example for the album overview:
 

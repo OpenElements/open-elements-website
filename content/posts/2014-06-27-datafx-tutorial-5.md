@@ -9,15 +9,15 @@ This is the last tutorial about the basic flow and action API of [DataFX]({{ sit
 
 In this tutorial I want to show how flows can be interlaced. Therefore we create a new variation of the wizard app that was shown in [tutorial 4]({{ site.baseurl }}{% post_url 2014-06-08-datafx-tutorial-4 %}). The application should provide a simple wizard with some steps. Here is an overview how the dialogs and the flow where defined in tutorial 4:
 
-![flow3](/assets/posts/guigarage-legacy/flow3.png)
+![flow3](/posts/guigarage-legacy/flow3.png)
 
 Once the application is finished it will look like the own that was created last time:
 
-![views](/assets/posts/guigarage-legacy/views.png)
+![views](/posts/guigarage-legacy/views.png)
 
 The last implementation of the wizard has one weak point in its architecture: Each step of the wizard is defined as a view in a flow. The view contains the complete view of the application and so also the action toolbar is part of each view. In the last tutorial we extracted the toolbar in a separate FXML file but the controls were created for each view individually. But the toolbar has the same functionality on each view and normally it should be one single instance and only the view in the center of the application should change:
 
-![tut5-2](/assets/posts/guigarage-legacy/tut5-2.png)
+![tut5-2](/posts/guigarage-legacy/tut5-2.png)
 
 This more logical structure is part of this tutorial and by using interlaced flows the favored behavior can be created. As always we will start by creating the FXML files for the application. Because the top views of the wizard should be defined in a separate flow there will be FXML files for the views that only contain the content of one wizard step. Here is an example for the first step:
 
@@ -62,7 +62,7 @@ The FXML defines a HBox that include the 3 action buttons.
 
 Once this is done the application is defined by the following FXML files:
 
-![tut5-3](/assets/posts/guigarage-legacy/tut5-3.png)
+![tut5-3](/posts/guigarage-legacy/tut5-3.png)
 
 As a next step a master FXML file is needed that includes the different components. As shown in then last tutorial the fx:include tag can be used to include FXML files within each other. Because the toolbar will be static component and the bottom of the application it can be included in the main FXML file. The wizard views on the top will change. Therefore we add a StackPane to the main FXML file that will hold the views. Here is the FXML file:
 
@@ -96,7 +96,7 @@ As a next step a master FXML file is needed that includes the different componen
 
 The StackPane that will hold the central views of the wizard is defined by the unique id "centerPane". Once this is done all FXML files are finished and we can start to code in JavaFX. Let's take a look at the general structure of the application before we start to define the needed flows. As said the application will contain two flows that are interlaced. Here is a graphic that shows the structure:
 
-![tut5-1](/assets/posts/guigarage-legacy/tut5-1.png)
+![tut5-1](/posts/guigarage-legacy/tut5-1.png)
 
 We will start with the view controller classes for all the wizard steps. Because the action toolbars isn't part of this views anymore and they contain only a label the code is very short :) Here is the class for the first view controller:
 

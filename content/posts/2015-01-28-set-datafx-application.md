@@ -11,13 +11,13 @@ A lot of people start using DataFX in small projects without a build file and by
 
 Every stable DataFX build can be found at Maven Central. If you are new to Maven or Maven Central just open this [link](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.datafx%22). On the page you will find all artifacts of DataFX. If you for example want to use DataFX core you can download the jar, sources and javadoc [here](http://search.maven.org/#artifactdetails%7Cio.datafx%7Ccore%7C8.0%7Cjar).
 
-![maven central](/assets/posts/guigarage-legacy/maven-central.png)
+![maven central](/posts/guigarage-legacy/maven-central.png)
 
 Each DataFX artifact is defined by the group-id, artifact-id and version. The group-id is always "io.datafx" and the artifact-id depends on the DataFX-Module. If you for example want to create an application that is suing the DataFX Flow you need the datafx-flow module and all it's dependencies. At the moment the last stable version is 8.0.
 
 If you want to download the DataFX jars by hand and add them to your application you need to download all dependencies of the module, too. Thankfully DataFX doesn't have much dependencies. Here is an overview:
 
-![datafx-dep.016](/assets/posts/guigarage-legacy/datafx-dep.016.png)
+![datafx-dep.016](/posts/guigarage-legacy/datafx-dep.016.png)
 
 Once you have downloaded the last version of DataFX and added the jars to the class path of your application you can start coding.
 

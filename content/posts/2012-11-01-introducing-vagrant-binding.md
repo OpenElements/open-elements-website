@@ -190,7 +190,7 @@ public static VagrantConfiguration createConfig() {
 
 The "VagrantTestRule" syncs every single test with the livecycle of the Vagrant environment. Each vm that is defined in the environments starts before the UnitTests runs and stops after the test:
 
-![unitTest](/assets/posts/guigarage-legacy/unitTest.png)
+![unitTest](/posts/guigarage-legacy/unitTest.png)
 
 You can access the environment and execute commands on the virtual machines by SSH for example while the test is running by calling "testRule.getEnvironment()".
 

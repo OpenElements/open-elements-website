@@ -11,11 +11,11 @@ In this post I will show a first end to end example of the Dolphin Platform. In 
 
 The application that I will create in this post might not be the coolest one but I think that it gives a good overview of the Dolphin Platform concepts and APIs. The final application should calculate the sum of to values and look like it is shown in the following picture:
 
-![Calc1](/assets/posts/guigarage-legacy/Calc1-1024x292.png)
+![Calc1](/posts/guigarage-legacy/Calc1-1024x292.png)
 
 A user can type in 2 values in the textfields on the left and the result textfield will automatically be updated. In addition I will add a "reset" button that resets the content of the textfields. In general the complete functionality can be described like it is sketched in this picture:
 
-![calc](/assets/posts/guigarage-legacy/calc-1024x276.png)
+![calc](/posts/guigarage-legacy/calc-1024x276.png)
 
 As the complete controller logic will be defined on the server when using Dolphin Platform the addition of the values and the reset action will be defined in server side controller. This might be very useful for this small example but think about bigger applications with complex calculation or a persistence layer. In addition you don't need to code the logic several times if you want to support desktop, mobile and web clients.
 
@@ -25,7 +25,7 @@ Before we start to create the application by using the Dolphin Platform I will c
 
 As a first step I will create the layout of the application by using the SceneBuilder that can be [downloaded at Gluon](http://gluonhq.com/open-source/scene-builder/). Here is a picture of my final layout in SceneBuilder:
 
-![scenebuilder](/assets/posts/guigarage-legacy/scenebuilder-1024x241.png)
+![scenebuilder](/posts/guigarage-legacy/scenebuilder-1024x241.png)
 
 Once this is is saved as a view.fxml file we can use it in JavaFX. Here is the content of the fxml file:
 
@@ -63,7 +63,7 @@ Once this is is saved as a view.fxml file we can use it in JavaFX. Here is the c
 
 As a next step we need a controller class that add some interaction and bindings to our view. In JavaFX you can create a view by bundling a controller class and a fxml file. By doing so you can inject controls that are defined in the fxml description directly in your Java controller.
 
-![fxml](/assets/posts/guigarage-legacy/fxml.png)
+![fxml](/posts/guigarage-legacy/fxml.png)
 
 Let's start with a controller that injects all controls that we need for our use case:
 
@@ -138,7 +138,7 @@ public class CalculatorApplication extends Application {
 
 Once this is done we can start our application and it's working as expected:
 
-![fxapp](/assets/posts/guigarage-legacy/fxapp-1024x392.png)
+![fxapp](/posts/guigarage-legacy/fxapp-1024x392.png)
 
 ## The Dolphin Platform based calculator application
 

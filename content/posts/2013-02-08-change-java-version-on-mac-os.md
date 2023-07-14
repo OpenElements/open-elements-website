@@ -7,7 +7,7 @@ excerpt: "I'm currently working with JDK 6, 7 and 8 on my MacBook and it's reall
 ---
 I'm currently working with JDK 6, 7 and 8 on my MacBook and it's really a pain to switch between this Java version by shell. Because of that I created a tool that can do all the work for you:
 
-![cjv](/assets/posts/guigarage-legacy/cjv.png)
+![cjv](/posts/guigarage-legacy/cjv.png)
 
 The tool shows all Java version that are currently installed on your system and you can switch between them just by a mouse click. The new version will work in any new shell and for every application that is started after switching the version. If you switch to JDK 8 and start Eclipse after that, the IDE will use JDK 8 as default JDK. If you need JDK 7 you have to restart Eclipse after switching the version. To set a new version the root password is needed because the tool will edit your "/env/launchd.conf" file.
 

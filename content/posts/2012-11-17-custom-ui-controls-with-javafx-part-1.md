@@ -11,7 +11,7 @@ One thing I often done is Swing was customization of components and the creation
 
 Every UI component in JavaFX is composed by a __control__, a __skin__ and a __behavior__. In an ideal case there is a css part to.
 
-![custom-components1](/assets/posts/guigarage-legacy/custom-components1.png)
+![custom-components1](/posts/guigarage-legacy/custom-components1.png)
 
 Best way to start is by creating a new control class that extends `javafx.scene.control.Control`. This class is basically comparable to `JComponent`. It should hold the properties of the component and acts as the main class for it because instances of this class will later created in your application code and added to the UI tree.
 
@@ -22,11 +22,11 @@ panel.getChildren().add(myControl);
 
 When programming swing components the right way you put everything that depends on the visualization or user interaction into a UI class (see `LabelUI` for example). JavaFX goes one step further and provides the skin class for all visualization and layout related code and the behavior class for all user interaction.
 
-![custom-components2](/assets/posts/guigarage-legacy/custom-components2.png)
+![custom-components2](/posts/guigarage-legacy/custom-components2.png)
 
 To do so in JavaFX you need to know how the classes depends on each other. Here is a short chart that shows the relations between them:
 
-![custom-componens3](/assets/posts/guigarage-legacy/custom-componens3.png)
+![custom-componens3](/posts/guigarage-legacy/custom-componens3.png)
 
 ## Creating the Behavior
 
@@ -78,7 +78,7 @@ What first looks as a great problem is part of the potency JavaFX provides. With
 
 Firts off all you have to create a new css file in your project. I think best practice is to use the same package as the controls has and but a css file under src/main/resource:
 
-![custom-components4](/assets/posts/guigarage-legacy/custom-components4.png)
+![custom-components4](/posts/guigarage-legacy/custom-components4.png)
 
 Inside the css you have to specify a new selector for your component and add the skin as a property to it. This will for example look like this:
 
@@ -110,7 +110,7 @@ After all this stuff is done correctly JavaFX will create a skin instance for yo
 
 Normally there is no need to access the skin or the behavior from within the controller. But if you have the need to do you can access them this way:
 
-![custom-controls5](/assets/posts/guigarage-legacy/custom-controls5.png)
+![custom-controls5](/posts/guigarage-legacy/custom-controls5.png)
 
 Because controler.getSkin() receives a javafx.scene.control.Skin and not a SkinBase you have to cast it if you need the Behavior:
 

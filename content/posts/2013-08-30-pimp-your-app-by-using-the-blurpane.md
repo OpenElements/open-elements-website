@@ -7,11 +7,11 @@ excerpt: 'For a skin we needed a special blur effect. Our goal was to blur the c
 ---
 For a skin we needed a special blur effect. Our goal was to blur the complete application once a message is shown on the screen. By doing so the user is targeted only to the displayed message because the rest of the application is blured. Here is a short example:
 
-![overlay-combo](/assets/posts/guigarage-legacy/overlay-combo.png)
+![overlay-combo](/posts/guigarage-legacy/overlay-combo.png)
 
 Whenever a message will be shown the complete applications will become blurred:
 
-![overlay](/assets/posts/guigarage-legacy/overlay.png)
+![overlay](/posts/guigarage-legacy/overlay.png)
 
 We have choosen a similar approach as it is done in the JXLayer in Swing. A invisible StackPane is placed on top of the application as an overlay. When a message appears the StackPane will become visible. The StackPane contains a ImageView that shows a blurred snapshot of the complete area under the Pane. By doing so the applications seams to be blurred. The BlurPane will be part in one of our next open source libs. But because this class has only dependencies to the JDK we want to share it here with you:
 

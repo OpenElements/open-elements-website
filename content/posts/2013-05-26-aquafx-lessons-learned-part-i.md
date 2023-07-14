@@ -51,7 +51,7 @@ AquaFX uses a font size of 13px. The two size variants use 11px and 9px. All sty
 
 This makes my controls to shrink/grow, when the font size changes:
 
-![sizes](/assets/posts/guigarage-legacy/sizes.png)
+![sizes](/posts/guigarage-legacy/sizes.png)
 
 ## NEVER EVER DO THIS
 
@@ -65,7 +65,7 @@ So, in my code there showed up the following line without being recognized:
 
 As soon as the component, it belonged to, was used in a dialog my VM crashed and a nice greeting from Mac OS X welcomed me:
 
-![crash](/assets/posts/guigarage-legacy/crash.png)
+![crash](/posts/guigarage-legacy/crash.png)
 
 Never, ever do this bad assignment... So, if something like this happens, CHECK YOUR CSS! ;-)
 
@@ -77,11 +77,11 @@ I prefered using SVG paths for all tiny icons and symbols, so I'd love to share 
 
 To create and edit the SVG paths, I am using the open source SVG graphics editor [Inkscape](http://inkscape.org/download/?lang=de). Graphics can be created and the path can then be copied by selecting the graphic and choosing edit > XML-Editor:
 
-![xml_editor](/assets/posts/guigarage-legacy/xml_editor.png)
+![xml_editor](/posts/guigarage-legacy/xml_editor.png)
 
 In this pop up the path for CSS is shown and can be copied:
 
-![path](/assets/posts/guigarage-legacy/path.png)
+![path](/posts/guigarage-legacy/path.png)
 
 ready to use in CSS by setting `-fx-shape: <your path>;`
 
@@ -89,7 +89,7 @@ ready to use in CSS by setting `-fx-shape: <your path>;`
 
 One control, which require SVG paths is the indeterminate ProgressIndicator.
 
-![progress](/assets/posts/guigarage-legacy/progress.png)
+![progress](/posts/guigarage-legacy/progress.png)
 
 Caspian has a different number of 'rotating' graphics. But, no problem for JavaFX!
 

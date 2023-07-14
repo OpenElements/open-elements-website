@@ -21,4 +21,4 @@ In addition the scrollbar supports 2 pseudo classes that can be used to define s
 
 If you want to use a scrollpane there is this empty little area in the bottom right corner. You can style that area by using the `corner` style class.
 
-![scroll](/assets/posts/guigarage-legacy/scroll-1024x595.png)
+![scroll](/posts/guigarage-legacy/scroll-1024x595.png)

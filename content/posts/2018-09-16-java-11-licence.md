@@ -9,7 +9,7 @@ categories: [Java]
 
 The next version of Java (Java 11) will be released on the 25th of September 2018. Several developers and companies plan to switch from Java 8 to Java 11 within the next month. Since Java 9 and Java 10 were the 2 first versions that are based on the new release train of Oracle a lot of people assume an LTS (Long term support) release of Java 11 by Oracle that they can easily use the next year in production.
 
-![Duke](/assets/posts/2018-09-16-java-11-licence/duke-11.jpg)
+![Duke](/posts/2018-09-16-java-11-licence/duke-11.jpg)
 
 While there are still some rumors and wrong assumptions about the new release train, the content of Java 11, and its pricing model we will have a deeper look at all these points in a series of blog posts.
 
@@ -19,7 +19,7 @@ In this first post, we will have a general look at the release model and license
 
 When having a look at the current state of Java 11 you can already download an "early access" build. Here Oracle provides 2 different types of builds: "OpenJDK builds" and "Oracle JDK builds"
 
-![Current Java 11 early access downloads](/assets/posts/2018-09-16-java-11-licence/download.png)
+![Current Java 11 early access downloads](/posts/2018-09-16-java-11-licence/download.png)
 
 As you can see in the screenshot the 2 versions differ in the supported operating systems and the license. Once Java 11 is released you will be able to download the final release binaries for both builds types. It is very important to understand the difference between the offered versions. To be true there are no real differences in the functionality of these builds. Both will build upon the same sources (from OpenJDK) and will contain the same functions and Java APIs. The main differences will be the license that defines how and when the build can be used and the future support for these 2 builds.
 

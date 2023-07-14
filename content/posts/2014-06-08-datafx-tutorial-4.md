@@ -9,11 +9,11 @@ This is the 4th tutorial about navigation with [DataFX]({{ site.baseurl }}{% lin
 
 As described in tutorial 3 the wizard will be composed of some views that define the steps of the wizard. In addition a toolbar with some buttons is placed on the bottom. The views will look like this:
 
-![views](/assets/posts/guigarage-legacy/views.png)
+![views](/posts/guigarage-legacy/views.png)
 
 All views of the wizard are linked by a navigation model. In tutorial 3 this was created by directly in the view controller classes so each view defines its navigation and actions. In this tutorial we will use the second approach that DataFX provides: All views doesn't know anything about there action and navigation model. Instead of this the actions are defined extern. The navigation and action behavior will be the same as in tutorial 3. Here is a short overview about the links between the views of the wizard:
 
-![flow3](/assets/posts/guigarage-legacy/flow3.png)
+![flow3](/posts/guigarage-legacy/flow3.png)
 
 As always we want to start by defining the views in FXML. Because the toolbar will look the same on each view we can extract it in a seperate FXML file. As shown in tutorial 3 a FXML file can included in another one by using the `fx:include` tag. Here is the FXML definition of the toolbar:
 
@@ -161,7 +161,7 @@ Next to the `withLink(...)` method two additional methods of the `Flow` class ar
 
 All these methods add a action to the DataFX flow. A action is defined by the interface org.datafx.controller.flow.action.FlowAction and all the shown methods will internally call the `Flow.addActionToView(Class<?> controllerClass, String actionId, FlowAction action)` method that will add a action instance for the defined id to a specific view. Methods that add global actions will call `Flow.addGlobalAction(String actionId, FlowAction action)` internally. As you can see even custom actions can be added to a flow by simply implementing the `FlowAction` interface. DataFX contains a set with all the most important actions types that can be added to a flow or a specific view. The following figure shows the inheritance of the `FlowAction` interface:
 
-![ACTION-uml](/assets/posts/guigarage-legacy/ACTION-uml.png)
+![ACTION-uml](/posts/guigarage-legacy/ACTION-uml.png)
 
 Some of the actions in the diagram will be handled in future tutorials. First I will only explain the basic action types:
 
@@ -173,7 +173,7 @@ Some of the actions in the diagram will be handled in future tutorials. First I 
 
 As you can see in this overview all the actions that were created by using annotations in the previous tutorials can be defined directly for the flow. By doing so a controller class doesn't need to now how an action is implemented. It must only now the specific id of the action and which node should trigger the action. This structure can be very helpful if default views should be used in multiple flows or if controller classes and / or action classes are part of different modules that don't depend on each other. Let's think about the following structure:
 
-![pic](/assets/posts/guigarage-legacy/Bildschirmfoto-2014-06-08-um-22.03.20.tiff)
+![pic](/posts/guigarage-legacy/Bildschirmfoto-2014-06-08-um-22.03.20.tiff)
 
 In this example the ViewController1.class, ViewController2.class and CustomAction.class don't know each other. With the help of the DataFX flow API you can simply combine them by using:
 
@@ -208,4 +208,4 @@ public class Wizard1Controller extends AbstractWizardController {
 
 When looking at the [source code of the tutorial](https://bitbucket.org/datafx/datafx/src/7c6009a86ac83709855bd75e9f795b68747756f4/datafx-tutorial4/?at=default) you will see that the "help" action isn't triggered in all views. That is no problem for DataFX. A global action mustn't be called in each view and even a normal action mustn't be called in the defined controller. The API only defines that there is an action with the given id that could be called. For this last step a hyperlink tag is added to the FXML files. Here is a screenshot of the final wizard:
 
-![dialog-desc](/assets/posts/guigarage-legacy/dialog-desc.png)
+![dialog-desc](/posts/guigarage-legacy/dialog-desc.png)

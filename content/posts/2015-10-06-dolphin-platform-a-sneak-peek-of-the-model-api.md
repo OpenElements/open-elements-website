@@ -12,7 +12,7 @@ Before I will talk the first time about the Dolphin Platform today at ["Java For
 
 To describe the API that helps you to define presentation models in Dolphin Platform I will start with an example. Let's say we have the following view that can be part of a photo library app:
 
-![example](/assets/posts/guigarage-legacy/example.png)
+![example](/posts/guigarage-legacy/example.png)
 
 In this view we have several elements that need a data model. If the data of this app is stored on a server the data model must be shared between the client and the server. When having a look at the screen we can see 3 different elements that need data from the data model to visualize itself or provide user interaction:
 
@@ -22,7 +22,7 @@ In this view we have several elements that need a data model. If the data of thi
 
 Based on this definition we would create a presentation model that might look like this one:
 
-![model](/assets/posts/guigarage-legacy/model-1024x732.png)
+![model](/posts/guigarage-legacy/model-1024x732.png)
 
 When defining such a model in JavaFX you can use the cool property API and the observable collections that are part of JavaFX. Modern javaScript frameworks like AngularJS or Polymer provide a similar behavior and therefore we decided to offer the same benefits when defining model with the Dolphin Platform. Since [Michael Heinrichs](https://twitter.com/net0pyr) was the project lead of the property and bindings APIs of JavaFX at Oracle we had a lot of knowledge in this area that helped us creating the model API: In Dolphin Platform you work with properties and observable collections, too. Therefore it really easy to define a hierarchical model for your view. A model for the shown view might look like this:
 

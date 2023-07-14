@@ -15,7 +15,7 @@ Some months ago, Oracle introduced the new release cadence for Java. As a result
 
 Most Java developers haven’t played that much with Java 9, released 6 months ago. Big new features like modularity were introduced with that version, and now Java 10 has already been released, adding several new features. Based on that, Java developers need to learn new functionality and features much faster if they want to stay updated. While this approach is awesome for new projects with small microservices that can easily be adopted to new Java versions, it will still be hard for big legacy projects. But maybe this project won’t update to each new Java version. Here Oracle will provide LTS (long-term support) releases of Java that will provide a longer support time. So while the lifetime of Java 9 and Java 10 is just 6 months, the release of Java 11 in September 2018 will be the first new LTS release.
 
-![Java release train](/assets/posts/2018-03-31-future-java-releases-for-desktop/releases.png)
+![Java release train](/posts/2018-03-31-future-java-releases-for-desktop/releases.png)
 
 Based on that, Oracle will support Java 11 for several years and provide updates and security patches for that version. I will write about the concrete approach and limitations of LTS releases later in this article.
 
@@ -65,7 +65,7 @@ Even with Java 11, the LTS will work completely different than the way you know 
 
 For LTS versions like Java 11, Oracle will provide commercial support for several years. This is a big change from old Java versions that contained free support for a long period, even after the following version was released. And that "old" version can be a rescue for some Web Start-based projects. Against Java 9 and 10, which only provide support for 6 months, Java 8 is still supported. The free support of Java 8 will end in January 2019. So if you are running a Web Start application on Java 8 and control the installed JREs on clients, you will have until the end of the year to update your application without the need of commercial support.
 
-![release train](/assets/posts/2018-03-31-future-java-releases-for-desktop/releases-8.png)
+![release train](/posts/2018-03-31-future-java-releases-for-desktop/releases-8.png)
 
 But even if you will need more time, there is still a way — since Oracle will provide commercial support for Java 8 until 2025. I think most Java developers never cared about commercial support for Java, since the free lifetimes of all previous Java versions were long enough to do an update to the newest version easily. Starting with the new release cadence and issues like the removal of Web Start, this might change for some companies. Based on this, I will give a short introduction about the commercial support of Java.
 

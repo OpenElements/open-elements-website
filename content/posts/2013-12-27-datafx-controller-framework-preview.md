@@ -11,7 +11,7 @@ The last month I added a new framework to DataFX. This framework should help to 
 
 To show the features of the framework I will create a simple JavaFX application. The app should manage persons. Persons can be loaded, created, edited and deleted by the app. Let's have a first look on the general concept of the application:
 
-![datafx1](/assets/posts/guigarage-legacy/datafx1.png)
+![datafx1](/posts/guigarage-legacy/datafx1.png)
 
 As you can see the app contains 3 different views:
 
@@ -115,7 +115,7 @@ public class LoadPersonsTask implements Runnable {
 
 After the data model is defined we can create the first view. Let's start with the master view. To create the view Scene Builder can be used. Here we can easily design the following view:
 
-![datafx21](/assets/posts/guigarage-legacy/datafx21.png)
+![datafx21](/posts/guigarage-legacy/datafx21.png)
 
 For all needed controls IDs are defined in the FXML. Normally you need to define a controller class in FXML. This is not needed for the DataFX Controller API. Instead of this we can bind a controller and a FXML view by the use of an annotation. As the next step a controller is needed. As a first step we create a small controller with some additional annotations:
 
@@ -244,11 +244,11 @@ public class DataFXDemo extends Application {
 
 The DefaultFlowContainer class is used in the code. This class is a default implementation of a Pane that wraps a flow. When you start the application the "load" button can be used to load the list of persons. Because of the JavaFX binding the result will be shown directly:
 
-![datafx3](/assets/posts/guigarage-legacy/datafx3.png)
+![datafx3](/posts/guigarage-legacy/datafx3.png)
 
 As a next step we want to add the edit action to the application. Here an additional view need to be created by Scene Builder:
 
-![datafx4](/assets/posts/guigarage-legacy/datafx4.png)
+![datafx4](/posts/guigarage-legacy/datafx4.png)
 
 Additionally a controller class is needed. This class uses the described features:
 
@@ -284,7 +284,7 @@ Flow flow = new Flow(MasterViewController.class).
 
 As you can see two links are added to the flow. This links are actions that will change the current view of the flow. In this cases we want to link from the master page to the edit page and vice versa. When you start the application now you can edit all persons that are part of the list:
 
-![datafx5](/assets/posts/guigarage-legacy/datafx5.png)
+![datafx5](/posts/guigarage-legacy/datafx5.png)
 
 As a next step we want to add the remove action to the master view. This can be easily done by adding another action:
 
@@ -430,6 +430,6 @@ public class AddViewController {
 
 Once this is done the view will show violations on the screen:
 
-![datafx6](/assets/posts/guigarage-legacy/datafx6.png)
+![datafx6](/posts/guigarage-legacy/datafx6.png)
 
 This example shows some of the DataFX Controller features. The complete API is not finished yet and can be found in a branch of the DataFX repository. I hope to receive some feedback about this example.

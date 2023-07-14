@@ -9,7 +9,7 @@ As mentioned [here]({{ site.baseurl }}{% post_url 2014-05-19-datafx-8-0-tutorial
 
 In this tutorial we want to create a simple view with only one point of interaction. The source of the tutorial can be found [here](https://bitbucket.org/datafx/datafx/src/940c9c9556c6/datafx-tutorial1/?at=default). The following figure shows how the example will look like:
 
-![example](/assets/posts/guigarage-legacy/exasmple1.png)
+![example](/posts/guigarage-legacy/exasmple1.png)
 
 Every time the button in the view is clicked the text in the top label should change. To create this application we will start with the layout of the view. To do so we need a [FXML](http://docs.oracle.com/javafx/2/fxml_get_started/jfxpub-fxml_get_started.htm) file that defines the JavaFX view of the application. This can easily be created with [Scene Builder](http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html). The FXML file ([simpleView.fxml](https://bitbucket.org/datafx/datafx/src/940c9c9556c662760a39830d05c9a4519eea3832/datafx-tutorial1/src/main/resources/org/datafx/tutorial/simpleView.fxml?at=default)) of the tutorial will look like this:
 

@@ -9,7 +9,7 @@ excerpt: 'I created some reference cards to technologies like JavaFX or WebCompn
 For [JavaLand 2015](https://www.javaland.eu/de/home/) we (Canoo) created some small reference cards for technologies that we are currently involved in or committed
 to.
 
-![cards](/assets/posts/guigarage-legacy/cards-300x276.png)
+![cards](/posts/guigarage-legacy/cards-300x276.png)
 
 For the conference the printed the reference cards in high quality and today I thought that the content might be interested for all the developers that didn't attend the conference :) Therefore I uploaded the reference cards as pdf files to my blog. The cards are written in German.
 

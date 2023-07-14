@@ -7,7 +7,7 @@ excerpt: 'Starting with a new technology is often hard. Even if the technology i
 ---
 Starting with a new technology is often hard. Even if the technology is documented and follows the pattern and structures that you already know from other APIs or frameworks the initial start is always a problem. To simplify this start when working with the [Dolphin Platform](http://www.dolphin-platform.io) I created a first Maven archetype that creates a simple client server application.
 
-![dp](/assets/posts/guigarage-legacy/dp-1024x255.png)
+![dp](/posts/guigarage-legacy/dp-1024x255.png)
 
 This application is an ideal starting point to play with the Dolphin Platform framework, learn the APIs or directly start your own application based on Dolphin Platform.
 

@@ -11,7 +11,7 @@ Everyone who has developed Java desktop applications within the last 15 years us
 
 While WebStart has been used a lot to provide Java Desktop application most developers missed one important point: While there is a JSR that specifies the [JNLP standard](https://jcp.org/en/jsr/detail?id=56) Oracle never provided an open source reference implementation. Next to this the WebStart functionally that has been provided by Oracle was never part of the OpenJDK. In spring 2018 Oracle published a roadmap for Java on the desktop and announced that WebStart will be removed in the future. Half a year later Java 11 was released as the first LTS version of Java which does no longer includes WebStart. Next to this, the last free-to-use version of Java 8 was released at the beginning of 2019.
 
-![webstart timeline](/assets/posts/2019-12-10-webstart-advent/ws-timeline.png)
+![webstart timeline](/posts/2019-12-10-webstart-advent/ws-timeline.png)
 
 Based on this a lot of companies that use WebStart as a foundation for large applications were faced with a problematic solution within the last 2 years. In general, there were the following options to choose from:
 
@@ -27,7 +27,7 @@ In that period several companies contacted Karakun AG and ask if we can help to 
 
 As you can imagine other companies have already worked on alternatives to Oracle WebStart in the past. With [IcedTeaWeb](https://icedtea.classpath.org/wiki/IcedTea-Web) RedHat created a JNLP client which provides several of the features of Oracle WebStart. While the scope of IcedTeaWeb was limited to Linux (and some minor Windows support) and not all features of WebStart were implemented. All in all, it was just not ready to be used for most WebStart users. Also, the main work on the project happened several years ago and in recent years it was mainly neglected. The sources of IcedTeaWeb were hosted in a hard to find mercurial repository and the code style was mainly based on Java 1.4. Fortunately, we have some good connections to RedHat and were able to get in contact with the people working on IcedTeaWeb. Around the same time, the [AdoptOpenJDK](https://adoptopenjdk.net/) community reacted on the discontinuation of WebStart and contacted RedHat, too.
 
-![companies](/assets/posts/2019-12-10-webstart-advent/companies.png)
+![companies](/posts/2019-12-10-webstart-advent/companies.png)
 
 Luckily all three organizations care about open source and therefore it was possible to define a roadmap: IcedTeaWeb will be transferred and [hosted on GitHub](https://github.com/AdoptOpenJDK/IcedTea-Web) under the umbrella of the AdoptOpenJDK community. After moving the code and making it more visible the big task of refactoring the code was started. The goal was to make it ready for Java 8 and 11 LTS support on all major operating systems. In this process, we found out that integrating with one or the other operating system can create quite some interesting issues.
 
@@ -45,7 +45,7 @@ IcedTeaWeb is the very core and most of the development time we spent here. But 
 * MacOS support: install4j also includes an installer for MacOS. Therefore we decided to limit MacOS support to OpenWebStart. This may be added to IcedTeaWeb later
 * JVM Manager: IcedTeaWeb uses a JRE to run. Also, all applications are started with the same JRE. To support different vendors and JRE versions on the same computer OpenWebStart introduces a JVM Manager. The JVM Manager can use locally installed JREs or download and update JREs from a central server. This allows to have different JREs for different applications. As a consequence of this, a user does not need to have Java installed to start a JNLP application.
 
-![JVM manager](/assets/posts/2019-12-10-webstart-advent/manage-java-version.png)
+![JVM manager](/posts/2019-12-10-webstart-advent/manage-java-version.png)
 
 With the 1.0 release of OpenWebStart some weeks ago developers can now choose if they want to bundle an IcedTeaWeb installation with a given JVM to execute JNLP applications or use OpenWebStart and delegate the JVM handling to this new tool. In both cases, the JNLP handling and workflows are the same since OpenWebStart uses IcedTeaWeb internally as the JNLP client.
 

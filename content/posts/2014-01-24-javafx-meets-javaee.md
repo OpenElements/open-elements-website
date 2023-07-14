@@ -7,11 +7,11 @@ excerpt: 'The post shows all the main specifications of Java EE and describes ho
 ---
 At [JavaOne](http://www.oracle.com/javaone/) [Arun Gupta](https://www.java.net//blogs/arungupta) gave me a copy of his ["Java EE 7 Essentials" book](http://www.amazon.com/Java-EE-Essentials-Arun-Gupta/dp/1449370179). I don't want to write a complete review of the book, but if you are interested in the Java EE platform this book is perfect. It covers all the different specifications that are new or polished in Java EE 7 in several chapters and gives a very good overview to all the technologies and how to use them.
 
-![book](/assets/posts/guigarage-legacy/javaee-book.jpg)
+![book](/posts/guigarage-legacy/javaee-book.jpg)
 
 After reading the book you are ready to develop a web application that is based on JEE 7. Most of this applications will have a web frontend that is based on JSF as it is shown in the book, too. But as I mentioned in a [earlier post]({{ site.baseurl }}{% post_url 2013-05-11-designing-javafx-business-applications-part-1 %}), a modern business applications often needs support for mobile or desktop applications:
 
-![3tier](/assets/posts/guigarage-legacy/3tier.png)
+![3tier](/posts/guigarage-legacy/3tier.png)
 
 Java EE supports different middelware standards for this purpose. In this article I will show you the different Java EE specifications and how you can combine them with JavaFX. If you have seen [oracles technical keynote at JavaOne](http://medianetwork.oracle.com/video/player/2685720528001) this year you will know what I'm talking about. I think that  multi client support by using a standardize middelware was one of the key conclusions of the keynote.
 
@@ -52,7 +52,7 @@ SOAP webservice are already part of Java EE since version X. Because most modern
 
 For most web applications the user interface is defined as a HTML based view. With JEE you can use JSF to define this views and bind your business date to a page. If you develop a JavaFX client you will normally use FXML to define your views. With Java EE 7 JSF is extended by the flow API. With this API you can define flows in your application. A flow is a linkage of some pages. A good example for a flow is the checkout process in a webshop. You have some pages that are bind by some navigation rules and share data like the credit card informations. Here is an example how a (master-detail) flow can look:
 
-![m-d](/assets/posts/guigarage-legacy/m-d.png)
+![m-d](/posts/guigarage-legacy/m-d.png)
 
 With DataFX 2.0 we will introduce the flow API. By using this API you can simply define FXML based flows. Each view is defined by a controller class that has a binding to the FXML based view. You can simply connect views and add actions to the views. The flow API uses the DataFX controller API that was shown in our [JavaOne session](http://de.slideshare.net/HendrikEbbers/datafx-javaone-2013). But because the API is still in development it has already changed in some parts. You can check out the latest version in our [DataFX source repository](https://bitbucket.org/datafx/datafx).
 

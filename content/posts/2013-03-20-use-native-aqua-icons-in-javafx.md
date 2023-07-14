@@ -116,6 +116,6 @@ public class NsImageIconLoader {
 
 Here is a overview of all icons that we have found:
 
-![native-icons](/assets/posts/guigarage-legacy/native-icons.png)
+![native-icons](/posts/guigarage-legacy/native-icons.png)
 
 If anyone knows more icon names that can be loaded by Mac OS please let us know ;)

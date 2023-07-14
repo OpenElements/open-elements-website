@@ -11,15 +11,15 @@ With AquaFX Elements, we will provide a variation to usual AquaFX in three addit
 
 Elements enables the controls to be styled in red, green and a white variation of Aqua, representing the four classical elements water, fire, earth and air. Any colored highlight of the AquaFX Skin is changed by Elements in the chosen color-variation, so that e.g. a ProgressBar becomes pretty eye-catchy
 
-![progress_elements-300x81](/assets/posts/guigarage-legacy/progress_elements-300x81.png)
+![progress_elements-300x81](/posts/guigarage-legacy/progress_elements-300x81.png)
 
 and the focus-highlighting adapts to the element of choice.
 
-![buttons_elements](/assets/posts/guigarage-legacy/buttons_elements.png)
+![buttons_elements](/posts/guigarage-legacy/buttons_elements.png)
 
 Those variations are achieved by a simple extension of the AquaFX default stylesheet. The main styling remained in the aquafx.css and in addition to that, the coloring of all components are overridden by the element CSS files. So the elements are just an extension to the main stylesheet and do not cause structural changes. With this approach it is pretty easy to produce further color-variations.
 
-![elements](/assets/posts/guigarage-legacy/elements.png)
+![elements](/posts/guigarage-legacy/elements.png)
 
 Since AquaFX Elements is sitll in progress, it is not released yet. The information about availability will be posted here on GuiGarage.
 

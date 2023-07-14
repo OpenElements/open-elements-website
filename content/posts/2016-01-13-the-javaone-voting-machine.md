@@ -7,15 +7,15 @@ excerpt: 'If you visited JavaOne this year you should have noticed the Voting Ma
 ---
 If you visited JavaOne this year you should have noticed the Voting Machines that were placed at each session room at JavaOne.
 
-![Logo](/assets/posts/guigarage-legacy/voting-logo.png)
+![Logo](/posts/guigarage-legacy/voting-logo.png)
 
 By using this machines you had the chance to give a vote for the current session. If you liked the session you simple pressed the green Duke, if you didn't liked the presentation you choosed the red Duke and if it was quite ok you selected the Duke in the middle.
 
-![dukes](/assets/posts/guigarage-legacy/dukes-1024x257.png)
+![dukes](/posts/guigarage-legacy/dukes-1024x257.png)
 
 Here you can see an image of a final machine at JavaOne:
 
-![action](/assets/posts/guigarage-legacy/action-1024x706.png)
+![action](/posts/guigarage-legacy/action-1024x706.png)
 
 In this post I will show how we created the Voting Machines and the problems and pitfall that Michael and I were confronted with.
 
@@ -23,7 +23,7 @@ In this post I will show how we created the Voting Machines and the problems and
 
 From the beginning it was clear to us that we use JavaFX to create the Voting Machine UI. We had the idea with the animated Dukes in our first brainstorming session and so the main concept was created in only a few hours. After that I created some raw drawings off the concept:
 
-![drawings](/assets/posts/guigarage-legacy/drawings.png)
+![drawings](/posts/guigarage-legacy/drawings.png)
 
 Based on this we had defined some main tasks:
 
@@ -43,21 +43,21 @@ You can find a short example how these animations look like in this YouTube vide
 
 Even if the designer already drew some Duke images he misunderstood the face of Duke and thought Duke is a Cyclops as you can see in this first preview of the sleeping animation:
 
-![schlaf1](/assets/posts/guigarage-legacy/schlaf1.png)
+![schlaf1](/posts/guigarage-legacy/schlaf1.png)
 
 ## The Cover
 
 We wanted to have a cover for the voting machine that hides the unused area of the screen. To do so we started with covers that were made by cardboard. It was quite easy to define the right size for all areas since it took only some minutes to create anew cover. At this stage we didn't want to have a cover that looks good. We wanted to define the physical dimension of all visual areas and how they should be sized and placed in JavaFX.
 
-![PAPER](/assets/posts/guigarage-legacy/PAPER.png)
+![PAPER](/posts/guigarage-legacy/PAPER.png)
 
 Once all dimensions were defined we ordered a first prototype based on plastic. Sadly something went wrong with the communication with the producer and some of the dimensions were wrong:
 
-![bla](/assets/posts/guigarage-legacy/bla.png)
+![bla](/posts/guigarage-legacy/bla.png)
 
 After we corrected the dimensions we ordered the final cover based on a much better material.
 
-![vm](/assets/posts/guigarage-legacy/vm.png)
+![vm](/posts/guigarage-legacy/vm.png)
 
 ## The Hardware
 
@@ -69,13 +69,13 @@ Managing more than 4000 images on a Pi isn't that easy ;) We used a lot of tric
 
 Next to the software that runs on the Voting Machines, we created a fully animated JavaFX leaderboard application that was shown on big screens at JavaOne:
 
-![screen](/assets/posts/guigarage-legacy/screen.png)
+![screen](/posts/guigarage-legacy/screen.png)
 
 ## The Manufacturing
 
 The days before JavaOne Michael and I built all the Voting Machine for JavaOne in a Hilton Meeting Room. Here are some impressions that show how we build our embedded robot army:
 
-![expressions](/assets/posts/guigarage-legacy/voting-machine-expressions.png)
+![expressions](/posts/guigarage-legacy/voting-machine-expressions.png)
 
 ## The Feedback
 
@@ -91,11 +91,11 @@ We got a lot of positive feedback at JavaOne and several people twittered about 
 
 In addition a nice reminder was show before each session:
 
-![reminder](/assets/posts/guigarage-legacy/reminder.png)
+![reminder](/posts/guigarage-legacy/reminder.png)
 
 But to be true: The coolest moment was the big announcement of the Voting Machine by [Sharat Chander](https://twitter.com/Sharat_Chander) at the **JavaOne keynote**:
 
-![keynote](/assets/posts/guigarage-legacy/keynote.png)
+![keynote](/posts/guigarage-legacy/keynote.png)
 
 If you haven't seen the keynote you can [watch it online](https://www.oracle.com/javaone/on-demand/index.html?playvid=4578010697001).
 
@@ -105,13 +105,13 @@ At the end we tracked **over 23000 votes** for sessions and I think this is a bi
 
 The average number of votes per session is 55. Most of these votes are positive as you can see in the following diagram:
 
-![Avaerage-pos-neu-neg](/assets/posts/guigarage-legacy/voting-machine-graph-1.png)
+![Avaerage-pos-neu-neg](/posts/guigarage-legacy/voting-machine-graph-1.png)
 
 Only 6 percent of all votes for sessions are negative. To me this indicates that the Java sessions in general are very good. A funny fact is that the negative button was mostly pressed when no session was scheduled for a room. I think people wanted to see the reactions of Duke when pressing the red button. Over 7000 clicks were registered in the break between sessions which makes 25% of all clicks. For me this is a good feedback that people liked the UX with the funny Duke animations :)
 
 We tracked votes for 428 session. This includes most session types like the conference sessions, BOFs, tutorials. Until now I haven't done an analysis based on the session types but I can show you a general overview over all session types. The following diagram shows the distribution of votes. As you can see there are almost 200 sessions that have more than 50 votes:
 
-![votes](/assets/posts/guigarage-legacy/voting-machine-graph-2.png)
+![votes](/posts/guigarage-legacy/voting-machine-graph-2.png)
 
 ## Conculsion
 

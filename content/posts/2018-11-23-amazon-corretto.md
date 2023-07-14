@@ -14,7 +14,7 @@ With the new license model of Oracle that only provides free updates for java ve
 
 Amazon decided to not cooperate with a given JDK vendor and provide its distribution as they have announced at Devoxx 2018. The Java distribution of Amazon is named Corretto. [On the product website](https://aws.amazon.com/de/corretto/), Amazon describes Corretto as a "No-cost, multiplatform, production-ready distribution of OpenJDK". Let's have a deeper look at it.
 
-![Free LTS](/assets/posts/2018-11-23-amazon-corretto/duke_ice.png)
+![Free LTS](/posts/2018-11-23-amazon-corretto/duke_ice.png)
 
 ## About multiplatform support
 
@@ -49,7 +49,7 @@ Based on this you can definitely say that Corretto will be free. To be true Amaz
 
 Since Corretto is based on the sources of OpenJDK and therefore has mostly no functional change against other distributions, this question can be answered in general with “yes”. If you install the Java 8 preview of Corretto, you normally will have absolutely no problems. From my point of view, a more important question is if Corretto will stay production-ready in the future. By providing long term support for Java versions Amazon needs to merge and implement fixes into the Corretto repositories since the work on the OpenJDK branches for a specific version will stop after 6 months. When having a look at the OpenJDK contributors of the last year you will see that Amazon is already an OpenJDK committer. The following diagram gives an idea about the work that some JDK vendors did the last year on OpenJDK. As you can see Amazon was not that active as the big vendors like SAP or Bellsoft:
 
-![OpenJDK conributions](/assets/posts/2018-11-23-amazon-corretto/diagramm.png)
+![OpenJDK conributions](/posts/2018-11-23-amazon-corretto/diagramm.png)
 
 Based on this, only time will tell if Amazon can provide fast bugfixes and updates based on security issues and general bugs. I hope that they will increase the work on OpenJDK in near future and provide a new and good version of Java 11 each quarter.
 

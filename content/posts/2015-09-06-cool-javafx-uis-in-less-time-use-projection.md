@@ -26,7 +26,7 @@ When creating your own custom data model you can simply create complete classes 
 
 Let's think about a possible visual presentation of this interface. When having a look at Twitter Bootstrap you can find an example. Bootstrap provides the [media object](http://getbootstrap.com/components/#media) that can simply be used to render media data:
 
-![bootstrap-media](/assets/posts/guigarage-legacy/bootstrap-media-1024x403.png)
+![bootstrap-media](/posts/guigarage-legacy/bootstrap-media-1024x403.png)
 
 I already created a JavaFX list cell that specifies a layout that can be used for media objects. You can find a detailed description [here]({{ site.baseurl }}{% post_url 2014-09-30-enrich-list-ui-using-medialistcell %}). Based on this I created the MediaList that is completely ready to render media and don't need to be configured anymore.
 
@@ -41,19 +41,19 @@ list.getItems().add(new DefaultMedia("Test05", "This is the description", image5
 
 By using the MediaList class you simply create a list like this one:
 
-![media-list](/assets/posts/guigarage-legacy/media-list-1024x432.png)
+![media-list](/posts/guigarage-legacy/media-list-1024x432.png)
 
 But this isn't the only view in the material design example that is based on the Media definition. Next to the list the user info panel uses a media object internally:
 
-![user-info](/assets/posts/guigarage-legacy/user-info-1024x393.png)
+![user-info](/posts/guigarage-legacy/user-info-1024x393.png)
 
 The next one is the image view that contains a description of the shown image:
 
-![image-view](/assets/posts/guigarage-legacy/image-view-1024x938.png)
+![image-view](/posts/guigarage-legacy/image-view-1024x938.png)
 
 As you can see there are several examples how a simple data definition like the shown Media interface can be rendered on screen. Currently I'm working on a table that support the Media object.
 
-![table-view](/assets/posts/guigarage-legacy/table-view-1024x804.png)
+![table-view](/posts/guigarage-legacy/table-view-1024x804.png)
 
 In the table implementation I experiment how such a control can easily be configured. So stay tuned ;)
 

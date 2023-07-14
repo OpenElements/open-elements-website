@@ -12,7 +12,7 @@ Since several people of the international Java community asked me about Cyberlan
 
 based on the cancelation of the JavaLand conference we (the German JUG community) decided to organize a free remote event as at least a small replacement for JavaLand. This event that is called 'Cyberland' will offer a 100% online conference. Cyberland will take place next Tuesday (March 17, 2020). German information about JavaLand can be found [in my last post]({{ site.baseurl }}{% post_url 2020-03-12-cyberland %}) and [on the page of the CyberJUG](https://cyberjug.de/cyberland2020/).
 
-![Cyberland](/assets/posts/2020-03-13-cyberland_en/cyberland_1.png){:class="image-two-third-width"}
+![Cyberland](/posts/2020-03-13-cyberland_en/cyberland_1.png){:class="image-two-third-width"}
 
 # What content can I expect?
 

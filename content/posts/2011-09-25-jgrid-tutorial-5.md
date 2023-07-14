@@ -69,6 +69,6 @@ grid.getCellRendererManager().addRendererMapping(Float.class, new GridPercentCel
 
 Here you can see the effect:
 
-![Tutorial-5](/assets/posts/guigarage-legacy/Tutorial-5.png)
+![Tutorial-5](/posts/guigarage-legacy/Tutorial-5.png)
 
 You can download the source file [here](/assets/downloads/jgrid/tutorial5.java).

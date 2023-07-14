@@ -7,9 +7,9 @@ excerpt: 'I created a series of tutorials to get familiar with JGrid. This is th
 ---
 In this tutorial we want to add zoom functionality to the JGrid. You can set the dimension of the grid cells be the property `fixedCellDimension`. Here is a example for two different dimensions:
 
-![tutorial4-1](/assets/posts/guigarage-legacy/tutorial4-1.png)
+![tutorial4-1](/posts/guigarage-legacy/tutorial4-1.png)
 
-![tutorial4-2](/assets/posts/guigarage-legacy/tutorial4-2.png)
+![tutorial4-2](/posts/guigarage-legacy/tutorial4-2.png)
 
 To add a zoom functionality to the grid you can set the dimension by using a JSlider. Here is the code:
 

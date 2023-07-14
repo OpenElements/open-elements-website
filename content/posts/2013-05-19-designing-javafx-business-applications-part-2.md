@@ -31,7 +31,7 @@ In a normal business application you will have views and workflows. For example 
 
 Normally you will define your views by code or with the [Scene Builder](http://docs.oracle.com/javafx/scenebuilder/1/get_started/jsbpub-get_started.htm). If you use the Scene Builder you can transfer all your UI code into the [fxml](http://docs.oracle.com/javafx/2/fxml_get_started/jfxpub-fxml_get_started.htm) file and handle the logic inside a controller class. The controller can now access the business data by calling data stores or any other of your classes.
 
-![cdi1](/assets/posts/guigarage-legacy/cdi1.png)
+![cdi1](/posts/guigarage-legacy/cdi1.png)
 
 This pattern is good and is working much better that your old Swing code. You have a clean separation between the view and the business logic. But there are still some problems here:
 
@@ -62,7 +62,7 @@ FXMLHelper.create(..) is a Method that I created to do some magic (Don't be afra
 
 We can now easily add the node to our scene graph.
 
-![cdi2](/assets/posts/guigarage-legacy/cdi2.png)
+![cdi2](/posts/guigarage-legacy/cdi2.png)
 
 But wait! Where is the controller instance? We don't have access to this object...
 
@@ -112,7 +112,7 @@ Node myView FXMLCDI.create(MyController.class);
 
 The FXMLCDI util class (my custom one) handles all the FXML and CDI stuff.
 
-![cdi3](/assets/posts/guigarage-legacy/cdi3.png)
+![cdi3](/posts/guigarage-legacy/cdi3.png)
 
 ## Thinking about Scopes
 

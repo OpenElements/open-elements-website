@@ -11,7 +11,7 @@ In this special case, an image and a text should next to each other on a desktop
 
 I want to start with a first look at how the solution should look like. The following picture shows the described layout on a big and on a small screen:
 
-![responsive](/assets/posts/guigarage-legacy/responsive-1003x1024.png)
+![responsive](/posts/guigarage-legacy/responsive-1003x1024.png)
 
 Let's discuss several approaches that we can use to create this behavior.
 
@@ -59,7 +59,7 @@ public class ResponsiveLayoutDemo extends Application {
 
 When running this example the view will be shown with the text and image next to each other:
 
-![layout1](/assets/posts/guigarage-legacy/layout1-1024x570.png)
+![layout1](/posts/guigarage-legacy/layout1-1024x570.png)
 
 As a next step we want to refactor the code by using a VBox:
 
@@ -103,7 +103,7 @@ public class ResponsiveLayoutDemo extends Application {
 
 In this example the text will be displayed under the image as it should look on small devices:
 
-![small](/assets/posts/guigarage-legacy/small-586x1024.png)
+![small](/posts/guigarage-legacy/small-586x1024.png)
 
 As a last step we want to modify the code and create an application that will change it's layout dynamically:
 

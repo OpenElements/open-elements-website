@@ -11,7 +11,7 @@ In [my last post]({{ site.baseurl }}{% post_url 2016-02-07-javafx-and-css %}) I 
 
 In CSS a pseudo class is used to define a specific state of a node. In general a node can have `0-n` pseudo classes. Let's think about a regular JavaFX Button and how it is rendered. When thinking about this the first visualization that comes into mind is this one:
 
-![Button](/assets/posts/guigarage-legacy/Button.png)
+![Button](/posts/guigarage-legacy/Button.png)
 
 The button that is shown on the picture has a defined state:
 
@@ -22,7 +22,7 @@ The button that is shown on the picture has a defined state:
 
 Based on this definition the state of the button instance is defined what ends in a specific visualization. Next to the visualization that is shown on the image a button can be rendered in several different ways that reflect the current state of the button. Here is an overview of some buttons that are rendered in different states:
 
-![button state](/assets/posts/guigarage-legacy/button-state-1024x88.png)
+![button state](/posts/guigarage-legacy/button-state-1024x88.png)
 
 Since all JavaFX controls are styled by CSS all the different states must be specified in CSS. To do so you need pseudo classes to define specific styles for states of the control.
 

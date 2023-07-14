@@ -32,6 +32,6 @@ grid.setModel(model);
 
 With this few lines of code you can add a JGrid to your code. Because the default renderer of the grid uses a label and renders the `toString()`-result of the data to the grid you will see all Integers in a grid:
 
-![Tutorial1](/assets/posts/guigarage-legacy/Tutorial1.png)
+![Tutorial1](/posts/guigarage-legacy/Tutorial1.png)
 
 You can download the [source file for the tutorial](/assets/downloads/jgrid/tutorial1.java). To run the program you need the jgrid.jar in your classpath.

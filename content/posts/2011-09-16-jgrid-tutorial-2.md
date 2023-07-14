@@ -23,6 +23,6 @@ grid.setCellBackground(Color.LIGHT_GRAY);
 
 After setting all properties the grid looks like this:
 
-![Tutorial2](/assets/posts/guigarage-legacy/Tutorial2.png)
+![Tutorial2](/posts/guigarage-legacy/Tutorial2.png)
 
 You can download the sources for the tutorial [here](/assets/downloads/jgrid/tutorial2.java).

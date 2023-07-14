@@ -18,7 +18,7 @@ grid.setModel(model);
 
 After assigning this model to the JGrid the result will look like this:
 
-![Tutorial3](/assets/posts/guigarage-legacy/Tutorial3-1.png)
+![Tutorial3](/posts/guigarage-legacy/Tutorial3-1.png)
 
 The JGrid uses a default renderer to visualize data. This renderer based on a JLabel and displays the toString() results from the given data. Therefore you see these "java.awt.Color..." strings in the grid cells.
 
@@ -49,6 +49,6 @@ grid.getCellRendererManager().setDefaultRenderer(new GridColorCellRenderer());
 
 Now our application shows the right colors inside the grid cells:
 
-![Tutorial3](/assets/posts/guigarage-legacy/Tutorial3-2.png)
+![Tutorial3](/posts/guigarage-legacy/Tutorial3-2.png)
 
 You can download the source file for this tutorial [here](/assets/downloads/jgrid/tutorial3.java).

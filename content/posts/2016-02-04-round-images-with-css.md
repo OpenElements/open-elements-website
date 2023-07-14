@@ -37,4 +37,4 @@ Once this is done it's quite easy to create the round effect by defining a round
 
 Once this is done you could use the image on any background and it's looks quite nice:
 
-![radius-example](/assets/posts/guigarage-legacy/radius-example.png)
+![radius-example](/posts/guigarage-legacy/radius-example.png)

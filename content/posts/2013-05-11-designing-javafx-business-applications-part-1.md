@@ -15,11 +15,11 @@ While the architecture of applications is a so big topic I will break this down 
 
 Ok, first of all I will define what a classic business app is. I think that most of this applications or systems based on a client server architecture. In this case it is not important if the client is a rich desktop client or a JSF based web client. I a normal scenario you will have a [3 tier architecture](https://en.wikipedia.org/wiki/Multitier_architecture) that is splitted is a persitence, businesslogic and view layer.
 
-![3tier](/assets/posts/guigarage-legacy/3tier.png)
+![3tier](/posts/guigarage-legacy/3tier.png)
 
 If you have a [JSF](http://en.wikipedia.org/wiki/JavaServer_Faces) based web client your view can directly access the [EJB](http://en.wikipedia.org/wiki/EJB) beans out of the view by using the [Expression Language (EL)](http://en.wikipedia.org/wiki/Unified_Expression_Language). By doing so you can handle the properties of the EJB bean or call methods on it. Here is a short example:
 
-![jsf](/assets/posts/guigarage-legacy/jsf.png)
+![jsf](/posts/guigarage-legacy/jsf.png)
 
 If you have a desktop client (or maybe a webclient that is written in another language / framework like [AngularJS](http://angularjs.org)) you need a middleware to interact with the server. Here you will hopefully depend on a standard like [SOAP](http://en.wikipedia.org/wiki/SOAP), [REST](http://en.wikipedia.org/wiki/REST) or [WebSocket](http://en.wikipedia.org/wiki/Websocket). By doing so you can achieve the same features in your application that you will have while using JSF and EL.
 
@@ -35,13 +35,13 @@ If you connect your JavaFX app to a backend server you need to pay attention to 
 
 If you only need REST Requests as the middleware layer DataFX is in my eyes the best API at the moment. You can define your complete server infrastructure by only using JEE defaults as mentioned before. DataFX will only be needed at client site and handle all the REST calls for you.
 
-![dfx](/assets/posts/guigarage-legacy/dfx.png)
+![dfx](/posts/guigarage-legacy/dfx.png)
 
 While using DataFX all requested business values will be stored in JavaFX properties and you can simple use them in the JavaFX application thread. You can find a simple demo that access iTunes REST web services [here](https://github.com/guigarage/DataFX-iTunes-Demo).
 
 For a more complex communication I would prefer to use RedFX or Open Dolphin. This two frameworks need a API on server site too. RedFX uses the default JEE WebSocket API for communication and Open Dolphin has no default communication layer (as far as I know) but can easily be used with REST. If you use one of this framework your application stack may look like this:
 
-![redfx](/assets/posts/guigarage-legacy/redfx.png)
+![redfx](/posts/guigarage-legacy/redfx.png)
 
 Until now I haven't worked with one of this two framework. Cause of this I can't tell you what are the fine differences between this two framework and in which specific usecase you should use the one or the other.
 

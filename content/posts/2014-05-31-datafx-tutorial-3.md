@@ -9,17 +9,17 @@ In this tutorial I want to show how a wizard dialog can be created with [DataFX]
 
 The wizard that will be created in this tutorial contains 5 different views that are linked to each other:
 
-![flow1](/assets/posts/guigarage-legacy/flow1.png)
+![flow1](/posts/guigarage-legacy/flow1.png)
 
 Next to the "next" action that navigates to the following view the wizard should support a "back" action that navigates to the last displayed view and a "finish" action that directly navigates to the last view:
 
-![flow3](/assets/posts/guigarage-legacy/flow3.png)
+![flow3](/posts/guigarage-legacy/flow3.png)
 
 __Note:__ The last diagram doesn't contain all possible links. Because the "back" action navigates always the last visible view you could navigate directly from the last view to the first view if the "finish" action was triggered in the first view and then the back action is triggered.
 
 As shown in the other tutorials we will start the the view layout and generate all views by using __FXML__ and Scene Builder. All the views of the wizard will contain a toolbar with some buttons to trigger the defined action. Here are some previews how the views will look like:
 
-![views](/assets/posts/guigarage-legacy/views.png)
+![views](/posts/guigarage-legacy/views.png)
 
 Thanks to FXML we don't need to implement the toolbar for every view. For this purpose FXML provides the `fx:include` tag that can be used to interleave vxml defined views. So we can define the toolbar as a separate FXML file:
 

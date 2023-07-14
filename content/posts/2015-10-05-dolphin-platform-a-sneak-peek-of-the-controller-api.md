@@ -22,7 +22,7 @@ public class MyController {
 
 Even if this class don't make that much sense we created a complete runnable Dolphin Platform server application here. Once this is deployed the underlying platform (currently JavaEE or Spring) will automatically find your container and manage its lifecycle. This is done by the architecture of Dolphin Platform that provides a public API and specific bootstrap implementations for __JavaEE and Spring__. As a developer you will always code against the public API and only need to add the needed bootrap module as a dependency to your server application.
 
-![arch-server](/assets/posts/guigarage-legacy/arch-server.png)
+![arch-server](/posts/guigarage-legacy/arch-server.png)
 
 This means that the shown controller will __work in any Spring or JavaEE 7 environment__.
 

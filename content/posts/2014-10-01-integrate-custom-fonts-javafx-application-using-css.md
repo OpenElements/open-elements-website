@@ -39,7 +39,7 @@ If you want to define a global font for all controls in your application you can
 
 In the examples "Arial" is used as the custom font. Normally you can assume that this font will be installed on a client system. But sometimes you want to use a custom font to create a unique UI. In the following example, I want to use the Roboto font that is the official font of [Googles Material Design](http://www.google.com/design/spec/style/typography.html#typography-roboto). Normally this font won't be installed on a client system. So if you define the font by CSS and a customer will run the application without installing the specific font on the OS JavaFX will select a system font as a fallback and the cool UI of the app is broken. But thankfully there is a good solution for this problem. Since Java 8 JavaFX supports the `@font-face` rule that can be used to add fonts. As a first step, the font file must be added to the application. As a best practice the file should be added to the resources folder:
 
-![font](/assets/posts/guigarage-legacy/font.png)
+![font](/posts/guigarage-legacy/font.png)
 
 Once this is done the font can be defined in CSS by using the `@font-face` rule:
 
@@ -56,7 +56,7 @@ Once this is done the font can be defined in CSS by using the `@font-face` rule:
 
 Now the font will be used in our application even if it isn't installed on the OS:
 
-![font-loaded](/assets/posts/guigarage-legacy/font-loaded.png){:class="image-two-third-width"}
+![font-loaded](/posts/guigarage-legacy/font-loaded.png){:class="image-two-third-width"}
 
 ## Update
 

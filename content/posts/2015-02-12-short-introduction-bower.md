@@ -9,7 +9,7 @@ Some weeks ago [I blogged about web components]({{ site.baseurl }}{% post_url 20
 
 Before going deep in the web components topic I want to introduce a tool that I think is needed when working with this new technology: [bower](http://bower.io).
 
-![bower-logo](/assets/posts/guigarage-legacy/bower-logo-300x263.png)
+![bower-logo](/posts/guigarage-legacy/bower-logo-300x263.png)
 
 Bower is an open source tool that is created by Twitter and helps you to manage the dependencies of a web application. By using bower you can define all the dependencies of your application and automatically download them.
 
@@ -39,12 +39,12 @@ Developers who are familiar with [Maven](http://maven.apache.org) might notice s
 
 Here is a quick overview about the commands that is part of my JFokus talk:
 
-![bowe-ovwev](/assets/posts/guigarage-legacy/bowe-ovwev.png)
+![bowe-ovwev](/posts/guigarage-legacy/bowe-ovwev.png)
 
 ## How to define dependencies
 
 Some of you might ask yourself how you should know the definition or name of a dependency. Bower is more flexible that Maven in this case. When calling the `install` command there are different ways how a dependency can be specified. Here is a short overview that is taken from the [bower web page](http://bower.io/#getting-started):
 
-![bower install](/assets/posts/guigarage-legacy/bower-install.png)
+![bower install](/posts/guigarage-legacy/bower-install.png)
 
 In addition bower provides a [search frontend](http://bower.io/search/) (like the Maven central frontend) that can be used to search for modules and dependencies.

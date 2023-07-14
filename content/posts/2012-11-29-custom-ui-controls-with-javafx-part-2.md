@@ -39,7 +39,7 @@ When layouting a swing UI you normally do not call the methods mentioned above i
 
 JavaFX don't know LayoutManagers. All layouting is done directly by the containers. The basic layout container is called Pane and when looking at the type hierarchy of this class you will find containers with different layout algorithms like the VBox or HBox.
 
-![layout1](/assets/posts/guigarage-legacy/layout1.png)
+![layout1](/posts/guigarage-legacy/layout1.png)
 
 You can read about the different layout containers and their special scopes [here](http://docs.oracle.com/javafx/2/layout/builtin_layouts.htm). When creation custom panes there are a few more points to take care of. I will talk about this in a later post.
 
@@ -83,7 +83,7 @@ If the node is resizable and its height depends on its width the method should r
 
 So it is no problem anymore to provide a word wrap in a Textcomponent when using JavaFX. I will explain the usage of this methodes with a more easy example. Let's assume that we need a component that always has a surface area of 24 pixels.
 
-![layout2](/assets/posts/guigarage-legacy/layout2.png)
+![layout2](/posts/guigarage-legacy/layout2.png)
 
 With swing we would only have a few different ways/dimensions to create such a component:
 
@@ -103,7 +103,7 @@ Dimension getPreferredSize() {
 
 In reality there is a unlimited count of rectangles that have a area of 24 pixels. For example a rectangle with a width of 4,7 and a height of 5,105... has exact this area.
 
-![layout3](/assets/posts/guigarage-legacy/layout3.png)
+![layout3](/posts/guigarage-legacy/layout3.png)
 
 With JavaFX and the extended ways to calculate the dimension of components and the use of double values we can create all of this rectangles (this is only limited by the range of double values). First of all we need to implement all this different methods for dimension calculation:
 
@@ -236,7 +236,7 @@ myControl.setOnMouseExited(new EventHandler() {
 
 To measure the current visual bounds of a components once it is transformed we have the additional method getBoundsInParent(). Other than getBoundsInLocal() this method returns the bounds which include the transforms of the component.
 
-![layout4](/assets/posts/guigarage-legacy/layout4.png)
+![layout4](/posts/guigarage-legacy/layout4.png)
 
 You can find more informations about transformations in JavaFX [here](http://docs.oracle.com/javafx/2/transformations/jfxpub-transformations.htm).
 

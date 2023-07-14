@@ -76,7 +76,7 @@ public interface UIThread {
 
 Once this is done we can have a deeper look at the methods that will block until a task was executed on the ui toolkit. In the defined interface the two methods that are named `runOnUiToolkitThreadAndWait` defines this behavior. Once the method is called a new task is created and added to the ui thread. Because the thread has a lot of work to do normally a queue will handle this tasks and execute them by using a first in first out approach. The following image shows an example.
 
-![queue](/assets/posts/guigarage-legacy/queue.png)
+![queue](/posts/guigarage-legacy/queue.png)
 
 By doing so our task will be added to the queue and executed once all task that has been added earlier to the queue were executed. If we call this method from the ui thread the created task can't be executed before the task that is currently running is finished. But because the `runOnUiToolkitThreadAndWait` methods will wait for the execution of the new task we will end in an deadlock that is definitely the worst think that can happen. By doing so nothing can be handled on the UI thread: No user interaction or rendering can be done and the application is frozen. Because no Exception will be thrown the application just hangs we will receive no information what has triggered the error.
 
@@ -148,6 +148,6 @@ The first 2 methods looks mostly the same. Only the exception type is different.
 
 The third method can be called on any thread. A developer doesn't need to think about it. If you know what you do, this is the most flexibel way how such a method can be defined. But on the other hand this can cause problems. I have seen a lot of projects where developers used this type of method way to often. Because they ad no idea how to handle the ui thread `invokeAndWait(..)` methods were called all over the code. By doing so your stack trace ends in something like this:
 
-![stack](/assets/posts/guigarage-legacy/stack.png)
+![stack](/posts/guigarage-legacy/stack.png)
 
 This will end in code that is unperformant, unstable and can't be maintained anymore. Therefore I would choose one of the first 2 implementations. But that's only how I see this things and maybe you have a complete different opinion. Therefore it would be great if you can leave a comment here about your favorite way how to handle this problems. [JSR-377]({{ site.baseurl }}{% post_url 2014-12-30-desktopembedded-application-api-jsr %}) will contain such a interface and we want to resolve all the shown problems in an ui toolkit independent way. If you are interested in the JSR or want to share your opinion about this topic you should have a look at the [JSR Mailing List](http://jsr377-api.40747.n7.nabble.com). In the next post I will have a deeper look at the `Future<>` interface in combination with ui threads.

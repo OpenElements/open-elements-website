@@ -13,7 +13,7 @@ Several Java Champions and other members of the community have written a great n
 
 Together with evangelists and employees of many Java vendors like Oracle, Azul, and more, this group of Java Champions collected the most important information and facts. In an open document that is signed by the Java Champions, you can find all answers that you need to plan your workflow and strategies for Java-based applications after Java 8.
 
-![Dukes](/assets/posts/2018-09-16-jc-java-article/3duke_suspects.jpg)
+![Dukes](/posts/2018-09-16-jc-java-article/3duke_suspects.jpg)
 
 We (Karakun) contributed to this effort and our previous articles were a nucleus to start the open document. We are glad that we have the chance to help developers from all over the world to get the critical knowledge about Java in this early period of the Karakun DevHub.
 

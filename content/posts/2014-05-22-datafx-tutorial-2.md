@@ -11,7 +11,7 @@ In this second tutorial I will show you the basics about __navigation in a DataF
 
 The following pictures shows the two views of the tutorial and its interaction:
 
-![tutorial2](/assets/posts/guigarage-legacy/tutorial2.png)
+![tutorial2](/posts/guigarage-legacy/tutorial2.png)
 
 As shown in the first tutorial we want to start by defining the views in __FXML__. Here is the __FXML__ file for the first view:
 
@@ -44,7 +44,7 @@ As shown in the first tutorial we want to start by defining the views in __FXML_
 
 This defines a view that looks like this:
 
-![pic1](/assets/posts/guigarage-legacy/pic1.png)
+![pic1](/posts/guigarage-legacy/pic1.png)
 
 The second view differ only in a few points from the first one. Here is the FXML definition of the second view:
 
@@ -77,7 +77,7 @@ The second view differ only in a few points from the first one. Here is the FXML
 
 As you can see in the code there is a style addition in the __VBox__ tag. Here the red background color of the view is defined by __CSS__. The rendered view will look like this:
 
-![pic2](/assets/posts/guigarage-legacy/pic2.png)
+![pic2](/posts/guigarage-legacy/pic2.png)
 
 As a next step we create __view controllers__ for the views. As shown in the last tutorial you have to define a class for each view that acts as its controller. In a first step we create some empty controller classes that are only annotated by `@FXMLController`:
 

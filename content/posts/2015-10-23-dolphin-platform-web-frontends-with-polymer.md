@@ -11,7 +11,7 @@ All the main concepts are already described in the [post about JavaFX clients]({
 
 The following picture shows how the final application will look like:
 
-![chat](/assets/posts/guigarage-legacy/chat.png)
+![chat](/posts/guigarage-legacy/chat.png)
 
 To create a client that can communicate with the Dolphin Platform server a client context is needed. In an web application this can simply be done by defining a global JavaScript value:
 
@@ -146,6 +146,6 @@ Thanks to the modularity of web components you can even go deeper and use your 
 
 The `don-repeat` elect is a special Polymer elect that add it's content for each item in a given list. As we said earlier all the chat messages in our model are defined as a list. This list can easily be accessed by calling `model.messages`.
 
-![model-ui](/assets/posts/guigarage-legacy/model-ui-1024x696.png)
+![model-ui](/posts/guigarage-legacy/model-ui-1024x696.png)
 
 If you already read the post about JavaFX clients you might notice all the parallels. By using the Dolphin Platform API it's really easy to create interactive and modern clients for several platforms without loosing the control of the UI.

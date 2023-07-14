@@ -7,7 +7,7 @@ excerpt: 'One of the cool features of JavaFX is the CSS support. By using CSS yo
 ---
 One of the cool features of JavaFX is the CSS support. By using CSS you can simply style a single control or a complete application. The CSS support in JavaFX is based on the W3C CSS version 2.1. There are some minor differences that can be found in the [JavaFX CSS documentation](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html) that is the best source to check a specific property or value type when using CSS in JavaFX.
 
-![css](/assets/posts/guigarage-legacy/css-1024x570.png)
+![css](/posts/guigarage-legacy/css-1024x570.png)
 
 ## How to define CSS rules in JavaFX
 
@@ -79,7 +79,7 @@ Most of the basic JavaFX controls define one or several style classes by default
 
 Once the stylesheet is added to the scene the buttons in your application will look like this:
 
-![css](/assets/posts/guigarage-legacy/styled-button.png)
+![css](/posts/guigarage-legacy/styled-button.png)
 
 As you can see in the CSS definition all properties that are used until know are defined by the "-fx-" prefix. This is specific to JavaFX and defines a change against the CSS how you use it for styling in the web. Since most of the properties that you know from the web are supported all of them start with a `-fx-`. By doing so you could create a global stylesheet that styles your web frontend and JavaFX frontend.
 

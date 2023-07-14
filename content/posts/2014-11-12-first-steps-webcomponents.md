@@ -59,7 +59,7 @@ If you don't want to use bower you can download and integrate the polymer lib by
 
 As a next step you can create a `index.html` to test your custom components and a folder that will contain the components. Once this is done your application folder might look like this:
 
-![folder-structure](/assets/posts/guigarage-legacy/folder-structure.png)
+![folder-structure](/posts/guigarage-legacy/folder-structure.png)
 
 ## General structure of a WebComponent
 
@@ -112,7 +112,7 @@ As a start we want to create a minimal web component that will only print an "A"
 
 As far as I know is this the minimum definition that you need to define a component. In the template a paragraph that contains an "A" is defined. This is default HTML and if we don't want to create a reusable component we could write this directly in an HTML file. In the script section the Polymer({}); call registers the component so it's recognized by the browser. Once this is done the component can be used in any HTML file to render the "A" paragraph on screen:
 
-![rendered-936x1024](/assets/posts/guigarage-legacy/rendered-936x1024.png)
+![rendered-936x1024](/posts/guigarage-legacy/rendered-936x1024.png)
 
 ## Use the component
 
@@ -140,13 +140,13 @@ To include the custom web component in a HTML page you need to import it. In add
 
 As you can see in the code the html files that defines the custom component is imported in the web page. Once this is done the custom tag `<simple-a>` can be used in the web page. When having a look at the web developer tools of safari you can see that the A tags are now part of the page:
 
-![view-in-console](/assets/posts/guigarage-legacy/view-in-console.png)
+![view-in-console](/posts/guigarage-legacy/view-in-console.png)
 
 ## Browser support
 
 I tested my HTML file on Safari, Chrome and Firefox. Safari and Firefox work fine but on Chrome I don't see anything. The web console shows a "Cross-Origin Resource Sharing" so maybe it will work when running the page on a web server instead of just opening the file from the filesystem. I'm not a web expert so maybe Chrome has the correct behavior here. I will check this later and blog about it in my next web component post. After all by doing the most simply try and opening the HTML file with the browsers that re installed on my system this is the result of the browser check:
 
-![browser-check](/assets/posts/guigarage-legacy/browser-check.png)
+![browser-check](/posts/guigarage-legacy/browser-check.png)
 
 ## Conclusion
 

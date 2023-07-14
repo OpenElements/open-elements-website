@@ -10,7 +10,7 @@ categories: [Java, Cyberland]
 
 Wie viele sicherlich bereits über Twitter oder Mail erfahren haben, wurde das JavaLand 2020 abgesagt. Ich möchte hier nicht weiter auf die Gründe der Absage eingehen, da diese sicherlich bekannt sind. Wir (die deutsche JUG Community) haben viel Zeit in das Programm der JavaLand Konferenz gesteckt und sind daher genau wie die Speaker und Besucher traurig über diese Umstände. Aus diesem Grund haben wir uns zusammengeschlossen und organisieren aktuell eine kleinere Alternativveranstaltung. Aufgrund der aktuellen Situation wird es sich hierbei um eine 100% Remote Konferenz handeln. Da dies bei vielen sicherlich einige Fragezeichen aufwirft, möchte ich diesen Post nutzen um das Konzept zu erklären.
 
-![Cyberland](/assets/posts/2020-03-12-cyberland/cyberland-logo.png){:class="image-two-third-width"}
+![Cyberland](/posts/2020-03-12-cyberland/cyberland-logo.png){:class="image-two-third-width"}
 
 # Was ist das Cyberland?
 
@@ -46,4 +46,4 @@ Wir hoffen, dass noch bis Ende dieser Woche ein Webseite zum Cyberland online ge
 
 Die Frage haben wir in den letzten 2 Tagen schon mehrfach gehört. Vielleicht fühlt sich sogar aktuell der eine oder andere ausgeschlossen. Das tut uns natürlich sehr leid, aber in der aktuellen Situation müssen Entscheidungen schnell und pragmatisch getroffen werden. Aus diesem Grund wird das Cyberland aktuell federführend von einer handvoll Personen als Vertreter der deutschen JUGs organisiert. Sicherlich wird es auf dem Cyberland eine Begrüßungs-Session geben in der wir das alles auch noch einmal genauer erklären werden und die Leute hinter den Kulissen vorstellen. Für konkrete Fragen und Anmerkungen stehen Falk Sippach und ich jederzeit bereit. Neben uns ist die [CyberJUG](https://twitter.com/cyberjug) aktiv an der Umsetzung des Cyberlandes beteiligt - ein Fuchs wer jetzt errät, wie der Name vom Cyberland entstanden ist. Der CyberJUG möchte ich noch einmal für die schnelle Reaktion und Bereitschaft zur Mitorganisation ganz herzlich danken. Ansonsten hilft es sicherlich ein wenig Daumen zu drücken dass das hier alles sauber über die Bühne geht :D
 
-![Duke](/assets/posts/2020-03-12-cyberland/duke-love.png){:class="image-two-third-width"}
+![Duke](/posts/2020-03-12-cyberland/duke-love.png){:class="image-two-third-width"}

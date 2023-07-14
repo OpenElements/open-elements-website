@@ -7,7 +7,7 @@ excerpt: 'This post shows the view API of the Dolphin Platform. The Dolphin Plat
 ---
 The last days I blogged about the [different APIs of the Dolphin Platform]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}). The Dolphin Platform is a new Open Source Framework by Canoo that will be released the next weeks. But one part is still missing: the view. Therefore I will show how you can create JavaFX based clients by using the Dolphin Platform. As already mentioned the Dolphin Platform will provide support for several client platforms like __JavaFX__, __AngularJS__ or __Polymer__.
 
-![clients](/assets/posts/guigarage-legacy/clients.png)
+![clients](/posts/guigarage-legacy/clients.png)
 
 In this post I will focus on the JavaFX support. Other client libraries and APIs will be described in future posts.
 
@@ -17,7 +17,7 @@ Last but not least I will show how a view will be coded based on the Dolphin Pla
 
 When creating a JavaFX client you will normally use FXML to create your view. Next to the FXML file you will have a view controller to bind all the properties of the view and attach action handlers.
 
-![fxml](/assets/posts/guigarage-legacy/fxml.png)
+![fxml](/posts/guigarage-legacy/fxml.png)
 
 When talking about the dolphin Platform this view controller is the perfect point to bind the view to the synchronized model and the server side controller. Therefore we call this class the "Binder". There are several ways how you can define such a binding but the most easy one is to use extend the AbstractBinder class that is part of the Dolphin Platform JavaFX library. This class already implements the complete lifecycle of the view and you can simply bind the synchronized presentation model to your view properties. Here is a small example for a view that contains only one textfield and a button:
 
@@ -65,7 +65,7 @@ public class Controller {
 
 As you can see we never send any data to the server. Since the model will be automatically synchronized we can directly store the name string in the model to the database. The Dolphin Platform guarantee that the model will be the same as it's on the client when pressing the button.
 
-![mvc](/assets/posts/guigarage-legacy/mvc-1024x350.png)
+![mvc](/posts/guigarage-legacy/mvc-1024x350.png)
 
 Another nice benefit that you might notice is that even if we have communication between the server and the client we don't need to handle several threads. The Dolphin Platform handles all the concurrency and handles all actions in the right thread. By doing so the binding between JavaFX properties and Dolphin properties will automatically be handled on the JavaFX application thread.
 
