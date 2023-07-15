@@ -23,7 +23,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ block "title" . }}
+    {{ if .Page.Title }}
+      {{ .Site.Title }} &ndash; {{ .Page.Title }}
+    {{ else }}
+      {{ .Site.Title }} 
+    {{ end }}
+  {{ end }}</title>
   {{ partial "head-meta.html" . }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
