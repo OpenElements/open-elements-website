@@ -40,7 +40,7 @@
                             {{ $mainMenu := site.Data.mainMenu }}
                             {{ range $mainMenu }}
                             {{ if .visibleInNavigation }}
-                            <a href="{{ .link }}/" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                            <a href="{{ .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
                             {{ end }}
                             {{ end }}
                         </div>
