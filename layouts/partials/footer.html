@@ -47,9 +47,21 @@
                     <div>
                         <p class="sm:text-2xl text-base leading-10 text-white font-semibold sm:mb-6 mb-4">{{ T "privacy" }}</p>
                         <div class="flex flex-col gap-5">
-                            <a href="/privacy-policy/" class="flex items-center gap-3 group">
+                            {{if eq "en" $.Lang}}
+                            <a href="https://www.iubenda.com/privacy-policy/63821551" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="{{ T "privacyPolicy" }} ">
+                            {{else}}
+                            <a href="https://www.iubenda.com/privacy-policy/15787680" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="{{ T "privacyPolicy" }} ">
+                            {{end}}
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
                                 <span class="footer-link">{{ T "privacyPolicy" }}</span>
+                            </a>
+                            {{if eq "en" $.Lang}}
+                            <a href="https://www.iubenda.com/privacy-policy/63821551/cookie-policy" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="{{ T "privacyCookies" }} ">
+                            {{else}}
+                            <a href="https://www.iubenda.com/privacy-policy/15787680/cookie-policy" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe " title="{{ T "privacyCookies" }} ">
+                            {{end}}
+                            <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                            <span class="footer-link">{{ T "privacyCookies" }}</span>
                             </a>
                             <a href="" class="iubenda-cs-preferences-link flex items-center gap-3 group">
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
@@ -59,6 +71,7 @@
                                 <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
                                 <span class="footer-link">{{ T "impressum" }}</span>
                             </a>
+                            <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
                         </div>
                     </div>
                     <div class="xl:col-span-2 col-span-2 w-full relative">

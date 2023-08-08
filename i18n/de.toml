@@ -13,7 +13,9 @@ other = "Datenschutz"
 [privacyPolicy]
 other = "Datenschutzerklärung"
 [privacySettings]
-other = "Ihre Datenschutzeinstellungen"
+other = "Datenschutzeinstellungen"
+[privacyCookies]
+other = "Cookie-Richtlinie"
 [impressum]
 other = "Impressum"
 [404]

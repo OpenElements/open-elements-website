@@ -14,6 +14,8 @@ other = "Privacy"
 other = "Privacy Policy"
 [privacySettings]
 other = "Privacy Config"
+[privacyCookies]
+other = "Cookie Policy"
 [impressum]
 other = "Impressum"
 [404]
