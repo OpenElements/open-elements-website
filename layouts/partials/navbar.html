@@ -15,12 +15,12 @@
         {{ end }}
         <div class="w-full 2xl:shrink-0">
             {{ if .IsHome }}
-            <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
-            <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
-            {{ else }}
             <img class="w-full xl:mt-0 mt-3 lg:block hidden" src="{{ $herobg.RelPermalink }}" />
             <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block"
-                src="{{ $mBgHero.RelPermalink }}" alt="hero background for mobile" />
+                 src="{{ $mBgHero.RelPermalink }}" alt="hero background for mobile" />
+            {{ else }}
+            <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
+            <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
             {{ end }}
         </div>
         {{ if .IsHome }}
