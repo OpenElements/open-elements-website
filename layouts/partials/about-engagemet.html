@@ -5,9 +5,9 @@
                 <!-- https://discourse.gohugo.io/t/isset-in-partial/44934 -->
                 {{ if .link }}
                 <a href="{{ .link }}" target="_blank"><img class="w-full" src="{{ .logo }}" /></a>
-                {{else}}
+                {{ else -}}
                 <img class="w-full" src="{{ .logo }}" />
-                {{end}}
+                {{ end -}}
             </div>
             <h2 class="text-blue font-bold text-lg pr-2">{{ .title }}</h2>
         </div>

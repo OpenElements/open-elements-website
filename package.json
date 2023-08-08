@@ -3,7 +3,8 @@
     "dev:css": "npx tailwindcss -i input.css -o assets/css/style.css -w",
     "dev:hugo": "hugo server",
     "dev": "run-p dev:*",
-    "build:css": "NODE_ENV=production npx tailwindcss -i input.css -o assets/css/style.css -m",
+    "build:css": "npx tailwindcss -i input.css -o assets/css/style.css",
+    "build:minifyCss": "hugo --minify",
     "build:hugo": "hugo",
     "build": "run-s build:*"
   },

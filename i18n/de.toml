@@ -16,3 +16,7 @@ other = "Datenschutzerklärung"
 other = "Ihre Datenschutzeinstellungen"
 [impressum]
 other = "Impressum"
+[404]
+notFound = "Seite nicht gefunden!!"
+[altTexts]
+underline = "Grafisches Element zum Unterstreichen des Textes"

@@ -227,15 +227,7 @@
     {{end}}
 
     {{ if .Site.Data.landingpage.open_doors_visible }}
-    <!-- Cal element-click embed code begins -->
-    <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", {origin:"https://app.cal.com"});
-    
-    // link: add `data-cal-link="open-elements/15min"` attribute to the element you want to open Cal on click
-    Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false});
-    </script>
-    <!-- Cal element-click embed code ends -->
+    {{ partial "partials/cal.html" }}
     <div id="open-doors-section" class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm mx-auto relative xl:py-28 sm:py-16 py-12">
         <div class="">
             <div class="flex lg:items-start lg:flex-row flex-col lg:justify-start justify-center items-center gap-10">
@@ -243,12 +235,10 @@
                     <h2 class="h2 text-purple">Open Doors</h2>
                     <span class="iconify text-purple text-3xl absolute -right-6 -bottom-6 sm:block hidden"
                         data-icon="clarity:cursor-arrow-solid"></span>
-                        <img src="{{ $click2.RelPermalink }}" alt="click svg" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
+                    <img src="{{ $click2.RelPermalink }}" alt="click svg" class="ltext-3xl absolute -right-5 -bottom-6 sm:hidden">
                 </div>
-
                 <img src="{{ $openDoor.RelPermalink }}" alt="Open door image" class="sm:max-w-md lg:hidden">
             </div>
-
             <div class="flex xl:flex-row flex-col items-end w-full mx-auto">
                 <div class="relative lg:-mt-16 flex  flex-col lg:gap-5 sm:gap-24 gap-11 2xl:max-w-3xl xl:max-w-[800px] mx-auto shrink-0 w-full ml-0">
                     <img src="{{ $connectedLine.RelPermalink }}" alt="lines" class="absolute inset-0  lg:block hidden w-full max-w-[700px] top-20 ml-10">
@@ -264,18 +254,14 @@
                             <p>{{ $.Param "section_open_doors_section1" | safeHTML }}</p>
                         </div>
                     </div>
-                    
                     <div class="flex  relative lg:ml-[25%] lg:mt-20 mt-4 lg:order-3 order-3 mx-auto">
-                        <div
-                            class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
+                        <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
                             <p>{{ $.Param "section_open_doors_section3" | safeHTML }}</p>
-
                             <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full w-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
                                 <img src="{{ $callIcon.RelPermalink }}" alt="call icon" />
                                 {{ $.Param "section_open_doors_schedule_appointment" | safeHTML }}
                             </a>
                         </div>
-                        
                     </div>
                 </div>
                 <img src="{{ $openDoor.RelPermalink }}" alt="open door image" class="max-w-md xl:absolute right-5 2xl:bottom-14  mx-auto lg:block xl:mt-0 mt-16 hidden">
@@ -335,7 +321,7 @@
                     <div class="flex xl:flex-row flex-col xl:items-center lg:gap-6 sm:gap-5 gap-3 relative">
                         <img src="{{ $arrow6.RelPermalink }}" alt="arrow" class="absolute sm:-top-20 -top-16 sm:w-72 w-48 -left-1/3 lg:hidden">
                         <img src="{{ $line3.RelPermalink }}" alt="line" class="absolute lg:-bottom-10 sm:-bottom-8 -bottom-5 w-full">
-                        <h2 class="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">100%</h2>
+                        <p class="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">100%</p>
                         <p class="leading-6 xl:mt-0 sm:mt-4 mt-2">{{ $.Param "section_open_office_section1" | safeHTML }}</p>
                     </div>
                     <p class="lg:mt-20 sm:mt-16 mt-8">{{ $.Param "section_open_office_section2" | safeHTML }}</p>

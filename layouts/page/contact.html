@@ -7,16 +7,7 @@
 {{ $roundSM := resources.Get "/illustrations/round-44.svg" }}
 {{ $contact := resources.Get "/illustrations/contact.svg" }}
 
-<!-- Cal element-click embed code begins -->
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", {origin:"https://app.cal.com"});
-
-// link: add `data-cal-link="open-elements/15min"` attribute to the element you want to open Cal on click
-Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false});
-</script>
-<!-- Cal element-click embed code ends -->
-
+{{ partial "partials/cal.html" }}
 <div class="relative">
     <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm relative xl:pb-36 pb-28">
         <img class="absolute w-full top-52  2xl:-ml-32 -ml-20 lg:block hidden" src="{{ $lines.RelPermalink }}" />  
@@ -29,7 +20,6 @@ Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails"
                 </div>
             </h1>
         </div>
-
         <div class="relative flex flex-col 2xl:gap-40 lg:gap-32 gap-24">
             <div class="max-w-[1080px] w-full pt-3 mx-auto">
                 <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-full flex flex-col items-center justify-center text-center">
@@ -40,11 +30,9 @@ Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails"
                     </a>
                 </div>
             </div>
-
             <div class="w-full flex lg:flex-row flex-col-reverse items-center justify-center xl:gap-12 lg:gap-6 gap-16 relative">
                 <img class="absolute lg:w-[450px] w-80 lg:-left-44 -left-24 lg:top-12 top-[500px] sm:block hidden" src="{{ $round1.RelPermalink }}" />
                 <img class="absolute lg:w-[450px] w-80 lg:-left-44 sm:-left-24 -left-40 lg:top-12 top-[440px] sm:hidden" src="{{ $roundSM.RelPermalink }}" />
-                
                 <div class="w-full flex flex-col lg:items-start items-center xl:gap-12 lg:gap-6 gap-8 relative">
                     <div class="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col">
                         <p>{{ $.Param "mail_intro" }}</p>
@@ -62,7 +50,6 @@ Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails"
                             {{ $.Param "phone_nummer" }}
                         </a>
                     </div>
-
                     <div class="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col lg:-mr-5 xl:place-self-end">
                         <p>{{ $.Param "address_intro" }}</p>
                         <span class="text-purple flex items-start gap-2">
@@ -78,10 +65,5 @@ Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails"
             </div>
         </div>
     </div>
-
-
-
-
-
 </div>
 {{ end }}

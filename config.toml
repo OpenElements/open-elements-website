@@ -1,8 +1,12 @@
 defaultContentLanguage = "en"
 title = "Open Elements"
-disableKinds = [ "taxonomy", "taxonomyTerm" ]
 baseURL = "https://open-elements.com/"
 
+disableKinds = [ "taxonomy", "taxonomyTerm" ]
+enableRobotsTXT = true
+log = true
+logFile = "hugo-build.log"
+enableGitInfo = true
 
 [languages.en]
 weight = 1
