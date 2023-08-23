@@ -56,7 +56,8 @@
             <img class="absolute lg:top-0 top-20 xl:w-44 lg:w-32 w-28 right-0 sm:inline hidden" src="{{ $line7.RelPermalink }}" />
             <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
             <div class="pt-20 flex w-full justify-center flex-wrap">
-                {{ range .Params.engagements }}
+                {{ $data := index .Site.Data .Site.Language.Lang }}
+                {{ range $data.engagements }}
                     {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
                 {{ end }}
             </div>
@@ -69,7 +70,8 @@
             <h2 class="h2 text-center text-blue">{{.Params.section_customers_title_prefix}} <span class="text-green">{{.Params.section_customers_title}}</span></h2>
             <div class="lg:pt-20 pt-12 flex w-full justify-center flex-wrap relative">
                 <img class="absolute -left-4 top-0 w-[300px] sm:hidden z-0" src="{{ $dashlineM2.RelPermalink }}" />
-                {{ range .Params.customers }}
+                {{ $data := index .Site.Data .Site.Language.Lang }}
+                {{ range $data.partners }}
                     {{ partial "partials/about-customer.html" (dict "logo" .logo "title"  .title "description" .text "link" .link)}}
                 {{ end }}
             </div>
