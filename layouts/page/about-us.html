@@ -69,7 +69,8 @@
             <h2 class="text-center h2 text-blue">{{.Params.section_customers_title_prefix}} <span class="text-green">{{.Params.section_customers_title}}</span></h2>
             <div class="relative flex flex-wrap justify-center w-full pt-12 lg:pt-20">
                 <img class="absolute -left-4 top-0 w-[300px] sm:hidden z-0" src="{{ $dashlineM2.RelPermalink }}" />
-                {{ range .Params.customers }}
+                {{ $data := index .Site.Data .Site.Language.Lang }}
+                {{ range $data.partners }}
                     {{ partial "partials/about-customer.html" (dict "logo" .logo "title"  .title "description" .text "link" .link)}}
                 {{ end }}
             </div>

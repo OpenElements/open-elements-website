@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Heise Group",
+    "text": "Heise ist einer der größten deutschen Medienkonzerne und mit seinem IT-Nachrichtenportal <a class=\"link-purple\" href=\"https://www.heise.de\" target=\"_blank\">heise.de</a> führend im deutschsprachigen Raum. OpenElements ist verantwortlich für die Inhalte des Java-Blogs auf <a class=\"link-purple\" href=\"https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html\" target=\"_blank\">heise.de</a>.",
+    "logo": "/illustrations/logo-heise.svg",
+    "link": "https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html"
+  },
+  {
+    "title": "Hedera",
+    "text": "<a class=\"link-purple\" href=\"https://hedera.com\" target=\"_blank\">Hedera</a> ist das Unternehmen hinter dem Hedera Hashgraph, dem einzigen öffentlichen und verteilten Ledger, der auf dem Hashgraph-Algorithmus basiert. Hedera Hashgraph ist OSS und wurde in Java entwickelt. Hedera wird von einem Verwaltungsrat aus globalen Unternehmen und Einrichtungen verwaltet, darunter <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b> und weiteren bekannten Namen. OpenElements trägt aktiv zur <a class=\"link-purple\" href=\"https://github.com/hashgraph/hedera-services\" target=\"_blank\">Open Source Platform und der Implementierung der Services des Hedera Hashgraph</a> bei.",
+    "logo": "/illustrations/logo-hedera.svg",
+    "link": "https://hedera.com"
+  },
+  {
+    "title": "Swirlds Labs",
+    "text": "<a class=\"link-purple\" href=\"https://swirldslabs.com\" target=\"_blank\">Swirlds Labs</a> ist ein Unternehmen, das Entwicklung und Support rund um <b>Hedera Hashgraph</b> anbietet und deren Open-Source-Komponenten entwickelt. OpenElements hilft Swirlds Labs beim Aufbau der Plattform des Hedera Hashgraphs.",
+    "logo": "/illustrations/logo-swirlds.svg",
+    "link": "https://swirldslabs.com"
+  },
+  {
+    "title": "OTH Regensburg",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> ist eine renommierte technische Hochschule in Deutschland, die eine breite Palette an Studiengängen anbietet, wobei ihr Fachbereich für Informatik und IT besonders hervorzuheben ist durch praxisorientierte Lehrmethoden und enge Zusammenarbeit mit der Industrie. OpenElements ist ein Partner der OTH Regensburg und unser Gründer <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> ist Dozent für Blockchain-Technologie an der OTH.",
+    "logo": "/illustrations/logo-oth.svg",
+    "link": "https://swirldslabs.com"
+  }
+]
