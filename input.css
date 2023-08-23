@@ -29,7 +29,7 @@
     }
 
     .h2{
-        @apply sm:text-[44px] text-[28px] font-bold leading-10
+        @apply lg:text-[44px] sm:text-[40px] text-[28px] font-bold leading-10
     }
 
     .h3{

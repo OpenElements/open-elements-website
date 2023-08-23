@@ -1,4 +1,5 @@
 {{ $image := resources.Get "/images/logo.svg" }}
+{{ $logoSupport := resources.Get "/images/open-elements-support-logo.png" }}
 {{ $herobg := resources.Get "/illustrations/home-bg-2.svg" }}
 {{ $herobg2 := resources.Get "/illustrations/hero-bg-2.svg" }}
 {{ $mBgHero := resources.Get "/illustrations/m-bg-hero.svg" }}
@@ -7,7 +8,7 @@
 {{ $close := resources.Get "/illustrations/close.svg" }}
 {{ $menuBg := resources.Get "/illustrations/menu-bg.svg" }}
 <div class="relative">
-    <div class="flex items-start absolute top-0 w-full">
+    <div class="absolute top-0 flex items-start w-full">
         {{ if .IsHome }}
         <div class="bg-blue h-[244px] w-full 2xl:block hidden"></div>
         {{ else }}
@@ -15,12 +16,12 @@
         {{ end }}
         <div class="w-full 2xl:shrink-0">
             {{ if .IsHome }}
-            <img class="w-full xl:mt-0 mt-3 lg:block hidden" src="{{ $herobg.RelPermalink }}" />
-            <img class="absolute md:-top-28 sm:-top-24 -top-10 inset-0 object-cover object-center w-full lg:hidden block"
+            <img class="hidden w-full mt-3 xl:mt-0 lg:block" src="{{ $herobg.RelPermalink }}" />
+            <img class="absolute inset-0 block object-cover object-center w-full md:-top-28 sm:-top-24 -top-10 lg:hidden"
                  src="{{ $mBgHero.RelPermalink }}" alt="hero background for mobile" />
             {{ else }}
-            <img class="w-full 2xl:-mt-2 lg:mt-5 md:mt-16 mt-10 sm:block hidden" src="{{ $herobg2.RelPermalink }}" />
-            <img class="-mt-4 object-contain object-center w-full sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
+            <img class="hidden w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block" src="{{ $herobg2.RelPermalink }}" />
+            <img class="object-contain object-center w-full -mt-4 sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
             {{ end }}
         </div>
         {{ if .IsHome }}
@@ -30,12 +31,18 @@
         {{ end }}
     </div>
 
-    <div class="pt-16 container" x-data="{ open:false }">
-        <div class="fixed top-0 bg-blue inset-x-0 w-full pb-3 z-30 ">
-            <div class="container mx-auto max-w-7xl relative">
+    <div class="container pt-16" x-data="{ open:false }">
+        <div class="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue ">
+            <div class="container relative mx-auto max-w-7xl">
                 <nav class="flex items-center justify-between pt-5 pb-3">
-                    <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="logo" class="sm:h-7 h-5"></a>
-                    <div class="xl:flex hidden items-center gap-9">
+            
+                    {{ if (eq .Page.RelPermalink "/temurin-support/") }}
+                        <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $logoSupport.RelPermalink }}" alt="logo" class="h-5 sm:h-10"></a>
+                    {{ else }}
+                        <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="logo" class="h-5 sm:h-7"></a>
+                    {{ end }}
+                    
+                    <div class="items-center hidden xl:flex gap-9">
                         <div class="flex items-center gap-9">
                             {{ $mainMenu := site.Data.mainMenu }}
                             {{ range $mainMenu }}
@@ -79,16 +86,16 @@
         </div>
 
 
-        <div class=" fixed top-0 inset-0 z-30 bg-blue h-full xl:hidden" x-show="open"
+        <div class="fixed inset-0 top-0 z-30 h-full bg-blue xl:hidden" x-show="open"
             x-transition:enter="transition ease-out duration-100"
             x-transition:enter-start="transform opacity-0 scale-95"
             x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
             x-transition:leave-start="transform opacity-100 scale-100"
             x-transition:leave-end="transform opacity-0 scale-95">
             <div class="relative w-full h-screen">
-                <img class="absolute inset-0 w-full object-cover h-full" alt="menu background" src="{{ $menuBg.RelPermalink }}" />
-                <nav class="flex items-center justify-between sm:pt-5 pt-4 pb-3 relative container max-w-7xl mx-auto">
-                    <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="" class="sm:h-7 h-5"></a>
+                <img class="absolute inset-0 object-cover w-full h-full" alt="menu background" src="{{ $menuBg.RelPermalink }}" />
+                <nav class="container relative flex items-center justify-between pt-4 pb-3 mx-auto sm:pt-5 max-w-7xl">
+                    <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="" class="h-5 sm:h-7"></a>
                     <button class="xl:hidden">
                         <img class="w-7" @click="open = false" alt="close button icon" src="{{ $close.RelPermalink }}" />
                     </button>
@@ -100,7 +107,7 @@
                             {{ $mainMenu := site.Data.mainMenu }}
                             {{ range $mainMenu }}
                             {{ if .visibleInNavigation }}
-                            <a href="{{ relLangURL .link }}" class="nav-link tracking-wider">{{ print .i18nKey | i18n }}</a>
+                            <a href="{{ relLangURL .link }}" class="tracking-wider nav-link">{{ print .i18nKey | i18n }}</a>
                             {{ end }}
                             {{ end }}
                         </div>
