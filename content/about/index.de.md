@@ -89,4 +89,9 @@ customers:
         text: '<a class="link-purple" href="https://swirldslabs.com" target="_blank">Swirlds Labs</a> ist ein Unternehmen, das Entwicklung und Support rund um <b>Hedera Hashgraph</b> anbietet und deren Open-Source-Komponenten entwickelt. OpenElements hilft Swirlds Labs beim Aufbau der Plattform des Hedera Hashgraphs.'
         logo: '/illustrations/logo-swirlds.svg'
         link: 'https://swirldslabs.com'
+    oth:
+      title: 'OTH Regensburg'
+      text: 'Die <a class="link-purple" href="https://www.oth-regensburg.de" target="_blank">OTH Regensburg</a> ist eine renommierte technische Hochschule in Deutschland, die eine breite Palette an Studiengängen anbietet, wobei ihr Fachbereich für Informatik und IT besonders hervorzuheben ist durch praxisorientierte Lehrmethoden und enge Zusammenarbeit mit der Industrie. OpenElements ist ein Partner der OTH Regensburg und unser Gründer <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> ist Dozent für Blockchain-Technologie an der OTH.'
+      logo: '/illustrations/logo-oth.svg'
+      link: 'https://swirldslabs.com'
 ---
