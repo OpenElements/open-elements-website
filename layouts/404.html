@@ -2,11 +2,11 @@
 {{ $404 := resources.Get "/illustrations/404.svg" }}
 {{ $bgOops := resources.Get "/illustrations/bg-oops.svg" }}
 
-<div class="container xl:py-56 py-36 flex sm:flex-col flex-col-reverse gap-12 items-center justify-center">
-    <img class="w-full h-full 2xl:max-w-3xl lg:max-w-xl max-w-md mx-auto" alt="404 image" src="{{ $404.RelPermalink }}" />
-    <h1 class="h1 text-center">
-        <div class="lg:inline sm:block inline tracking-tight">
-            <div class="relative justify-center inline-flex items-center sm:px-16 px-5 -ml-5 -mr-5 sm:-ml-16 sm:-mr-16 z-0">
+<div class="container flex flex-col-reverse items-center justify-center gap-12 xl:py-56 py-36 sm:flex-col">
+    <img class="w-full h-full max-w-md mx-auto 2xl:max-w-3xl lg:max-w-xl" alt="404 image" src="{{ $404.RelPermalink }}" />
+    <h1 class="text-center h1">
+        <div class="inline tracking-tight lg:inline sm:block">
+            <div class="relative z-0 inline-flex items-center justify-center px-5 -ml-5 -mr-5 sm:px-16 sm:-ml-16 sm:-mr-16">
                 <img class="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-8 sm:-mt-2.5 -mt-1" alt="{{ i18n "altTexts.underline" }}" src="{{ $bgOops.RelPermalink }}" />
                 <span class="relative">Ooops - </span>
             </div>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-  <body >
-    <main class="overflow-hidden antialiased bg-gray" id="top">
+  <body class="">
+    <main class="w-full overflow-hidden antialiased bg-gray" id="top">
       {{ partial "navbar.html" . }}
       {{ block "main" . }}
       {{ end }}

@@ -34,7 +34,7 @@
     <div class="container pt-16" x-data="{ open:false }">
         <div class="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue ">
             <div class="container relative mx-auto max-w-7xl">
-                <nav class="flex items-center justify-between pt-5 pb-3">
+                <nav class="flex items-center justify-between pt-5 pb-3 text-lg">
             
                     {{ if (eq .Page.RelPermalink "/temurin-support/") }}
                         <a href="{{ .Site.Home.RelPermalink }}"><img src="{{ $logoSupport.RelPermalink }}" alt="logo" class="h-5 sm:h-10"></a>

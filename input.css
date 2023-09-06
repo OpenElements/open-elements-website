@@ -7,9 +7,14 @@
 
 @layer base{
 
-    html{
-        @apply font-sans sm:text-lg text-base text-blue
+    /* html{
+        @apply font-sans sm:text-lg sm:leading-7 text-base text-blue
+    } */
+
+    body{
+        @apply font-sans text-blue
     }
+    
 
     .nav-link{
         @apply font-medium text-gray hover:text-sky transition-colors ease-in-out duration-150 focus:outline-none
@@ -25,7 +30,7 @@
         @apply text-3xl leading-none  text-white hover:text-sky transition-colors ease-in-out duration-150
     }
     .h1{
-        @apply lg:text-[52px] sm:text-4xl text-[32px] font-bold lg:leading-snug sm:leading-snug leading-snug
+        @apply lg:text-5xl sm:text-4xl text-[32px] font-bold lg:leading-snug sm:leading-snug leading-snug
     }
 
     .h2{
