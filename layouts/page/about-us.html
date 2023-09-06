@@ -56,12 +56,8 @@
             <img class="absolute right-0 hidden lg:top-0 top-20 xl:w-44 lg:w-32 w-28 sm:inline" src="{{ $line7.RelPermalink }}" />
             <img class="absolute right-0 w-16 top-28 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
             <div class="flex flex-wrap justify-center w-full pt-20">
-<<<<<<< HEAD
-                {{ range .Params.engagements }}
-=======
                 {{ $data := index .Site.Data .Site.Language.Lang }}
                 {{ range $data.engagements }}
->>>>>>> 4e67f66 (whole design updated, Support page, blog list and blog post page added)
                     {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
                 {{ end }}
             </div>
