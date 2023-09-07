@@ -8,7 +8,7 @@
 @layer base{
 
     html{
-        @apply font-sans sm:text-lg text-base text-blue
+        @apply font-sans text-blue
     }
 
     .nav-link{

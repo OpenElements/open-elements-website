@@ -428,17 +428,8 @@ video {
 
 html{
   font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(2 1 68 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px){
-  html{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
 }
 
 .nav-link{
@@ -1739,6 +1730,10 @@ html{
   margin-bottom: 5rem;
 }
 
+.-mt-16{
+  margin-top: -4rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -1747,12 +1742,12 @@ html{
   margin-top: 1.5rem;
 }
 
-.-mt-4{
-  margin-top: -1rem;
-}
-
 .mt-3{
   margin-top: 0.75rem;
+}
+
+.-mt-4{
+  margin-top: -1rem;
 }
 
 .block{
@@ -1819,6 +1814,10 @@ html{
   height: 7rem;
 }
 
+.h-52{
+  height: 13rem;
+}
+
 .h-12{
   height: 3rem;
 }
@@ -1827,20 +1826,20 @@ html{
   height: 2.75rem;
 }
 
-.h-\[274px\]{
-  height: 274px;
-}
-
 .h-\[244px\]{
   height: 244px;
 }
 
-.h-\[179\.5px\]{
-  height: 179.5px;
+.h-\[274px\]{
+  height: 274px;
 }
 
 .h-\[595px\]{
   height: 595px;
+}
+
+.h-\[179\.5px\]{
+  height: 179.5px;
 }
 
 .h-screen{
@@ -1921,6 +1920,10 @@ html{
 
 .w-80{
   width: 20rem;
+}
+
+.w-40{
+  width: 10rem;
 }
 
 .w-12{
@@ -2118,6 +2121,12 @@ html{
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -2227,6 +2236,11 @@ html{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-green-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 241 236 / var(--tw-bg-opacity));
+}
+
 .bg-blue{
   --tw-bg-opacity: 1;
   background-color: rgb(2 1 68 / var(--tw-bg-opacity));
@@ -2327,6 +2341,11 @@ html{
   padding-bottom: 2.5rem;
 }
 
+.py-3\.5{
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2402,10 +2421,6 @@ html{
   padding-top: 0.75rem;
 }
 
-.pb-16{
-  padding-bottom: 4rem;
-}
-
 .pt-5{
   padding-top: 1.25rem;
 }
@@ -2416,6 +2431,10 @@ html{
 
 .pb-5{
   padding-bottom: 1.25rem;
+}
+
+.pb-40{
+  padding-bottom: 10rem;
 }
 
 .pb-9{
@@ -2508,6 +2527,10 @@ html{
 
 .leading-7{
   line-height: 1.75rem;
+}
+
+.leading-\[26px\]{
+  line-height: 26px;
 }
 
 .leading-10{
@@ -2689,6 +2712,11 @@ html{
   background-color: rgb(117 115 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-green-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 227 216 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-green:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(92 186 158 / var(--tw-bg-opacity));
@@ -2719,9 +2747,19 @@ html{
   background-color: rgb(230 50 119 / var(--tw-bg-opacity));
 }
 
+.active\:bg-green:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 186 158 / var(--tw-bg-opacity));
+}
+
 .active\:text-rose-100:active{
   --tw-text-opacity: 1;
   color: rgb(250 214 228 / var(--tw-text-opacity));
+}
+
+.active\:text-white:active{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .active\:shadow-none:active{
@@ -2861,6 +2899,10 @@ html{
 
   .sm\:ml-0{
     margin-left: 0px;
+  }
+
+  .sm\:mt-10{
+    margin-top: 2.5rem;
   }
 
   .sm\:mb-6{
@@ -3063,6 +3105,10 @@ html{
     padding-top: 6rem;
   }
 
+  .sm\:pb-36{
+    padding-bottom: 9rem;
+  }
+
   .sm\:pt-5{
     padding-top: 1.25rem;
   }
@@ -3135,6 +3181,10 @@ html{
 
   .md\:pt-28{
     padding-top: 7rem;
+  }
+
+  .md\:pb-40{
+    padding-bottom: 10rem;
   }
 }
 
@@ -3338,6 +3388,10 @@ html{
     margin-right: -1.25rem;
   }
 
+  .lg\:mt-12{
+    margin-top: 3rem;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -3430,6 +3484,10 @@ html{
     max-width: 28rem;
   }
 
+  .lg\:max-w-6xl{
+    max-width: 72rem;
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -3490,6 +3548,10 @@ html{
 
   .lg\:pt-36{
     padding-top: 9rem;
+  }
+
+  .lg\:pb-52{
+    padding-bottom: 13rem;
   }
 
   .lg\:text-center{
@@ -3556,6 +3618,10 @@ html{
 
   .xl\:mt-16{
     margin-top: 4rem;
+  }
+
+  .xl\:-mt-32{
+    margin-top: -8rem;
   }
 
   .xl\:flex{
@@ -3741,6 +3807,10 @@ html{
 
   .\32xl\:gap-20{
     gap: 5rem;
+  }
+
+  .\32xl\:pb-56{
+    padding-bottom: 14rem;
   }
 
   .\32xl\:text-lg{

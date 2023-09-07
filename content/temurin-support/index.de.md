@@ -1,7 +1,7 @@
 ---
 title: "Temurin Support & Care"
 description: "Open Elements bietet mit 'Temurin Support & Care' eine leichtgewichtigen Support für die bekannteste Java Distribution."
-layout: "product-overview"
+layout: "support-care"
 
 intro-1: 'In einer zunehmend digitalisierten Welt hat sich <span style="font-weight: 500;">Java™</span> als eine der populärsten und weitverbreitetsten Programmiersprachen etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung von Java-Anwendungen auf der sicheren Seite zu sein.'
 intro-2: '<span style="font-weight: 500;">Eclipse Temurin™</span> ist eine Java Laufzeitumgebung welche auf dem <span style="font-weight: 500;">OpenJDK™</span> basiert und von der <span style="font-weight: 500;">Eclipse Foundation</span> unter einer Open Source Lizenz vertrieben wird. Eclipse Temurin ist ein zentrales Projekt der <span style="font-weight: 500;">Adoptium™</span> Working Group die hochqualitative Produkte und Technologien für das Java Ökosystem entwickelt und bereitstellt.
