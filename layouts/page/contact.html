@@ -9,59 +9,66 @@
 
 {{ partial "partials/cal.html" }}
 <div class="relative">
-    <div class="container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full max-w-sm relative xl:pb-36 pb-28">
-        <img class="absolute w-full top-52  2xl:-ml-32 -ml-20 lg:block hidden" src="{{ $lines.RelPermalink }}" />  
+    <div class="container relative max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:pb-36 pb-28">
+        <img class="absolute hidden w-full -ml-20 top-52 2xl:-ml-32 lg:block" src="{{ $lines.RelPermalink }}" />  
         <img class="absolute w-full md:top-40 sm:top-36 top-[110px] md:-ml-16 sm:ml-0 lg:hidden sm:block hidden" src="{{ $linesM.RelPermalink }}" />  
-        <div class="flex items-center justify-center lg:pt-36 md:pt-28 sm:pt-24 pt-16 sm:pb-12 pb-4">
-            <h1 class="h1 text-center flex items-center justify-center w-full">
+        <div class="flex items-center justify-center pt-16 pb-4 lg:pt-36 md:pt-28 sm:pt-24 sm:pb-12">
+            <h1 class="flex items-center justify-center w-full text-center h1">
                 <div class="relative z-0 flex items-center justify-center w-full">
-                    <img class="absolute lg:w-64 sm:w-48 w-32 -mr-28 mt-1" src="{{ $heroTextBg.RelPermalink }}" />
+                    <img class="absolute w-32 mt-1 lg:w-64 sm:w-48 -mr-28" src="{{ $heroTextBg.RelPermalink }}" />
                     <span class="relative">{{.Params.title}}</span>
                 </div>
             </h1>
         </div>
-        <div class="relative flex flex-col 2xl:gap-40 lg:gap-32 gap-24">
+        <div class="relative flex flex-col gap-24 2xl:gap-40 lg:gap-32">
             <div class="max-w-[1080px] w-full pt-3 mx-auto">
                 <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-full flex flex-col items-center justify-center text-center">
                     <p>{{ $.Param "intro" | safeHTML }}</p>
-                    <a data-cal-link="open-elements/15min" class="flex items-center justify-center cursor-pointer gap-3 capitalize text-white font-semibold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
+                    <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full cursor-pointer bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
                         <img src="{{ $callIcon.RelPermalink }}" />
                         {{ $.Param "schedule_button_text" }}
                     </a>
                 </div>
             </div>
-            <div class="w-full flex lg:flex-row flex-col-reverse items-center justify-center xl:gap-12 lg:gap-6 gap-16 relative">
+            <div class="relative flex flex-col-reverse items-center justify-center w-full gap-16 lg:flex-row xl:gap-12 lg:gap-6">
                 <img class="absolute lg:w-[450px] w-80 lg:-left-44 -left-24 lg:top-12 top-[500px] sm:block hidden" src="{{ $round1.RelPermalink }}" />
                 <img class="absolute lg:w-[450px] w-80 lg:-left-44 sm:-left-24 -left-40 lg:top-12 top-[440px] sm:hidden" src="{{ $roundSM.RelPermalink }}" />
-                <div class="w-full flex flex-col lg:items-start items-center xl:gap-12 lg:gap-6 gap-8 relative">
+                <div class="relative flex flex-col items-center w-full gap-8 lg:items-start xl:gap-12 lg:gap-6">
                     <div class="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col">
                         <p>{{ $.Param "mail_intro" }}</p>
-                        <a href="mailto:info@open-elements.de" class="link-purple flex items-center gap-1">
+                        <a href="mailto:info@open-elements.de" class="flex items-center gap-1 text-purple-700 link-purple">
                             <svg class="w-5 h-5 stroke-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"/>
                             </svg>
-                            {{ $.Param "mail_address" }}
+                            <p class="font-semibild">
+                                {{ $.Param "mail_address" }}
+                            </p>
                         </a>
                         <p>{{ $.Param "phone_intro" }}</p>
-                        <a href="tel:{{ $.Param "phone_nummer" }}" class="link-purple flex items-center gap-2">
+                        <a href="tel:{{ $.Param "phone_nummer" }}" class="flex items-center gap-2 text-purple-700 link-purple">
                             <svg class="w-5 h-5 stroke-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                             </svg>
-                            {{ $.Param "phone_nummer" }}
+                            <p class="font-semibild">
+                                {{ $.Param "phone_nummer" }}
+                            </p>
                         </a>
                     </div>
                     <div class="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col lg:-mr-5 xl:place-self-end">
                         <p>{{ $.Param "address_intro" }}</p>
-                        <span class="text-purple flex items-start gap-2">
-                            <svg class="w-6 h-6 stroke-2 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <div class="flex items-start gap-2 text-purple-700">
+                            <svg class="w-6 h-6 mt-1 stroke-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-                              </svg>
-                              {{ $.Param "address" | safeHTML }}
-                        </span>                    
+                            </svg>
+                            <p class="font-semibold ">
+                                {{ $.Param "address" | safeHTML }}
+                            </p>
+                              
+                        </div>                    
                     </div>
                 </div>
-                <img class="w-full xl:max-w-md max-w-sm shrink-0 xl:mt-16" src="{{ $contact.RelPermalink }}" />
+                <img class="w-full max-w-sm xl:max-w-md shrink-0 xl:mt-16" src="{{ $contact.RelPermalink }}" />
             </div>
         </div>
     </div>

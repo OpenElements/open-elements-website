@@ -8,6 +8,7 @@ intro-2: '<span style="font-weight: 500;">Eclipse Temurin™</span> ist eine Jav
 Mit über 10 Millionen Downloads pro Monat ist Eclipse Temurin die meistgenutzte Java Laufzeitumgebung der Welt. <span style="font-weight: 500;">OpenElements</span> hat als Mitglied der <span style="font-weight: 500;">Adoptium™</span> Working Group zu diesem Erfolg maßgeblich beigetragten. Unser Gründer <a class="link-purple" href="{{< relref "/about-hendrik" >}}">Hendrik Ebbers</a> ist Gründungsmitglied von Adoptium sowie Mitglied des Technical Steering Commitee (TSC) des Vorgängers AdoptOpenJDK.'
 intro-3: 'Der Kauf von <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> bietet Ihnen eine Vielzahl von Vorteilen, die die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen sowie Ihren Entwicklungsprozess optimieren. Durch die direkte Mitarbeit an <span style="font-weight: 500;">Open Elements</span> hat als Mitglied der <span style="font-weight: 500;">Adoptium™</span> und die außergewöhnliche Vernetzung von <span style="font-weight: 500;">Open Elements</span> hat als Mitglied der <span style="font-weight: 500;">OpenElements</span> durch <a class="link-purple" href="{{< relref "/about" >}}">unsere Aktivitäten im Java und Open Source Ökosystem</a> können wir Ihnen Informationen und Einblicke in die aktuelle und Zukünftige Entwicklung in der Eclipse Adoptium WorkingGroup sowie dem OpenJDK.'
 contact_us_button_text: 'Kontaktieren Sie uns'
+show_more_button_text: 'Show More'
 
 facts:
     fact1:

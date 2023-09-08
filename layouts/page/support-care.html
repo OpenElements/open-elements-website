@@ -11,16 +11,18 @@
 
 
 <div class="relative pb-40">
-    <div class="container max-w-sm lg:max-w-6xl md:max-w-2xl sm:max-w-xl sm:w-full">
-        <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
-            <div class="relative flex flex-col items-center justify-center w-full">
-              <h1 class="text-center h1">{{.Params.title}}</h1>
-              <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-48 -bottom-3 sm:w-72 sm:-mr-24 shrink-0">
-            </div>
-         </div>
-         <h2 class="text-center sm:mt-10 mt-14 lg:mt-12 h2 text-blue">
-            {{.Params.subtitle | markdownify }}
-         </h2>
+    <div class="container">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+                <div class="relative flex flex-col items-center justify-center w-full">
+                  <h1 class="text-center h1">{{.Params.title}}</h1>
+                  <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-48 -bottom-3 sm:w-72 sm:-mr-24 shrink-0">
+                </div>
+             </div>
+             <h2 class="text-center sm:mt-10 mt-14 lg:mt-12 h2 text-blue ">
+                {{.Params.subtitle | markdownify }}
+             </h2>
+        </div>
     </div>
 
     <div class="relative pb-28 md:pb-40 sm:pb-36 2xl:pb-56 xl:pb-72 lg:pb-52">
@@ -28,10 +30,12 @@
         <img class="absolute bottom-0 hidden w-full pb-12 2xl:hidden sm:block xl:pb-28 sm:pb-16" src="{{ $dashlineD.RelPermalink }}" />
         <img class="absolute bottom-0 w-full pb-12 sm:hidden sm:pb-16" src="{{ $dashlineM.RelPermalink }}" />
             
-        <div class="container max-w-sm lg:max-w-6xl md:max-w-2xl sm:max-w-xl sm:w-full">
-            <div class="relative flex flex-col mt-8 text-base leading-7 gap-7 text-blue">
-                <p>{{ $.Param "intro-1" | markdownify }}</p>
-                <p>{{ $.Param "intro-2" | markdownify }}</p>
+        <div class="container">
+            <div class="max-w-5xl mx-auto">
+                <div class="relative flex flex-col mt-8 text-base leading-7 gap-7 text-blue">
+                    <p>{{ $.Param "intro-1" | markdownify }}</p>
+                    <p>{{ $.Param "intro-2" | markdownify }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -43,9 +47,11 @@
         </div>
     </div>
 
-    <div class="container max-w-sm mt-12 lg:max-w-6xl md:max-w-2xl sm:max-w-xl sm:w-full">
-        <div class="relative flex flex-col mt-8 gap-7 text-blue">
-            <p class="text-base leading-7">{{ $.Param "intro-3" | markdownify }}</p>
+    <div class="container mt-12">
+        <div class="max-w-5xl mx-auto">
+            <div class="relative flex flex-col mt-8 gap-7 text-blue">
+                <p class="text-base leading-7">{{ $.Param "intro-3" | markdownify }}</p>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -57,7 +63,7 @@
         </div>
     </div>
     
-    <div class="container relative mx-auto max-w-7xl">
+    <div class="container relative mx-auto">
         <div class="flex flex-wrap justify-center w-full pt-20">
             {{ range .Params.facts }}
                 {{ partial "partials/care-card.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
