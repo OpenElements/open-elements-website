@@ -1,11 +1,11 @@
-<div class="w-full sm:px-3 py-3 relative">
+<div class="relative w-full max-w-5xl py-3 mx-auto sm:px-3">
     <div class="bg-gray rounded-[30px] shadow-4 p-6 pb-9 h-full">
         <div class="flex items-center justify-start gap-3">
-            <div class="w-24 h-28 flex items-center justify-start">
+            <div class="flex items-center justify-start w-24 h-28">
                 <a href="{{ .link }}" target="_blank" style="width: 100%"><img class="w-full" src="{{ .logo }}" /></a>
             </div>
-            <p class="text-blue font-bold text-2xl pr-2">{{ .title }}</p>
+            <p class="pr-2 text-2xl font-bold text-blue">{{ .title }}</p>
         </div>
-        <p>{{ .description | markdownify }}</p>
+        <p class="text-sm leading-6">{{ .description | markdownify }}</p>
     </div>
 </div>

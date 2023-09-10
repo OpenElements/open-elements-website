@@ -1,7 +1,7 @@
 ---
 title: "Temurin Support & Care"
 description: "With 'Temurin Support & Care' OpenElements provide a lightweight support for the most prominent Java distribution."
-layout: "product-overview"
+layout: "support-care"
 
 intro-1: "In an increasingly digitalized world, <span style=\"font-weight: 500;\">Java™</span> has established itself as one of the most popular and widespread programming languages. Therefore, it's all the more important to be able to rely on professional support for the development and maintenance of Java applications, ensuring they are secure."
 
@@ -10,6 +10,7 @@ With over 10 million downloads per month, Eclipse Temurin is the most widely use
 intro-3: 'Purchasing <span style="font-weight: 500;">OpenElements Temurin Support & Care</span> provides you with a variety of benefits that enhance the performance and security of your Java applications and optimize your development process. As a member of <span style="font-weight: 500;">Adoptium</span> and with our exceptional network within <span style="font-weight: 500;">OpenElements</span>, we directly contribute to its development. Through our activities in the Java and Open Source ecosystem, we can provide you with information and insights into the current and future developments within the Eclipse Adoptium Working Group and the OpenJDK. For more details, please visit <a class="link-purple" href="/about">our activities in the Java and Open Source ecosystem</a>.'
 
 contact_us_button_text: 'Contact us'
+show_more_button_text: 'Show More'
 
 facts:
     fact1:

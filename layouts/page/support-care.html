@@ -1,0 +1,80 @@
+{{ define "main" }}
+{{ $underline := resources.Get "/illustrations/underline.svg" }}
+
+{{ $callIcon := resources.Get "/icons/call.svg" }}
+{{ $dashlineD := resources.Get "/illustrations/dash-line-7-d.svg" }}
+{{ $dashlineM := resources.Get "/illustrations/dash-line-12-sm.svg" }}
+{{ $dashline := resources.Get "/illustrations/dash-line-7.svg" }}
+
+{{ $top11 := resources.Get "/illustrations/top-11.svg" }}
+{{ $care := resources.Get "/illustrations/care.svg" }}
+
+
+<div class="relative pb-40">
+    <div class="container">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+                <div class="relative flex flex-col items-center justify-center w-full">
+                  <h1 class="text-center h1">{{.Params.title}}</h1>
+                  <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-48 -bottom-3 sm:w-72 sm:-mr-24 shrink-0">
+                </div>
+             </div>
+             <h2 class="text-center sm:mt-10 mt-14 lg:mt-12 h2 text-blue ">
+                {{.Params.subtitle | markdownify }}
+             </h2>
+        </div>
+    </div>
+
+    <div class="relative pb-28 md:pb-40 sm:pb-36 2xl:pb-56 xl:pb-72 lg:pb-52">
+        <img class="absolute bottom-0 hidden w-full pb-12 2xl:block xl:pb-28 sm:pb-16" src="{{ $dashline.RelPermalink }}" />
+        <img class="absolute bottom-0 hidden w-full pb-12 2xl:hidden sm:block xl:pb-28 sm:pb-16" src="{{ $dashlineD.RelPermalink }}" />
+        <img class="absolute bottom-0 w-full pb-12 sm:hidden sm:pb-16" src="{{ $dashlineM.RelPermalink }}" />
+            
+        <div class="container">
+            <div class="max-w-5xl mx-auto">
+                <div class="relative flex flex-col mt-8 text-base leading-7 gap-7 text-blue">
+                    <p>{{ $.Param "intro-1" | markdownify }}</p>
+                    <p>{{ $.Param "intro-2" | markdownify }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="relative">
+            <img class="absolute left-0 w-full -mt-16 xl:-mt-32" src="{{ $top11.RelPermalink }}" />
+            <img class="w-full max-w-md mx-auto" src="{{ $care.RelPermalink }}" />
+        </div>
+    </div>
+
+    <div class="container mt-12">
+        <div class="max-w-5xl mx-auto">
+            <div class="relative flex flex-col mt-8 gap-7 text-blue">
+                <p class="text-base leading-7">{{ $.Param "intro-3" | markdownify }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="flex items-center w-full h-full mx-auto mt-8">
+            <a href="/contact" class="inline-flex shrink-0 items-center justify-center w-full max-w-xs gap-3 px-4 py-3.5 mx-auto text-base font-bold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
+                <img src="{{ $callIcon.RelPermalink }}" />
+                {{ $.Param "contact_us_button_text" }}
+            </a>
+        </div>
+    </div>
+    
+    <div class="container relative mx-auto">
+        <div class="flex flex-wrap justify-center w-full pt-20">
+            {{ range .Params.facts }}
+                {{ partial "partials/care-card.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
+            {{ end }}
+        </div>
+        <div class="flex items-center w-full h-full mx-auto mt-10 sm:mt-16 sm:hidden">
+            <button type="button" class="inline-flex shrink-0 items-center justify-center w-full max-w-xs gap-3 px-4 py-3.5 mx-auto text-base font-bold text-center text-green capitalize transition-all duration-150 ease-in-out rounded-full border border-green bg-green-100 sm:px-6 hover:bg-green-200 hover:shadow-5 active:shadow-none active:bg-green active:text-white">
+                {{ $.Param "show_more_button_text" }}
+            </button>
+        </div>
+    </div>  
+
+</div>
+{{ end }}
