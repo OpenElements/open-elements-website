@@ -14,5 +14,11 @@ other = "Privacy"
 other = "Privacy Policy"
 [privacySettings]
 other = "Privacy Config"
+[privacyCookies]
+other = "Cookie Policy"
 [impressum]
 other = "Impressum"
+[404]
+notFound = "Page Not Found!!"
+[altTexts]
+underline = "Graphical element that underlines the text"

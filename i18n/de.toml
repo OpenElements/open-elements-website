@@ -13,6 +13,12 @@ other = "Datenschutz"
 [privacyPolicy]
 other = "Datenschutzerklärung"
 [privacySettings]
-other = "Ihre Datenschutzeinstellungen"
+other = "Datenschutzeinstellungen"
+[privacyCookies]
+other = "Cookie-Richtlinie"
 [impressum]
 other = "Impressum"
+[404]
+notFound = "Seite nicht gefunden!!"
+[altTexts]
+underline = "Grafisches Element zum Unterstreichen des Textes"

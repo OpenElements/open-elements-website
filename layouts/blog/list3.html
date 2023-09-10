@@ -1,0 +1,424 @@
+{{ define "main" }}
+{{ $underline := resources.Get "/illustrations/blog-underline.svg" }}
+{{ $arrow := resources.Get "/illustrations/blog-arrow.svg" }}
+{{ $shape := resources.Get "/illustrations/blog-shape.svg" }}
+{{ $round2 := resources.Get "/illustrations/blog-round-2.svg" }}
+
+{{ $img1 := resources.Get "/images/img-1.png" }}
+{{ $img2 := resources.Get "/images/img-2.png" }}
+{{ $img3 := resources.Get "/images/img-3.png" }}
+{{ $img4 := resources.Get "/images/img-4.png" }}
+{{ $img5 := resources.Get "/images/img-5.png" }}
+{{ $img6 := resources.Get "/images/img-6.png" }}
+{{ $img7 := resources.Get "/images/img-7.png" }}
+{{ $img8 := resources.Get "/images/img-8.png" }}
+
+    <div class="relative">
+    
+        <div class="absolute w-20 h-20 bg-green-100 rounded-full xl:-left-8 xl:right-auto sm:-right-8 -right-11 xl:top-56 top-20 shrink-0"></div>
+        <img src="{{ $arrow.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute lg:w-48 sm:w-44 w-36 xl:left-[15%] sm:left-[10%] -left-3 xl:top-32 lg:top-28 sm:top-28 top-12 shrink-0">
+        
+        <img src="{{ $shape.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="sm:block hidden absolute lg:w-28 w-24 xl:right-[20%] md:right-[10%] right-[5%] top-48 shrink-0">
+
+        <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
+            <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+                <div class="relative flex flex-col items-center justify-center w-auto px-12">
+                  <h1 class="text-center h1">{{.Params.title}}</h1>
+                  <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-full -bottom-3 shrink-0">
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="pt-20 sm:pb-44 pb-36">
+        <div class="container space-y-20 lg:max-w-7xl">
+            <div class="flex flex-col w-full gap-6 xl:flex-row">
+                <div class="w-full mx-auto xl:max-w-md shrink-0">  
+                    <div class="bg-gray rounded-[30px] shadow-4 h-full w-full flex xl:flex-col md:flex-row flex-col items-center relative group">
+                        <a href="#" class="absolute inset-0"></a>
+                        <div class="relative xl:w-full xl:h-96 md:h-72 w-full shrink-0 md:w-72 sm:h-96 h-80 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img1.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+
+                        <div class="px-5 pt-6 pb-8">
+                            <div class="flex flex-col gap-2 sm:gap-5 sm:items-center sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-sm font-medium sm:text-base">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-sm font-medium sm:text-base">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-sm sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#AdoptOpenJDK</p>
+                            </div>
+                          
+                            <div class="space-y-5 mt-7 sm:mt-7 sm:space-y-6">    
+                                <h2 class="text-xl font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    AdoptOpenJDK Virtual Roadshow
+                                </h2>
+                                <p class="text-sm leading-6 text-blue sm:text-base sm:leading-7 line-clamp-6">
+                                    AdoptOpenJDK is doing a virtual roadshow of the Java User Groups. We plan to reach as many groups as possible but we will also live stream the event on YouTube.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                        <a href="#" class="absolute inset-0 "></a>
+                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+
+                        <div class="p-5">
+                            <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-[14px] font-medium">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-[14px] font-medium">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#Cyberlend</p>
+                            </div>
+                            
+                            <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    About Cyberland
+                                </h2>
+                                <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                    Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland
+                                </p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                        <a href="#" class="absolute inset-0 "></a>
+                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img3.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-[14px] font-medium">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-[14px] font-medium">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#Cyberlend</p>
+                            </div>
+                            
+                            <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    About Cyberland
+                                </h2>
+                                <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                    Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                        <a href="#" class="absolute inset-0 "></a>
+                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img4.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-[14px] font-medium">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-[14px] font-medium">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#Cyberlend</p>
+                            </div>
+                            
+                            <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    How AdoptOpenJDK provides enterprise ready OpenJDK builds
+                                </h2>
+                                <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                    Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland
+                                </p>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+            
+            <div class="flex flex-col w-full gap-6 xl:flex-row-reverse">
+                <div class="w-full mx-auto xl:max-w-md shrink-0">  
+                    <div class="bg-gray rounded-[30px] shadow-4 h-full w-full flex xl:flex-col md:flex-row flex-col items-center relative group">
+                        <a href="#" class="absolute inset-0"></a>
+                        <div class="relative xl:w-full xl:h-96 md:h-72 w-full shrink-0 md:w-72 sm:h-96 h-80 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img5.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+
+                        <div class="px-5 pt-6 pb-8">
+                            <div class="flex flex-col gap-2 sm:gap-5 sm:items-center sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-sm font-medium sm:text-base">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-sm font-medium sm:text-base">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-sm sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#AdoptOpenJDK</p>
+                            </div>
+                          
+                            <div class="space-y-5 mt-7 sm:mt-7 sm:space-y-6">    
+                                <h2 class="text-xl font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    AdoptOpenJDK Virtual Roadshow
+                                </h2>
+                                <p class="text-sm leading-6 text-blue sm:text-base sm:leading-7 line-clamp-6">
+                                    AdoptOpenJDK is doing a virtual roadshow of the Java User Groups. We plan to reach as many groups as possible but we will also live stream the event on YouTube.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                        <a href="#" class="absolute inset-0 "></a>
+                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+
+                        <div class="p-5">
+                            <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-[14px] font-medium">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-[14px] font-medium">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#Cyberlend</p>
+                            </div>
+                            
+                            <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    About Cyberland
+                                </h2>
+                                <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                    Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland
+                                </p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                        <a href="#" class="absolute inset-0 "></a>
+                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img3.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-[14px] font-medium">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-[14px] font-medium">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#Cyberlend</p>
+                            </div>
+                            
+                            <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    About Cyberland
+                                </h2>
+                                <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                    Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                        <a href="#" class="absolute inset-0 "></a>
+                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                            <img src="{{ $img4.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                            <span class="absolute px-3 py-0 text-[14px] font-bold text-white rounded-md top-4 right-4 bg-green">
+                                New
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <time class="text-[14px] font-medium">
+                                        14 Jul 2020
+                                    </time>
+                                </div>
+                                <div class="flex items-center gap-2 text-purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>  
+                                    <p class="text-[14px] font-medium">
+                                        Hendrik Ebbers
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                <p>#Java</p>
+                                <p>#Cyberlend</p>
+                            </div>
+                            
+                            <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                    How AdoptOpenJDK provides enterprise ready OpenJDK builds
+                                </h2>
+                                <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                    Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland
+                                </p>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center gap-6">
+                <a href="#" class="inline-flex items-center justify-center text-white bg-purple-100 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0">
+                    <svg class="w-5 h-5 -ml-0.5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>  
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <a href="#" class="inline-flex items-center justify-center w-11 h-11 text-white rounded-full bg-green font-medium text-[14px]">
+                        1
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px]">
+                        2
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px]">
+                        3
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px]">
+                        ...
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px]">
+                        27
+                    </a>
+                </div>
+
+                <a href="#" class="inline-flex items-center justify-center text-white bg-purple-700 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>    
+                </a>
+            </div>
+        </div>
+    </div>
+{{ end }}
