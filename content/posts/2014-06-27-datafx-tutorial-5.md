@@ -1,5 +1,6 @@
 ---
 title: 'DataFX Tutorial 5'
+date: "2014-06-27"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'This is the last tutorial about the basic flow and action API of DataFX.'

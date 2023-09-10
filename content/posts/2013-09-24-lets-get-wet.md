@@ -1,5 +1,6 @@
 ---
 title: 'Let''s get wet'
+date: "2013-09-24"
 author: hendrik
 categories: [AquaFX, Flatter, JavaFX]
 excerpt: 'The slides for my firdst JavaOne talk are online'

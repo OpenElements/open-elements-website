@@ -1,5 +1,6 @@
 ---
 title: 'DataFX: The best way to get real-world data into your JavaFX application'
+date: "2013-09-28"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'Johan and I had a DataFX session at JavaOne this week. The slides of the talk are now online.'

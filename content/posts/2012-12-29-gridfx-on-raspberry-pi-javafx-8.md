@@ -1,5 +1,6 @@
 ---
 title: 'GridFX on Raspberry Pi & JavaFX 8'
+date: "2012-12-29"
 author: hendrik
 categories: [IoT, JavaFX]
 excerpt: 'For my first JFX demo I created a experimental GridFX version for JavaFX 8.'

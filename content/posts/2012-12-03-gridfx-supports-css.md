@@ -1,5 +1,6 @@
 ---
 title: 'GridFX supports CSS'
+date: "2012-12-03"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'GridFX has no CSS support. Several CSS properties were added to GridFX and let you style the control'

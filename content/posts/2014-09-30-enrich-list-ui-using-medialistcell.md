@@ -1,5 +1,6 @@
 ---
 title: 'Enrich your List UI by using the MediaListCell'
+date: "2014-09-30"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'For JavaOne I created some JavaFX APIs that contains basic utilities and controls that can be easily integrated in any JavaFX application. The ui-basics module contains some custom list cells that can be used to enrich your JavaFX application.'

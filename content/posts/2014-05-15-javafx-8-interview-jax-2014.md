@@ -1,5 +1,6 @@
 ---
 title: 'JavaFX 8 Interview at JAX 2014'
+date: "2014-05-15"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'I was interviewed at JAX Conference this week. The interview is in German and I talk about the current state of JavaFX and if it''s ready for the use in enterprise.'

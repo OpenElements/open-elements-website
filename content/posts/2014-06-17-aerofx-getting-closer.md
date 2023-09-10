@@ -1,5 +1,6 @@
 ---
 title: 'AeroFX: It''s getting closer'
+date: "2014-06-17"
 author: hendrik
 categories: [AeroFX, JavaFX]
 excerpt: 'This is a new preview of the AeroFX Theme for JavaFX. The theme creates a native look and feel for JavaFX applications on Windows.'

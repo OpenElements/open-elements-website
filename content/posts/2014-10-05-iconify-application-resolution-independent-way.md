@@ -1,5 +1,6 @@
 ---
 title: 'Iconify your application the resolution independent way'
+date: "2014-10-05"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Often icons are very important for a good UI. They will create a modern and professional look and will help the user to understand the meaning of actions.'

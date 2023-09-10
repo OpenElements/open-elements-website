@@ -1,5 +1,6 @@
 ---
 title: 'Maven vs. Gradle and the Best of Both Worlds'
+date: "2016-10-28"
 author: hendrik
 categories: [Java]
 excerpt: 'See how both Maven and Gradle succeed and fail and consider static modules, an idea that would bring out and combine their best aspects.'

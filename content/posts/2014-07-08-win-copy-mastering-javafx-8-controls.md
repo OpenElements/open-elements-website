@@ -1,5 +1,6 @@
 ---
 title: 'Win a copy of "Mastering JavaFX 8 Controls"'
+date: "2014-07-08"
 author: hendrik
 categories: [General]
 excerpt: 'Win a copy of my book!'

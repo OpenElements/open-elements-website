@@ -1,5 +1,6 @@
 ---
 title: 'DataFX 8.0b3 has been released'
+date: "2014-05-16"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'The 3rd beta of DataFX 8.0 has been released.'

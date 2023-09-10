@@ -1,5 +1,6 @@
 ---
 title: 'AquaFX: lessons learned (Part I)'
+date: "2013-05-26"
 author: claudine
 categories: [AquaFX, JavaFX]
 excerpt: 'During the work on AquaFX there were some obstacles that needed to be overcome. In this article I want to summarize information, so that they might help people who just face the same questions, as I had.'

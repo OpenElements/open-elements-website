@@ -1,5 +1,6 @@
 ---
 title: 'An introduction to Open Dolphin'
+date: "2015-01-29"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'The post gives a short introduction about the architecture and features of Open Dolphin'

@@ -1,5 +1,6 @@
 ---
 title: 'JRating Preview'
+date: "2011-08-17"
 author: hendrik
 categories: [General]
 excerpt: 'Introduction of the Swing JRating component that can be used to visualize ratings.'

@@ -1,5 +1,6 @@
 ---
 title: 'AquaFX dressed in Elements'
+date: "2013-10-07"
 author: claudine
 categories: [AquaFX, JavaFX]
 excerpt: "As you know, Apples Aqua-UI is held completely in blue. But what about UI-Controls, that need the users' special attention? Or what about Apps, that should fit into OS X with their look, but still need a corporate touch? During JavaOne we have introduced an approach to this matter."

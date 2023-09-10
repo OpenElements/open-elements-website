@@ -1,5 +1,6 @@
 ---
 title: 'Aquatecture'
+date: "2013-05-09"
 author: hendrik
 categories: [AquaFX, General, JavaFX]
 excerpt: 'In this post I will show you some of the internal API stuff of AquaFX'

@@ -1,5 +1,6 @@
 ---
 title: 'JSR377 got green light to continue!'
+date: "2015-02-11"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'Today the Review Ballot Results for JSR377 (Desktop|Embedded Application API) were published.'

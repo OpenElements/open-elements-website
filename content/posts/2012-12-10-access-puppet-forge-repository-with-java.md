@@ -1,5 +1,6 @@
 ---
 title: 'Access Puppet Forge Repository with Java'
+date: "2012-12-10"
 author: hendrik
 categories: [Vagrant-Binding]
 excerpt: 'To integrate Puppet modules more easy to Vagrant-Binding projects I created a Java API that access Puppet Forge by REST.'

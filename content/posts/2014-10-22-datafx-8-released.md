@@ -1,5 +1,6 @@
 ---
 title: 'DataFX 8 has been released & DataFX core overview'
+date: "2014-10-22"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'I''m proud to announce that we have released DataFX 8.0 last week. This post will give you an overview of all the cool new features.'

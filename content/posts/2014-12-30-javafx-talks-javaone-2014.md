@@ -1,5 +1,6 @@
 ---
 title: 'JavaFX Talks JavaOne 2014'
+date: "2014-12-30"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'List of all JavaFX Talks at JavaOne 2014'

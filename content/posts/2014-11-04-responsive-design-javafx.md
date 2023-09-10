@@ -1,5 +1,6 @@
 ---
 title: 'Responsive Design for JavaFX'
+date: "2014-11-04"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'At JavaOne I introduced ResponsiveFX as a lib that adds responsive design to JavaFX. This post describes the core concepts of responsive design and the API.'

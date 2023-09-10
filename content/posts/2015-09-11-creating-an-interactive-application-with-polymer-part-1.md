@@ -1,5 +1,6 @@
 ---
 title: 'Creating an interactive application with Polymer (Part 1)'
+date: "2015-09-11"
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]
 excerpt: 'In this post I will create an interactive web application based on Polymer 1.0 to show how data binding can be used and how a basic app might look like.'

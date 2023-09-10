@@ -1,5 +1,6 @@
 ---
 title: 'Interview at FX Experience'
+date: "2014-09-17"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'An interview with me about JavaOne and my was posted at FX Experience. In addition I give another sneak peek of my JavaOne talks.'

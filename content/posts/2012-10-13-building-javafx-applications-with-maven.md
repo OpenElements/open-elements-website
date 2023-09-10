@@ -1,5 +1,6 @@
 ---
 title: 'Building JavaFX Applications with Maven'
+date: "2012-10-13"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'With the preview of JavaFX 2 that is part of Java 6 and 7 you can already build custom JavaFX applications by using Maven'

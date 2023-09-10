@@ -1,5 +1,6 @@
 ---
 title: 'Mastering JavaFX Controls'
+date: "2014-03-05"
 author: hendrik
 categories: [General]
 excerpt: 'Mastering JavaFX Controls Book'

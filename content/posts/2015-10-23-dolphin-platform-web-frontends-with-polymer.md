@@ -1,5 +1,6 @@
 ---
 title: 'Dolphin Platform Web Frontends with Polymer'
+date: "2015-10-23"
 author: hendrik
 categories: [Dolphin Platform, Polymer, Web Frontends, WebComponents]
 excerpt: 'For the Dolphin Platform release we plan to offer several demos and tutorials as a starting point. Today I want to give you an overview of this work'

@@ -1,5 +1,6 @@
 ---
 title: 'The View Objects Pattern & automated tests with TestFX'
+date: "2014-10-01"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'When developing an application you should add automated tests. Oh, sorry - I mean you MUST add automated test. This post introduces a pattern that help to create reuaseable and maintainable tests'

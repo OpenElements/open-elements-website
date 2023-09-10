@@ -1,5 +1,6 @@
 ---
 title: 'GuiGarage @ JavaOne'
+date: "2011-10-12"
 author: hendrik
 categories: [General]
 excerpt: 'The first appereance of Guigarage at JavaOne'

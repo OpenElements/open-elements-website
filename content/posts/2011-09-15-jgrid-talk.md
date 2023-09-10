@@ -1,5 +1,6 @@
 ---
 title: 'JGrid Talk'
+date: "2011-09-15"
 author: hendrik
 categories: [Swing]
 excerpt: 'The slides and samples of my JGrid sessions.'

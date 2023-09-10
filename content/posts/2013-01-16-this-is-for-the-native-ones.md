@@ -1,5 +1,6 @@
 ---
 title: 'This is for the native ones'
+date: "2013-01-16"
 author: hendrik
 categories: [AquaFX, General, JavaFX]
 excerpt: 'JavaFX provides the ability to style controls by CSS or code. We are using this functionallity to create native looking controls.'

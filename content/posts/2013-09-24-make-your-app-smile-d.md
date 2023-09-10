@@ -1,5 +1,6 @@
 ---
 title: 'Make your app smile :D'
+date: "2013-09-24"
 author: hendrik
 categories: [JavaFX]
 excerpt: "I think most of you know the emoji icons that are used in WhatsApp and other social apps to send smileys, space invader aliens and a smiling poo around the world. Let's have a look how emojis can be used in JavFX controls."

@@ -1,5 +1,6 @@
 ---
 title: 'Custom UI Controls with JavaFX - Part 1'
+date: "2012-11-17"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'One thing I often done is Swing was customization of components and the creation of new components types. With the last release of JavaFX you can easily create custom controls with this new UI toolkit, too. This post gives a first overview about the JavaFX APIs to create custom controls.'

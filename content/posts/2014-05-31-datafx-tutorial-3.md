@@ -1,5 +1,6 @@
 ---
 title: 'DataFX Tutorial 3'
+date: "2014-05-31"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this tutorial I want to show how a wizard dialog can be created with DataFX.'

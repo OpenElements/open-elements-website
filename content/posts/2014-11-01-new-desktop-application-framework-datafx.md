@@ -1,5 +1,6 @@
 ---
 title: 'New Desktop Application Framework & DataFX'
+date: "2014-11-01"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'If DataFX should become an implementation of the JSR specification it must implement general interfaces and support a toolkit independent architecture.'

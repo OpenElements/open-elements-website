@@ -1,5 +1,6 @@
 ---
 title: 'How to support Emojis (Part1)'
+date: "2015-01-21"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'The post shows how emojis can be supported in (JavaFX) applications'

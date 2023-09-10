@@ -1,5 +1,6 @@
 ---
 title: 'Vagrant-Binding-Demos'
+date: "2012-11-03"
 author: hendrik
 categories: [Vagrant-Binding]
 excerpt: 'I created several demos to show the usage of Vagrant-Binding.'

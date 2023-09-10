@@ -1,5 +1,6 @@
 ---
 title: 'Dolphin Platform: A Sneak Peek'
+date: "2015-10-04"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), Dolphin Platform, JavaFX]
 excerpt: 'This is an overview of the Dolphin Platform, a new open source project that provides MVC architecture based on presentation models for several clients'

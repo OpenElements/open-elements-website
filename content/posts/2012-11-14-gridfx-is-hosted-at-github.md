@@ -1,5 +1,6 @@
 ---
 title: 'GridFX is hosted at github'
+date: "2012-11-14"
 layout: post
 categories: [JavaFX]
 excerpt: 'The first open source version of GridFX can be found online'

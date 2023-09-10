@@ -1,5 +1,6 @@
 ---
 title: 'Custom UI Controls with JavaFX (Part3)'
+date: "2013-01-10"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'In this post I will explain the basic JavaFX Property API. I will first explain the old Swing way to better understand the idea of the new API and all problems that are solved by it.'

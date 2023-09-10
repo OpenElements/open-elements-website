@@ -1,5 +1,6 @@
 ---
 title: 'Assertions and Rules in MarvinFX'
+date: "2013-03-20"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Today I added some new features to MarvinFX. For all basic property types (String, Number, Boolean, etc...) MarvinFX will provide methods to check some common assertions for this properties. '

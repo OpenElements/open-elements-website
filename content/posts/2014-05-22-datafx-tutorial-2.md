@@ -1,5 +1,6 @@
 ---
 title: 'DataFX 8 Tutorial 2'
+date: "2014-05-22"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this DataFX tutorial I will show how navigation between different views can easily be managed with DataFX and its Flow API.'

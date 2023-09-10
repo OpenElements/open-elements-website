@@ -1,5 +1,6 @@
 ---
 title: 'Dolphin Platform: A Sneak Peek of the model API'
+date: "2015-10-06"
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Web Frontends]
 excerpt: 'This is a short overview about the model API of the Dolphin Platform. This defines a model that will automatically synchronized between client and server.'

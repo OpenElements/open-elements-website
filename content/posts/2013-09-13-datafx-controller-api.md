@@ -1,5 +1,6 @@
 ---
 title: 'DataFX Controller API'
+date: "2013-09-13"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'The DataFX team will show some cool new APIs at JavaOne this year. Today I will give a short preview to another part of the new DataFX APIs.'

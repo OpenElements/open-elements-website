@@ -1,5 +1,6 @@
 ---
 title: 'Preview: Multitouch gestures in swing'
+date: "2011-08-04"
 author: hendrik
 categories: [General]
 excerpt: 'Apple added a listener based API for multitouch gestures to their eawt package. With this wrapper API you can easily integrate it in any app.'

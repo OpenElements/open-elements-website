@@ -1,5 +1,6 @@
 ---
 title:  'Java 11 release event'
+date: "2018-09-25"
 author: hendrik
 excerpt: 'Together with Oracle and Heise we will do a Java 11 release event.
 The event will be live streamed and recorded at YouTube. If you are interested in the

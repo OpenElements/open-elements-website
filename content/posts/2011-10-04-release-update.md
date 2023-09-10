@@ -1,5 +1,6 @@
 ---
 title: 'Release & Update'
+date: "2011-10-04"
 author: hendrik
 categories: [General]
 excerpt: 'Several updates for my Swing related libraries.'

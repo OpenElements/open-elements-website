@@ -1,5 +1,6 @@
 ---
 title: 'JavaOne 2014 Slides'
+date: "2014-10-05"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'I uploaded the slides of the first 3 talks at slideshare.'

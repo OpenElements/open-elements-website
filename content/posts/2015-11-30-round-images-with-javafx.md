@@ -1,5 +1,6 @@
 ---
 title: 'Round images with JavaFX'
+date: "2015-11-30"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'This post gives an example for creating round image controls with JavaFX'

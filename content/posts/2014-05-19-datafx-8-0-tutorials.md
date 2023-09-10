@@ -1,5 +1,6 @@
 ---
 title: 'DataFX 8.0 Tutorials'
+date: "2014-05-19"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'I started a series of DataFX Tutorials to show its functionality by some handsome and easy examples.'

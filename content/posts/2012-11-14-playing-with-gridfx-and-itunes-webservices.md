@@ -1,5 +1,6 @@
 ---
 title: 'Playing with GridFX and iTunes Webservices'
+date: "2012-11-14"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'I created some new samples for GridFX'

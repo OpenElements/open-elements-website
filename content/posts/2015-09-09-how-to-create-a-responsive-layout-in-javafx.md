@@ -1,5 +1,6 @@
 ---
 title: 'How to create a responsive layout in JavaFX'
+date: "2015-09-09"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'Some days ago I was asked at twitter about a responsive layout problem in JavaFX. Here I will show how a first solution to create such a responsive layout.'

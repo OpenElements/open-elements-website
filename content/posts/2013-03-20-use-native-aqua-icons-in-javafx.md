@@ -1,5 +1,6 @@
 ---
 title: 'Use native Aqua icons in JavaFX'
+date: "2013-03-20"
 author: hendrik
 categories: [AquaFX, JavaFX]
 excerpt: 'While planning AquaFX we found a way how to access Mac OS specific icons without using any closed APIs or Mac OS related classes.'

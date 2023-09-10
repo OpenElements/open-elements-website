@@ -1,5 +1,6 @@
 ---
 title: 'Designing JavaFX Business Applications (Part 2)'
+date: "2013-05-19"
 author: hendrik
 categories: [General, JavaFX]
 excerpt: 'This is the second part of my series about JavaFX architecture and best practice for (business) application.'

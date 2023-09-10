@@ -1,5 +1,6 @@
 ---
 title: 'Vagrant-Binding talk @ Devoxx 2012'
+date: "2012-11-14"
 author: hendrik
 categories: [Vagrant-Binding]
 excerpt: 'The slides of my Vagrant-Binding talk at Devoxx are online'

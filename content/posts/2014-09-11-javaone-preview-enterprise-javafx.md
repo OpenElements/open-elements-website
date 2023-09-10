@@ -1,5 +1,6 @@
 ---
 title: 'JavaOne Preview: Enterprise JavaFX'
+date: "2014-09-11"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This is a short preview of one of my talks at JavaOne 2014: Enterprise JavaFX. In the talk I will discuss problems in enterprise development with JavaFX.'

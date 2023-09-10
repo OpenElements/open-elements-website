@@ -1,5 +1,6 @@
 ---
 title: 'Update for the native ones'
+date: "2013-03-02"
 author: claudine
 categories: [AquaFX, General, JavaFX]
 excerpt: 'I was keen on starting with the first components for the native Look and Feel for JavaFX. Now I want to show you what is the result.'

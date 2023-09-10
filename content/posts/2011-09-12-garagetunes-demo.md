@@ -1,5 +1,6 @@
 ---
 title: 'GarageTunes demo'
+date: "2011-09-12"
 author: hendrik
 categories: [Swing]
 excerpt: 'I created a cool new demo for JGrid.'

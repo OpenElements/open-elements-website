@@ -1,5 +1,6 @@
 ---
 title: 'A short introduction to Bower'
+date: "2015-02-12"
 author: hendrik
 categories: [Web Frontends]
 excerpt: 'This post gives a short introduction to Bower from a Java developers point of view.'

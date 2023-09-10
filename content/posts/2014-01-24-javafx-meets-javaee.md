@@ -1,5 +1,6 @@
 ---
 title: 'JavaFX meets JavaEE'
+date: "2014-01-24"
 author: hendrik
 categories: [DataFX]
 excerpt: 'The post shows all the main specifications of Java EE and describes how the are supported by DataFX and how a JavaFX application can use them'

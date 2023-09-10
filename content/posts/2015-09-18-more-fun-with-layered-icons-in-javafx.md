@@ -1,5 +1,6 @@
 ---
 title: 'More fun with layered icons in javaFX'
+date: "2015-09-18"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'Some cool JavaFX based demos of layered icons that copies the visualization of the new AppleTV icons.'

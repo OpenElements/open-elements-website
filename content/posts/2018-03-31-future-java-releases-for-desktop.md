@@ -1,5 +1,6 @@
 ---
 title: 'What future Java releases mean for legacy desktop apps'
+date: "2018-03-31"
 author: hendrik
 categories: [General]
 excerpt: "Java 11 will mean the end of Java Web Start. Let's see what this means for legacy desktop apps and how developers can be ready for the change."

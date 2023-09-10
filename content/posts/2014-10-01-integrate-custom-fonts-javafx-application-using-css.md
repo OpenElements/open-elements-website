@@ -1,5 +1,6 @@
 ---
 title: 'How to integrate custom fonts in your JavaFX application by using CSS'
+date: "2014-10-01"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This CSS trick will show how you can change to font for a complete application or only a specific control by using CSS.'

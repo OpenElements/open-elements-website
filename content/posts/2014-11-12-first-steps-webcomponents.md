@@ -1,5 +1,6 @@
 ---
 title: 'First steps with WebComponents'
+date: "2014-11-12"
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]
 excerpt: 'WebComponents are custom components for the web. I tried the new spec and created my first simple WebComponent with HTML, JavaScript and CSS'

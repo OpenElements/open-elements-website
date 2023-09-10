@@ -1,5 +1,6 @@
 ---
 title: 'The native ones are not sleeping'
+date: "2013-04-28"
 author: claudine
 categories: [AquaFX, JavaFX]
 excerpt: 'As time goes by, there are lots of freshly skinned controls, which are waiting to be shown. So here comes a little update.'

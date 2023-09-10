@@ -1,5 +1,6 @@
 ---
 title: 'JGridFX First Demo'
+date: "2012-11-13"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This is the first demo of GridFX - the successor of JGrid.'

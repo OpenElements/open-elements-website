@@ -1,5 +1,6 @@
 ---
 title: 'JavaOne After Event with some cool talks'
+date: "2015-11-16"
 author: hendrik
 categories: [JavaFX]
 excerpt: "The JUG Switzerland has announced an event with some talks of the JavaOne 2015. I'm happy that 2 of the 5 talks are JavaFX / UI related."

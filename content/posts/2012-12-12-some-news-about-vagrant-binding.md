@@ -1,5 +1,6 @@
 ---
 title: 'Some news about Vagrant-Binding'
+date: "2012-12-12"
 author: hendrik
 categories: [General, Vagrant-Binding]
 excerpt: 'Yesterday I gave a Vagrant-Binding talk at JUG Dortmund. I received really great feedback and thanks to some productive discussions the future of the API is getting more clearly to me.'

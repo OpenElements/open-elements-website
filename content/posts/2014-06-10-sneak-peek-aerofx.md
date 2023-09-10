@@ -1,5 +1,6 @@
 ---
 title: 'Sneak Peek: AeroFX'
+date: "2014-06-10"
 author: hendrik
 categories: [AeroFX, AquaFX, JavaFX]
 excerpt: 'Today I want to show a sneak peek on a new project called AeroFX. AeroFX is a theme for JavaFX that will emulate the native look of the Windows interface.'

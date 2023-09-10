@@ -1,5 +1,6 @@
 ---
 title: 'Guigarage Logo'
+date: "2014-07-16"
 author: hendrik
 categories: [General]
 excerpt: 'I worked together with a designer to create a new logo for the GuiGarage'

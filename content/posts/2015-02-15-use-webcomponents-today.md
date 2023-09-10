@@ -1,5 +1,6 @@
 ---
 title: 'An overview of the Web Component specifications'
+date: "2015-02-15"
 author: hendrik
 categories: [General, WebComponents]
 excerpt: 'This gives a short overview to the four W3C specs to define reusable web components: Element Template, Shadow DOM, Custom Elements and HTML Imports'

@@ -1,5 +1,6 @@
 ---
 title:  'How AdoptOpenJDK provides enterprise ready OpenJDK builds'
+date: "2020-02-21"
 author: hendrik
 excerpt: 'With the new licence of the Oracle JDK a lot of companies need to switch to a new JDK vendor.
 With AdoptOpenJDK we have a community based alternative that provides free LTS JDK builds. In this post

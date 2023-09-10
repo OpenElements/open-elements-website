@@ -1,5 +1,6 @@
 ---
 title: 'Global Stylesheet for your JavaFX Application'
+date: "2013-03-02"
 author: hendrik
 categories: [General, JavaFX]
 excerpt: 'There is a way to set a global Stylesheet to all JavaFX Scenes in your app. By using the JavaFX 8 class StyleManager you can define the default CSS files.'

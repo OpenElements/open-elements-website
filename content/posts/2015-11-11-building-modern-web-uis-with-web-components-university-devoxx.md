@@ -1,5 +1,6 @@
 ---
 title: 'Building modern web UIs with Web Components University @ Devoxx'
+date: "2015-11-11"
 author: hendrik
 categories: [Polymer, Web Frontends]
 excerpt: 'On Monday Michael Heinrichs and did a 3 hour university about Web Components and Polymer at Devoxx. Today the Devoxx team announced that all Devoxx talks will be published to YouTube.'

@@ -1,5 +1,6 @@
 ---
 title: 'How to test your JavaFX application'
+date: "2015-02-06"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'Sven Ruppert and I gave a talk about Testing for JavaFX. In this talk we show how you can test your JavaFX application with TestFX.'

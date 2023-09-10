@@ -1,5 +1,6 @@
 ---
 title: 'GridFX is moving forward'
+date: "2012-11-29"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'GridFX is official part of JFXtras.'

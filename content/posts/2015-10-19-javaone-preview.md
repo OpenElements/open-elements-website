@@ -1,5 +1,6 @@
 ---
 title: 'JavaOne Preview'
+date: "2015-10-19"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This year I will give 2 talks at JavaOne. For a short preview of the talks we recorded some videos in that I give a short overview about its topics.'

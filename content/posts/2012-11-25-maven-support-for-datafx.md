@@ -1,5 +1,6 @@
 ---
 title: 'Maven support for DataFX'
+date: "2012-11-25"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'Since DataFX is one of the big JavaFX related libraries out there it makes sense to use it in modern Maven based applications. This post gives an overview how you can use DataFX in a Maven based project.'

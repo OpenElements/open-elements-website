@@ -1,5 +1,6 @@
 ---
 title: 'Material Design in JavaFX'
+date: "2015-07-10"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'The last weeks I worked on a prototype to create a like Material Design UI with JavaFX. This post introduces the theme.'

@@ -1,5 +1,6 @@
 ---
 title: 'Desktop & Embedded Application JSR'
+date: "2014-12-30"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'Today the Desktop & Embedded Application JSR has been started. Its goal is to define a spec for common behaviors that are shared by desktop apps.'

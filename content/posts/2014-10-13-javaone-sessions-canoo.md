@@ -1,5 +1,6 @@
 ---
 title: 'JavaOne Sessions at Canoo'
+date: "2014-10-13"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Canoo had 16 sessions at JavaOne this year. For all the developers that can attend JavaOne Canoo selected some of the talks to show them again in Basel.'

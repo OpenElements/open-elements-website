@@ -1,5 +1,6 @@
 ---
 title: 'Change Java version on Mac OS'
+date: "2013-02-08"
 author: hendrik
 categories: [JavaFX]
 excerpt: "I'm currently working with JDK 6, 7 and 8 on my MacBook and it's really a pain to switch between this Java version by shell. Because of that I created a tool that can do all the work for you."

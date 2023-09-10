@@ -1,5 +1,6 @@
 ---
 title: 'The future of Vagrant-Binding'
+date: "2012-11-29"
 author: hendrik
 categories: [General, Vagrant-Binding]
 excerpt: "Currently I'm working on Chef support for the Vagrant-Binding. So you can choose between Puppet and Chef as provisioner."

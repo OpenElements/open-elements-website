@@ -1,5 +1,6 @@
 ---
 title: 'Dolphin Platform 0.7 has been released'
+date: "2015-12-16"
 author: hendrik
 categories: [Dolphin Platform]
 excerpt: 'We released version 0.7 of the Dolphin Platform today. Next to the framework we updated the Spring Boot archetype for Maven and added a KumuluzEE Maven archetype.'

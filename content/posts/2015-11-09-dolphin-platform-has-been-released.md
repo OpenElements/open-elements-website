@@ -1,5 +1,6 @@
 ---
 title: 'Dolphin Platform has been released'
+date: "2015-11-09"
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer, Web Frontends]
 excerpt: "Since JavaOne is over for more than a week we found some time to finish all the steps and I'm proud to announce the first Dolphin Platform release"

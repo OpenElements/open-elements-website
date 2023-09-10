@@ -1,5 +1,6 @@
 ---
 title: 'Layered images and icons with JavaFX'
+date: "2015-09-16"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'Since I have to wait 1 more month I started playing with the new layered icons on the AppleTV I recreated the effect by using JavaFX today.'

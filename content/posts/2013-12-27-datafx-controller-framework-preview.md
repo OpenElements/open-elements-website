@@ -1,5 +1,6 @@
 ---
 title: 'DataFX Controller Framework Preview'
+date: "2013-12-27"
 author: hendrik
 categories: [DataFX, General, JavaFX]
 excerpt: 'Today we released the version 2.0 of DataFX. As a next step we will work on DataFX 8.0 that will use Java 8 and JavaFX 8.'

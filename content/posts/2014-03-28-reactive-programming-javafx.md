@@ -1,5 +1,6 @@
 ---
 title: 'Reactive Programming with JavaFX'
+date: "2014-03-28"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Because the JavaFX API was designed for Java 8 it provides a lot of Lambda support and callbacks are used a lot. But next to the default JavaFX APIs there are currently an open source projects that adds a lot of reactive design and architecture to the JavaFX basics: ReactFX.'

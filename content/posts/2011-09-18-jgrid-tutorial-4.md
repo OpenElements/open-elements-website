@@ -1,5 +1,6 @@
 ---
 title: 'JGrid Tutorial #4'
+date: "2011-09-18"
 author: hendrik
 categories: [Swing]
 excerpt: 'I created a series of tutorials to get familiar with JGrid. This is the fourth out of five tutorials.'

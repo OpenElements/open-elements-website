@@ -1,5 +1,6 @@
 ---
 title: 'Extreme Gui Makeover @ JavaOne'
+date: "2014-10-26"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'My "Extreme Gui Makeover" talk from JavaOne is one the first talks that was published at Parleys on the last days.'

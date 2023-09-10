@@ -1,5 +1,6 @@
 ---
 title: 'DataFX Tutorial 6'
+date: "2015-01-22"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this tutorial I want to show how dynamic actions can be handled in DataFX.'
