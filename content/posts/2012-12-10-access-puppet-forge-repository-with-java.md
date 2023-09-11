@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Access Puppet Forge Repository with Java'
 date: "2012-12-10"
 author: hendrik

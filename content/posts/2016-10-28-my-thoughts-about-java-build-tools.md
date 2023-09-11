@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Maven vs. Gradle and the Best of Both Worlds'
 date: "2016-10-28"
 author: hendrik

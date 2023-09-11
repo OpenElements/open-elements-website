@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'JGrid @ NetBeans Platform Certified Training'
 date: "2011-07-15"
 author: hendrik

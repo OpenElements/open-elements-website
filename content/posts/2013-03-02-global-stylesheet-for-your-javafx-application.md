@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Global Stylesheet for your JavaFX Application'
 date: "2013-03-02"
 author: hendrik

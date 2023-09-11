@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Guigarage Logo'
 date: "2014-07-16"
 author: hendrik

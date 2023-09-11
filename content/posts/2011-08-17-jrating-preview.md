@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'JRating Preview'
 date: "2011-08-17"
 author: hendrik

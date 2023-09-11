@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Vagrant-Binding-Demos'
 date: "2012-11-03"
 author: hendrik

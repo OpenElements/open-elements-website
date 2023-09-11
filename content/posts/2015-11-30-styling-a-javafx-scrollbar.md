@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Styling a JavaFX Scrollbar'
 date: "2015-11-30"
 author: hendrik

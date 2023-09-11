@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'JavaFX Talks JavaOne 2014'
 date: "2014-12-30"
 author: hendrik

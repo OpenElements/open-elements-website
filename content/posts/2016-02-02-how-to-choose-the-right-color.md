@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'How to choose the right color'
 date: "2016-02-02"
 author: hendrik

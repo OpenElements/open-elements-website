@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Talk at CeBIT TV studio'
 date: "2011-08-16"
 author: hendrik

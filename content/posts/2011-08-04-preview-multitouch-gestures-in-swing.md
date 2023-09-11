@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Preview: Multitouch gestures in swing'
 date: "2011-08-04"
 author: hendrik

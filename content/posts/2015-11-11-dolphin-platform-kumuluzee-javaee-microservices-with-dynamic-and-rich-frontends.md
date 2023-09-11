@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Dolphin Platform & KumuluzEE: JavaEE Microservices with dynamic and rich frontends'
 date: "2015-11-11"
 author: hendrik

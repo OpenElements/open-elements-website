@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Change Java version on Mac OS'
 date: "2013-02-08"
 author: hendrik

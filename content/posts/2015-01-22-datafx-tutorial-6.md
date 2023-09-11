@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'DataFX Tutorial 6'
 date: "2015-01-22"
 author: hendrik

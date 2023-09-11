@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'invokeAndWait for JavaFX'
 date: "2013-01-01"
 author: hendrik

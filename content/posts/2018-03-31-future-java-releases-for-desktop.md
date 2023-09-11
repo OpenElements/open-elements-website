@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'What future Java releases mean for legacy desktop apps'
 date: "2018-03-31"
 author: hendrik

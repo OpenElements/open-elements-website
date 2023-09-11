@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Dolphin Platform and Polymer'
 date: "2015-12-16"
 author: hendrik

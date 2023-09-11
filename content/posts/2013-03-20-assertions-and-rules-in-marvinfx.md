@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Assertions and Rules in MarvinFX'
 date: "2013-03-20"
 author: hendrik

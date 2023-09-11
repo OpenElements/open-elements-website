@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'A short preview of the JavaOne Voting Machine'
 date: "2015-10-23"
 author: hendrik

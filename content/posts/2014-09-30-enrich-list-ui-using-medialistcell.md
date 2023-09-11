@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Enrich your List UI by using the MediaListCell'
 date: "2014-09-30"
 author: hendrik

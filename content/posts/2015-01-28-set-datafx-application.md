@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'How to set up a DataFX application'
 date: "2015-01-28"
 author: hendrik

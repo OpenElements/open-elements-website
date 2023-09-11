@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'JavaOne Preview: Enterprise JavaFX'
 date: "2014-09-11"
 author: hendrik

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'First steps with WebComponents'
 date: "2014-11-12"
 author: hendrik

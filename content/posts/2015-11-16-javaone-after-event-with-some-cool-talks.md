@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'JavaOne After Event with some cool talks'
 date: "2015-11-16"
 author: hendrik

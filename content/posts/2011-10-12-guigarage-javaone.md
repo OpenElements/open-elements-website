@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'GuiGarage @ JavaOne'
 date: "2011-10-12"
 author: hendrik

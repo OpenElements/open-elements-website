@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'AeroFX: It''s getting closer'
 date: "2014-06-17"
 author: hendrik

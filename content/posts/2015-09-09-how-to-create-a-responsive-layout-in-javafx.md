@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'How to create a responsive layout in JavaFX'
 date: "2015-09-09"
 author: hendrik

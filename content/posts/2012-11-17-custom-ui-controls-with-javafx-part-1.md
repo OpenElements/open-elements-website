@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Custom UI Controls with JavaFX - Part 1'
 date: "2012-11-17"
 author: hendrik

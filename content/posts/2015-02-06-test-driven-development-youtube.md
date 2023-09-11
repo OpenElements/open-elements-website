@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'How to test your JavaFX application'
 date: "2015-02-06"
 author: hendrik
