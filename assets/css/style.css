@@ -1355,6 +1355,10 @@ html{
   bottom: -0.5rem;
 }
 
+.-bottom-20{
+  bottom: -5rem;
+}
+
 .-bottom-24{
   bottom: -6rem;
 }
@@ -1780,6 +1784,10 @@ html{
   margin-left: 3rem;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .mr-4{
   margin-right: 1rem;
 }
@@ -2157,6 +2165,10 @@ html{
 
 .resize{
   resize: both;
+}
+
+.scroll-mt-10{
+  scroll-margin-top: 2.5rem;
 }
 
 .grid-cols-2{
@@ -2782,6 +2794,10 @@ html{
   text-transform: capitalize;
 }
 
+.italic{
+  font-style: italic;
+}
+
 .leading-10{
   line-height: 2.5rem;
 }
@@ -2822,6 +2838,11 @@ html{
 .text-green{
   --tw-text-opacity: 1;
   color: rgb(92 186 158 / var(--tw-text-opacity));
+}
+
+.text-lightgray{
+  --tw-text-opacity: 1;
+  color: rgb(211 211 211 / var(--tw-text-opacity));
 }
 
 .text-purple{
@@ -3445,10 +3466,6 @@ html{
     display: none;
   }
 
-  .sm\:h-10{
-    height: 2.5rem;
-  }
-
   .sm\:h-12{
     height: 3rem;
   }
@@ -3677,6 +3694,10 @@ html{
 
   .sm\:pb-28{
     padding-bottom: 7rem;
+  }
+
+  .sm\:pb-32{
+    padding-bottom: 8rem;
   }
 
   .sm\:pb-36{
@@ -4171,6 +4192,10 @@ html{
     padding-bottom: 5rem;
   }
 
+  .lg\:pb-48{
+    padding-bottom: 12rem;
+  }
+
   .lg\:pb-52{
     padding-bottom: 13rem;
   }
@@ -4347,6 +4372,10 @@ html{
 
   .xl\:w-full{
     width: 100%;
+  }
+
+  .xl\:max-w-6xl{
+    max-width: 72rem;
   }
 
   .xl\:max-w-7xl{

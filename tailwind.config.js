@@ -58,6 +58,7 @@ module.exports = {
         100: '#D4D4FE',
         700: '#7573FF',
       },
+      'lightgray': '#D3D3D3'
     },
     extend: {
       fontFamily: {
