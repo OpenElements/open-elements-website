@@ -1,0 +1,4 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+
+{{/* I use .Title to specify the max-width property */}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with $image }} width="{{ $image.Width }}" height="{{ $image.Height }}" {{ end }} {{ with .Title}} style="display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: {{ . }};"{{ end }}/>

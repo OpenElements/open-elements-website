@@ -1,0 +1,10 @@
+{{ $underline := resources.Get "/illustrations/underline.svg" }}
+
+<div class="relative xl:pb-72 lg:pb-56 sm:pb-44 pb-28">
+  <div class="container relative max-w-sm mt-20 lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
+    <div class="flex flex-col mt-8 text-blue prose prose-a:text-purple-700 prose-code:bg-yellow"
+         style="max-width: 100%">
+      {{ .content }}
+    </div>
+  </div>
+</div>
