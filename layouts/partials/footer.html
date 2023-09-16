@@ -1,7 +1,6 @@
 {{ $image := resources.Get "/images/logo.svg" }}
 {{ $round1 := resources.Get "/illustrations/round-1.svg" }}
 {{ $round2 := resources.Get "/illustrations/round-2.svg" }}
-{{ $logoSupport := resources.Get "/images/open-elements-support-logo.png" }}
 
 <div class="bg-blue">
     <div class="container relative max-w-sm mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
@@ -18,11 +17,7 @@
             <div class="relative flex flex-col gap-5 lg:flex-row 2xl:gap-20 sm:gap-12">
                 <div class="flex flex-col justify-between gap-6 xl:w-64 lg:w-1/3 shrink-0">
                     <div class="flex flex-col gap-6">
-                        {{ if (eq .Page.RelPermalink "/temurin-support/") }}
-                            <a href="/"><img src="{{ $logoSupport.RelPermalink }}" alt="logo" class="h-10 sm:h-12"></a>
-                        {{ else }}
-                            <a href="/"><img src="{{ $image.RelPermalink }}" alt="logo" class="h-8"></a>
-                        {{ end }}
+                        <a href="/"><img src="{{ $image.RelPermalink }}" alt="logo" class="h-8"></a>
                         <p class="text-sm leading-7 text-white">{{ T "footerPhrase" }}</p>
                     </div>
                     <div class="items-center hidden gap-4 lg:flex">
