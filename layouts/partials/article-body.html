@@ -1,0 +1,12 @@
+{{ $underline := resources.Get "/illustrations/underline.svg" }}
+{{ $rightSide := resources.Get "/illustrations/right-side.svg" }}
+
+<div class="relative lg:pb-48 sm:pb-32 pb-28">
+  <img src="{{ $rightSide.RelPermalink }}" class="absolute right-0 hidden -bottom-20 xl:block" />
+  <div class="container mt-12 xl:max-w-6xl">
+    <div class="text-blue prose prose-a:text-purple-700 prose-code:bg-yellow relative"
+         style="max-width: 100%">
+      {{ .content }}
+    </div>
+  </div>
+</div>

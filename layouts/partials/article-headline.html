@@ -1,0 +1,10 @@
+{{ $underline := resources.Get "/illustrations/underline.svg" }}
+
+<div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
+  <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+    <div class="relative flex flex-col items-center justify-center w-full">
+      <h1 class="text-center h1">{{ .title }}</h1>
+      <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-48 -bottom-3 sm:w-72 sm:-mr-24 shrink-0">
+    </div>
+  </div>
+</div>
