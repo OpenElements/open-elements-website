@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Adding JavaFX to your Eclipse project'
 date: "2012-10-28"
 author: hendrik

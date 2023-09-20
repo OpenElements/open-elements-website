@@ -53,7 +53,17 @@
                     </div>
                 </div>
                 <div class="max-w-full prose prose-a:text-purple-700 prose-code:bg-yellow xl:max-w-prose">
+                    {{ if .Params.outdated -}}
+                        {{ partial "partials/outdated.html" }}
+                    {{ end -}}
                     {{ .Content }}
+                    {{ if .Params.origin -}}
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Crossposting</strong>
+                        <span class="block sm:inline">This article has originally posted <a href="{{ .Params.origin -}}" target="_blank">here</a>.</span>
+                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
+                    </div>
+                    {{ end -}}
                 </div>
             </div>
             <div class="w-full xl:max-w-sm shrink-0">

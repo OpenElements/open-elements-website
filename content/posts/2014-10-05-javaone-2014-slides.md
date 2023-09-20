@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'JavaOne 2014 Slides'
 date: "2014-10-05"
 author: hendrik

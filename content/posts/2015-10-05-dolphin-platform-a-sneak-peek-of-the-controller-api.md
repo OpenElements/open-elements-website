@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Dolphin Platform: A Sneak Peek of the controller API'
 date: "2015-10-05"
 author: hendrik

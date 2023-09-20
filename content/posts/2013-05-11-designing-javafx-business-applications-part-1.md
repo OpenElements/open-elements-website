@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Designing JavaFX Business Applications (Part 1)'
 date: "2013-05-11"
 author: hendrik

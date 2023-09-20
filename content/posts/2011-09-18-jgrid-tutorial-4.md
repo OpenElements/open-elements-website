@@ -1,10 +1,10 @@
 ---
-draft: true
 title: 'JGrid Tutorial #4'
 date: "2011-09-18"
 author: hendrik
 categories: [Swing]
 excerpt: 'I created a series of tutorials to get familiar with JGrid. This is the fourth out of five tutorials.'
+outdated: true
 ---
 In this tutorial we want to add zoom functionality to the JGrid. You can set the dimension of the grid cells be the property `fixedCellDimension`. Here is a example for two different dimensions:
 

@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Concurrency in UI Toolkits (Part 1)'
 date: "2015-01-19"
 author: hendrik

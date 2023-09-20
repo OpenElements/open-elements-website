@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'JavaFX and CSS'
 date: "2016-02-07"
 author: hendrik

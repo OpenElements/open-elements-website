@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'JSR377 got green light to continue!'
 date: "2015-02-11"
 author: hendrik

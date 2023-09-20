@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Aquatecture'
 date: "2013-05-09"
 author: hendrik

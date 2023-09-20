@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Simplify your app by using Bonjour'
 date: "2013-10-11"
 author: hendrik

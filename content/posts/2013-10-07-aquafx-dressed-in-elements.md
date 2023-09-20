@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'AquaFX dressed in Elements'
 date: "2013-10-07"
 author: claudine

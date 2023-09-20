@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'sbt-fxml: The missing link between FXML and your code'
 date: "2013-05-01"
 author: phdoerfler

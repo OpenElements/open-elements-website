@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Dolphin Platform Web Frontends with Polymer'
 date: "2015-10-23"
 author: hendrik

@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'BindableTransition'
 date: "2012-12-31"
 author: hendrik

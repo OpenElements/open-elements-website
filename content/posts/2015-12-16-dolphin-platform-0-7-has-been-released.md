@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Dolphin Platform 0.7 has been released'
 date: "2015-12-16"
 author: hendrik

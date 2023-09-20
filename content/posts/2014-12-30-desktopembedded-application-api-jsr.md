@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Desktop & Embedded Application JSR'
 date: "2014-12-30"
 author: hendrik

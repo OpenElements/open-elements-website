@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'DataFX 8 @ Nighthacking'
 date: "2014-03-27"
 author: hendrik

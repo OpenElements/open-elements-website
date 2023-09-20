@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'DataFX Controller Framework Preview'
 date: "2013-12-27"
 author: hendrik

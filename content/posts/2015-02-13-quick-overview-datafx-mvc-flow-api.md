@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'A quick overview to the DataFX MVC and Flow API'
 date: "2015-02-13"
 author: hendrik

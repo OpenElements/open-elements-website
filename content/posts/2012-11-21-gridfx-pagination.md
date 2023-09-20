@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'gridfx & pagination'
 date: "2012-11-21"
 author: hendrik

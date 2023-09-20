@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Dolphin Platform: A Sneak Peek of the view API'
 date: "2015-10-07"
 author: hendrik

@@ -1,5 +1,4 @@
 ---
-draft: true
 title:  'The road to Java 11 - builds and licences'
 date: "2018-09-16"
 author: hendrik

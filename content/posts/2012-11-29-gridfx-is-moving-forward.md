@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'GridFX is moving forward'
 date: "2012-11-29"
 author: hendrik

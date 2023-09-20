@@ -1,10 +1,10 @@
 ---
-draft: true
 title: 'JRating Preview'
 date: "2011-08-17"
 author: hendrik
 categories: [General]
 excerpt: 'Introduction of the Swing JRating component that can be used to visualize ratings.'
+outdated: true
 ---
 Here is a preview of my new Swing component. It´s a simple rating component that supports different renderers. There are actually some properties like the gap between the elements and a default star renderer.
 

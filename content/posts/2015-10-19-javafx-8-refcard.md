@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'JavaFX 8 RefCard'
 date: "2015-10-19"
 author: hendrik

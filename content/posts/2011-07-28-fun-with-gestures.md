@@ -1,10 +1,10 @@
 ---
-draft: true
 title: 'Fun with gestures'
 date: "2011-07-28"
 author: hendrik
 categories: [General]
 excerpt: 'Apple added a listener based API for multitouch gestures to their eawt package. So you can use pinching and rotation on a multitouch trackpad.'
+outdated: true
 ---
 While working on the next JGrid release I found the cool gestures API from Apple. Since "Java 6 Update 2" Apple added a listener based API for multitouch gestures to their eawt package. So you can use pinching and rotation on a multitouch trackpad. I wrote a short java webstart demo:
 

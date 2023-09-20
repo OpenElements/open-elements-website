@@ -1,5 +1,4 @@
 ---
-draft: true
 title:  'Back to the future - with Java'
 date: "2020-02-15"
 author: hendrik

@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'DataFX 8 has been released & DataFX core overview'
 date: "2014-10-22"
 author: hendrik

@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Maven support for DataFX'
 date: "2012-11-25"
 author: hendrik

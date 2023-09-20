@@ -1,5 +1,4 @@
 ---
-draft: true
 title:  'Server Timing with Rico'
 date: "2019-01-15"
 author: hendrik

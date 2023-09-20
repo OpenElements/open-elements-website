@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'GridFX supports CSS'
 date: "2012-12-03"
 author: hendrik

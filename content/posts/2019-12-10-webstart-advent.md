@@ -1,5 +1,4 @@
 ---
-draft: true
 title:  'How open source saved WebStart'
 date: "2019-12-10"
 author: hendrik

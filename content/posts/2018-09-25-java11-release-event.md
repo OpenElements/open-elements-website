@@ -1,5 +1,4 @@
 ---
-draft: true
 title:  'Java 11 release event'
 date: "2018-09-25"
 author: hendrik

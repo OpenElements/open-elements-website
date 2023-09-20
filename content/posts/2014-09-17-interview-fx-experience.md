@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Interview at FX Experience'
 date: "2014-09-17"
 author: hendrik

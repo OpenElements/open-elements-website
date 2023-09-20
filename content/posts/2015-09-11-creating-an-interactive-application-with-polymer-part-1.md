@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Creating an interactive application with Polymer (Part 1)'
 date: "2015-09-11"
 author: hendrik

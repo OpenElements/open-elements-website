@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'A short introduction to Bower'
 date: "2015-02-12"
 author: hendrik

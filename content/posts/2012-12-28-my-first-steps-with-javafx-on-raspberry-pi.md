@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'My first steps with JavaFX on Raspberry Pi'
 date: "2012-12-28"
 layout: post

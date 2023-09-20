@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Reference Cards for JavaFX, Web Components and Open Dolphin'
 date: "2016-01-15"
 author: hendrik

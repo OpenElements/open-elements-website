@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Dolphin Platform: How to create an application'
 date: "2015-10-18"
 author: hendrik

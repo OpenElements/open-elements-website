@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'DataFX Controller API'
 date: "2013-09-13"
 author: hendrik

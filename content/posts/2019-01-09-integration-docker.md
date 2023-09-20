@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Integration tests with Docker'
 date: "2019-01-09"
 author: hendrik
