@@ -7,10 +7,8 @@ excerpt: 'This post gives an overview of the new Java release train as it was an
 information and hints how you should handle new Java releases in the future and helps you to decide if you need to buy commercial Java support 
 or not.'
 categories: [Java]
+origin: https://dev.karakun.com
 ---
-
-{% include elements/block.html text="This post was originally posted at [dev.karakun.com](https://dev.karakun.com)" %}
-
 This year many changes are introduced to the Java release and support model that is provided by Oracle. Because of this many Java developers have questions on how this changes will affect their future work and what strategy should be used when thinking about Java version updates in applications. One concern that is often discussed but remains mostly unanswered is if companies will need to pay for Java in the near future.
 
 This article will give an overview about the new Java release train and the commercial support for Java. Based on this several solutions and workflows for supporting and managing Java versions for Java based applications will be discussed.

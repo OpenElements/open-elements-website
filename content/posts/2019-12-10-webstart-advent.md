@@ -5,9 +5,8 @@ date: "2019-12-10"
 author: hendrik
 excerpt: 'Everyone who has developed Java desktop applications within the last 15 years used WebStart or at least heard about it. This post gives an overview how the technology evolves as an open source project after Oracle announced its removal from the Oracle JDK.'
 categories: [Java, OpenWebStart]
+origin: https://www.javaadvent.com
 ---
-{% include elements/block.html text="This post was originally posted at [www.javaadvent.com](https://www.javaadvent.com)" %}
-
 Everyone who has developed Java desktop applications within the last 15 years used WebStart or at least heard about it. After WebStart was added to the Sun (and later Oracle) Java JREs and JDK in 2002 a lot of applications have been based on this technology. WebStart allows us to install, update, and run Java based applications on a desktop machine by defining the application and a so-called JNLP file (containing an XML description of the application). This file and all resources (like jar-files or icons) that form the application can be stored on a server. Whenever a client starts a WebStart application, new or updated resources will automatically be downloaded from the server.
 
 While WebStart has been used a lot to provide Java Desktop application most developers missed one important point: While there is a JSR that specifies the [JNLP standard](https://jcp.org/en/jsr/detail?id=56) Oracle never provided an open source reference implementation. Next to this the WebStart functionally that has been provided by Oracle was never part of the OpenJDK. In spring 2018 Oracle published a roadmap for Java on the desktop and announced that WebStart will be removed in the future. Half a year later Java 11 was released as the first LTS version of Java which does no longer includes WebStart. Next to this, the last free-to-use version of Java 8 was released at the beginning of 2019.

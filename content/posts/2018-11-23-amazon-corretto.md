@@ -6,9 +6,8 @@ author: hendrik
 excerpt: 'At the Devoxx conference 2 weeks ago, Amazon announced Corretto as a new player in the OpenJDK market. Next to companies like SAP, Oracle or Bellsoft, the cloud computing company now provides a custom OpenJDK build. On the website Amazon Corretto is described as 
 "No-cost, multiplatform, production-ready distribution of OpenJDK". In this post I will have a deeper look at Corretto and explain why Amazon did this move.'
 categories: [Java, OpenJDK]
+origin: https://dev.karakun.com
 ---
-{% include elements/block.html text="This post was originally posted at [dev.karakun.com](https://dev.karakun.com)" %}
-
 Based on the changes that Oracle announced a year ago about [the new release train and licenses of Java](/java/2018/06/25/java-releases.html) and the Oracle Java distributions it was completely obvious and only a matter of time when additional big players start to distribute custom OpenJDK builds. Some companies like RedHat or IBM did this already for some years to provide custom Java support for existing enterprise customers. The first big player that offered a more general OpenJDK build with custom support was Azul.
 
 With the new license model of Oracle that only provides free updates for java version (even LTS versions) for 6 months, the door was open for new vendors. Especially cloud providers needed to find a solution for the new situation. If you have Java installed on millions of containers that are running in your cloud you do not want to buy commercial support at Oracle for all of them. But you do not want to use outdated Java versions in production either. Especially in a public cloud infrastructure, you need security fixes as fast as possible. Based on this Microsoft already [announced a partnership with Azul](https://azure.microsoft.com/en-us/blog/microsoft-and-azul-systems-bring-free-java-lts-support-to-azure/) a month ago.

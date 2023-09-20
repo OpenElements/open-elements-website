@@ -5,9 +5,8 @@ date: "2018-09-16"
 author: hendrik
 excerpt: 'This post is the first of our Java 11 posts that will introduce all needed information about the next Java release. In this post you can find all needed information about the free and commercial versions of Java 11.'
 categories: [Java]
+origin: https://dev.karakun.com
 ---
-{% include elements/block.html text="This post was originally posted at [dev.karakun.com](https://dev.karakun.com)" %}
-
 The next version of Java (Java 11) will be released on the 25th of September 2018. Several developers and companies plan to switch from Java 8 to Java 11 within the next month. Since Java 9 and Java 10 were the 2 first versions that are based on the new release train of Oracle a lot of people assume an LTS (Long term support) release of Java 11 by Oracle that they can easily use the next year in production.
 
 ![Duke](/posts/2018-09-16-java-11-licence/duke-11.jpg)
