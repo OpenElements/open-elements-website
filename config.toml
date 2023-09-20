@@ -2,7 +2,6 @@ defaultContentLanguage = "en"
 title = "Open Elements"
 baseURL = "https://open-elements.com/"
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
 enableRobotsTXT = true
 log = true
 logFile = "hugo-build.log"
@@ -12,12 +11,14 @@ enableGitInfo = true
 weight = 1
 languageCode = "en-us"
 languageName = "EN"
+[languages.en.params]
 description = "Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java"
 
 [languages.de]
 weight = 2
 languageCode = "de"
 languageName = "DE"
+[languages.de.params]
 description = "Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java"
 
 [markup.goldmark.renderer]
