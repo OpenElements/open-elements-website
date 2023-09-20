@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Dolphin Platform: A Sneak Peek'
 date: "2015-10-04"
 author: hendrik

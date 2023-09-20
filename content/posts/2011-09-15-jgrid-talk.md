@@ -1,10 +1,10 @@
 ---
+outdated: true
 title: 'JGrid Talk'
 date: "2011-09-15"
 author: hendrik
 categories: [Swing]
 excerpt: 'The slides and samples of my JGrid sessions.'
-outdated: true
 ---
 Here is the first JGrid presentation. I gave the talk this week at the [NetBeans Platform Certified Training course](http://edu.netbeans.org/courses/nbplatform-certified-training/) in Münster:
 

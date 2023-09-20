@@ -1,10 +1,10 @@
 ---
+outdated: true
 title: 'Building JavaFX Applications with Maven'
 date: "2012-10-13"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'With the preview of JavaFX 2 that is part of Java 6 and 7 you can already build custom JavaFX applications by using Maven'
-outdated: true
 ---
 There are already a lot of posts out there that describe a workflow for integrating JavaFX in Maven. Here is one example by Adam Bien: [http://www.adam-bien.com/roller/abien/entry/how_to_compile_java_fx](http://www.adam-bien.com/roller/abien/entry/how_to_compile_java_fx)
 

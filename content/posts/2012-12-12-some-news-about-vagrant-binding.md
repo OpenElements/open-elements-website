@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Some news about Vagrant-Binding'
 date: "2012-12-12"
 author: hendrik

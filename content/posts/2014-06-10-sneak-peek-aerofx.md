@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Sneak Peek: AeroFX'
 date: "2014-06-10"
 author: hendrik

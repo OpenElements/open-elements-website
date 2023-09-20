@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'My JavaOne 2014 Sessions'
 date: "2014-08-26"
 author: hendrik

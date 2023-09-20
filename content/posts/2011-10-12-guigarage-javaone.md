@@ -1,10 +1,10 @@
 ---
+outdated: true
 title: 'GuiGarage @ JavaOne'
 date: "2011-10-12"
 author: hendrik
 categories: [General]
 excerpt: 'The first appereance of Guigarage at JavaOne'
-outdated: true
 ---
 Thanks to [Jonathan Giles](http://jonathangiles.net/blog/) and Jasper Potts who integrated guigarage.com in their [JavaOne](http://www.oracle.com/javaone/index.html) slides. It's just a picture but I'm very proud :)
 

@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'JavaOne 2014 Preview'
 date: "2014-09-09"
 author: hendrik

@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Designing JavaFX Business Applications (Part 2)'
 date: "2013-05-19"
 author: hendrik

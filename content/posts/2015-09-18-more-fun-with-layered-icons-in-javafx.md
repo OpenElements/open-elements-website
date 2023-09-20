@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'More fun with layered icons in javaFX'
 date: "2015-09-18"
 author: hendrik

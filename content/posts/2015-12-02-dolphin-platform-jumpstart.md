@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Dolphin Platform Jumpstart'
 date: "2015-12-02"
 author: hendrik

@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'The View Objects Pattern & automated tests with TestFX'
 date: "2014-10-01"
 author: hendrik

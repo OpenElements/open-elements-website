@@ -1,4 +1,5 @@
 ---
+outdated: true
 title:  'About the Java release model'
 date: "2018-09-16"
 author: hendrik

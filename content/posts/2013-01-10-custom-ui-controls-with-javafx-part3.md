@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Custom UI Controls with JavaFX (Part3)'
 date: "2013-01-10"
 author: hendrik

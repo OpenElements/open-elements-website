@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'DataFX: The best way to get real-world data into your JavaFX application'
 date: "2013-09-28"
 author: hendrik

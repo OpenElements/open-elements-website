@@ -1,4 +1,5 @@
 ---
+outdated: true
 title:  'How AdoptOpenJDK provides enterprise ready OpenJDK builds'
 date: "2020-02-21"
 author: hendrik

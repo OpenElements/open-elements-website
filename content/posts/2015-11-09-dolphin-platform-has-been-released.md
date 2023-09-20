@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Dolphin Platform has been released'
 date: "2015-11-09"
 author: hendrik

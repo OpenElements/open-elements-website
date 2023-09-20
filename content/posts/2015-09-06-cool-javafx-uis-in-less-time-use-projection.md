@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'Cool JavaFX UIs in less time? Use projection!'
 date: "2015-09-06"
 author: hendrik

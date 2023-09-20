@@ -1,4 +1,5 @@
 ---
+outdated: true
 title: 'BoxFX (JavaOne Preview 1)'
 date: "2013-08-29"
 author: hendrik

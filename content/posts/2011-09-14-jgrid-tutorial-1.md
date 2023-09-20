@@ -1,10 +1,10 @@
 ---
+outdated: true
 title: 'JGrid Tutorial #1'
 date: "2011-09-14"
 author: hendrik
 categories: [Swing]
 excerpt: 'I created a series of tutorials to get familiar with JGrid. This is the first out of five tutorials.'
-outdated: true
 ---
 At the moment all JGrid demonstrations are very complex and use a lot of Java2D code, web services an so on. So many people asked me to create some simple demos. For this reason I started some bottom-up tutorials for the JGrid.
 
