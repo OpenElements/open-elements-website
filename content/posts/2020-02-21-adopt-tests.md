@@ -34,8 +34,6 @@ With [AdoptOpenJDK](https://adoptopenjdk.net) an open source project exists that
 
 In this article, I will give an overview of the test infrastructure of AdoptOpenJDK and describe the different types of tests that will be executed for each release. All this ends in a well tested distribution that is ready to use for the enterprise.
 
-{% include elements/block.html text="As the world of testing at AdoptOpenJDK is evolving and improving quickly, some information and descriptions of this article may fall behind the march of progress. The most updated documentation can always be found [in our github repo](https://github.com/AdoptOpenJDK/openjdk-tests)" %}
-
 ## Guide to the test jobs at AdoptOpenJDK
 
 For all nightly and release builds, test jobs are running as part of the [AdoptOpenJDK continuous delivery pipelines]((ci.adoptopenjdk.net)). For the test step of a build, all tests are grouped by its type. Currently, the tests of AdoptOpenJDK are split into 6 different groups/types. When running the test phase on our CI servers the defined groups will be executed in parallel. All these tests are defined in the open source test framework [**AQA** (AdoptOpenJDK Quality Assurance)](https://blog.adoptopenjdk.net/2019/07/the-first-drop-introducing-adoptopenjdk-quality-assurance-aqa-v1-0) that is provided by AdoptOpenJDK and can be found [here](https://github.com/AdoptOpenJDK/openjdk-tests). The following image shows the simplified pipeline of the AdoptOpenJDK builds and all the different test groups that are part of the test step in each build:
