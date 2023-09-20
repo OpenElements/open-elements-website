@@ -1,7 +1,6 @@
 [build]
-command = "hugo"
+command = "CI='' hugo"
 publish = "public"
 
 [build.environment]
 HUGO_VERSION = "0.118.2"
-CI = '' # This is needed to prevent Netlify from using the default CI environment variable that will fail the build on WARN messages
