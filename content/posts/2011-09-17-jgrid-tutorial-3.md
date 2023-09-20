@@ -5,6 +5,7 @@ date: "2011-09-17"
 author: hendrik
 categories: [Swing]
 excerpt: 'I created a series of tutorials to get familiar with JGrid. This is the third out of five tutorials.'
+slug: jgrid-tutorial-3
 ---
 In this tutorial I will show you how to visualize more complex data with renderers. First we have to create a data model. For this tutorial we will work with the `java.awt.Color` class and create a ListModel with some colors in it:
 

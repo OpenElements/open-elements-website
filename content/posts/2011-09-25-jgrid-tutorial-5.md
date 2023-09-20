@@ -5,6 +5,7 @@ date: "2011-09-25"
 author: hendrik
 categories: [Swing]
 excerpt: 'I created a series of tutorials to get familiar with JGrid. This is the fifth out of five tutorials.'
+slug: jgrid-tutorial-5
 ---
 In this tutorial we want to take a deeper look at cell rendering. In the last tutorials we already implemented GridCellRenderer and set them as default renderer to the JGrid. This is exactly the same behavior as renderer in a JList. But if you have different data types in a grid only one renderer won´t fulfill the requirements. For this purpose you can add different GridCellRenderer to the JGrid. Like in a JTable you can add renderers for different data classes to the JGrid.
 
