@@ -22,5 +22,11 @@
     "text": "The <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> is a prestigious technical university in Germany, offering a wide range of degree programs, with its department for computer science and IT particularly notable for its practice-oriented teaching methods and close collaboration with the industry. OpenElements is a partner of OTH Regensburg, and our founder <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a lecturer for blockchain technology at the OTH.",
     "logo": "/illustrations/logo-oth.svg",
     "link": "https://swirldslabs.com"
+  },
+  {
+    "title": "TAKKA",
+    "text": "The <a class=\"link-purple\" href=\"https://takka.group\" target=\"_blank\">takka group</a> offers services in the areas of IT consulting and software development. <b>Open Elements</b> has supported takka with workshops in specialized areas of Java development.",
+    "logo": "/illustrations/logo-takka.svg",
+    "link": "https://takka.group"
   }
 ]
