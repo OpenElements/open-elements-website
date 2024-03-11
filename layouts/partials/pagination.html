@@ -19,9 +19,11 @@
 
 {{- if in $validFormats $format }}
   {{- if gt $page.Paginator.TotalPages 1 }}
+  <div class="flex items-center justify-center gap-6">
     <ul class="pagination pagination-{{ $format }}">
       {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
     </ul>
+    </div>
   {{- end }}
 {{- else }}
   {{- errorf $msg2 (delimit $validFormats ", ") }}
@@ -30,14 +32,14 @@
 {{/* Format: default
 {{/* --------------------------------------------------------------------- */}}
 
-<div class="flex items-center justify-center gap-6">
+
 
 {{- define "partials/inline/pagination/default" }}
   {{- with .Paginator }}
     {{- $currentPageNumber := .PageNumber }}
 
     {{- with .Prev }}
-      <li class="page-item" display="inline-block">
+      <li class="page-item">
         <a href="{{ .URL }}" aria-label="Previous" role="button" class="inline-flex items-center justify-center text-white bg-purple-100 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link">
             <svg class="w-5 h-5 -ml-0.5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -45,7 +47,7 @@
         </a>
       </li>
     {{- else }}
-      <li class="page-item disabled" display="inline-block">
+      <li class="page-item disabled">
         <a aria-disabled="true" aria-label="Previous" role="button" tabindex="-1" class="inline-flex items-center justify-center text-white bg-purple-100 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link">
             <svg class="w-5 h-5 -ml-0.5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -63,18 +65,18 @@
 
     {{- range $k := seq $start $end }}
       {{- if eq $.Paginator.PageNumber $k }}
-      <li class="page-item active" display="inline-block">
+      <li class="page-item active">
         <a aria-current="page" aria-label="Page {{ $k }}" class="inline-flex items-center justify-center w-11 h-11 text-white rounded-full bg-green font-medium text-[14px] page-link" role="button">{{ $k }}</a>
       </li>
       {{- else }}
-      <li class="page-item" display="inline">
+      <li class="page-item">
         <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px] page-link" role="button">{{ $k }}</a>
       </li>
       {{- end }}
     {{- end }}
 
     {{- with .Next }}
-      <li class="page-item" display="inline-block">
+      <li class="page-item">
         <a href="{{ .URL }}" aria-label="Next" role="button" class="inline-flex items-center justify-center text-white bg-purple-700 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link">
             <svg class="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -82,7 +84,7 @@
         </a>
       </li>
     {{- else }}
-      <li class="page-item disabled" display="inline-block">
+      <li class="page-item disabled">
         <a aria-disabled="true" aria-label="Next" role="button" tabindex="-1" class="inline-flex items-center justify-center text-white bg-purple-700 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link">
             <svg class="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -93,8 +95,6 @@
 
   {{- end }}
 {{- end -}}
-
-</div>
 
 {{/* Format: terse
 {{/* --------------------------------------------------------------------- */}}
