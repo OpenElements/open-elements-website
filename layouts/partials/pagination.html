@@ -19,7 +19,7 @@
 
 {{- if in $validFormats $format }}
   {{- if gt $page.Paginator.TotalPages 1 }}
-        <div class="flex items-center justify-center gap-6 pagination pagination-{{ $format }}">
+        <div class="flex items-center justify-center gap-6 pagination pagination-{{ $format }} mt-6 mb-6">
         {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
         </div>
   {{- end }}
