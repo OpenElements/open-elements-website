@@ -94,9 +94,8 @@
          
         </div>
     </div>
-    
-        <div class="pt-7 sm:pt-12 sm:pb-44 pb-36">
-            {{ range .Pages }}
+    {{ range .Pages }}
+        <div class="pt-7 sm:pt-12 sm:pb-12 pb-7">
             <div class="container mx-auto space-y-20 lg:max-w-7xl">
                 <div class="space-y-6">
                     <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
@@ -143,7 +142,6 @@
                     </div>
                 </div>
             </div>
-            {{ end }}
         </div>
-    
+    {{ end }}
 {{ end }}
