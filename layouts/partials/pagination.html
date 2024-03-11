@@ -4,7 +4,7 @@
 {{- $msg2 := "The 'format' specified in the map passed to the internal pagination template is invalid. Valid choices are: %s." }}
 
 {{- $page := . }}
-{{- $format := "terse" }}
+{{- $format := "default" }}
 
 {{- if reflect.IsMap . }}
   {{- with .page }}
