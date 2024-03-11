@@ -97,15 +97,14 @@
 
     <div class="pt-7 sm:pt-12 sm:pb-44 pb-36">
         <div class="container mx-auto space-y-20 lg:max-w-7xl">
+            {{ range .Pages }}
                 <div class="space-y-6">
                     <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
                         <a href="#" class="absolute inset-0 "></a>
                         <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
                             <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
                         </div>
-
-                        <div class="p-5 container">
-                            {{ range .Pages }}
+                        <div class="p-5">
                                 <article>
                                     <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
                                         <div class="flex items-center gap-2 text-purple">
@@ -139,12 +138,11 @@
                                         </p>
                                     </div>
                                 </article>
-                            {{ end }}
-                        </div>
-                    
-                    </div>                 
+                            </div>
+                        </div>                 
+                    </div>
                 </div>
-            </div>
+            {{ end }}
         </div>
     </div>
 {{ end }}
