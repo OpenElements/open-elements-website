@@ -13,6 +13,8 @@
 {{ $img7 := resources.Get "/images/img-7.png" }}
 {{ $img8 := resources.Get "/images/img-8.png" }}
 
+
+
     <div class="relative">
     
         <div class="absolute w-20 h-20 bg-green-100 rounded-full xl:-left-8 xl:right-auto sm:-right-8 -right-11 xl:top-56 top-20 shrink-0"></div>
@@ -99,7 +101,7 @@
             <div class="container mx-auto space-y-20 lg:max-w-7xl">
                 <div class="space-y-6">
                     <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
-                        <a href="#" class="absolute inset-0 "></a>
+                        <a href="{{ .Permalink }}" class="absolute inset-0 "></a>
                         <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
                             <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
                         </div>
