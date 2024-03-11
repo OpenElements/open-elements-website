@@ -29,5 +29,3 @@ unsafe = true
 posts = '/posts/:year/:month/:day/:slug/'
 [permalinks.section]
 posts = '/posts/'
-
-paginate = 10
