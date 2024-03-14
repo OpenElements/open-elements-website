@@ -4,6 +4,8 @@ other = "Startseite"
 other = "Blog"
 [aboutUs]
 other = "Über uns"
+[temurinSupport]
+other = "Temurin Support"
 [contactUs]
 other = "Kontakt"
 [footerPhrase]

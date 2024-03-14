@@ -24,6 +24,15 @@
         "visibleInFooter": true
     },
     {
+        "parent": "About us",
+        "name": "Temurin Support",
+        "i18nKey": "temurinSupport",
+        "altI18nKey": "temurinSupportDescription",
+        "link": "/about/temurin-support/",
+        "visibleInNavigation": true,
+        "visibleInFooter": true
+    },
+    {
         "name": "Contact us",
         "i18nKey": "contactUs",
         "altI18nKey": "contactUsDescription",
