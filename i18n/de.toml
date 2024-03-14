@@ -1,7 +1,7 @@
 [home]
 other = "Startseite"
-[openSource]
-other = "Über Open Source"
+[blog]
+other = "Blog"
 [aboutUs]
 other = "Über uns"
 [contactUs]
