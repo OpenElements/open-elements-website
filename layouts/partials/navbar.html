@@ -49,7 +49,7 @@
                 <div class="submenu absolute hidden group-hover:block">
                   {{ range .children }}
                   {{ if .visibleInNavigation }}
-                  <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                  <a href="{{ relLangURL .link }}" class="block">{{ print .i18nKey | i18n }}</a>
                   {{ end }}
                   {{ end }}
                 </div>
