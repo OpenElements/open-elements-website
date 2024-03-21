@@ -43,7 +43,18 @@
               {{ $mainMenu := site.Data.mainMenu }}
               {{ range $mainMenu }}
               {{ if .visibleInNavigation }}
-              <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+              <div class="nav-item">
+                <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                {{ if .children }}
+                <div class="submenu">
+                  {{ range .children }}
+                  {{ if .visibleInNavigation }}
+                  <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
+                  {{ end }}
+                  {{ end }}
+                </div>
+                {{ end }}
+              </div>
               {{ end }}
               {{ end }}
             </div>
