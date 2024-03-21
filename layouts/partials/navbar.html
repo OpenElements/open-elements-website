@@ -49,10 +49,10 @@
                   {{ if .children }}<svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>{{ end }}
                 </a>
                 {{ if .children }}
-                <div class="submenu absolute hidden group-hover:block">
+                <div class="submenu absolute hidden group-hover:block bg-white shadow-md mt-1">
                   {{ range .children }}
                   {{ if .visibleInNavigation }}
-                  <a href="{{ relLangURL .link }}" class="block">{{ print .i18nKey | i18n }}</a>
+                  <a href="{{ relLangURL .link }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ print .i18nKey | i18n }}</a>
                   {{ end }}
                   {{ end }}
                 </div>
