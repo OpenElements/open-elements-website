@@ -43,10 +43,10 @@
               {{ $mainMenu := site.Data.mainMenu }}
               {{ range $mainMenu }}
               {{ if .visibleInNavigation }}
-              <div class="nav-item">
+              <div class="nav-item group relative">
                 <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
                 {{ if .children }}
-                <div class="submenu">
+                <div class="submenu absolute hidden group-hover:block">
                   {{ range .children }}
                   {{ if .visibleInNavigation }}
                   <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
