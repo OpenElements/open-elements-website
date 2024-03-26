@@ -31,24 +31,6 @@
              </div>
         </div>
     </div>
-    
-
-    <div class="pt-6 sm:pt-4">
-        <div class="container mx-auto max-w-7xl">
-            <div class="relative flex items-center justify-center w-full">
-                <img src="{{ $round2.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-5 lg:block hidden xl:right-[20%] right-[11%] top-14 shrink-0">
-
-                <div class="relative flex w-full max-w-md">
-                    <input type="text" class="w-full px-6 py-4 h-14 mx-auto border-[3px] bg-transparent rounded-full border-purple focus:outline-none placeholder:text-purple font-medium text-purple-700" placeholder="Search by topic" />
-                    <button class="absolute right-0 flex items-center justify-center text-white rounded-full w-14 h-14 shrink-0 bg-purple">
-                        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>  
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="relative mx-auto mt-6 sm:mt-8 xl:container max-w-7xl">
         <div class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
             <label>
@@ -96,7 +78,7 @@
          
         </div>
     </div>
-    {{ range .Paginator.Pages }}
+    {{ range where .Paginator.Pages ".Params.categories" "intersect" (slice "Java")}}
         <div class="pt-7 sm:pt-12">
             <div class="container mx-auto space-y-20 lg:max-w-7xl">
                 <div class="space-y-6">
