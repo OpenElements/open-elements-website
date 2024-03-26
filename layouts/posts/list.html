@@ -40,6 +40,7 @@
             {{ end }}
           </div>
     </div>
+    {{ $currentCategory := .Params.category }}
     {{ if $currentCategory }}
     {{ range where .Paginator.Pages ".Params.categories" "intersect" (slice $currentCategory) }}
     <div class="pt-7 sm:pt-12">
