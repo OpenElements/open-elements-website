@@ -33,104 +33,123 @@
     </div>
     <div class="relative mx-auto mt-6 sm:mt-8 xl:container max-w-7xl">
         <div class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    Java
-                </div>
-            </label>
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    Cyberpank
-                </div>
-            </label>
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    Open Diversity
-                </div>
-            </label>
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    Virtual
-                </div>
-            </label>
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    OpenJDK
-                </div>
-            </label>
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    WebStart
-                </div>
-            </label>
-            <label>
-                <input type="checkbox" class="sr-only peer" />
-                <div class="peer-hover:shadow-3 cursor-pointer peer-checked:peer-hover:shadow-none px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple peer-checked:bg-purple-700 peer-checked:text-white select-none transition-all ease-in-out duration-150">
-                    Amazon
-                </div>
-            </label>
-         
-        </div>
+            {{ range .Site.Taxonomies.categories }}
+              <a href="{{ .Page.Permalink }}" class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">
+                {{ .Page.Title }}
+              </a>
+            {{ end }}
+          </div>
     </div>
-    {{ range where .Paginator.Pages ".Params.categories" "intersect" (slice "Java")}}
-        <div class="pt-7 sm:pt-12">
-            <div class="container mx-auto space-y-20 lg:max-w-7xl">
-                <div class="space-y-6">
-                    <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
-                        <a href="{{ .Permalink }}" class="absolute inset-0 "></a>
-                        <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
-                            <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
-                        </div>
-                        <div class="p-5">
-                                <article>
-                                    <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
-                                        <div class="flex items-center gap-2 text-purple">
-                                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
-                                            </svg>
-                                            <time class="text-[14px] font-medium">
-                                                {{ dateFormat "January 2, 2006" .Params.date }}
-                                            </time>
-                                        </div>
-                                        <div class="flex items-center gap-2 text-purple">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                                            </svg>  
-                                            <p class="text-[14px] font-medium">
-                                                {{ $data := index .Site.Data .Site.Language.Lang }}
-                                                {{ range $author := where $data.authors "id" "hendrik" }}
-                                                    <a href="{{$author.link}}">{{$author.firstName}} {{$author.lastName}}</a>
-                                                {{ end }}
-                                            </p>
-                                        </div>
+    {{ if $currentCategory }}
+    {{ range where .Paginator.Pages ".Params.categories" "intersect" (slice $currentCategory) }}
+    <div class="pt-7 sm:pt-12">
+        <div class="container mx-auto space-y-20 lg:max-w-7xl">
+            <div class="space-y-6">
+                <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                    <a href="{{ .Permalink }}" class="absolute inset-0 "></a>
+                    <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                        <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                    </div>
+                    <div class="p-5">
+                            <article>
+                                <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                    <div class="flex items-center gap-2 text-purple">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        <time class="text-[14px] font-medium">
+                                            {{ dateFormat "January 2, 2006" .Params.date }}
+                                        </time>
                                     </div>
-                                    <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
-                                        {{ range .Params.categories }}
-                                            <p>#{{ . }}</p>
-                                        {{ end }}
-                                    </div>
-                                    
-                                    <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
-                                        <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
-                                            {{ .Params.title }}
-                                        </h2>
-                                        <p class="text-sm leading-[22px] text-blue line-clamp-3">
-                                            {{ .Params.excerpt }}
+                                    <div class="flex items-center gap-2 text-purple">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                        </svg>  
+                                        <p class="text-[14px] font-medium">
+                                            {{ $data := index .Site.Data .Site.Language.Lang }}
+                                            {{ range $author := where $data.authors "id" "hendrik" }}
+                                                <a href="{{$author.link}}">{{$author.firstName}} {{$author.lastName}}</a>
+                                            {{ end }}
                                         </p>
                                     </div>
-                                </article>
-                            </div>
-                        </div>                 
-                    </div>
+                                </div>
+                                <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                    {{ range .Params.categories }}
+                                        <p>#{{ . }}</p>
+                                    {{ end }}
+                                </div>
+                                
+                                <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                    <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                        {{ .Params.title }}
+                                    </h2>
+                                    <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                        {{ .Params.excerpt }}
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>                 
                 </div>
             </div>
         </div>
+    </div>
+    {{ end }}
+    {{ else }}
+    {{ range .Paginator.Pages }}
+    <div class="pt-7 sm:pt-12">
+        <div class="container mx-auto space-y-20 lg:max-w-7xl">
+            <div class="space-y-6">
+                <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                    <a href="{{ .Permalink }}" class="absolute inset-0 "></a>
+                    <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                        <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
+                    </div>
+                    <div class="p-5">
+                            <article>
+                                <div class="flex flex-col gap-1.5 sm:items-center sm:gap-5 sm:flex-row">
+                                    <div class="flex items-center gap-2 text-purple">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        <time class="text-[14px] font-medium">
+                                            {{ dateFormat "January 2, 2006" .Params.date }}
+                                        </time>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-purple">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                        </svg>  
+                                        <p class="text-[14px] font-medium">
+                                            {{ $data := index .Site.Data .Site.Language.Lang }}
+                                            {{ range $author := where $data.authors "id" "hendrik" }}
+                                                <a href="{{$author.link}}">{{$author.firstName}} {{$author.lastName}}</a>
+                                            {{ end }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                                    {{ range .Params.categories }}
+                                        <p>#{{ . }}</p>
+                                    {{ end }}
+                                </div>
+                                
+                                <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
+                                    <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
+                                        {{ .Params.title }}
+                                    </h2>
+                                    <p class="text-sm leading-[22px] text-blue line-clamp-3">
+                                        {{ .Params.excerpt }}
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
     {{ end }}
     <div class="sm:pb-44 pb-36">
         {{ partial "pagination.html" . }}
