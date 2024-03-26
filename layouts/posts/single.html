@@ -51,6 +51,11 @@
                             </p>
                         </div>
                     </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                        {{ range .Params.categories }}
+                            <p>#{{ . }}</p>
+                        {{ end }}
+                    </div>
                 </div>
                 <div class="max-w-full prose prose-a:text-purple-700 prose-code:bg-yellow xl:max-w-prose">
                     {{ if .Params.outdated -}}
