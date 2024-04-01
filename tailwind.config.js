@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
+  variants: {
+    extend: {
+      opacity: ['hover', 'active'],
+    }
+  },
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
     screens: {
