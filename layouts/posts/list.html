@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="relative mx-auto mt-6 sm:mt-8 xl:container max-w-7xl">
-        <div class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
+        <div id="categories-tags" class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
             {{ range .Site.Taxonomies.categories }}
               <a href="{{ .Page.Permalink }}" class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">
                 {{ .Page.Title }}
@@ -46,7 +46,7 @@
     <div class="pt-7 sm:pt-12">
         <div class="container mx-auto space-y-20 lg:max-w-7xl">
             <div class="space-y-6">
-                <div class="flex sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
+                <div class="flex post {{ range .Params.tags }}{{ . }} {{ end }} sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
                     <a href="{{ .Permalink }}" class="absolute inset-0 "></a>
                     <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
                         <img src="{{ $img2.RelPermalink }}" alt="" class="object-cover w-full h-full" />
@@ -156,3 +156,33 @@
         {{ partial "pagination.html" . }}
     </div>
 {{ end }}
+
+
+<script>
+    // Wait for the page to load
+    window.addEventListener("DOMContentLoaded", function () {
+        // Get all the buttons and posts
+        const allTags = document.querySelectorAll("#categories-tags a");
+        const posts = document.querySelectorAll(".post");
+
+        // Add click event listener to each button
+        allTags.forEach(function (singleTag) {
+            singleTag.addEventListener("click", function () {
+                
+                const tag = singleTag.textContent.trim();
+
+                // Hide all posts
+                posts.forEach(function (post) {
+                    post.style.display = "none";
+                });
+
+                // Show only posts with the selected tag
+                const filteredPosts = document.querySelectorAll("." + tag);
+                filteredPosts.forEach(function (post) {
+                    post.style.display = "block";
+                });
+                
+            });
+        });
+    });
+</script>
