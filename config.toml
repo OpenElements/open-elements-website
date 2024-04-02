@@ -28,4 +28,4 @@ unsafe = true
 [permalinks.page]
 posts = '/posts/:year/:month/:day/:slug/'
 [permalinks.section]
-posts = '/posts/'
+posts = '/posts/:categories'

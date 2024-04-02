@@ -34,7 +34,7 @@
     <div class="relative mx-auto mt-6 sm:mt-8 xl:container max-w-7xl">
         <div id="categories-tags" class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
             {{ range .Site.Taxonomies.categories }}
-              <a href="{{ .Page.Permalink }}" class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">
+              <a href="{{ "/posts/" | relLangURL }}{{ .Page | urlize }}" class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">
                 {{ .Page.Title }}
               </a>
             {{ end }}
