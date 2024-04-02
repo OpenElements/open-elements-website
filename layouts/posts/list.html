@@ -155,34 +155,36 @@
     <div class="sm:pb-44 pb-36">
         {{ partial "pagination.html" . }}
     </div>
+
+    <script>
+        // Wait for the page to load
+        window.addEventListener("DOMContentLoaded", function () {
+            // Get all the buttons and posts
+            const allTags = document.querySelectorAll("#categories-tags a");
+            const posts = document.querySelectorAll(".post");
+    
+            // Add click event listener to each button
+            allTags.forEach(function (singleTag) {
+                singleTag.addEventListener("click", function () {
+                    
+                    const tag = singleTag.textContent.trim();
+    
+                    // Hide all posts
+                    posts.forEach(function (post) {
+                        post.style.display = "none";
+                    });
+    
+                    // Show only posts with the selected tag
+                    const filteredPosts = document.querySelectorAll("." + tag);
+                    filteredPosts.forEach(function (post) {
+                        post.style.display = "block";
+                    });
+                    
+                });
+            });
+        });
+    </script>
+
 {{ end }}
 
 
-<script>
-    // Wait for the page to load
-    window.addEventListener("DOMContentLoaded", function () {
-        // Get all the buttons and posts
-        const allTags = document.querySelectorAll("#categories-tags a");
-        const posts = document.querySelectorAll(".post");
-
-        // Add click event listener to each button
-        allTags.forEach(function (singleTag) {
-            singleTag.addEventListener("click", function () {
-                
-                const tag = singleTag.textContent.trim();
-
-                // Hide all posts
-                posts.forEach(function (post) {
-                    post.style.display = "none";
-                });
-
-                // Show only posts with the selected tag
-                const filteredPosts = document.querySelectorAll("." + tag);
-                filteredPosts.forEach(function (post) {
-                    post.style.display = "block";
-                });
-                
-            });
-        });
-    });
-</script>
