@@ -32,12 +32,11 @@
         </div>
     </div>
     <div class="relative mx-auto mt-6 sm:mt-8 xl:container max-w-7xl">
-        <div id="categories-buttons" class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
-            <button class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">All</button>
+        <div class="flex items-center w-full gap-3 px-6 py-6 overflow-x-scroll xl:justify-center md:px-12 sm:px-8 whitespace-nowrap scrollbar-none">
             {{ range .Site.Taxonomies.categories }}
-              <button class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">
+              <a href="{{ .Page.Permalink }}" class="px-4 py-1.5 text-center font-bold text-purple bg-purple-100 border rounded-full border-purple hover:bg-purple-700 hover:text-white transition-all ease-in-out duration-150">
                 {{ .Page.Title }}
-              </button>
+              </a>
             {{ end }}
           </div>
     </div>
@@ -157,48 +156,3 @@
         {{ partial "pagination.html" . }}
     </div>
 {{ end }}
-
-
-<script>
-    // Wait for the page to load
-    window.addEventListener("DOMContentLoaded", function () {
-        // Get all the buttons and posts
-        const buttons = document.querySelectorAll("#categories-buttons button");
-        const posts = document.querySelectorAll(".post");
-
-        // Add click event listener to each button
-        buttons.forEach(function (button) {
-            button.addEventListener("click", function () {
-                // Remove 'active' class from all buttons
-                buttons.forEach(function (btn) {
-                    btn.classList.remove("bg-blue-500", "text-white");
-                    btn.classList.add("bg-gray-200", "text-gray-700");
-                });
-
-                // Add 'active' class to the clicked button
-                button.classList.remove("bg-gray-200", "text-gray-700");
-                button.classList.add("bg-blue-500", "text-white");
-
-                if (button.textContent === "All") {
-                    // Show all posts if 'All' button is clicked
-                    posts.forEach(function (post) {
-                        post.style.display = "block";
-                    });
-                } else {
-                    const tag = button.textContent.trim();
-
-                    // Hide all posts
-                    posts.forEach(function (post) {
-                        post.style.display = "none";
-                    });
-
-                    // Show only posts with the selected tag
-                    const filteredPosts = document.querySelectorAll("." + tag);
-                    filteredPosts.forEach(function (post) {
-                        post.style.display = "block";
-                    });
-                }
-            });
-        });
-    });
-</script>
