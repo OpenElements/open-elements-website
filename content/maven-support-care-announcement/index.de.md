@@ -2,7 +2,7 @@
 title: "Support & Care for Maven"
 description: "Support & Care for Maven"
 layout: "article"
-url: "de/support-care-maven"
+url: "/de/support-care-maven"
 ---
 Die **Support & Care for Maven** Initiative ist ein bahnbrechendes Programm zur Sicherung der Zukunft des Maven-Projekts durch nachhaltige Unterstützung und Pflege.
 Die Initiative zielt darauf ab, durch eine Förderung, die Entwicklung und Wartung von Maven zu stärken und somit dessen hohe Qualität und Verfügbarkeit, die das Java-Ökosystem benötigt, sicherzustellen.
