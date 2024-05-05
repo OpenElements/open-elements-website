@@ -6,6 +6,7 @@ author: hendrik
 excerpt: 'AdoptOpenJDK is doing a virtual roadshow of the Java User Groups. We plan to reach as many groups as possible but we will also live stream the event on YouTube.'
 categories: [Java, AdoptOpenJDK]
 origin: https://blog.adoptopenjdk.net/2020/07/adoptopenjdk-virtual-roadshow/
+preview_image: "/static/posts/2020-07-14-adopt-roadshow/03_Open_Source_Yellow.jpg"
 ---
 AdoptOpenJDK is doing a virtual roadshow of the Java User Groups. We plan to reach as many groups as possible but we will also live stream the event on YouTube.
 
