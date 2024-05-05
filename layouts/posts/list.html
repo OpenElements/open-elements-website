@@ -17,6 +17,17 @@
 
     <div class="relative">
     
+        {{ if eq .Site.Language.Lang "de" }}
+        <div class="flex flex-col items-end w-full mx-auto xl:flex-row justify-center">
+            <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
+                <p class="text-base leading-7 sm:text-lg sm:leading-8">Alle Beiträge gibt es in Englisch!</p>
+                <a href="{{ "posts" | absURL }}" class="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
+                    Zur englischen Seite
+                </a>
+            </div>
+        </div>
+        {{ end }}
+
         <div class="absolute w-20 h-20 bg-green-100 rounded-full xl:-left-8 xl:right-auto sm:-right-8 -right-11 xl:top-56 top-20 shrink-0"></div>
         <img src="{{ $arrow.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-32 sm:w-64 2xl:w-96 lg:w-80 2xl:left-32 xl:left-9 lg:top-36 sm:top-28 top-12 shrink-0">
         
@@ -31,17 +42,6 @@
              </div>
         </div>
     </div>
-
-    {{ if eq .Site.Language.Lang "de" }}
-    <div class="flex flex-col items-end w-full mx-auto xl:flex-row justify-center">
-        <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
-            <p class="text-base leading-7 sm:text-lg sm:leading-8">Alle Beiträge gibt es in Englisch!</p>
-            <a href="{{ "posts" | absURL }}" class="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
-                Zur englischen Seite
-            </a>
-        </div>
-    </div>
-    {{ end }}
 
     {{ range .Paginator.Pages }}
     <div class="pt-7 sm:pt-12">
