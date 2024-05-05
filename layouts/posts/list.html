@@ -25,20 +25,22 @@
         <img src="{{ $shape.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="sm:block hidden absolute xl:w-32 md:w-24 w-20 md:right-[10%] right-[7%] top-48 shrink-0">
 
         <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
-            {{ if eq .Site.Language.Lang "de" }}
-            <div class="flex flex-col items-end w-full mx-auto xl:flex-row justify-center">
-                <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
-                    <p class="text-base leading-7 sm:text-lg sm:leading-8">Alle Beiträge gibt es in Englisch!</p>
-                    <a href="{{ "posts" | absURL }}" class="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
-                        Zur englischen Seite
-                    </a>
+            <div class="flex items-center justify-center pt-16 pb-12 sm:pt-36 sm:pb-12">
+                {{ if eq .Site.Language.Lang "de" }}
+                <div class="flex flex-col items-end w-full mx-auto xl:flex-row justify-center">
+                    <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
+                        <p class="text-base leading-7 sm:text-lg sm:leading-8">Alle Beiträge gibt es in Englisch!</p>
+                        <a href="{{ "posts" | absURL }}" class="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
+                            Zur englischen Seite
+                        </a>
+                    </div>
                 </div>
-            </div>
-            {{ end }}
-            <div class="relative flex flex-col items-center justify-center w-auto px-12">
-                <h1 class="text-center h1">{{.Params.title}}</h1>
-                <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-full -bottom-3 shrink-0">
-            </div>
+                {{ end }}
+                <div class="relative flex flex-col items-center justify-center w-auto px-12">
+                  <h1 class="text-center h1">{{.Params.title}}</h1>
+                  <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-full -bottom-3 shrink-0">
+                </div>
+             </div>
         </div>
     </div>
 
