@@ -36,7 +36,7 @@
     <div class="flex flex-col items-end w-full mx-auto xl:flex-row justify-center">
         <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
             <p class="text-base leading-7 sm:text-lg sm:leading-8">Alle Beiträge gibt es in Englisch!</p>
-            <a href="www.open-elements.com/posts" class="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
+            <a href="{{ "posts" | absURL }}" class="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
                 Zur englischen Seite
             </a>
         </div>
@@ -102,35 +102,6 @@
     <div class="sm:pb-44 pb-36">
         {{ partial "pagination.html" . }}
     </div>
-
-    <script>
-        // Wait for the page to load
-        window.addEventListener("DOMContentLoaded", function () {
-            // Get all the buttons and posts
-            const allTags = document.querySelectorAll("#categories-tags a");
-            const posts = document.querySelectorAll(".post");
-    
-            // Add click event listener to each button
-            allTags.forEach(function (singleTag) {
-                singleTag.addEventListener("click", function () {
-                    
-                    const tag = singleTag.textContent.trim();
-    
-                    // Hide all posts
-                    posts.forEach(function (post) {
-                        post.style.display = "none";
-                    });
-    
-                    // Show only posts with the selected tag
-                    const filteredPosts = document.querySelectorAll("." + tag);
-                    filteredPosts.forEach(function (post) {
-                        post.style.display = "block";
-                    });
-                    
-                });
-            });
-        });
-    </script>
 
 {{ end }}
 
