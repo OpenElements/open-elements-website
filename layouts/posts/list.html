@@ -31,6 +31,14 @@
              </div>
         </div>
     </div>
+
+    {{ if eq .Site.Language.Lang "de" }}
+    <div id="language-popup" style="display:none;">
+        <p>Entdecken Sie auch unsere Beiträge auf Englisch!</p>
+        <a href="{{ .Site.BaseURL }}/en/">Zu den englischen Posts</a>
+    </div>
+    {{ end }}
+
     {{ range .Paginator.Pages }}
     <div class="pt-7 sm:pt-12">
         <div class="container mx-auto space-y-20 lg:max-w-7xl">
