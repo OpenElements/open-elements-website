@@ -8,6 +8,7 @@ origin: "https://dev.karakun.com"
 excerpt: 'This post gives an overview how we at Karakun use Docker to create integration tests for 
 JavaEE / JakartaEE based libraries and frameworks.'
 categories: [ Java, Docker, Integration Tests, Tests, JavaEE, JakartaEE ]
+preview_image: "/posts/2019-01-09-integration-docker/05_Seminar_Purple.jpg"
 ---
 
 When writing software that is based on [JavaEE / JakartaEE](https://jakarta.ee) you have one big benefit: All APIs are
