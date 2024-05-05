@@ -5,6 +5,7 @@ date: "2020-03-12"
 author: hendrik
 excerpt: 'Based on the given circumstances (COVID-19) the JavaLand conferences has been canceled. This was the only solution that made sense for the organizers. We can understand that a lot of visitors and speakers are sad about this news. Based on this the German JUG community is organzing a 100% remote conference called Cyberland'
 categories: [Java, Cyberland]
+preview_image: "/posts/2020-03-12-cyberland/04_Software_Development_Green.jpg"
 ---
 Wie viele sicherlich bereits über Twitter oder Mail erfahren haben, wurde das JavaLand 2020 abgesagt. Ich möchte hier nicht weiter auf die Gründe der Absage eingehen, da diese sicherlich bekannt sind. Wir (die deutsche JUG Community) haben viel Zeit in das Programm der JavaLand Konferenz gesteckt und sind daher genau wie die Speaker und Besucher traurig über diese Umstände. Aus diesem Grund haben wir uns zusammengeschlossen und organisieren aktuell eine kleinere Alternativveranstaltung. Aufgrund der aktuellen Situation wird es sich hierbei um eine 100% Remote Konferenz handeln. Da dies bei vielen sicherlich einige Fragezeichen aufwirft, möchte ich diesen Post nutzen um das Konzept zu erklären.
 
