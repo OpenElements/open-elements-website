@@ -43,21 +43,7 @@
               {{ $mainMenu := site.Data.mainMenu }}
               {{ range $mainMenu }}
               {{ if .visibleInNavigation }}
-              <div class="nav-item group relative">
-                <a href="{{ relLangURL .link }}" class="nav-link inline-flex items-center">
-                  {{ print .i18nKey | i18n }}
-                  {{ if .children }}<svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>{{ end }}
-                </a>
-                {{ if .children }}
-                <div class="focused-within-parent:h-24 hovered-parent:h-24 focused-within-parent:mt-2 hovered-parent:mt-2 transition-height duration-100 h-0 overflow-hidden flex flex-col">
-                  {{ range .children }}
-                  {{ if .visibleInNavigation }}
-                  <a href="{{ relLangURL .link }}" class="nav-link inline-flex items-center">{{ print .i18nKey | i18n }}</a>
-                  {{ end }}
-                  {{ end }}
-                </div>
-                {{ end }}
-              </div>
+              <a href="{{ relLangURL .link }}" class="nav-link">{{ print .i18nKey | i18n }}</a>
               {{ end }}
               {{ end }}
             </div>
