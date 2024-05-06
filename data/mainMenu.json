@@ -12,8 +12,8 @@
         "i18nKey": "blog",
         "altI18nKey": "blogDescription",
         "link": "/posts/",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
+        "visibleInNavigation": false,
+        "visibleInFooter": false
     },
     {
         "name": "About us",
