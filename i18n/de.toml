@@ -1,9 +1,11 @@
 [home]
 other = "Startseite"
-[openSource]
-other = "Über Open Source"
+[blog]
+other = "Blog"
 [aboutUs]
 other = "Über uns"
+[temurinSupport]
+other = "Temurin Support"
 [contactUs]
 other = "Kontakt"
 [footerPhrase]

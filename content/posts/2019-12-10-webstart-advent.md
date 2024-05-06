@@ -6,6 +6,7 @@ author: hendrik
 excerpt: 'Everyone who has developed Java desktop applications within the last 15 years used WebStart or at least heard about it. This post gives an overview how the technology evolves as an open source project after Oracle announced its removal from the Oracle JDK.'
 categories: [Java, OpenWebStart]
 origin: https://www.javaadvent.com
+preview_image: "/posts/2019-12-10-webstart-advent/02_Java Variant 2_Blue.jpg"
 ---
 Everyone who has developed Java desktop applications within the last 15 years used WebStart or at least heard about it. After WebStart was added to the Sun (and later Oracle) Java JREs and JDK in 2002 a lot of applications have been based on this technology. WebStart allows us to install, update, and run Java based applications on a desktop machine by defining the application and a so-called JNLP file (containing an XML description of the application). This file and all resources (like jar-files or icons) that form the application can be stored on a server. Whenever a client starts a WebStart application, new or updated resources will automatically be downloaded from the server.
 

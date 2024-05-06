@@ -18,6 +18,7 @@ Netlify status of German page:
 The project is based on [Hugo](https://gohugo.io/) and you need to [install Hugo](https://gohugo.io/installation/) to build the website.
 Once Hugo is installed you can host the website on localhost by executing to following command from the root folder of the repository:
 
+
 ```
 hugo serve
 ```
