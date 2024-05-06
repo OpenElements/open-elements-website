@@ -50,7 +50,7 @@
             <div class="space-y-6">
                 <div class="flex post {{ range .Params.categories }}{{ . }} {{ end }} sm:flex-row flex-col bg-gray rounded-[30px] shadow-4 w-full relative group">
                     <a href="{{ .Permalink }}" class="absolute inset-0 "></a>
-                    <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-[30px] overflow-hidden">
+                    <div class="relative sm:w-52 shrink-0 sm:h-auto h-72 rounded-l-[30px] overflow-hidden">
                         {{ with .Params.preview_image }}
                         <img src="{{ . }}" alt="" class="object-cover w-full h-full" />
                         {{ end }}
