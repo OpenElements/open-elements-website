@@ -24,6 +24,32 @@
         "visibleInFooter": true
     },
     {
+        "name": "Projects",
+        "i18nKey": "projects",
+        "altI18nKey": "projectsDescription",
+        "link": "#",
+        "visibleInNavigation": true,
+        "visibleInFooter": false,
+        "children": [
+            {
+                "name": "Maven Support",
+                "i18nKey": "mavenSupport",
+                "altI18nKey": "mavenSupportDescription",
+                "link": "/maven-support-care-announcement/",
+                "visibleInNavigation": true,
+                "visibleInFooter": false
+            },
+            {
+                "name": "Temurin Support",
+                "i18nKey": "temurinSupport",
+                "altI18nKey": "temurinSupportDescription",
+                "link": "/temurin-support/",
+                "visibleInNavigation": true,
+                "visibleInFooter": false
+            }
+        ]
+    },
+    {
         "name": "Contact us",
         "i18nKey": "contactUs",
         "altI18nKey": "contactUsDescription",

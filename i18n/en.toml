@@ -4,6 +4,10 @@ other = "Home"
 other = "Blog"
 [aboutUs]
 other = "About us"
+[projects]
+other = "Projects"
+[mavenSupport]
+other = "Maven Support"
 [temurinSupport]
 other = "Temurin Support"
 [contactUs]
