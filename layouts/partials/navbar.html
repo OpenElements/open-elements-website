@@ -45,15 +45,15 @@
               {{ if .visibleInNavigation }}
               <div class="nav-item group relative">
                 {{ if .children }}
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="nav-link inline-flex items-center" type="button">
+                <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center justify-center" aria-controls="navbar-dropdown" aria-expanded="false">
                   {{ print .i18nKey | i18n }} 
                   <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
                 </button>
-                <div id="dropdown" class="dropdown-content">
-                  <ul aria-labelledby="dropdownDefaultButton">
+                <div id="dropdownNavbar" class="hidden">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
                     {{ range .children }}
                     <li>
-                      <a href="{{ relLangURL .link }}" class="block nav-link"> {{ print .i18nKey | i18n }} </a>
+                      <a href="{{ relLangURL .link }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> {{ print .i18nKey | i18n }} </a>
                     </li>
                     {{ end }}
                   </ul>
