@@ -51,7 +51,7 @@
                 </button>
                 <div id="dropdownNavbar" class="hidden absolute z-10 mt-2 w-44 bg-white rounded-md shadow-lg py-1">
                     {{ range .children }}
-                      <a href="{{ relLangURL .link }}" class="block text-3xl text-white transition-colors duration-150 ease-in-out rounded hover:text-blue focus:outline-none bg-white/40 hover:bg-green"> {{ print .i18nKey | i18n }} </a>
+                      <a href="{{ relLangURL .link }}" class="block nav-link transition-colors duration-150 ease-in-out rounded hover:text-blue focus:outline-none bg-white/40 hover:bg-green"> {{ print .i18nKey | i18n }} </a>
                     {{ end }}
                 </div>
                 {{else}}
