@@ -50,13 +50,9 @@
                   <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>  
                 </button>
                 <div id="dropdownNavbar" class="hidden absolute z-10 mt-2 w-44 bg-white rounded-md shadow-lg py-1">
-                  <ul aria-labelledby="dropdownLargeButton" class="text-gray-700">
                     {{ range .children }}
-                    <li>
                       <a href="{{ relLangURL .link }}" class="block text-3xl text-white transition-colors duration-150 ease-in-out rounded hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11"> {{ print .i18nKey | i18n }} </a>
-                    </li>
                     {{ end }}
-                  </ul>
                 </div>
                 {{else}}
                 <a href="{{ relLangURL .link }}" class="nav-link inline-flex items-center">
