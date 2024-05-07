@@ -49,7 +49,6 @@ Based on the changed release train, a new commercial support model for Java was 
 
 The following table shows the price for the "Java SE Subscription" (based on number of processors):
 
-{:.table}
 | Processor count | Monthly price per processor          |
 | --------------- | ------------------------------------ |
 | 1-99            | $25.00                               |
@@ -65,7 +64,6 @@ When running Java based servers on bare metal, this price model is quite easy an
 
 In addition to this model (for Java on the server), Oracle provides a special support for Java on the desktop. In this case, the price for the commercial support is based on the number of users / client terminals. The following table shows the cost for the "Java SE Desktop Subscription" model:
 
-{:.table}
 | Users / client machines | Monthly price per user / client machine |
 | ----------------------- | --------------------------------------- |
 | 1-999                   | $2.50                                   |
@@ -114,7 +112,6 @@ It looks like Azul offers a really good support for all companies that do not wa
 
 Because Zulu is a Java distribution targeting server side applications, Azul does not provide any support model for Java on the desktop. Unlike Oracle the commercial support of Zulu is not defined per CPU but based on the number of systems. A system is defined as a physical or virtual server or a desktop PC. As you can see in the following table, the support model does not really make sense for desktop applications but is quite interesting for server side applications.
 
-{:.table}
 | systems   | Price/year (Standard Support) | Price/year (Premium Support) |
 | --------- | ----------------------------- | ---------------------------- |
 | 1-25      | $12,000                       | not available                |
@@ -136,7 +133,6 @@ Like IBM RedHat won't provide Java 9 and 10 releases. The next distribution that
 
 By defining the new release train of Java, Oracle created a big challenge for enterprise companies. Not all of them will be able to update their application to the newest Java version every 6 months. Especially companies with many or large Java based applications need to rethink their migration strategy. This could create a new market for companies to offer extended support for specific Java version and/or features. The following table gives an overview of future Java releases and the support which will be offered by the biggest vendors as of today.
 
-{:.table}
 | Java version | free 6 month support  | free MTS support | commercial MTS support | commercial LTS support |
 | ------------ | --------------------- | ---------------- | ---------------------- | ---------------------- |
 | 8            | all                   | all              | all                    | all                    |

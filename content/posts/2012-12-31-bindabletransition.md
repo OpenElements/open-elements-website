@@ -35,6 +35,6 @@ transition.play();
 
 The `fractionProperty` of the `BindableTransition` is bound to three different properties and the result will look like this:
 
-{% include posts/vimeo.html id="56550389" %}
+{{< vimeo 56550389 >}}
 
 The [BindableTransition](https://github.com/JFXtras/jfxtras-labs/blob/master/src/main/java/jfxtras/labs/animation/BindableTransition.java) class and a [demo](https://github.com/JFXtras/jfxtras-labs/blob/master/src/test/java/jfxtras/labs/animation/BindableTransitionTrial.java)are commited to the [JFXtras project](http://jfxtras.org).

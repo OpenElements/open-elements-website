@@ -17,4 +17,5 @@ Date and Time: 9/29/14, 16:00 - 17:00
 
 Because I think a good talk must contain cool demos, I created some examples especially for my talks. Today I will introduce one of them with a short video. The video shows how you can login with Twitter in JavaFX. You can use this as an alternative workflow for users to login or register in your application. If you want to know how this is done you should visit my "Enterprise JavaFX" talk :)
 
-{% include posts/youtube.html id="RTdQjxaH_wY" %}
+{{< youtube RTdQjxaH_wY >}}
+

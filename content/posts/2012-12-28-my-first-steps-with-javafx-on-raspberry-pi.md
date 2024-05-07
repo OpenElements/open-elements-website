@@ -10,7 +10,7 @@ Today I started playing with my Pi & JavaFX. Even after a few hours I can say th
 
 I created a screensaver as a first demo. The programm loads random pictures (2848 × 4288 pixel) and animates them on the screen:
 
-{% include posts/youtube.html id="r0GEm1pEhoE" %}
+{{< youtube r0GEm1pEhoE >}}
 
 I used a experimental build of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) for loading and scaling all the pictures. In my point of view the performance of all animations is awesome. Oracle has really done a great work!
 

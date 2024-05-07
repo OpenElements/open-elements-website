@@ -74,7 +74,8 @@ The current community based projects demonstrate that it's possible to create na
 
 We have done a first prove of concept and are happy to share the result with you. Do you find out which shutdown window is the native one and which one is developed in JavaFX?
 
-{% include posts/youtube.html id="GbJDg5wsJ9E" %}
+{{< youtube GbJDg5wsJ9E >}}
+
 
 Our first code is hacked in many ways and needs a lot of refactoring for sure. But it was a lot of fun and we learned a lot about CSS and JavaFX skins. Even if it's hacked at some points we do not use any bitmaps. Everything is done with CSS, JavaFX effects and the SVG support. We created some basic concepts how to create this aqua related skins for JavaFX. The following chart shows the class relations and inheritance for a Button:
 

@@ -56,7 +56,6 @@ To be true the described behavior is not a bug in the JDK, it's a feature that a
 The problem with our code is hidden in the usage of the `DateTimeFormatter`. To receive our date as a formatted string we use the pattern `dd.MM.YYYY`. Maybe you already asked yourself why the `d` in the pattern is written lowercase while the `M` and `Y` are written uppercase. Let's have a look at the [JavaDoc](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html) of the `DateTimeFormatter` class and the definition of the pattern for formatting and parsing. 
 In the doc, you can find a table with a description of each supported letter in such a pattern. The following table contains only the letters that are interested in our use case:
 
-{:.table}
 | letter | meaning         | examples |
 | ------ | --------------- | -------- |
 | d      | day-of-month    | 10       |
@@ -95,7 +94,6 @@ It might look like it won't make any difference if you use `y` or `u` as a lette
 
 When formatting a year by using the `DateTimeFormatter` class you can add the era to your custom pattern. The era is defined by the letter `G` as you can find out in the JavaDoc of `DateTimeFormatter`. The following table gives an overview how years will be formatted based on the 2 different types:
 
-{:.table}
 | year (as number) | pattern 'uuuu' | pattern 'yyyy' | pattern 'yyyy G' |
 | ---------------- | -------------- | -------------- | ---------------- |
 | 2019             | 2019           | 2019           | 2019 AD          |
@@ -113,7 +111,6 @@ Another interesting point is that the result might be longer as the letter count
 
 Java supports different calendar systems next to the Gregorian Calendar. You can find a good example when having a look at the `JapaneseChronology` class that defines the 'Japanese Imperial calendar system' in Java. While I have absolutely no knowledge about that calendar system you can find out that is has several eras that are defined by the `JapaneseEra` class. This class contains several constants that define the eras of the calendar system:
 
-{:.table}
 | name   | meaning                                    |
 | ------ | ------------------------------------------ |
 | MEIJI  | The 'Meiji' era (1868-01-01 - 1912-07-29)  |

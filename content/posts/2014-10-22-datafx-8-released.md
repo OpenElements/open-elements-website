@@ -26,7 +26,7 @@ Ok let's talk about the content of the modules. As a first step of the DataFX 8 
 
 When working with background tasks you will need a thread pool to manage all the concurrent operations. JavaSE provides several different of them with the Executors class. In DataFX 8 we introduce the [ObservableExecutor]({{< ref "/posts/2013-02-09-datafx-observableexecutor-preview" >}}) that is an implementation of the [Executor](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html) interface and provides some JavaFX specific additional functionality. By using the ObservableExecutor you can bind the capacity of the executor to any JavaFX property. In addition all the task interfaces and classes of JavaSE, JavaFX and DataFX are supported by the ObservableExecutor. By doing so it is very easy to define titles, messages or progress updates for all your background tasks and show them on screen. A demo of the ObservableExecutor can be found [here]({{< ref "/posts/2013-02-09-datafx-observableexecutor-preview" >}}). As a next step we will combine the ObservableExecutor with the cool Task Progress View by Dirk Lemmermann. It looks like this one is made for the ObservableExecutor ;)
 
-{% include posts/youtube.html id="As-ahnLR_Dw" %}
+{{< youtube As-ahnLR_Dw >}}
 
 ## The ProcessChain
 

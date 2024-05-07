@@ -8,4 +8,4 @@ excerpt: 'Michael and I were interviewed at Devoxx about the Dolphin Platform. I
 ---
 Michael and I were interviewed at Devoxx about the [Dolphin Platform](http://www.dolphin-platform.io). In the interview we explain the benefits of the framework and show some code. The video was uploaded some minutes ago and you can find it here:
 
-{% include posts/youtube.html id="_AoHizQpJZ8" %}
+{{< youtube _AoHizQpJZ8 >}}

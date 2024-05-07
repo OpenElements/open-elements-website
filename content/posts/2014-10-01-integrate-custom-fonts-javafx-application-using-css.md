@@ -57,7 +57,7 @@ Once this is done the font can be defined in CSS by using the `@font-face` rule:
 
 Now the font will be used in our application even if it isn't installed on the OS:
 
-![font-loaded](/posts/guigarage-legacy/font-loaded.png){:class="image-two-third-width"}
+![font-loaded](/posts/guigarage-legacy/font-loaded.png)
 
 ## Update
 

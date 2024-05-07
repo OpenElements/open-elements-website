@@ -171,7 +171,7 @@ myGrid.cellWidthProperty().bind(columnWidthSlider.valueProperty());
 
 By doing so the change of the slider will directly change the cell width of the grid because this property is bound to the value property of the slider. You can see the result in a video (0:20):
 
-{% include posts/vimeo.html id="53462905" %}
+{{< vimeo 53462905 >}}
 
 By using the `bind(..)` method a change of the column width will not influence the slider value because we have a one way binding. But creating a bidirectional binding is easy as pie:
 
@@ -183,7 +183,7 @@ mySlider1.valueProperty().bindBidirectional(mySlider2.valueProperty());
 
 Now whatever slider is changed, the other one will adopt it's value:
 
-{% include posts/vimeo.html id="57128737" %}
+{{< vimeo 57128737 >}}
 
 You can simply remove a binding by calling `property.unbind()` in your code.
 
@@ -197,7 +197,7 @@ myLabel.visibleProperty().bind(mySlider1.valueProperty().multiply(2).greaterThan
 
 In line 3 the valueProperty in converted to a new double binding that is always double the size of the wrapped property. Now by calling the greaterThan(..) method we create a boolean binding that is wrapped around the double binding. This bindings value is true while the wrapped value is > 100. So if the value of the slider is greater than 50 (50 * 2 > 100) the label will be visible:
 
-{% include posts/vimeo.html id="57133467" %}
+{{< vimeo 57133467 >}}
 
 Next to this functions there is the util class [`javafx.beans.binding.Bindings`](http://docs.oracle.com/javafx/2/api/javafx/beans/binding/Bindings.html) that provides a lot of additional functions and support. For example you can add converters to a binding by using this class:
 

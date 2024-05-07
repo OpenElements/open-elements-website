@@ -18,7 +18,7 @@ I tried to imitate this behavior for the GridView and will share my experience h
 
 A list of items should be cut in little peaces so that each part fits exactly into one page of the Pagination Control and the page count depends on the item count. Thanks to the [JavaFX property binding](http://docs.oracle.com/javafx/2/binding/jfxpub-binding.htm) this plan wasn't to hard to implement. I created a helper class ([GridPaginationHelper.java](https://github.com/guigarage/gridfx/blob/master/src/main/java/com/guigarage/fx/grid/util/GridPaginationHelper.java)) that takes care of all the bindings and calculations. You only need a cell factory for the GridView. There are some problems with Pagination so that not everything is working as it should. Will later talk about this. First a short movie that shows the current state:
 
-{% include posts/vimeo.html id="54046675" %}
+{{< vimeo 54046675 >}}
 
 You can see how the Pagination animates through all pages and the page count is computed every time the size of the cells is changing. You can see the problems that the implementation has at this stage, too. Sometimes the navigation bar flickers or disappear for a moment. This a very strange behavior and I can't find the cause. Then I can not access the size of the page inside the Pagination Control. At the moment I'm working with the following hack:
 

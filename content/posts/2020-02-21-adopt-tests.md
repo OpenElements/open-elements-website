@@ -31,7 +31,7 @@ While you can find answers to some of the questions it is not a trivial task for
 
 With [AdoptOpenJDK](https://adoptopenjdk.net) an open source project exists that has the main goal to solve all the mentioned problems by providing open, free, and well tested builds of the OpenJDK. Since last year I'm part of the [AdoptOpenJDK technical steering committee (TSC)](https://github.com/AdoptOpenJDK/TSC#the-tsc). I'm really happy to be part of the team and with way over **150.000.000 downloads** I can say that the project is a great success and brings a really important benefit to the Java community. With AdoptOpenJDK binaries you have a really good alternative next to downloading (and paying for) Oracle Java. If you have more questions about AdoptOpenOpenJDK just ping me or ask us directly in the [AdoptOpenJDK Slack](https://adoptopenjdk.slack.com/).
 
-![AdoptOpenJDK logo](/posts/2020-02-21-adopt-tests/adopt-logo.png){:class="image-two-third-width"}
+![AdoptOpenJDK logo](/posts/2020-02-21-adopt-tests/adopt-logo.png)
 
 In this article, I will give an overview of the test infrastructure of AdoptOpenJDK and describe the different types of tests that will be executed for each release. All this ends in a well tested distribution that is ready to use for the enterprise.
 
@@ -47,7 +47,6 @@ Additional information about the test concept and the integration in the deliver
 
 As already mentioned all tests of AdoptOpenJDK are grouped based on its type in 6 different groups. The following table gives a first overview of the different test types:
  
- {:.table}
  | name       | Type                          | Description                                           |
  | ---------- | ----------------------------- | ----------------------------------------------------- |
  | openjdk    | OpenJDK regression tests      | Tests from OpenJDK                                    |

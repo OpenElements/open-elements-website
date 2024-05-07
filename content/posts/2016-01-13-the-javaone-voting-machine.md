@@ -40,7 +40,7 @@ We found a good designer that already had some knowledge in drawing Duke since h
 
 You can find a short example how these animations look like in this YouTube video:
 
-{% include posts/youtube.html id="GTFJ_1CoeU" %}
+{{< youtube GTFJ_1CoeU >}}
 
 Even if the designer already drew some Duke images he misunderstood the face of Duke and thought Duke is a Cyclops as you can see in this first preview of the sleeping animation:
 

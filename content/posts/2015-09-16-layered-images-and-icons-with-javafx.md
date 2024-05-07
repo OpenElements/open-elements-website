@@ -14,4 +14,4 @@ Since I have to wait 1 more month I started to recreate the effect by using Java
 
 Here is a first preview (and yes I only used JavaFX to create this):
 
-{% include posts/youtube.html id="zLR7oCh7U5g" %}
+{{< youtube zLR7oCh7U5g >}}
