@@ -46,6 +46,6 @@ Diese Community-Mitglieder\*innen sind Experten\*innen im Bereich Maven und brin
 
 ### Mitmachen:
 
-Wir laden Entwickler\*innen und Interessierte ein, sich an der Initiative zu beteiligen, Feedback zu geben und Teil unserer Community zu werden. Kontaktieren Sie uns unter [info@open-elements.com](mailto:info@open-elements.com) für weitere Informationen und wie Sie beitragen können.
+Wir laden Entwickler\*innen und Interessierte ein, sich an der Initiative zu beteiligen, Feedback zu geben und Teil unserer Community zu werden. Kontaktieren Sie uns unter [maven@open-elements.com](mailto:maven@open-elements.com) für weitere Informationen und wie Sie beitragen können.
 
 {{< centered-image src="we-want-you.svg" width="40%" alt="We want you Illustration">}}
