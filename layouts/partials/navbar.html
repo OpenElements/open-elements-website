@@ -49,11 +49,29 @@
                   {{ print .i18nKey | i18n }} 
                   <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>  
                 </button>
-                <div id="dropdownNavbar" class="hidden absolute z-10 mt-2 w-56 bg-blue rounded-md shadow-lg py-1">
+                <!-- <div id="dropdownNavbar" class="hidden absolute z-10 mt-2 w-56 bg-blue rounded-md shadow-lg py-1">
                     {{ range .children }}
-                      <a href="{{ relLangURL .link }}" class="block nav-link transition-colors duration-150 ease-in-out rounded hover:text-blue focus:outline-none bg-white/40 hover:bg-green py-2 px-4"> {{ print .i18nKey | i18n }} </a>
+                      <a href="{{ relLangURL .link }}" class="nav-link transition-colors duration-150 ease-in-out rounded hover:text-blue focus:outline-none bg-white/40 hover:bg-green py-2 px-4"> {{ print .i18nKey | i18n }} </a>
                     {{ end }}
+                </div> -->
+
+                <div id="dropdownNavbar" class="hidden absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                  <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-blue text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                    <div class="p-4">
+                      {{ range .children }}
+                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                        <div>
+                          <a href="{{ relLangURL .link }}" class="nav-link transition-colors duration-150 ease-in-out rounded hover:text-blue focus:outline-none bg-white/40 hover:bg-green">
+                            {{ print .i18nKey | i18n }}
+                            <span class="absolute inset-0"></span>
+                          </a>
+                        </div>
+                      </div>
+                      {{ end }}
+                    </div>
+                  </div>
                 </div>
+
                 {{else}}
                 <a href="{{ relLangURL .link }}" class="nav-link inline-flex items-center">
                   {{ print .i18nKey | i18n }}
