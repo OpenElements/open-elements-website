@@ -29,4 +29,5 @@ While everything compiled perfectly on my Mac, the Pi has a different JavaFX com
 
 But after fixing all this problems the GridFX demo is running on my Pi:
 
-{% include posts/youtube.html id="OZv6WUpEzS8" %}
+{{< youtube OZv6WUpEzS8 >}}
+

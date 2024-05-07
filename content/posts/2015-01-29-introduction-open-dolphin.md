@@ -20,7 +20,7 @@ As you can see in the image the client and the server can access the same presen
 
 As you can see in the picture all the different clients don't know each other and the sync between the presentation models in centralized by the server. If client A edits a value in the presentation model it will be synchronized with the server. Once the server has updated it's own presentation model with the new value the server synchronizes this change with all other clients. By doing you can create applications that share exactly the same presentation model. The following video shows a short example:
 
-{% include posts/youtube.html id="fdTdo7G_hZY" %}
+{{< youtube fdTdo7G_hZY >}}
 
 While the sharing of the presentation model between several clients is a very cool feature and big benefit most of the time you need to synchronize a model only between the server and one client. Therefore the examples that will be shown in the following post will all use this approach. Once this workflow is completely described I will start to introduce the sync of several clients in future posts.
 

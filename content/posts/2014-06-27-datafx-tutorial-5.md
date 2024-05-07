@@ -269,6 +269,6 @@ public class WizardController {
 
 Once this is done you can start the flow and navigate through all the steps of the wizard. Thanks to the AnimatedFlowContainer container each link will be animated:
 
-{% include posts/youtube.html id="uNX7VGtL2PY" %}
+{{< youtube uNX7VGtL2PY >}}
 
 As I said this is the final tutorial about the Flow API. From our point of view the API is finshed and we only plan to polish some stuff and add documentation. But we plan to release DataFX 8 at JavaOne and so there is still some time to change things. So if you have any questions, feedback or improvements please let us now. The next step is the CDI part of DataFX and once the APIs are stable I will continue this tutorial series.

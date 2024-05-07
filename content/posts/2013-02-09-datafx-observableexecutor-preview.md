@@ -19,7 +19,7 @@ list.itemsProperty().bind(executor.currentServicesProperty());
 
 The ObservableExecutor uses the wrapper pattern to hold any Executor. Because all task are wrapped into [Services](http://docs.oracle.com/javafx/2/api/javafx/concurrent/Service.html) you can easily access the title, message or progress of any task. A short example that shows the current state of the API can be found here:
 
-{% include posts/youtube.html id="eQaVNQKy1U0" %}
+{{< youtube eQaVNQKy1U0 >}}
 
 Because Runnable & Callable normally do not provide title, message and progress properties we created extended interfaces (`DataFXRunnable` & `DataFXCallable`) where all this functions are injected while using them with the ObservableExecutor.
 

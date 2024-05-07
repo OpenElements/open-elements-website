@@ -28,4 +28,5 @@ You can control BoxFX with a remote. BoxFX will provide a open API for remotes s
 
 I created a short movie about BoxFX. Hope you like it:
 
-{% include posts/youtube.html id="w3r3hzJs2W0" %}
+{{< youtube w3r3hzJs2W0 >}}
+

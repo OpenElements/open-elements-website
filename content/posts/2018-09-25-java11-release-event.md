@@ -13,4 +13,4 @@ preview_image: "/posts/2018-09-16-jc-java-article/01_Java Variant 1_Green.jpg"
 ---
 Together with Oracle and [Heise](https://www.heise.de/developer/meldung/Jetzt-vormerken-Launch-Event-zu-Java-11-4168709.html), we will do a Java 11 release event on September 25th, 2018. This event will be followed by Hendrik Ebbers and Michael Heinrichs. There will be a YouTube Live Stream from 6 pm UTC+2. We are looking forward to many viewers!
 
-{% include posts/youtube.html id="CUuCVHWeO-Y" %}
+{{< youtube CUuCVHWeO-Y >}}

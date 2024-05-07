@@ -47,4 +47,6 @@ These community members are experts in the field of Maven and contribute their e
 ### Contribute
 
 We invite developers and interested parties to participate in the initiative, provide feedback and become part of our community.
-Contact us at [info@open-elements.com](mailto:info@open-elements.com) for more information and how you can contribute.
+Contact us at [maven@open-elements.com](mailto:maven@open-elements.com) for more information and how you can contribute.
+
+{{< centered-image src="we-want-you.svg" width="40%" alt="We want you illustration">}}

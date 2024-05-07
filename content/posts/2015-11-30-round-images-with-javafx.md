@@ -8,7 +8,7 @@ excerpt: 'This post gives an example for creating round image controls with Java
 ---
 In modern UI you can often find round avatar images like shown in this image:
 
-![example](/posts/guigarage-legacy/round-images-example.png){:class="image-two-third-width"}
+![example](/posts/guigarage-legacy/round-images-example.png)
 
 Creating this special UI nodes with JavaFX isn't that hard. The most important JavaFX features to create such a rounded image is clipping. By using clipping you can define the area in that a control can draw it's content. A clip can be any shape and you only need to set the `shape property` of a JavaFX `Node` instance to define its clipping. You can find an additional clipping description [here](https://dlemmermann.wordpress.com/2015/02/18/javafx-tip-18-path-clipping/).
 

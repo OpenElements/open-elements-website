@@ -55,7 +55,7 @@ pane.getChildren().addAll(table, list);
 
 In the example a table and a list are defined that will visualize the same set of data (`items`). Depending on the size of the application the list or the table will be shown on screen. Here is a short video that shows the behavior:
 
-{% include posts/youtube.html id="A35scZFXgic" %}
+{{< youtube A35scZFXgic >}}
 
 By adding this API to your JavaFX application you will have the same possibilities as in HTML to provide responsive design.
 
@@ -132,7 +132,7 @@ pane.getChildren().add(myToolbar);
 
 Whenever the size of the application will change the matching pseudo class will be set to the control and the visualization of the control will change depending on the CSS attributes. By doing so you can create applications that will look different on the specified frame sizes. This will be helpful when developing applications that should work for desktop and mobile or on embedded devices. Here is a short video that shows how a responsive application might look:
 
-{% include posts/youtube.html id="nQiFiXJTZzc" %}
+{{< youtube nQiFiXJTZzc >}}
 
 ## Responsive Design in Java code
 

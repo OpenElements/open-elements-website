@@ -167,4 +167,5 @@ The complete source of this tutorial can be found [here](https://bitbucket.org/d
 
 Here is an movie of the finished wizard application:
 
-{% include posts/youtube.html id="zGjc4VfcM9A" %}
+{{< youtube zGjc4VfcM9A >}}
+

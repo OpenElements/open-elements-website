@@ -168,11 +168,11 @@ All methodes can handle -1 as parameter and returns a default value in that case
 
 Here is a movie showing the layout with Orientation.HORIZONTAL. Because a 24 pixel area would be very small. So I changed it to 240.000 for this movie:
 
-{% include posts/vimeo.html id="54478790" %}
+{{< vimeo 54478790 >}}
 
 And here is the movie with Orientation.VERTICAL:
 
-{% include posts/vimeo.html id="54479737" %}
+{{< vimeo 54479737 >}}
 
 As mentioned in my last post each Custom Control needs a Skin. To do things right you have to override all compute...-methods in your Skin and not in the Control class. Only getContentBias() needs to be overridden in the Control.
 

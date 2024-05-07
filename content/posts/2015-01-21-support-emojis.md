@@ -26,7 +26,7 @@ There are different ways how you can type any unicode character with a keyboard 
 
 The "Messages" app supports emojis like you know it from an iPhone. Here you can simple add emojis and copy&paste them in any other application. Here is a short video that shows the handling:
 
-{% include posts/youtube.html id="ihVJn4C3SzI" %}
+{{< youtube ihVJn4C3SzI >}}
 
 ## Emojis in JavaFX
 

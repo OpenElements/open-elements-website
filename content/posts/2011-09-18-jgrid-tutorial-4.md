@@ -29,6 +29,7 @@ slider.addChangeListener(new ChangeListener() {
 
 Now you can edit the dimension dynamically. Here is the result:
 
-{% include posts/youtube.html id="Zyqf-P2ftFs" %}
+{{< youtube Zyqf-P2ftFs >}}
+
 
 You can download the source file [here](/assets/downloads/jgrid/tutorial4.java).

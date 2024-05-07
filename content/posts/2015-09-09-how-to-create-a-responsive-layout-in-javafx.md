@@ -177,7 +177,7 @@ public class ResponsiveLayoutDemo extends Application {
 
 In this first try, the mainPane contains the hBox or the vBox depending on the width of the scene. To do so a lister is attached to the width property. In addition, the children of the vBox and hBox will be cleared and the text and image will be attached to the currently visible panel. As you can see in this video the view already behaves as it should:
 
-{% include posts/youtube.html id="wEt8WKDR7r8" %}
+{{< youtube wEt8WKDR7r8 >}}
 
 <p>There are still some ugly parts in the code. As you might have noticed the listener will be called for each repaint of our stage. therefore nodes will be replaced and added to the scene graph all the time. Here we can use the JavaFX binding API to create a more performant binding. Here is the code snippet that shows the changed code:
 
