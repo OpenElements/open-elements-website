@@ -452,7 +452,7 @@ html{
 }
 
 .dropdownBox{
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 20px 20px 20px 20px;
   border-width: 3px;
   border-color: rgba(54,53,108,255);
 }
