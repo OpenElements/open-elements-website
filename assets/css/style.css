@@ -451,6 +451,12 @@ html{
   border-radius: 30px 0px 0px 30px;
 }
 
+.dropdownBox{
+  border-radius: 0px 30px 30px 0px;
+  border-width: 3px;
+  border-color: rgba(54,53,108,255);
+}
+
 .nav-link{
   font-size: 1.125rem;
   line-height: 1.75rem;
