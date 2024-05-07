@@ -1,34 +1,60 @@
 [
-  {
-    "name": "Home",
-    "i18nKey": "home",
-    "altI18nKey": "homeDescription",
-    "link": "/",
-    "visibleInNavigation": false,
-    "visibleInFooter": true
-  },
-  {
-    "name": "Blog",
-    "i18nKey": "blog",
-    "altI18nKey": "blogDescription",
-    "link": "/posts/",
-    "visibleInNavigation": true,
-    "visibleInFooter": true
-  },
-  {
-    "name": "About us",
-    "i18nKey": "aboutUs",
-    "altI18nKey": "aboutUsDescription",
-    "link": "/about/",
-    "visibleInNavigation": true,
-    "visibleInFooter": true
-  },
-  {
-    "name": "Contact us",
-    "i18nKey": "contactUs",
-    "altI18nKey": "contactUsDescription",
-    "link": "/contact/",
-    "visibleInNavigation": true,
-    "visibleInFooter": true
-  }
+    {
+        "name": "Home",
+        "i18nKey": "home",
+        "altI18nKey": "homeDescription",
+        "link": "/",
+        "visibleInNavigation": false,
+        "visibleInFooter": true
+    },
+    {
+        "name": "Blog",
+        "i18nKey": "blog",
+        "altI18nKey": "blogDescription",
+        "link": "/posts/",
+        "visibleInNavigation": false,
+        "visibleInFooter": false
+    },
+    {
+        "name": "About us",
+        "i18nKey": "aboutUs",
+        "altI18nKey": "aboutUsDescription",
+        "link": "/about/",
+        "visibleInNavigation": true,
+        "visibleInFooter": true
+    },
+    {
+        "name": "Projects",
+        "i18nKey": "projects",
+        "altI18nKey": "projectsDescription",
+        "link": "#",
+        "visibleInNavigation": true,
+        "visibleInFooter": false,
+        "children": [
+            {
+                "name": "Maven Support",
+                "i18nKey": "mavenSupport",
+                "altI18nKey": "mavenSupportDescription",
+                "link": "/support-care-maven/",
+                "visibleInNavigation": true,
+                "visibleInFooter": false
+            },
+            {
+                "name": "Temurin Support",
+                "i18nKey": "temurinSupport",
+                "altI18nKey": "temurinSupportDescription",
+                "link": "/temurin-support/",
+                "visibleInNavigation": true,
+                "visibleInFooter": false
+            }
+        ]
+    },
+    {
+        "name": "Contact us",
+        "i18nKey": "contactUs",
+        "altI18nKey": "contactUsDescription",
+        "link": "/contact/",
+        "visibleInNavigation": true,
+        "visibleInFooter": true
+    }
 ]
