@@ -28,7 +28,7 @@
         "i18nKey": "projects",
         "altI18nKey": "projectsDescription",
         "link": "#",
-        "visibleInNavigation": true,
+        "visibleInNavigation": false,
         "visibleInFooter": false,
         "children": [
             {
@@ -36,7 +36,7 @@
                 "i18nKey": "mavenSupport",
                 "altI18nKey": "mavenSupportDescription",
                 "link": "/support-care-maven/",
-                "visibleInNavigation": true,
+                "visibleInNavigation": false,
                 "visibleInFooter": false
             },
             {
@@ -44,7 +44,7 @@
                 "i18nKey": "temurinSupport",
                 "altI18nKey": "temurinSupportDescription",
                 "link": "/temurin-support/",
-                "visibleInNavigation": true,
+                "visibleInNavigation": false,
                 "visibleInFooter": false
             }
         ]
