@@ -6,10 +6,18 @@ other = "Blog"
 other = "Über uns"
 [projects]
 other = "Projekte"
+[supportAndCare]
+other = "Support & Care"
+[aboutSupportCare]
+other = "Über Support & Care"
 [mavenSupport]
-other = "Maven Support"
+other = "Support & Care for Maven"
 [temurinSupport]
-other = "Temurin Support"
+other = "Support & Care for Temurin"
+[temurinSupport2]
+other = "Support & Care for Temurin 2"
+[OpenSourceJava]
+other = "Open Source Java"
 [contactUs]
 other = "Kontakt"
 [footerPhrase]

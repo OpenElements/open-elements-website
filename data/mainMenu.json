@@ -1,60 +1,84 @@
 [
-    {
-        "name": "Home",
-        "i18nKey": "home",
-        "altI18nKey": "homeDescription",
-        "link": "/",
-        "visibleInNavigation": false,
-        "visibleInFooter": true
-    },
-    {
-        "name": "Blog",
-        "i18nKey": "blog",
-        "altI18nKey": "blogDescription",
-        "link": "/posts/",
+  {
+    "name": "Home",
+    "i18nKey": "home",
+    "altI18nKey": "homeDescription",
+    "link": "/",
+    "visibleInNavigation": false,
+    "visibleInFooter": true
+  },
+  {
+    "name": "Blog",
+    "i18nKey": "blog",
+    "altI18nKey": "blogDescription",
+    "link": "/posts/",
+    "visibleInNavigation": false,
+    "visibleInFooter": false
+  },
+  {
+    "name": "Support & Care",
+    "i18nKey": "supportAndCare",
+    "altI18nKey": "supportAndCareDescription",
+    "link": "#",
+    "visibleInNavigation": true,
+    "visibleInFooter": false,
+    "children": [
+      {
+        "name": "About Support & Care",
+        "i18nKey": "aboutSupportCare",
+        "altI18nKey": "aboutSupportCareDescription",
+        "link": "/about-support-care/",
         "visibleInNavigation": false,
         "visibleInFooter": false
-    },
-    {
-        "name": "About us",
-        "i18nKey": "aboutUs",
-        "altI18nKey": "aboutUsDescription",
-        "link": "/about/",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
-    },
-    {
-        "name": "Projects",
-        "i18nKey": "projects",
-        "altI18nKey": "projectsDescription",
-        "link": "#",
+      },
+      {
+        "name": "Support & Care for Maven",
+        "i18nKey": "mavenSupport",
+        "altI18nKey": "mavenSupportDescription",
+        "link": "/support-care-maven/",
         "visibleInNavigation": false,
-        "visibleInFooter": false,
-        "children": [
-            {
-                "name": "Maven Support",
-                "i18nKey": "mavenSupport",
-                "altI18nKey": "mavenSupportDescription",
-                "link": "/support-care-maven/",
-                "visibleInNavigation": false,
-                "visibleInFooter": false
-            },
-            {
-                "name": "Temurin Support",
-                "i18nKey": "temurinSupport",
-                "altI18nKey": "temurinSupportDescription",
-                "link": "/temurin-support/",
-                "visibleInNavigation": false,
-                "visibleInFooter": false
-            }
-        ]
-    },
-    {
-        "name": "Contact us",
-        "i18nKey": "contactUs",
-        "altI18nKey": "contactUsDescription",
-        "link": "/contact/",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
-    }
+        "visibleInFooter": false
+      },
+      {
+        "name": "Support & Care for Temurin",
+        "i18nKey": "temurinSupport",
+        "altI18nKey": "temurinSupportDescription",
+        "link": "/temurin-support/",
+        "visibleInNavigation": false,
+        "visibleInFooter": false
+      },
+      {
+        "name": "Support & Care for Temurin 2",
+        "i18nKey": "temurinSupport2",
+        "altI18nKey": "temurinSupportDescription2",
+        "link": "/support-care-temurin/",
+        "visibleInNavigation": false,
+        "visibleInFooter": false
+      },
+      {
+        "name": "Open Source for Java",
+        "i18nKey": "OpenSourceJava",
+        "altI18nKey": "OpenSourceJavaDescription",
+        "link": "/open-source-java/",
+        "visibleInNavigation": false,
+        "visibleInFooter": false
+      }
+    ]
+  },
+  {
+    "name": "About us",
+    "i18nKey": "aboutUs",
+    "altI18nKey": "aboutUsDescription",
+    "link": "/about/",
+    "visibleInNavigation": true,
+    "visibleInFooter": true
+  },
+  {
+    "name": "Contact us",
+    "i18nKey": "contactUs",
+    "altI18nKey": "contactUsDescription",
+    "link": "/contact/",
+    "visibleInNavigation": true,
+    "visibleInFooter": true
+  }
 ]

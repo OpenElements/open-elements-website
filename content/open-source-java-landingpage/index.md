@@ -2,7 +2,7 @@
 title: "Open Source Java"
 description: "TODO"
 layout: "single"
-url: "/de/open-source-java"
+url: "/open-source-java"
 ---
 
 Die Java-Plattform ist eins der meistgenutzten digitalen Tools weltweit und besonders die Verwendung von Java als

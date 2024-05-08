@@ -2,7 +2,7 @@
 title: "Open Elements Support & Care"
 description: "TODO"
 layout: "single"
-url: "/de/about-support-care"
+url: "/about-support-care"
 ---
 
 Open Elements Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisierung und Förderung von
