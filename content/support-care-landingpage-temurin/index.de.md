@@ -1,5 +1,5 @@
 ---
-title: "Eclipse Temurin Support & Care"
+title: "Support & Care for Temurin"
 description: "Was ist Eclipse Temurin? » Temurin Support Service ✔ Sichern Sie die Leistungsfähigkeit Ihrer Java-gestützten Anwendungen » Jetzt beraten lassen"
 layout: "single"
 url: "/de/support-care-temurin"
