@@ -62,6 +62,14 @@
         "link": "/open-source-java/",
         "visibleInNavigation": false,
         "visibleInFooter": false
+      },
+      {
+        "name": "Open Elements 2023",
+        "i18nKey": "OpenElements2023",
+        "altI18nKey": "OpenElements2023Description",
+        "link": "/open-elements-2023/",
+        "visibleInNavigation": false,
+        "visibleInFooter": false
       }
     ]
   },
