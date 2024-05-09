@@ -32,7 +32,7 @@ Diese Beiträge ermöglichten es, dass Open Elements neben namhaften Unternehmen
 kommerziellen Support für die Produkte der Adoptium Arbeitsgruppe anbieten kann. 
 
 **TODO: BESSERES BILD**
-{{< centered-image src="adoptium-members.png" width="80%" alt="Mitglieder der Adoptium Arbeitsgruppe">}}
+{{< centered-image src="adoptium-members.png" width="80%" showCaption="true" alt="Mitglieder der Adoptium Arbeitsgruppe">}}
 
 Ein weiterer Meilenstein für Open Elements war die Rolle als einer der Sponsoren der internationalen Eclipse Con 2023
 Konferenz, was das Engagement des Unternehmens in der Eclipse-Community verdeutlicht.
@@ -52,7 +52,7 @@ Dies wurde auch dadurch unterstrichen, dass Hendrik Ebbers zur
 [Mercedes-Benz FOSS Con](https://opensource.mercedes-benz.com/news/recap-foss-convention-2023/) eingeladen wurde,
 um die Arbeit der Eclipse Foundation im Java-Sektor zu präsentieren.
 
-{{< centered-image src="mercedes-foss.png" width="80%" alt="Fotos der Mercedes-Benz FOSS Con">}}
+{{< centered-image src="mercedes-foss.png" width="80%" showCaption="true" alt="Fotos der Mercedes-Benz FOSS Con">}}
 
 Diese Erfolge von Open Elements und Hendrik Ebbers in der Eclipse Foundation zeigen deutlich, wie das Unternehmen und
 seine führenden Köpfe das immer wichtiger werdende Thema Open Source Software mitgestalten und prägen.
@@ -74,7 +74,7 @@ Darüber hinaus hat Open Elements bedeutende Beiträge zu weiteren prominenten O
 darunter [web3j](https://github.com/hyperledger/web3j),
 [Eclipse AQAvit](https://projects.eclipse.org/projects/adoptium.aqavit) und dem [OpenJDK](https://github.com/openjdk/jmh).
 
-{{< centered-image src="contributions.png" width="80%" alt="Open Elements tätigte über 1800 Beiträge zu Open Source Projekten in 2023">}}
+{{< centered-image src="contributions.png" width="80%" showCaption="true" alt="Open Elements tätigte über 1800 Beiträge zu Open Source Projekten in 2023">}}
 
 Diese Contributions unterstreichen das tiefgreifende **Engagement von Open Elements in der Java-Community** und seine
 Hingabe an die Förderung und Verbesserung von Open-Source-Technologien. Durch diese Aktivitäten stärkt Open Elements
@@ -98,7 +98,7 @@ Beispiele hierfür sind:
 - Workshop auf der WeAreDevelopers Konferenz
 - Workshop bei der Java User Group in Bonn
 
-{{< centered-image src="jug-bonn.png" width="80%" alt="Foto des Vortrags auf der JUG Bonn">}}
+{{< centered-image src="jug-bonn.png" width="80%" showCaption="true" alt="Foto des Vortrags auf der JUG Bonn">}}
 
 Zusätzlich wurde Hendrik Ebbers eingeladen, um Hedera auf der **Mercedes-Benz FOSS Con**, einer Veranstaltung von
 Mercedes Benz, die sich auf freie und Open-Source-Software konzentriert, zu präsentieren.

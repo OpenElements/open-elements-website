@@ -19,7 +19,7 @@ programming languages** in the highly respected [Toibe Index](https://www.tiobe.
 In addition to the programming language, however, the term Java also refers to the runtime environment in which Java
 programs can be executed: the Java Virtual Machine (JVM). 
 
-{{< centered-image src="toibe-de.png" width="100%" alt="Percentage share of Java in the Toibe Index over the last 20 years">}}
+{{< centered-image src="toibe-de.png" width="100%" showCaption="true" alt="Percentage share of Java in the Toibe Index over the last 20 years">}}
 
 This particular combination of programming language and runtime environment allows Java applications to run on any
 machine that has a JVM installed.
@@ -27,7 +27,7 @@ This also inspired one of Java's mottos: **"Write Once, Run Anywhere" (WORA)"**.
 Both the components of the programming language and the source code of Java's JVM can be found in the OpenJDK,
 which contains the open source sources of Java.
 
-{{< centered-image src="wora-de.png" width="80%" alt="Die Schichten einer Java Anwendung">}}
+{{< centered-image src="wora-de.png" width="80%" alt="Layers of a Java application">}}
 
 ## What does open source mean?
 
@@ -38,7 +38,7 @@ The same applies to the Safari and Chrome browsers. Both are based for the most 
 But it is not only in our private use that we are encountering open source applications more and more - 
 the significant majority of all German companies also use open source software.
 
-{{< centered-image src="os-logo.png" width="50%" alt="Das Logo der Open Source Initiative und das offizielle Open Source Logo">}}
+{{< centered-image src="os-logo.png" width="50%" alt="Open Source Initiative logos">}}
 
 **Open source is a strong driver of innovation.**
 After all, there are no licensing costs, nor does one have to worry about usage rights being restricted by the

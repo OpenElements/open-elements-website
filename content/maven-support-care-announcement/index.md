@@ -23,7 +23,7 @@ Our mission is to create a sustainable source of funding to enable continuous im
 - **Transparent use of funds:** Open Elements manages funding transparently and reports regularly on the progress of milestones.
 - **Development by experts:** Our work is carried out by leading Maven experts.
 
-{{< centered-image src="workflow-en.png" width="100%" alt="Workflow of Support & Care for Maven">}}
+{{< centered-image src="workflow-en.png" width="100%" showCaption="true" alt="Workflow of Support & Care for Maven">}}
 
 ### Benefits
 

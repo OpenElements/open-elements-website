@@ -22,7 +22,7 @@ bezieht sich der Begriff Java aber auch auf die Laufzeitumgebung, in der Java Pr
 Java Virtual Machine (JVM).
 
 [@formatter:off]: # (This actually is the most platform independent comment)
-{{< centered-image src="toibe-de.png" width="100%" alt="Prozentueller Anteil von Java im Toibe Index über die letzten 20 Jahre">}}
+{{< centered-image src="toibe-de.png" width="100%" showCaption="true" alt="Prozentueller Anteil von Java im Toibe Index über die letzten 20 Jahre">}}
 
 [@formatter:on]: # (This actually is the most platform independent comment)
 
@@ -32,7 +32,7 @@ Java: **"Write Once, Run Anywhere"** (WORA). Sowohl die Bestandteile der Program
 JVM von Java sind im OpenJDK zu finden, welches die Open Source Quellen von Java beinhaltet.
 
 [@formatter:off]: # (This actually is the most platform independent comment)
-{{< centered-image src="wora-de.png" width="80%" alt="Die Schichten einer Java Anwendung">}}
+{{< centered-image src="wora-de.png" width="80%" showCaption="true" alt="Die Schichten einer Java Anwendung">}}
 
 [@formatter:on]: # (This actually is the most platform independent comment)
 
