@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'This is for the native ones'
 date: "2013-01-16"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'GuiGarage @ JavaOne'
 date: "2011-10-12"
 author: hendrik

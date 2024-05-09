@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Building modern web UIs with Web Components University @ Devoxx'
 date: "2015-11-11"
 author: hendrik

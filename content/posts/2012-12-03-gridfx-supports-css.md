@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'GridFX supports CSS'
 date: "2012-12-03"
 author: hendrik

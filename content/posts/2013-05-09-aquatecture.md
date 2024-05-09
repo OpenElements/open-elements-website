@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Aquatecture'
 date: "2013-05-09"
 author: hendrik

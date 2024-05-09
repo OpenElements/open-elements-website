@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'JavaFX CSS Utilities'
 date: "2014-03-29"
 author: hendrik

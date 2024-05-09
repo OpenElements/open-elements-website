@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Release & Update'
 date: "2011-10-04"
 author: hendrik

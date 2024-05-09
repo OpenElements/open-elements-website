@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'The future of Vagrant-Binding'
 date: "2012-11-29"
 author: hendrik

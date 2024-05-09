@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Win a copy of "Mastering JavaFX 8 Controls"'
 date: "2014-07-08"
 author: hendrik

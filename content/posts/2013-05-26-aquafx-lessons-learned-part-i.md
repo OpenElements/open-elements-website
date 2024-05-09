@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'AquaFX: lessons learned (Part I)'
 date: "2013-05-26"
 author: claudine

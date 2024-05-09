@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'An introduction to Open Dolphin'
 date: "2015-01-29"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'JGrid Talk'
 date: "2011-09-15"
 author: hendrik

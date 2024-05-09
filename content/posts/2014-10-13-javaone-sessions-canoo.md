@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'JavaOne Sessions at Canoo'
 date: "2014-10-13"
 author: hendrik

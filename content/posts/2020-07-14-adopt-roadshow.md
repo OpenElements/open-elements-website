@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title:  'AdoptOpenJDK Virtual Roadshow'
 date: "2020-07-14"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Introducing Vagrant-Binding'
 date: "2012-11-01"
 author: hendrik
