@@ -134,7 +134,7 @@ entwickelt.
 
 Da Oracle Sun Microsystems aufgekauft hat, ist die Firma aktueller Hauptentwickler im OpenJDK. Da das
 **OpenJDK** eine **Open Source Software** ist, tragen neben Oracle immer mehr Firmen und auch individuelle Personen
-Quelltext zum OpenJDK bei. Das OpenJDK ist als Projekt bei GitHub zu finden. Auf dem folgenden Bild ist dargestellt,
+Quelltext zum OpenJDK bei. Das OpenJDK ist als Projekt bei [GitHub](https://github.com/openjdk) zu finden. Auf dem folgenden Bild ist dargestellt,
 welche Firmen Änderungen zu Java 19 beigetragen haben (also Änderungen, die zwischen der Veröffentlichung von Java 18
 und 19 hinzugefügt wurden).
 
