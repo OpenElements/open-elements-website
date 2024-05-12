@@ -1,5 +1,5 @@
 ---
-title: "Support & Care for Apache Maven"
+title: "Support & Care for Apache Maven&trade;"
 description: "Support & Care for Apache Maven&trade;"
 layout: "article"
 url: "/support-care-maven"
