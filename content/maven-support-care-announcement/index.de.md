@@ -1,6 +1,6 @@
 ---
-title: "Support & Care for Maven"
-description: "Support & Care for Maven"
+title: "Support & Care for Apache Maven&trade;"
+description: "Support & Care for Apache Maven&trade;"
 layout: "article"
 url: "/de/support-care-maven"
 ---
