@@ -11,7 +11,7 @@ Die Initiative zielt darauf ab, durch eine Förderung, die Entwicklung und Wartu
 
 ### Unsere Mission
 
-Apache Maven ist ein kritisches Werkzeug im Java-Ökosystem, welches mit >100 Millionen Downloads pro Jahr von Millionen von Entwicklern weltweit genutzt wird.
+**Apache Maven** ist ein kritisches Werkzeug im Java-Ökosystem, welches mit >100 Millionen Downloads pro Jahr von Millionen von Entwicklern weltweit genutzt wird.
 Trotz seiner Bedeutung wird Apache Maven hauptsächlich ehrenamtlich und ohne feste finanzielle Unterstützung gepflegt.
 Unsere Mission ist es, eine nachhaltige Finanzierungsquelle zu schaffen, um kontinuierliche Verbesserungen und professionelle Unterstützung für Apache Maven zu ermöglichen.
 
@@ -49,3 +49,7 @@ Diese Community-Mitglieder\*innen sind Experten\*innen im Bereich Apache Maven u
 Wir laden Entwickler\*innen und Interessierte ein, sich an der Initiative zu beteiligen, Feedback zu geben und Teil unserer Community zu werden. Kontaktieren Sie uns unter [maven@open-elements.com](mailto:maven@open-elements.com) für weitere Informationen und wie Sie beitragen können.
 
 {{< centered-image src="we-want-you.svg" width="40%" alt="We want you Illustration">}}
+
+#### Trademark
+
+Apache&trade; und Apache Maven&trade; sind Trademarks der Apache Software Foundation.

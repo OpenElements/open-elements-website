@@ -4,14 +4,14 @@ description: "Support & Care for Apache Maven&trade;"
 layout: "article"
 url: "/support-care-maven"
 ---
-The **Support & Care for Apache Maven&trade;** Initiative is a groundbreaking program to secure the future of the Apache Maven project through sustainable support and care.
+The **Support & Care for Apache Maven&trade;** Initiative is a groundbreaking program to secure the future of the Apache Maven&trade; project through sustainable support and care.
 The initiative aims to strengthen the development and maintenance of Apache Maven through funding of contributors, thus ensuring its high quality and availability that the Java ecosystem needs.
 
 {{< centered-image src="logo.png" width="80%" alt="Support & Care for Apache Maven&trade; Logo">}}
 
 ### Our Mission
 
-Apache Maven&trade; is a critical tool in the Java ecosystem, used by millions of developers worldwide with >100 million downloads per year.
+**Apache Maven** is a critical tool in the Java ecosystem, used by millions of developers worldwide with >100 million downloads per year.
 Despite its importance, Apache Maven&trade; is maintained primarily on a volunteer basis with no fixed financial support.
 Our mission is to create a sustainable source of funding to enable continuous improvements and professional support for Apache Maven&trade;.
 
@@ -51,6 +51,6 @@ Contact us at [maven@open-elements.com](mailto:maven@open-elements.com) for more
 
 {{< centered-image src="we-want-you.svg" width="40%" alt="We want you illustration">}}
 
-##### Trademark
+#### Trademark
 
 Apache&trade; and Apache Maven&trade; are trademarks of The Apache Software Foundation.
