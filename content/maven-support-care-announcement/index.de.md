@@ -24,7 +24,7 @@ Unsere Mission ist es, eine nachhaltige Finanzierungsquelle zu schaffen, um kont
 - **Entwicklung durch Experten:** Unsere Arbeit wird von führenden Maven-Experten*innen durchgeführt.
 
 
-{{< centered-image src="workflow-de.png" width="100%" alt="Workfow von Support & Care for Apache Maven&trade;">}}
+{{< centered-image src="workflow-de.png" width="100%" showCaption="true" alt="Workfow von Support & Care for Apache Maven&trade;">}}
 
 ### Vorteile der Initiative
 

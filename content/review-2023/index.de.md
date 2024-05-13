@@ -15,7 +15,7 @@ nicht nur für die internen Stakeholder, sondern auch für die Welt außerhalb g
 In diesem Zusammenhang legte Open Elements den Grundstein für zukunftsweisende Innovation und Wachstum in den kommenden
 Jahren.
 
-**TODO: Bild mit Kreis Java und Kreis Open SOurce und Open Elements als verbindendes Glied**
+{{< centered-image src="oss-meets-java.png" width="75%" alt="Open Elements als Bindeglied von OSS und Java">}}
 
 ## Die Erfolge in der Eclipse Foundation
 
@@ -31,11 +31,11 @@ engagiert, sondern auch bedeutende Beiträge zu Projekten der Eclipse Adoptium A
 Diese Beiträge ermöglichten es, dass Open Elements neben namhaften Unternehmen wie IBM, RedHat und Azul ebenfalls
 kommerziellen Support für die Produkte der Adoptium Arbeitsgruppe anbieten kann. 
 
-**TODO: BESSERES BILD**
-{{< centered-image src="adoptium-members.png" width="80%" showCaption="true" alt="Mitglieder der Adoptium Arbeitsgruppe">}}
+{{< centered-image src="adoptium-members.png" width="60%" showCaption="true" alt="Mitglieder der Adoptium Arbeitsgruppe">}}
 
-Ein weiterer Meilenstein für Open Elements war die Rolle als einer der Sponsoren der internationalen Eclipse Con 2023
-Konferenz, was das Engagement des Unternehmens in der Eclipse-Community verdeutlicht.
+Ein weiterer Meilenstein für Open Elements war die Rolle als einer der Sponsoren der internationalen 
+[Eclipse Con 2023](https://www.eclipsecon.org/2023) Konferenz, was das Engagement des Unternehmens in der
+Eclipse-Community verdeutlicht.
 
 [**Hendrik Ebbers**](/about-hendrik/), Gründer und Geschäftsführer von Open Elements, hat ebenfalls bedeutende
 persönliche Erfolge erzielt.
@@ -98,11 +98,11 @@ Beispiele hierfür sind:
 - Workshop auf der WeAreDevelopers Konferenz
 - Workshop bei der Java User Group in Bonn
 
-{{< centered-image src="jug-bonn.png" width="80%" showCaption="true" alt="Foto des Vortrags auf der JUG Bonn">}}
-
 Zusätzlich wurde Hendrik Ebbers eingeladen, um Hedera auf der **Mercedes-Benz FOSS Con**, einer Veranstaltung von
 Mercedes Benz, die sich auf freie und Open-Source-Software konzentriert, zu präsentieren.
 Dies war eine hervorragende Gelegenheit, Hedera weiteren Entscheidungsträgern und Influencern in der Technologiebranche.
+
+{{< centered-image src="jug-bonn.png" width="80%" showCaption="true" alt="Foto des Vortrags auf der JUG Bonn">}}
 
 ## Beitrag für Bildung und Gesellschaft
 Im letzten Jahr hat Open Elements einen signifikanten Beitrag zur Bildung und Gesellschaft geleistet, indem es Wissen,
