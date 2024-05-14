@@ -46,7 +46,14 @@ Diese Community-Mitglieder\*innen sind Experten\*innen im Bereich Apache Maven u
 
 ### Mitmachen:
 
-Wir laden Entwickler\*innen und Interessierte ein, sich an der Initiative zu beteiligen, Feedback zu geben und Teil unserer Community zu werden. Kontaktieren Sie uns unter [maven@open-elements.com](mailto:maven@open-elements.com) für weitere Informationen und wie Sie beitragen können.
+Wir werden eine offene Meilensteinplanung auf der [JSail-Unkonferenz 2024](https://jsail.ijug.eu/) durchführen.
+Bis dahin sammeln wir Ideen für Meilensteine, die mit Hilfe der Ressourcen von Support & Care for Apache Maven™
+im Diskussionsbereich des [GitHub Repositorys](https://github.com/OpenElements/maven-support-care) umgesetzt werden sollen.
+Jeder und jede ist herzlich eingeladen, Ideen für Meilensteine einzubringen oder vorhandene Ideen zu kommentieren.
+
+Zusätzlich laden Entwickler\*innen und Interessierte ein, sich an der Initiative zu beteiligen,
+Feedback zu geben und Teil unserer Community zu werden. Kontaktieren Sie uns unter [maven@open-elements.com](mailto:maven@open-elements.com)
+für weitere Informationen und wie Sie beitragen können.
 
 {{< centered-image src="we-want-you.svg" width="40%" alt="We want you Illustration">}}
 

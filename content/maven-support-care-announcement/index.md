@@ -46,8 +46,14 @@ These community members are experts in the field of Apache Maven&trade; and cont
 
 ### Contribute
 
-We invite developers and interested parties to participate in the initiative, provide feedback and become part of our community.
-Contact us at [maven@open-elements.com](mailto:maven@open-elements.com) for more information and how you can contribute.
+We will have an open milestone planning session at the [JSail Unconference 2024](https://jsail.ijug.eu/).
+Until then, we are collecting ideas for milestones to be implemented using the Support & Care for Apache Maven™ resources
+in the discussion area of our [GitHub repository](https://github.com/OpenElements/maven-support-care).
+Everyone is welcome to contribute ideas for milestones or comment on existing ideas.
+
+We also invite developers and interested parties to participate in the initiative,
+give feedback and become part of our community. Contact us at [maven@open-elements.com](mailto:maven@open-elements.com)
+for more information and how you can contribute.
 
 {{< centered-image src="we-want-you.svg" width="40%" alt="We want you illustration">}}
 
