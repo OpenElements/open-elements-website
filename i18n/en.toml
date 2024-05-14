@@ -6,6 +6,8 @@ other = "Blog"
 other = "About us"
 [projects]
 other = "Projects"
+[supportCare]
+other = "Support & Care"
 [mavenSupport]
 other = "Maven Support"
 [temurinSupport]
