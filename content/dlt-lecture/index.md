@@ -1,5 +1,5 @@
 ---
-title: "Vorlesung 'Distribution Ledger Technology und Digital Trust'"
+title: "Vorlesung zu 'DLT & Digital Trust'"
 description: "TODO"
 layout: "single"
 url: "/dlt-lecture"
