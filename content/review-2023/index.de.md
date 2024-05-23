@@ -81,14 +81,17 @@ Hingabe an die Förderung und Verbesserung von Open-Source-Technologien. Durch d
 nicht nur ihr eigenes Profil als Experte für Java-Dienstleistungen, sondern trägt auch wesentlich zur Weiterentwicklung
 und Innovation innerhalb der Java-Technologielandschaft bei.
 
-## Hedera
+## Digital Trust und Hedera Hashgraph
 
-Als einer der **Hauptcommiter des Hedera Hashgraph Projekts** hat Open Elements eine zentrale Rolle in dessen
+Als einer der **Hauptcommiter des Hedera Hashgraph OSS Projekts** hat Open Elements eine zentrale Rolle in dessen
 Entwicklung und Fortschritt übernommen.
-Das Wissen und die Erfahrungen mit **Hedera** hat Open Elements durch eine Reihe von bedeutenden Präsentationen und
-Workshops geteilt, die die Reputation als Experte in diesem Bereich weiter festigten.
-Im März leitete Hendrik Ebbers einen Workshop zu Hedera auf der **Javaland**, einer führenden Konferenz für
-Java-Entwickler, wo er die Teilnehmer in die verschiedenen Aspekte von Hedera einführte. 
+Das Wissen und die Erfahrungen mit dem Public Ledger **Hedera** hat Open Elements durch eine Reihe von bedeutenden
+Präsentationen und Workshops geteilt, die die Reputation als Experte in diesem Bereich weiter festigten. In diesen
+Veranstaltungen wurden die aktuellen Entwicklungen im Bereich **Blockchain, Cryptowährungen und Distributed Ledger 
+Technology (DLT)** geteilt und diskutiert, wie diese Technologien das **Vertrauen in digitale Kommunikation** und 
+Prozesse stärken.
+Im März leitete Hendrik Ebbers einen Workshop zu Hedera und Digital Trust auf der **Javaland**, einer führenden
+Konferenz für Java-Entwickler, wo er die Teilnehmer in die verschiedenen Aspekte von Hedera einführte. 
 
 Es folgten mehrere über das Jahr verteilte Fachvorträge zu Hedera auf verschiedenen Konferenzen und Meetups.
 
@@ -98,9 +101,10 @@ Beispiele hierfür sind:
 - Workshop auf der WeAreDevelopers Konferenz
 - Workshop bei der Java User Group in Bonn
 
-Zusätzlich wurde Hendrik Ebbers eingeladen, um Hedera auf der **Mercedes-Benz FOSS Con**, einer Veranstaltung von
-Mercedes Benz, die sich auf freie und Open-Source-Software konzentriert, zu präsentieren.
-Dies war eine hervorragende Gelegenheit, Hedera weiteren Entscheidungsträgern und Influencern in der Technologiebranche.
+Zusätzlich wurde Hendrik Ebbers eingeladen, um das Thema Digital Trust auf der **Mercedes-Benz FOSS Con**, einer 
+Veranstaltung von Mercedes Benz, die sich auf freie und Open-Source-Software konzentriert, zu präsentieren.
+Dies war eine hervorragende Gelegenheit, Hedera weiteren Entscheidungsträgern und Influencern in der Technologiebranche
+vorzustellen.
 
 {{< centered-image src="jug-bonn.png" width="80%" showCaption="true" alt="Foto des Vortrags auf der JUG Bonn">}}
 
