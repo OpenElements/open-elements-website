@@ -12,7 +12,7 @@
     "i18nKey": "blog",
     "altI18nKey": "blogDescription",
     "link": "/posts/",
-    "visibleInNavigation": true,
+    "visibleInNavigation": false,
     "visibleInFooter": true
   },
   {
@@ -28,7 +28,7 @@
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",
     "link": "#",
-    "visibleInNavigation": true,
+    "visibleInNavigation": false,
     "visibleInFooter": false,
     "children": [
       {
