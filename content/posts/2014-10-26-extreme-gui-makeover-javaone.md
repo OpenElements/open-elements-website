@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Extreme Gui Makeover @ JavaOne'
 date: "2014-10-26"
 author: hendrik

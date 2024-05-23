@@ -2,12 +2,15 @@
 title: "Open Elements Support & Care"
 description: "TODO"
 layout: "single"
+url: "/de/about-support-care"
 ---
 
 Open Elements Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisierung und Förderung von
 Open Source Software (OSS). Hierbei arbeitet Open Elements sowohl mit der Industrie als auch mit der Open Source
 Community zusammen, um die Qualität, Unabhängigkeit und Entwicklung von kritischen Open Source Projekten und Komponenten
 sicherzustellen.
+
+{{< centered-image src="support-care-logo.svg" alt="Support & Care Logo" width="60%" >}}
 
 ## Warum Open Source für unser heutiges Leben so wichtig ist
 
@@ -28,6 +31,8 @@ LINK nachgelesen werden.
 - **Soziale Gerechtigkeit:** Open Source Software ist oft für jeden zugänglich, unabhängig von finanziellen Mitteln.
   Dies ermöglicht es Menschen aus allen sozialen und wirtschaftlichen Hintergründen, Zugang zu Technologie und Bildung
   zu haben.
+
+{{< centered-image src="os-benefits-de.png" showCaption="true" alt="Ergebnis zur Umfrage bzgl. Vorteilen von Open Source bei mittelständischen Unternehmen" width="80%" >}}
 
 ## Wie Support & Care Open Source Software fördert
 

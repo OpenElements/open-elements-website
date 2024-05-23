@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title:  'About Cyberland'
 date: "2020-03-13"
 author: hendrik

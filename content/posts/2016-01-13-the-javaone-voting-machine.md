@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'The JavaOne Voting Machine'
 date: "2016-01-13"
 author: hendrik

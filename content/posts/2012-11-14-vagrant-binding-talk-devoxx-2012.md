@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Vagrant-Binding talk @ Devoxx 2012'
 date: "2012-11-14"
 author: hendrik

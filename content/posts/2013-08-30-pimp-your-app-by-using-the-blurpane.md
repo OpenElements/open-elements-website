@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Pimp your App by using the BlurPane'
 date: "2013-08-30"
 author: hendrik

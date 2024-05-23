@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Vagrant-Binding-Demos'
 date: "2012-11-03"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'An overview of the Web Component specifications'
 date: "2015-02-15"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'GridFX is hosted at github'
 date: "2012-11-14"
 layout: post

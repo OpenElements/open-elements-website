@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Layered images and icons with JavaFX'
 date: "2015-09-16"
 author: hendrik

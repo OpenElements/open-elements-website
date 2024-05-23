@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Gesture Wrapper 0.1 released'
 date: "2011-09-01"
 author: hendrik

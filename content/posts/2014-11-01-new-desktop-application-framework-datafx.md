@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'New Desktop Application Framework & DataFX'
 date: "2014-11-01"
 author: hendrik

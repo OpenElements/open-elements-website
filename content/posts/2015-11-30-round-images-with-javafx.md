@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Round images with JavaFX'
 date: "2015-11-30"
 author: hendrik

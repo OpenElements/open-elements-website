@@ -1,5 +1,5 @@
 ---
-title: "Temurin Support & Care"
+title: "Support & Care for Temurin"
 description: "Open Elements bietet mit 'Temurin Support & Care' eine leichtgewichtigen Support für die bekannteste Java Distribution."
 layout: "support-care"
 

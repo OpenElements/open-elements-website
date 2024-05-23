@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'JavaFX JumpStart @ JavaOne'
 date: "2016-09-20"
 author: hendrik

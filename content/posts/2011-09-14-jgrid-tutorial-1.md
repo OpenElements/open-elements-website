@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'JGrid Tutorial #1'
 date: "2011-09-14"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'DataFX 8 Preview 2'
 date: "2014-04-17"
 author: hendrik

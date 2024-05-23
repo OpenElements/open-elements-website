@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'JavaFX meets JavaEE'
 date: "2014-01-24"
 author: hendrik

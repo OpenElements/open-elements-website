@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'GarageTunes demo'
 date: "2011-09-12"
 author: hendrik

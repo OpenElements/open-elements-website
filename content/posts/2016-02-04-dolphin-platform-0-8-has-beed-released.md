@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Dolphin Platform 0.8 has beed released'
 date: "2016-02-04"
 author: hendrik

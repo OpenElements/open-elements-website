@@ -2,6 +2,7 @@
 title: "Open Source Java"
 description: "TODO"
 layout: "single"
+url: "/de/open-source-java"
 ---
 
 Die Java-Plattform ist eins der meistgenutzten digitalen Tools weltweit und besonders die Verwendung von Java als
@@ -21,7 +22,7 @@ bezieht sich der Begriff Java aber auch auf die Laufzeitumgebung, in der Java Pr
 Java Virtual Machine (JVM).
 
 [@formatter:off]: # (This actually is the most platform independent comment)
-{{< centered-image src="toibe-de.png" width="100%" alt="Prozentueller Anteil von Java im Toibe Index über die letzten 20 Jahre">}}
+{{< centered-image src="toibe-de.png" width="100%" showCaption="true" alt="Prozentueller Anteil von Java im Toibe Index über die letzten 20 Jahre">}}
 
 [@formatter:on]: # (This actually is the most platform independent comment)
 
@@ -31,7 +32,7 @@ Java: **"Write Once, Run Anywhere"** (WORA). Sowohl die Bestandteile der Program
 JVM von Java sind im OpenJDK zu finden, welches die Open Source Quellen von Java beinhaltet.
 
 [@formatter:off]: # (This actually is the most platform independent comment)
-{{< centered-image src="wora-de.png" width="80%" alt="Die Schichten einer Java Anwendung">}}
+{{< centered-image src="wora-de.png" width="80%" showCaption="true" alt="Die Schichten einer Java Anwendung">}}
 
 [@formatter:on]: # (This actually is the most platform independent comment)
 
@@ -133,7 +134,7 @@ entwickelt.
 
 Da Oracle Sun Microsystems aufgekauft hat, ist die Firma aktueller Hauptentwickler im OpenJDK. Da das
 **OpenJDK** eine **Open Source Software** ist, tragen neben Oracle immer mehr Firmen und auch individuelle Personen
-Quelltext zum OpenJDK bei. Das OpenJDK ist als Projekt bei GitHub zu finden. Auf dem folgenden Bild ist dargestellt,
+Quelltext zum OpenJDK bei. Das OpenJDK ist als Projekt bei [GitHub](https://github.com/openjdk) zu finden. Auf dem folgenden Bild ist dargestellt,
 welche Firmen Änderungen zu Java 19 beigetragen haben (also Änderungen, die zwischen der Veröffentlichung von Java 18
 und 19 hinzugefügt wurden).
 

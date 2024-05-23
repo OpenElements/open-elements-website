@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'Building JavaFX Applications with Maven'
 date: "2012-10-13"
 author: hendrik
