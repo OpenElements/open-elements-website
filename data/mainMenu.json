@@ -16,6 +16,14 @@
     "visibleInFooter": true
   },
   {
+    "name": "Maven Support",
+    "i18nKey": "supportCare",
+    "altI18nKey": "supportCareDescription",
+    "link": "/support-care-maven/",
+    "visibleInNavigation": true,
+    "visibleInFooter": true
+  },
+  {
     "name": "Support & Care",
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",

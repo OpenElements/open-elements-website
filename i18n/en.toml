@@ -10,6 +10,8 @@ other = "Projects"
 other = "Support & Care"
 [aboutSupportCare]
 other = "About Support & Care"
+[supportCare]
+other = "Support & Care"
 [mavenSupport]
 other = "Support & Care for Maven"
 [temurinSupport]
