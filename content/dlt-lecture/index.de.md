@@ -25,3 +25,13 @@ Inhaltlich werden konkret folgende Punkte besprochen:
 - Nutzung und Einbindung von öffentlichen Distributed-Ledger-Technologien
 - Smart Contracts und die Ethereum Virtual Machine (EVM)
 
+### Bewertung eines Studenten
+
+"Das Fach Blockchain, welches als fachspezifisches Wahlpflichtmodul an der Fakultät Informatik/Mathematik gewählt werden
+kann, schafft einen Einblick in das Thema digitaler Währungen. Dabei wird auch kurz auf die Historie, aber vor allem
+zügig auf die technische Seite eingegangen. Die Gliederung in Blockveranstaltungen ermöglicht die Erarbeitung eines
+tieferen Verständnisses, teilweise auch im Team mit mehreren Kommilitonen. Der Programmieraspekt des Fachs schafft ein
+hochinteressantes Seminar, bei welchem sowohl Kryptointeressierte als auch herkömmliche Softwareentwickler auf ihre
+Kosten kommen. Hendrik Ebbers schafft mit seiner offenen und direkten Art eine entspannte, aber produktive 
+Arbeitsatmosphäre, bei der man gerne aktiv am Seminar teilnimmt und mitwirkt. Mir persönlich hat das Fach trotz
+initial weniger fachlicher Berührungspunkte ausgesprochen gut gefallen. Ich würde die gleiche Wahl nochmal treffen."
