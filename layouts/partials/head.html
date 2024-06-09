@@ -1,6 +1,8 @@
 {{ $bullet := resources.Get "/illustrations/bullet.svg" -}}
-{{ $css := resources.Get "/css/style.css" -}}  
-{{ $style := $css | resources.Minify -}}  
+{{ $css := resources.Get "/css/style.css" -}}
+{{ $prismCSS := resources.Get "/prism/prism.css" -}}
+{{ $style := $css | resources.Minify -}}
+
 <head>
   {{ partial "google.html" . }}
   {{ if .Params.Description -}}
@@ -11,9 +13,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>
     {{ if .Page.Title -}}
-      {{ .Site.Title }} &ndash; {{ .Page.Title }}
+    {{ .Site.Title }} &ndash; {{ .Page.Title }}
     {{ else -}}
-      {{ .Site.Title }} 
+    {{ .Site.Title }}
     {{ end -}}
   </title>
   {{ partial "head-meta.html" . }}
@@ -21,9 +23,12 @@
   <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><!-- 180×180 -->
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  <link rel="stylesheet" href="{{ $prismCSS.RelPermalink }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+  <!-- Alpine Plugins -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script> 
-  {{ partial "iubenda.html" . }}
- </head>
+  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+  <!-- {{ partial "iubenda.html" . }} -->
+</head>

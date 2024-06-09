@@ -5,72 +5,77 @@
 @tailwind utilities;
 
 
-@layer base{
+@layer base {
 
-    html{
+    html {
         @apply font-sans text-blue
     }
 
-    .nav-link{
+    .nav-link {
         @apply font-medium text-lg text-gray hover:text-sky transition-colors ease-in-out duration-150 focus:outline-none
     }
 
-    .nav-icon{
-        @apply text-2xl leading-none  text-white hover:text-green transition-colors ease-in-out duration-150
+    .nav-icon {
+        @apply text-2xl leading-none text-white hover:text-green transition-colors ease-in-out duration-150
     }
-    .nav-icon-mb{
-        @apply text-4xl leading-none  text-white hover:text-sky transition-colors ease-in-out duration-150
+
+    .nav-icon-mb {
+        @apply text-4xl leading-none text-white hover:text-sky transition-colors ease-in-out duration-150
     }
-    .footer-icon{
-        @apply text-3xl leading-none  text-white hover:text-sky transition-colors ease-in-out duration-150
+
+    .footer-icon {
+        @apply text-3xl leading-none text-white hover:text-sky transition-colors ease-in-out duration-150
     }
-    .h1{
+
+    .h1 {
         @apply lg:text-[52px] sm:text-4xl text-[32px] font-bold lg:leading-snug sm:leading-snug leading-snug
     }
 
-    .h2{
+    .h2 {
         @apply sm:text-[44px] text-[28px] font-bold leading-10
     }
 
-    .h3{
+    .h3 {
         @apply text-[32px] font-bold leading-10
     }
 
-    .h4{
+    .h4 {
         @apply text-2xl font-bold leading-10
     }
 
-    .h4-card{
+    .h4-card {
         @apply xl:text-2xl sm:text-xl text-2xl font-bold leading-10
     }
 
-    .badge-purple{
+    .badge-purple {
         @apply px-2.5 py-1 shrink-0 bg-purple-100 border border-purple text-center text-purple rounded-full font-semibold hover:bg-purple-700 hover:text-white hover:shadow-3 active:shadow-none active:bg-purple transition ease-in-out duration-150
     }
 
-    .link-simple{
+    .link-simple {
         @apply hover:underline focus:outline-none
     }
 
-    .link-rose{
+    .link-rose {
         @apply text-rose font-medium focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:underline
     }
 
-    .link-purple{
+    .link-purple {
         @apply text-purple font-medium focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:underline
     }
 
-    .link-sky{
+    .link-sky {
         @apply text-sky font-medium focus:outline-none transition-all ease-in-out duration-100 active:font-medium hover:underline
     }
 
-    .link-green{
+    .link-green {
         @apply text-green font-medium focus:outline-none transition-all ease-in-out duration-150 active:font-medium hover:underline
     }
-    .footer-link{
+
+    .footer-link {
         @apply font-medium text-white text-sm group-hover:text-sky transition-colors ease-in-out duration-150
     }
-    .footer-link-icon{
+
+    .footer-link-icon {
         @apply shrink-0 text-white text-xl group-hover:text-sky transition-colors ease-in-out duration-150
     }
 }
