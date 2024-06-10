@@ -1,5 +1,6 @@
 {{ $underline := resources.Get "/illustrations/underline.svg" }}
 {{ $rightSide := resources.Get "/illustrations/right-side.svg" }}
+{{ $fabien := resources.Get "/images/fabien.jpg" }}
 
 <div class="relative lg:pb-48 sm:pb-32 pb-28">
   <img src="{{ $rightSide.RelPermalink }}" class="absolute right-0 hidden -bottom-20 xl:block" />
@@ -24,16 +25,16 @@
       <div class="flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3 sm:mb-5 mb-2">
         <div
           class=" sm:w-24 sm:h-24 w-16 h-16 overflow-hidden shrink-0 flex items-center justify-center bg-white rounded-full">
-          <img class="w-full h-full object-cover" src="/assets/images/fabien.jpg" />
+          <img class="w-full h-full object-cover" src="{{ $fabien.RelPermalink }}" />
         </div>
         <div>
-          <p class="sm:text-lg text-base font-bold text-blue">
+          <p class="text-lg font-bold text-blue">
             Jon Doe
           </p>
-          <p class="sm:text-base text-sm font-semibold">Creator & Founder</p>
+          <p class="text-base font-semibold">Creator & Founder</p>
         </div>
       </div>
-      <p class=" text-blue sm:text-base text-sm sm:leading-8 leading-6 sm:font-medium">
+      <p class="text-blue text-base sm:leading-8 leading-7 font-medium">
         Das Fach Blockchain, welches als fachspezifisches Wahlpflichtmodul an der Fakultät Informatik/Mathematik gewählt
         werden kann, schafft einen Einblick in das Thema digitaler Währungen. Dabei wird auch kurz auf die Historie,
         aber vor allem zügig auf die technische Seite eingegangen. Die Gliederung in Blockveranstaltungen ermöglicht die
