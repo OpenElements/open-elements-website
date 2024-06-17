@@ -1,7 +1,7 @@
 ---
 title: "Vorlesung zu 'DLT & Digital Trust'"
 description: "TODO"
-layout: "single"
+layout: "article"
 url: "/dlt-lecture"
 ---
 
@@ -25,3 +25,5 @@ Inhaltlich werden konkret folgende Punkte besprochen:
 - Nutzung und Einbindung von öffentlichen Distributed-Ledger-Technologien
 - Smart Contracts und die Ethereum Virtual Machine (EVM)
 
+## Meinung der Studenten zur Vorlesung
+{{< quote id="fabian-dlt">}}
