@@ -10,3 +10,4 @@ origin: https://www.heise.de/blog/Best-Practices-und-Anti-Pattern-beim-Logging-i
 preview_image: "/posts/2023-02-07-logging-in-java-and-other-languages/Java_Preview.jpg"
 ---
 
+Test Text
