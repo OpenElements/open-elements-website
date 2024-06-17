@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       opacity: ['hover', 'active']
     },
-    plugins: [ 
+    plugins: [
       hoveredParentPlugin,
       focusedWithinParentPlugin,
     ]
@@ -43,7 +43,7 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       'gray': '#F8F8F8',
-      'slate' : '#EBEBEE',
+      'slate': '#EBEBEE',
       'blue': '#020144',
       'green': {
         DEFAULT: '#5CBA9E',
@@ -65,20 +65,23 @@ module.exports = {
       'purple': {
         DEFAULT: '#9492FD',
         100: '#D4D4FE',
+        200: '#F1F1FF',
         700: '#7573FF',
       },
       'lightgray': '#D3D3D3'
     },
     extend: {
+
       fontFamily: {
         'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       dropShadow: {
-        'card' : '0px 0px 24px rgba(190, 227, 216, 0.6)',
+        'card': '0px 0px 24px rgba(190, 227, 216, 0.6)',
       },
       boxShadow: {
-        3 : '2px 4px 22px rgba(117, 115, 255, 0.64)',
-        4 : '0px 0px 24px rgba(190, 227, 216, 0.6)',
+        3: '2px 4px 22px rgba(117, 115, 255, 0.64)',
+        4: '0px 0px 24px rgba(190, 227, 216, 0.6)',
+        5: '0px 4px 20px 0px rgba(117, 115, 255, 0.22)',
       }
     },
   },
@@ -102,9 +105,9 @@ const hoveredParentPlugin = plugin(function ({ addVariant, e }) {
 });
 
 const focusedWithinParentPlugin = plugin(function ({ addVariant, e }) {
-    addVariant("focused-within-parent", ({ container }) => {
-      container.walkRules((rule) => {
-        rule.selector = `:focus-within > .focused-within-parent\\:${rule.selector.slice(1)}`;
-      });
+  addVariant("focused-within-parent", ({ container }) => {
+    container.walkRules((rule) => {
+      rule.selector = `:focus-within > .focused-within-parent\\:${rule.selector.slice(1)}`;
     });
+  });
 });

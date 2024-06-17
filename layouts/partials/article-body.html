@@ -1,12 +1,55 @@
 {{ $underline := resources.Get "/illustrations/underline.svg" }}
 {{ $rightSide := resources.Get "/illustrations/right-side.svg" }}
+{{ $fabien := resources.Get "/images/fabien.jpg" }}
 
 <div class="relative lg:pb-48 sm:pb-32 pb-28">
   <img src="{{ $rightSide.RelPermalink }}" class="absolute right-0 hidden -bottom-20 xl:block" />
   <div class="container mt-12 xl:max-w-6xl">
-    <div class="text-blue prose prose-a:text-purple-700 prose-code:bg-yellow relative"
-         style="max-width: 100%">
+    <div
+      class="text-blue prose prose-a:text-purple-700 prose-code:bg-yellow prose-blockquote:border-l-0 prose-blockquote:bg-green-100 prose-blockquote:not-italic prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:rounded-3xl relative"
+      style="max-width: 100%">
       {{ .content }}
     </div>
+
+    <div class="bg-green-100 rounded-3xl sm:px-8 px-6 sm:py-7 py-5 relative">
+      <svg class=" sm:absolute right-12 top-9 opacity-20 sm:w-16 sm:h-16 sm:mb-0 w-8 h-8 mb-5" width="64" height="56"
+        viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0.0136073 40.4101C0.0136073 48.8244 6.83431 55.6451 15.2484 55.6451C23.6627 55.6451 30.4834 48.8244 30.4834 40.4101C30.4834 31.9959 23.6627 25.1753 15.2484 25.1753C13.5192 25.1753 11.8639 25.4767 10.3143 26.008C13.7428 6.34466 29.0764 -6.33595 14.8622 4.10044C-0.899196 15.6732 -0.00327316 39.9445 0.0143631 40.3893C0.0143631 40.3963 0.0136073 40.4024 0.0136073 40.4101Z"
+          fill="#5CBA9E" />
+        <path
+          d="M33.5254 40.4101C33.5254 48.8244 40.3461 55.6451 48.7603 55.6451C57.1746 55.6451 63.9953 48.8244 63.9953 40.4101C63.9953 31.9959 57.1745 25.1753 48.7602 25.1753C47.0308 25.1753 45.3757 25.4767 43.8261 26.008C47.2546 6.34466 62.5882 -6.33595 48.374 4.10044C32.6126 15.6732 33.5084 39.9445 33.5261 40.3893C33.5261 40.3963 33.5254 40.4024 33.5254 40.4101Z"
+          fill="#5CBA9E" />
+      </svg>
+
+      <div class="flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3 sm:mb-5 mb-2">
+        <div
+          class=" sm:w-24 sm:h-24 w-16 h-16 overflow-hidden shrink-0 flex items-center justify-center bg-white rounded-full">
+          <img class="w-full h-full object-cover" src="{{ $fabien.RelPermalink }}" />
+        </div>
+        <div>
+          <p class="text-lg font-bold text-blue">
+            Jon Doe
+          </p>
+          <p class="text-base font-semibold">Creator & Founder</p>
+        </div>
+      </div>
+      <p class="text-blue text-base sm:leading-8 leading-7 font-medium">
+        Das Fach Blockchain, welches als fachspezifisches Wahlpflichtmodul an der Fakultät Informatik/Mathematik gewählt
+        werden kann, schafft einen Einblick in das Thema digitaler Währungen. Dabei wird auch kurz auf die Historie,
+        aber vor allem zügig auf die technische Seite eingegangen. Die Gliederung in Blockveranstaltungen ermöglicht die
+        Erarbeitung eines tieferen Verständnisses, teilweise auch im Team mit mehreren Kommilitonen. Der
+        Programmieraspekt des Fachs schafft ein hochinteressantes Seminar, bei welchem sowohl Kryptointeressierte als
+        auch herkömmliche Softwareentwickler auf ihre Kosten kommen. Hendrik Ebbers schafft mit seiner offenen und
+        direkten Art eine entspannte, aber produktive Arbeitsatmosphäre, bei der man gerne aktiv am Seminar teilnimmt
+        und mitwirkt. Mir persönlich hat das Fach trotz initial weniger fachlicher Berührungspunkte ausgesprochen gut
+        gefallen. Ich würde die gleiche Wahl nochmal treffen.
+      </p>
+      <svg class="w-full h-full mt-6" width="700" height="2" viewBox="0 0 700 2" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.6" d="M0 1H700" stroke="#5CBA9E" stroke-dasharray="6 6" />
+      </svg>
+    </div>
+
   </div>
 </div>

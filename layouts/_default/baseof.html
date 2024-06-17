@@ -1,13 +1,17 @@
+{{ $prismJS := resources.Get "/prism/prism.js" -}}
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
-  <body >
-    <main class="overflow-hidden antialiased bg-gray" id="top">
-      {{ partial "navbar.html" . }}
-      {{ block "main" . }}
-      {{ end }}
-      {{ partial "footer.html" . }}
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  </body>
+{{ partial "head.html" . }}
+
+<body>
+  <main class="overflow-hidden antialiased bg-gray" id="top">
+    {{ partial "navbar.html" . }}
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "footer.html" . }}
+  </main>
+  <scrip src="{{ $prismJS.RelPermalink }}"></scrip>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
 </html>

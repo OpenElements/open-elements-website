@@ -1,0 +1,186 @@
+{{ define "main" }}
+
+{{ $heroTextBg := resources.Get "/illustrations/textbgchatbox.svg" }}
+{{ $heroTextBgSm := resources.Get "/illustrations/mm11.svg" }}
+{{ $supportCare := resources.Get "/images/support-dark-logo.png" }}
+{{ $owl := resources.Get "/images/owl.png" }}
+{{ $wave := resources.Get "/illustrations/bg-wave.svg" }}
+{{ $star := resources.Get "/illustrations/star.svg" }}
+{{ $round12 := resources.Get "/illustrations/round-12.svg" }}
+{{ $round22 := resources.Get "/illustrations/round22.svg" }}
+{{ $round23 := resources.Get "/illustrations/round23.svg" }}
+{{ $footerImage := resources.Get "/illustrations/img-311.png" }}
+<div class="pt-16 lg:pt-36 md:pt-28 sm:pt-24 bg-white relative" x-data="{ textLength: '', focus:false}"
+    @keydown.cmd.k.window.prevent="focus=true">
+    <div class="bg-green/20 backdrop-blur-2xl absolute inset-0 z-10" x-show="textLength.length > 0" x-cloak
+        x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200"
+        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+    <div class="flex flex-col items-center gap-0.5 container relative">
+
+        <img class="absolute sm:w-16 sm:h-16 w-12 h-12 right-0 sm:top-0 bottom-[-390%]"
+            src="{{ $star.RelPermalink }}" />
+        <img class="absolute w-32 -right-12 top-36 sm:block hidden" src="{{ $round22.RelPermalink }}" />
+        <img class="absolute w-72 -left-[10%] top-0 sm:block hidden" src="{{ $round23.RelPermalink }}" />
+
+        <h1 class="flex items-center justify-center w-full text-center h1 z-20">
+            <div class="relative z-0 flex items-center justify-center w-auto sm:px-24">
+                <img class="absolute w-full h-full sm:block hidden" src="{{ $heroTextBg.RelPermalink }}" />
+                <img class="absolute h-12 -right-4 sm:hidden" src="{{ $heroTextBgSm.RelPermalink }}" />
+                <span class="relative">{{.Params.title}}</span>
+            </div>
+        </h1>
+        <div class="flex items-center gap-3 z-20">
+            <p class="text-2xl font-bold text-blue">by</p>
+            <img class="w-full h-12 object-contain" src="{{ $supportCare.RelPermalink }}" />
+        </div>
+    </div>
+
+    <div class="container mt-12 z-10 relative">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="flex sm:flex-row flex-col-reverse items-center justify-center gap-5">
+                <img class="sm:w-20 sm:h-20 w-16 h-16 shrink-0" src="{{ $owl.RelPermalink }}" />
+
+                <div class="relative">
+                    <div
+                        class=" absolute sm:-left-2.5 sm:bottom-auto -bottom-2.5 sm:inset-y-1/2 inset-x-1/2 sm:-mt-2.5 -ml-2.5 sm:ml-0 w-5 h-5 shrink-0 border border-green bg-green-100 border-dashed sm:border-r-0 border-t-0 sm:border-l border-l-0 rotate-45">
+                    </div>
+                    <div
+                        class=" sm:text-3xl text-base font-bold text-blue bg-green-100 sm:rounded-3xl rounded-full sm:px-8 sm:py-6 px-4 py-3 border border-green border-dashed">
+                        Hi👋, how can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="w-full max-w-3xl mx-auto">
+                <div class="w-full mb-12 relative">
+                    <div
+                        class="relative sm:mt-12 mt-4 rounded-md shadow-sm flex sm:flex-row flex-col-reverse sm:gap-0 gap-2 items-center">
+                        <div
+                            class="sm:flex hidden absolute left-2.5 pointer-events-none w-12 h-12 shrink-0 items-center justify-center rounded-full">
+                            <span class="w-8 h-8 iconify text-blue/30 -mr-1" data-icon="iconamoon:search-light"></span>
+                        </div>
+                        <div class="sm:absolute right-2.5 sm:flex hidden items-center gap-5 sm:w-auto w-full">
+                            <div class="sm:flex pointer-events-none hidden items-center gap-2">
+                                <span class="w-5 h-5 iconify text-blue/30 -mr-1" data-icon="carbon:mac-command"></span>
+                                <p class="text-lg text-blue/30">+</p>
+                                <p class="text-xl text-blue/30">K</p>
+                            </div>
+                            <button
+                                class=" shadow-4 bg-green sm:w-12 w-full h-12 shrink-0 flex items-center justify-center rounded-full">
+                                <span class="sm:hidden text-base text-white font-bold mr-2">Search</Span>
+                                <span class="w-8 h-8 -rotate-45 iconify text-white -mr-1 -mt-1"
+                                    data-icon="lets-icons:send-hor-fill"></span>
+                            </button>
+
+                        </div>
+                        <input type="text" x-model="textLength" x-trap="focus" x-on:blur.leave="focus = false"
+                            class="block w-full rounded-full sm:h-16 h-14 border-2 sm:pl-16 pl-5 sm:pr-36 pr-5 border-green/40 focus:border-green shadow-4 text-lg text-blue sm:placeholder:text-left placeholder:text-center placeholder:text-blue placeholder:font-medium placeholder:text-opacity-60 focus:outline-none transition-colors ease-in-out duration-150"
+                            placeholder="Ask me something">
+                    </div>
+
+                    <div x-show="textLength.length > 0" x-cloak x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="rounded-[32px] overflow-hidden sm:absolute inset-x-0">
+                        <div
+                            class="bg-white rounded-[32px] h-80 shadow-4 border-2 border-green z-20 overflow-x-hidden scrollbar-thin scrollbar-thumb-blue overflow-y-auto will-change-scroll">
+                            <div class="flex flex-col ">
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy a smart contract with Java?
+                                    </p>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy a tellus velit diam dui neque?
+                                    </p>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy asemper turpis ultrices viverra rutrum ac tellus?
+                                    </p>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy a quisque consequat quisque tortor consequat?
+                                    </p>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy a amet viverra. Auctor ut tristique massa id lorem?
+                                    </p>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy a turpis ultrices viverra rutrum ac tellus?
+                                    </p>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center group gap-2.5 hover:bg-purple-100/70 py-2 first:pt-3 last:pb-3 transition-colors ease-in-out duration-150">
+                                    <span class="w-8 h-8 shrink-0 sm:block hidden iconify text-blue/30 ml-[18px]"
+                                        data-icon="iconamoon:search-light"></span>
+                                    <p
+                                        class="sm:text-lg text-base text-blue/60 group-hover:text-blue font-medium sm:pl-0 pl-5 transition-colors ease-in-out duration-150">
+                                        How can I deploy a tellus velit diam dui neque?
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button"
+                        class="sm:hidden relative  shadow-4 mt-3 bg-green sm:w-12 w-full h-12 shrink-0 flex items-center justify-center rounded-full">
+                        <span class="sm:hidden text-base text-white font-bold mr-2">Search</Span>
+                        <span class="w-8 h-8 -rotate-45 iconify text-white -mr-1 -mt-1"
+                            data-icon="lets-icons:send-hor-fill"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray relative -z-0 sm:-mt-[5%] sm:pb-0 pb-10">
+        <img class="w-full" src="{{ $wave.RelPermalink }}" />
+        <div class="container sm:-mt-[4%] -mt-[14%]">
+            <div
+                class="w-full flex lg:flex-row flex-col-reverse items-center justify-between lg:gap-16 gap-8 max-w-4xl mx-auto pb-12">
+                <p class="sm:text-lg text-base text-blue max-w-xl lg:text-left text-center">
+                    Welcome to XYZ et tristique egestas adipiscing. Neque venenatis mattis pharetra orci id viverra.
+                    Sapien praesent convallis diam vel. Ultrices diam imperdiet facilisi.
+                </p>
+                <img class="w-80 shrink-0" src="{{ $footerImage.RelPermalink }}" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{ end }}
