@@ -10,7 +10,7 @@ origin: https://www.heise.de/blog/Best-Practices-und-Anti-Pattern-beim-Logging-i
 preview_image: "/posts/2023-02-07-logging-in-java-and-other-languages/Java_Preview.jpg"
 ---
 
-One topic that every (Java) developer will have to deal with sooner or later is logging. While a simple %`System.out.println`% might suffice for small example programs, learning the programming language, or quickly debugging code, it is a definite no-go for the production operation of software. At this point, the output of an application must meet certain quality criteria to be used for verification, monitoring, and analysis of the application. For this reason, there is a plethora of logging frameworks and APIs, and it is often not easy for developers to decide which strategy is the right one.
+One topic that every (Java) developer will have to deal with sooner or later is logging. While a simple {{< highlight java "hl_inline=true">}}System.out.println{{< / highlight >}} might suffice for small example programs, learning the programming language, or quickly debugging code, it is a definite no-go for the production operation of software. At this point, the output of an application must meet certain quality criteria to be used for verification, monitoring, and analysis of the application. For this reason, there is a plethora of logging frameworks and APIs, and it is often not easy for developers to decide which strategy is the right one.
 
 Therefore, I have decided to write a series of best practice articles on the topic of logging. In this post, I will start with the general basics of logging. In the near future, there will not only be an overview of the various logging frameworks in the Java ecosystem but also an insight into how to approach the topic of logging in large software architectures. The logging topic package will be rounded off with an insight into "Centralized Logging" and modern tools that allow better storage and analysis of logs.
 
@@ -32,38 +32,38 @@ To better understand how we should use logging in our application, it is useful 
 
 However, even with these categories, one should not overdo it with logging. Care must be taken not to log information in a loop. Even though user inputs are considered external inputs, one should not log every keystroke directly. The following example shows an excerpt from a problematic log history where exactly this happened:
 
-```
+{{< highlight log >}}
 08:34:23 User mutates id field with new value 'J'
 08:34:23 User mutates id field with new value 'JA'
 08:34:23 User mutates id field with new value 'JAV'
 08:34:23 User mutates id field with new value 'JAVA'
-```
+{{< / highlight >}}
 
 One can easily imagine how difficult it becomes to extract important information from a log file with such entries.
 
 The same applies to log messages that contain too much information. Even if we know a user's birthday, we don't need to include this information in our log messages:
 
-```
+{{< highlight log >}}
 08:34:23 User 'Max' with birthday '01/01/1970' \
  mutates id field with new value 'JAVA'
-```
+{{< / highlight >}}
 
 While the username in the message can certainly be interesting for later analysis to relate this message to other log entries, the birthdate is rather distracting and makes reading the messages more complicated for the human eye.
 
 A third important point to always keep in mind when creating log messages is data sensitivity. While we have always seen the change of an ID in the log in the previous messages, the following message should never appear in a log file:
 
-```
+{{< highlight log >}}
 08:34:23 User 'Max' mutates password with new value '12#Agj!j7
-```
+{{< / highlight >}}
 
 In this case, logging would represent a real security vulnerability of the application. Sensitive data such as the user's password should, of course, never be visible in log messages.
 
 Based on the previous insights, the following log messages appear sensible and well-structured:
 
-```
+{{< highlight log >}}
 08:34:23 User 'Max' mutates id field with new value 'JAVA'
 08:34:23 User 'Max' mutates password
-```
+{{< / highlight >}}
 
 In addition to these tips, one should always ensure that the source code of an application is not so cluttered with log calls that the source code becomes unreadable and difficult to understand. The following snippet from a Java program shows what happens when logging calls are overdone:
 
