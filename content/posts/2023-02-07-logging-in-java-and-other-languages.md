@@ -89,7 +89,7 @@ users = manager.query("select * from users");
 manager.endTransaction();
 {{< / highlight >}}
 
-However, one should not completely omit logging, and perhaps this is exactly a place where one would like to see a lot of information in the logs. In this case, logging calls must be cleverly integrated into the structure and API of the application. All the information we saw in the first example could also be logged directly within the beginTransaction, query, and endTransaction methods. This way, the business logic is cleaned of logging calls, and we still get all the information.
+However, one should not completely omit logging, and perhaps this is exactly a place where one would like to see a lot of information in the logs. In this case, logging calls must be cleverly integrated into the structure and API of the application. All the information we saw in the first example could also be logged directly within the `beginTransaction`, `query`, and `endTransaction` methods. This way, the business logic is cleaned of logging calls, and we still get all the information.
 
 If it is not possible to place logging directly in the API for various reasons, complexity related to logging can also be relatively easily "hidden" in reusable lambdas or methods. The following example shows a generic function that executes a query within a transaction and continues to provide all necessary information as log messages:
 
@@ -120,7 +120,7 @@ Anyone who has ever worked with logging frameworks will certainly miss the loggi
 ![Logging level scale](/posts/2023-02-07-logging-in-java-and-other-languages/logging-level-scale.jpg)
 *The scale shows the logging levels.*
 
-As shown in the example image, let's assume we can use three different levels in our logging (note: depending on the specific logging framework, there are several more). At the ERROR level, we want to log all faulty behavior of the application, while we use the INFO level for general information about the application's process and status. With the DEBUG level, we log detailed information that is only important in exceptional cases. Java source code that uses the different levels in logging could look like this:
+As shown in the example image, let's assume we can use three different levels in our logging (note: depending on the specific logging framework, there are several more). At the `ERROR` level, we want to log all faulty behavior of the application, while we use the `INFO` level for general information about the application's process and status. With the `DEBUG` level, we log detailed information that is only important in exceptional cases. Java source code that uses the different levels in logging could look like this:
 
 {{< highlight java >}}
 try {
@@ -132,7 +132,7 @@ try {
 }
 {{< / highlight >}}
 
-At runtime, the logger's level can be configured to filter which messages should actually end up in the log. Typically, messages at the DEBUG level are filtered out and only included in the log during error analysis or similar scenarios. The advantage is that the application's source code does not need to be changed to obtain more information. Only the configuration needs to be adjusted, and this can even happen dynamically at runtime depending on the logging framework used. Additionally, such filtering can also be used to log different information in a test or production system.
+At runtime, the logger's level can be configured to filter which messages should actually end up in the log. Typically, messages at the `DEBUG` level are filtered out and only included in the log during error analysis or similar scenarios. The advantage is that the application's source code does not need to be changed to obtain more information. Only the configuration needs to be adjusted, and this can even happen dynamically at runtime depending on the logging framework used. Additionally, such filtering can also be used to log different information in a test or production system.
 
 ## A final logging concept
 
