@@ -35,7 +35,7 @@ In these versions, you could also ensure that a Java program could not use the J
 
 ## Changes in Tools or the JVM
 
-Changes in the tools or the JVM can also affect Java's backward compatibility. For example, with Java 10, the Java language was extended with the use of `var` through [JEP 286](https://openjdk.org/jeps/286){:target="_blank"}. This allows omitting the explicit type declaration for a variable when the compiler can infer it. Here's an example:
+Changes in the tools or the JVM can also affect Java's backward compatibility. For example, with Java 10, the Java language was extended with the use of `var` through [JEP 286](https://openjdk.org/jeps/286). This allows omitting the explicit type declaration for a variable when the compiler can infer it. Here's an example:
 
 {{< highlight java >}}
 var list = new ArrayList<String>(); // infers ArrayList<String>
