@@ -34,7 +34,7 @@ With Java 9, this approach has changed significantly. Instead of long-lasting re
 
 Since some of these features take longer to develop and have a significant impact on the Java platform, the preview and incubator status was introduced for JEPs. New APIs can already land in Java versions for testing through the latter before they become a final part of the Java class library in a future version. Such APIs are in a special incubator package and are only moved to their correct package with their final release. The preview status can be used to make new language features of the Java platform available in advance. Such features must be activated via a command-line parameter:
 
-{{< highlight java >}}
+{{< highlight bash >}}
 $ javac HelloWorld.java
 $ javac --release 14 --enable-preview HelloWorld.java
 $ java --enable-preview HelloWorld
