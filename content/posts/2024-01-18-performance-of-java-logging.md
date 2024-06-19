@@ -62,7 +62,7 @@ Another big difference can be seen when looking at the measurement values for sy
 
 ![Measurement Comparision](/posts/2024-01-18-performance-of-java-logging/measure-comparision-logging.jpg)
 
-The clearly higher performance is due to the fact that the write operation of the asynchronous loggers does not block. The Log4J2 and Chronicle Logger loggers use different internal libraries internally, but both are based on a "lock-free inter-thread communication library". While [LMAX Disruptor](https://github.com/LMAX-Exchange/disruptor) has to be added as a library for Log4J, which internally enables asynchronous logging via ring buffers, the Chronicle Logger is directly based on the [Chronicle Queue library](https://github.com/OpenHFT/Chronicle-Queue).
+The clearly higher performance is due to the fact that the write operation of the asynchronous loggers does not block. The Log4J2 and Chronicle Logger loggers use different libraries internally, but both are based on a "lock-free inter-thread communication library". While [LMAX Disruptor](https://github.com/LMAX-Exchange/disruptor) has to be added as a library for Log4J, which internally enables asynchronous logging via ring buffers, the Chronicle Logger is directly based on the [Chronicle Queue library](https://github.com/OpenHFT/Chronicle-Queue).
 
 ![Synchronous-Asynchronous Logging](/posts/2024-01-18-performance-of-java-logging/synchronous-asynchronous-logging.jpg)
 
