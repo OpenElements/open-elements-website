@@ -13,7 +13,7 @@ preview_image: "/posts/2023-02-07-logging-in-java-and-other-languages/Java_Previ
 One topic that every (Java) developer will have to deal with sooner or later is logging. 
 While a simple `System.out.println` might suffice for small example programs, learning the programming language, or quickly debugging code, it is a definite no-go for the production operation of software. 
 At this point, the output of an application must meet certain quality criteria to be used for verification, monitoring, and analysis of the application. 
-For this reason, there is a plethora of logging frameworks and APIs, and it is often not easy for developers to decide which strategy is the right one.
+For this reason, there is a wide range of logging frameworks and APIs, and it is often not easy for developers to decide which strategy is the right one.
 
 Therefore, I have decided to write a series of best practice articles on the topic of logging. 
 In this post, I will start with the general basics of logging. 
@@ -150,7 +150,7 @@ Anyone who has ever worked with logging frameworks will certainly miss the loggi
 We will take a closer look at this to conclude. 
 Although different loggers do not always define the same levels, they all have the same functionality: on a one-dimensional scale, the level indicates how important the message is in the context of all messages.
 
-![Logging level scale](/posts/2023-02-07-logging-in-java-and-other-languages/logging-level-scale.jpg)
+![Logging level scale](logging-level-scale.jpg)
 *The scale shows the logging levels.*
 
 As shown in the example image, let's assume we can use three different levels in our logging (note: depending on the specific logging framework, there are several more). 
