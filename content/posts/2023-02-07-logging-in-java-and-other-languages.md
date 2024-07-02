@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "Logging is an important instrument, but it's not easy to find the right amount of information to log. This post will show some best pratices that help to get the best results out of a logging system."
 categories: [Java]
 origin: https://www.heise.de/blog/Best-Practices-und-Anti-Pattern-beim-Logging-in-Java-und-anderen-Sprachen-7336005.html
-preview_image: "/posts/2023-02-07-logging-in-java-and-other-languages/Java_Preview.jpg"
+preview_image: "/posts/2023-02-07-logging-in-java-and-other-languages/java_preview.jpg"
 ---
 
 One topic that every (Java) developer will have to deal with sooner or later is logging. 
@@ -150,8 +150,12 @@ Anyone who has ever worked with logging frameworks will certainly miss the loggi
 We will take a closer look at this to conclude. 
 Although different loggers do not always define the same levels, they all have the same functionality: on a one-dimensional scale, the level indicates how important the message is in the context of all messages.
 
-![Logging level scale](logging-level-scale.jpg)
+
+{{< centered-image src="logging-level-scale.jpg" width="100%" showCaption="true" alt="The scale shows the logging levels.">}}
+
+![Logging level scale](/posts/2023-02-07-logging-in-java-and-other-languages/logging-level-scale.jpg)
 *The scale shows the logging levels.*
+
 
 As shown in the example image, let's assume we can use three different levels in our logging (note: depending on the specific logging framework, there are several more). 
 At the `ERROR` level, we want to log all faulty behavior of the application, while we use the `INFO` level for general information about the application's process and status. 
