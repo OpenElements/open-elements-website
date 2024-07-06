@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "As programming paradigms and language features continue to evolve, a question arises: Can Java still maintain the always advertised backwards compatibility?"
 categories: [Java]
 origin: https://www.heise.de/blog/Write-Once-Run-Anywhere-wie-abwaertskompatibel-ist-Java-eigentlich-wirklich-7342188.html
-preview_image: "/posts/2023-02-28-java-backwards-compatibility/Preview.jpg"
+preview_image: "/posts/2023-02-28-java-backwards-compatibility/preview.jpg"
 ---
 
 With the slogan "Write Once, Run Anywhere" (WORA), Sun Microsystems promoted the Java platform starting in 1995.
@@ -16,17 +16,16 @@ For example, a Java application compiled on Windows can run seamlessly on Linux 
 
 The second aspect of the slogan is Java's backward compatibility.
 Software compiled with one Java version should run without issues on future Java versions.
-However, this promise has changed significantly over the years.
+However, this promise has changed over the years.
 
 ## Backward Compatibility through Private APIs in the JCL
 
 Backward compatibility in Java has always been enabled by separating the public and private APIs in the Java Class Library (JCL).
-The JCL includes all classes of the Java API that we work with daily, such as `java.lang.String` or `java.util.List`.
+The JCL includes all classes of the Java API that we work with every day, such as `java.lang.String` or `java.util.List`.
 But it also contains more exotic classes like `sun.misc.Unsafe`.
 Together with the Java Virtual Machine (JVM) and various tools like the Java compiler (javac), the JCL defines the JDK for JavaSE that developers use daily.
 
-
-![Java Structure](/posts/2023-02-28-java-backwards-compatibility/java-structure.jpg)
+{{< centered-image src="/posts/2023-02-28-java-backwards-compatibility/java-structure.jpg" width="100%" showCaption="false" alt="Java Structure">}}
 
 The private API of the JCL is on the classpath but should never be used directly by applications.
 Internal changes in the OpenJDK are often implemented in this area, which could lead to potential changes in the interfaces of the private API.
@@ -40,7 +39,7 @@ However, this changed with Java 9 and the introduction of the module system.
 The module system allows hiding APIs from the outside world, making them usable only within their own module.
 This enabled the complete hiding of Java's private APIs.
 
-![Java Modules](/posts/2023-02-28-java-backwards-compatibility/java-modules.jpeg)
+{{< centered-image src="/posts/2023-02-28-java-backwards-compatibility/java-modules.jpg" width="100%" showCaption="false" alt="Java Modules">}}
 
 Since many programs and libraries used these private APIs, this change in Java 9 would have led to immense refactoring.
 Therefore, the OpenJDK decided that the private APIs from Java 9 to Java 15 could still be used, with only a warning issued when software accesses private APIs.
@@ -101,7 +100,7 @@ Here, all differences in the Java Class Library between two Java versions can be
 Since not only versions with Long-term Support (LTS) are listed but all major releases since Java 1.0, you can start adapting your software even before a new LTS version of Java is released.
 In addition to changes, the tool also shows all classes, functions, and other elements that have been annotated with `@Deprecated`.
 
-![New APIs in Java 17](/posts/2023-02-28-java-backwards-compatibility/java-new-apis.jpg)
+{{< centered-image src="/posts/2023-02-28-java-backwards-compatibility/java-new-apis.jpg" width="100%" showCaption="false" alt="New APIs in Java 17">}}
 
 ## What Does This Mean for Developers?
 
@@ -120,5 +119,3 @@ With Multi-Release JAR files ([JEP 238](https://openjdk.org/jeps/238)), JARs can
 
 Nevertheless, such changes result in more work for developers who wait a long time before switching between Java versions.
 However, if you always upgrade to the latest LTS version of Java and are familiar with the concepts and tools described here, the work generally remains manageable.
-
-(rme)
