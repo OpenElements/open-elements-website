@@ -9,7 +9,7 @@ etabliert.
 Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung
 von Java-Anwendungen auf der sicheren Seite zu sein.
 
-{{< centered-image src="temurin-support-care.svg" alt="Eclipse Temurin Support & care" width="80%" >}}
+{{< centered-image src="temurin-support-care.png" alt="Eclipse Temurin Support & care" width="80%" >}}
 
 Als professioneller Experte
 für [Eclipse Temurin](https://adoptium.net/temurin/) steht Open Elements Ihrem Unternehmen gerne zur Seite.
@@ -119,7 +119,7 @@ Die jeweiligen Downloads stehen Ihnen hier zur Verfügung:
 - Alle weitere Versionen (8, 12, ..,21) können über ähnliche Links erreicht werden
 - [Zugriff auf die Docker Container](https://hub.docker.com/_/eclipse-temurin)
 
-{{< centered-image src="TODO.png" showCaption="true" alt="Alle offen Bestandteile des Supply Chains von Temurin" width="80%" >}}
+{{< centered-image src="open-chain.png" showCaption="true" alt="Alle offen Bestandteile des Supply Chains von Temurin" width="94%" >}}
 
 ## Wer kümmert sich um die Instandhaltung und Wartung der Java Laufzeitumgebung?
 
