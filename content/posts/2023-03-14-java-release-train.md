@@ -1,10 +1,10 @@
 ---
 outdated: false
 showInBlog: true
-title: "Every Six Months an Update: The Path to the Current Java Release Train"
+title: "Every Six Months an Update: The Path to the Java Release Train"
 date: 2023-03-14
 author: hendrik
-excerpt: "In recent years, there have been various changes in the Java Release Train, leading to confusion and misunderstandings within the community."
+excerpt: "In recent years, there have been various changes in the Java Release Train, leading to confusion and misunderstandings within the community. This post will give an overview of the changes and how you can be better prepared for the next Java releases."
 categories: [Java]
 origin: https://www.heise.de/blog/Der-Java-Release-Train-7350614.html
 preview_image: "/posts/2023-03-14-java-release-train/Preview.jpg"
@@ -22,7 +22,7 @@ The following diagram shows the release date and lifecycle of Java 6, 7, and 8.
 The lifecycle of the versions is defined by the availability of free security updates for the respective version.
 Once there are no more free updates for a version, its lifecycle ends in the diagram.
 
-![Java Lifecycle](/posts/2023-03-14-java-release-train/lifecycle.jpg)
+{{< centered-image src="/posts/2023-03-14-java-release-train/lifecycle.jpg" width="100%" showCaption="false" alt="Java Lifecycle">}}
 
 In the diagram, you can see different points.
 It is important to note that there is always a period during which at least two releases with security updates are supported.
@@ -85,7 +85,7 @@ Consequently, Java 21 will be the next LTS release in September 2023.
 
 Based on these definitions, the release graph of Java versions since Java 9 looks as follows:
 
-![Java Releases](/posts/2023-03-14-java-release-train/releases.jpg)
+{{< centered-image src="/posts/2023-03-14-java-release-train/releases.jpg" width="100%" showCaption="false" alt="Java Releases">}}
 
 Since all work is done in OpenJDK, the release date of individual Java distributions may vary slightly.
 Once the release is published in OpenJDK, the work to create the distributions like Eclipse Temurin, Oracle JDK, or Azul Zulu begins.
@@ -94,5 +94,3 @@ Some, like Azul or Bellsoft, bundle JavaFX in their builds.
 
 In earlier versions, Oracle, in particular, tried to differentiate itself from other OpenJDK builds with tools like WebStart or Mission Control.
 However, this led to compatibility issues within the community and is fortunately no longer commonly practiced today.
-
-(rme)
