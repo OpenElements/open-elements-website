@@ -4,7 +4,7 @@ showInBlog: true
 title: "Java Without Headaches: Distributions and Support Beyond Oracle"
 date: 2023-08-03
 author: hendrik
-excerpt: "There isn't just one provider for Java distributions and support. Gartner has analyzed the options in a report, and Oracle doesn't fare well."
+excerpt: "There isn't just one provider for Java distributions and support. Gartner has analyzed the options in a report, and Oracle doesn't fare well. If you are searching for a good alternative to a costly Oracle contract, this post gives insights into alternative OpenJDK builds and Java distributions."
 categories: [Java]
 origin: https://www.heise.de/blog/Java-ohne-Kopfschmerzen-Distributionen-und-Support-jenseits-von-Oracle-9232113.html
 preview_image: "/posts/2023-08-03-distributions-and-support-without-oracle/preview.jpg"
@@ -31,7 +31,7 @@ With [over 200 million downloads](https://dash.adoptium.net/), no other Java dis
 This is [underscored by a recent Gartner report](https://www.gartner.com/en/documents/4540799), which predicts that by 2026, over 80% of all Java applications will not run on an Oracle distribution.
 Eclipse Temurin will likely take the largest share of this market.
 
-![Distributions Java](/posts/2023-08-03-distributions-and-support-without-oracle/distributions.jpeg)
+{{< centered-image src="/posts/2023-08-03-distributions-and-support-without-oracle/distributions.jpeg" width="100%" showCaption="false" alt="Distributions Java">}}
 
 ## Java Support
 
@@ -50,8 +50,7 @@ Therefore, now might be the right time to look at alternative Java support offer
 Organizations like Azul and the Eclipse Adoptium working group have responded to these events.
 Mike Milinkovich, the Executive Director of the [Eclipse Foundation](https://www.eclipse.org/), commented on the situation on X / Twitter:
 
-![Tweet Mike Milinkovich](/posts/2023-08-03-distributions-and-support-without-oracle/tweet.jpg)
-*(Picture: Twitter / X)*
+{{< centered-image src="/posts/2023-08-03-distributions-and-support-without-oracle/tweet.jpg" width="100%" showCaption="true" alt="(Picture: Twitter / X)">}}
 
 But beyond this comment, Adoptium has also taken action and set up a page for [commercial support for Eclipse Temurin](https://adoptium.net/temurin/commercial-support/).
 On this page, support for Eclipse Temurin is offered by three industry experts: Red Hat, IBM, and Open Elements.
@@ -63,5 +62,3 @@ Of course, this also means that every company must look beyond the horizon and e
 For companies that do not yet have a support contract, some of the offerings may be much more suitable than signing a contract directly with the giant Oracle.
 However, Oracle's offering also has its place and will be the right choice for some companies.
 Therefore, I do not want to present one offering as the winner here but rather highlight the diversity of options as a **win for the entire Java community**, thanks to companies like IBM, Red Hat, Azul, Open Elements, and of course, Oracle.
-
-(rme)
