@@ -31,7 +31,7 @@ With [over 200 million downloads](https://dash.adoptium.net/), no other Java dis
 This is [underscored by a recent Gartner report](https://www.gartner.com/en/documents/4540799), which predicts that by 2026, over 80% of all Java applications will not run on an Oracle distribution.
 Eclipse Temurin will likely take the largest share of this market.
 
-{{< centered-image src="/posts/2023-08-03-distributions-and-support-without-oracle/distributions.jpeg" width="100%" showCaption="false" alt="Distributions Java">}}
+{{< centered-image src="/posts/2023-08-03-distributions-and-support-without-oracle/distributions.jpg" width="100%" showCaption="false" alt="Distributions Java">}}
 
 ## Java Support
 
