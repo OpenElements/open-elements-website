@@ -4,13 +4,13 @@ showInBlog: true
 title: "Java's Module System: Help, My Dependencies Are Not Java Modules!"
 date: 2023-05-09
 author: hendrik
-excerpt: "With Java, you can now modularize applications quite well, but you also have to consider dependencies. When these are not Java modules, it gets interesting."
+excerpt: "With Java, you can now modularize applications quite well, but you also have to consider dependencies. When these are not Java modules, it gets interesting. In this post you can learn more about the Java module system and how it can be used in your projects."
 categories: [Java]
 origin: https://www.heise.de/blog/Javas-Modulsystem-Hilfe-meine-Abhaengigkeiten-sind-keine-Java-Module-7536607.html
 preview_image: "/posts/2023-05-09-java-module-system/preview.jpg"
 ---
 
-In a [previous post](https://www.heise.de/blog/Softwareentwicklung-Minimale-Unterstuetzung-fuer-das-Java-Modulsystem-7434695.html), I wrote about minimal support for the Java Module System (Java Platform Module System, JPMS) and how you can help achieve it.
+In a [previous post](https://open-elements.com/posts/2024/01/11/software-development-minimal-support-for-the-java-module-system/), I wrote about minimal support for the Java Module System (Java Platform Module System, JPMS) and how you can help achieve it.
 However, it can always happen that libraries do not support the Java module system, and it is also not foreseeable that they will be available as "automatic modules" in the future.
 
 If you want to migrate your own code to JPMS and depend on such libraries, you sometimes have to resort to tricks.
@@ -22,7 +22,7 @@ Although I feel more at home with Maven, I recently worked on migrating a large 
 Since the project is open source, it can be easily [viewed on GitHub](https://github.com/hashgraph/hedera-services).
 At the beginning of the migration, this project had a multitude of dependencies that did not support the Java module system.
 For some, we were able to achieve a sustainable solution by creating direct pull requests (PRs) at the respective projects to add an `Automatic-Module-Name`.
-I have already described in the [previous post on this topic](https://www.heise.de/blog/Softwareentwicklung-Minimale-Unterstuetzung-fuer-das-Java-Modulsystem-7434695.html) how you can easily achieve this using a Maven or Gradle plugin.
+I have already described in the [previous post on this topic](https://open-elements.com/posts/2024/01/11/software-development-minimal-support-for-the-java-module-system/) how you can easily achieve this using a Maven or Gradle plugin.
 An example of such a PR can be found [here](https://github.com/offbynull/portmapper/pull/48).
 
 However, there are also dependencies for which you cannot simply create such a PR or where the PR is not accepted.
@@ -66,5 +66,3 @@ For anyone who wants to go deeper into this topic, Jendrik has hosted several vi
 However, one last major problem cannot be solved even with the implementations presented here: As soon as a JAR violates the package split constraints of the Java module system, it cannot be added to the module path.
 In this case, much more far-reaching steps must be taken.
 However, I will address this point in a future post.
-
-(rme)
