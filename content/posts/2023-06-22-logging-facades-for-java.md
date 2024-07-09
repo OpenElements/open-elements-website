@@ -4,13 +4,13 @@ showInBlog: true
 title: "Logging Facades for Java"
 date: 2023-06-22
 author: hendrik
-excerpt: "Logging is an important part of error analysis. However, consolidating different logging libs in Java applications is always a challenge."
+excerpt: "Logging is an important part of error analysis. However, consolidating different logging libs in Java applications is always a challenge. If you want to know how several different logging libs in a single application can be handled, this post is for you."
 categories: [Java]
 origin: https://www.heise.de/blog/Logging-Facades-fuer-Java-7355974.html
 preview_image: "/posts/2023-06-22-logging-facades-for-java/preview.jpg"
 ---
 
-After covering best practices and pitfalls in the [first post on Java logging](https://www.heise.de/blog/Best-Practices-und-Anti-Pattern-beim-Logging-in-Java-und-anderen-Sprachen-7336005.html), I now want to look at using logging in a large project.
+After covering best practices and pitfalls in the [first post on Java logging](https://open-elements.com/posts/2023/02/07/best-practices-and-anti-pattern-for-logging-in-java-and-other-languages/), I now want to look at using logging in a large project.
 Problems often arise in this area between different logging frameworks, and consolidating the entire application logging can sometimes be difficult.
 
 To better understand the issue, I'll start with a very simple example, almost the "Hello World" of logging.
@@ -30,7 +30,7 @@ public class HelloLogging {
 Even in this trivial application, logging can be configured through the features of the logging framework, in this example `java.util.Logging` (JUL), and output to a file or the console (shell).
 The following diagram shows the structure and configuration of logging in a schematic layout.
 
-![Logging Structure](/posts/2023-06-22-logging-facades-for-java/structure-logging.jpg)
+{{< centered-image src="/posts/2023-06-22-logging-facades-for-java/structure-logging.jpg" width="100%" showCaption="false" alt="Logging Structure">}}
 
 ## A Realistic Scenario
 
@@ -40,14 +40,14 @@ Since the developers of these libraries also want to output information about it
 However, these libraries do not use `java.util.Logging`, but rather other logging libraries.
 As you can see in the following diagram, we assume that [Log4J2](https://logging.apache.org/log4j/2.x/) and [Logback](https://github.com/qos-ch/logback) are in use.
 
-![Log4J2 and Logback Structure](/posts/2023-06-22-logging-facades-for-java/application-logging.jpg)
+{{< centered-image src="/posts/2023-06-22-logging-facades-for-java/application-logging.jpg" width="100%" showCaption="false" alt="Log4J2 and Logback Structure">}}
 
 Now we have the problem that the logging of our application is handled by three different logging frameworks.
 Although Log4J and Logback also offer enough configuration options, since the logging frameworks do not synchronize with each other, it would be a really dumb idea to have all frameworks write to the same file.
 It can happen that several of the frameworks write to the same line, resulting in an unreadable jumble of randomly strung together text snippets or even deadlocks.
 Another idea is to have each framework log to its own file, as indicated in the following diagram.
 
-![File Per Framework Structure](/posts/2023-06-22-logging-facades-for-java/extended-application-logging.jpg)
+{{< centered-image src="/posts/2023-06-22-logging-facades-for-java/extended-application-logging.jpg" width="100%" showCaption="false" alt="File Per Framework Structure">}}
 
 This setup causes the loggings to act completely independently of each other and not get in each other's way.
 This results in clean logging, but it is distributed across multiple files that you have to synchronize manually or with the help of tools.
@@ -91,7 +91,7 @@ Such bindings are not needed at compile time and can therefore be specified as a
 Since SLF4J internally uses the Java SPI, no code needs to be adapted to use the concrete logging implementation.
 We can now use this feature for our sample application:
 
-![Example Application Structure](/posts/2023-06-22-logging-facades-for-java/example-application-logging.jpg)
+{{< centered-image src="/posts/2023-06-22-logging-facades-for-java/example-application-logging.jpg" width="100%" showCaption="false" alt="Example Application Structure">}}
 
 In the diagram, Log4J2 is used as the logging implementation, and by adding a suitable binding, all log messages created via the `org.slf4j.Logger` logger are automatically forwarded to Log4J2.
 Since in this example our "Database lib" dependency apparently also uses Log4J2, the messages from different internal and external modules are thus handled directly via Log4J2.
@@ -111,13 +111,11 @@ For Log4J2, for example, the following dependency must be added if you want to f
 
 By adding this dependency, which you should preferably only add to the runtime classpath, a logging flow is created as shown in the following diagram:
 
-![Logging History](/posts/2023-06-22-logging-facades-for-java/history-logging.jpg)
+{{< centered-image src="/posts/2023-06-22-logging-facades-for-java/history-logging.jpg" width="100%" showCaption="false" alt="Logging History">}}
 
 SLF4J provides a good overview of the integration through bindings and adapters for various logging libraries [on their website](https://www.slf4j.org/legacy.html).
 
 If we now look at our sample application based on these findings, we can achieve our goal by adding an adapter for Logback.
 As shown in the following diagram, all log messages of the entire system are routed via Log4J2, and we thus have the advantage that we only have to document one central location.
 
-![Central Logging](/posts/2023-06-22-logging-facades-for-java/central-logging.jpg)
-
-(rme)
+{{< centered-image src="/posts/2023-06-22-logging-facades-for-java/central-logging.jpg" width="100%" showCaption="false" alt="Central Logging">}}
