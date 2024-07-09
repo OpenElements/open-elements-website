@@ -1,10 +1,10 @@
 ---
 outdated: false
 showInBlog: true
-title: "Programming language Java: Detecting NullPointerExceptions with Static Code Analysis"
+title: "Detecting NullPointerExceptions with Static Code Analysis"
 date: 2023-04-18
 author: hendrik
-excerpt: "NullPointerExceptions are one of the most common sources of errors in Java. However, these errors can be significantly minimized through static code analysis."
+excerpt: "NullPointerExceptions are one of the most common sources of errors in Java. However, these errors can be significantly minimized through static code analysis. This post gives an overview of annotations can be used to handle 'null' in Java in a better way."
 categories: [Java]
 origin: https://www.heise.de/blog/Programmiersprache-Java-Null-Fehler-mit-statischer-Analyse-aufspueren-7351944.html
 preview_image: "/posts/2023-04-18-detect-null-errors-with-static-analysis/preview.jpg"
@@ -108,5 +108,3 @@ The abundance of tools and libraries unfortunately does not make it easy to find
 When I delved deeper into the topic, I was shocked that much in this area is still not defined by standards or generally used best practices.
 While there have been various approaches such as [JSR305](https://jcp.org/en/jsr/detail?id=305), these have always run aground at some point and are now used in a wild mix.
 Therefore, I will also dedicate a separate post to this problem in the near future.
-
-(rme)
