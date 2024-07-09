@@ -1,10 +1,10 @@
 ---
 outdated: false
 showInBlog: true
-title: "Software Development: Minimal Support for the Java Module System"
+title: "Minimal Support for the Java Module System"
 date: 2024-01-11
 author: hendrik
-excerpt: "The Java Module System remains an underutilized feature in the development of applications and libraries, despite its often straightforward entry point."
+excerpt: "The Java Module System remains an underutilized feature in the development of applications and libraries, despite its often straightforward entry point. Anyway, more and more libraries provide support for the module system. Based on that it might make sense to learn how you can add support to your project."
 categories: [Java]
 origin: https://www.heise.de/blog/Softwareentwicklung-Minimale-Unterstuetzung-fuer-das-Java-Modulsystem-7434695.html
 preview_image: "/posts/2024-01-11-java-module-system/preview.jpg"
@@ -68,5 +68,3 @@ tasks.jar {
 Since these changes are very simple, they are also ideal for offering as a pull request for open-source libraries.
 [In one example](https://github.com/offbynull/portmapper/pull/48), I added a PR to define an `Automatic-Module-Name` to an open-source Java library.
 Perhaps an open-source developer is reading this and will create a "Good First Issue" for such a change to their libraries, which could be implemented by newcomers during events like [Hacktoberfest](https://hacktoberfest.com/).
-
-(rme)
