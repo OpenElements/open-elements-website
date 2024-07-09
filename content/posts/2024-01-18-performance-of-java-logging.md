@@ -1,7 +1,7 @@
 ---
 outdated: false
 showInBlog: true
-title: "Software Development: Performance of Java Logging"
+title: "Performance of Java Logging"
 date: 2024-01-18
 author: hendrik
 excerpt: "For Java, there is an abundance of different logging libraries and possibilities to output log messages. But which of them are really performant?"
@@ -10,7 +10,7 @@ origin: https://www.heise.de/blog/Softwareentwicklung-Die-Performance-von-Java-L
 preview_image: "/posts/2024-01-18-performance-of-java-logging/preview.jpg"
 ---
 
-In the previous posts on the topic of Java Logging ([Best Practices](https://www.heise.de/blog/Best-Practices-und-Anti-Pattern-beim-Logging-in-Java-und-anderen-Sprachen-7336005.html), [Logging Facades](https://www.heise.de/blog/Logging-Facades-fuer-Java-7355974.html)) I already mentioned that there is a multitude of Java libraries on the topic of logging.
+In the previous posts on the topic of Java Logging ([Best Practices](https://open-elements.com/posts/2023/02/07/best-practices-and-anti-pattern-for-logging-in-java-and-other-languages/), [Logging Facades](https://open-elements.com/posts/2023/06/22/logging-facades-for-java/)) I already mentioned that there is a multitude of Java libraries on the topic of logging.
 After we clarified in the last post how to combine different loggers with a facade, we now want to look at the performance of logging libraries.
 
 ## Performance Measurement in Java
@@ -59,7 +59,7 @@ On the other hand, however, they also brought to light a few insights that are c
 
 The following is an overview of measurement results for simple logging of a "Hello World" message:
 
-![Measurement Results for "Hello World"](/posts/2024-01-18-performance-of-java-logging/measure-logging.jpg)
+{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/measure-logging.jpg" width="100%" showCaption="false" alt="Measurement Results">}}
 
 ## The Problem with the Console
 
@@ -74,13 +74,13 @@ Another big difference can be seen when looking at the measurement values for sy
 Here it immediately becomes clear that asynchronous logging is significantly faster.
 The following tables show the measurement values of asynchronous logging compared to synchronous logging:
 
-![Measurement Comparision](/posts/2024-01-18-performance-of-java-logging/measure-comparision-logging.jpg)
+{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/measure-comparision-logging.jpg" width="100%" showCaption="false" alt="Measurement Comparision">}}
 
 The clearly higher performance is due to the fact that the write operation of the asynchronous loggers does not block.
 The Log4J2 and Chronicle Logger loggers use different libraries internally, but both are based on a "lock-free inter-thread communication library".
 While [LMAX Disruptor](https://github.com/LMAX-Exchange/disruptor) has to be added as a library for Log4J, which internally enables asynchronous logging via ring buffers, the Chronicle Logger is directly based on the [Chronicle Queue library](https://github.com/OpenHFT/Chronicle-Queue).
 
-![Synchronous-Asynchronous Logging](/posts/2024-01-18-performance-of-java-logging/synchronous-asynchronous-logging.jpg)
+{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/synchronous-asynchronous-logging.jpg" width="100%" showCaption="false" alt="Synchronous-Asynchronous Logging">}}
 
 A concrete description of the internally used libraries and how they enable asynchronous communication or writing to the file system can be found in the documentation.
 
@@ -92,7 +92,7 @@ As a reason, I suspect that the used Chronicle Queue manages the binary data for
 However, this still needs to be further investigated.
 The following table shows an overview of the variance:
 
-![Overview Variance](/posts/2024-01-18-performance-of-java-logging/variance-logging-performance.jpg)
+{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/variance-logging-performance.jpg" width="100%" showCaption="false" alt="Overview Variance">}}
 
 ## Conclusion
 
@@ -102,5 +102,3 @@ It also shows that the use of asynchronous loggers can make sense if the perform
 Of course, this comes with higher complexity and additional transitive dependencies.
 Ultimately, each project must still decide for itself which logger is most sensible.
 However, with the figures mentioned here, you now have another basis for determining this.
-
-(rme)
