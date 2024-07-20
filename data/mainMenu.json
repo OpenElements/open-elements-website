@@ -63,7 +63,7 @@
     "altI18nKey": "digitalTrustLectureDescription",
     "link": "/dlt-lecture/",
     "visibleInNavigation": false,
-    "visibleInFooter": false
+    "visibleInFooter": true
   },
   {
     "name": "About us",
