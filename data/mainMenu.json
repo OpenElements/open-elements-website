@@ -8,53 +8,11 @@
     "visibleInFooter": true
   },
   {
-    "name": "Blog",
-    "i18nKey": "blog",
-    "altI18nKey": "blogDescription",
-    "link": "/posts/",
-    "visibleInNavigation": true,
-    "visibleInFooter": true
-  },
-  {
     "name": "Support & Care",
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",
-    "link": "#",
+    "link": "/support-care-maven/",
     "visibleInNavigation": true,
-    "visibleInFooter": true,
-    "children": [
-      {
-        "name": "About Support & Care",
-        "i18nKey": "aboutSupportCare",
-        "altI18nKey": "aboutSupportCareDescription",
-        "link": "/about-support-care/",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
-      },
-      {
-        "name": "Support & Care for Maven",
-        "i18nKey": "mavenSupport",
-        "altI18nKey": "mavenSupportDescription",
-        "link": "/support-care-maven/",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
-      },
-      {
-        "name": "Support & Care for Temurin",
-        "i18nKey": "temurinSupport",
-        "altI18nKey": "temurinSupportDescription",
-        "link": "/support-care-temurin/",
-        "visibleInNavigation": true,
-        "visibleInFooter": true
-      }
-    ]
-  },
-  {
-    "name": "Digital Trust Lecture",
-    "i18nKey": "digitalTrustLecture",
-    "altI18nKey": "digitalTrustLectureDescription",
-    "link": "/dlt-lecture/",
-    "visibleInNavigation": false,
     "visibleInFooter": true
   },
   {
