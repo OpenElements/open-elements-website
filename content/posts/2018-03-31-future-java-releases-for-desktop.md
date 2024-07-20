@@ -6,7 +6,7 @@ author: hendrik
 categories: [General]
 excerpt: "Java 11 will mean the end of Java Web Start. Let's see what this means for legacy desktop apps and how developers can be ready for the change."
 origin: https://dzone.com/articles/what-the-future-java-releases-will-mean-for-legacy
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 This article will give an overview of the changes in future Java versions based on the new release train and Oracle's decision to remove deprecated and old parts of the JRE. Since some of the removed parts are critical for developers that create desktop applications with Java, this article will have a deeper look at the planned changes in that area. One thing that will affect several companies and developers is the planned removal of Java Web Start with Java 11. Based on this, the article will give an overview of future Java Web Start support.
 

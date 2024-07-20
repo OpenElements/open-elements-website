@@ -6,7 +6,7 @@ date: "2012-11-17"
 author: hendrik
 categories: [JavaFX, Swing]
 excerpt: 'JavaFX is the new UI API for Java Desktop applications and since summer it is part of Java 7. In this post I share my thought about the new UI toolkit and what such move means for Swing development'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 JavaFX is the new UI API for Java Desktop applications and since summer it is part of Java 7. So every new Java Runtime is shipped with JavaFX. I think it's the perfect time to play with this great API and learn how to create cool applications with a better user experience than ever before.
 

@@ -6,7 +6,7 @@ date: "2013-05-11"
 author: hendrik
 categories: [General]
 excerpt: 'The JavaFX community is really growing and more and more open source frameworks and first real business applications appear on the internet. This post gives an overview of some helpfull APIs and how they can be used in enterprise projects'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 The JavaFX community is really growing and more and more open source frameworks and first real business applications appear on the internet.
 

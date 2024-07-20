@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "With Java, you can now modularize applications quite well, but you also have to consider dependencies. When these are not Java modules, it gets interesting. In this post you can learn more about the Java module system and how it can be used in your projects."
 categories: [Java]
 origin: https://www.heise.de/blog/Javas-Modulsystem-Hilfe-meine-Abhaengigkeiten-sind-keine-Java-Module-7536607.html
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 
 In a [previous post](https://open-elements.com/posts/2024/01/11/software-development-minimal-support-for-the-java-module-system/), I wrote about minimal support for the Java Module System (Java Platform Module System, JPMS) and how you can help achieve it.

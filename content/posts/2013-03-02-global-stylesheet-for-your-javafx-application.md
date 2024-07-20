@@ -6,7 +6,7 @@ date: "2013-03-02"
 author: hendrik
 categories: [General, JavaFX]
 excerpt: 'There is a way to set a global Stylesheet to all JavaFX Scenes in your app. By using the JavaFX 8 class StyleManager you can define the default CSS files.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 You can style your JavaFX [Scene](http://docs.oracle.com/javafx/2/api/javafx/scene/Scene.html) by CSS as you can read [here]({{< ref "/posts/2013-01-16-this-is-for-the-native-ones" >}}) and [here](http://docs.oracle.com/javafx/2/css_tutorial/jfxpub-css_tutorial.htm). All this examples show how to apply a specific Stylesheet to one Scene by using
 

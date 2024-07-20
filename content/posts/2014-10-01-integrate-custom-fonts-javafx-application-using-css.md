@@ -5,7 +5,7 @@ date: "2014-10-01"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This CSS trick will show how you can change to font for a complete application or only a specific control by using CSS.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 This is one of the CSS tips that were part of my "Extreme Guimaker" talk at JavaOne this year and will show how you can change the font for a complete application or only a specific control by using CSS.
 

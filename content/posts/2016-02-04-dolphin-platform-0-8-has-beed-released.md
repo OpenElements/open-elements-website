@@ -6,7 +6,7 @@ date: "2016-02-04"
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer]
 excerpt: 'The 0.8 version of Dolphin Platform provides several new features like Java Bean Validation support of new bindings for JavaFX.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Yesterday we released version 0.8 of Dolphin Platform. The version contains several bugfixes and some new features that I want to show here.
 

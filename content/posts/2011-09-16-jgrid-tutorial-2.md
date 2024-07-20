@@ -7,7 +7,7 @@ author: hendrik
 categories: [Swing]
 excerpt: 'I created a series of tutorials to get familiar with JGrid. This is the second out of five tutorials.'
 slug: jgrid-tutorial-2
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 After we created a simple JGrid (see [tutorial #1]({{< ref "/posts/2011-09-14-jgrid-tutorial-1" >}}) we want to modify the look now. The JGrid has a lot of getter/setter to change the visualization of the grid. Read the JavaDoc for a complete overview of all properties.
 

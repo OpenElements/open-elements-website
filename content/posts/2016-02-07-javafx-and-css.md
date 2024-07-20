@@ -5,7 +5,7 @@ date: "2016-02-07"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'One of the cool features of JavaFX is the CSS support. By using CSS you can simply style a single control or a complete application. This post gives a first introduction to the CSS usage and API in JavaFX'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 One of the cool features of JavaFX is the CSS support. By using CSS you can simply style a single control or a complete application. The CSS support in JavaFX is based on the W3C CSS version 2.1. There are some minor differences that can be found in the [JavaFX CSS documentation](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html) that is the best source to check a specific property or value type when using CSS in JavaFX.
 

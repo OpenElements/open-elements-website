@@ -6,7 +6,7 @@ date: "2012-10-28"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Sometimes you work with an raw Eclipse project without maven based dependency management for example. Maybe your builds still run with ant and all dependencies are configured in Eclipse. With a few tricks you can add JavaFX support to this projects on an easy way.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Sometimes you work with an raw Eclipse project without maven based dependency management for example. Maybe your builds still run with ant and all dependencies are configured in Eclipse. With a few tricks you can add JavaFX support to this projects on an easy way:
 

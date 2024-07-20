@@ -6,7 +6,7 @@ date: "2014-03-28"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Because the JavaFX API was designed for Java 8 it provides a lot of Lambda support and callbacks are used a lot. But next to the default JavaFX APIs there are currently an open source projects that adds a lot of reactive design and architecture to the JavaFX basics: ReactFX.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Java 8 is finally released and Lambda expression are an official part of Java. Thanks to this it's much easier to write applications in a reactive way. One of the main concepts in reactive architecture is an __event driven design__. [The reactive manifesto](http://www.reactivemanifesto.org/) contains the following about event driven design:
 

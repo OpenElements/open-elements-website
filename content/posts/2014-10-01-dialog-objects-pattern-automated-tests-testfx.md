@@ -5,7 +5,7 @@ date: "2014-10-01"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'When developing an application you should add automated tests. Oh, sorry - I mean you MUST add automated test. This post introduces a pattern that help to create reuaseable and maintainable tests'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 When developing an application you should add automated tests. Oh, sorry - I mean you MUST add automated test. So when developing a JavaFX application there will come the moment when you ask yourself "How should I test this UI? A normal JUnit tests won't work here..."
 

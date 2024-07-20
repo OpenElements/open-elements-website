@@ -6,7 +6,7 @@ date: "2013-01-10"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'In this post I will explain the basic JavaFX Property API. I will first explain the old Swing way to better understand the idea of the new API and all problems that are solved by it.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 In this post I will explain the basic JavaFX Property API because most of the planed future tutorials will depend on Properties. I will first explain the old Swing way to better understand the idea of the new API and all problems that are solved by it.
 

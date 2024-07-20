@@ -6,7 +6,7 @@ date: "2015-09-09"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'Some days ago I was asked at twitter about a responsive layout problem in JavaFX. Here I will show how a first solution to create such a responsive layout.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Some days ago [I was asked at twitter about a responsive layout problem in JavaFX](https://twitter.com/j_e_willis/status/641000236119257088). Based on the work that I did with [ResponsiveFX]({{< ref "/posts/2014-11-04-responsive-design-javafx" >}}) I was asked how I would create a specific responsive behavior.
 

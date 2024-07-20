@@ -6,7 +6,7 @@ date: "2014-01-24"
 author: hendrik
 categories: [DataFX]
 excerpt: 'The post shows all the main specifications of Java EE and describes how the are supported by DataFX and how a JavaFX application can use them'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 At [JavaOne](http://www.oracle.com/javaone/) [Arun Gupta](https://www.java.net//blogs/arungupta) gave me a copy of his ["Java EE 7 Essentials" book](http://www.amazon.com/Java-EE-Essentials-Arun-Gupta/dp/1449370179). I don't want to write a complete review of the book, but if you are interested in the Java EE platform this book is perfect. It covers all the different specifications that are new or polished in Java EE 7 in several chapters and gives a very good overview to all the technologies and how to use them.
 

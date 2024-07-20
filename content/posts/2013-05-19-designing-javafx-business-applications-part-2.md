@@ -6,7 +6,7 @@ date: "2013-05-19"
 author: hendrik
 categories: [General, JavaFX]
 excerpt: 'This is the second part of my series about JavaFX architecture and best practice for (business) application.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 This is the second part of my series about JavaFX architecture and best practice for (business) application. You can find the first part about middleware [here]({{< ref "/posts/2013-05-11-designing-javafx-business-applications-part-1" >}}).
 

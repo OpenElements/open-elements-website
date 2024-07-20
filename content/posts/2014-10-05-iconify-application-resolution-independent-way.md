@@ -6,7 +6,7 @@ date: "2014-10-05"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Often icons are very important for a good UI. They will create a modern and professional look and will help the user to understand the meaning of actions.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Often icons are very important for a good UI. They will create a modern and professional look and will help the user to understand the meaning of actions. Especially on small screens icons are important. For a mobile application you won't create a toolbar with 5 actions that are described by a long text. In the following screenshot 3 actions are defined in the toolbar by using only icon:
 

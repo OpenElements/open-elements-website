@@ -6,7 +6,7 @@ date: "2015-09-06"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This post shows how you can create UIs by using metadata and the projection pattern in JavaFX. By doing so all developers can create cool UIs.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Some weeks ago I blogged about [my first Material Design approach in JavaFX]({{< ref "/posts/2015-07-10-material-design-in-javafx" >}}). But the project contains more than just some new styles for JavaFX. In the project I tried some technics to create good looking application without spending much time in styling. Therefore I created some basic Java layout and styles that will automatically be used for specific data types. It's like projecting the raw data in a nice UI. The basic idea of this approach evolved after some discussions with [Dierk König](https://twitter.com/mittie). In addition Twitter Bootstrap already offers some styles and layouts that I reused here.
 

@@ -6,7 +6,7 @@ date: "2014-11-01"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'If DataFX should become an implementation of the JSR specification it must implement general interfaces and support a toolkit independent architecture.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Maybe you have mentioned that [Andres Almiray](https://twitter.com/aalmiray) is planing [a new desktop application framework JSR](http://www.jroller.com/aalmiray/entry/new_desktop_application_framework_jsr). I had a chat with him some days ago at the canoo hq and we discussed some points of this project. In addition Andres gave me an introduction to [Griffon](http://griffon.codehaus.org) and I showed him [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}).
 

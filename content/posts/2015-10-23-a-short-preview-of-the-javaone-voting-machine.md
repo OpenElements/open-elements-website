@@ -6,7 +6,7 @@ date: "2015-10-23"
 author: hendrik
 categories: [IoT, JavaFX]
 excerpt: 'Today I want to give a short preview of the JavaOne Voting Machine that is build for this year JavaOne as a cooperative project by Canoo and Oracle.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Today I want to give a short preview of the JavaOne Voting Machine that is build for this year JavaOne as a cooperative project by Canoo and Oracle.
 

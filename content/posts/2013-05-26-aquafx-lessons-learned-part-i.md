@@ -6,7 +6,7 @@ date: "2013-05-26"
 author: claudine
 categories: [AquaFX, JavaFX]
 excerpt: 'During the work on AquaFX there were some obstacles that needed to be overcome. In this article I want to summarize information, so that they might help people who just face the same questions, as I had.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 During the work on AquaFX there were some obstacles that needed to be overcome. With some research, the [CSS Reference Guide](http://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html) and the help of google, most answers definitely can be found, so please don't be angry with me when those tips might be obvious for you. In this article I want to summarize information, so that they might help people who just face the same questions, as I had. And don't hesitate to contact me/ comment when you know a better way for some things or think they might be wrong :-)
 

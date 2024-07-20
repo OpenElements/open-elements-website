@@ -6,7 +6,7 @@ date: "2015-02-13"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'This is a short overview of the controller and flow API of DataFX with some small examples'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 This is a short overview of the controller and flow API of DataFX that I have written for the [JSR377 mailing list](http://jsr377-api.40747.n7.nabble.com/Application-Framework-Architecture-td31.html#a52). If you want to discuss the architecture in general please add a reply to the mailing list.
 

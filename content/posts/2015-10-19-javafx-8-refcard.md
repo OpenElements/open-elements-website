@@ -6,7 +6,7 @@ date: "2015-10-19"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'Together with Michael Heinrichs I created a JavaFX 8 RefCard for DZone. The RefCard gives an overview of the most important JavaFX APIs like CSS, Properties or Controls.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Together with [Michael Heinrichs](https://twitter.com/net0pyr) and [DZone](http://DZone) I created a JavaFX 8 RefCard.
 

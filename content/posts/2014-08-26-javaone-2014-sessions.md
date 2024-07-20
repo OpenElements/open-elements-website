@@ -6,7 +6,7 @@ date: "2014-08-26"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This is an overview of my JavaOne 2014 JavaFX sessions'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Uh, as a featured speaker I will give a lot sessions this year at JavaOne. This is the main reason why I found no time to blog about JavaFX the last weeks ;)
 

@@ -6,7 +6,7 @@ date: "2012-11-01"
 author: hendrik
 categories: [General, Vagrant-Binding]
 excerpt: ' With the Vagrant-Binding you can put the automation in Java on the next level. The library is a wrapper around Vagrant that let you easily manage virtual machines from Java code at runtime.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Today I want to introduce the [Vagrant-Binding Java API](https://github.com/guigarage/vagrant-binding). The API is build on top of the OpenSource Tool [Vagrant](http://vagrantup.com). Vagrant is a ruby based tool for virtual machine automation. With Vagrant you can set up complex virtual systems in only a few minutes. Every vm that is created with Vagrant based on a config-file that describes the configuration of the virtual machine and all installed software on it. You can configure a Ubuntu 64 bit vm with a running MySql server for example. With the Java API "Vagrant-Binding" you can put the automation on the next level.
 

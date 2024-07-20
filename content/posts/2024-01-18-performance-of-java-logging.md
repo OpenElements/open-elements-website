@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "For Java, there is an abundance of different logging libraries and possibilities to output log messages. But which of them are really performant?"
 categories: [Java]
 origin: https://www.heise.de/blog/Softwareentwicklung-Die-Performance-von-Java-Logging-9278737.html
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/duke-yellow.svg"
 ---
 
 In the previous posts on the topic of Java Logging ([Best Practices](https://open-elements.com/posts/2023/02/07/best-practices-and-anti-pattern-for-logging-in-java-and-other-languages/), [Logging Facades](https://open-elements.com/posts/2023/06/22/logging-facades-for-java/)) I already mentioned that there is a multitude of Java libraries on the topic of logging.

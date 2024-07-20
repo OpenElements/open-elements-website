@@ -6,7 +6,7 @@ date: "2014-06-10"
 author: hendrik
 categories: [AeroFX, AquaFX, JavaFX]
 excerpt: 'Today I want to show a sneak peek on a new project called AeroFX. AeroFX is a theme for JavaFX that will emulate the native look of the Windows interface.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Last year we released [AquaFX](http://aquafx-project.com/index.html) as a JavaFX 8 theme that emulates a native Look for JavaFX applications on Mac OS. Applications that use AquaFX may look like this:
 

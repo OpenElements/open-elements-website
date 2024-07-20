@@ -6,7 +6,7 @@ date: "2011-07-15"
 author: hendrik
 categories: [Swing]
 excerpt: 'Together with Geertjan Wielenga from Oracle I will introduce the jGrid-Component and its integration into a NetBeans Platform app'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 If you are interested in JGrid & Netbeans here is a hint for you:
 

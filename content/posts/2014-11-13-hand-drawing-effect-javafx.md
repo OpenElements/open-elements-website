@@ -6,7 +6,7 @@ date: "2014-11-13"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'In this post I show how you can create JavaFX shapes that look like they are hand drawn'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Some days ago Thierry Wasylczenko blogged about [12 of his favorite JS libs](http://zeroturnaround.com/rebellabs/javascript-confessions-12-js-technologies-im-not-ashamed-of-loving/). On of the libs is [js-sequence-diagrams](http://bramp.github.io/js-sequence-diagrams/) that I did know. By using the library you can draw sequence diagrams in a browser. I really like the hand drawn theme of the tool that draw all the diagrams like they are sketched with a pen. Here is an example of the theme:
 

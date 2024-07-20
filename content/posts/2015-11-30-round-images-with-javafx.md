@@ -6,7 +6,7 @@ date: "2015-11-30"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'This post gives an example for creating round image controls with JavaFX'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 In modern UI you can often find round avatar images like shown in this image:
 

@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "NullPointerExceptions are one of the most common sources of errors in Java. However, these errors can be significantly minimized through static code analysis. This post gives an overview of annotations can be used to handle 'null' in Java in a better way."
 categories: [Java]
 origin: https://www.heise.de/blog/Programmiersprache-Java-Null-Fehler-mit-statischer-Analyse-aufspueren-7351944.html
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 
 New projects bring new challenges and new knowledge with them.

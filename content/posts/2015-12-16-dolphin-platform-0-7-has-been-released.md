@@ -6,7 +6,7 @@ date: "2015-12-16"
 author: hendrik
 categories: [Dolphin Platform]
 excerpt: 'We released version 0.7 of the Dolphin Platform today. Next to the framework we updated the Spring Boot archetype for Maven and added a KumuluzEE Maven archetype.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 We released version 0.7 of the [Dolphin Platform](http://www.dolphin-platform.io) today. Next to the framework we updated the Spring Boot archetype for Maven and added a KumuluzEE Maven archetype. By using this archetypes you can create a Dolphin Platform based client server application in a minute. An example how you can use the archetypes can be found [here]({{< ref "/posts/2015-12-02-dolphin-platform-jumpstart" >}}).
 

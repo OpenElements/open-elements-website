@@ -6,7 +6,7 @@ date: "2014-09-17"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'An interview with me about JavaOne and my was posted at FX Experience. In addition I give another sneak peek of my JavaOne talks.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 JavaOne is coming closer and closer. On the one hand I can't wait to be there but on the other hand I need to finish all my talks in only a few days :fearful:
 

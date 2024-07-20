@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "There isn't just one provider for Java distributions and support. Gartner has analyzed the options in a report, and Oracle doesn't fare well. If you are searching for a good alternative to a costly Oracle contract, this post gives insights into alternative OpenJDK builds and Java distributions."
 categories: [Java]
 origin: https://www.heise.de/blog/Java-ohne-Kopfschmerzen-Distributionen-und-Support-jenseits-von-Oracle-9232113.html
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-purple.svg"
 ---
 
 For most companies, both Java as a programming language and the JVM as a runtime environment are critical infrastructure on which a large part of our digital world is built.

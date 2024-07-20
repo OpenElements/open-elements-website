@@ -7,7 +7,7 @@ excerpt: "Each year several Java applications might show wrong date information 
  Year's Eve. This post gives an overview about the problem and describes how you can easily avoid such
  bugs"
 categories: [Java]
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Since Java 8 we have a new date & time API as part of Java. The API is really good and offers a lot of functionality and flexibility. Based on this it’s much easier to handle date and time information in Java. But even with this new API, several use cases are still quite complex. When talking about problems with date and time information normally timezones are mentioned directly. In this post, I will show you that even the basic usage of date information can create problems. So we will forget all the timezone problems for now and have a look at a really easy use case: We want to print the year of a date. Maybe even this task can end in some trouble…
 

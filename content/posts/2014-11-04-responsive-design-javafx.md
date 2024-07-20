@@ -6,7 +6,7 @@ date: "2014-11-04"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'At JavaOne I introduced ResponsiveFX as a lib that adds responsive design to JavaFX. This post describes the core concepts of responsive design and the API.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Once of the new APIs that I have shown at JavaOne was __ResponsiveFX__ that can be used to add responsive design to your JavaFX application. ResponsiveFX is an open source project maintained by Canoo and will be published to Maven Central the next days.
 

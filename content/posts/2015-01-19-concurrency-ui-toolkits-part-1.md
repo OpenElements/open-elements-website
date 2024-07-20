@@ -5,7 +5,7 @@ date: "2015-01-19"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'This post describes how the Concurrency in UI Toolkits can be defined in a unified way.'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Today every UI toolkit that is not running in a browser needs an UI Thread the handle the repainting and the event handling of the UI. Examples for this kinds of UI Toolkits are iOS, Android, SWT, JavaFX or Swing. Each of this toolkits defines a thread that will handle all the ui specific calls. Let's call this thread "UI Thread".
 

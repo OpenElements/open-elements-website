@@ -6,7 +6,7 @@ date: "2015-10-23"
 author: hendrik
 categories: [Dolphin Platform, Polymer, Web Frontends, WebComponents]
 excerpt: 'For the Dolphin Platform release we plan to offer several demos and tutorials as a starting point. Today I want to give you an overview of this work'
-preview_image: "/posts/preview-images/software-development-green.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 For the [Dolphin Platform]({{< ref "/posts/2015-10-04-dolphin-platform-a-sneak-peek" >}}) release we plan to offer several demos and tutorials as a starting point. Currently I'm working on a simple chat app that contains a JavaFX and a web frontend. The web frontend is done by using [Google Polymer]({{< ref "/posts/2015-09-11-creating-an-interactive-application-with-polymer-part-1" >}}) and web components. In this post I will give a preview how you can create web applications with the Dolphin Platform by using Polymer.
 
