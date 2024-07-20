@@ -6,6 +6,7 @@ date: "2015-01-29"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'The post gives a short introduction about the architecture and features of Open Dolphin'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Last year I started to work at Canoo and some of you might know that Canoo provides the open source remoting middleware [Open Dolphin](http://open-dolphin.org/dolphin_website/Home.html). At the end of the last year I had the pleasure to work with Open Dolphin in a customer project. Based on the experience of this project I started to contribute to Open Dolphin because I think that it provides an interesting way to handle the remoting aspects of an application. In addition I will blog about Open Dolphin and how you can use it in (JavaFX) applications.
 

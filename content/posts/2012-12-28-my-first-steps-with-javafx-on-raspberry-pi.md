@@ -6,6 +6,7 @@ date: "2012-12-28"
 layout: post
 categories: [DataFX, IoT, JavaFX]
 excerpt: 'Today I started playing with my Pi & JavaFX. I created a screensaver as a first demo. The programm loads random pictures (2848 × 4288 pixel) and animates them on the screen.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Today I started playing with my Pi & JavaFX. Even after a few hours I can say that this stuff really rocks!
 

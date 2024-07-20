@@ -6,6 +6,7 @@ date: "2014-05-22"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this DataFX tutorial I will show how navigation between different views can easily be managed with DataFX and its Flow API.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 As I mentioned [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}) I started a series of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) tutorials. The first tutorial can be found [here]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}}).
 

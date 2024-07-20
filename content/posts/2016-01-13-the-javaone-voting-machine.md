@@ -6,6 +6,7 @@ date: "2016-01-13"
 author: hendrik
 categories: [IoT, JavaFX]
 excerpt: 'If you visited JavaOne this year you should have noticed the Voting Machines that were placed at each session room at JavaOne. In this post I will share some insides about the creation of the machines.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 If you visited JavaOne this year you should have noticed the Voting Machines that were placed at each session room at JavaOne.
 

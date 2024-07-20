@@ -6,6 +6,7 @@ date: "2015-02-11"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'Today the Review Ballot Results for JSR377 (Desktop|Embedded Application API) were published.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Today [the Review Ballot Results for JSR377 (Desktop|Embedded Application API)](https://jcp.org/en/jsr/results?id=5744) were published. As you can see the JSR was well received:
 

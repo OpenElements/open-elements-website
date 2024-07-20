@@ -8,6 +8,7 @@ information and hints how you should handle new Java releases in the future and 
 or not.'
 categories: [Java]
 origin: https://dev.karakun.com
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 This year many changes are introduced to the Java release and support model that is provided by Oracle. Because of this many Java developers have questions on how this changes will affect their future work and what strategy should be used when thinking about Java version updates in applications. One concern that is often discussed but remains mostly unanswered is if companies will need to pay for Java in the near future.
 

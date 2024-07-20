@@ -6,6 +6,7 @@ date: "2015-09-16"
 author: hendrik
 categories: [JavaFX, Layout & UI]
 excerpt: 'Since I have to wait 1 more month I started playing with the new layered icons on the AppleTV I recreated the effect by using JavaFX today.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Maybe some of you have seen the presentation of the new AppleTV. Apple always creates awesome UIs and for the new AppleTV the introduced an unique way how icons can be displayed: Layered Images.
 

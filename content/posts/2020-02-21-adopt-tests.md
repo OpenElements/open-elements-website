@@ -8,7 +8,7 @@ With AdoptOpenJDK we have a community based alternative that provides free LTS J
 I will have a deeper look at the infrastructure of the AdoptOpenJDK and how each build is tested to offer
 production ready quality.'
 categories: [Java, AdoptOpenJDK]
-preview_image: "/posts/2020-02-21-adopt-tests/05_Seminar_Pink.jpg"
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 
 While in theory, everybody can build it's own JDK based on the OpenJDK sources you normally don't want to do that. For several years people downloaded JDK builds from Oracle but based on the [new Licence for Oracle JDKs]({{< ref "/posts/2018-06-25-java-releases" >}}) this isn't that easy anymore. If you need an up-to-date Oracle JDK for production you need to buy commercial support from Oracle since last year.

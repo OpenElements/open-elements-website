@@ -6,6 +6,7 @@ date: "2012-12-29"
 author: hendrik
 categories: [IoT, JavaFX]
 excerpt: 'For my first JFX demo I created a experimental GridFX version for JavaFX 8.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 For my [first JFX demo]({{< ref "/posts/2012-12-28-my-first-steps-with-javafx-on-raspberry-pi" >}}) I tried to create a experimental [GridFX]({{ site.baseurl }}{% link pages/projects/gridfx.md %}) version for JavaFX 8. As I mentioned in an [earlier post]({{< ref "/posts/2012-11-17-custom-ui-controls-with-javafx-part-1" >}}) there are some API changed between JavaFX 2 and 8. For GridFX I had to change two things:
 

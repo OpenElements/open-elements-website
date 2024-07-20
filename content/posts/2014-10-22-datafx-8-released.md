@@ -6,6 +6,7 @@ date: "2014-10-22"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'I''m proud to announce that we have released DataFX 8.0 last week. This post will give you an overview of all the cool new features.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 I'm proud to announce that we have released DataFX 8.0 last week. With DataFX 2.0 we created an API to get real world data in your JavaFX 2 application by using data readers for REST, WebSocket, SSE and many more endpoints. With DataFX 8.0 we introduce a lot of more content for your JavaFX 8 applications. Next to the data reader APIs we included flow and injection API to DataFX to create MVC based views and complex workflows. By doing so we lifted DataFX from a data reader API to a (small) application framework. DataFX 8.0 contains 5 modules:
 

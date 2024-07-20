@@ -6,6 +6,7 @@ date: "2014-05-31"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this tutorial I want to show how a wizard dialog can be created with DataFX.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 In this tutorial I want to show how a wizard dialog can be created with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). This example depends on 2 other tutorials that can be found [here]({{< ref "/posts/2014-05-20-datafx-tutorial-1" >}}) and [here]({{< ref "/posts/2014-05-22-datafx-tutorial-2" >}}).
 

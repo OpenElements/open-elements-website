@@ -6,6 +6,7 @@ date: "2015-11-11"
 author: hendrik
 categories: [General]
 excerpt: "Have you heard of KumuluzEE that is one of the 2015 Java Duke's Choice Award winners? This post shows how you can combine it with the Dolphin Platform."
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Have you heard of [KumuluzEE](https://ee.kumuluz.com) that is one of the 2015 Java Duke's Choice Award winners? Well, if you haven't heard about this cool project you should have a look. KumuluzEE is a JavaEE based framework to create microservices and JavaEE based applications that can start on their own without deploying them to an application server. If you know [Spring Boot](http://projects.spring.io/spring-boot/) the description is quite easy: KumuluzEE is Spring Boot for the JavaEE framework. In this post I will show how you combine kumuluzEE with [Dolphin Platform](http://www.dolphin-platform.io) to create lightweight microservices with a dynamic frontend.
 

@@ -7,7 +7,7 @@ author: hendrik
 excerpt: 'This post gives an overview about the new server timing specification of the w3c and how server timing can be used in any enterprise Java server by using Rico.'
 categories: [Java, Rico]
 origin: https://dev.karakun.com
-preview_image: "/posts/2019-01-15-rico-server-timing/05_Seminar_Blue.jpg"
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 In our open source project [Rico](https://github.com/rico-projects/rico) we introduced the support of "server timing" for JavaEE and Spring. Server Timing is [a new W3C feature](https://www.w3.org/TR/server-timing/) that allows you to add some metrics about the request handling to the response. I already introduced server timing in [one of my last posts]({% post_url 2019-01-09-integration-docker %}). The following image shows how such information would be rendered in the developer console of chrome:
 

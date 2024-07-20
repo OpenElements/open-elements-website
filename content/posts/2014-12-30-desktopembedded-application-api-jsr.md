@@ -6,6 +6,7 @@ date: "2014-12-30"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'Today the Desktop & Embedded Application JSR has been started. Its goal is to define a spec for common behaviors that are shared by desktop apps.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Today the JSR for Desktop & Embedded Applications has been started and I'm proud to be part of it. The main goal of this JSR is to define a specification for common issues and behaviors that are shared between most desktop applications. This contains the following topics:
 

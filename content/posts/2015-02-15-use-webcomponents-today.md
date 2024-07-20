@@ -6,6 +6,7 @@ date: "2015-02-15"
 author: hendrik
 categories: [General, WebComponents]
 excerpt: 'This gives a short overview to the four W3C specs to define reusable web components: Element Template, Shadow DOM, Custom Elements and HTML Imports'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 WebComponents are a new W3C standard that is defined by some new specification:
 

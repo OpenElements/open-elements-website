@@ -6,6 +6,7 @@ date: "2014-06-27"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'This is the last tutorial about the basic flow and action API of DataFX.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 This is the last tutorial about the basic flow and action API of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). I plan to start a second tutorial series about injection and resources in DataFX. But in those parts of DataFX 8 the APIs aren't final at the moment. So it will sadly take one or two month before I can continue the tutorials. An overview of all tutorials can be found [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}).
 

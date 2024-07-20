@@ -6,6 +6,7 @@ date: "2013-01-01"
 author: hendrik
 categories: [DataFX, General, JavaFX]
 excerpt: "Swing offers the two methods SwingUtilities.invokeAndWait(...) and SwingUtilities.invokeLater(...) to execute a Runnable object on Swings event dispatching thread. Let's have a look how we can have the same functionallity in JavaFX"
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Swing offers the two methods `SwingUtilities.invokeAndWait(...)` and `SwingUtilities.invokeLater(...) to execute a Runnable object on Swings event dispatching thread. You can read more about this methods [http://javarevisited.blogspot.de/2011/09/invokeandwait-invokelater-swing-example.html](here).
 

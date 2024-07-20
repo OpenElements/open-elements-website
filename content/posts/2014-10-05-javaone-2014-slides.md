@@ -6,6 +6,7 @@ date: "2014-10-05"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'I uploaded the slides of the first 3 talks at slideshare.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 I uploaded the slides of the first 3 talks at slideshare. The other 3 talks had slides with animation, etc. and therefore I need to refactor them before I will post them to slideshare.
 

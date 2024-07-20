@@ -6,6 +6,7 @@ date: "2015-11-09"
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer, Web Frontends]
 excerpt: "Since JavaOne is over for more than a week we found some time to finish all the steps and I'm proud to announce the first Dolphin Platform release"
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 We planed to release the [Dolphin Platform]({{< ref "/posts/2015-10-04-dolphin-platform-a-sneak-peek" >}}) before JavaOne but the preparation of the
 [JavaOne Voting Machines]({{< ref "/posts/2015-10-23-a-short-preview-of-the-javaone-voting-machine" >}}) took more time then expected and we can't finish all the todos that we had to fully open source the Dolphin Platform. Since JavaOne is over for more than a week we found some time to finish all the steps and I'm proud to announce the first Dolphin Platform release :)

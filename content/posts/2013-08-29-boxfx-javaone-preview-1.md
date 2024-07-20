@@ -6,6 +6,7 @@ date: "2013-08-29"
 author: hendrik
 categories: [IoT, JavaFX]
 excerpt: "After a long time without a post I will show you a first preview of the stuff I'm currently working on. I (and Claudine) don't sleep the last month. We worked hard on some projects especially for our JavaOne presentations"
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 After a long time without a post I will show you a first preview of the stuff I'm currently working on. I (and Claudine) don't sleep the last month. We worked hard on some projects especially for our [JavaOne](http://www.oracle.com/javaone/index.html) presentations:
 

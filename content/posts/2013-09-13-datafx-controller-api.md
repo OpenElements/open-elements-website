@@ -6,6 +6,7 @@ date: "2013-09-13"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'The DataFX team will show some cool new APIs at JavaOne this year. Today I will give a short preview to another part of the new DataFX APIs.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 The [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) team will show some cool new APIs at [JavaOne](http://www.oracle.com/javaone/index.html) this year. Johan has written [a post about writeback support in the new DataFX](http://www.lodgon.com/dali/blog/entry/Writeback_support_in_DataFX) version some days ago. Today I will give a short preview to another part of the new DataFX APIs.
 

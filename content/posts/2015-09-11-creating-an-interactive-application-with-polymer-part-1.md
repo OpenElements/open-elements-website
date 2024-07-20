@@ -6,6 +6,7 @@ date: "2015-09-11"
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]
 excerpt: 'In this post I will create an interactive web application based on Polymer 1.0 to show how data binding can be used and how a basic app might look like.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Some time ago I created [my first post about web components]({{< ref "/posts/2014-11-12-first-steps-webcomponents" >}}) and today I want to continue this series. In the last month I played a lot with this new technology since at Canoo we think that this will be very important for web development in the future. Therefore [Michael Heinrichs](https://twitter.com/net0pyr) and I will give [a university session at Devoxx](http://cfp.devoxx.be/2015/talk/OVY-1576/Building_modern_web_UIs_with_Web_Components) this year and plan to offer web component and Polymer training at Canoo.
 

@@ -6,6 +6,7 @@ date: "2014-09-30"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'For JavaOne I created some JavaFX APIs that contains basic utilities and controls that can be easily integrated in any JavaFX application. The ui-basics module contains some custom list cells that can be used to enrich your JavaFX application.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 By default the cells of a `ListView` will show only a string representation of your data on screen. This is ok for a basic implementation and will work for a lot of use cases. But if you have a application that contains a big list like a news feed or a chat you need a better skin for the cells. For JavaOne I created some JavaFX APIs that contains basic utilities and controls that can be easily integrated in any JavaFX application. The `ui-basics` module contains some custom list cells that can be used to enrich your JavaFX application. By using this cells we can achieve the following UI change with only a few lines of Java code:
 

@@ -6,6 +6,7 @@ date: "2014-04-17"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'A second preview build of DataFX has been released today!'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 A second preview build of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) has been released today. In a few hours the build can be found at [maven central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.javafxdata%22).
 

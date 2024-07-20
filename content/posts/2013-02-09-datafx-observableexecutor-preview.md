@@ -6,6 +6,7 @@ date: "2013-02-09"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'Since December we are working on a new DataFX version. DataFX will provide a new low level API for multithreading and background tasks in JavaFX.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Since December we are working on a new [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) version. DataFX will provide a new low level API for multithreading and background tasks in JavaFX. With this API everyone can create new and custom DataSources that will fetch data in background and publish it to JavaFX properties (like you can do with the SwingWorker in Swing). Additionally we will provide some basic concurrency features like the [invokeAndWait-method]({{< ref "/posts/2013-01-01-invokeandwait-for-javafx" >}}).
 

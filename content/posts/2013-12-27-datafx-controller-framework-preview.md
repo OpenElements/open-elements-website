@@ -6,6 +6,7 @@ date: "2013-12-27"
 author: hendrik
 categories: [DataFX, General, JavaFX]
 excerpt: 'Today we released the version 2.0 of DataFX. As a next step we will work on DataFX 8.0 that will use Java 8 and JavaFX 8.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Today we released the version 2.0 of [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}). Thanks for all the feedback that we received with the last release candidates. As a next step we will work on DataFX 8.0 that will use Java 8 and JavaFX 8. One of the new features that will be part of the next release are currently in development. Today I will show a first preview to DataFX 8.0.
 

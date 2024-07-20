@@ -6,6 +6,7 @@ date: "2014-05-19"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'I started a series of DataFX Tutorials to show its functionality by some handsome and easy examples.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 I started a series of tutorials for [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) to show its functionality by some handsome and easy examples. The current version of DataFX is 8.0 and some of the tutorials still based on beta releases like 8.0b4. With the release of DataFX 8.0 we changed our main package and therefore some imports need to be refactored. All DataFX classes are now in subpackages of io.datafx. I hope to find some time to update the tutorials later. The updated source code of the tutorials can be found [here](https://bitbucket.org/datafx/datafx/src/2ce2f5b372a179eb318fae023f13ee74f49544ef/modules/tutorials/?at=default).
 

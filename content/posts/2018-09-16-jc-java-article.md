@@ -9,6 +9,7 @@ an open article. The authors of the article worked together with mayor Java vend
 about Java releases and licenses'
 categories: [Java]
 origin: https://dev.karakun.com
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Several Java Champions and other members of the community have written a great number of articles about the new Java release train and the general future of Java within the last year. Since there are still many rumors and wrong statements about that topic in the wild of the internet, a group of Java Champions decided to write an article that should clarify these issues.
 

@@ -6,6 +6,7 @@ date: "2013-04-28"
 author: claudine
 categories: [AquaFX, JavaFX]
 excerpt: 'As time goes by, there are lots of freshly skinned controls, which are waiting to be shown. So here comes a little update.'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 As time goes by, there are lots of freshly skinned controls, which are waiting to be shown. So here comes a little "update post".
 

@@ -6,6 +6,7 @@ date: "2015-01-21"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'The post shows how emojis can be supported in (JavaFX) applications'
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Mostly all mobile application support __emojis__ since some years. Later browsers and applications like twitter added global support for emojis. I think it's time to have a deeper look at this funny icons and how a software can make use of them.
 

@@ -7,7 +7,7 @@ excerpt: 'At the Devoxx conference 2 weeks ago, Amazon announced Corretto as a n
 "No-cost, multiplatform, production-ready distribution of OpenJDK". In this post I will have a deeper look at Corretto and explain why Amazon did this move.'
 categories: [Java, OpenJDK]
 origin: https://dev.karakun.com
-preview_image: "/posts/2018-11-23-amazon-corretto/04_Software_Development_Yellow.jpg"
+preview_image: "/posts/preview-images/software-development-green.jpg"
 ---
 Based on the changes that Oracle announced a year ago about [the new release train and licenses of Java](/java/2018/06/25/java-releases.html) and the Oracle Java distributions it was completely obvious and only a matter of time when additional big players start to distribute custom OpenJDK builds. Some companies like RedHat or IBM did this already for some years to provide custom Java support for existing enterprise customers. The first big player that offered a more general OpenJDK build with custom support was Azul.
 
