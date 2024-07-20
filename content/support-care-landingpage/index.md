@@ -1,89 +1,149 @@
 ---
-title: "Open Elements Support & Care"
-description: "TODO"
+title: "Support & Care"
+description: "Erhalten Sie umfassenden Open Source Support ✔ Updates ✔ Webinare ✔ direkter Support ✔ Wartungsservice für eine sichere und effiziente Infrastruktur."
 layout: "single"
 url: "/about-support-care"
 ---
 
-Open Elements Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisierung und Förderung von
-Open Source Software (OSS). Hierbei arbeitet Open Elements sowohl mit der Industrie als auch mit der Open Source
-Community zusammen, um die Qualität, Unabhängigkeit und Entwicklung von kritischen Open Source Projekten und Komponenten
-sicherzustellen.
+Support & Care is a program for the sustainable further development, stabilization and **support of open source software (OSS)**.
+Open Elements works with both the industry and the open source community to ensure the quality,
+independence and development of critical open source projects and components.
 
-{{< centered-image src="support-care-logo.svg" alt="Support & Care Logo" width="60%" >}}
+{{< centered-image src="support-care-logo.svg" alt="Support & Care Logo" width="80%" >}}
 
-## Warum Open Source für unser heutiges Leben so wichtig ist
+## Why open source is so important for our lives today
 
-Open Source gewährleistet die Qualität, Sicherheit und Fortschrittlichkeit von Software, fördert die Gemeinschaft und
-bietet wirtschaftliche und soziale Vorteile. Diese Vorzüge bietet Open Source sowohl für Einzelpersonen, Unternehmen als
-auch für die gesamte Gesellschaft. Es ist daher im Interesse aller, OSS-Projekte finanziell zu unterstützen. Aufgrund
-der Fülle der Vorteile wollen wir uns hier auf 4 wichtige Teilaspekte konzentrieren. Weitere Informationen können unter
-LINK nachgelesen werden.
+Open source ensures the quality, security and progressiveness of software, fosters community and provides economic and social benefits.
+[Open source offers these benefits](https://opensource.com/resources/what-open-source) to individuals, companies and society as a whole.
+It is therefore in everyone's interest to support OSS projects financially.
+Due to the wealth of benefits, we want to focus on 4 important aspects here:
 
-- **Wissensteilung und Bildung:** Open Source Projekte sind oft nicht nur Softwarelösungen, sondern auch
-  Bildungsressourcen. Interessierte können den Code studieren, daraus lernen und sich weiterbilden. Dies fördert den
-  Wissensaustausch und ermöglicht es vielen, technische Fähigkeiten zu erwerben und zu vertiefen.
-- **Vertrauen durch Transparenz:** Da der Quellcode von OSS öffentlich zugänglich ist, kann jede Person ihn überprüfen.
-  Dies schafft ein hohes Maß an Vertrauen, da eventuelle Mängel oder versteckte Funktionen sichtbar sind.
-- **Unabhängigkeit von einzelnen Anbietern:** OSS verringert die Abhängigkeit von einzelnen Softwareanbietern und deren
-  Geschäftsmodellen. Dies kann vor allem in kritischen Infrastrukturen wichtig sein, um sicherzustellen, dass
-  Anwendungen und Systeme auch in Zukunft betrieben werden können.
-- **Soziale Gerechtigkeit:** Open Source Software ist oft für jeden zugänglich, unabhängig von finanziellen Mitteln.
-  Dies ermöglicht es Menschen aus allen sozialen und wirtschaftlichen Hintergründen, Zugang zu Technologie und Bildung
-  zu haben.
 
-{{< centered-image src="os-benefits-de.png" showCaption="true" alt="Ergebnis zur Umfrage bzgl. Vorteilen von Open Source bei mittelständischen Unternehmen" width="80%" >}}
+- **Knowledge sharing and education:** open source projects are often not only software solutions,
+  but also educational resources. Interested parties can study the code, learn from it and further their education.
+  In this way, open source promotes knowledge sharing and enables many people to acquire and deepen their technical skills.
+- **Trust through transparency:** As the source code of OSS is publicly accessible, anyone can check it.
+  This creates a high level of trust, as any defects or hidden functions are visible.
+- **Independence from individual providers:** OSS reduces dependence on individual software providers and
+  their business models.
+  This is particularly important in critical infrastructures to ensure that applications and systems can continue to
+  be operated in the future.
+- **Social justice:** Open source software is often accessible to everyone, regardless of financial means.
+  OSS projects enable people from all social and economic backgrounds to have access to technology and education.
 
-## Wie Support & Care Open Source Software fördert
+{{< centered-image src="os-benefits.png" showCaption="true" alt="Results of the survey on the benefits of open source for SMEs" width="80%" >}}
 
-Mit Support & Care hat Open Elements gezielt ein Programm zur fairen und leichtgewichtigen Förderung von Open Source
-gestartet. Support & Care hilft hierbei sowohl den Open Source Projekten als auch den Personen hinter diesen Projekten.
-Da der Open Source Markt einem so starken Wachstum unterliegt, fokussiert sich Support & Care auf kritische OSS im
-Bereich der Programmiersprache Java. Mit kritischer OSS sind hierbei Projekte gemeint, die in einer Vielzahl von
-kritischen System und Anwendungen (Banken, Gesundheit, Politik, etc.) als Abhängigkeiten enthalten sind. Beispiele
-hierfür sind die Java Distribution Eclipse Temurin, welche mit über 500.000 Downloads pro Tag die meistgenutzte Java
-Laufzeitumgebung ist, oder Apache Maven, dessen Hauptkomponenten im letzten Jahr an die 2 Milliarden mal heruntergeladen
-wurden.
+### Importance of open source support
 
-Zur Förderung von OSS arbeitet Open Elements aktiv an den Projekten mit. So ist Open Elements beispielsweise Mitglied
-der Arbeitsgruppe hinter Eclipse Temurin - unser Geschäftsführer Hendrik Ebbers war sogar Gründungsmitglied - und hat
-den Leiter der Entwicklung von Maven (Chair des Project Management Committee) unter Vertrag.
+In order to ensure the long-term sustainability of open source projects, it is crucial to support them financially.
+Many developers and maintainers work on these projects voluntarily, often without financial compensation.
+Through open source support, these projects can be continuously developed and improved.
+In addition, open source support allows developers to focus more on the quality and security of the software and
+respond more quickly to security vulnerabilities or bugs.
+Support also incentivizes new developers to get involved and develop innovative solutions.
+In short, financial support helps keep the open source community vibrant and productive, which ultimately benefits everyone.
 
-Neben der aktiven technischen Weiterentwicklung der Projekte bietet Support & Care aber noch weitere Vorteile: Wir
-arbeiten aktiv daran, (staatliche) Förderungen für Open Source Projekte zu akquirieren und die Sichtbarkeit der Projekte
-zu erhöhen. Auch investieren wir in essentielle Aspekte wie Dokumentation, Tutorials und Security Audits, da genau diese
-Punkte bei OSS oft aufgrund fehlender Mittel nicht umgesetzt werden können.
+{{< centered-image src="tree.png" alt="Illustration regarding cooperation" width="80%" >}}
 
-Durch die finanzielle Förderung und aktive Mitarbeit an den Projekten und deren Ausrichtung können wir die im Support &
-Care Programm aufgenommen Projekte wegweisend verbessern und eine Unterfinanzierung bzw. schlechte Wartung sowie
-Sicherheit dieser kritischen OSS unterbinden. Denn auch wenn Open Source ein wachsender Markt ist: Ohne finanzielle
-Rücklagen könnten dessen Entwickler gezwungen sein, ihre Arbeit an den Projekten zu reduzieren oder ganz einzustellen.
+[Active participation in open source projects](https://hbswk.hbs.edu/item/the-hidden-benefit-of-giving-back-to-open-source-software)
+allows companies to gain valuable insights and technological advancements, which promotes long-term success and
+competitiveness while strengthening the open source community.
 
-## Warum Open Elements der richtige Partner zur Förderung von OSS ist
+## How Support & Care promotes open source software
 
-Wie bereits erläutert, ist das Ziel von Support & Care die ganzheitliche Förderung und Unterstützung von OSS anstelle
-“nur” finanzieller Spenden oder Mitarbeit zu liefern. Dies ist ein essentieller Punkt, den wir bei unserer jahrelangen
-Erfahrung in der Open Source Entwicklung gelernt haben. Aus diesem Grund wurde Open Elements als ein Unternehmen
-gegründet, das OSS sowohl aus der technischen als auch aus wirtschaftlichen und organisatorischen Perspektiven
-betrachtet und fördert. Durch die Mitarbeit von Open Elements in Gremien wie der Eclipse Adoptium Working Group haben
-wir Erfahrung mit großen bzw. kritischen Open Source Projekten und kennen deren Probleme und Herausforderungen. Diese
-Kenntnisse werden mit der Mitgliedschaft von unserem Geschäftsführer im Aufsichtsrat der Eclipse Foundation
-unterstrichen. Aufgrund unserer Firmenstruktur sind wir aber so dynamisch, dass wir auch mit kleinen Open Source
-Projekten einfach zusammenarbeiten können und diese z.B. über Github Sponsorship unterstützen, Newcomern helfen oder
-aktiv Beiträge zum Quelltext der Projekte liefern. Durch all diese Punkte ist Open Elements ein perfektes Bindeglied
-zwischen Open Source und Wirtschaft.
+With **Support & Care**, Open Elements has launched a program to promote open source in a
+**fair and lightweight** way.
+Support & Care helps both the open source projects and the people behind these projects.
+We focus our support on projects in the Java programming language.
+This specialization makes sense because it allows us to apply our in-depth expertise in a specific programming language.
+This allows us to provide more efficient and higher quality support for the specific requirements
+and challenges that arise in critical Java-based open source projects.
 
-## Wie Support & Care ihrem Unternehmen helfen kann
+Critical OSS refers to projects that are included as dependencies in a variety of critical systems and applications in
+industries such as banking, healthcare and politics.
+One example of this is the Java distribution Eclipse Temurin, which is the most widely used Java runtime
+environment with over 500,000 downloads, or Apache Maven, whose main components were downloaded around
+2 billion times last year.
 
-Die Bereitstellung von Support Modellen für Open Source Software ist mittlerweile ein beliebtes Geschäftsmodell. Anders
-als viele Firmen bietet Support & Care aber nicht einfach Support für eigene Open Source Produkte an. Wir suchen
-explizit OSS, die verstärkt im Enterprise Bereich eingesetzt wird und dort oft als sicherheitskritisch eingestuft wird.
-Zusammen mit den Entwicklern hinter diesen Open Source Projekten schafft das Support & Care Programm ein Bindeglied, um
-sowohl die Projekte zu unterstützen als auch explizit auf die Wünsche und Bedürfnisse von Support & Care Kunden
-einzugehen. Dies beinhaltet neben der transparenten Bearbeitung von technischen Tickets durch die jeweiligen Experten
-der Projekte auch die Aufbereitung und Transformation von Wissen. So erhalten Support & Care Kunden nicht nur
-Benachrichtigungen über wichtige Sicherheitsupdates, Fixes und Releases, sondern werden auch zu regelmäßig
-stattfindenden Workshops und Infoveranstaltungen eingeladen. Dies ermöglicht den Nutzern der OSS, ihre eigenen
-Bedürfnisse und Interessen auf kurzem Weg in die Projekte einzubringen. Hierdurch fördert Open Elements auch aktiv das
-Prinzip der Gemeinschaftsbildung für die jeweiligen Projekte: Diese Gemeinschaften, bestehend aus Entwicklern, Nutzern
-und anderen Beteiligten, können gemeinsam die Innovationen vorantreiben.
+With Support & Care, Open Elements offers a solution for both projects so that the products can be
+used without hesitation in a professional environment.
+For example, Open Elements is a member of the working group behind Eclipse Temurin - our CEO Hendrik Ebbers
+was even a founding member - and has the head of Maven development (Chair of the Project Management Committee)
+under contract.
+
+
+{{< centered-image src="roundtable.png" alt="Illustration regarding division of tasks" width="80%" >}}
+
+Our open source strategy aims to improve the direction of the projects through financial support and active
+collaboration and to prevent underfunding, poor maintenance and security of this critical OSS.
+By applying this strategy in a targeted manner, we can make groundbreaking improvements to the projects
+included in the Support & Care program and ensure that developers are able to continue their important
+work without financial setbacks.
+Because even though open source is a growing market, without financial reserves its developers may be
+forced to reduce or stop their work on the projects.
+
+## Why Open Elements is the right partner to support OSS
+
+Theaim of Support & Care is to provide holistic promotion and support of OSS instead of “just” financial
+donations or collaboration.
+Our years of experience in open source development have shown us the crucial importance of this support.
+For this reason, Open Elements was founded as a company that views and promotes OSS from technical as well
+as business and organizational perspectives.
+
+Through Open Elements' involvement in committees such as the Eclipse Adoptium Working Group,
+we have experience with large or critical open source projects and are familiar with their problems and
+challenges.
+This knowledge is underlined by the membership of our managing director on the supervisory board of the
+Eclipse Foundation.
+However, due to our company structure, we are so dynamic that we can also easily work with small open source
+projects and support them e.g. via Github sponsorship, help newcomers or actively contribute to the source
+code of the projects.
+
+All these points make Open Elements a perfect link between open source and business.
+
+## How Support & Care can help your company
+
+Theprovision of support models for open source software has become a popular business model.
+Unlike many companies, however, Support & Care does not simply offer support for its own open source products.
+We are explicitly looking for OSS that is increasingly used in the enterprise sector, where it is often classified as
+security-critical.
+Together with the developers behind these open source projects, the Support & Care program creates a link
+to both support the projects and explicitly respond to the wishes and needs of Support & Care customers.
+
+This involves not only the transparent processing of technical tickets by the respective project experts,
+but also the preparation and transformation of knowledge.
+Support & Care customers receive notifications about important security updates, fixes and releases and
+are invited to regular workshops and information events.
+This allows OSS users to contribute their own needs and interests to the projects in the shortest possible time.
+Through these measures, Open Elements actively promotes the principle of community building for the respective projects:
+Communities consisting of developers, users and other stakeholders can work together to drive innovation forward.
+
+{{< centered-image src="networking.png" alt="Illustration regarding division of tasks" width="80%" >}}
+
+### What services does Open Source Support include?
+
+The Open Source Support & Care service offers comprehensive services to ensure the performance and security of your applications.
+Our services go beyond classic troubleshooting and promote the sustainable improvement of your infrastructure.
+The support contract can be customized according to your needs, socontact us for an individual consultation and find out
+more about how our Open Source Support & Care service can improve your IT infrastructure.
+
+- **Updates on open source projects:** Receive regular reports and detailed information on major releases,
+  bug fix releases and new projects, including security updates and Critical Patch Updates (CPU).
+- **Webinars & Meetings:** Quarterly webinars and 1-on-1 calls provide you with prepared information and the
+  opportunity to ask questions and contribute needs directly to the projects.
+- **Direct support:** Customers have access to multilingual support at all times with guaranteed response times
+  and the option of video calls for quick problem resolution.
+- **Support areas:** Our service covers various open source projects, for example as part of our
+  [Temurin Support & Care]({{< relref "support-care-landingpage-temurin" >}}) offering and our
+  [Maven Support & Care]({{< relref "maven-support-care-announcement" >}}) offering.
+  We take care of ticket creation, maintenance and monitoring in order to solve technical problems efficiently.
+- **Maintenance service:** Our service includes the maintenance of customer-specific Docker containers,
+  which contain all the necessary components for your application and are updated regularly.
+  The containers are deployed in a Docker registry and tested automatically.
+
+The support contract can be customized according to your needs.
+
+[Contact us]({{< relref "contact" >}}) for an individual consultation and find out more,
+how our Open Source Support & Care service can improve your IT infrastructure.
+
+{{< centered-button link="/contact"  >}}Schedule a consultation{{</ centered-button >}}
