@@ -19,13 +19,13 @@ für [Eclipse Temurin](https://adoptium.net/temurin/) steht Open Elements Ihrem 
 - Persönliche Ansprechpartner*innen in deutscher und englischer Sprache
 - Erhöhte Sicherheit durch Vorabinformationen zu Updates und Releases
 
-{{< centered-image src="RASTER.png" alt="TODO RASER" width="80%" >}}
-
 Der Kauf von Eclipse Temurin Support & Care bietet Ihnen eine Vielzahl von Vorteilen,
 die die Leistungsfähigkeit und Sicherheit Ihrer Java-Anwendungen erhöhen sowie Ihren Entwicklungsprozess optimieren.
 Durch die direkte Mitarbeit an Eclipse Temurin als Mitglied der Adoptium™ Arbeitsgruppe und die außergewöhnliche
 Vernetzung von Open Elements durch unsere Aktivitäten im Java und Open Source Ökosystem können wir Ihnen Informationen
 und Einblicke in die aktuelle und zukünftige Entwicklung in der Eclipse Adoptium WorkingGroup sowie dem OpenJDK geben.
+
+{{< centered-image src="tremurin-support.svg" alt="Temurin Support Illustration" width="80%" >}}
 
 ## Was ist Eclipse Temurin?
 
@@ -185,7 +185,7 @@ Dies beinhaltet auch alle Informationen und somit direkten Zugriff auf Sicherhei
 CPU) der Projekte. Hierdurch werden eventuelle Bugs und Sicherheitslücken in ihrer Infrastruktur frühestmöglich
 geschlossen.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-updates.svg" alt="Updates pictorgram" width="24%" >}}
 
 #### Webbinare & Meetings
 
@@ -196,7 +196,7 @@ Zusätzlich wird jeder Kunde ein Mal pro Quartal zu einem **1-on-1 Call** eingel
 offene Fragen zu stellen und die eigenen Bedürfnisse und Wünsche in die Gremien von Temurin, Adoptium und OpenJDK
 einzubringen.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-training.svg" alt="Piktogramm" width="24%" >}}
 
 #### Direct Support
 
@@ -219,7 +219,7 @@ jederzeit transparent an Sie in einer aufbereiteten Form weitergegeben.
 
 Je nach Support-Umfang lässt sich der Supportvertrag individuell auf Ihren Bedarf anpassen.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-support.svg" alt="Support pictogram" width="24%" >}}
 
 #### Wartungsservice
 
@@ -230,6 +230,6 @@ laufen lassen. Hierbei werden die Container in einer Docker Registry bereitgeste
 Temurin aktuell gehalten. Je nach Container-Typ beinhaltet die Wartung auch das automatische Testen der Container
 Images.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-docker.svg" alt="Docker pictogram" width="24%" >}}
 
 {{< centered-button link="/contact"  >}}Beratungstermin vereinbaren{{</ centered-button >}}
