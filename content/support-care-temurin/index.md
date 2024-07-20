@@ -1,208 +1,244 @@
 ---
-title: "Support & Care for Temurin"
+title: "Eclipse Temurin Support & Care"
 description: "Was ist Eclipse Temurin? » Temurin Support Service ✔ Sichern Sie die Leistungsfähigkeit Ihrer Java-gestützten Anwendungen » Jetzt beraten lassen"
 layout: "single"
 url: "/support-care-temurin"
 ---
+In an increasingly digitalized world, Java™ has established itself as one of the most popular and widely used
+programming languages.
+This makes it all the more important to be able to rely on professional support in order to be on the safe side when
+developing and maintaining Java applications.
 
-In einer zunehmend digitalisierten Welt hat sich Java™ als eine der populärsten und weitverbreiteten Programmiersprachen
-etabliert. Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und
-Wartung von Java-Anwendungen auf der sicheren Seite zu sein. Als professioneller Experte
-für [Eclipse Temurin](https://adoptium.net/temurin/) steht Open Elements Ihrem Unternehmen gerne zur Seite.
+{{< centered-image src="temurin-support-care.png" alt="Eclipse Temurin Support & Care" width="80%" >}}
 
-- Support durch ein Eclipse Adoptium™ Gründungsmitglied
-- Langfristig die Funktionalität der eigenen Java Anwendungen sicherstellen
-- Persönliche Ansprechpartner*innen in deutscher und englischer Sprache
-- Erhöhte Sicherheit durch Vorabinformationen zu Updates und Releases
+As a professional expert for [Eclipse Temurin](https://adoptium.net/temurin/), Open Elements will be happy to
+assist your company.
 
-## Was ist Eclipse Temurin?
+- Support from an Eclipse Adoptium™ founding member
+- Ensure the long-term functionality of your own Java applications
+- Personal contact persons in German and English
+- Increased security through advance information on updates and releases
 
-Eclipse Temurin™ ist eine **Java-Laufzeitumgebung (JVM)** welche auf dem OpenJDK™ basiert und von der Eclipse Foundation
-unter einer **Open-Source-Lizenz** vertrieben wird. Eclipse Temurin ist ein zentrales Projekt der Adoptium™ Working
-Group die hochqualitative Produkte und Technologien für das Java Ökosystem entwickelt und bereitstellt.
+{{< centered-image src="RASTER.png" alt="TODO RASER" width="80%" >}}
 
-{{< centered-image src="temurin-logo.svg" alt="Temurin Logo" width="40%" >}}
+Purchasing Eclipse Temurin Support & Care offers you a wide range of benefits that increase the performance and security
+of your Java applications and optimize your development process.
+Through direct involvement in Eclipse Temurin as a member of the Adoptium™ working group and the exceptional
+networking of Open Elements through our activities in the Java and Open Source ecosystem,
+we can provide you with information and insights into current and future developments in the
+Eclipse Adoptium WorkingGroup and the OpenJDK.
 
-Mit über 10 Millionen Downloads pro Monat und fast 200 Millionen Download insgesamt ist Temurin die meistgenutzte Java
-Laufzeitumgebung der Welt. Hinzu kommt, dass Temurin nicht von einer einzelnen Firma angeboten wird, sondern durch die
-Adoptium Working Group viele der Technologieführer wie Microsoft oder Red Hat zusammen das Produkt gestalten. Open
-Elements hat als Mitglied der Adoptium Working Group zu diesem Erfolg maßgeblich beigetragen. Unser Gründer [Hendrik
-Ebbers]({{< relref "about-hendrik" >}}) ist Gründungsmitglied von Adoptium sowie Mitglied des Technical Steering
-Commitee (TSC) des Adoptium Vorgängers AdoptOpenJDK.
+## What is Eclipse Temurin?
+
+Eclipse Temurin™ is a **Java runtime environment (JVM)** based on the OpenJDK™ and distributed by the
+Eclipse Foundation under an **open source license**.
+Eclipse Temurin is a central project of the Adoptium™ Working Group, which develops and provides
+high-quality products and technologies for the Java ecosystem.
+
+{{< centered-image src="temurin-logo.svg" alt="Eclipse Temurin Logo" width="40%" >}}
+
+With over **20 million downloads per month** and 500 million downloads in total,
+Temurin is the most widely used Java runtime environment in the world.
+In addition, Temurin is not offered by a single company, but rather many of the technology leaders
+such as Microsoft or Red Hat are shaping the product together through the Adoptium Working Group.
+As a member of the Adoptium Working Group, Open Elements has made a significant contribution to this success.
+Our founder [Hendrik Ebbers]({{< relref "about-hendrik" >}}) is a founding member of Adoptium and a member of the
+Technical Steering Committee (TSC) of Adoptium's predecessor AdoptOpenJDK.
 
 {{< centered-button link="https://adoptium.net/en-GB/temurin/"  >}}Download Eclipse Temurin{{</ centered-button >}}
 
-### Eclipse Temurin ist 100 % Open Source
+### Eclipse Temurin is 100% open source
 
-Eclipse Temurin basiert auf dem OpenJDK, welches, wie alle anderen Bestandteile von Temurin, ebenfalls Open Source ist.
-Dies bedeutet, dass der **gesamte Quelltext von Eclipse Temurin für jede Person offen einsehbar** ist. Hierzu gehören
-sogar die Build-Skripte (Beschreibung und Anleitung zum Erstellen der Temurin Laufzeitumgebung) und die Sourcen der
-betriebssystemspezifischen Installer. Die einzelnen Schritte des Baus der Temurin Distribution sind für jeden und jede
-transparent nachvollziehbar, da die Java-Laufzeitumgebung zusätzlich auf einem öffentlich zugänglichen Buildsystem
-gebaut wird. Nicht nur die Quelltexte, sondern auch die Artefakte von Temurin werden unter einer Open-Source-Lizenz
-bereitgestellt. Mit Artefakte sind hier die Distribution bzw. Laufzeitumgebung gemeint, die Nutzer*innen herunterladen
-können, um die eigenen Java-Anwendungen auf dieser auszuführen. Die Open-Source-Lizenz von Temurin ist die GPL V2 mit
-Classpath Exception.
+Eclipse Temurin is based on the OpenJDK, which, like all other components of Temurin, is also open source.
+This means that the **entire source code of Eclipse Temurin is openly accessible to everyone**.
+This even includes the build scripts (description and instructions for creating the Temurin runtime environment)
+and the sources of the operating system-specific installers.
+The individual steps of building the Temurin distribution are transparent for everyone,
+as the Java runtime environment is also built on a publicly accessible build system.
+Not only the source code, but also the Temurin artifacts are provided under an open source license.
+By artifacts, we mean the distribution or runtime environment that users can download in order to run
+their own Java applications on it.
+Temurin's open source license is GPL V2 with Classpath Exception.
 
-#### Transparente Qualitätssicherung für Temurin
+#### Transparent quality assurance for Temurin
 
-Um stets eine **hohe Funktionalität gewährleisten** zu können, werden alle Builds vor Veröffentlichung durch das **Open
-Source Test- und Qualitätsframework** von Eclipse AQAvit überprüft. AQAvit ist ebenfalls ein Produkt der Adoptium
-Working Group und dient der Qualitäts- und Runtime-Evaluierung von Java Laufzeitumgebungen.
+To ensure a **high level of functionality** at all times, all builds are checked by the **Eclipse AQAvit** open source
+test and quality framework before release.
+AQAvit is also a product of the Adoptium Working Group and is used for the **quality and runtime evaluation**
+of Java runtime environments.
 
 {{< centered-image src="aqavit-logo.svg" alt="AQAvit Logo" width="40%" >}}
 
-Qualitätskriterien für Eclipse Termurin durch AQAvit Verifizierung:
+**Quality criteria for Eclipse Termurin through AQAvit verification:**
 
-- Gute Performance
-- Erstklassige Sicherheit
-- Resilienz
-- Langlebigkeit
-- Vielfältige Einsetzbarkeit
+- Good performance
+- First-class security
+- Resilience
+- Longevity
+- Versatile usability
 
-Hierbei werden **sowohl funktionale Tests als auch Benchmarks** durchgeführt, um die Nutzung einer Java Laufzeitumgebung
-für den Enterprise-Markt zu verifizieren. Die Ergebnisse der AQAvit Tests sind ebenfalls offen zugänglich. Neben der
-Nutzung von AQAvit durchlaufen alle Temurin Artefakte auch das Java Technology Compatibility Kit (TCK), welches von
-Oracle stammt, aber leider nicht offen zur Verfügung steht. Auch die konkreten Ergebnisse dürfen hier nicht
-veröffentlicht werden. Lediglich die Bestätigung, dass die Temurin Builds TCK verifiziert sind, darf herausgegeben
-werden.
+**Both functional tests and benchmarks** are carried out to verify the use of a Java runtime environment
+for the enterprise market.
+The results of the AQAvit tests are also openly accessible.
+In addition to the use of AQAvit, all Temurin artifacts also undergo the Java Technology Compatibility Kit (TCK),
+which originates from Oracle but is unfortunately not openly available.
+The specific results may not be published here either.
+Only the confirmation that the Temurin builds are TCK verified may be published.
 
-Transparenz ist ein zentraler Bestandteil der Philosophie der Adoptium Working Group. Aus diesem Grund sind auch die
-[Temurin Downloadzahlen](https://dash.adoptium.net/) offen zugänglich.
+Transparency is a central component of the Adoptium Working Group's philosophy.
+For this reason, the [Temurin download figures](https://dash.adoptium.net/) are also openly available.
 
-### Quelltexte und technische Informationen zu Temurin
+### Source code and technical information on Temurin
 
-Die Quelltexte von Temurin sind in mehreren sogenannten Repositories in der Versionsverwaltung GitHub abgelegt und somit
-jederzeit online abrufbar und einsehbar. Die **Quellen des OpenJDK** werden in diese Repositories “gespiegelt”, so dass
-sie für einen erleichterten Überblick direkt an den gleichen Stellen online einsehbar sind. Neben den Quelltexten
-beinhalten die Repositories auch die technischen Dokumentationen.
+The Temurin source code is stored in several repositories in the GitHub version management system and
+can therefore be accessed and viewed online at any time.
+The **OpenJDK sources** are “mirrored” in these repositories so that they can be viewed directly
+online in the same places for a simplified overview.
+In addition to the source code, the repositories also contain the technical documentation.
 
-Das sind die wichtigsten Temurin Repositories in GitHub:
+These are the most important Temurin repositories in GitHub:
 
-- [Build Skripte](https://github.com/adoptium/temurin-build) von Temurin
-- Build Skripte der [Installer von Temurin](https://github.com/adoptium/installer)
-- Build Skripte der [Docker Container von Temurin](https://github.com/adoptium/containers)
-- [Quellcode des OpenJDK](https://github.com/adoptium/jdk)
+- [Temurin build scripts](https://github.com/adoptium/temurin-build)
+- [Build scripts of the Temurin installers](https://github.com/adoptium/installer)
+- [Build scripts of the Temurin Docker containers](https://github.com/adoptium/containers)
+- [Source code of the OpenJDK](https://github.com/adoptium/jdk)
 
-Die Adoptium Working Group nutzt verschiedene Online-Dienste, um den Bau von Temurin Laufzeitumgebungen, Statistiken zu
-Downloads und die Ergebnisse der Tests und Validierungen der Laufzeitumgebungen öffentlich einsehbar zu machen. Diese
-Information können unter folgenden Diensten eingesehen werden:
+The Adoptium Working Group uses various online services to make the construction of Temurin runtime environments,
+statistics on downloads and the results of tests and validations of the runtime environments publicly available.
+This information can be viewed at the following services:
 
-- [Buildserver von Temurin](https://ci.adoptium.net/)
-- [API](https://api.adoptium.net/q/swagger-ui/) zum programmatischen Download von Temurin
-- [Statistik zu Temurin Downloads](https://dash.adoptium.net/)
+- [Temurin build server](https://ci.adoptium.net/)
+- [API for the programmatic download of Temurin](https://api.adoptium.net/q/swagger-ui/)
+- [Statistics on Temurin downloads](https://dash.adoptium.net/)
 
-Die Artefakte der Laufzeitumgebung werden ebenfalls bei GitHub veröffentlicht und auch alte Versionen werden nicht
-entfernt. Neben den reinen Downloads bietet die Adoptium Working Group auch offizielle Docker Container für Temurin an.
-Diese sind offen zugänglich im Docker Hub abgelegt.
+The artifacts of the runtime environment are also published on GitHub and old versions are not removed.
+In addition to the pure downloads, the Adoptium Working Group also offers official Docker containers for Temurin.
+These are openly accessible in the Docker Hub.
 
-Die jeweiligen Downloads stehen Ihnen hier zur Verfügung:
+The respective downloads are available here:
 
-- Alle [Downloads von Temurin 17](https://github.com/adoptium/temurin17-binaries/releases)
-- Alle [Downloads von Temurin 11](https://github.com/adoptium/temurin11-binaries/releases)
-- Alle weitere Versionen (8, 12, ..,20) können über ähnliche Links erreicht werden
-- [Zugriff auf die Docker Container](https://hub.docker.com/_/eclipse-temurin)
+- [Temurin LTS releases (11, 17, 21, ...)](https://adoptium.net/de/temurin/releases/)
+- [Other versions (8, 16, 18, ...) can be accessed in the archive](https://adoptium.net/de/temurin/archive/)
+- [Docker containers](https://hub.docker.com/_/eclipse-temurin)
 
-## Wer kümmert sich um die Instandhaltung und Wartung der Java Laufzeitumgebung?
+{{< centered-image src="open-chain.png" showCaption="true" alt="All open components of the Temurin supply chain" width="94%" >}}
 
-Damit Ihre unternehmenseigenen Java Anwendungen **langfristig sicher und leistungsfähig** sind, sollte nicht nur die
-Anwendung selbst, sondern auch deren Laufzeitumgebung regelmäßig gewartet und aktualisiert werden.
+## Who takes care of the maintenance and servicing of the Java runtime environment?
 
-### Warum ist es so wichtig, auch Open-Source-Software regelmäßig zu warten?
+To ensure that your company's own Java applications are **secure and efficient in the long term**,
+not only the application itself, but also its runtime environment should be regularly maintained and updated.
 
-Java wird stetig aktualisiert, im Unternehmen gibt es selten Personen, die immer auf dem neuesten Wissensstand sind.
-Dabei ist nicht nur eine Kenntnis über die eigene Anwendung wichtig, sondern auch über die Laufzeitumgebung. Dessen
-Funktionalität ist wiederum eine Voraussetzung für die Funktionalität Ihrer eigenen Anwendung. Ein **professioneller
-Support Service** schafft hier Abhilfe.
+### Why is it so important to regularly maintain open source software?
 
-Java gehört mittlerweile bei vielen Firmen zur **kritischen Infrastruktur** und ist innerhalb eines Unternehmens auch
-oft in verschiedenen Versionen im Einsatz. Bei Temurin werden mehrere Long Term Support (LTS) Versionen aktiv gepflegt
-und mit regelmäßigen Updates weiterentwickelt. Dies kann bereits heute zu Teilen nur durch die Gelder aus kommerziellen
-Support Verträgen ermöglicht werden. Durch die steigende Anzahl der LTS Versionen, die in Unternehmen genutzt werden,
-erhöhen sich auch der Wartungsaufwand sowie das benötigte Know-how zu den jeweiligen Versionen und deren Unterschieden.
-Ein Support Service bietet hierbei Unterstützung in Wartung und Migration sowie aktive Weiterbildung für die eigenen
-Mitarbeiter*innen.
+Java is constantly being updated, and there are rarely people in the company who are always up to date.
+It is not only important to know about your own application, but also about the runtime environment.
+Its functionality is in turn a prerequisite for the functionality of your own application.
+A **professional support service** can help here.
 
-**Temurin Versionshistorie:**
+{{< centered-image src="tree.png"  alt="Support" width="80%" >}}
 
-| Java Version  | Verfügbar ab            | Ende der Verfügbarkeit  |
-|---------------|-------------------------|-------------------------|
-| Java 21 (LTS) | voraussichtlich 09.2023 | voraussichtlich 09.2029 |
-| Java 19       | 09.2022                 | 03.2023                 |
-| Java 18       | 03.2022                 | 09.2022                 |
-| Java 17 (LTS) | 09.2021                 | mind. 10.2027           |
-| Java 11 (LTS) | 09.2018                 | mind. 10.2024           |
-| Java 8 (LTS)  | 03.2014                 | mind. 11.2026           |
+Java is now part of the **critical infrastructure** of many companies and is often used in different versions
+within a company.
+At Temurin, several Long Term Support (LTS) versions are actively maintained and further developed with
+regular updates.
+Even today, this can only be made possible in part by the money from commercial support contracts.
+The increasing number of LTS versions used in companies also increases the maintenance effort as well
+as the required know-how about the respective versions and their differences.
+A support service offers assistance in maintenance and migration as well as active training for your
+own employees.
 
-## Temurin Support & Care – der Open Source Berater an Ihrer Seite
+**Temurin version history:**
 
-Der Kauf von Open Elements Temurin Support & Care bietet Ihnen eine Vielzahl von Vorteilen, die die Leistungsfähigkeit
-und Sicherheit Ihrer Java-Anwendungen erhöhen sowie Ihren Entwicklungsprozess optimieren. Durch die direkte Mitarbeit an
-Adopium bzw. Temurin und durch die Mitgliedschaft in der Eclipse Foundation hat Open Elements einen direkten Einfluss
-auf die Weiterentwicklung und Ausrichtung von Temurin und anderen Projekten. Hierdurch werden Supportanfragen direkt
-durch Expert*innen des jeweiligen Fachbereichs bearbeitet. Dank unserer Aktivitäten im Java und Open Source Ökosystem
-können wir Ihnen darüber hinaus detaillierte Informationen und Einblicke in die aktuelle und zukünftige Entwicklung in
-der Eclipse Adoptium Working Group sowie dem OpenJDK bieten.
+| Java Versions  | Available since            | end of availability  |
+|----------------|----------------------------|----------------------|
+| Java 21 (LTS)  | expected 09.2023           | expected 09.2029     |
+| Java 19        | 09.2022                    | 03.2023              |
+| Java 18        | 03.2022                    | 09.2022              |
+| Java 17 (LTS)  | 09.2021                    | at least 10.2027     |
+| Java 11 (LTS)  | 09.2018                    | at least 10.2024     |
+| Java 8 (LTS)   | 03.2014                    | at least 11.2026     |
 
-{{< centered-image src="support-care-logo.svg" alt="Support & Care Logo"
-width="60%" >}}
+## Eclipse Temurin Support & Care - the open source consultant at your side
 
-### Welche Leistungen umfasst der Temurin Support?
+Purchasing **Eclipse Temurin Support & Care** offers you a wide range of benefits that increase the
+**performance and security of your Java applications** and optimize your development process.
+Through its direct involvement in Adopium and Temurin and its membership of the Eclipse Foundation,
+Open Elements has a direct influence on the further development and direction of Temurin and other projects.
+As a result, support requests are processed directly by experts in the respective field.
+Thanks to our activities in the Java and open source ecosystem, we can also provide you with detailed
+information and insights into current and future developments in the Eclipse Adoptium Working Group
+and the OpenJDK.
 
-Der **Temurin Support & Care-Service** beinhaltet umfangreiche Leistungen, welche die Performance und Sicherheit Ihrer
-Java-Anwendung gewährleisten. Dabei gehen unsere Services weit über klassisches Troubleshooting hinaus und ermöglichen
-nachhaltige Verbesserung Ihrer kritischen Infrastruktur.
+{{< centered-image src="support-care-logo.svg" alt="Eclipse Temurin Support & Care Logo" width="80%" >}}
 
-#### Updates zu Temurin
+### What services does Temurin Support include?
 
-Mit unserem Support verpassen Sie keine wichtigen Änderungen. Sie erhalten **Berichte, Mitteilungen & detaillierte
-Informationen** zu:
+The **Temurin Support & Care** service includes comprehensive services to ensure the performance
+and security of your Java application.
+Our services go far beyond classic troubleshooting and enable sustainable improvement of your
+critical infrastructure.
 
-- Major Releases
-- Bugfix Releases
-- Neue Projekte der Adoptium Working Group
+#### Temurin updates
 
-Dies beinhaltet auch alle Informationen und somit direkten Zugriff auf Sicherheitsupdates bzw. Critical Patch Updates (
-CPU) der Projekte. Hierdurch werden eventuelle Bugs und Sicherheitslücken in ihrer Infrastruktur frühestmöglich
-geschlossen.
+With our support, you won't miss any important changes.
+You receive **reports, notifications & detailed information** on:
 
-#### Webbinare & Meetings
+- Major releases
+- Bugfix releases
+- New projects of the Adoptium Working Group
 
-Haben Sie nicht die Zeit, alle News zu Java zu lesen oder wünschen Sie sich eine noch detailliertere Erklärung mit der
-Möglichkeit für Rückfragen? Wir veranstalten **jedes Quartal ein Webinar für unsere Kunden**, in dem alle wichtigen
-Informationen zu Temurin, weitere Adoptium-Projekten und dem OpenJDK in einer aufbereiteten Form präsentiert werden.
-Zusätzlich wird jeder Kunde ein Mal pro Quartal zu einem **1-on-1 Call** eingeladen. Dieser kann genutzt werden, um
-offene Fragen zu stellen und die eigenen Bedürfnisse und Wünsche in die Gremien von Temurin, Adoptium und OpenJDK
-einzubringen.
+This also includes all information and therefore direct access to security updates and
+critical patch updates (CPU) for the projects.
+This ensures that any bugs and security gaps in your infrastructure are closed as early as possible.
+
+{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+
+#### Webbinars & Meetings
+
+Don't have time to read all the news about Java or would you like an even more detailed explanation with
+the opportunity to ask questions?
+We organize **webinars for our customers** every quarter, in which all important information about Temurin,
+other Adoptium projects and the OpenJDK is presented in a prepared form.
+In addition, every customer is invited to **1-on-1 calls** once a quarter.
+This can be used to ask open questions and to bring their own needs and wishes to the committees of
+Temurin, Adoptium and OpenJDK.
+
+{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
 
 #### Direct Support
 
-Selbstverständlich erreichen Sie uns auch jederzeit außerhalb der Webinare oder den regulären Meetings. Unsere Kunden
-erhalten einen direkten **Support Zugang** in deutscher und englischer Sprache mit einer garantierten Reaktionszeit.
-Gerne vereinbaren wir nach der Meldung eines Problems einen Termin für einen **Video-Call**, um Ihnen schnellstmöglich
-helfen zu können.
+Of course, you can also reach us at any time outside of the webinars or regular meetings.
+Our customers receive direct **support access** in German and English with a guaranteed response time.
+We are happy to arrange an appointment for a **video call** after you report a problem so that we can help
+you as quickly as possible.
 
-Diese Bereiche deckt unser Support ab:
+Our support covers these areas:
 
 - Eclipse Adoptium
 - Eclipse Temurin
 - OpenJDK
 
-Wir nehmen Ihnen hierbei die komplizierte Ticketerstellung für die verschiedenen Plattformen ab. Oft wissen Nutzer
-nicht, ob es sich bei einem Bug nun um ein Problem in Adoptium, Temurin oder OpenJDK handelt und wo diese eingereicht
-werden können. Dabei garantieren wir die Erstellung, Pflege und Überwachung technisch aussagekräftiger Tickets in den
-jeweils korrekten Ticketsystemen. Soweit möglich, werden wir Änderungswünsche direkt umsetzen. Der gesamte Ablauf wird
-jederzeit transparent an Sie in einer aufbereiteten Form weitergegeben.
+We take care of the complicated ticket creation for the various platforms.
+Users often do not know whether a bug is a problem in Adoptium, Temurin or
+OpenJDK and where it can be submitted.
+We guarantee the creation, maintenance and monitoring of technically meaningful tickets in the
+correct ticket systems.
+As far as possible, we will implement change requests directly.
+The entire process is passed on to you in a transparent form at all times.
 
-Je nach Support-Umfang lässt sich der Supportvertrag individuell auf Ihren Bedarf anpassen.
+Depending on the scope of support, the support contract can be individually adapted to your needs.
 
-#### Wartungsservice
+{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
 
-Temurin Support & Care beinhaltet die Wartung von auf den Kunden zugeschnittenen **Docker Containern**. Diese enthalten
-alles, was zur Ausführung Ihrer Anwendung notwendig ist: Temurin als Laufzeitumgebung, Systemtools, Einstellungen und
-Systembibliotheken. Somit können Sie aktuelle Temurin Versionen auf dem von Ihnen gewählten Betriebssystem als Container
-laufen lassen. Hierbei werden die Container in einer Docker Registry bereitgestellt und passend zum Release-Zyklus von
-Temurin aktuell gehalten. Je nach Container-Typ beinhaltet die Wartung auch das automatische Testen der Container
-Images.
+#### Maintenance service
 
-{{< centered-button link="/contact"  >}}Beratungstermin vereinbaren{{</ centered-button >}}
+Temurin Support & Care includes the maintenance of **Docker containers** tailored to the customer.
+These contain everything you need to run your application:
+Temurin as a runtime environment, system tools, settings and system libraries.
+This allows you to run the latest Temurin versions as containers on the operating system of your choice.
+The containers are provided in a Docker registry and kept up to date in line with the Temurin release cycle.
+Depending on the container type, maintenance also includes automatic testing of the container images.
+
+{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+
+{{< centered-button link="/contact"  >}}Schedule a consulting{{</ centered-button >}}

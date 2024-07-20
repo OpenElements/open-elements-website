@@ -9,7 +9,7 @@ etabliert.
 Umso wichtiger ist es, auf professionelle Unterstützung zurückgreifen zu können, um bei der Entwicklung und Wartung
 von Java-Anwendungen auf der sicheren Seite zu sein.
 
-{{< centered-image src="temurin-support-care.png" alt="Eclipse Temurin Support & care" width="80%" >}}
+{{< centered-image src="temurin-support-care.png" alt="Eclipse Temurin Support & Care" width="80%" >}}
 
 Als professioneller Experte
 für [Eclipse Temurin](https://adoptium.net/temurin/) steht Open Elements Ihrem Unternehmen gerne zur Seite.
@@ -114,10 +114,9 @@ Diese sind offen zugänglich im Docker Hub abgelegt.
 
 Die jeweiligen Downloads stehen Ihnen hier zur Verfügung:
 
-- Alle [Downloads von Temurin 17](https://github.com/adoptium/temurin17-binaries/releases)
-- Alle [Downloads von Temurin 11](https://github.com/adoptium/temurin11-binaries/releases)
-- Alle weitere Versionen (8, 12, ..,21) können über ähnliche Links erreicht werden
-- [Zugriff auf die Docker Container](https://hub.docker.com/_/eclipse-temurin)
+- [Temurin LTS Versionen (11, 17, 21, ...)](https://adoptium.net/de/temurin/releases/)
+- [Weitere Versionen (8, 16, 18, ...)](https://adoptium.net/de/temurin/archive/)
+- [Docker Container](https://hub.docker.com/_/eclipse-temurin)
 
 {{< centered-image src="open-chain.png" showCaption="true" alt="Alle offen Bestandteile des Supply Chains von Temurin" width="94%" >}}
 
