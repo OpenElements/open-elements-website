@@ -132,7 +132,7 @@ Dabei ist nicht nur eine Kenntnis über die eigene Anwendung wichtig, sondern au
 Funktionalität ist wiederum eine Voraussetzung für die Funktionalität Ihrer eigenen Anwendung. Ein **professioneller
 Support Service** schafft hier Abhilfe.
 
-{{< centered-image src="tree.png"  alt="Illustration zur Wartung" width="80%" >}}
+{{< centered-image src="tree.svg"  alt="Illustration zur Wartung" width="80%" >}}
 
 Java gehört mittlerweile bei vielen Firmen zur **kritischen Infrastruktur** und ist innerhalb eines Unternehmens auch
 oft in verschiedenen Versionen im Einsatz. Bei Temurin werden mehrere Long Term Support (LTS) Versionen aktiv gepflegt

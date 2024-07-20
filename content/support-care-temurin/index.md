@@ -19,14 +19,14 @@ assist your company.
 - Personal contact persons in German and English
 - Increased security through advance information on updates and releases
 
-{{< centered-image src="RASTER.png" alt="TODO RASER" width="80%" >}}
-
 Purchasing Eclipse Temurin Support & Care offers you a wide range of benefits that increase the performance and security
 of your Java applications and optimize your development process.
 Through direct involvement in Eclipse Temurin as a member of the Adoptium™ working group and the exceptional
 networking of Open Elements through our activities in the Java and Open Source ecosystem,
 we can provide you with information and insights into current and future developments in the
 Eclipse Adoptium WorkingGroup and the OpenJDK.
+
+{{< centered-image src="tremurin-support.svg" alt="Temurin Support Illustration" width="80%" >}}
 
 ## What is Eclipse Temurin?
 
@@ -135,7 +135,7 @@ It is not only important to know about your own application, but also about the 
 Its functionality is in turn a prerequisite for the functionality of your own application.
 A **professional support service** can help here.
 
-{{< centered-image src="tree.png"  alt="Support" width="80%" >}}
+{{< centered-image src="tree.svg"  alt="Support" width="80%" >}}
 
 Java is now part of the **critical infrastructure** of many companies and is often used in different versions
 within a company.
@@ -191,7 +191,7 @@ This also includes all information and therefore direct access to security updat
 critical patch updates (CPU) for the projects.
 This ensures that any bugs and security gaps in your infrastructure are closed as early as possible.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-updates.svg" alt="Piktogram updates" width="24%" >}}
 
 #### Webbinars & Meetings
 
@@ -203,7 +203,7 @@ In addition, every customer is invited to **1-on-1 calls** once a quarter.
 This can be used to ask open questions and to bring their own needs and wishes to the committees of
 Temurin, Adoptium and OpenJDK.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-training.svg" alt="Piktogram training" width="24%" >}}
 
 #### Direct Support
 
@@ -228,7 +228,7 @@ The entire process is passed on to you in a transparent form at all times.
 
 Depending on the scope of support, the support contract can be individually adapted to your needs.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-support.svg" alt="Piktogram support" width="24%" >}}
 
 #### Maintenance service
 
@@ -239,6 +239,6 @@ This allows you to run the latest Temurin versions as containers on the operatin
 The containers are provided in a Docker registry and kept up to date in line with the Temurin release cycle.
 Depending on the container type, maintenance also includes automatic testing of the container images.
 
-{{< centered-image src="TODO" alt="Piktogramm" width="24%" >}}
+{{< centered-image src="pictogram-docker.svg" alt="Piktogram Docker" width="24%" >}}
 
 {{< centered-button link="/contact"  >}}Schedule a consulting{{</ centered-button >}}
