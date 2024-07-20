@@ -26,4 +26,5 @@ Inhaltlich werden konkret folgende Punkte besprochen:
 - Smart Contracts und die Ethereum Virtual Machine (EVM)
 
 ## Meinung der Studenten zur Vorlesung
+
 {{< quote id="fabian-dlt">}}

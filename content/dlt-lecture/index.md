@@ -26,4 +26,5 @@ The following points are discussed in detail:
 - Smart contracts and the Ethereum Virtual Machine (EVM)
 
 ## Student opinion on the lecture
+
 {{< quote id="fabian-dlt">}}
