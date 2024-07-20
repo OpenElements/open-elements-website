@@ -1,6 +1,6 @@
 ---
 title: "Vorlesung zu 'DLT & Digital Trust'"
-description: "TODO"
+description: "Seit 2023 bietet Hendrik Ebbers die Vorlesung 'Distribution Ledger Technology und Digital Trust' an"
 layout: "article"
 url: "/de/dlt-lecture"
 ---
