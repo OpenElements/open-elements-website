@@ -40,3 +40,5 @@ other = "Impressum"
 notFound = "Page Not Found!!"
 [altTexts]
 underline = "Graphical element that underlines the text"
+[digitalTrustLecture]
+other = "Digital Trust Lecture"

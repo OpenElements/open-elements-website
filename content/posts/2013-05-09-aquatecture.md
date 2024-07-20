@@ -6,6 +6,7 @@ date: "2013-05-09"
 author: hendrik
 categories: [AquaFX, General, JavaFX]
 excerpt: 'In this post I will show you some of the internal API stuff of AquaFX'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 While Claudine is working on all the needed Skins for AquaFX I will use the time to show you some of the internal API stuff of [AquaFX]({{ site.baseurl }}{% link pages/projects/aquafx.md %}) that Claudine has developed. Once the project is released you can easily style your complete application by just calling
 

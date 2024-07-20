@@ -6,6 +6,7 @@ date: "2014-11-12"
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]
 excerpt: 'WebComponents are custom components for the web. I tried the new spec and created my first simple WebComponent with HTML, JavaScript and CSS'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 I think one of the big new HTML features in the next years will be WebComponents. By using WebComponents developers can create fully-featured DOM elements as defined in the [web component spec](http://w3c.github.io/webcomponents/spec/custom/). In short this means that you can create your own HTML tags. If you want to add an avatar view to your web app you and use web components you can define a avatar component and then use the `<avatar>` tag in your HTML file. To use web components today you can use one of the following libraries:
 

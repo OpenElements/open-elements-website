@@ -6,6 +6,7 @@ date: "2015-11-30"
 author: hendrik
 categories: [General, JavaFX]
 excerpt: "Styling a scrollbar in JavaFX isn't that easy since it it composed of several internal nodes. Thanks to CSS all the internal nodes can be styled by using the defined style classes of the nodes."
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Styling a scrollbar in JavaFX isn't that easy since it it composed of several internal nodes. Thanks to CSS all the internal nodes can be styled by using the defined style classes of the nodes.
 

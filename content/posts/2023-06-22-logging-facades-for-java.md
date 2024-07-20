@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "Logging is an important part of error analysis. However, consolidating different logging libs in Java applications is always a challenge. If you want to know how several different logging libs in a single application can be handled, this post is for you."
 categories: [Java]
 origin: https://www.heise.de/blog/Logging-Facades-fuer-Java-7355974.html
-preview_image: "/posts/2023-06-22-logging-facades-for-java/preview.jpg"
+preview_image: "/posts/preview-images/duke-green.svg"
 ---
 
 After covering best practices and pitfalls in the [first post on Java logging](https://open-elements.com/posts/2023/02/07/best-practices-and-anti-pattern-for-logging-in-java-and-other-languages/), I now want to look at using logging in a large project.

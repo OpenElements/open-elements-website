@@ -8,78 +8,12 @@
     "visibleInFooter": true
   },
   {
-    "name": "Blog",
-    "i18nKey": "blog",
-    "altI18nKey": "blogDescription",
-    "link": "/posts/",
-    "visibleInNavigation": false,
-    "visibleInFooter": true
-  },
-  {
-    "name": "Maven Support",
-    "i18nKey": "supportCare",
-    "altI18nKey": "supportCareDescription",
-    "link": "/support-care-maven/",
-    "visibleInNavigation": true,
-    "visibleInFooter": true
-  },
-  {
     "name": "Support & Care",
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",
-    "link": "#",
-    "visibleInNavigation": false,
-    "visibleInFooter": false,
-    "children": [
-      {
-        "name": "About Support & Care",
-        "i18nKey": "aboutSupportCare",
-        "altI18nKey": "aboutSupportCareDescription",
-        "link": "/about-support-care/",
-        "visibleInNavigation": false,
-        "visibleInFooter": false
-      },
-      {
-        "name": "Support & Care for Maven",
-        "i18nKey": "mavenSupport",
-        "altI18nKey": "mavenSupportDescription",
-        "link": "/support-care-maven/",
-        "visibleInNavigation": false,
-        "visibleInFooter": false
-      },
-      {
-        "name": "Support & Care for Temurin",
-        "i18nKey": "temurinSupport",
-        "altI18nKey": "temurinSupportDescription",
-        "link": "/temurin-support/",
-        "visibleInNavigation": false,
-        "visibleInFooter": false
-      },
-      {
-        "name": "Support & Care for Temurin 2",
-        "i18nKey": "temurinSupport2",
-        "altI18nKey": "temurinSupportDescription2",
-        "link": "/support-care-temurin/",
-        "visibleInNavigation": false,
-        "visibleInFooter": false
-      },
-      {
-        "name": "Open Source for Java",
-        "i18nKey": "OpenSourceJava",
-        "altI18nKey": "OpenSourceJavaDescription",
-        "link": "/open-source-java/",
-        "visibleInNavigation": false,
-        "visibleInFooter": false
-      },
-      {
-        "name": "Open Elements 2023",
-        "i18nKey": "OpenElements2023",
-        "altI18nKey": "OpenElements2023Description",
-        "link": "/open-elements-2023/",
-        "visibleInNavigation": false,
-        "visibleInFooter": false
-      }
-    ]
+    "link": "/support-care-maven/",
+    "visibleInNavigation": true,
+    "visibleInFooter": true
   },
   {
     "name": "About us",

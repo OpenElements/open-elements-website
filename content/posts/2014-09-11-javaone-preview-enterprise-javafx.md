@@ -6,6 +6,7 @@ date: "2014-09-11"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'This is a short preview of one of my talks at JavaOne 2014: Enterprise JavaFX. In the talk I will discuss problems in enterprise development with JavaFX.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Today I want to give a short preview of one of my talks at JavaOne: [Enterprise JavaFX](https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=2341).
 

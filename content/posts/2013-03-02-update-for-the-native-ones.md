@@ -6,6 +6,7 @@ date: "2013-03-02"
 author: claudine
 categories: [AquaFX, General, JavaFX]
 excerpt: 'I was keen on starting with the first components for the native Look and Feel for JavaFX. Now I want to show you what is the result.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Since [my project]({{< ref "/posts/2013-01-16-this-is-for-the-native-ones" >}}) was accepted, I was keen on starting with the first components. Now I want to show you what is the result.
 

@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "In recent years, there have been various changes in the Java Release Train, leading to confusion and misunderstandings within the community. This post will give an overview of the changes and how you can be better prepared for the next Java releases."
 categories: [Java]
 origin: https://www.heise.de/blog/Der-Java-Release-Train-7350614.html
-preview_image: "/posts/2023-03-14-java-release-train/Preview.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 
 Since the release of Java 9 in 2017, new Java platform releases have been published through a new and much better-defined release train.

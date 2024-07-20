@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "Logging is an important instrument, but it's not easy to find the right amount of information to log. This post will show some best pratices that help to get the best results out of a logging system."
 categories: [Java]
 origin: https://www.heise.de/blog/Best-Practices-und-Anti-Pattern-beim-Logging-in-Java-und-anderen-Sprachen-7336005.html
-preview_image: "/posts/2023-02-07-logging-in-java-and-other-languages/java-preview.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 
 One topic that every (Java) developer will have to deal with sooner or later is logging. 

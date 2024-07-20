@@ -142,8 +142,8 @@ Infrastruktur.
 - **Direkter Support:** Kunden haben jederzeit Zugang zu mehrsprachigem Support mit garantierten Reaktionszeiten und der
   Möglichkeit für Video-Calls zur schnellen Problemlösung.
 - **Support-Bereiche:** Unser Service deckt verschiedene Open Source Projekte ab, beispielsweise im Rahmen unseres
-  [Temurin Support & Care Angebots]({{< relref "support-care-landingpage-temurin" >}}) und unseres
-  [Maven Support & Care Angebots]({{< relref "maven-support-care-announcement" >}}).
+  [Temurin Support & Care Angebots]({{< relref "support-care-temurin" >}}) und unseres
+  [Maven Support & Care Angebots]({{< relref "support-care-maven" >}}).
   Wir übernehmen die Ticketerstellung, -pflege und -überwachung, um technische Probleme effizient zu lösen.
 - **Wartungsservice:** Unser Service umfasst die Wartung kundenspezifischer Docker-Container, die alle notwendigen
   Komponenten für Ihre Anwendung enthalten und regelmäßig aktualisiert werden.
@@ -151,7 +151,7 @@ Infrastruktur.
 
 Je nach Bedarf lässt sich der Supportvertrag individuell anpassen.
 
-[Kontaktieren Sie uns](https://open-elements.com/contact/) für eine individuelle Beratung und erfahren Sie mehr darüber,
+[Kontaktieren Sie uns]({{< relref "contact" >}}) für eine individuelle Beratung und erfahren Sie mehr darüber,
 wie unser Open Source Support & Care-Service Ihre IT-Infrastruktur verbessern kann.
 
 {{< centered-button link="/contact"  >}}Beratungstermin vereinbaren{{</ centered-button >}}

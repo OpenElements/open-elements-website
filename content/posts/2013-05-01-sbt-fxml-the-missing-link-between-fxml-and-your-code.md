@@ -6,6 +6,7 @@ date: "2013-05-01"
 author: phdoerfler
 categories: [JavaFX]
 excerpt: 'By usinf sbt-fxml FXML files suddenly type check thus allowing you to find mistakes almost instantly.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Greetings web! I was invited to write a guest post here about a little JavaFX project I started not long ago: [sbt-fxml](https://bitbucket.org/phdoerfler/sbt-fxml). It's a plugin for [SBT](http://scala-sbt.org) and it tries hard to generate boring code for you so you don't have to.
 

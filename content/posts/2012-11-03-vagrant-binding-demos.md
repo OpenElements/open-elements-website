@@ -6,6 +6,7 @@ date: "2012-11-03"
 author: hendrik
 categories: [Vagrant-Binding]
 excerpt: 'I created several demos to show the usage of Vagrant-Binding.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 I started a [demo project](https://github.com/guigarage/vagrant-binding-demos) for [Vagrant-Binding](https://github.com/guigarage/vagrant-binding). You can use the examples in this project to start your work with Vagrant-Binding. The [Vagrant-Binding-Demos](https://github.com/guigarage/vagrant-binding-demos) project is hosted at github.
 

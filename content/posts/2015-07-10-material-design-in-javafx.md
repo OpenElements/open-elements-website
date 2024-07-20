@@ -6,6 +6,7 @@ date: "2015-07-10"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'The last weeks I worked on a prototype to create a like Material Design UI with JavaFX. This post introduces the theme.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 The last weeks I worked on a prototype to create a [Material Design](https://www.google.com/design/spec/material-design/introduction.html) like UI with JavaFX. Google provides an awesome documentation about the Material Design and its guidelines. You can find an example [here](https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-keylines-spacing).
 

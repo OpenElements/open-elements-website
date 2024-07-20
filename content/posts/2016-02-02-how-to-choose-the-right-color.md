@@ -6,6 +6,7 @@ date: "2016-02-02"
 author: hendrik
 categories: [General, Layout & UI]
 excerpt: 'When creating a new UI without having a designer in your team or concrete view templates you need to choose the colors of your design by yourself. Thanksfully there are tools that helps to find good color combinations'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 When creating a new control or a complete application I often ask myself what colors I should use for visualization. When defining a control the best solution is to provide properties for all colors.
 

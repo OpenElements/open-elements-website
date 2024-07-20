@@ -6,6 +6,7 @@ date: "2015-10-05"
 author: hendrik
 categories: [Dolphin Platform, JavaFX]
 excerpt: 'In this sneak peek of the Dolphin Platform, a new open source project by Canoo, I want to show how server side controller can be defined.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Today I want to add the next sneak peek of the Dolphin Platform, a new __open source__ project on that [Michael Heinrich](https://twitter.com/net0pyr) and I are currently working at Canoo. Yesterday I blogged about the [general concept of the platform]({{ site.baseurl }}{% post_url 2015-10-04-dolphin-platform-a-sneak-peek %}
 ). Today I want to show server side controllers can be defined by using the Dolphin Platform.

@@ -6,6 +6,7 @@ date: "2015-01-28"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'This tutorial describes how you can add DataFX to your JavaFX application or start a new application that is based on DataFX.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 A lot of people start using DataFX in small projects without a build file and by doing so they sometimes use old builds. Because of that I will give you some hints how to setup a project that is using DataFX.
 

@@ -5,6 +5,7 @@ date: "2015-02-01"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'This post describes how the Concurrency in UI Toolkits can be defined in a unified way.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 In the [first post]({{< ref "/posts/2015-01-19-concurrency-ui-toolkits-part-1" >}}) of this series I showed how Concurrency is handled in UI Toolkits and how a generic approach to work with the toolkit specific thread may look like. This ends in the following interface:
 

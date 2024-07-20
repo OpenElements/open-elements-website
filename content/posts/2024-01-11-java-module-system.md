@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "The Java Module System remains an underutilized feature in the development of applications and libraries, despite its often straightforward entry point. Anyway, more and more libraries provide support for the module system. Based on that it might make sense to learn how you can add support to your project."
 categories: [Java]
 origin: https://www.heise.de/blog/Softwareentwicklung-Minimale-Unterstuetzung-fuer-das-Java-Modulsystem-7434695.html
-preview_image: "/posts/2024-01-11-java-module-system/preview.jpg"
+preview_image: "/posts/preview-images/duke-blue.svg"
 ---
 
 Over the past few years, there have been many differing opinions about the Java Module System.

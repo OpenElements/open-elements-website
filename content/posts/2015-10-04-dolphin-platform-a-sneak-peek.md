@@ -6,6 +6,7 @@ date: "2015-10-04"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), Dolphin Platform, JavaFX]
 excerpt: 'This is an overview of the Dolphin Platform, a new open source project that provides MVC architecture based on presentation models for several clients'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Today I want to give you a first overview of the Dolphin Platform, a new __open source__ project on that [Michael Heinrichs](https://twitter.com/net0pyr) and I are currently working at Canoo.
 

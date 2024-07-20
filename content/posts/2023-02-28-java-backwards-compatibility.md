@@ -7,7 +7,7 @@ author: hendrik
 excerpt: "As programming paradigms and language features continue to evolve, a question arises: Can Java still maintain the always advertised backwards compatibility?"
 categories: [Java]
 origin: https://www.heise.de/blog/Write-Once-Run-Anywhere-wie-abwaertskompatibel-ist-Java-eigentlich-wirklich-7342188.html
-preview_image: "/posts/2023-02-28-java-backwards-compatibility/preview.jpg"
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 
 With the slogan "Write Once, Run Anywhere" (WORA), Sun Microsystems promoted the Java platform starting in 1995.

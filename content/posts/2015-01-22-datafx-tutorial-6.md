@@ -6,6 +6,7 @@ date: "2015-01-22"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'In this tutorial I want to show how dynamic actions can be handled in DataFX.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 In this tutorial I want to show how dynamic actions can be handled in DataFX. In all the last tutorials the actions are defined in the flow configuration or by using annotations. By doing so you can't dynamically choose which action should be called when clicking a button for example. To do so DataFX provides the FlowActionHandler class. This class provides methods to call DataFX actions directly in code. Here are some examples:
 

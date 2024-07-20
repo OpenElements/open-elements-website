@@ -1,6 +1,6 @@
 ---
 title: "Support & Care"
-description: "Erhalten Sie umfassenden Open Source Support ✔ Updates ✔ Webinare ✔ direkter Support ✔ Wartungsservice für eine sichere und effiziente Infrastruktur."
+description: "TODO"
 layout: "single"
 url: "/about-support-care"
 ---
@@ -134,8 +134,8 @@ more about how our Open Source Support & Care service can improve your IT infras
 - **Direct support:** Customers have access to multilingual support at all times with guaranteed response times
   and the option of video calls for quick problem resolution.
 - **Support areas:** Our service covers various open source projects, for example as part of our
-  [Temurin Support & Care]({{< relref "support-care-landingpage-temurin" >}}) offering and our
-  [Maven Support & Care]({{< relref "maven-support-care-announcement" >}}) offering.
+  [Temurin Support & Care]({{< relref "support-care-temurin" >}}) offering and our
+  [Maven Support & Care]({{< relref "support-care-maven" >}}) offering.
   We take care of ticket creation, maintenance and monitoring in order to solve technical problems efficiently.
 - **Maintenance service:** Our service includes the maintenance of customer-specific Docker containers,
   which contain all the necessary components for your application and are updated regularly.

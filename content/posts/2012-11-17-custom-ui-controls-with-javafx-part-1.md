@@ -6,6 +6,7 @@ date: "2012-11-17"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'One thing I often done is Swing was customization of components and the creation of new components types. With the last release of JavaFX you can easily create custom controls with this new UI toolkit, too. This post gives a first overview about the JavaFX APIs to create custom controls.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 One thing I often done is Swing was customization of components and the creation of new components types. One example for this is the [JGrid]({{< ref "/posts/2011-07-15-jgrid" >}}). Since JavaFX was out I wanted to [port the JGrid to it]({{< ref "/posts/2012-11-14-gridfx-is-hosted-at-github" >}}). After some experiments and bad prototyps I think I found the right way to do it. The talks from [Gerrit Grunwald](http://harmoniccode.blogspot.de) and [Jonathan Giles](http://jonathangiles.net/blog/) at [JavaOne](http://www.oracle.com/javaone/index.html) helped me really a lot to do so. The records of this talks is online ([link](https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=2425&amp;tclass=popup), [link](https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=4726&amp;tclass=popup)) so I would advise everybody who is interest in this topic to spend some time and watch them.
 

@@ -6,6 +6,7 @@ date: "2014-05-16"
 author: hendrik
 categories: [DataFX, JavaFX]
 excerpt: 'The 3rd beta of DataFX 8.0 has been released.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 The [3rd beta of DataFX 8.0](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.javafxdata%22%20AND%20v%3A%228.0b3%22) has been released. Here are all new features / bugfixes of the version:
 

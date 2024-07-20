@@ -6,6 +6,7 @@ date: "2013-08-30"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'For a skin we needed a special blur effect. Our goal was to blur the complete application once a message is shown on the screen. By doing so the user is targeted only to the displayed message because the rest of the application is blured.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 For a skin we needed a special blur effect. Our goal was to blur the complete application once a message is shown on the screen. By doing so the user is targeted only to the displayed message because the rest of the application is blured. Here is a short example:
 

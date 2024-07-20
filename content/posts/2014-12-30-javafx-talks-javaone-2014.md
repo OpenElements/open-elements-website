@@ -6,6 +6,7 @@ date: "2014-12-30"
 author: hendrik
 categories: [JavaFX]
 excerpt: 'List of all JavaFX Talks at JavaOne 2014'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Some of the JavaOne 2014 talks were published at [Parleys](https://www.parleys.com/home) and I hope that a lot of other talks will follow. Thankfully some of the published talks are very good JavaFX related talks and I will post a list of all JavaFX talks. Once new talks will be posted at Parleys I will update the list.
 

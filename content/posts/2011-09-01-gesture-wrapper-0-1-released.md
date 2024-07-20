@@ -6,6 +6,7 @@ date: "2011-09-01"
 author: hendrik
 categories: [General]
 excerpt: 'The Gesture Wrapper API is a wrapper around the Apple multitouch gestures API. It enables you to work with gesture listeners in any swing application without caring for platform-dependence.'
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 The Gesture Wrapper API is a wrapper around the Apple multitouch gestures API. It enables you to work with gesture listeners in any swing application without caring for platform-dependence.
 
