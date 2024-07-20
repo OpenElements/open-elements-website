@@ -115,7 +115,7 @@ Diese sind offen zugänglich im Docker Hub abgelegt.
 Die jeweiligen Downloads stehen Ihnen hier zur Verfügung:
 
 - [Temurin LTS Versionen (11, 17, 21, ...)](https://adoptium.net/de/temurin/releases/)
-- [Weitere Versionen (8, 16, 18, ...) can be accessed in the archive](https://adoptium.net/de/temurin/archive/)
+- [Weitere Versionen (8, 16, 18, ...)](https://adoptium.net/de/temurin/archive/)
 - [Docker Container](https://hub.docker.com/_/eclipse-temurin)
 
 {{< centered-image src="open-chain.png" showCaption="true" alt="Alle offen Bestandteile des Supply Chains von Temurin" width="94%" >}}
