@@ -4,7 +4,7 @@ description: "Eine Übersicht der verschiedenen Bereiche in denen sich OpenEleme
 layout: "about-us"
 
 
-section_intro: 'Die OpenElements GmbH wurde im Jahr 2022 von <a class="link-purple" href="/de/about-hendrik/">Hendrik Ebbers</a> gegründet, um ein Unternehmen zu schaffen, das Open Source und die gemeinschaftliche Zusammenarbeit in einem Java-Ökosystem in seinen Fokus nimmt und stärkt.'
+section_intro: 'Die OpenElements GmbH wurde im Jahr 2022 von <a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> gegründet, um ein Unternehmen zu schaffen, das Open Source und die gemeinschaftliche Zusammenarbeit in einem Java-Ökosystem in seinen Fokus nimmt und stärkt.'
 
 section_engagement_title: 'Unser Engagement'
 
