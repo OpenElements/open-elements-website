@@ -1,5 +1,6 @@
-<figure style="text-align:center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%;{{ with .Get "width" }}
-max-width: {{ . }};{{ end }}">
-<img src="{{ .Get "src" }}" {{ with .Get "alt" }}alt="{{ . }}"{{ end }} style="margin:0em;"/>
-{{ if .Get "showCaption" }}{{ with .Get "alt" }}<figcaption style="font-style: italic; font-size: 0.8rem">{{ . }}</figcaption>{{ end }}{{ end }}
+<figure style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%; {{ with .Get "width" }} max-width: {{ . }};{{ end }}">
+  <img src="{{ .Get "src" }}" {{ with .Get "alt" }}alt="{{ . }}"{{ end }} style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;" />
+  {{ if .Get "showCaption" }}{{ with .Get "alt" }}
+  <figcaption style="font-style: italic; font-size: 0.8rem; text-align: center;">{{ . }}</figcaption>
+  {{ end }}{{ end }}
 </figure>
