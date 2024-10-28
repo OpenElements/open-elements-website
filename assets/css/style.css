@@ -186,6 +186,8 @@ table {
 3. Remove default padding in all browsers.
 */
 
+
+
 button,
 input,
 optgroup,
@@ -5139,4 +5141,18 @@ html{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+}
+
+/* rounded corners */
+.post {
+    display: flex;
+    background-color: #f8f8f8;
+    border-radius: 30px;  /* Ensure full border rounding */
+    overflow: hidden;  /* Prevent image overflow */
+    border: 2px ;  /* Ensure solid border around the post */
+}
+
+.sm\:w-52 {
+    border-radius: 30px 0 0 30px;  /* Make sure the image also has rounded corners on the left side */
+    overflow: hidden;
 }
