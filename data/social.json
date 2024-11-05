@@ -10,7 +10,7 @@
     },
     {
         "name": "Twitter",
-        "icon": "mdi:twitter",
+        "icon": "proicons:x-twitter",
         "link": "https://twitter.com/hendrikebbers"
     }
 
