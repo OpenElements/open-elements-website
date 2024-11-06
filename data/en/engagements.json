@@ -70,5 +70,11 @@
     "text": "In <a class=\"link-purple\" href=\"https://www.ijug.eu\" target=\"_blank\">iJUG e.V.</a>, all Java User Groups in Germany are united. As the leader of the JUG Dortmund, <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is actively involved and also contributes to the leadership of various projects of the iJUG, such as JavaLand or Cyberland.",
     "logo": "/illustrations/logo-ijug.svg",
     "link": "https://www.ijug.eu"
+  },
+  {
+    "title": "OPEN REGULATORY COMPLIANCE WORKING GROUP",
+    "text": "The <a class=\"link-purple\" href=\"https://orcwg.org\" target=\"_blank\">Open Regulatory Compliance Working Group (ORC WG)</a> aims to facilitate compliance of all open source actors with regulatory requirements. ",
+    "logo": "/illustrations/open_regulatory.svg",
+    "link": "https://orcwg.org/"
   }
 ]
