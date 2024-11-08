@@ -1,0 +1,10 @@
+{{ $issues := .Site.Data.issues }}
+<ul>
+  {{ range $issues }}
+  <li>
+    <a href="{{ .url }}">{{ .title }}</a> - {{ .repo }}
+    <br />
+    <small>Created on: {{ .created_at }}</small>
+  </li>
+  {{ end }}
+</ul>
