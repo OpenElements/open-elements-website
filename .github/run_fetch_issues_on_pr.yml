@@ -25,3 +25,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node fetch_issues.mjs
+
+      - name: Commit and push changes
+        if: success() && steps.check-for-changes.outputs.changed == 'true'
+        run: |
+          git commit -m "Update good first issues list from GitHub Actions"
+          git push origin ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
