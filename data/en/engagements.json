@@ -70,5 +70,11 @@
     "text": "In <a class=\"link-purple\" href=\"https://www.ijug.eu\" target=\"_blank\">iJUG e.V.</a>, all Java User Groups in Germany are united. As the leader of the JUG Dortmund, <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is actively involved and also contributes to the leadership of various projects of the iJUG, such as JavaLand or Cyberland.",
     "logo": "/illustrations/logo-ijug.svg",
     "link": "https://www.ijug.eu"
+  },
+  {
+    "title": "Hiero",
+    "text": "<a class=\"link-purple\" href=\"https://hiero.org/\" target=\"_blank\">Hiero</a>, a Linux Foundation Decentralized Trust project, is an open-source, vendor-neutral distributed ledger technology. Hiero is used to build the Hedera public ledger., <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is actively involved and also contributes to the Heiro.",
+    "logo": "/illustrations/logo-hiero.svg",
+    "link": "https://hiero.org/"
   }
 ]
