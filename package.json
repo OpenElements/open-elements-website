@@ -5,7 +5,7 @@
     "dev": "run-p dev:*",
     "build:css": "NODE_ENV=production npx tailwindcss -i input.css -o assets/css/style.css -m",
     "build:hugo": "hugo",
-    "fetch-issues": "node fetch_issues.mjs",
+    "fetch-issues": "node fetch_issues.js",
     "build": "npm run fetch-issues && npm run build:css && npm run build:hugo"
   },
   "devDependencies": {
