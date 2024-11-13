@@ -72,6 +72,12 @@
     "link": "https://www.ijug.eu"
   },
   {
+    "title": "OPEN REGULATORY COMPLIANCE WORKING GROUP",
+    "text": "The <a class=\"link-purple\" href=\"https://orcwg.org\" target=\"_blank\">Open Regulatory Compliance Working Group (ORC WG)</a> aims to facilitate compliance of all open source actors with regulatory requirements. ",
+    "logo": "/illustrations/open_regulatory.svg",
+    "link": "https://orcwg.org/"
+  },
+  {    
     "title": "Hiero",
     "text": "<a class=\"link-purple\" href=\"https://hiero.org/\" target=\"_blank\">Hiero</a>, a Linux Foundation Decentralized Trust project, is an open-source, vendor-neutral distributed ledger technology. Hiero is used to build the Hedera public ledger., <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is actively involved and also contributes to the Hiero.",
     "logo": "/illustrations/logo-hiero.svg",
