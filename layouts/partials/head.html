@@ -29,8 +29,12 @@
   <!-- Canonicalization -->
   <link rel="canonical" href="{{ .Permalink }}" />
   <!-- hreflang Tags -->
-  <link rel="alternate" hreflang="en" href="https://open-elements.com/" />
-  <link rel="alternate" hreflang="de" href="https://open-elements.com/de/" />
+  {{ if eq .Site.Language.Lang "de" }}
+    <link rel="alternate" hreflang="de" href="{{ .Permalink }}" />
+  {{ else }}
+  <link rel="alternate" hreflang="en" href="{{ .Permalink }}" />
+  <link rel="alternate" hreflang="de" href="{{ printf "%sde%s" .Site.BaseURL .RelPermalink }}" />
+  {{ end }}
   <link rel="alternate" hreflang="x-default" href="https://open-elements.com/" />
   <!-- Alpine Plugins -->
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
