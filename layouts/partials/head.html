@@ -33,7 +33,7 @@
     <link rel="alternate" hreflang="de" href="{{ .Permalink }}" />
   {{ else }}
   <link rel="alternate" hreflang="en" href="{{ .Permalink }}" />
-  <link rel="alternate" hreflang="de" href="{{ printf "%sde%s" .Site.BaseURL .RelPermalink }}" />
+  <link rel="alternate" hreflang="de" href="{{ printf "%s/de%s" .Site.BaseURL .RelPermalink }}" />
   {{ end }}
   <link rel="alternate" hreflang="x-default" href="https://open-elements.com/" />
   <!-- Alpine Plugins -->
