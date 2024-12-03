@@ -3636,10 +3636,6 @@ html{
   font-style: normal;
 }
 
-.prose-code\:bg-yellow :is(:where(code):not(:where([class~="not-prose"] *))){
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 227 75 / var(--tw-bg-opacity));
-}
 
 .prose-pre\:my-0 :is(:where(pre):not(:where([class~="not-prose"] *))){
   margin-top: 0px;
