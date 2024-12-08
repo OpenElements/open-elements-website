@@ -54,10 +54,10 @@
 
     <div class="pt-24">
         <div class="container relative">
-            <img class="absolute lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline hidden" src="{{ $line6.RelPermalink }}" />
-            <img class="absolute top-20 -left-6 w-24 sm:hidden" src="{{ $lineM.RelPermalink }}" />
-            <img class="absolute lg:top-0 top-20 xl:w-44 lg:w-32 w-28 right-0 sm:inline hidden" src="{{ $line7.RelPermalink }}" />
-            <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
+            <img class="absolute lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline hidden" src="{{ $line6.RelPermalink }}" alt="Decorative line element on the left side" />
+            <img class="absolute top-20 -left-6 w-24 sm:hidden" src="{{ $lineM.RelPermalink }}" alt="Decorative line element for mobile view on the left side" />
+            <img class="absolute lg:top-0 top-20 xl:w-44 lg:w-32 w-28 right-0 sm:inline hidden" src="{{ $line7.RelPermalink }}" alt="Decorative line element on the right side" />
+            <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" alt="Decorative line element for mobile view on the right side" />
             <div class="pt-20 flex w-full justify-center flex-wrap">
                 {{ range .Params.facts }}
                     {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}
