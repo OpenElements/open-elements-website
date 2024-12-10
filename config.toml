@@ -13,7 +13,7 @@ languageCode = "en-us"
 languageName = "EN"
 [languages.en.params]
 description = "Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java"
-keywords = ["open source", "Java", "OSS", "IT company", "software development", "open source consulting", "Java consulting"]
+keywords = ["open source", "Java", "OSS", "open source Support", "Java Support"]
 
 [languages.de]
 weight = 2
@@ -21,8 +21,7 @@ languageCode = "de"
 languageName = "DE"
 [languages.de.params]
 description = "Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java"
-keywords = ["open source", "Java", "OSS", "IT-Unternehmen", "Softwareentwicklung", "Open-Source-Beratung", "Java-Beratung"]
-
+keywords = ["Open Source", "Java", "OSS", "Open Source Unterstützung", "Java Unterstützung"]
 [markup.goldmark.renderer]
 unsafe = true
 
