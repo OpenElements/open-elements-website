@@ -48,13 +48,13 @@
                 <div class="relative px-6 py-3 border rounded-sm bg-rose-100 border-rose lg:inline-block">
                     <h2 class="h2 text-rose">{{.Params.section_engagement_title}}</h2>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 36 36" data-icon="clarity:cursor-arrow-solid" class="absolute hidden text-3xl iconify text-rose -right-6 -bottom-6 iconify--clarity sm:inline"><path fill="currentColor" d="M29 12.36L3.88 3a1 1 0 0 0-1.29 1.28L12 29.44a1 1 0 0 0 1.89-.05l2.69-8.75l9.12 8.9a1 1 0 0 0 1.41 0l2.35-2.35a1 1 0 0 0 0-1.41l-9.09-8.86L29 14.25a1 1 0 0 0 0-1.89Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg>
-                    <img class="absolute text-3xl text-rose -right-4 -bottom-7 sm:hidden" src="{{ $click.RelPermalink }}" />
+                    <img class="absolute text-3xl text-rose -right-4 -bottom-7 sm:hidden" src="{{ $click.RelPermalink }}" alt="Click icon for engagement section" />
                 </div>
             </div>
-            <img class="absolute hidden lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline" src="{{ $line6.RelPermalink }}" />
-            <img class="absolute w-24 top-20 -left-6 sm:hidden" src="{{ $lineM.RelPermalink }}" />
-            <img class="absolute right-0 hidden lg:top-0 top-20 xl:w-44 lg:w-32 w-28 sm:inline" src="{{ $line7.RelPermalink }}" />
-            <img class="absolute right-0 w-16 top-28 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
+            <img class="absolute hidden lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline" src="{{ $line6.RelPermalink }}" alt="Decorative line graphic" />
+            <img class="absolute w-24 top-20 -left-6 sm:hidden" src="{{ $lineM.RelPermalink }}" alt="Decorative line graphic" />
+            <img class="absolute right-0 hidden lg:top-0 top-20 xl:w-44 lg:w-32 w-28 sm:inline" src="{{ $line7.RelPermalink }}" alt="Decorative line graphic" />
+            <img class="absolute right-0 w-16 top-28 sm:hidden" src="{{ $lineM2.RelPermalink }}" alt="Decorative line graphic" />
             <div class="flex flex-wrap justify-center w-full pt-20">
                 {{ $data := index .Site.Data .Site.Language.Lang }}
                 {{ range $data.engagements }}
@@ -66,10 +66,10 @@
 
     <div class="relative pt-12 pb-20 sm:pb-28">
         <div class="container relative max-w-sm mt-20 lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
-            <img class="absolute inset-0 hidden w-full lg:top-5 top-16 lg:block" src="{{ $longline.RelPermalink }}" />
+            <img class="absolute inset-0 hidden w-full lg:top-5 top-16 lg:block" src="{{ $longline.RelPermalink }}" alt="Long decorative line graphic" />
             <h2 class="text-center h2 text-blue">{{.Params.section_customers_title_prefix}} <span class="text-green">{{.Params.section_customers_title}}</span></h2>
             <div class="relative flex flex-wrap justify-center w-full pt-12 lg:pt-20">
-                <img class="absolute -left-4 top-0 w-[300px] sm:hidden z-0" src="{{ $dashlineM2.RelPermalink }}" />
+                <img class="absolute -left-4 top-0 w-[300px] sm:hidden z-0" src="{{ $dashlineM2.RelPermalink }}" alt="Decorative dashed line graphic" />
                 {{ $data := index .Site.Data .Site.Language.Lang }}
                 {{ range $data.partners }}
                     {{ partial "partials/about-customer.html" (dict "logo" .logo "title"  .title "description" .text "link" .link)}}
