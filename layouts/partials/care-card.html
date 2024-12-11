@@ -3,9 +3,9 @@
         <div class="flex items-center justify-center w-40 mx-auto h-52">
             <!-- https://discourse.gohugo.io/t/isset-in-partial/44934 -->
             {{ if .link }}
-            <a href="{{ .link }}" target="_blank"><img class="w-full" src="{{ .logo }}" /></a>
+            <a href="{{ .link }}" target="_blank"><img class="w-full" src="{{ .logo }}" alt="{{ .title }} logo" /></a>
             {{ else -}}
-            <img class="w-full" src="{{ .logo }}" />
+            <img class="w-full" src="{{ .logo }}" alt="{{ .title }} logo" />
             {{ end -}}
         </div>
         <div class="mt-2 space-y-6">
