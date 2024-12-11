@@ -8,6 +8,13 @@
   {{ if .Params.Description -}}
   <meta name="description" content="{{ .Params.Description }}" />
   {{ end -}}
+  {{ if .Params.Keywords -}}
+  <meta name="keywords" content="{{ delimit .Params.Keywords ", " }}" />
+  {{ else if .Site.Params.keywords -}}
+  <meta name="keywords" content="{{ delimit .Site.Params.keywords ", " }}" />
+  {{ else -}}
+  <meta name="keywords" content="open source, Java, OSS, open source Support, Java Support" />
+  {{ end -}}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
