@@ -2,12 +2,7 @@
 title: "Über uns"
 description: "Eine Übersicht der verschiedenen Bereiche in denen sich OpenElements einbringt sowie unserer Partner und Kunden."
 layout: "about-us"
-keywords:
-  - "Open Source"
-  - "Java"
-  - "OSS"
-  - "Open Source Unterstützung"
-  - "Java Unterstützung"
+keywords: ["Open Source", "Java", "OSS", "Open Source Unterstützung", "Java Unterstützung"]
 
 section_intro: "Die OpenElements GmbH wurde im Jahr 2022 von <a class=\"link-purple\" href=\"/de/about-hendrik/\">Hendrik Ebbers</a> gegründet, um ein Unternehmen zu schaffen, das Open Source und die gemeinschaftliche Zusammenarbeit in einem Java-Ökosystem in seinen Fokus nimmt und stärkt."
 
