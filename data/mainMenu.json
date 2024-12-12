@@ -12,8 +12,8 @@
     "i18nKey": "blog",
     "altI18nKey": "blogDescription",
     "link": "/posts/",
-    "visibleInNavigation": false,
-    "visibleInFooter": false
+    "visibleInNavigation": true,
+    "visibleInFooter": true
   },
   {
     "name": "Support & Care",
