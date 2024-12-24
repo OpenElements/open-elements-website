@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title:  'Do I need to pay for Java now?'
 date: "2018-06-25"
 author: hendrik

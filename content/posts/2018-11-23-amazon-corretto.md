@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title:  'Amazon Corretto announced'
 date: "2018-11-23"
 author: hendrik

@@ -1,5 +1,6 @@
 ---
 outdated: true
+showInBlog: false
 title: 'How to integrate custom fonts in your JavaFX application by using CSS'
 date: "2014-10-01"
 author: hendrik
