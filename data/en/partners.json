@@ -19,7 +19,7 @@
   },
   {
     "title": "OTH Regensburg",
-    "text": "The <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> is a prestigious technical university in Germany, offering a wide range of degree programs, with its department for computer science and IT particularly notable for its practice-oriented teaching methods and close collaboration with the industry. OpenElements is a partner of OTH Regensburg, and our founder <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a lecturer for blockchain technology at the OTH.",
+    "text": "The <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> is a prestigious technical university in Germany, offering a wide range of degree programs, with its department for computer science and IT particularly notable for its practice-oriented teaching methods and close collaboration with the industry. OpenElements is a partner of OTH Regensburg, and our founder <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a lecturer for blockchain technology at the OTH. <br><br>More details about the lecture can be found <a class=\"link-purple\" href=\"https://open-elements.com/dlt-lecture/\" target=\"_blank\">here</a>.",
     "logo": "/illustrations/logo-oth.svg",
     "link": "https://www.oth-regensburg.de/en"
   },
