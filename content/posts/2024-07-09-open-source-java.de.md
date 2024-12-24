@@ -172,7 +172,7 @@ In Unternehmen gibt es selten die erforderlichen Ressourcen, um diese Herausford
 Da Open Source Software wie Java mittlerweile aber häufig zur **kritischen Infrastruktur von Unternehmen** gehört,
 braucht es externen Support. 
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/temurin-support-care.png" width="100%" alt="Eclipse Temurin Support & Care Logo">}}
+{{< centered-image src="/illustrations/support-care-logos/support-care-logo.svg" width="100%" alt="Eclipse Temurin Support & Care Logo">}}
 
 Support & Care by Open Elements unterstützt Unternehmen bei dieser wichtigen Aufgabe.
 Wir helfen bei der Instandhaltung und Wartung der Java Laufzeitumgebung.
