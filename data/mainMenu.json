@@ -80,5 +80,13 @@
     "link": "/contact/",
     "visibleInNavigation": true,
     "visibleInFooter": true
+  },
+  {
+    "name": "Good First Issues",
+    "link": "/good-first-issues/",
+    "i18nKey": "goodFirstIssues",
+    "altI18nKey": "goodFirstIssuesDescription",
+    "visibleInNavigation": false,
+    "visibleInFooter": true
   }
 ]
