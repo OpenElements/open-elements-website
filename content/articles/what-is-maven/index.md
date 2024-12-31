@@ -13,7 +13,7 @@ This declarative approach allows developers to define dependencies, plugins, and
 
 ### The Reach of Apache Maven
 Apache Maven is one of the most widely used tools in the Java ecosystem.
-Over 75% of Java projects rely on Maven for their build and project management needs.
+**Over 75%** of Java projects rely on Maven for their build and project management needs.
 With **1.97 billion plugin downloads** annually and **105 million downloads** in 2022–2023, it is a foundational tool in modern software development, spanning projects of all sizes from startups to large enterprises.
 
 TODO: Show diagrams that show the numbers
@@ -46,37 +46,29 @@ Maven enables:
 Maven’s structured approach, supported by its reliance on a single configuration file (`pom.xml`), makes it a foundational tool in software engineering workflows, especially for enterprise-grade applications.
 
 ## Benefits of Using Apache Maven
-Apache Maven offers several benefits that significantly enhance the efficiency and quality of software development.
+Apache Maven offers several benefits that significantly enhance the efficiency, security and quality of software development.
 From simplifying complex tasks like dependency management to streamlining collaboration, Maven provides a comprehensive solution for modern development workflows.
 
 ### Simplifies Dependency Management
-Maven automates the process of managing dependencies, which is often a challenging task in larger projects.
-By declaring dependencies in the pom.xml file, Maven handles downloading and resolving them from repositories, ensuring the correct versions are used across the project.
-Moreover, Maven automatically manages transitive dependencies—dependencies of the dependencies you declare—reducing the burden of manually including these libraries.
-This eliminates version conflicts and ensures that all required artifacts are available, without developers needing to manage them individually.
+Maven automates dependency management by downloading and resolving libraries declared in the `pom.xml` file.
+It also handles transitive dependencies, eliminating version conflicts and reducing manual work.
+This ensures that all required components are available without additional effort.
 
 ### Standardizes Project Structure
-One of the core features of Maven is its standardized project structure, which is consistent across Maven-based projects.
-This reduces confusion and makes it easier for developers to understand how any Maven project is organized, improving the efficiency of working within teams or switching between projects.
-By following a fixed directory layout (e.g., `src/main/java` for source code, `src/test/java` for test code), developers don’t need to spend time setting up project structures or worrying about where specific files should go.
-This consistency enhances maintainability, scalability, and overall development speed.
+Maven’s standardized project layout simplifies organization and reduces confusion.
+Developers can quickly adapt to any Maven project thanks to its fixed directory structure (e.g., `src/main/java` for code, `src/test/java` for tests).
+This consistency improves maintainability and collaboration.
 
 ### Enhances Security in Software Development
-Maven significantly improves the security of software projects by ensuring that dependencies are sourced from trusted repositories, minimizing the risk of integrating malicious or outdated components.
-With Maven’s standardized approach, developers can rely on reproducible builds, which guarantee that identical builds can be recreated consistently across different environments.
-This reproducibility not only enhances stability but also simplifies auditing and debugging processes.
-
-Additionally, Maven plugins facilitates the creation of Software Bill of Materials (SBOMs), a crucial tool for identifying and managing software components used in a project.
-SBOMs provide transparency into dependencies, their origins, and their versions, enabling developers to quickly address vulnerabilities and ensure compliance with modern
-cybersecurity standards such as those outlined in the [US Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
+Maven ensures dependencies are sourced from trusted repositories, minimizing risks from malicious components.
+Its reproducible builds guarantee consistent results across environments, enhancing stability and simplifying audits.
+Maven plugins also supports generating Software Bill of Materials (SBOMs), offering transparency into dependencies and ensuring compliance
+with standards like the [US Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
 and the [EU Cyber Resilience Act (CRA)](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act).
 
 ### Integrates Seamlessly with IDEs and CI/CD Pipelines
-Maven integrates seamlessly with Integrated Development Environments (IDEs) like IntelliJ IDEA, Eclipse, and NetBeans.
-These IDEs offer plugins for Maven that allow developers to run Maven goals (e.g., mvn clean install) directly from the IDE interface, simplifying the build process without switching to the command line.
-Additionally, Maven is widely supported in Continuous Integration/Continuous Deployment (CI/CD) pipelines.
-Tools like Jenkins, GitLab CI, and CircleCI can easily trigger Maven builds as part of automated workflows.
-This integration ensures that the build process is standardized, repeatable, and can be triggered automatically after each commit or pull request, enhancing productivity and maintaining consistent application delivery.
+Maven works seamlessly with IDEs like IntelliJ IDEA and Eclipse, allowing developers to execute build goals directly within their environment.
+It integrates effortlessly with CI/CD tools such as Jenkins and GitLab CI, enabling automated, repeatable builds triggered by commits or pull requests, boosting productivity and consistency.
 
 ## Future of Apache Maven: Sustainability, Security, and Support
 
