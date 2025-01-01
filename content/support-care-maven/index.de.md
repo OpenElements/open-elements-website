@@ -55,6 +55,10 @@ TODO: PIC ROADMAP
 Die Fortschritte des Programms werden über eine öffentliche Roadmap und regelmäßige Updates im [GitHub-Repository](https://github.com/support-and-care/maven-support-and-care) geteilt.
 Die Community ist eingeladen, Vorschläge und Feedback einzubringen, um gemeinsam die Zukunft von Maven zu gestalten.
 
+## Wer arbeitet an Support & Care for Apache Maven™?
+
+TODO
+
 ## Ein Modellprojekt für Open Source
 
 Mit Support & Care for Apache Maven™ setzt Open Elements ein starkes Zeichen für die nachhaltige Unterstützung von Open-Source-Projekten.
@@ -72,3 +76,13 @@ Diese Initiative zielt darauf ab, weitere kritische Open-Source-Komponenten nach
 
 Mit dieser wegweisenden Maßnahme zeigt Open Elements, wie öffentliche Förderung, transparente Mittelverwaltung und aktive Community-Beteiligung erfolgreich kombiniert werden können.
 Das Programm dient als Modell für andere Open-Source-Projekte und unterstreicht die Bedeutung gemeinsamer Verantwortung für die digitale Infrastruktur der Zukunft.
+
+### Contribute
+
+We invite developers and interested parties to participate in the initiative,
+give feedback and become part of our community. Contact us at [maven@open-elements.com](mailto:maven@open-elements.com)
+for more information and how you can contribute.
+
+#### Trademark
+
+Apache&trade; and Apache Maven&trade; are trademarks of The Apache Software Foundation.
