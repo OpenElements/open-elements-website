@@ -83,6 +83,6 @@ We invite developers and interested parties to participate in the initiative,
 give feedback and become part of our community. Contact us at [maven@open-elements.com](mailto:maven@open-elements.com)
 for more information and how you can contribute.
 
-#### Trademark
+## Trademark
 
 Apache&trade; and Apache Maven&trade; are trademarks of The Apache Software Foundation.
