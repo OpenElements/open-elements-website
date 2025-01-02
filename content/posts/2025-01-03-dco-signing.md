@@ -191,9 +191,40 @@ Signed-off-by: Second Co-Author <second@coauthor.example.org>
 Signed-off-by: From Author <from@author.example.org>
 {{< / highlight >}}
 
-#### GitHub User IDs
+#### Other problems
 
-TODO
+Next to the squashed commits there are other problems that can occur.
+When doing the research for the Hiero project I found a lot of commits that are not contain a valid DCO signature.
+Some of those commits had a different author and Signed-off-by author.
+The following example shows 2 real life commits (with anonymized user info) from a repository that I have checked:
+
+{{< highlight bash >}}
+Author: Aman Ali (He/Him) <aman.example@vitstudent.ac.in>
+Committer: GitHub <noreply@github.com>
+Removed one / at the beginning of console.clear() (#94)
+* removed / at line 269
+
+* Signed-off-by: Author Name aman.example@vitstudent.ac.in
+{{< / highlight >}}
+
+Here you can see 2 different problems:
+
+- The author and the Signed-off-by author are different.
+  While the email address is the same, the name is different.
+- The Signed-off-by line starts with "*" and therefore is maybe not recognized as a valid DCO signature.
+
+Here is another example I found:
+
+{{< highlight bash >}}
+Author: John Doe <john.doe@swirldslabs.com>
+Committer: GitHub <noreply@github.com>
+Update .gitbook.yaml
+Signed-off-by: John Doe <john.doe@hashgraph.com>
+{{< / highlight >}}
+
+In this example the mail address of the author and the Signed-off-by author are different.
+They are similar and in fact the company Swirlds Labs has been renamed to [Hashgraph](https://www.hashgraph.com).
+I do not know how those 2 different mail addresses are ended up in a single commit but it is a problem when validating the DCO.
 
 #### Summary of the DCO Validation
 
