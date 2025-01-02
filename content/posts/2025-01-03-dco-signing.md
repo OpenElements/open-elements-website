@@ -12,6 +12,10 @@ preview_image: "/posts/preview-images/open-source-pink.svg"
 The **Developer Certificate of Origin (DCO)** is a lightweight mechanism that developers use to certify that they wrote or have the right to contribute the code they are submitting.
 This article gives an overview about the usage of the DCO and how to validate it for open source projects.
 
+Currently, I am working on the [Hiero project](https://hiero.org) for that a lot of repositories are transferred to the new [Hiero GitHub organization](https://github.com/hiero-ledger).
+To do so I have to check the DCO for all repositories.
+Since that sounds easier than it is, I decided to write a blog post about the DCO and how to validate it.
+
 ## What is the Developer Certificate of Origin (DCO)?
 From my point of view the DCO is a legally binding statement that asserts that the contributor has the right to submit the code they are contributing to the project.
 Since Open Source Software (OSS) are becoming more and more important, the DCO looks is a good way to ensure that the code is legally contributed to the project.
@@ -52,7 +56,7 @@ Since a legal statement normally need to be signed, there must be a way to sign 
 The DCO has been created to be as lightweight as possible.
 Next to that the integration in the workflow of git, and GitHub must be very easy to not disturb the normal workflow of the developers.
 
-Therefore the DCO is even mentioned in the man page (the documentation) of git. By calling `git help commit` you can see the following information:
+Therefore, the DCO is even mentioned in [the man page (the documentation) of git](https://git-scm.com/docs/git-commit). By calling `git help commit` you can see the following information:
 
 {{< highlight bash >}}
 -s, --signoff, --no-signoff
@@ -103,6 +107,10 @@ It does exactly what you see in the commit message: It adds a single `Signed-off
 This line is the sign that the author has read and agrees to the DCO.
 For that purpose the email address of the author is added to the `Signed-off-by` line as an identifier.
 
+The term `Signed-off-by` is defined in the [Linux Kernel Documentation](https://archive.kernel.org/oldwiki/git.wiki.kernel.org/index.php/CommitMessageConventions.html).
+
+I will not discuss the workflow from a legal perspective for now. At the end of the article I will give my critic on the DCO and its usage.
+
 ### How to enforce DCO signing?
 
 Since many OSS and even Foundations like the [Linux Foundation](https://www.linuxfoundation.org) relay on the DCO, there are tools that can validate the DCO.
@@ -152,3 +160,91 @@ If those 2 persons are different, it still makes sense that the author has signe
 A committer can add a commit to a repository but the author is the person that has created the code and has the right to contribute it.
 Therefore, a committer should not add a commit to a repository that is not signed by the author.
 
+#### Squashed Commits
+
+But there is more to check.
+Having huge PRs in GitHub, reviewers can easily add their own commits to the PR.
+By doing so a PR can contain commits coming from different authors.
+While it is clear that each author must sign the DCO for their commits it can become difficult if the PR is merged.
+Here [squashing of the commits](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#squash-and-merge-your-commits) can result in a problem.
+By creating a single commit from multiple commits, the commit still can only have 1 single author.
+The message of the squashed commit contains the messages of all squashed commits.
+Here you can find lines like this:
+
+{{< highlight bash >}}
+Co-authored-by: Alice <alice@example.com>
+Co-authored-by: Bob <bob@example.com>
+{{< / highlight >}}
+
+Those lines are used to mention all authors of the squashed commits.
+GitHub can even use that metadata and visualize the authors of the squashed commits as described in the [GitHub blog](https://github.blog/news-insights/product-news/commit-together-with-co-authors/).
+Other than the `Signed-off-by` term, the `Co-authored-by` term is not defined in the Linux Kernel Documentation.
+Maybe it has been defined by GitHub itself.
+If somebody knows more about that, please let me know.
+In the [Linux Kernel Documentation](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/submitting-patches.rst?id=HEAD) the term `Co-developed-by` is used to mention all authors of the squashed commits:
+
+{{< highlight bash >}}
+Co-developed-by: First Co-Author <first@coauthor.example.org>
+Signed-off-by: First Co-Author <first@coauthor.example.org>
+Co-developed-by: Second Co-Author <second@coauthor.example.org>
+Signed-off-by: Second Co-Author <second@coauthor.example.org>
+Signed-off-by: From Author <from@author.example.org>
+{{< / highlight >}}
+
+#### GitHub User IDs
+
+TODO
+
+#### Summary of the DCO Validation
+
+As you can see the DCO validation is not as easy as it looks like.
+While it seems to be a simple mechanism, it can become complex if you have to validate the DCO for a huge repository with many commits and many authors.
+The tools and scripts that I found online are all end up in not 100% same results.
+The tools I found are:
+
+- https://github.com/coderanger/dco
+- https://github.com/hiero-ledger/hiero/tree/main/dco-check
+- https://github.com/lfit/releng-lftools?tab=readme-ov-file
+
+I need to do some more research to check if one of the tools can be used to validate repositories with many commits and many authors.
+If not I might need to write my own tool to validate repositories.
+
+## My critic on the DCO
+
+To be true I have a lot of critic on the DCO.
+While I want contributions to OSS are as easy as possible, the DCO does not help in that from my point of view.
+Adding the `-s` / `--signoff` option needs a level of technical knowledge that newcomers might not have.
+Especially developers that does not use a command line interface (CLI) for git might not know about the DCO or how to active it in an individual IDE.
+
+Next to that I have seen a lot of developers that are not familiar with the DCO and just added a `-s` to the `git commit` command or clicking a checkbox in the IDEA without knowing what they are doing.
+This is not a problem of the developers it is a problem of the DCO and the intransparency of the DCO.
+The DCO is a legal statement and should be seen by the author.
+From my point of view a developer can not agree to a legal statement without reading it.
+
+Next to that you do not even know if you sign the DCO by adding the `-s` option to the `git commit` command or a total different contributor representation.
+The documentation of the `-s` / `--signoff` option states that the meaning of a signoff depends on the project to which you’re committing:
+
+> The meaning of a signoff depends on the project to which you’re committing. (...)
+  Consult the documentation or leadership of the project to which you’re contributing to understand how the signoffs are
+  used in that project.
+
+Next to that adding the signer as a line started by the term `Signed-off-by` feels like a hack.
+If a commit would have more detailed metadata fields for the authors, the DCO could be added to the metadata (including a hash of the DCO) and not as a line in the commit message.
+I'm not saying here that git needs to be refactored but the current solution (including the usage of the `Co-developed-by` term that I learned in my research) does not feel like a solid solution that is well-prepared for the future.
+With regulations for software like [US Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
+or the [EU Cyber Resilience Act (CRA)](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act) I believe that we need a more solid base to address legal concerns in open-source contributions.
+
+It is really questionable for me if the DCO as it is designed today can be used in a case of a legal dispute.
+I am not a lawyer, but I can not imagine that a court would accept a DCO that is signed by adding a `-s` to the `git commit` command
+by a developer that has not seen the document he signed.
+If it is not useable from a legal perspective, I ask myself what the DCO is good for.
+
+Many people hate Contributor License Agreements (CLAs) because they are complex and need to be signed by every contributor.
+But a CLA can provided in "Plain Language" / "Accessible Language" in multiple languages.
+By doing so it would be clear for every contributor what they are signing.
+The Linux Foundation provide the tool [EasyCLA](https://easycla.lfx.linuxfoundation.org/#/) that has a great GitHub integration.
+By using the tool a new contributor can sign the CLA digitally in [docusign](https://www.docusign.com/) by simply [clicking a button in the PR](https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/individual-contributor#github).
+
+I will continue this research and will keep you updated about my findings.
+Maybe some of you have more information about the DCO and can help me to understand it better.
+I'm happy to get in touch with you by [mail](mailto:hendrik.ebbers@open-elements.com), [X](https://twitter.com/hendrikEbbers), or [LinkedIn](https://www.linkedin.com/in/hendrik-ebbers/).
