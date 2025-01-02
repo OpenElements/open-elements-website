@@ -6,7 +6,7 @@ layout: "article"
 Apache Maven ist ein Build-Automatisierungs- und Projektmanagement-Tool, das hauptsächlich für Java-Anwendungen entwickelt wurde.
 Sein Hauptziel ist die Automatisierung von Prozessen wie der Kompilierung, dem Testen, der Paketierung und der Bereitstellung von Software, wodurch manueller Aufwand und Fehler in der Verwaltung komplexer Builds reduziert werden.
 
-{{< centered-image src="/illustrations/logos/apache-maven-logo.svg" width="100%" alt="Logo von Apache Maven">}}
+{{< centered-image src="/illustrations/logos/apache-maven-logo.svg" width="50%" alt="Logo von Apache Maven">}}
 
 Apache Maven basiert auf dem Konzept des Project Object Model (POM), einer XML-Datei, die als Bauplan für die Projektkonfiguration dient.
 Dieser deklarative Ansatz ermöglicht es Entwicklern, Abhängigkeiten, Plugins und Build-Konfigurationen zentral zu definieren, was Konsistenz und Skalierbarkeit in Entwicklungsumgebungen fördert.
@@ -84,6 +84,8 @@ und steigert so Produktivität und Konsistenz.
 Apache Maven ist seit langem ein Eckpfeiler des Java-Ökosystems und bietet Entwicklern ein zuverlässiges und effizientes Werkzeug für die Verwaltung komplexer Build-Prozesse.
 Sein strukturierter Ansatz, die Verwendung des Project Object Model (POM) und die breite Akzeptanz (über 75 % der Java-Projekte) machen es zu einem unverzichtbaren Bestandteil der modernen Softwareentwicklung.
 
+{{< centered-image src="/illustrations/general/many-care-tree.svg" width="60%" alt="More people start to care">}}
+
 In den letzten Jahren wurde die kritische Rolle von Open-Source-Software in der globalen Infrastruktur immer deutlicher.
 Tools wie Apache Maven sind nicht nur Hilfsmittel für Entwickler, sondern integrale Bestandteile digitaler Wirtschaften, die Innovation ermöglichen und Kosten senken.  
 
@@ -92,7 +94,7 @@ Tools wie Apache Maven sind nicht nur Hilfsmittel für Entwickler, sondern integ
 Die Initiative **Support & Care for Apache Maven™** wurde von Open Elements ins Leben gerufen, um die langfristige Nachhaltigkeit von Apache Maven sicherzustellen.
 Sie wird durch die Finanzierung des Sovereign Tech Fund unterstützt, einem deutschen Regierungsprogramm, das sich der Sicherung kritischer Open-Source-Software widmet.
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="100%" alt="Logo von Support & Care for Apache Maven">}}
+{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo von Support & Care for Apache Maven">}}
 
 Mit der Einführung dieser Initiative sieht die Zukunft von Maven vielversprechend aus. Dieses Programm zielt darauf ab:
 
@@ -101,4 +103,4 @@ Mit der Einführung dieser Initiative sieht die Zukunft von Maven vielverspreche
 - **Gemeinschaftsgetriebene Entwicklung zu fördern**, um Prioritäten wie Fehlerbehebungen und neue Funktionen transparent zu gestalten.  
 - **Den Zugang zu erweitern** durch Tutorials, Dokumentationen und mehrsprachige Ressourcen.
 
-Diese Initiative setzt neue Maßstäbe für nachhaltige und gemeinschaftsorientierte Open-Source-Entwicklung. d
+Diese Initiative setzt neue Maßstäbe für nachhaltige und gemeinschaftsorientierte Open-Source-Entwicklung.

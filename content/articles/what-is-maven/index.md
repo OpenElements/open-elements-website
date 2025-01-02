@@ -6,7 +6,7 @@ layout: "article"
 Apache Maven is a build automation and project management tool designed primarily for Java-based applications.
 Its primary purpose is to automate the processes of software compilation, testing, packaging, and deployment, reducing manual effort and errors in managing complex builds.
 
-{{< centered-image src="/illustrations/logos/apache-maven-logo.svg" width="100%" alt="Logo of Apache Maven">}}
+{{< centered-image src="/illustrations/logos/apache-maven-logo.svg" width="50%" alt="Logo of Apache Maven">}}
 
 Apache Maven is based on the concept of the Project Object Model (POM), an XML file that serves as the blueprint for project configuration.
 This declarative approach allows developers to define dependencies, plugins, and build configurations in a centralized manner, enabling consistency and scalability across development environments.
@@ -81,7 +81,7 @@ Tools like Apache Maven are not just developer utilities; they are integral comp
 However, the challenges of relying on volunteer-driven development models for such critical software have prompted a paradigm shift.
 Governments, through initiatives like the Sovereign Tech Fund, and companies are recognizing the need to invest in the sustainability of open-source projects to ensure their continued relevance and security.
 
-{{< centered-image src="/illustrations/general/many-care-tree.svg" width="100%" alt="More people start to care">}}
+{{< centered-image src="/illustrations/general/many-care-tree.svg" width="60%" alt="More people start to care">}}
 
 This growing awareness has laid the groundwork for innovative solutions like the Support & Care for Apache Maven™ initiative, which seeks to address the unique challenges faced by projects like Maven.
 This initiative represents a transformative approach, combining public funding, community collaboration, and long-term planning to secure the future of Maven and, by extension, the Java ecosystem.
@@ -92,7 +92,7 @@ Support & Care for Apache Maven™ is a groundbreaking initiative launched by Op
 It is supported by funding from the Sovereign Tech Fund, a German government program dedicated to safeguarding critical open-source software.
 The initiative focuses on providing financial and organizational resources to address longstanding challenges in maintaining and improving Maven.
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="100%" alt="Logo of Support & Care for Apache Maven">}}
+{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
 
 With the launch of the Support & Care for Apache Maven™ initiative, the future of Maven looks brighter than ever. This program aims to:
 

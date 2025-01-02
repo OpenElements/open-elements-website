@@ -8,7 +8,7 @@ url: "/de/support-care-maven"
 **Open Elements** hat mit seinem Programm **Support & Care for Apache Maven™** einen entscheidenden Beitrag zur Sicherung eines zentralen Werkzeugs im Java-Ökosystem initiiert.
 Mit Unterstützung des [Sovereign Tech Fund](https://www.sovereign.tech/de) wird erstmals eine nachhaltige Förderung von Apache Maven ermöglicht, einem der meistgenutzten Open-Source-Projekte weltweit.
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="100%" alt="Logo of Support & Care for Apache Maven">}}
+{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
 
 ## Die Bedeutung von Apache Maven
 Apache Maven ist mehr als nur ein Build-Tool – es ist ein unverzichtbares Rückgrat für die Entwicklung und Verwaltung von Java-Projekten.
@@ -72,7 +72,7 @@ Es zeigt, wie essenzielle Open-Source-Projekte zukunftssicher gestaltet und glei
 Support & Care for Apache Maven™ ist mehr als nur ein Förderprojekt – es ist der erste Schritt der umfassenden Support & Care Initiative von Open Elements.
 Diese Initiative zielt darauf ab, weitere kritische Open-Source-Komponenten nachhaltig zu fördern und zukunftssicher zu gestalten.
 
-{{< centered-image src="/illustrations/general/many-care-tree.svg" width="100%" alt="More people start to care">}}
+{{< centered-image src="/illustrations/general/many-care-tree.svg" width="60%" alt="More people start to care">}}
 
 Mit dieser wegweisenden Maßnahme zeigt Open Elements, wie öffentliche Förderung, transparente Mittelverwaltung und aktive Community-Beteiligung erfolgreich kombiniert werden können.
 Das Programm dient als Modell für andere Open-Source-Projekte und unterstreicht die Bedeutung gemeinsamer Verantwortung für die digitale Infrastruktur der Zukunft.
