@@ -25,7 +25,7 @@ Als Teil der [Apache Software Foundation](https://www.apache.org) profitiert Mav
 
 Um die wachsenden Herausforderungen bei der Pflege eines so wichtigen Open-Source-Tools anzugehen, wurde die **Support & Care for Apache Maven™**-Initiative ins Leben gerufen.
 Dieses Programm stellt sicher, dass Maven durch öffentliche Finanzierung und gemeinschaftsorientierte Entwicklung langfristig nachhaltig bleibt.
-Mehr über diese Initiative erfahren Sie im Abschnitt [Support & Care for Apache Maven™](#support-care-maven).
+Mehr über diese Initiative erfahren Sie im unter [Support & Care for Apache Maven™]({{< ref "support-care-maven" >}}).
 
 ## Die Bedeutung der Build-Automatisierung in der Software-Lieferkette
 
@@ -91,7 +91,7 @@ Tools wie Apache Maven sind nicht nur Hilfsmittel für Entwickler, sondern integ
 
 ### Support & Care for Apache Maven™ {id="support-care-maven"}
 
-Die Initiative **Support & Care for Apache Maven™** wurde von Open Elements ins Leben gerufen, um die langfristige Nachhaltigkeit von Apache Maven sicherzustellen.
+Die Initiative [**Support & Care for Apache Maven™**]({{< ref "support-care-maven" >}}) wurde von Open Elements ins Leben gerufen, um die langfristige Nachhaltigkeit von Apache Maven sicherzustellen.
 Sie wird durch die Finanzierung des Sovereign Tech Fund unterstützt, einem deutschen Regierungsprogramm, das sich der Sicherung kritischer Open-Source-Software widmet.
 
 {{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo von Support & Care for Apache Maven">}}

@@ -24,7 +24,7 @@ As part of the [Apache Software Foundation](https://www.apache.org), Maven benef
 
 To address the growing challenges of maintaining such a critical open-source tool, the **Support & Care for Apache Maven™** initiative was launched.
 This program ensures the long-term sustainability of Maven through public funding and community-driven development.
-Learn more about this initiative in the [Support & Care for Apache Maven™ section](#support-care-maven).
+Learn more about this initiative at [Support & Care for Apache Maven™]({{< ref "support-care-maven" >}}).
 
 ## Importance of Build Automation in a Software Supply Chain
 In modern software development, build automation is essential for improving efficiency and minimizing manual intervention in tasks such as:
@@ -88,7 +88,7 @@ This initiative represents a transformative approach, combining public funding, 
 
 ### Support & Care for Apache Maven™ {id="support-care-maven"}
 
-Support & Care for Apache Maven™ is a groundbreaking initiative launched by Open Elements with the goal of ensuring the long-term sustainability of Apache Maven.
+[Support & Care for Apache Maven™]({{< ref "support-care-maven" >}}) is a groundbreaking initiative launched by Open Elements with the goal of ensuring the long-term sustainability of Apache Maven.
 It is supported by funding from the Sovereign Tech Fund, a German government program dedicated to safeguarding critical open-source software.
 The initiative focuses on providing financial and organizational resources to address longstanding challenges in maintaining and improving Maven.
 
