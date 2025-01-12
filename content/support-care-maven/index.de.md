@@ -16,8 +16,6 @@ Es unterstützt Entwickler, indem es wiederkehrende Aufgaben wie Dependency-Mana
 Mit rund 75 % der Java-Projekte, die Maven nutzen, und durchschnittlich 1,97 Milliarden Downloads pro Jahr ist Maven ein zentraler Bestandteil der globalen Java-Community.
 Es wird in Unternehmen jeder Größe eingesetzt, von Start-ups bis zu globalen Konzernen, und hat sich als Standard für die Verwaltung von Java-Projekten etabliert.
 
-TODO: PIC Top 3 Numbers
-
 Weitere Details über Apache Maven finden Sie [hier]({{< relref "articles/what-is-maven" >}}) – von seiner Funktionsweise über Vorteile bis hin zur Community, die das Projekt trägt.
 
 ## Unterstützung durch den Sovereign Tech Fund
@@ -25,7 +23,7 @@ Der Sovereign Tech Fund (STF) ist ein Förderprogramm des deutschen Bundesminist
 Ziel des Programms ist es, kritische digitale Infrastrukturen langfristig zu sichern und die Resilienz des europäischen Technologieökosystems zu stärken.
 Projekte, die vom STF gefördert werden, müssen eine wesentliche Bedeutung für Wirtschaft und Gesellschaft haben und gleichzeitig nachhaltige Entwicklungsmethoden verfolgen.
 
-TODO: PIC Diagram
+{{< centered-image src="diagram.png" alt="How Support and Care for Apache Maven is payed " width="100%" >}}
 
 Open Elements hat den Förderantrag für Support & Care for Apache Maven™ im Rahmen des STF erfolgreich eingereicht. Dieser Prozess umfasste mehrere Schritte:
 
@@ -50,7 +48,7 @@ Ein zentraler Bestandteil des Programms ist die **transparente Verwaltung** der 
 Open Elements verpflichtet sich, **100 % der finanziellen Unterstützung direkt in die Entwicklung von Maven** fließen zu lassen.
 Nur ein kleiner Anteil der Ressourcen wird für die Organisation und Verwaltung des Projekts verwendet.
 
-{{< centered-image src="roadmap.png" alt="Eclipse Temurin Support & Care" width="100%" >}}
+{{< centered-image src="roadmap.png" alt="Roadmap of Support & Care for Apache Maven" width="100%" >}}
 
 Die Fortschritte des Programms werden über eine öffentliche Roadmap und regelmäßige Updates im [GitHub-Repository](https://github.com/support-and-care/maven-support-and-care) geteilt.
 Die Community ist eingeladen, Vorschläge und Feedback einzubringen, um gemeinsam die Zukunft von Maven zu gestalten.

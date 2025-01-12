@@ -1,8 +1,9 @@
 ---
-title: "Was ist Apache Maven?"
-description: "Ein kurzer Überblick und eine Beschreibung von Apache Maven"
+title: "Was ist Apache Maven™?"
+description: "Ein kurzer Überblick und eine Beschreibung von Apache Maven™"
 layout: "article"
 ---
+
 Apache Maven ist ein Build-Automatisierungs- und Projektmanagement-Tool, das hauptsächlich für Java-Anwendungen entwickelt wurde.
 Sein Hauptziel ist die Automatisierung von Prozessen wie der Kompilierung, dem Testen, der Paketierung und der Bereitstellung von Software, wodurch manueller Aufwand und Fehler in der Verwaltung komplexer Builds reduziert werden.
 
