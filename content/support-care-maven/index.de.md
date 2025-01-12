@@ -16,6 +16,11 @@ Es unterstützt Entwickler, indem es wiederkehrende Aufgaben wie Dependency-Mana
 Mit rund 75 % der Java-Projekte, die Maven nutzen, und durchschnittlich 1,97 Milliarden Downloads pro Jahr ist Maven ein zentraler Bestandteil der globalen Java-Community.
 Es wird in Unternehmen jeder Größe eingesetzt, von Start-ups bis zu globalen Konzernen, und hat sich als Standard für die Verwaltung von Java-Projekten etabliert.
 
+[Docker](https://www.docker.com), ein weltweit führendes Unternehmen im Bereich moderner Softwareentwicklungs-Tools, betont die Relevanz von Maven:
+> Das Open Source Werkzeug Maven ist für uns bei Docker unverzichtbar, da es als Industriestandard-Technologie im Java-Ökosystem eingesetzt wird.
+> Jede Veröffentlichung unserer Software Testcontainers for Java wird auf ihre Kompatibilität mit aktuellen Maven-Versionen überprüft.
+> Eine nachhaltige Förderung wie die von Open Elements angestoßene ist entscheidend für die langfristige Stabilität kritischer Open Source Komponenten
+
 Weitere Details über Apache Maven finden Sie [hier]({{< relref "articles/what-is-maven" >}}) – von seiner Funktionsweise über Vorteile bis hin zur Community, die das Projekt trägt.
 
 ## Unterstützung durch den Sovereign Tech Fund
