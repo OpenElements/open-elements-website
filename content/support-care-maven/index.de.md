@@ -50,14 +50,21 @@ Ein zentraler Bestandteil des Programms ist die **transparente Verwaltung** der 
 Open Elements verpflichtet sich, **100 % der finanziellen Unterstützung direkt in die Entwicklung von Maven** fließen zu lassen.
 Nur ein kleiner Anteil der Ressourcen wird für die Organisation und Verwaltung des Projekts verwendet.
 
-TODO: PIC ROADMAP
+{{< centered-image src="roadmap.png" alt="Eclipse Temurin Support & Care" width="100%" >}}
 
 Die Fortschritte des Programms werden über eine öffentliche Roadmap und regelmäßige Updates im [GitHub-Repository](https://github.com/support-and-care/maven-support-and-care) geteilt.
 Die Community ist eingeladen, Vorschläge und Feedback einzubringen, um gemeinsam die Zukunft von Maven zu gestalten.
 
 ## Wer arbeitet an Support & Care for Apache Maven™?
 
-TODO
+Sowohl angestellte von Open Elements auch als externe Entwickler und Maintainer arbeiten gemeinsam an der Umsetzung des Förderprojektes.
+Während das Projektmanagement und die Koordination von Open Elements übernommen wird, sind vor allem externe Entwickler und Maintainer von Apache Maven für die technische Umsetzung verantwortlich.
+Hierbei arbeitet Open Elements nicht nur nah mit einzelnen Entwicklern, sondern auch mit der gesamten Maven-Community, zusammen.
+
+Falk Sippach von der embarc Software Consulting GmbH beschreibt auf [Heise Developer](https://www.heise.de/blog/Java-Einladung-zur-Mitgestaltung-des-Programms-Support-Care-for-Apache-Maven-9718336.html) die Zusammenarbeit wie folgt:
+> Das Vertrauen, das die Maven-Community hierbei Open Elements als transparenten Player im Open Source Bereich entgegenbringt, ist einmalig und ermöglicht dieses Vorhaben überhaupt erst.
+
+{{< centered-image src="/illustrations/general/people-network.svg" width="60%" alt="More people start to care">}}
 
 ## Ein Modellprojekt für Open Source
 
@@ -77,12 +84,11 @@ Diese Initiative zielt darauf ab, weitere kritische Open-Source-Komponenten nach
 Mit dieser wegweisenden Maßnahme zeigt Open Elements, wie öffentliche Förderung, transparente Mittelverwaltung und aktive Community-Beteiligung erfolgreich kombiniert werden können.
 Das Programm dient als Modell für andere Open-Source-Projekte und unterstreicht die Bedeutung gemeinsamer Verantwortung für die digitale Infrastruktur der Zukunft.
 
-### Contribute
+## Mitwirken durch die Community
 
-We invite developers and interested parties to participate in the initiative,
-give feedback and become part of our community. Contact us at [maven@open-elements.com](mailto:maven@open-elements.com)
-for more information and how you can contribute.
+Wir laden Entwickler und Interessierte ein, an der Initiative teilzunehmen, Feedback zu geben und Teil unserer Community zu werden.
+Kontaktieren Sie uns unter [info@open-elements.com](mailto:info@open-elements.com), um mehr Informationen zu erhalten und zu erfahren, wie Sie beitragen können.
 
-## Trademark
+## Warenzeichen
 
-Apache&trade; and Apache Maven&trade; are trademarks of The Apache Software Foundation.
+Apache&trade; und Apache Maven&trade; sind Warenzeichen der Apache Software Foundation.
