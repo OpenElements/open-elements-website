@@ -1,5 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require("tailwindcss/plugin");
+
+const hoveredParentPlugin = plugin(function ({ addVariant, e }) {
+  addVariant("hovered-parent", ({ container }) => {
+    container.walkRules((rule) => {
+      rule.selector = `:hover > .hovered-parent\\:${rule.selector.slice(1)}`;
+    });
+  });
+});
+
+const focusedWithinParentPlugin = plugin(function ({ addVariant, e }) {
+  addVariant("focused-within-parent", ({ container }) => {
+    container.walkRules((rule) => {
+      rule.selector = `:focus-within > .focused-within-parent\\:${rule.selector.slice(1)}`;
+    });
+  });
+});
+
+
 module.exports = {
   variants: {
     extend: {
@@ -92,22 +111,3 @@ module.exports = {
     require('tailwind-scrollbar'),
   ],
 }
-
-
-const plugin = require("tailwindcss/plugin");
-
-const hoveredParentPlugin = plugin(function ({ addVariant, e }) {
-  addVariant("hovered-parent", ({ container }) => {
-    container.walkRules((rule) => {
-      rule.selector = `:hover > .hovered-parent\\:${rule.selector.slice(1)}`;
-    });
-  });
-});
-
-const focusedWithinParentPlugin = plugin(function ({ addVariant, e }) {
-  addVariant("focused-within-parent", ({ container }) => {
-    container.walkRules((rule) => {
-      rule.selector = `:focus-within > .focused-within-parent\\:${rule.selector.slice(1)}`;
-    });
-  });
-});
