@@ -14,7 +14,7 @@ Das große Engagement im Open-Source-Ökosystem zeigte sich in weiteren bzw. ern
 [Hendrik Ebbers]({{< relref "about-hendrik" >}}) in unterschiedlichen Positionen bei der **Eclipse Foundation**,
 bei **Eclipse Adoptium**, bei **Hiero**, der **Linux Foundation** und der **Linux Foundation Dezentralized Trust**.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/foundations.png" width="90%" showCaption="false" alt="Foundations und Working Groups an denen Open Elements sich einbringt">}}
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/oss-meets-java.png" width="100%" showCaption="false" alt="Open Elements setzt weiterhin den Fokus der Firma auf Open Source und Java">}}
 
 Für Hendrik Ebbers und Open Elements ist Open Source eine Herzensangelegenheit, und das zeigt sich in den
 Unternehmenswerten, die stets präsent sind und sichtbar gelebt werden: 
@@ -38,7 +38,7 @@ Weitere Wahlen betrafen seinen Einzug ins Steering Committee von [Eclipse Adopti
 Steering Committee von Hiero in der Linux Foundation und in das Technical Advisory Board des [Linux Foundation Dezentralized Trust](https://www.lfdecentralizedtrust.org).
 Die Bestätigung durch die Wiederwahlen verdeutlichen, dass eine spürbar nachhaltige Wirkung erzielt wurde und dass das Engagement von Open Elements im Open-Source-Universum vollständig anerkannt wird.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/oss-meets-java.png" width="100%" showCaption="false" alt="Open Elements setzt weiterhin den Fokus der Firma auf Open Source und Java">}}
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/foundations.png" width="90%" showCaption="false" alt="Foundations und Working Groups an denen Open Elements sich einbringt">}}
 
 Open Elements ist Mitglied in der [Open Regulatory Compliance Working Group (ORCWG)](https://orcwg.org) der Eclipse Foundation.
 Die Arbeitsgruppe sorgt für die Umsetzung der EU-Richtlinien des Cyber Resilience Act (CRA) und schließt zugleich die Lücke zwischen den Behörden und dem Open-Source-Ökosystem, damit die Technologien genutzt werden können und die globalen Vorschriften eingehalten werden.
@@ -174,6 +174,7 @@ Seit Mitte 2024 sind die beiden in Vollzeit für das Unternehmen tätig.
 In dieser Konstellation zeigt sich deutlich, wie sich die globale Zusammenarbeit an Open-Source-Projekten auswirken kann.
 Geschäftsführer Hendrik Ebbers hat das Potential der jungen Männer erkannt und beiden eine Stelle angeboten.
 Sie arbeiten in einem Coworking Space in Uganda und werden von Open Elements mit guter Hardware ausgestattet und mit entsprechenden Ressourcen und einer Krankenversicherung versorgt.
+
 Ein weiterer Vollzeit-Entwickler hat seinen Vertrag für den Start im 1. Quartal 2025 bereits unterschrieben.
 Das ganze Team freut sich schon auf den neuen Kollegen.
 
