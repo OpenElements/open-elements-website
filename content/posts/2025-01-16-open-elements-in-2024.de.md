@@ -131,7 +131,7 @@ Falk Sippach von der embarc Software Consulting GmbH beschreibt es auf [Heise De
 
 {{< centered-image src="/posts/2025-01-16-open-elements-in-2024/habeck.jpg" width="100%" showCaption="true" alt="Hendrik Ebbers hat sich in Lissabon zu diesem Thema mit Dr. Robert Habeck, Bundesminister für Wirtschaft und Klimaschutz, ausgetauscht">}}
 
-## Publikationen, Vorträge & TecTalk
+## Publikationen, Vorträge & TecTalks
 
 Hendrik Ebbers hat viele unterschiedliche Vorträge gehalten, denn es ist ihm wichtig, die Bildung zu fördern und die Open Source Community auf allen Ebenen zu unterstützen.
 Die Schwerpunkte der Themen waren vielfältig: Open Source, Verteilte Systeme, Distributed Ledger Technology, Java usw.
@@ -182,3 +182,11 @@ Das noch junge Unternehmen hat im Jahr 2024 äußerst bedeutsame Fortschritte er
 Mit dem hohen Engagement hat Open Elements seine führende Rolle in Bildung und Technologie bestätigt und festigt seinen Status als wichtiger Player im Open Source + Java Universum.
 
 TODO: Bild Open Source und Java Universium
+
+## Conclusion
+
+The young company achieved significant milestones in 2024, whose full impact will unfold in the coming months.
+Through its unwavering commitment, Open Elements has reaffirmed its leading role in education and technology,
+solidifying its position as a key player in the Open Source + Java universe.
+
+TODO: Image depicting the Open Source and Java universe.
