@@ -31,11 +31,11 @@ Entwicklung und einen bedeutenden Meilenstein im Open-Source-Bereich gegeben.
 
 ## Engagement
 
-Sein persönliches Engagement steht dem Unternehmensauftrag in nichts nach.
+Persönliches und ehrenamtliches Engagement steht dem Unternehmensauftrag in nichts nach.
 So wurde Hendrik Ebbers 2024 erneut ins [Board der Eclipse Foundation](https://www.eclipse.org/org/foundation/directors.php)
 (größte Europäische Open Source Foundation) und zum Lead des [Technical Steering Committee (TSC) von Hiero](https://hiero.org/#contribute) gewählt.
 Weitere Wahlen betrafen seinen Einzug ins Steering Committee von [Eclipse Adoptium](https://adoptium.net/de/), ins
-Steering Committee von Hiero in der Linux Foundation und in das Technical Advisory Board des [Linux Foundation Dezentralized Trust](https://www.lfdecentralizedtrust.org).
+Steering Committee von [Hiero](https://hiero.org) in der Linux Foundation und in das Technical Advisory Board des [Linux Foundation Dezentralized Trust](https://www.lfdecentralizedtrust.org).
 Die Bestätigung durch die Wiederwahlen verdeutlichen, dass eine spürbar nachhaltige Wirkung erzielt wurde und dass das Engagement von Open Elements im Open-Source-Universum vollständig anerkannt wird.
 
 {{< centered-image src="/posts/2025-01-16-open-elements-in-2024/foundations.png" width="90%" showCaption="false" alt="Foundations und Working Groups an denen Open Elements sich einbringt">}}
@@ -43,9 +43,7 @@ Die Bestätigung durch die Wiederwahlen verdeutlichen, dass eine spürbar nachha
 Open Elements ist Mitglied in der [Open Regulatory Compliance Working Group (ORCWG)](https://orcwg.org) der Eclipse Foundation.
 Die Arbeitsgruppe sorgt für die Umsetzung der EU-Richtlinien des Cyber Resilience Act (CRA) und schließt zugleich die Lücke zwischen den Behörden und dem Open-Source-Ökosystem, damit die Technologien genutzt werden können und die globalen Vorschriften eingehalten werden.
 
-Das Unternehmen ist ebenfalls Mitglied in der Interest Group „Jakarta EE - future directions” , die Personen, Meinungsführer und andere interessierte Parteien zusammenbringt und eng mit den Working Groups zusammenarbeitet, um Marktentwicklungen frühzeitig nutzbar zu machen.
-
-Und ein weiteres Engagement ist in Aussicht: Open Elements wird Mitglied in der Open Source Business Alliance, dem Bundesverband für digitale Souveränität e.V. (OSB Alliance).
+Und ein weiteres Engagement ist in Aussicht: Open Elements wird Mitglied in der [Open Source Business Alliance](https://osb-alliance.de), dem Bundesverband für digitale Souveränität e.V.
 Der Verband bietet eine Kommunikationsplattform, um Verbesserungen im Open-Source-Spektrum zu fördern und pflegt Kontakte zur Politik und zu Organisationen der Öffentlichen Verwaltung.
 Er setzt sich für eine bessere Wahrnehmung von Open Source in der Industrie und in der Öffentlichkeit ein.
 
