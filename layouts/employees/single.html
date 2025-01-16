@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $bgEmployee := resources.Get "/illustrations/bg-employee.svg" }}
+{{ $noah := resources.Get "/images/hendrik.jpg" }}
+{{ $circles := resources.Get "/illustrations/circles.svg"}}
+{{ $arrowDashed := resources.Get "/illustrations/arrow-dashed.svg"}}
+
+<div class="relative">  
+    <img class="absolute hidden  lg:block lg:right-[15%] lg:top-[25%]" src="{{ $circles.RelPermalink }}" />
+    <img class="absolute hidden lg:block lg:right-[31%] lg:top-[25%]" src="{{ $arrowDashed.RelPermalink }}" />
+    <div class="container px-0 max-w-xs sm:max-w-full">
+        <div class="pt-16 pb-4 sm:pt-36 sm:pb-12">
+            <h1 class="text-center h1">{{ $.Param "name" | safeHTML }}</h1>
+            <p class="text-center font-bold text-purple">{{ $.Param "role" | safeHTML }}</p>
+        </div>
+        <div class="flex flex-col gap-8 items-center justify-center mb-16 lg:flex-row w-full">
+            <div class="relative flex items-center justify-center w-full max-w-md lg:w-1/2">
+                <img class="w-full max-w-md" src="{{ $bgEmployee.RelPermalink }}" />
+                <img class=" xl:w-[310px] xl:h-[310px] lg:w-[265px] lg:h-[265px] sm:w-[310px] sm:h-[310px] w-[195px] h-[195px] border border-purple rounded-full object-cover absolute top-[17%] 2xl:right-[9%] xl:right-[10%] lg:right-[10.5%] sm:right-[9%] right-[11%]" src="{{ $noah.RelPermalink }}" />
+            </div>
+            <div class="w-full max-w-lg">
+                <div>{{ $.Param "description" | safeHTML }}</div>
+                <div class="flex items-center gap-5 mt-4">
+                    {{ range .Params.socials }}
+                      <a href="{{ .link }}" aria-label="{{ .name }}" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group focus:outline-none w-11 h-11 bg-sky">
+                        <span class="iconify text-3xl" data-icon="{{ .icon | safeURL }}"></span>
+                      </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
