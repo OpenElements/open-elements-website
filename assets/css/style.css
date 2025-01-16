@@ -4568,8 +4568,12 @@ html{
     right: 10.5%;
   }
 
-  .lg\:right-\[20\%\]{
-    right: 20%;
+  .lg\:right-\[15\%\]{
+    right: 15%;
+  }
+
+  .lg\:right-\[31\%\]{
+    right: 31%;
   }
 
   .lg\:right-auto{
@@ -4606,18 +4610,6 @@ html{
 
   .lg\:top-\[25\%\]{
     top: 25%;
-  }
-
-  .lg\:right-\[2\%\]{
-    right: 2%;
-  }
-
-  .lg\:right-\[31\%\]{
-    right: 31%;
-  }
-
-  .lg\:right-\[15\%\]{
-    right: 15%;
   }
 
   .lg\:order-1{
@@ -4828,10 +4820,6 @@ html{
 
   .lg\:justify-end{
     justify-content: flex-end;
-  }
-
-  .lg\:justify-between{
-    justify-content: space-between;
   }
 
   .lg\:gap-16{
