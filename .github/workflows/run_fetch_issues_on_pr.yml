@@ -1,0 +1,35 @@
+name: Run Fetch Issues on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  fetch_issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Run fetch_issues.js script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node fetch_issues.mjs
+
+      - name: Commit and push changes
+        if: success() && steps.check-for-changes.outputs.changed == 'true'
+        run: |
+          git commit -m "Update good first issues list from GitHub Actions"
+          git push origin ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
