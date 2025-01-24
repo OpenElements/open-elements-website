@@ -47,7 +47,7 @@ Und ein weiteres Engagement ist in Aussicht: Open Elements wird Mitglied in der 
 Der Verband bietet eine Kommunikationsplattform, um Verbesserungen im Open-Source-Spektrum zu fördern und pflegt Kontakte zur Politik und zu Organisationen der Öffentlichen Verwaltung.
 Er setzt sich für eine bessere Wahrnehmung von Open Source in der Industrie und in der Öffentlichkeit ein.
 
-TODO: Bild Open Source verbindet OpenSource und Politik
+{{< centered-image src="/illustrations/general/connecting-open-source-gov.svg" width="100%" showCaption="false" alt="Open Elements arbeit aktiv daran Regierungen und Verwaltungen bzgl. Open Source aufzuklären">}}
 
 ## Sponsoring & Support
 
@@ -181,12 +181,4 @@ Das ganze Team freut sich schon auf den neuen Kollegen.
 Das noch junge Unternehmen hat im Jahr 2024 äußerst bedeutsame Fortschritte erzielt, die ihre Wirkungen in den kommenden Monaten erst entfalten werden.
 Mit dem hohen Engagement hat Open Elements seine führende Rolle in Bildung und Technologie bestätigt und festigt seinen Status als wichtiger Player im Open Source + Java Universum.
 
-TODO: Bild Open Source und Java Universium
-
-## Conclusion
-
-The young company achieved significant milestones in 2024, whose full impact will unfold in the coming months.
-Through its unwavering commitment, Open Elements has reaffirmed its leading role in education and technology,
-solidifying its position as a key player in the Open Source + Java universe.
-
-TODO: Image depicting the Open Source and Java universe.
+{{< centered-image src="/illustrations/general/building-open-source-universe.svg" width="100%" alt="Open Elements baut am Open Source + Java Universum">}}

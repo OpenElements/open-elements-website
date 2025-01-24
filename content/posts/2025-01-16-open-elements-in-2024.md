@@ -48,7 +48,7 @@ Germany’s federal association for digital sovereignty.
 The alliance provides a platform to promote improvements in the open-source landscape while fostering connections with
 policymakers and public sector organizations. It works to enhance the perception of open source in industry and the broader public.
 
-TODO: Image illustrating how Open Source connects technology and policy.
+{{< centered-image src="/illustrations/general/connecting-open-source-gov.svg" width="100%" showCaption="false" alt="Open Elements connects governments and open source">}}
 
 ## Sponsoring & Support
 
@@ -195,3 +195,11 @@ They work from a coworking space in Uganda, equipped with high-quality hardware 
 
 Another full-time developer has already signed a contract and will join the team in the first quarter of 2025.
 The entire team looks forward to welcoming their new colleague.
+
+## Conclusion
+
+The young company achieved significant milestones in 2024, whose full impact will unfold in the coming months.
+Through its unwavering commitment, Open Elements has reaffirmed its leading role in education and technology,
+solidifying its position as a key player in the open source + Java universe.
+
+{{< centered-image src="/illustrations/general/building-open-source-universe.svg" width="100%" alt="Open Elements building the open source + Java universe">}}
