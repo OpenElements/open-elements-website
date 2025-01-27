@@ -1,14 +1,6 @@
 [build]
-command = "hugo --baseURL $DEPLOY_PRIME_URL"
+command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
 publish = "public"
 
 [build.environment]
 HUGO_VERSION = "0.118.2"
-
-[context.production]
-  [context.production.environment]
-  DEPLOY_PRIME_URL = "https://open-elements.com"
-
-[context.deploy-preview]
-  [context.deploy-preview.environment]
-  DEPLOY_PRIME_URL = "https://deploy-preview-{REVIEW_ID}--open-elements.netlify.app"
