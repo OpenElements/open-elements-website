@@ -46,7 +46,7 @@
         </div>
         <div class="max-w-[1080px] pt-3 mx-auto">
             <a href="/contact" class="flex items-center justify-center gap-3 capitalize text-white font-bold text-base text-center bg-purple rounded-full mt-4 sm:px-6 px-4 py-3 hover:bg-purple-700 transition-all ease-in-out duration-150 hover:shadow-3 active:shadow-none active:bg-purple">
-                <img src="{{ $callIcon.RelPermalink }}" />
+                <img src="{{ $callIcon.RelPermalink }}" alt="Call icon" />
                 {{ $.Param "contact_us_button_text" }}
             </a>
         </div>
@@ -54,10 +54,10 @@
 
     <div class="pt-24">
         <div class="container relative">
-            <img class="absolute lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline hidden" src="{{ $line6.RelPermalink }}" />
-            <img class="absolute top-20 -left-6 w-24 sm:hidden" src="{{ $lineM.RelPermalink }}" />
-            <img class="absolute lg:top-0 top-20 xl:w-44 lg:w-32 w-28 right-0 sm:inline hidden" src="{{ $line7.RelPermalink }}" />
-            <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" />
+            <img class="absolute lg:top-0 top-16 lg:-left-12 -left-6 xl:w-56 lg:w-48 w-36 sm:inline hidden" src="{{ $line6.RelPermalink }}" alt="Line" />
+            <img class="absolute top-20 -left-6 w-24 sm:hidden" src="{{ $lineM.RelPermalink }}" alt="Line" />
+            <img class="absolute lg:top-0 top-20 xl:w-44 lg:w-32 w-28 right-0 sm:inline hidden" src="{{ $line7.RelPermalink }}" alt="Line" />
+            <img class="absolute top-28 w-16 right-0 sm:hidden" src="{{ $lineM2.RelPermalink }}" alt="Line M" />
             <div class="pt-20 flex w-full justify-center flex-wrap">
                 {{ range .Params.facts }}
                     {{ partial "partials/about-engagemet.html" (dict "logo" .logo "title"  .title "description" .text  "link" .link)}}

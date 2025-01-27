@@ -26,9 +26,9 @@
     </div>
 
     <div class="relative pb-28 md:pb-40 sm:pb-36 2xl:pb-56 xl:pb-72 lg:pb-52">
-        <img class="absolute bottom-0 hidden w-full pb-12 2xl:block xl:pb-28 sm:pb-16" src="{{ $dashline.RelPermalink }}" />
-        <img class="absolute bottom-0 hidden w-full pb-12 2xl:hidden sm:block xl:pb-28 sm:pb-16" src="{{ $dashlineD.RelPermalink }}" />
-        <img class="absolute bottom-0 w-full pb-12 sm:hidden sm:pb-16" src="{{ $dashlineM.RelPermalink }}" />
+        <img class="absolute bottom-0 hidden w-full pb-12 2xl:block xl:pb-28 sm:pb-16" src="{{ $dashline.RelPermalink }}" alt="Dash line" />
+        <img class="absolute bottom-0 hidden w-full pb-12 2xl:hidden sm:block xl:pb-28 sm:pb-16" src="{{ $dashlineD.RelPermalink }}" alt="Dash line" />
+        <img class="absolute bottom-0 w-full pb-12 sm:hidden sm:pb-16" src="{{ $dashlineM.RelPermalink }}"  alt="Dashline"/>
             
         <div class="container">
             <div class="max-w-5xl mx-auto">
@@ -42,8 +42,8 @@
 
     <div class="container">
         <div class="relative">
-            <img class="absolute left-0 w-full -mt-16 xl:-mt-32" src="{{ $top11.RelPermalink }}" />
-            <img class="w-full max-w-md mx-auto" src="{{ $care.RelPermalink }}" />
+            <img class="absolute left-0 w-full -mt-16 xl:-mt-32" src="{{ $top11.RelPermalink }}" alt="Top11" />
+            <img class="w-full max-w-md mx-auto" src="{{ $care.RelPermalink }}" alt="Care" />
         </div>
     </div>
 
@@ -57,7 +57,7 @@
     <div class="container">
         <div class="flex items-center w-full h-full mx-auto mt-8">
             <a href="/contact" class="inline-flex shrink-0 items-center justify-center w-full max-w-xs gap-3 px-4 py-3.5 mx-auto text-base font-bold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
-                <img src="{{ $callIcon.RelPermalink }}" />
+                <img src="{{ $callIcon.RelPermalink }}" alt="Call icon" />
                 {{ $.Param "contact_us_button_text" }}
             </a>
         </div>

@@ -73,7 +73,7 @@
                 {{ $data := index .Site.Data .Site.Language.Lang }}
                 {{ range $author := where $data.authors "id" "hendrik" }}
                 <div class=" rounded-[30px] w-full shadow-4 bg-white xl:p-5 p-4 xl:block md:flex lg:items-center">
-                    <img class="lg:w-40 md:w-48 sm:w-40 sm:h-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 object-cover rounded-[24px] xl:float-left md:float-none float-left xl:mr-6 mr-4" src="{{ $author.picture }}" />
+                    <img class="lg:w-40 md:w-48 sm:w-40 sm:h-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 object-cover rounded-[24px] xl:float-left md:float-none float-left xl:mr-6 mr-4" src="{{ $author.picture }}" alt="author" />
                     <div>
                         <h4 class="mb-2 text-lg font-bold">
                             {{$author.firstName}} {{$author.lastName}}
