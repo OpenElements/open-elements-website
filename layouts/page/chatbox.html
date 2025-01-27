@@ -19,27 +19,27 @@
     <div class="flex flex-col items-center gap-0.5 container relative">
 
         <img class="absolute sm:w-16 sm:h-16 w-12 h-12 right-0 sm:top-0 bottom-[-390%]"
-            src="{{ $star.RelPermalink }}" />
-        <img class="absolute w-32 -right-12 top-36 sm:block hidden" src="{{ $round22.RelPermalink }}" />
-        <img class="absolute w-72 -left-[10%] top-0 sm:block hidden" src="{{ $round23.RelPermalink }}" />
+            src="{{ $star.RelPermalink }}" alt="Star" />
+        <img class="absolute w-32 -right-12 top-36 sm:block hidden" src="{{ $round22.RelPermalink }}" alt="Round 2" />
+        <img class="absolute w-72 -left-[10%] top-0 sm:block hidden" src="{{ $round23.RelPermalink }}" alt="Round"/>
 
         <h1 class="flex items-center justify-center w-full text-center h1 z-20">
             <div class="relative z-0 flex items-center justify-center w-auto sm:px-24">
-                <img class="absolute w-full h-full sm:block hidden" src="{{ $heroTextBg.RelPermalink }}" />
-                <img class="absolute h-12 -right-4 sm:hidden" src="{{ $heroTextBgSm.RelPermalink }}" />
+                <img class="absolute w-full h-full sm:block hidden" src="{{ $heroTextBg.RelPermalink }}" alt="Hero background" />
+                <img class="absolute h-12 -right-4 sm:hidden" src="{{ $heroTextBgSm.RelPermalink }}" alt="Hero background small" />
                 <span class="relative">{{.Params.title}}</span>
             </div>
         </h1>
         <div class="flex items-center gap-3 z-20">
             <p class="text-2xl font-bold text-blue">by</p>
-            <img class="w-full h-12 object-contain" src="{{ $supportCare.RelPermalink }}" />
+            <img class="w-full h-12 object-contain" src="{{ $supportCare.RelPermalink }}" alt="Support and Care" />
         </div>
     </div>
 
     <div class="container mt-12 z-10 relative">
         <div class="max-w-4xl mx-auto w-full">
             <div class="flex sm:flex-row flex-col-reverse items-center justify-center gap-5">
-                <img class="sm:w-20 sm:h-20 w-16 h-16 shrink-0" src="{{ $owl.RelPermalink }}" />
+                <img class="sm:w-20 sm:h-20 w-16 h-16 shrink-0" src="{{ $owl.RelPermalink }}" alt="Owl" />
 
                 <div class="relative">
                     <div
@@ -167,7 +167,7 @@
     </div>
 
     <div class="bg-gray relative -z-0 sm:-mt-[5%] sm:pb-0 pb-10">
-        <img class="w-full" src="{{ $wave.RelPermalink }}" />
+        <img class="w-full" src="{{ $wave.RelPermalink }}" alt="Wave"/>
         <div class="container sm:-mt-[4%] -mt-[14%]">
             <div
                 class="w-full flex lg:flex-row flex-col-reverse items-center justify-between lg:gap-16 gap-8 max-w-4xl mx-auto pb-12">
@@ -175,7 +175,7 @@
                     Welcome to XYZ et tristique egestas adipiscing. Neque venenatis mattis pharetra orci id viverra.
                     Sapien praesent convallis diam vel. Ultrices diam imperdiet facilisi.
                 </p>
-                <img class="w-80 shrink-0" src="{{ $footerImage.RelPermalink }}" />
+                <img class="w-80 shrink-0" src="{{ $footerImage.RelPermalink }}" alt="Footer image" />
             </div>
         </div>
     </div>

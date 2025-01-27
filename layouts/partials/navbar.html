@@ -17,12 +17,12 @@
     {{ end }}
     <div class="w-full 2xl:shrink-0">
       {{ if .IsHome }}
-      <img class="hidden w-full mt-3 xl:mt-0 lg:block" src="{{ $herobg.RelPermalink }}" />
+      <img class="hidden w-full mt-3 xl:mt-0 lg:block" src="{{ $herobg.RelPermalink }}" alt="Hero background" />
       <img class="absolute inset-0 block object-cover object-center w-full md:-top-28 sm:-top-24 -top-10 lg:hidden"
         src="{{ $mBgHero.RelPermalink }}" alt="hero background for mobile" />
       {{ else }}
-      <img class="hidden w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block" src="{{ $herobg2.RelPermalink }}" />
-      <img class="object-contain object-center w-full -mt-4 sm:hidden" src="{{ $smBgHero.RelPermalink }}" />
+      <img class="hidden w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block" src="{{ $herobg2.RelPermalink }}" alt="Hero" />
+      <img class="object-contain object-center w-full -mt-4 sm:hidden" src="{{ $smBgHero.RelPermalink }}" alt="Hero" />
       {{ end }}
     </div>
     {{ if .IsHome }}
@@ -111,7 +111,7 @@
             </div>
           </div>
           <button class="xl:hidden">
-            <img class="w-8" @click="open = true" alt="burger" src="{{ $menu.RelPermalink }}" />
+            <img class="w-8" @click="open = true" alt="burger" src="{{ $menu.RelPermalink }}" aria-multiline="Menu" />
           </button>
         </nav>
       </div>

@@ -10,12 +10,12 @@
 {{ partial "partials/cal.html" }}
 <div class="relative">
     <div class="container relative max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:pb-36 pb-28">
-        <img class="absolute hidden w-full -ml-20 top-52 2xl:-ml-32 lg:block" src="{{ $lines.RelPermalink }}" />  
-        <img class="absolute w-full md:top-40 sm:top-36 top-[110px] md:-ml-16 sm:ml-0 lg:hidden sm:block hidden" src="{{ $linesM.RelPermalink }}" />  
+        <img class="absolute hidden w-full -ml-20 top-52 2xl:-ml-32 lg:block" src="{{ $lines.RelPermalink }}" alt="Lines" />  
+        <img class="absolute w-full md:top-40 sm:top-36 top-[110px] md:-ml-16 sm:ml-0 lg:hidden sm:block hidden" src="{{ $linesM.RelPermalink }}" alt="Line M" />  
         <div class="flex items-center justify-center pt-16 pb-4 lg:pt-36 md:pt-28 sm:pt-24 sm:pb-12">
             <h1 class="flex items-center justify-center w-full text-center h1">
                 <div class="relative z-0 flex items-center justify-center w-full">
-                    <img class="absolute w-32 mt-1 lg:w-64 sm:w-48 -mr-28" src="{{ $heroTextBg.RelPermalink }}" />
+                    <img class="absolute w-32 mt-1 lg:w-64 sm:w-48 -mr-28" src="{{ $heroTextBg.RelPermalink }}" alt="Hero text background" />
                     <span class="relative">{{.Params.title}}</span>
                 </div>
             </h1>
@@ -25,14 +25,14 @@
                 <div class=" bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-full flex flex-col items-center justify-center text-center">
                     <p>{{ $.Param "intro" | safeHTML }}</p>
                     <a data-cal-link="open-elements/15min" class="flex items-center justify-center gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full cursor-pointer bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple">
-                        <img src="{{ $callIcon.RelPermalink }}" />
+                        <img src="{{ $callIcon.RelPermalink }}" alt="Call icon" />
                         {{ $.Param "schedule_button_text" }}
                     </a>
                 </div>
             </div>
             <div class="relative flex flex-col-reverse items-center justify-center w-full gap-16 lg:flex-row xl:gap-12 lg:gap-6">
-                <img class="absolute lg:w-[450px] w-80 lg:-left-44 -left-24 lg:top-12 top-[500px] sm:block hidden" src="{{ $round1.RelPermalink }}" />
-                <img class="absolute lg:w-[450px] w-80 lg:-left-44 sm:-left-24 -left-40 lg:top-12 top-[440px] sm:hidden" src="{{ $roundSM.RelPermalink }}" />
+                <img class="absolute lg:w-[450px] w-80 lg:-left-44 -left-24 lg:top-12 top-[500px] sm:block hidden" src="{{ $round1.RelPermalink }}" alt="Round" />
+                <img class="absolute lg:w-[450px] w-80 lg:-left-44 sm:-left-24 -left-40 lg:top-12 top-[440px] sm:hidden" src="{{ $roundSM.RelPermalink }}" alt="Round small" />
                 <div class="relative flex flex-col items-center w-full gap-8 lg:items-start xl:gap-12 lg:gap-6">
                     <div class="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col">
                         <p>{{ $.Param "mail_intro" }}</p>
@@ -68,7 +68,7 @@
                         </div>                    
                     </div>
                 </div>
-                <img class="w-full max-w-sm xl:max-w-md shrink-0 xl:mt-16" src="{{ $contact.RelPermalink }}" />
+                <img class="w-full max-w-sm xl:max-w-md shrink-0 xl:mt-16" src="{{ $contact.RelPermalink }}" alt="Contact" />
             </div>
         </div>
     </div>
