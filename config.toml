@@ -1,6 +1,6 @@
 defaultContentLanguage = "en"
 title = "Open Elements"
-baseURL = "{{ getenv `DEPLOY_PRIME_URL` | default `https://open-elements.com` }}"
+baseURL = "https://open-elements.com"
 
 enableRobotsTXT = true
 log = true
