@@ -1,7 +1,14 @@
 [build]
-command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
+command = "hugo --minify"
 publish = "public"
 
 [build.environment]
 HUGO_VERSION = "0.118.2"
 
+# Production build
+[context.production]
+command = "hugo --minify --baseURL https://open-elements.com"
+
+# Deploy Preview build
+[context.deploy-preview]
+command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
