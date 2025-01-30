@@ -6,7 +6,7 @@ author: hendrik
 categories: [Java]
 excerpt: 'See how both Maven and Gradle succeed and fail and consider static modules, an idea that would bring out and combine their best aspects.'
 origin: https://dzone.com/articles/maven-vs-gradle-and-the-best-of-both-worlds
-preview_image: "/posts/preview-images/software-development-green.svg"
+preview_image: "/posts/preview-images/duke-yellow.svg"
 ---
 Since several years I’m really frustrated of the build tools that can currently be used to build Java based projects. In my daily job I have seen several Java projects and modules that use different build systems. Thankfully mostly all projects I have seen the last years are build on [Maven](https://maven.apache.org) or [Gradle](https://gradle.org). Based on this you need to know only 2 different systems to understand the basic structure and dependencies of a project. I don’t want to give an overview of all build systems that can currently be used to define the build of a Java based project since I think that they all can easily be splitted in 2 different types:
 
