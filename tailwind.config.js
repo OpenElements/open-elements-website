@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  variants: {
-    extend: {
-      opacity: ['hover', 'active']
-    },
-    plugins: [
-      hoveredParentPlugin,
-      focusedWithinParentPlugin,
-    ]
-  },
+  // variants: {
+  //   extend: {
+  //     opacity: ['hover', 'active']
+  //   },
+  //   plugins: [
+  //     hoveredParentPlugin,
+  //     focusedWithinParentPlugin,
+  //   ]
+  // },
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
     screens: {
