@@ -3,6 +3,9 @@
   description: "We are migrating the Apache Maven issues to Github. This will make
     it easier for the community to report issues and contribute to the project."
   link: https://github.com/support-and-care/jira-to-gh-issues
-  date: '2021-09-01'
-  project: maven
+  authors:
+    - gerd
+    - sandra
+  date: 2021-09-01
+  project: support-care-maven
   type: documentation
