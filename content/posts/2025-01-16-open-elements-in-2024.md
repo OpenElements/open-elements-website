@@ -128,7 +128,7 @@ focused on the sustainable support of critical open-source components.
 
 {{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
 
-With this approval, the Sovereign Tech Fund provides the necessary financial resources, enabling Open Elements to
+With this approval, the [Sovereign Tech Agency](https://www.sovereign.tech) provides the necessary financial resources, enabling Open Elements to
 implement much-needed expansions and safeguards for these critical components through mid-2026.
 This ensures the reliability and performance of Apache Maven with professional maintenance, regular updates, and the
 involvement of experts, some working full-time on the project.

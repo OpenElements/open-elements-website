@@ -93,7 +93,7 @@ Tools wie Apache Maven sind nicht nur Hilfsmittel für Entwickler, sondern integ
 ### Support & Care for Apache Maven™ {id="support-care-maven"}
 
 Die Initiative [**Support & Care for Apache Maven™**]({{< ref "support-care-maven" >}}) wurde von Open Elements ins Leben gerufen, um die langfristige Nachhaltigkeit von Apache Maven sicherzustellen.
-Sie wird durch die Finanzierung des Sovereign Tech Fund unterstützt, einem deutschen Regierungsprogramm, das sich der Sicherung kritischer Open-Source-Software widmet.
+Sie wird durch die Finanzierung der [Sovereign Tech Agency](https://www.sovereign.tech) unterstützt, einem deutschen Regierungsprogramm, das sich der Sicherung kritischer Open-Source-Software widmet.
 
 {{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo von Support & Care for Apache Maven">}}
 
