@@ -28,5 +28,11 @@
     "text": "The <a class=\"link-purple\" href=\"https://takka.group\" target=\"_blank\">takka group</a> offers services in the areas of IT consulting and software development. <b>Open Elements</b> has supported takka with workshops in specialized areas of Java development.",
     "logo": "/illustrations/logo-takka.svg",
     "link": "https://takka.group"
+  },
+  {
+    "title": "Sovereign Tech Agency",
+    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> supports the development, improvement, and maintenance of open digital infrastructure. Its goal is to sustainably strengthen the open source ecosystem, focusing on security, resilience, technological diversity, and the people behind the code. The Sovereign Tech Agency invests in the Apache Maven™ Open Source project by providing financial support to OpenElements as a contributor of the project.",
+    "logo": "/illustrations/logos/sta-logo.svg",
+    "link": "https://www.sovereign.tech"
   }
 ]
