@@ -6,7 +6,7 @@ url: "/support-care-maven"
 ---
 
 **Open Elements** has initiated a crucial contribution to securing a key tool in the Java ecosystem with its program **Support & Care for Apache Maven™**.
-With support from the [Sovereign Tech Fund](https://www.sovereign.tech/en), sustainable funding for Apache Maven™ is enabled for the first time—one of the most widely used open-source projects in the world.
+With support from the [Sovereign Tech Agency](https://www.sovereign.tech/), sustainable funding for Apache Maven™ is enabled for the first time—one of the most widely used open-source projects in the world.
 
 {{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
 
@@ -23,14 +23,14 @@ It is used by companies of all sizes, from startups to global corporations, and 
 
 More details about Apache Maven can be found [here]({{< relref "articles/what-is-maven" >}})—from how it works and its benefits to the community that supports the project.
 
-## Support by the Sovereign Tech Fund
-The Sovereign Tech Fund (STF) is a funding program of the German Federal Ministry for Economic Affairs and Climate Action that focuses on the sustainable support of open-source software.
+## Support by the Sovereign Tech Agency
+The Sovereign Tech Agency (STA) is a funding program of the German Federal Ministry for Economic Affairs and Climate Action that focuses on the sustainable support of open-source software.
 The program aims to secure critical digital infrastructures in the long term and strengthen the resilience of the European technology ecosystem.
-Projects funded by the STF must have significant importance for the economy and society and must also follow sustainable development practices.
+Projects funded by the STA must have significant importance for the economy and society and must also follow sustainable development practices.
 
 {{< centered-image src="diagram.png" alt="How Support and Care for Apache Maven is funded" width="100%" >}}
 
-Open Elements successfully submitted the funding application for Support & Care for Apache Maven™ under the STF. This process included several steps:
+Open Elements successfully submitted the funding application for Support & Care for Apache Maven™ under the STA. This process included several steps:
 
 - **Payment of developers and maintainers:** For the first time, developers are paid for their work on Maven to efficiently implement critical tasks such as security updates, bug fixes, and tool enhancements.
 - **Creation of a roadmap and milestone planning:** Funded projects are prioritized in collaboration with the community.

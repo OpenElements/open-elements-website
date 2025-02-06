@@ -115,7 +115,7 @@ So entstand das Projekt **[Support & Care for Apache Maven™]({{< ref "support-
 
 {{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
 
-Aufgrund der Zusage stellt der Sovereign Tech Fund die finanziellen Mittel bereit und Open Elements kann dringend benötigte Ausbauten und Absicherungen der kritischen Komponenten bis Mitte 2026 voranbringen.
+Aufgrund der Zusage stellt die [Sovereign Tech Agency](https://www.sovereign.tech) die finanziellen Mittel bereit und Open Elements kann dringend benötigte Ausbauten und Absicherungen der kritischen Komponenten bis Mitte 2026 voranbringen.
 Damit kann die Zuverlässigkeit und Leistungsfähigkeit von Apache Maven mit professioneller Wartung, regelmäßigen Updates und den (teilweise sogar in Vollzeit) involvierten Experten gesichert und gesteigert werden.
 
 Im Java-Ökosystem hat Apache Maven mit über 100 Millionen Downloads pro Jahr einen hohen Stellenwert.

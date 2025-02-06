@@ -84,7 +84,7 @@ forced to reduce or stop their work on the projects.
 
 ## Why Open Elements is the right partner to support OSS
 
-Theaim of Support & Care is to provide holistic promotion and support of OSS instead of “just” financial
+The goal of Support & Care is to provide holistic promotion and support of OSS instead of “just” providing financial
 donations or collaboration.
 Our years of experience in open source development have shown us the crucial importance of this support.
 For this reason, Open Elements was founded as a company that views and promotes OSS from technical as well

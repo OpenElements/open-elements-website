@@ -79,7 +79,7 @@ As Java continues to evolve with new features and standards, the importance of m
 In recent years, the critical role of open-source software in global infrastructure has become increasingly clear to governments and major industry players.
 Tools like Apache Maven are not just developer utilities; they are integral components of digital economies, enabling innovation and reducing costs.
 However, the challenges of relying on volunteer-driven development models for such critical software have prompted a paradigm shift.
-Governments, through initiatives like the Sovereign Tech Fund, and companies are recognizing the need to invest in the sustainability of open-source projects to ensure their continued relevance and security.
+Governments, through initiatives like the [Sovereign Tech Agency](https://www.sovereign.tech), and companies are recognizing the need to invest in the sustainability of open-source projects to ensure their continued relevance and security.
 
 {{< centered-image src="/illustrations/general/many-care-tree.svg" width="60%" alt="More people start to care">}}
 
@@ -89,7 +89,7 @@ This initiative represents a transformative approach, combining public funding, 
 ### Support & Care for Apache Maven™ {id="support-care-maven"}
 
 [Support & Care for Apache Maven™]({{< ref "support-care-maven" >}}) is a groundbreaking initiative launched by Open Elements with the goal of ensuring the long-term sustainability of Apache Maven.
-It is supported by funding from the Sovereign Tech Fund, a German government program dedicated to safeguarding critical open-source software.
+It is supported by funding from the Sovereign Tech Agency, a German government program dedicated to safeguarding critical open-source software.
 The initiative focuses on providing financial and organizational resources to address longstanding challenges in maintaining and improving Maven.
 
 {{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
@@ -101,7 +101,7 @@ With the launch of the Support & Care for Apache Maven™ initiative, the future
   [US Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
   and the [EU Cyber Resilience Act (CRA)](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act).
   By implementing features like SBOMs (Software Bill of Materials) and OpenSSF-Scorecards, Maven ensures compliance with modern cybersecurity standards.
-- **Transparent Community-Driven Development:** Public funding, secured through the Sovereign Tech Fund, enables Open Elements to collaborate with the Maven community to prioritize essential updates,
+- **Transparent Community-Driven Development:** Public funding, secured through the Sovereign Tech Agency, enables Open Elements to collaborate with the Maven community to prioritize essential updates,
   bug fixes, and new features. Transparent processes and open discussions on platforms like GitHub keep the community at the center of the project’s roadmap.
 - **Expand Accessibility:** The creation of tutorials, improved documentation, and multi-language resources (English and German) ensures that both new and experienced developers can
   fully leverage Maven’s capabilities.
