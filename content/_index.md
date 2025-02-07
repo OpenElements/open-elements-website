@@ -4,7 +4,7 @@ layout: "index"
 
 hero_subheader: 'Open Source made right'
 hero_header_line_1_start: 'We trust in the'
-hero_header_line_1_underlines: 'power'
+hero_header_line_1_underlines: ' power '
 hero_header_line_1_end: 'of'
 hero_header_line_2: 'Open Collaboration!'
 hero_text: 'We believe that openness and transparency create substantial value for companies, projects, and individuals. Our goal is to support our partners in establishing important concepts such as Open Source and Open Data. This strengthens core aspects of IT, such as standards and security automatically within the company. Through our work, we also promote active engagement in the IT scene and beyond.'
