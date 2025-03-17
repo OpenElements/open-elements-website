@@ -2122,6 +2122,10 @@ html{
   height: 195px;
 }
 
+.h-\[200px\]{
+  height: 200px;
+}
+
 .h-\[244px\]{
   height: 244px;
 }
@@ -2232,6 +2236,10 @@ html{
 
 .w-\[195px\]{
   width: 195px;
+}
+
+.w-\[200px\]{
+  width: 200px;
 }
 
 .w-auto{
@@ -3965,6 +3973,10 @@ html{
     top: 110%;
   }
 
+  .sm\:right-\[9\%\]{
+    right: 9%;
+  }
+
   .sm\:-ml-16{
     margin-left: -4rem;
   }
@@ -4650,6 +4662,18 @@ html{
 
   .lg\:top-7{
     top: 1.75rem;
+  }
+
+  .lg\:right-\[15\%\]{
+    right: 15%;
+  }
+
+  .lg\:right-\[31\%\]{
+    right: 31%;
+  }
+
+  .lg\:top-\[25\%\]{
+    top: 25%;
   }
 
   .lg\:order-1{
