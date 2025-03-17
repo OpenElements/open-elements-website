@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hendrik",
+    "firstName": "Hendrik",
+    "lastName": "Ebbers",
+    "link": "/about-hendrik/",
+    "bio": "Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/hendrik.jpg",
+    "role": "Founder, Author"
+  },
+  {
+    "id": "catrice",
+    "firstName": "Catrice",
+    "lastName": "Keibel",
+    "link": "/about-catrice/",
+    "bio": "Daniel Meyer is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Daniel is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/catrice.jpg",
+    "role": "Software Architect"
+  },
+  {
+    "id": "jessie",
+    "firstName": "Jessie",
+    "lastName": "Ssebuliba",
+    "link": "/about-jessie/",
+    "bio": "Jessie is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Jonas is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/jessie.jpg",
+    "role": "Software Developer"
+  },
+  {
+    "id": "natascha",
+    "firstName": "Natascha",
+    "lastName": "Dönges",
+    "link": "/about-natascha/",
+    "bio": "Johannes Weigend is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Johannes is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/natascha.jpg",
+    "role": "Software Developer"
+  },
+  {
+    "id": "noah",
+    "firstName": "Tayebwa",
+    "lastName": "Noah",
+    "link": "/about-noah/",
+    "bio": "Michael Vitz is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Michael is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/noah.jpg",
+    "role": "Software Developer"
+  },
+  {
+    "id": "sebastian",
+    "firstName": "Sebastian",
+    "lastName": "Tiemann",
+    "link": "/about-sebastian/",
+    "bio": "David Krause is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. David is a member of the Board of Directors of the Eclipse Foundation",
+    "picture": "/team/sebastian.jpg",
+    "role": "Software Developer"
+  }
+]

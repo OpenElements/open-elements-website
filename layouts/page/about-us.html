@@ -96,76 +96,20 @@
                         <a href="#" class="hidden sm:block font-semibold text-purple text-lg">View more</a>
                     </div>
                     <div class="place-content-center gap-x-6 gap-y-6 sm:gap-y-4 grid sm:grid-cols-3 mt-8 w-full">
-                        <div>
-                            <div class="relative">
-                                <img class="size-56 object-contain shrink-0" alt=""
-                                    src="{{ $teamPlaceholder.RelPermalink }}" />
-                            </div>
-                            <div class="text-center">
-                                <p class="font-bold text-blue text-lg">Tayebwa Noah</p>
-                                <p class="font-bold text-purple text-sm">Software Developer</p>
-                            </div>
-                        </div>
+                        {{ range .Site.Data.team }}
                         <div>
                             <div class="relative">
                                 <img class="size-56 object-contain shrink-0" alt=""
                                     src="{{ $teamPlaceholder.RelPermalink }}" />
                                 <img class="bottom-5 left-1.5 absolute rounded-full size-44 object-cover shrink-0" alt=""
-                                    src="{{ $hendrik.RelPermalink }}" />
+                                    src="{{ .picture }}" />
                             </div>
                             <div class="text-center">
-                                <p class="font-bold text-blue text-lg">Hendrik Ebbers</p>
-                                <p class="font-bold text-purple text-sm">Founder, Author</p>
+                                <a href='{{ .link }}' class="font-bold text-blue text-lg">{{ .firstName }} {{ .lastName}}</a>
+                                <p class="font-bold text-purple text-sm">{{ .role }}</p>
                             </div>
                         </div>
-                        <div>
-                            <div class="relative">
-                                <img class="size-56 object-contain shrink-0" alt=""
-                                    src="{{ $teamPlaceholder.RelPermalink }}" />
-                                <img class="bottom-5 left-1.5 absolute rounded-full size-44 object-cover shrink-0" alt=""
-                                    src="{{ $hendrik.RelPermalink }}" />
-                            </div>
-                            <div class="text-center">
-                                <p class="font-bold text-blue text-lg">John Snow</p>
-                                <p class="font-bold text-purple text-sm">Software Developer</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative">
-                                <img class="size-56 object-contain shrink-0" alt=""
-                                    src="{{ $teamPlaceholder.RelPermalink }}" />
-                                <img class="bottom-5 left-1.5 absolute rounded-full size-44 object-cover shrink-0" alt=""
-                                    src="{{ $hendrik.RelPermalink }}" />
-                            </div>
-                            <div class="text-center">
-                                <p class="font-bold text-blue text-lg">Hendrik Ebbers</p>
-                                <p class="font-bold text-purple text-sm">Founder, Author</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative">
-                                <img class="size-56 object-contain shrink-0" alt=""
-                                    src="{{ $teamPlaceholder.RelPermalink }}" />
-                                <img class="bottom-5 left-1.5 absolute rounded-full size-44 object-cover shrink-0" alt=""
-                                    src="{{ $hendrik.RelPermalink }}" />
-                            </div>
-                            <div class="text-center">
-                                <p class="font-bold text-blue text-lg">John Snow</p>
-                                <p class="font-bold text-purple text-sm">Software Developer</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative">
-                                <img class="size-56 object-contain shrink-0" alt=""
-                                    src="{{ $teamPlaceholder.RelPermalink }}" />
-                                <img class="bottom-5 left-1.5 absolute rounded-full size-44 object-cover shrink-0" alt=""
-                                    src="{{ $hendrik.RelPermalink }}" />
-                            </div>
-                            <div class="text-center">
-                                <p class="font-bold text-blue text-lg">John Snow</p>
-                                <p class="font-bold text-purple text-sm">Software Developer</p>
-                            </div>
-                        </div>
+                        {{ end }}
                     </div>
                 </div>
 
