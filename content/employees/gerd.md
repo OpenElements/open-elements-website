@@ -1,4 +1,4 @@
 ---
 title: "Gerd Aschemann"
-slug: "catrice"
+slug: "gerd"
 ---
