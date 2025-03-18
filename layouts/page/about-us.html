@@ -74,7 +74,7 @@
                                 <div class="mt-0.5 border-[3px] rounded-full size-5 shrink-0" 
                                     :class="section === 'div1' ? 'bg-green border-green' : 'border-purple bg-transparent'">
                                 </div>
-                                Our Team
+                                {{.Params.section_prefix}} {{ .Params.section_team}}
                             </button>
                             <button type="button" 
                                 @click="section = 'div2'; document.getElementById('div2').scrollIntoView({ behavior: 'smooth' })" 
@@ -83,7 +83,7 @@
                                 <div class="mt-0.5 border-[3px] rounded-full size-5 shrink-0" 
                                     :class="section === 'div2' ? 'bg-green border-green' : 'border-purple bg-transparent'">
                                 </div>
-                                Our Engagements
+                                {{.Params.section_prefix}} {{ .Params.section_engagement}}
                             </button>
                             <button type="button" 
                                 @click="section = 'div3'; document.getElementById('div3').scrollIntoView({ behavior: 'smooth' })" 
@@ -92,7 +92,7 @@
                                 <div class="mt-0.5 border-[3px] rounded-full size-5 shrink-0" 
                                     :class="section === 'div3' ? 'bg-green border-green' : 'border-purple bg-transparent'">
                                 </div>
-                                Our Customers & Partners
+                                {{.Params.section_prefix}} {{ .Params.section_customers}}
                             </button>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                 <div id="div1" class="scroll-mt-24 scroll-section" x-ref="div1">
                     <div class="flex justify-between items-center gap-5">
                         <h2 class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
-                            Our <span class="text-sky">Team</span>
+                            {{.Params.section_prefix}} <span class="text-sky">{{ .Params.section_team}}</span>
                         </h2>
                     </div>
                     <div class="place-content-center gap-x-6 gap-y-6 sm:gap-y-4 grid sm:grid-cols-3 mt-8 w-full">
@@ -125,7 +125,7 @@
 
                 <div id="div2" class="scroll-mt-24 scroll-section" x-ref="div2">
                     <h2 class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
-                        Our <span class="text-purple">Engagements</span>
+                        {{.Params.section_prefix}} <span class="text-purple">{{.Params.section_engagement}}</span>
                     </h2>
                     <div class="gap-5 grid md:grid-cols-2 mt-7 md:mt-12 w-full">
                         {{ $data := index .Site.Data .Site.Language.Lang }}
@@ -138,7 +138,7 @@
 
                 <div id="div3" class="scroll-mt-24 scroll-section" x-ref="div3">
                     <h2 class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
-                        Our <span class="text-rose">Customers & Partners</span>
+                        {{.Params.section_prefix}} <span class="text-rose">{{.Params.section_customers}}</span>
                     </h2>
                     <div class="relative flex flex-wrap justify-center mt-7 md:mt-12 w-full">
                         {{ $data := index .Site.Data .Site.Language.Lang }}

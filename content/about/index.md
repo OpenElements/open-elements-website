@@ -6,9 +6,9 @@ keywords: ["Open Source", "Java", "OSS", "Open Source Support", "Java Support"]
 
 section_intro: '<a class="link-purple" href="/about-hendrik/">Hendrik Ebbers</a> founded the OpenElements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.'
 
-section_engagement_title: 'Our Engagements'
-
-section_customers_title_prefix: 'Our'
-section_customers_title: 'Customers & Partners'
+section_prefix: 'Our'
+section_engagement: 'Engagements'
+section_team: 'Team'
+section_customers: 'Customers & Partners'
 
 ---
