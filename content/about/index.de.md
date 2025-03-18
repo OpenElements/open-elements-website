@@ -8,7 +8,9 @@ section_intro: 'Die OpenElements GmbH wurde im Jahr 2022 von <a class="link-purp
 
 section_engagement_title: 'Unser Engagement'
 
-section_customers_title_prefix: 'Unsere'
-section_customers_title: 'Kunden & Partner'
+section_prefix: 'Unser'
+section_engagement: 'Engagement'
+section_team: 'Team'
+section_customers: 'Kunden & Partner'
 
 ---
