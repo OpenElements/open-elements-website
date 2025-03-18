@@ -1,0 +1,147 @@
+[
+  {
+    "id": "hendrik",
+    "firstName": "Hendrik",
+    "lastName": "Ebbers",
+    "link": "/about-hendrik/",
+    "bio": "Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/hendrik.jpg",
+    "role": "Founder Open Elements"
+  },
+  {
+    "id": "catrice",
+    "firstName": "Catrice",
+    "lastName": "Keibel",
+    "x": "/employees/catrice",
+    "bio": "Daniel Meyer is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Daniel is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/catrice.jpg",
+    "role": "Student Assistant",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/catrice-keibel-033093348/",
+        "icon": "mdi:linkedin"
+      }
+    ]
+  },
+  {
+    "id": "jessie",
+    "firstName": "Jessie",
+    "lastName": "Ssebuliba",
+    "x": "/employees/jessie",
+    "bio": "Jessie is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Jonas is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/jessie.jpg",
+    "role": "Junior Developer",
+    "socials": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/amjexsie",
+        "icon": "mdi:twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/ssebuliba/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/jexsie",
+        "icon": "mdi:github"
+      }
+    ]
+  },
+  {
+    "id": "natascha",
+    "firstName": "Natascha",
+    "lastName": "Dönges",
+    "x": "/employees/natascha",
+    "bio": "Johannes Weigend is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Johannes is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/natascha.jpg",
+    "role": "Executive Assistant",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/natascha-dönges-48b865329/",
+        "icon": "mdi:linkedin"
+      }
+    ]
+  },
+  {
+    "id": "noah",
+    "firstName": "Tayebwa",
+    "lastName": "Noah",
+    "x": "/employees/noah",
+    "bio": "Michael Vitz is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Michael is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/noah.jpg",
+    "role": "Junior Developer",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/ndacyayisenga-droid/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/ndacyayisenga-droid",
+        "icon": "mdi:github"
+      }
+    ]
+  },
+  {
+    "id": "sandra",
+    "firstName": "Sandra",
+    "lastName": "Parsick",
+    "x": "/employees/sandra",
+    "bio": "David Krause is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. David is a member of the Board of Directors of the Eclipse Foundation",
+    "picture": "/team/sandra.jpg",
+    "role": "Java Champion & OSS Maintainer",
+    "socials": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/SandraParsick",
+        "icon": "mdi:twitter"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/sparsick",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/sandra-parsick/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "YouTube",
+        "link": "https://youtube.com/@sandraparsick",
+        "icon": "mdi:youtube"
+      }
+    ]
+  },
+  {
+    "id": "gerd",
+    "firstName": "Gerd",
+    "lastName": "Aschemann",
+    "x": "/employees/gerd",
+    "bio": "David Krause is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. David is a member of the Board of Directors of the Eclipse Foundation",
+    "picture": "/team/gerd.jpg",
+    "role": "OSS Maintainer",
+    "socials": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/GerdAschemann",
+        "icon": "mdi:twitter"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/ascheman",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/aschemann/",
+        "icon": "mdi:linkedin"
+      }
+    ]
+  }
+]
