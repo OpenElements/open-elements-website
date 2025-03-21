@@ -38,10 +38,6 @@
     width: 100%
   }
 
-  .cr-popup form {
-    box-shadow: rgb(0 0 0 / .35) 0 5px 15px
-  }
-
   .cr-close {
     position: absolute;
     display: inline-block;
@@ -65,7 +61,13 @@
     position: fixed;
     display: none;
     min-width: 200px;
-    padding: 25px
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    layout: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .cr-popup-show {
@@ -174,58 +176,48 @@
     }
   }
 
-  .cr-popup .cr-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    layout: flex;
+  .cr-form {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px
   }
+
 </style>
 
-<div id="popup" class="cr-popup cr-maxwidth cr-top-center">
-    <form class="cr-form" method="post"
+<div id="popup" class="cr-popup cr-maxwidth cr-top-center cr-popup-div">
+    <a href="#" class="cr-close">X</a>
+    <div class="text-center">
+        <img
+          src="https://s3-eu-west-1.amazonaws.com/files.crsend.com/419000/419766/images/06_Open_Door.png"
+          alt="Willkommens Illustration">
+    </div>
+    <div class="text-blue text-sm text-center">
+        <h2 class="text-lg font-bold">F&uuml;r sichere Open-Source-Software!</h2>
+        <p>M&ouml;chten Sie keine wichtigen Updates und Neuigkeiten rund um unser Support &amp; Care
+            Programm verpassen? Melden Sie sich jetzt f&uuml;r unseren Newsletter an!</p>
+    </div>
+    <form method="post"
+          class="py-2 cr-form"
           action="https://flow.cleverreach.com/fl/3e04d96a-1044-4775-b518-8fcb6a822af8/confirm"
           target="_blank">
-        <a href="#" class="cr-close">X</a>
-
-        <div class="text-center">
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/files.crsend.com/419000/419766/images/06_Open_Door.png"
-              alt="Willkommens Illustration">
-        </div>
-        <div class="text-blue">
-            <h2 class="false">F&uuml;r sichere Open-Source-Software!</h2>
-            <p class="false">M&ouml;chten Sie keine wichtigen Updates und Neuigkeiten rund um unser Support &amp; Care
-                Programm verpassen? Melden Sie sich jetzt f&uuml;r unseren Newsletter an!</p>
-            <p class="false">Erhalten Sie spannende Einblicke zu Apache Maven, Eclipse Temurin und vielen weiteren
-                Projekten. Seien Sie dabei, wenn wir Ihnen Tipps, Sicherheitsupdates und spannende Webinar-Termine
-                direkt ins Postfach liefern.</p>
-        </div>
-        <div class="py-4">
-            <input type="text" tabindex="-1" autocomplete="false" style="display:none !important;" class="cr-nope"
-                   name="email_confirm">
+        <input type="text" tabindex="-1" autocomplete="false" style="display:none !important;" class="cr-nope"
+               name="email_confirm">
+        <div>
             <label class="required block text-gray-700 text-sm font-bold mb-2" for="cr-mail-input">E-Mail</label>
             <input id="cr-mail-input"
                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                    type="email" placeholder="" name="email" required="">
-            <button
-              class="bg-purple rounded-full text-white sm:px-6 hover:bg-purple-70 width=100% py-2"
-              type="submit">Anmelden
-            </button>
         </div>
-        <div class="text-center">
-
-        </div>
-        <div class="text-center">
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/files.crsend.com/419000/419766/images/footer.png"
-              width="80%" style="display: inline; height: auto; width: 80%;" align=""
-              alt="DSGVO Information">
-        </div>
+        <button
+          class="bg-purple rounded-full text-white sm:px-6 hover:bg-purple-70 width=100% py-2"
+          type="submit">Anmelden
+        </button>
     </form>
+    <div class="text-center">
+        <img
+          src="https://s3-eu-west-1.amazonaws.com/files.crsend.com/419000/419766/images/footer.png"
+          style="display: inline; height: auto; width: 60%;" alt="DSGVO Information">
+    </div>
 </div>
 
 <script>

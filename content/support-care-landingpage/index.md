@@ -3,6 +3,8 @@ title: "Support & Care"
 description: "TODO"
 layout: "single"
 url: "/about-support-care"
+newsletterPopup: true
+
 ---
 
 Support & Care is a program for the sustainable further development, stabilization and **support of open source software (OSS)**.

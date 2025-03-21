@@ -3,6 +3,8 @@ title: "Support & Care for Apache Maven™"
 description: "Support & Care for Apache Maven™ stärkt die Zukunft des Java-Ökosystems durch nachhaltige Förderung und transparente Entwicklung. Als erstes Projekt der Support & Care Initiative ermöglicht es die langfristige Unterstützung eines der wichtigsten Open-Source-Tools mit Fokus auf Sicherheit, LTS-Versionen und Community-Beteiligung."
 layout: "article"
 url: "/de/support-care-maven"
+newsletterPopup: true
+
 ---
 
 **Open Elements** hat mit seinem Programm **Support & Care for Apache Maven™** einen entscheidenden Beitrag zur Sicherung eines zentralen Werkzeugs im Java-Ökosystem initiiert.

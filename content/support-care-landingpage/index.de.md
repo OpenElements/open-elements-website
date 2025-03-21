@@ -3,6 +3,7 @@ title: "Support & Care"
 description: "Erhalten Sie umfassenden Open Source Support ✔ Updates ✔ Webinare ✔ direkter Support ✔ Wartungsservice für eine sichere und effiziente Infrastruktur."
 layout: "single"
 url: "/de/about-support-care"
+newsletterPopup: true
 ---
 
 Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisierung und **Support von Open Source Software (OSS)**.

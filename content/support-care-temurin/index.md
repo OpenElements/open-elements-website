@@ -3,6 +3,7 @@ title: "Eclipse Temurin Support & Care"
 description: "Was ist Eclipse Temurin? » Temurin Support Service ✔ Sichern Sie die Leistungsfähigkeit Ihrer Java-gestützten Anwendungen » Jetzt beraten lassen"
 layout: "single"
 url: "/support-care-temurin"
+newsletterPopup: true
 ---
 In an increasingly digitalized world, Java™ has established itself as one of the most popular and widely used
 programming languages.
