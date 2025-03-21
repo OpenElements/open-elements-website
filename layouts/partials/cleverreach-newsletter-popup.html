@@ -1,0 +1,324 @@
+<!-- ------------ CR-Popup ------------ -->
+<style>
+  .cr-maxwidth {
+    max-width: 600px
+  }
+
+  .cr-nope {
+    display: none !important
+  }
+
+  .cr-web-wrapper {
+    display: flex;
+    justify-content: center
+  }
+
+  .cr-web-row ul, .cr-web-row li {
+    gap: 4px;
+    flex-direction: row
+  }
+
+  .cr-web-row ul {
+    padding: 0 8px;
+    margin: 0;
+    list-style-type: none;
+    flex-direction: column
+  }
+
+  .cr-web-row option {
+    min-height: 2em;
+    white-space: normal
+  }
+
+  .cr-web-form label.required .cred-html-wrapper, .cr-web-form label.required .cred-html {
+    display: inline-block !important
+  }
+
+  .cr-popup {
+    width: 100%
+  }
+
+  .cr-popup form {
+    box-shadow: rgb(0 0 0 / .35) 0 5px 15px
+  }
+
+  .cr-close {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    z-index: 100;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    right: calc(0% + 0px);
+    border: 1px solid #888;
+    top: 0%;
+    font-size: 13px;
+    margin: 15px;
+    padding: 3px
+  }
+
+  .cr-popup {
+    position: fixed;
+    display: none;
+    min-width: 200px;
+    padding: 25px
+  }
+
+  .cr-popup-show {
+    display: block !important;
+    z-index: 20000
+  }
+
+  #cr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: 10000;
+    animation: cr-fade-in 0.5s
+  }
+
+  .cr-top-center {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%)
+  }
+
+  .cr-top-left {
+    top: 0%;
+    left: 0%
+  }
+
+  .cr-top-right {
+    top: 0%;
+    left: 100%;
+    transform: translate(-100%, 0%)
+  }
+
+  .cr-center-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .cr-center-left {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%)
+  }
+
+  .cr-center-right {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%)
+  }
+
+  .cr-bottom-center {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%)
+  }
+
+  .cr-bottom-left {
+    top: 100%;
+    left: 0%;
+    transform: translate(0%, -100%)
+  }
+
+  .cr-bottom-right {
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%)
+  }
+
+  @keyframes cr-grow {
+    0% {
+      scale: 0
+    }
+  }
+
+  @keyframes cr-fade-in {
+    0% {
+      opacity: 0
+    }
+  }
+
+  @keyframes cr-slide-top {
+    0% {
+      top: -100%
+    }
+  }
+
+  @keyframes cr-slide-bottom {
+    0% {
+      top: 150%
+    }
+  }
+
+  @keyframes cr-slide-left {
+    0% {
+      left: -100%
+    }
+  }
+
+  @keyframes cr-slide-right {
+    0% {
+      left: 150%
+    }
+  }
+
+  .cr-popup .cr-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<div id="popup" class="cr-popup cr-maxwidth cr-top-center">
+    <form class="cr-form" method="post"
+          action="https://flow.cleverreach.com/fl/3e04d96a-1044-4775-b518-8fcb6a822af8/confirm"
+          target="_blank">
+        <a href="#" class="cr-close">X</a>
+        <input type="text" tabindex="-1" autocomplete="false" style="display:none !important;" class="cr-nope"
+               name="email_confirm">
+        <div>
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/files.crsend.com/419000/419766/images/06_Open_Door.png"
+              alt="Willkommens Illustration">
+        </div>
+        <div>
+            <h3 class="false">F&uuml;r sichere Open-Source-Software!</h3>
+            <p class="false">M&ouml;chten Sie keine wichtigen Updates und Neuigkeiten rund um unser Support &amp; Care
+                Programm verpassen? Melden Sie sich jetzt f&uuml;r unseren Newsletter an!</p>
+            <p class="false">Erhalten Sie spannende Einblicke zu Apache Maven, Eclipse Temurin und vielen weiteren
+                Projekten. Seien Sie dabei, wenn wir Ihnen Tipps, Sicherheitsupdates und spannende Webinar-Termine
+                direkt ins Postfach liefern.</p>
+        </div>
+        <div>
+            <label class="required">E-Mail</label>
+            <input type="email" placeholder="" name="email" required="">
+        </div>
+        <div>
+            <button type="submit">Anmelden</button>
+        </div>
+        <div>
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/files.crsend.com/419000/419766/images/footer.png"
+              width="80%" style="display: inline; height: auto; width: 80%;" align="" height="60"
+              alt="DSGVO Information">
+        </div>
+    </form>
+</div>
+
+<script>
+  function CRPopup(options) {
+    let defaults = {
+      target: "#popup",
+      timeout: 5,
+      animationTime: "0.5s",
+      modal: !0,
+      modalLocked: !1,
+      position: "cr-center",
+      animation: "cr-fade-in",
+      animationTiming: "ease",
+      unique: "popup",
+      cookieTimeout: 0,
+    }
+    options = {...defaults, ...options}
+
+    function getCookie(name) {
+      let cookies = document.cookie.split(';');
+      for (let cookie of cookies) {
+        let [key, value] = cookie.split('=').map(c => c.trim());
+        if (key === name) {
+          return value
+        }
+      }
+      return null
+    }
+
+    function setCookie(name, value, days, sameSite = 'Lax', secure = !1) {
+      let expires = "";
+      if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString()
+      }
+      document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=${sameSite}${secure ? "; Secure" : ""}`
+    }
+
+    function addCheckboxValidator(target) {
+      target.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          let ul = checkbox.closest("ul");
+          let checked = ul.querySelectorAll('input[type="checkbox"]:checked').length;
+          ul.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            if (checked > 0) {
+              checkbox.removeAttribute('required')
+            } else {
+              checkbox.setAttribute('required', 'required')
+            }
+          })
+        })
+      })
+    }
+
+    document.addEventListener("DOMContentLoaded", async function () {
+      let pop = document.querySelector(options.target);
+      pop.classList.add("cr-popup");
+      pop.classList.add(options.position);
+      let cookieName = "cr-popup-" + options.unique;
+      const cookie = getCookie(cookieName);
+      if (cookie != null) {
+        return
+      }
+      addCheckboxValidator(pop);
+      let tmp = []
+      options.animation.split(" ").forEach((v) => {
+        tmp.push(v + " " + options.animationTime + " " + options.animationTiming)
+      });
+      let animation = tmp.join(",");
+      document.head.insertAdjacentHTML("beforeend", `<style>${options.target}{animation: ${animation};}</style>`);
+      setTimeout(() => {
+        let modal = document.createElement("div");
+        modal.setAttribute("id", "cr-modal");
+        close = function (event) {
+          modal.remove();
+          pop.classList.remove("cr-popup-show");
+          setCookie(cookieName, "hide", options.cookieTimeout)
+        }
+        pop.querySelector("form").addEventListener("submit", (event) => {
+          close();
+          setCookie(cookieName, "hide", 356);
+          return !0
+        });
+        pop.querySelector(".cr-close").addEventListener('click', close);
+        if (options.modal) {
+          if (!options.modalLocked) {
+            modal.addEventListener('click', close)
+          }
+          document.body.appendChild(modal)
+        }
+        pop.classList.add("cr-popup-show")
+      }, options.timeout * 1000)
+    })
+  }
+
+  CRPopup({
+    "target": "#popup",
+    "timeout": "5",
+    "cookieTimeout": "7",
+    "position": "cr-center-center",
+    "animation": "cr-fade-in",
+    "modal": true,
+    "modalLocked": false
+  });
+</script>
