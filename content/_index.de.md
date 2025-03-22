@@ -14,7 +14,7 @@ section_open_knowledge_section1_blog_posts: 'Blogbeiträgen'
 section_open_knowledge_section1_articles: 'Fachartikeln'
 section_open_knowledge_section1_lectures: 'Vorträgen'
 section_open_knowledge_section1_end: 'obwohl – oder besser gesagt – weil wir mit Fachwissen unser Geld verdienen.'
-section_open_knowledge_section2: 'Uns ist die kostenlose Erreichbarkeit von Wissen sehr wichtig, auch außerhalb unseres Fachgebiets. Daher agieren wir als Sponsor der <a class="link-green" href="https://wikimediafoundation.org/" target="_blank">Wikimedia Fördergesellschaft</a>.'
+section_open_knowledge_section2: 'Uns ist die kostenlose Erreichbarkeit von Wissen sehr wichtig, auch außerhalb unseres Fachgebiets. Daher agieren wir als Sponsor der <a class="link-green" href="https://wikimediafoundation.org/" target="_blank">Wikimedia Fördergesellschaft</a> und <a class="link-green" href="https://correctiv.org" target="_blank">CORRECTIV</a>.'
 
 section_open_events_section: 'Wir organisieren die <a class="link-rose" href="https://www.meetup.com/jug-dortmund" target="_blank">Java User Group Dortmund</a> und ermöglichen mit unserem Sponsoring die Durchführung von kostenlosen Meetups und physischen Events in der Metropolregion Rhein-Ruhr. Auf der <a class="link-rose" href="https://www.javaland.eu" target="_blank">JavaLand-Konferenz</a> und der in der <a class="link-rose" href="https://cyberland.ijug.eu" target="_blank">Cyberland-Initiative</a> arbeiten wir aktiv in der Leitung mit. Damit unterstützen wir das Angebot von kostenlosen oder auf Selbstkostenbasis kalkulierten Veranstaltungen in der deutschsprachigen Java- und IT-Szene.'
 

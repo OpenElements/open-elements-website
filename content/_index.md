@@ -14,7 +14,7 @@ section_open_knowledge_section1_blog_posts: 'blog posts'
 section_open_knowledge_section1_articles: 'professional articles'
 section_open_knowledge_section1_lectures: 'lectures'
 section_open_knowledge_section1_end: 'even though – or better said – because we earn our money with expertise.'
-section_open_knowledge_section2: 'The free accessibility of knowledge is very important to us, even outside of our area of expertise. Therefore, we act as a sponsor of <a class="link-green" href="https://wikimediafoundation.org/" target="_blank">Wikimedia</a>.'
+section_open_knowledge_section2: 'The free accessibility of knowledge is very important to us, even outside of our area of expertise. Therefore, we act as a sponsor of <a class="link-green" href="https://wikimediafoundation.org/" target="_blank">Wikimedia</a> and <a class="link-green" href="https://correctiv.org" target="_blank">CORRECTIV</a>.'
 
 section_open_events_section: 'We organize the <a class="link-rose" href="https://www.meetup.com/jug-dortmund" target="_blank">Java User Group Dortmund</a> and enable via sponsorship, free meetups and physical events in the metropolitan region Rhine-Ruhr. We actively participate in the management of the <a class="link-rose" href="https://www.javaland.eu" target="_blank">JavaLand</a> conference and the <a class="link-rose" href="https://cyberland.ijug.eu" target="_blank">Cyberland</a> initiative. In doing so, we support the offering of free or cost-covering events in the German-speaking Java and IT scene.'
 
