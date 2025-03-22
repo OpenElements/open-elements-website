@@ -3,6 +3,7 @@ title: "Support & Care"
 description: "Erhalten Sie umfassenden Open Source Support ✔ Updates ✔ Webinare ✔ direkter Support ✔ Wartungsservice für eine sichere und effiziente Infrastruktur."
 layout: "single"
 url: "/de/about-support-care"
+aliases: ['/de/javaland-2024/support-care']
 newsletterPopup: true
 ---
 
@@ -10,7 +11,7 @@ Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisieru
 Hierbei arbeitet Open Elements sowohl mit der Industrie als auch mit der Open Source Community zusammen, um die Qualität,
 Unabhängigkeit und Entwicklung von kritischen Open Source Projekten und Komponenten sicherzustellen.
 
-{{< centered-image src="support-care-logo.svg" alt="Support & Care Logo" width="80%" >}}
+{{< centered-image src="/illustrations/support-care-logos/support-care-logo.svg" alt="Support & Care Logo" width="80%" >}}
 
 ## Warum Open Source für unser heutiges Leben so wichtig ist
 

@@ -3,15 +3,15 @@ title: "Support & Care"
 description: "TODO"
 layout: "single"
 url: "/about-support-care"
+aliases: ['/javaland-2024/support-care']
 newsletterPopup: true
-
 ---
 
 Support & Care is a program for the sustainable further development, stabilization and **support of open source software (OSS)**.
 Open Elements works with both the industry and the open source community to ensure the quality,
 independence and development of critical open source projects and components.
 
-{{< centered-image src="support-care-logo.svg" alt="Support & Care Logo" width="80%" >}}
+{{< centered-image src="/illustrations/support-care-logos/support-care-logo.svg" alt="Support & Care Logo" width="80%" >}}
 
 ## Why open source is so important for our lives today
 
