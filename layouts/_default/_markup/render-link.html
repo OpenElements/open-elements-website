@@ -1,2 +1,2 @@
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination  "http" }} target="_blank" rel="noopener"{{ end }}><i class="fa fa-external-link" aria-hidden="true"></i> {{ .Text | safeHTML }}</a>
-<span>
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination  "http" }} target="_blank" rel="noopener"{{ end }}><i class="fa fa-external-link" aria-hidden="true"></i> {{ .Text | safeHTML }}{{ if strings.HasPrefix .Destination  "http" }}<span class="iconify inline" data-icon="mdi-open-in-new"></span>{{ end }}</a>
+
