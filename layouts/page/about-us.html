@@ -106,7 +106,9 @@
                         </h2>
                     </div>
                     <div class="place-content-center gap-x-6 gap-y-6 sm:gap-y-4 grid sm:grid-cols-3 mt-8 w-full">
-                        {{ range .Site.Data.team }}
+                        {{ $data := index .Site.Data .Site.Language.Lang }}
+                        {{ range $data.team }}
+                        {{if .visible}}
                         <div>
                             <div class="relative">
                                 <img class="size-56 object-contain shrink-0" alt=""
@@ -120,6 +122,7 @@
                             </div>
                         </div>
                         {{ end }}
+                        {{ end }}
                     </div>
                 </div>
 
@@ -130,8 +133,10 @@
                     <div class="gap-5 grid md:grid-cols-2 mt-7 md:mt-12 w-full">
                         {{ $data := index .Site.Data .Site.Language.Lang }}
                         {{ range $data.engagements }}
+                        {{if .visible}}
                         {{ partial "partials/about-engagemet-2.html" (dict "logo" .logo "title" .title "description" .text "link"
                         .link)}}
+                        {{ end }}
                         {{ end }}
                     </div>
                 </div>
@@ -143,8 +148,10 @@
                     <div class="relative flex flex-wrap justify-center mt-7 md:mt-12 w-full">
                         {{ $data := index .Site.Data .Site.Language.Lang }}
                         {{ range $data.partners }}
-                        {{ partial "partials/about-customer.html" (dict "logo" .logo "title" .title "description" .text "link"
-                        .link)}}
+                        {{if .visible}}
+                            {{ partial "partials/about-customer.html" (dict "logo" .logo "title" .title "description" .text "link"
+                            .link)}}
+                        {{ end }}
                         {{ end }}
                     </div>
                 </div>

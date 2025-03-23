@@ -1,9 +1,9 @@
 ---
 title: "Hendrik Ebbers"
-description: "Hendrik Ebbers is the founder of OpenElements"
+description: "Hendrik Ebbers is the founder of Open Elements"
 layout: "about-hendrik"
 
-section_intro: 'Hendrik Ebbers founded the OpenElements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.'
+section_intro: 'Hendrik Ebbers founded the Open Elements GmbH in 2022 to create a company that strengthens open source and open collaboration with a strong focus on the Java ecosystem.'
 
 about_hendrik_paragraph_1: 'Hendrik Ebbers is a <a class="link-purple" href="https://javachampions.org" target="_blank">Java champion</a>, a member of <a class="link-purple" href="https://www.jcp.org/en/home/index" target="_blank">JSR expert groups</a> and a JavaOne rockstar. He has achieved all this through his passion for open source and communities. 
 Hendrik is the founder and leader of the <a class="link-purple" href="https://www.meetup.com/jug-dortmund/" target="_blank">Java user group Dortmund</a> and gives talks and presentations at conferences and selected user groups worldwide.

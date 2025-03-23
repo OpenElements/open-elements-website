@@ -1,38 +1,51 @@
 [
   {
+    "title": "Eclipse Foundation",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.eclipse.org\" target=\"_blank\">Eclipse Foundation</a> ist die größte Open Source Foundation Europas. Als „Contributing Member“ trägt Open Elements zur erfolgreichen Arbeit der Stiftung und ihren Projekten bei. Darüber hinaus ist <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> Mitglied des Board of Directors der Eclipse Foundation.",
+    "logo": "/illustrations/logo-eclipse.svg",
+    "link": "https://www.eclipse.org",
+    "visible": true
+  },
+  {
     "title": "Heise Group",
-    "text": "Heise ist einer der größten deutschen Medienkonzerne und mit seinem IT-Nachrichtenportal <a class=\"link-purple\" href=\"https://www.heise.de\" target=\"_blank\">heise.de</a> führend im deutschsprachigen Raum. OpenElements ist verantwortlich für die Inhalte des Java-Blogs auf <a class=\"link-purple\" href=\"https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html\" target=\"_blank\">heise.de</a>.",
+    "text": "Heise ist einer der größten deutschen Medienkonzerne und mit seinem IT-Nachrichtenportal <a class=\"link-purple\" href=\"https://www.heise.de\" target=\"_blank\">heise.de</a> führend im deutschsprachigen Raum. Open Elements ist verantwortlich für die Inhalte des Java-Blogs auf <a class=\"link-purple\" href=\"https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html\" target=\"_blank\">heise.de</a>.",
     "logo": "/illustrations/logo-heise.svg",
-    "link": "https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html"
+    "link": "https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html",
+    "visible": true
   },
   {
     "title": "Hedera",
-    "text": "<a class=\"link-purple\" href=\"https://hedera.com\" target=\"_blank\">Hedera</a> ist das Unternehmen hinter dem Hedera Hashgraph, dem einzigen öffentlichen und verteilten Ledger, der auf dem Hashgraph-Algorithmus basiert. Hedera Hashgraph ist OSS und wurde in Java entwickelt. Hedera wird von einem Verwaltungsrat aus globalen Unternehmen und Einrichtungen verwaltet, darunter <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b> und weiteren bekannten Namen. OpenElements trägt aktiv zur <a class=\"link-purple\" href=\"https://github.com/hashgraph/hedera-services\" target=\"_blank\">Open Source Platform und der Implementierung der Services des Hedera Hashgraph</a> bei.",
+    "text": "<a class=\"link-purple\" href=\"https://hedera.com\" target=\"_blank\">Hedera</a> ist das Unternehmen hinter dem Hedera Hashgraph, dem einzigen öffentlichen und verteilten Ledger, der auf dem Hashgraph-Algorithmus basiert. Hedera Hashgraph ist OSS und wurde in Java entwickelt. Hedera wird von einem Verwaltungsrat aus globalen Unternehmen und Einrichtungen verwaltet, darunter <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b> und weiteren bekannten Namen. Open Elements trägt aktiv zur <a class=\"link-purple\" href=\"https://github.com/hashgraph/hedera-services\" target=\"_blank\">Open Source Platform und der Implementierung der Services des Hedera Hashgraph</a> bei.",
     "logo": "/illustrations/logo-hedera.svg",
-    "link": "https://hedera.com"
+    "link": "https://hedera.com",
+    "visible": true
   },
   {
     "title": "Hashgraph",
-    "text": "<a class=\"link-purple\" href=\"https://www.hashgraph.com/\" target=\"_blank\">Hashgraph</a> ist ein Unternehmen, das Entwicklung und Support rund um <b>Hedera Hashgraph</b> anbietet und deren Open-Source-Komponenten entwickelt. OpenElements hilft Hashgraph beim Aufbau der Plattform des Hedera Hashgraphs.",
+    "text": "<a class=\"link-purple\" href=\"https://www.hashgraph.com/\" target=\"_blank\">Hashgraph</a> ist ein Unternehmen, das Entwicklung und Support rund um <b>Hedera Hashgraph</b> anbietet und deren Open-Source-Komponenten entwickelt. Open Elements hilft Hashgraph beim Aufbau der Plattform des Hedera Hashgraphs.",
     "logo": "/illustrations/logo-hashgraph.svg",
-    "link": "https://www.hashgraph.com/"
+    "link": "https://www.hashgraph.com/",
+    "visible": true
   },
   {
     "title": "OTH Regensburg",
-    "text": "Die <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> ist eine renommierte technische Hochschule in Deutschland, die eine breite Palette an Studiengängen anbietet, wobei ihr Fachbereich für Informatik und IT besonders hervorzuheben ist durch praxisorientierte Lehrmethoden und enge Zusammenarbeit mit der Industrie. OpenElements ist ein Partner der OTH Regensburg und unser Gründer <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> ist Dozent für Blockchain-Technologie an der OTH. <br><br>Mehr Informationen zur Vorlesung kann man <a class=\"link-purple\" href=\"https://open-elements.com/de/dlt-lecture/\" target=\"_blank\">hier</a> finden.",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> ist eine renommierte technische Hochschule in Deutschland, die eine breite Palette an Studiengängen anbietet, wobei ihr Fachbereich für Informatik und IT besonders hervorzuheben ist durch praxisorientierte Lehrmethoden und enge Zusammenarbeit mit der Industrie. Open Elements ist ein Partner der OTH Regensburg und unser Gründer <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> ist Dozent für Blockchain-Technologie an der OTH. <br><br>Mehr Informationen zur Vorlesung kann man <a class=\"link-purple\" href=\"https://open-elements.com/de/dlt-lecture/\" target=\"_blank\">hier</a> finden.",
     "logo": "/illustrations/logo-oth.svg",
-    "link": "https://www.oth-regensburg.de"
+    "link": "https://www.oth-regensburg.de",
+    "visible": true
   },
   {
     "title": "TAKKA",
     "text": "Die <a class=\"link-purple\" href=\"https://takka.group\" target=\"_blank\">takka group</a> bietet Services in den Bereich IT Consulting und Software Entwicklung an. <b>Open Elements</b> hat takka durch Workshops in Spezialbereichen der Java Entwicklung unterstützt.",
     "logo": "/illustrations/logo-takka.svg",
-    "link": "https://takka.group"
+    "link": "https://takka.group",
+    "visible": false
   },
   {
     "title": "Sovereign Tech Agency",
-    "text": "Die <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> unterstützt die Entwicklung, Verbesserung und Wartung offener digitaler Infrastrukturen. Ihr Ziel ist es, das Open-Source-Ökosystem nachhaltig zu stärken, mit einem Fokus auf Sicherheit, Resilienz, technologische Vielfalt und die Menschen hinter dem Code. Die Sovereign Tech Agency investiert in das Open-Source-Projekt Apache Maven™, indem sie OpenElements als Beitragenden des Projekts finanziell unterstützt.",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> unterstützt die Entwicklung, Verbesserung und Wartung offener digitaler Infrastrukturen. Ihr Ziel ist es, das Open-Source-Ökosystem nachhaltig zu stärken, mit einem Fokus auf Sicherheit, Resilienz, technologische Vielfalt und die Menschen hinter dem Code. Die Sovereign Tech Agency investiert in das Open-Source-Projekt Apache Maven™, indem sie Open Elements als Beitragenden des Projekts finanziell unterstützt.",
     "logo": "/illustrations/logos/sta-logo.svg",
-    "link": "https://www.sovereign.tech"
+    "link": "https://www.sovereign.tech",
+    "visible": true
   }
 ]

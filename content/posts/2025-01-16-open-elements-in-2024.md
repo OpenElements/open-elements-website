@@ -5,7 +5,7 @@ title: "Open Elements 2024 Year in Review"
 date: 2025-01-16
 author: hendrik
 excerpt: "In 2024, Open Elements achieved remarkable success and drove groundbreaking developments in the open-source ecosystem with projects like Support & Care for Apache Maven™. CEO Hendrik Ebbers took on key roles at the Eclipse and Linux Foundations, strengthening the global open-source community."
-categories: [OpenElements]
+categories: [Open Elements]
 preview_image: "/posts/preview-images/openelements-yellow.svg"
 ---
 The year 2024 at Open Elements was marked by growth and successful project developments.
