@@ -1,16 +1,23 @@
 [
   {
     "title": "Eclipse Foundation",
-    "text": "The <a class=\"link-purple\" href=\"https://www.eclipse.org\" target=\"_blank\">Eclipse Foundation</a> is a significant player in the open-source ecosystem, enabling both individual open-source enthusiasts and large and small companies to collaborate on an equal footing. The Foundation provides central and independent management for open-source projects. As a \"Contributing Member\", Open Elements contributes to the successful work of the Foundation and its projects. Furthermore, <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a member of the Board of Directors of the Eclipse Foundation.",
+    "text": "The <a class=\"link-purple\" href=\"https://www.eclipse.org\" target=\"_blank\">Eclipse Foundation</a> is a significant player in the open-source ecosystem, enabling both individual open-source enthusiasts and large and small companies to collaborate on an equal footing. The Foundation provides central and independent management for open-source projects. As a \"Contributing Member\", <b>Open Elements</b> contributes to the successful work of the Foundation and its projects. Furthermore, <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a member of the Board of Directors of the Eclipse Foundation.",
     "logo": "/illustrations/logo-eclipse.svg",
     "link": "https://www.eclipse.org",
     "visible": true
   },
   {
-    "title": "Heise Group",
-    "text": "Heise is one of the largest German media conglomerates, and its IT news portal <a class=\"link-purple\" href=\"https://www.heise.de\" target=\"_blank\">heise.de</a> is leading in German-speaking countries. <b>Open Elements</b> is responsible for the Java blog on <a class=\"link-purple\" href=\"https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html\" target=\"_blank\">heise.de</a>.",
-    "logo": "/illustrations/logo-heise.svg",
-    "link": "https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html",
+    "title": "Linux Foundation",
+    "text": "The <a class=\"link-purple\" href=\"https://www.linuxfoundation.org\" target=\"_blank\">Linux Foundation</a> is the world’s largest non-profit organization that promotes and supports the development of open-source software and collaborative technologies. <b>Open Elements</b> is primarily active in the <a class=\"link-purple\" href=\"https://www.lfdecentralizedtrust.org\" target=\"_blank\">Linux Foundation Decentralized Trust (LFDT)</a>, where <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a member of the Technical Advisory Council (TAC).",
+    "logo": "/illustrations/logos/logo-linux-foundation.svg",
+    "link": "https://www.linuxfoundation.org",
+    "visible": true
+  },
+  {
+    "title": "Sovereign Tech Agency",
+    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> supports the development, improvement, and maintenance of open digital infrastructure. Its goal is to sustainably strengthen the open source ecosystem, focusing on security, resilience, technological diversity, and the people behind the code. The Sovereign Tech Agency invests in the Apache Maven™ Open Source project by providing financial support to Open Elements as a contributor of the project.",
+    "logo": "/illustrations/logos/sta-logo.svg",
+    "link": "https://www.sovereign.tech",
     "visible": true
   },
   {
@@ -21,10 +28,10 @@
     "visible": true
   },
   {
-    "title": "Hashgraph",
-    "text": "<a class=\"link-purple\" href=\"https://www.hashgraph.com\" target=\"_blank\">Hashgraph</a> is a company that provides development and support for the <b>Hedera Hashgraph</b> and builds open-source components that enable faster deployment of industry solutions. <b>Open Elements</b> helps Hashgraph to build the platform of the Hedera Hashgraph.",
-    "logo": "/illustrations/logo-hashgraph.svg",
-    "link": "https://swirldslabs.com",
+    "title": "Heise Group",
+    "text": "Heise is one of the largest German media conglomerates, and its IT news portal <a class=\"link-purple\" href=\"https://www.heise.de\" target=\"_blank\">heise.de</a> is leading in German-speaking countries. <b>Open Elements</b> is responsible for the Java blog on <a class=\"link-purple\" href=\"https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html\" target=\"_blank\">heise.de</a>.",
+    "logo": "/illustrations/logo-heise.svg",
+    "link": "https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html",
     "visible": true
   },
   {
@@ -35,17 +42,17 @@
     "visible": true
   },
   {
+    "title": "Hashgraph",
+    "text": "<a class=\"link-purple\" href=\"https://www.hashgraph.com\" target=\"_blank\">Hashgraph</a> is a company that provides development and support for the <b>Hedera Hashgraph</b> and builds open-source components that enable faster deployment of industry solutions. <b>Open Elements</b> helps Hashgraph to build the platform of the Hedera Hashgraph. <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is the director of Open Source at Hashgraph.",
+    "logo": "/illustrations/logo-hashgraph.svg",
+    "link": "https://swirldslabs.com",
+    "visible": true
+  },
+  {
     "title": "TAKKA",
     "text": "The <a class=\"link-purple\" href=\"https://takka.group\" target=\"_blank\">takka group</a> offers services in the areas of IT consulting and software development. <b>Open Elements</b> has supported takka with workshops in specialized areas of Java development.",
     "logo": "/illustrations/logo-takka.svg",
     "link": "https://takka.group",
     "visible": false
-  },
-  {
-    "title": "Sovereign Tech Agency",
-    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> supports the development, improvement, and maintenance of open digital infrastructure. Its goal is to sustainably strengthen the open source ecosystem, focusing on security, resilience, technological diversity, and the people behind the code. The Sovereign Tech Agency invests in the Apache Maven™ Open Source project by providing financial support to Open Elements as a contributor of the project.",
-    "logo": "/illustrations/logos/sta-logo.svg",
-    "link": "https://www.sovereign.tech",
-    "visible": true
   }
 ]
