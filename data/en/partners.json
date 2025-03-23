@@ -15,7 +15,7 @@
   },
   {
     "title": "Sovereign Tech Agency",
-    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> supports the development, improvement, and maintenance of open digital infrastructure. Its goal is to sustainably strengthen the open source ecosystem, focusing on security, resilience, technological diversity, and the people behind the code. The Sovereign Tech Agency invests in the Apache Maven™ Open Source project by providing financial support to Open Elements as a contributor of the project.",
+    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> supports the development, improvement, and maintenance of open digital infrastructure. Its goal is to sustainably strengthen the open source ecosystem, focusing on security, resilience, technological diversity, and the people behind the code. The Sovereign Tech Agency invests in the Apache Maven™ Open Source project by providing financial support to <b>Open Elements</b> as a contributor of the project.",
     "logo": "/illustrations/logos/sta-logo.svg",
     "link": "https://www.sovereign.tech",
     "visible": true
@@ -36,7 +36,7 @@
   },
   {
     "title": "OTH Regensburg",
-    "text": "The <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> is a prestigious technical university in Germany, offering a wide range of degree programs, with its department for computer science and IT particularly notable for its practice-oriented teaching methods and close collaboration with the industry. Open Elements is a partner of OTH Regensburg, and our founder <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a lecturer for blockchain technology at the OTH. <br><br>More details about the lecture can be found <a class=\"link-purple\" href=\"https://open-elements.com/dlt-lecture/\" target=\"_blank\">here</a>.",
+    "text": "The <a class=\"link-purple\" href=\"https://www.oth-regensburg.de\" target=\"_blank\">OTH Regensburg</a> is a prestigious technical university in Germany, offering a wide range of degree programs, with its department for computer science and IT particularly notable for its practice-oriented teaching methods and close collaboration with the industry. <b>Open Elements</b> is a partner of OTH Regensburg, and our founder <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is a lecturer for blockchain technology at the OTH. <br><br>More details about the lecture can be found <a class=\"link-purple\" href=\"https://open-elements.com/dlt-lecture/\" target=\"_blank\">here</a>.",
     "logo": "/illustrations/logo-oth.svg",
     "link": "https://www.oth-regensburg.de/en",
     "visible": true

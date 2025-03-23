@@ -7,10 +7,24 @@
     "visible": true
   },
   {
+    "title": "Apache Maven",
+    "text": "<a class=\"link-purple\" href=\"https://maven.apache.org\" target=\"_blank\">Apache Maven</a> ist ein Build- und Projektmanagement-Tool, das von über 75% aller Java Projekte verwendet wird. Zusammen mit der Sovereign Tech Agency unterstützt Open Elements das Projekt mit verschiedenen Ressourcen, wie direkte Mitarbeit und finanzielle Unterstützung.",
+    "logo": "/illustrations/logos/apache-maven-logo.svg",
+    "link": "https://maven.apache.org",
+    "visible": true
+  },
+  {
     "title": "Open Regulatory Compliance Working Group",
     "text": "Ziel der  <a class=\"link-purple\" href=\"https://orcwg.org\" target=\"_blank\">Open Regulatory Compliance Working Group (ORC WG)</a> ist es, allen Open-Source-Akteuren die Einhaltung gesetzlicher Anforderungen zu erleichtern. Als \"Participant Members\" ist Open Elements ein Mitglied der Working Group.",
     "logo": "/illustrations/open_regulatory.svg",
     "link": "https://orcwg.org/",
+    "visible": true
+  },
+  {
+    "title": "ORT Server",
+    "text": "Der <a class=\"link-purple\" href=\"https://eclipse-apoapsis.github.io/ort-server/\" target=\"_blank\">ORT Server</a> ist eine skalierbare Anwendung zur Automatisierung von Software-Compliance-Prüfungen. Der Server ermöglicht Abhängigkeiten sowie Lizenzen einfach zu verwalten und zu analysieren. Dies ist vor allem für kommende Regulierungen und Gesetze, wie dem <a class=\"link-purple\" href=\"https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act\" target=\"_blank\">Cyber Resilience Act (CRA)</a> der EU, relevant. Open Elements arbeitet aktiv am Projekt mit.",
+    "logo": "/illustrations/logos/logo-ort-server.svg",
+    "link": "https://eclipse-apoapsis.github.io/ort-server/",
     "visible": true
   },
   {
