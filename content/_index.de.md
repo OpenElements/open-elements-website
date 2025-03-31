@@ -34,4 +34,5 @@ section_open_office_section3: 'Im Home Office oder irgendwo auf der Welt im Co-W
 
 section_open_diversity_section1: 'Das Thema „Diversity“ gehört für uns in eine logische Gruppierung mit Offenheit und Transparenz. Selbst als kleines Unternehmen ist uns die Stärkung der Vielfalt ein wichtiges Anliegen.'
 section_open_diversity_section2: 'Wir haben die „Charta der Vielfalt“ unterzeichnet und uns damit der Selbstverpflichtung gestellt, die 6 Punkte der Charta in unseren Unternehmen umzusetzen und darüber einmal im Jahr öffentlich Auskunft zu geben.'
+aliases: ['/de/javaland-2024/our-vision']
 ---

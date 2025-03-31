@@ -34,4 +34,5 @@ section_open_office_section3: 'In a home office or anywhere in the world in a co
 
 section_open_diversity_section1: 'For us, diversity belongs in a logical grouping with openness and transparency. Even as a small company, strengthening diversity is an essential topic for us.'
 section_open_diversity_section2: 'We have signed the "<a href="" class="link-rose">Diversity Charter</a>" and thus made a voluntary commitment to implement the 6 points of the <a href="" class="link-rose">charter</a> in our companies and to provide <a href="" class="link-rose">public information</a> about this annually.'
+aliases: ['/javaland-2024/our-vision']
 ---
