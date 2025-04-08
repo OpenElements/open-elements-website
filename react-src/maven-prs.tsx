@@ -74,15 +74,34 @@ export default function MavenPRs({status}: { status?: string }) {
   if (!prs) return <div>Keine Pull Requests gefunden</div>;
 
   return (
-      <ul>
+      <div className="grid gap-4">
         {prs.map((pr, idx) => (
-            <li key={idx}>
-              <a href={pr.url} target="_blank" rel="noopener noreferrer">
-                {pr.title}
-              </a>{' '}
-              ({pr.repository} – <strong>{pr.status}</strong>)
-            </li>
+            <div
+                key={idx}
+                className="border rounded-xl p-4 shadow-sm bg-white hover:shadow-md transition-all"
+            >
+              <div className="flex justify-between items-center">
+                <a
+                    href={pr.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-medium text-blue-600 hover:underline"
+                >
+                  {pr.title}
+                </a>
+                <span
+                    className={`text-xs font-semibold px-2 py-1 rounded ${
+                        pr.status === 'merged'
+                            ? 'bg-green-100 text-green-800'
+                            : 'bg-yellow-100 text-yellow-800'
+                    }`}
+                >
+            {pr.status}
+          </span>
+              </div>
+              <div className="mt-1 text-sm text-gray-500">{pr.repository}</div>
+            </div>
         ))}
-      </ul>
+      </div>
   );
 }

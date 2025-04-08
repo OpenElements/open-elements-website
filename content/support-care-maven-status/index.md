@@ -6,7 +6,7 @@ url: "/support-care-maven/status"
 newsletterPopup: true
 ---
 # Project status
-This page shows the status of the Support & Care for Apache Maven™ project.
+This page shows the status of the [Support & Care for Apache Maven™]({{< relref "support-care-maven" >}}) project.
 
 ## Open Pull Requests
 <maven-prs status="open"></maven-prs>
