@@ -19,7 +19,8 @@ export default function MavenPRs({status}: { status?: string }) {
       // Use given UUIDs or fallback to default Maven + Maven Plugins
       const relevantUuids = [
         'Project-maven', // Apache Maven
-        'Project-maven-plugins'  // Maven Plugins
+        'Project-maven-plugins',  // Maven Plugins
+        'Project-support-and-care'  // Support & Care
       ];
 
       const relevantProjects = projects.filter((p: any) => relevantUuids.includes(p.uuid));
