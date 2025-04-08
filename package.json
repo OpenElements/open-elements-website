@@ -9,7 +9,10 @@
     "build:hugo": "hugo",
     "build": "run-p build:*",
     "lint:html": "htmlhint layouts/**/*.html",
-    "prepare": "husky"
+    "prepare": "husky",
+    "netlify:build": "npm run build:css && npm run build:react && hugo --minify",
+    "netlify:build:deploy-preview": "npm run build:css && npm run build:react && hugo --minify --baseURL $DEPLOY_PRIME_URL",
+    "netlify:build:production": "npm run build:css && npm run build:react && hugo --minify --baseURL https://open-elements.com"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
