@@ -1,11 +1,13 @@
 {
   "scripts": {
     "dev:css": "npx tailwindcss -i input.css -o assets/css/style.css -w",
-    "dev:hugo": "hugo server",
+    "dev:hugo": "HUGO_ENV=development hugo server -D",
+    "dev:react": "cd react-src && node build.mjs",
     "dev": "run-p dev:*",
     "build:css": "NODE_ENV=production npx tailwindcss -i input.css -o assets/css/style.css -m",
+    "build:react": "cd react-src && node build.mjs",
     "build:hugo": "hugo",
-    "build": "run-s build:*",
+    "build": "run-p build:*",
     "lint:html": "htmlhint layouts/**/*.html",
     "prepare": "husky"
   },
@@ -14,10 +16,13 @@
     "@tailwindcss/typography": "^0.5.9",
     "htmlhint": "^1.1.4",
     "husky": "^9.1.7",
-    "tailwindcss": "^3.4.14"
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.14",
+    "esbuild": "^0.19.0"
   },
   "dependencies": {
-    "npm-run-all": "^4.1.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tailwind-scrollbar": "^2.1.0"
   }
 }

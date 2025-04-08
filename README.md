@@ -15,9 +15,16 @@ Netlify status of German page:
 
 ## Building the website
 
+Since the page is based on Hugo and React we use `npm-run-all` to execute several dev executions in parallel.
+Therefore you need to install `npm-run-all` as a dev dependency:
+
+```
+npm install --save-dev npm-run-all
+```
+
+
 The project is based on [Hugo](https://gohugo.io/) and you need to [install Hugo](https://gohugo.io/installation/) to build the website.
 Once Hugo is installed you can host the website on localhost by executing to following command from the root folder of the repository:
-
 
 ```
 hugo serve
