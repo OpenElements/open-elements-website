@@ -12305,7 +12305,30 @@
       fetchPRs();
     }, []);
     if (!prs) return /* @__PURE__ */ import_react.default.createElement("div", null, "Keine Pull Requests gefunden");
-    return /* @__PURE__ */ import_react.default.createElement("ul", null, prs.map((pr, idx) => /* @__PURE__ */ import_react.default.createElement("li", { key: idx }, /* @__PURE__ */ import_react.default.createElement("a", { href: pr.url, target: "_blank", rel: "noopener noreferrer" }, pr.title), " ", "(", pr.repository, " \u2013 ", /* @__PURE__ */ import_react.default.createElement("strong", null, pr.status), ")")));
+    return /* @__PURE__ */ import_react.default.createElement("div", { className: "grid gap-4" }, prs.map((pr, idx) => /* @__PURE__ */ import_react.default.createElement(
+      "div",
+      {
+        key: idx,
+        className: "border rounded-xl p-4 shadow-sm bg-white hover:shadow-md transition-all"
+      },
+      /* @__PURE__ */ import_react.default.createElement("div", { className: "flex justify-between items-center" }, /* @__PURE__ */ import_react.default.createElement(
+        "a",
+        {
+          href: pr.url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "text-lg font-medium text-blue-600 hover:underline"
+        },
+        pr.title
+      ), /* @__PURE__ */ import_react.default.createElement(
+        "span",
+        {
+          className: `text-xs font-semibold px-2 py-1 rounded ${pr.status === "merged" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`
+        },
+        pr.status
+      )),
+      /* @__PURE__ */ import_react.default.createElement("div", { className: "mt-1 text-sm text-gray-500" }, pr.repository)
+    )));
   }
 
   // maven-prs-wrapper.tsx
