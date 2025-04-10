@@ -1,5 +1,5 @@
 [build]
-command = "hugo --minify"
+command = "npm run netlify:build"
 publish = "public"
 
 [build.environment]
@@ -7,8 +7,8 @@ HUGO_VERSION = "0.118.2"
 
 # Production build
 [context.production]
-command = "hugo --minify --baseURL https://open-elements.com"
+command = "npm run netlify:build:production"
 
 # Deploy Preview build
 [context.deploy-preview]
-command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
+command = "npm run netlify:build:deploy-preview"
