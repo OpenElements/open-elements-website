@@ -97,7 +97,7 @@
     "firstName": "Sandra",
     "lastName": "Parsick",
     "x": "/employees/sandra",
-    "bio": "David Krause is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. David is a member of the Board of Directors of the Eclipse Foundation",
+    "bio": "Sandra Parsick ist Java Champion und arbeitet als freiberufliche Softwareentwicklerin und Consultant im Java-Umfeld. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen. Ihre Schwerpunkte liegen im Bereich Java Enterprise, Cloud, Software Craftsmanship, Open Source und in der Automatisierung von Entwicklungsprozessen. Sie engagiert sich in verschiedenen Programmkommitees und Community-Gruppen. Überdies trägt sie zu verschiedenen OSS-Projekten bei.",
     "picture": "/team/sandra.jpg",
     "role": "Java Champion & OSS Maintainer",
     "socials": [
