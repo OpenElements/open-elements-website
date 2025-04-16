@@ -4,7 +4,7 @@
     "firstName": "Hendrik",
     "lastName": "Ebbers",
     "link": "/about-hendrik/",
-    "bio": "Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
+    "bio": "Hendrik is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
     "picture": "/team/hendrik.jpg",
     "role": "Founder Open Elements",
     "visible": true
@@ -58,7 +58,7 @@
     "firstName": "Natascha",
     "lastName": "Dönges",
     "x": "/employees/natascha",
-    "bio": "Johannes Weigend is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Johannes is a member of the Board of Directors of the Eclipse Foundation.",
+    "bio": "Natascha kümmert sich im Backoffice um alle Belange abseits der großen Bühne. Mit ihrer Erfahrung im Umgang mit Kunden ist sie nicht nur eine großartige Teamplayerin sondern auch die gute Seele von Open Elements.",
     "picture": "/team/natascha.jpg",
     "role": "Executive Assistant",
     "socials": [
@@ -97,7 +97,7 @@
     "firstName": "Sandra",
     "lastName": "Parsick",
     "x": "/employees/sandra",
-    "bio": "Sandra Parsick ist Java Champion und arbeitet als freiberufliche Softwareentwicklerin und Consultant im Java-Umfeld. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen. Ihre Schwerpunkte liegen im Bereich Java Enterprise, Cloud, Software Craftsmanship, Open Source und in der Automatisierung von Entwicklungsprozessen. Sie engagiert sich in verschiedenen Programmkommitees und Community-Gruppen. Überdies trägt sie zu verschiedenen OSS-Projekten bei.",
+    "bio": "Sandra ist Java Champion und arbeitet als freiberufliche Softwareentwicklerin und Consultant im Java-Umfeld. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen. Ihre Schwerpunkte liegen im Bereich Java Enterprise, Cloud, Software Craftsmanship, Open Source und in der Automatisierung von Entwicklungsprozessen. Sie engagiert sich in verschiedenen Programmkommitees und Community-Gruppen. Überdies trägt sie zu verschiedenen OSS-Projekten bei.",
     "picture": "/team/sandra.jpg",
     "role": "Java Champion & OSS Maintainer",
     "socials": [
@@ -156,7 +156,7 @@
     "firstName": "Sebastian",
     "lastName": "Tiemann",
     "x": "/employees/seb",
-    "bio": "Sebastian Tiemann ist ein erfahrener IT-Profi mit mehr als 15 Jahren Erfahrung in den Bereichen Entwicklung, Beratung und Community-Arbeit. Als Contributor der Apache Foundation und Organisator der Java Group Dortmund ist Sebastian ein engagierter Verfechter von Technologie, Lernen und Zusammenarbeit.",
+    "bio": "Sebastian ist ein erfahrener IT-Profi mit mehr als 15 Jahren Erfahrung in den Bereichen Entwicklung, Beratung und Community-Arbeit. Als Contributor der Apache Foundation und Organisator der Java Group Dortmund ist Sebastian ein engagierter Verfechter von Technologie, Lernen und Zusammenarbeit.",
     "picture": "/team/sebastian.jpg",
     "role": "Open Source Software Engineer",
     "socials": [
