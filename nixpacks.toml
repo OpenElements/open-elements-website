@@ -8,7 +8,7 @@ cmds = ["npm install"]
 cmds = ["npm run build"]
 
 [start]
-  cmd = "hugo server --bind 0.0.0.0 --port 1313 --baseURL http://x44koowcgw4wkcks8wkc4g00.91.99.108.179.sslip.io/"
+  cmd = "hugo server"
 
 [ environment ]
 HUGO_VERSION = "0.147.3"
