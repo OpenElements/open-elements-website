@@ -7,5 +7,8 @@ cmds = ["npm install"]
 [phases.build]
 cmds = ["npm run build"]
 
+[start]
+  cmd = "hugo serve"
+
 [ environment ]
 HUGO_VERSION = "0.147.3"
