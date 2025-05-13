@@ -8,7 +8,7 @@ cmds = ["npm install"]
 cmds = ["npm run build"]
 
 [start]
-  cmd = "hugo serve"
+  cmd = "hugo server --bind 0.0.0.0 --port 1313 --baseURL $URL"
 
 [ environment ]
 HUGO_VERSION = "0.147.3"
