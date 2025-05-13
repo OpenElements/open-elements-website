@@ -24,7 +24,5 @@ description = "Open Source, aber richtig - Open Elements ist ein modernes Untern
 [markup.goldmark.renderer]
 unsafe = true
 
-[permalinks.page]
+[permalinks]
 posts = '/posts/:year/:month/:day/:slug/'
-[permalinks.section]
-posts = '/posts'
