@@ -1,0 +1,11 @@
+[phases.setup]
+aptPkgs = ["hugo"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[ environment ]
+HUGO_VERSION = "0.147.3"
