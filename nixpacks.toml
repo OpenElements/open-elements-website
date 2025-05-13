@@ -1,5 +1,5 @@
 [phases.setup]
-aptPkgs = ["hugo"]
+aptPkgs = ["hugo", "git"]
 
 [phases.install]
 cmds = ["npm install"]
