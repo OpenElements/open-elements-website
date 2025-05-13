@@ -8,7 +8,7 @@ cmds = ["npm install"]
 cmds = ["npm run build"]
 
 [start]
-  cmd = "hugo serve --port 3000"
+  cmd = "hugo server --bind 0.0.0.0 --baseURL http://website.open-elements.cloud --port 3000 --appendPort=false" 
 
 [ environment ]
 HUGO_VERSION = "0.147.3"
