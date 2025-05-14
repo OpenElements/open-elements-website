@@ -25,8 +25,4 @@ description = "Open Source, aber richtig - Open Elements ist ein modernes Untern
 unsafe = true
 
 [permalinks]
-  [permalinks.page]
-    posts = '/posts/:year/:month/:day/:slug/'
-    tutorials = '/training/:slug/'
-  [permalinks.section]
-    posts = '/posts'
+posts = '/posts/:year/:month/:day/:slug/'
