@@ -5,7 +5,10 @@ aptPkgs = ["hugo", "git"]
 cmds = ["npm install"]
 
 [phases.build]
-cmds = ["npm run build"]
+cmds = [
+    "cp -r .git /app/.git",
+    "npm run build"
+    ]
 
 [start]
   cmd = "hugo server --bind 0.0.0.0 --baseURL http://website.open-elements.cloud --port 3000 --appendPort=false" 
