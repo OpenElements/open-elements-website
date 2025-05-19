@@ -5,7 +5,7 @@ baseURL = "https://open-elements.com"
 enableRobotsTXT = true
 log = true
 logFile = "hugo-build.log"
-enableGitInfo = true
+enableGitInfo = false
 
 [languages.en]
 weight = 1
