@@ -6,7 +6,6 @@ cmds = ["npm install"]
 
 [phases.build]
 cmds = [
-    "cp -r .git /app/.git",
     "npm run build"
     ]
 
