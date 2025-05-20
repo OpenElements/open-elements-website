@@ -2,7 +2,7 @@
 description: 'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java'
 layout: "index"
 
-hero_subheader: 'Open Source made right'
+hero_subheader: 'Open Source made right and very right'
 hero_header_line_1_start: 'We trust in the'
 hero_header_line_1_underlines: ' power '
 hero_header_line_1_end: 'of'
