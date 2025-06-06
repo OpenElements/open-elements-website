@@ -129,7 +129,7 @@
     "firstName": "Gerd",
     "lastName": "Aschemann",
     "x": "/employees/gerd",
-    "bio": "David Krause is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. David is a member of the Board of Directors of the Eclipse Foundation",
+    "bio": "Gerd zeichnet sich durch seine jahrelange intensive Erfahrung als Software-Architekt mit starkem Entwicklungs- und Betriebshintergrund (DevOps) aus. Seine besondere Stärke liegt darin, sein Team und die Organisation seiner Kunden an neue Technologien und Vorgehensweisen heranzuführen und langfristig neue Methoden zu etablieren.",
     "picture": "/team/gerd.jpg",
     "role": "OSS Maintainer",
     "socials": [
