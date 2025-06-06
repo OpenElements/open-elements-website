@@ -4,7 +4,7 @@
     "firstName": "Hendrik",
     "lastName": "Ebbers",
     "link": "/about-hendrik/",
-    "bio": "Hendrik is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
+    "bio": "Hendrik ist der Gründer von Open Elements. Als Java Champion und Mitglied verschiedener JSR-Expertengruppen und JavaOne-Stars verkörpert er die Leidenschaft und das Know-how, das unsere Firma ausmacht. Er engagiert sich aktiv in der Eclipse JakartaEE und Eclipse Adoptium Working Groups und ist zudem Mitglied im Board of Directors der Eclipse Foundation.",
     "picture": "/team/hendrik.jpg",
     "role": "Founder Open Elements",
     "visible": true
@@ -75,7 +75,7 @@
     "firstName": "Tayebwa",
     "lastName": "Noah",
     "x": "/employees/noah",
-    "bio": "Michael Vitz is a software architect and developer with a passion for the web. He is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. Michael is a member of the Board of Directors of the Eclipse Foundation.",
+    "bio": "Noah lernt am liebsten durch Ausprobieren und teilt sein Wissen gerne weiter. Seine Neugier führte ihn in die Welt des Open Source, wo er zu Projekten wie Jakarta EE, Eclipse Adoptium, Apache Maven und Hiero beiträgt. Bei Open Elements bringt er einen überlegten, gemeinschaftsorientierten Ansatz für die Softwareentwicklung mit.",
     "picture": "/team/noah.jpg",
     "role": "Junior Developer",
     "socials": [
