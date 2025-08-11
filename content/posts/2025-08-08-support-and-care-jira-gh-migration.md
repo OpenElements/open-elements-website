@@ -53,9 +53,9 @@ We, as the Support and Care Team, saw a value in migrating the whole issue from 
 The main argument for us was, as a user, I don't have to think about in which tracking system, I have to search for getting information.
 Everything is in one location.
 
-In the discussion, a [blog post](https://spring.io/blog/2019/01/15/spring-framework-s-migration-from-jira-to-github-issues) of the Spring Team was mentioned
-It describes how they have migrated their Jira issues to GH
-They wrote a [migration tool](https://github.com/rwinch/jira-to-gh-issues) that uses an unofficial import GH API
+In the discussion, a [blog post](https://spring.io/blog/2019/01/15/spring-framework-s-migration-from-jira-to-github-issues) of the Spring Team was mentioned.
+It describes how they have migrated their Jira issues to GH.
+They wrote a [migration tool](https://github.com/rwinch/jira-to-gh-issues) that uses an unofficial import GH API.
 We [have forked](https://github.com/support-and-care/jira-to-gh-issues) it and tested if we can reuse it for the Maven repositories.
 
 Not everyone saw a value in investing volunteer time in such a migration task.
@@ -96,7 +96,7 @@ That means that they are created but not visible.
 In the first migration runs, we didn't recognize it, and therefore, we accidentally imported some Jira issues twice.
 We could clean it up with the help of the GitHub support.
 Unfortunately, we have realized too late that GH stores PRs and issues on the same domain object (issue), and so some PRs of
-m-jlink-plugin were deleted during the cleanup
+m-jlink-plugin were deleted during the cleanup.
 Our lesson learned was to introduce better handling of pending issues.
 
 The complete list of changes:
@@ -120,7 +120,7 @@ The complete list of changes:
 - Add mapping a Jira resolution type to GH state reason not planned.
 
 But we have also learnt on the organization level.
-During the migration, we learnt that the GH import API was already retired, so that we had luck that it was still running
+During the migration, we learnt that the GH import API was already retired, so that we had luck that it was still running.
 It does not match all features that GH already has, for example, the GH state field was not supported, but we found a workaround for that.
 
 The GH has rate limits for its REST API.
@@ -128,7 +128,7 @@ So for Jira projects with a huge number of issues, we have to organize the migra
 
 Every migration run has created a huge number of email notifications.
 Of course, not everyone was amused about it, and it costs some migration runs to find out which configuration is responsible for which kind of email notification.
-In the end, we could not disable all email notifications in all systems, only reduce them
+In the end, we could not disable all email notifications in all systems, only reduce them.
 For example, in GH, every user can have personal email notifications; in Jira, it was a global setting for all Jira projects.
 
 At the end of every migration run, we could improve the tool and our process in general.
