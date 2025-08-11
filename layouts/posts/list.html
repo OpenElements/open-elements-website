@@ -16,12 +16,12 @@
 
 
     <div class="relative">
-    
-        
+
+
 
         <div class="absolute w-20 h-20 bg-green-100 rounded-full xl:-left-8 xl:right-auto sm:-right-8 -right-11 xl:top-56 top-20 shrink-0"></div>
         <img src="{{ $arrow.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-32 sm:w-64 2xl:w-96 lg:w-80 2xl:left-32 xl:left-9 lg:top-36 sm:top-28 top-12 shrink-0">
-        
+
         <img src="{{ $shape.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="sm:block hidden absolute xl:w-32 md:w-24 w-20 md:right-[10%] right-[7%] top-48 shrink-0">
 
         <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
@@ -70,10 +70,10 @@
                                     <div class="flex items-center gap-2 text-purple">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                                             <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                                        </svg>  
+                                        </svg>
                                         <p class="text-[14px] font-medium">
                                             {{ $data := index .Site.Data .Site.Language.Lang }}
-                                            {{ range $author := where $data.authors "id" "hendrik" }}
+                                            {{ range $author := where $data.authors "id" .Params.author }}
                                                 <a href="{{$author.link}}">{{$author.firstName}} {{$author.lastName}}</a>
                                             {{ end }}
                                         </p>
@@ -84,7 +84,7 @@
                                         <p>#{{ . }}</p>
                                     {{ end }}
                                 </div>
-                                
+
                                 <div class="mt-6 space-y-5 sm:mt-5 sm:space-y-4">
                                     <h2 class="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
                                         {{ .Params.title }}
@@ -95,7 +95,7 @@
                                 </div>
                             </article>
                         </div>
-                    </div>                 
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,5 +106,3 @@
     </div>
 
 {{ end }}
-
-
