@@ -6,5 +6,13 @@
     "link": "/about-hendrik/",
     "bio": "Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
     "picture": "/team/hendrik.jpg"
+  },
+  {
+    "id": "sandra",
+    "firstName": "Sandra",
+    "lastName": "Parsick",
+    "link": "https://www.sandra-parsick.de",
+    "bio": "Sandra is part of the Support and Care Team. She is Java Champion and member of several community groups. ",
+    "picture": "/team/sandra.jpg"
   }
 ]

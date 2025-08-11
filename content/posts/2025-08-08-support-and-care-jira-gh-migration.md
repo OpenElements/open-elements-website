@@ -3,7 +3,7 @@ outdated: false
 showInBlog: true
 title: "Recap Jira Issue to GitHub Issue Migration in Apache Maven - How a funding can help"
 date: 2025-08-08
-author: Sandra Parsick
+author: sandra
 excerpt: "A new post about how a funding can help"
 categories: [open-source, support-and-care, maven]
 preview_image: "/posts/preview-images/open-source-green.svg"
