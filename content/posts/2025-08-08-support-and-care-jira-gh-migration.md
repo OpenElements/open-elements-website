@@ -1,10 +1,10 @@
 ---
 outdated: false
 showInBlog: true
-title: "Recap Jira Issue to GitHub Issue Migration in Apache Maven - How a funding can help"
+title: "Jira Issue to GitHub Issue Migration in Apache Maven"
 date: 2025-08-08
 author: sandra
-excerpt: "A new post about how a funding can help"
+excerpt: "This blog post details the Apache Maven Support and Care team’s funded effort to migrate issues from Jira to GitHub, supported by the German Sovereign Tech Fund. This post provides valuable insights into the challenges of migrating large-scale issue tracking systems and the importance of thorough planning and adaptation and why this was only possible with a funding."
 categories: [open-source, support-and-care, maven]
 preview_image: "/posts/preview-images/open-source-green.svg"
 ---
