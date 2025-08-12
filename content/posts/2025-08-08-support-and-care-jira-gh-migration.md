@@ -10,7 +10,7 @@ preview_image: "/posts/preview-images/open-source-green.svg"
 ---
 In this blog post, we'd like to share how funding can help in doing maintenance tasks in open-source projects.
 
-Our Support and Care project got funding by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://maven.apache.org/)™:
+Our [Support and Care]({{< relref "support-care-maven" >}}) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://maven.apache.org/)™:
 
 - Security of the Supply Chain
 - Maintenance
