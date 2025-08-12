@@ -19,6 +19,8 @@ Our [Support and Care]({{< relref "support-care-maven" >}}) project got financia
 
 One task in the *maintenance* working package was to support the migration of Jira issues to GitHub issues.
 
+{{< centered-image src="/posts/2025-08-08-support-and-care-jira-gh-migration/migration-automation.png" width="80%" showCaption="false" alt="Jira Issue to GitHub Isssue Migration">}}
+
 ## How the journey started
 
 In April 2024, a [first voting](https://lists.apache.org/thread/yt819f08rvfoywlpwtbkk3w1kpow4ynb) was started to move two small projects (AFS Parent POM and Maven Parent POM) to GitHub (GH). If you are not familiar with Maven you can get an overview in our ["What is Maven" article]({{< relref "articles/what-is-maven" >}}).
@@ -138,6 +140,8 @@ In conclusion, without funding, nobody could spend so much time to prepare and s
 ## We want to say Thank You
 
 The whole migration was a result of good teamwork and based on another person's work.
+
+{{< centered-image src="/posts/2025-08-08-support-and-care-jira-gh-migration/friends.png" width="80%" showCaption="false" alt="Community rulez">}}
 
 Therefore, a big *Thank-you* in particular to
 
