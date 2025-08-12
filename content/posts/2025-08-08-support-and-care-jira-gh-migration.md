@@ -21,7 +21,7 @@ One task in the *maintenance* working package was to support the migration of Ji
 
 ## How the journey started
 
-In April 2024, a [first voting](https://lists.apache.org/thread/yt819f08rvfoywlpwtbkk3w1kpow4ynb) was started to move two small projects (AFS Parent POM and Maven Parent POM) to GitHub (GH).
+In April 2024, a [first voting](https://lists.apache.org/thread/yt819f08rvfoywlpwtbkk3w1kpow4ynb) was started to move two small projects (AFS Parent POM and Maven Parent POM) to GitHub (GH). If you are not familiar with Maven you can get an overview in our ["What is Maven" article]({{< relref "articles/what-is-maven" >}}).
 The motivation was that the most changes in these projects are done by [DependaBot](https://github.com/dependabot) and the Jira issues are created manually by copy-and-paste for creating the release notes.
 It passed the voting, and the migration path was
 
