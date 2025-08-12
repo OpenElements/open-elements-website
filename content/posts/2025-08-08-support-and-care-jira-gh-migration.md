@@ -49,7 +49,7 @@ Three options were discussed:
 2.  Make Jira read-only, and new issues would be raised on GH.
 3.  Do not change Jira but slowly switch to GH.
 
-We, as the Support and Care Team, saw a value in migrating the whole issue from Jira to GH.
+We, as the **Support and Care** Team, saw a value in migrating the whole issue from Jira to GH.
 The main argument for us was, as a user, I don't have to think about in which tracking system, I have to search for getting information.
 Everything is in one location.
 
