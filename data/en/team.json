@@ -119,11 +119,6 @@
     "role": "Java Champion & OSS Maintainer",
     "socials": [
       {
-        "name": "Twitter",
-        "link": "https://twitter.com/SandraParsick",
-        "icon": "mdi:twitter"
-      },
-      {
         "name": "GitHub",
         "link": "https://github.com/sparsick",
         "icon": "mdi:github"
