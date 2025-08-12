@@ -59,7 +59,7 @@ They wrote a [migration tool](https://github.com/rwinch/jira-to-gh-issues) that 
 We [have forked](https://github.com/support-and-care/jira-to-gh-issues) it and tested if we can reuse it for the Maven repositories.
 
 Not everyone saw a value in investing volunteer time in such a migration task.
-To be fair, in Maven's context, such a kind of migration means touching 83 repositories (check the [whole migration documentation](https://cwiki.apache.org/confluence/display/MAVEN/JIRA+to+GitHub+Issues+switching) to get a better feeling).
+To be fair, in Maven's context, such a kind of migration means touching **83 repositories** (check the [whole migration documentation](https://cwiki.apache.org/confluence/display/MAVEN/JIRA+to+GitHub+Issues+switching) to get a better feeling).
 
 Of course, such a migration is not fun, and nobody wants to do it in their spare time, although it can add value in the long term.
 Therefore, we, as a Support and Care Team, decided to spend some of our maintenance budget to help with the migration and concentrate on the automation of moving Jira issues to GH issues.
