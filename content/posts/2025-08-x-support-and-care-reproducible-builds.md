@@ -67,12 +67,27 @@ At this point, I recommend starting by using the maven plugin as described here(
 If you are more interested, what possibly went wrong at other people's projects, there is plenty of documentation and academical papers even outside the Java and Maven ecosystem.
 https://reproducible-builds.org/docs/publications/ or https://arxiv.org/html/2504.21679v1 as a concrete example may be good starting points.
 
+## Let's find out
+Let's assume we have a Java project that is build with Maven. To not mix too many things up, we start with a pretty simple approach:
+Apart from pom and folder structure, we have 1 class. This class contains the Main-method and a System.out.println("Hello world!").
+We have no dependencies and only the mentioned Maven Artifact Plugin in out pom. You may have a look at that project here: (Github Link)
+Now, I can of course run _mvn clean install_ as often as I want, it will most likely always work. 
+But what about reproducability?
+Let's run _mvn clean verify artifact:compare_ and find out.
+(Screenshot)
+Oh. We are not? No, even worse: we are practically never. Having a look at the generated .buildinfo-file while executing the Artifact plugin again shows that our hash is changing with every build.
+The console gives us some hints, and it looks like, we didn't make our homework properly. 
+Let's add the property project.build.outputTimestamp to the pom with a default value. Otherwise, our build timestamp will vary everytime we build and therefore the corresponding hash is also changing everytime.
+Now we can consider our build reproducible! So we are save. But how long? What happens, if I modify the JVM, I build my project with?
+Let's try it out. Instead of Java 17 as before, I will update my JVM to 21. And again, the build is different. The good thing: it is only different compared to what we build before.
+When we override our installed version in the local Maven repository, the build is reproducible again.
+As you can see, even for a very simple project, there are issues, we need to solve.
+For more detailed real-world isses, I would suggest you, to have a look at this list from reproducible.org: https://s.apache.org/reproducible-builds
+Reproducibility can be a tough goal to achieve but know you should be able to find out where you have to look next.
+
+
 ## Summary
 Supply Chain security in software development as part of the Cyber Resiliance Act is more important than ever before. Developers are unfortunately worthy targets for attacks they may not even recognize while doing their job: building software.
 Reproducible builds are most likely quite a task to reach but knowing about potential pitfalls and trying to reach that goal can be a good start for further improvements.
-Compared to the risk, being the next company on the fastly growing list of companies that have been a victim of malicious code injections and ignoring this topic, hardening the own Software Supply Chain is the far better approach. 
-
-
-
-
+Compared to the risk, being the next company on the fastly growing list of companies that have been a victim of malicious code injections and ignoring this topic, hardening the own Software Supply Chain is the far better approach.
 
