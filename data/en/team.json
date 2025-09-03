@@ -184,5 +184,27 @@
       }
     ],
     "visible": true
+  },
+  {
+    "id": "daniel",
+    "firstName": "Daniel",
+    "lastName": "Ntege",
+    "x": "/employees/daniel",
+    "bio": "Daniel is a passionate software developer with a keen interest in open source technologies. He enjoys collaborating on projects that drive innovation and community growth. With a background in computer science, Daniel is dedicated to continuous learning and contributing to the tech ecosystem.",
+    "picture": "/team/daniel.jpg",
+    "role": "Open Source Software Engineer",
+    "socials": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/sebtiem",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/sebastiantiemann/",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
   }
 ]
