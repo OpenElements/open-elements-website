@@ -192,16 +192,16 @@
     "x": "/employees/daniel",
     "bio": "Daniel is a passionate software developer with a keen interest in open source technologies. He enjoys collaborating on projects that drive innovation and community growth. With a background in computer science, Daniel is dedicated to continuous learning and contributing to the tech ecosystem.",
     "picture": "/team/daniel.jpg",
-    "role": "Open Source Software Engineer",
+    "role": "Junior Developer",
     "socials": [
       {
         "name": "GitHub",
-        "link": "https://github.com/sebtiem",
+        "link": "https://github.com/danielmarv",
         "icon": "mdi:github"
       },
       {
         "name": "LinkedIn",
-        "link": "https://www.linkedin.com/in/sebastiantiemann/",
+        "link": "https://www.linkedin.com/in/ntege-daniel-a85486242",
         "icon": "mdi:linkedin"
       }
     ],

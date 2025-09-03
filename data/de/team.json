@@ -178,18 +178,18 @@
     "firstName": "Daniel",
     "lastName": "Ntege",
     "x": "/employees/daniel",
-    "bio": "Sebastian ist ein erfahrener IT-Profi mit mehr als 15 Jahren Erfahrung in den Bereichen Entwicklung, Beratung und Community-Arbeit. Als Contributor der Apache Foundation und Organisator der Java Group Dortmund ist Sebastian ein engagierter Verfechter von Technologie, Lernen und Zusammenarbeit.",
-    "picture": "/team/sebastian.jpg",
-    "role": "Open Source Software Engineer",
+    "bio": "Daniel ist ein leidenschaftlicher Softwareentwickler mit einem starken Interesse an Open-Source-Technologien. Er arbeitet gerne an Projekten, die Innovation und das Wachstum der Gemeinschaft fördern. Mit einem Hintergrund in Informatik widmet sich Daniel dem kontinuierlichen Lernen und dem Beitrag zum Technologie-Ökosystem.",
+    "picture": "/team/daniel.jpg",
+    "role": "Junior Developer",
     "socials": [
       {
         "name": "GitHub",
-        "link": "https://github.com/sebtiem",
+        "link": "https://github.com/danielmarv",
         "icon": "mdi:github"
       },
       {
         "name": "LinkedIn",
-        "link": "https://www.linkedin.com/in/sebastiantiemann/",
+        "link": "https://www.linkedin.com/in/ntege-daniel-a85486242/",
         "icon": "mdi:linkedin"
       }
     ],
