@@ -5,6 +5,7 @@
 
 <head>
   {{ partial "google.html" . }}
+  {{ partial "brevo.html" . }}
   {{ if .Params.Description -}}
   <meta name="description" content="{{ .Params.Description }}" />
   {{ end -}}
