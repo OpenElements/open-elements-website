@@ -1,16 +1,16 @@
 ---
 outdated: false
 showInBlog: true
-title: "Jira Issue to GitHub Issue Migration in Apache Maven"
-date: 2025-08-08
-author: sandra
-excerpt: "This blog post details the Apache Maven Support and Care team’s funded effort to migrate issues from Jira to GitHub, supported by the German Sovereign Tech Fund. This post provides valuable insights into the challenges of migrating large-scale issue tracking systems and the importance of thorough planning and adaptation and why this was only possible with a funding."
-categories: [open-source, support-and-care, maven]
+title: "Reproducible builds"
+date: 2025-12-09
+author: Sebastian
+excerpt: "This blog post features an overview of what reproducible builds are and why they provide value in the context of software supply chain security. Since the announcement of the European Cyber Security Act (CRA), supply chain security is in the spotlight of many companies. The purpose of this blog post is to provide ideas and guidelines about the critical concept of reproducible builds. The German Sovereign Tech Agency supports this blog post."
+categories: [open-source, support-and-care, maven, security]
 preview_image: "/posts/preview-images/open-source-green.svg"
 ---
-In this blog post, we'd like to share how funding can help in improving the Supply Chain Security in software projects as part of the Cyber Resiliance Act.
+In this blog post, we'd like to share how to improve the Supply Chain Security in software projects as part of the Cyber Resilience Act.
 
-Our [Support and Care]({{< relref "support-care-maven" >}}) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://maven.apache.org/)™:
+Our [Support and Care]({{< relref "support-care-maven" >}}) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://open-elements.com/articles/what-is-maven/)™:
 
 - Security of the Supply Chain
 - Maintenance
@@ -19,17 +19,15 @@ Our [Support and Care]({{< relref "support-care-maven" >}}) project got financia
 
 One task in the *Security of the Supply Chain* working package was to share information about existing solutions and what how to improve existing projects.
 
-Image placeholder:
-{{< centered-image src="/posts/2025-08-08-support-and-care-jira-gh-migration/migration-automation.png" width="80%" showCaption="false" alt="Jira Issue to GitHub Isssue Migration">}}
-
 ## Security of the Supply Chain in software development
 Since December 2014, the Cyber Resilience Act has been active as the *first European regulation to set a minimum level of cybersecurity for all connected products available*.(https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Cyber_Resilience_Act/cyber_resilience_act_node.html)
 To achieve this goal, improving the security levels of the supply chain in software projects is a significant milestone.
-But what is part of this supply chain?
+But what is part of a software supply chain?
 In general, everything touching anything from the software, including the IDE, necessary software libraries, and the used CI/CD pipeline, is part of this chain.
 And with it as part of the chain, everything is also a worthy target for an attack.
 Exploit statistics (https://www.sonatype.com/state-of-the-software-supply-chain/2024/10-year-look) and even older exploits like CVE-2002-0083 are showing that even a single bit will decide whether a piece of software,
 OpenSSH, in that particular example, is secure or may be used to manipulate code or execute malicious software. Therefore, it is essential to be aware of the risks that a software supply chain can involve.
+{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/software-supply-chain.png" width="80%" showCaption="false" alt="Software Supply Chain Security">}}
 
 ## Reproducible Builds
 One tool in the toolbox against those attacks is reproducible builds. To consider a component or project reproducible, it is necessary to produce bitwise identical builds every time.
@@ -44,6 +42,7 @@ The actively maintained open-source tool diffoscope can compare two files or arc
 Diffoscope can be executed on various operating systems, as well as in a prepared Docker image, and is licensed under the GPL-3.
 Now that we have the context of our software project, we know what we need to do to hopefully achieve a reproducible build, and we know the tool that can compare our builds. So are we done yet?
 Maybe we should stick to our context for a moment. Maven, as a Java build tool, has a broad community and ecosystem, speaking of plugins and extensions.
+The Maven community has already prepared something to make things a bit easier:
 
 ## Maven Artifact Plugin
 The Maven Artifact plugin serves as a wrapper around *diffoscope* that can be easily integrated into any Maven project. (https://github.com/apache/maven-artifact-plugin)
@@ -66,22 +65,39 @@ At this point, I recommend starting by using the maven plugin as described here(
 If you are more interested in what possibly went wrong at other people's projects, there is plenty of documentation and academic papers even outside the Java and Maven ecosystem.
 https://reproducible-builds.org/docs/publications/ or https://arxiv.org/html/2504.21679v1 as a concrete example may be good starting points.
 
-## Let's find out
-Let's assume we have a Java project that is built with Maven. To not mix too many things up, we start with a pretty simple approach:
-Apart from the pom and folder structure, we have 1 class. This class contains the main method and a System.out.println("Hello world!").
-We have no dependencies and only the mentioned Maven Artifact Plugin in our pom. You may have a look at that project here: (Github Link)
-Now, I can, of course, run _mvn clean install_ as often as I want; it will most likely always work.
-But what about reproducibility?
-Let's run _mvn clean verify artifact:compare_ and find out.
-(Screenshot)
-Oh. We are not? No, even worse: we are practically never. Having a look at the generated .buildinfo-file while executing the Artifact plugin again shows that our hash is changing with every build.
-The console gives us some hints, and it looks like we didn't do our homework properly.
-Let's add the property project.build.outputTimestamp to the pom with a default value. Otherwise, our build timestamp will vary every time we build, and therefore, the corresponding hash also changes every time.
-Now we can consider our build reproducible! So we are safe. But how long? What happens if I modify the JVM I build my project with?
-Let's try it out. Instead of Java 17 as before, I will update my JVM to 21. And again, the build is different. The good thing: it is only different compared to what we built before.
-When we override our installed version in the local Maven repository, the build is reproducible again.
-As you can see, even for a very simple project, there are issues we need to solve.
-For more detailed real-world issues, I would suggest you have a look at this list from reproducible.org: https://s.apache.org/reproducible-builds .
+## Putting all pieces together
+Let's assume we have a Java project that is built with Maven. To not mix too many things up, we start with common approach:
+We go to the Spring initializr project (https://start.spring.io/) and generate a Maven POM. To keep it simple but pragmatic, we only use Spring Web as feature. 
+After importing the project in our preferred IDE, we can build this project as usual with _mvn clean install_.
+In order to use the Artfiact Plugin mentioned above we need to add it to the POM:
+{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/artifact-plugin.png" width="80%" showCaption="false" alt="Maven artifact plugin in POM">}}
+
+With _mvn verify artifact:compare_, we can run the plugin and let it check if there are any reproducibility issues compared to the local artifact we have built before.
+As expected, we don't have a reproducible build, but the console is telling us at least what is not fully reproducible.
+The POM looks fine, but our built jar seems to have an issue with the build timestamp. 
+(Screenshot console)
+Therefore, let's add the property project.build.outputTimestamp to the POM with a default value as mentioned on https://maven.apache.org/guides/mini/guide-reproducible-builds.html.
+Running _mvn verify artifact:compare_ again shows: The build is now reproducible!
+That was easy, maybe a bit too easy? Well, this is a brand-new project without any technical debt or source code.
+Let's try something from reproducible-central, that is not reproducible: What about Jetty 12.1.1?
+Eclipse's Jetty is a commonly used and lightweight web servlet. With its mature codebase, the first release on GitHub, version 9.4, dated back to 01.10.2020, it appears to be a good candidate for a real-world example.  
+As there are plenty of submodules, I focus on Jetty-Util, a submodule of Jetty-Core.
+To have a faster build, I skip the test execution as tests are not part of the final jar file.
+After running _mvn clean install_, I execute the Artifact plugin with _mvn clean verify artifact:compare_ as before.
+And there we have it: we have reproducibility issues. Again, let's look at the console output:
+{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/blackened-console-output.png" width="80%" showCaption="false" alt="Console output not reproducible build">}}
+
+_project.build.outputTimestamp_ is set, so this is not an issue. We have to dig deeper.
+The console output lists issues in the sources and what command I could use for further investigation. To avoid problems related to my local machine, I use podman as stated on diffoscope.org with
+_podman run --rm -t -w $(pwd) -v $(pwd):$(pwd):ro \ registry.salsa.debian.org/reproducible-builds/diffoscope jetty-util-12.1.1.jar m2-jetty-util-12.1.1.jar_
+where the first jetty file is from the current /target directory of jetty-util, and the latter file is the one I installed before in my local Maven repository.
+The output looks as follows:
+{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/docker-diffoscope-comparison.png" width="80%" showCaption="false" alt="Docker diffoscope comparison">}}
+
+Another timestamp issue! Let's try to temporarily fix the issue by entering a static number.
+After generating two new jar files with the approach described before, I compared them again.
+Hurray, both jetty.jar and jetty-sources.jar are now considered reproducible!
+Therefore, the open issue, at least for this submodule, is to find a suitable solution for this always-varying timestamp. Since I am not a contributor to this project, I cannot decide whether it is a good idea to use a static value here in general or if other parts are relying on this number.
 Reproducibility can be a challenging goal to achieve, but now you should be best prepared to start with reproducible builds and how to improve.
 
 ## Summary
