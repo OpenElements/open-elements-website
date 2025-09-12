@@ -62,7 +62,7 @@ In our example, a Java project built with Maven, we have plenty of risk factors 
 Let's start with the JVM as an example. When I rebuild the exact project with different JVMs, my build is **not** reproducible. The reason is quite simple: Different JVMs produce different bytecode from the same Java files. Even some dependencies behave differently depending on the Java version they are built with.
 At last, it all depends on your project. Java code, dependencies, and even Maven itself may contain pitfalls such as generated content, timestamps, or even differing usages of Maven as a standalone version or an Eclipse-built-in version.
 At this point, I recommend starting by using the maven plugin as described here(https://maven.apache.org/guides/mini/guide-reproducible-builds.html) and trying to understand what is preventing you from having a fully reproducible build. Unfortunately, reproducibility can be a huge task to fulfill.
-If you are more interested in what possibly went wrong at other people's projects, there is plenty of documentation and academic papers even outside the Java and Maven ecosystem.
+If you are more interested in what can possibly go wrong, you can find plenty of documentation and academic papers even outside the Java and Maven ecosystem:
 https://reproducible-builds.org/docs/publications/ or https://arxiv.org/html/2504.21679v1 as a concrete example may be good starting points.
 
 ## Putting all pieces together
