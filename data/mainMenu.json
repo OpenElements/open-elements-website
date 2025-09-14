@@ -16,6 +16,14 @@
     "visibleInFooter": true
   },
   {
+    "name": "Newsletter",
+    "i18nKey": "newsletter",
+    "altI18nKey": "newsletterDescription",
+    "link": "/newsletter/",
+    "visibleInNavigation": false,
+    "visibleInFooter": false
+  },
+  {
     "name": "Support & Care",
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",
