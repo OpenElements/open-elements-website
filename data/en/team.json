@@ -113,7 +113,7 @@
     "id": "sandra",
     "firstName": "Sandra",
     "lastName": "Parsick",
-    "x": "/employees/sandra",
+    "link": "/employees/sandra",
     "bio": "Sandra is a Java Champion and works as a freelance software developer and consultant in the Java environment. She has been involved in agile software development in various roles since 2008. She specialises in Java Enterprise, Cloud, Software Craftsmanship, Open Source and the automation of development processes. She is involved in various programme committees and community groups. She also contributes to various OSS projects.",
     "picture": "/team/sandra.jpg",
     "role": "Java Champion & OSS Maintainer",
