@@ -54,5 +54,12 @@
     "logo": "/illustrations/logo-takka.svg",
     "link": "https://takka.group",
     "visible": false
+  },
+  {
+    "title": "AKG GmbH",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.kammerleitstelle.de\" target=\"_blank\">AKG</a> ist ein Gemeinschaftsunternehmen aller Kammern in Deutschland zum Betrieb einer gemeinsamen Leitstelle für Handwerkskammern sowie für Industrie- und Handelskammern. <b>Open Elements</b> unterstützt die AKG bei der Weiterentwicklung ihrer Software mit einem starken Focus auf sichere Supply Chains, offene Standards und Open Source Software (OSS).",
+    "logo": "/illustrations/logos/akg-logo.svg",
+    "link": "https://www.kammerleitstelle.de",
+    "visible": true
   }
 ]

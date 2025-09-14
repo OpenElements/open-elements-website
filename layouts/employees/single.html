@@ -1,14 +1,13 @@
 {{ define "main" }}
-{{ $id := .File.BaseFileName }} <!-- Get the slug from URL -->
 {{ $data := index .Site.Data .Site.Language.Lang }}
 {{ $employees := index $data "team" }} <!-- Load JSON -->
-{{ $employee := index (where $employees "id" $id) 0 }}
+{{ $employee := index (where $employees "id" .Params.id) 0 }}
 {{ $circles := resources.Get "/illustrations/circles.svg"}}
 {{ $arrowDashed := resources.Get "/illustrations/arrow-dashed.svg"}}
 {{ $bgEmployee := resources.Get "/illustrations/bg-employee.svg" }}
 
 {{ if not $employee }}
-<h1 class="text-center h1">Employee Not Found</h1>
+<h1 class="text-center h1">Employee Not Found {{.Params.id}}</h1>
 {{ else }}
 <div class="relative">
     <img class="absolute hidden  lg:block lg:right-[15%] lg:top-[25%]" alt="Circles" src="{{ $circles.RelPermalink }}"/>

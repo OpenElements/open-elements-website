@@ -42,3 +42,5 @@ notFound = "Page Not Found!!"
 underline = "Graphical element that underlines the text"
 [digitalTrustLecture]
 other = "Digital Trust Lecture"
+[newsletter]
+other = "Newsletter"
