@@ -164,10 +164,10 @@
     "visible": true
   },
   {
-    "id": "seb",
+    "id": "sebastian",
     "firstName": "Sebastian",
     "lastName": "Tiemann",
-    "link": "/employees/seb",
+    "link": "/employees/sebastian",
     "bio": "Sebastian is a seasoned IT professional with 15+ years of expertise across development, consulting, and community work. As contributor to the Apache Foundation and organizer of the Java Group Dortmund, Sebastian is a committed advocate for tech, learning and collaboration, bridging gaps between developers and industry trends.",
     "picture": "/team/sebastian.jpg",
     "role": "Open Source Software Engineer",
