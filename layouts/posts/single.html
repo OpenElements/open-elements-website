@@ -43,7 +43,7 @@
                             </svg>
                             <p class="text-base font-medium">
                                 {{ $data := index .Site.Data .Site.Language.Lang }}
-                                {{ range $author := where $data.authors "id" .Params.author }}
+                                {{ range $author := where $data.team "id" .Params.author }}
                                     <a href="{{$author.link}}">{{$author.firstName}} {{$author.lastName}}</a>
                                 {{ end }}
                             </p>
@@ -71,7 +71,7 @@
             </div>
             <div class="w-full xl:max-w-sm shrink-0">
                 {{ $data := index .Site.Data .Site.Language.Lang }}
-                {{ range $author := where $data.authors "id" .Params.author }}
+                {{ range $author := where $data.team "id" .Params.author }}
                 <div class=" rounded-[30px] w-full shadow-4 bg-white xl:p-5 p-4 xl:block md:flex lg:items-center">
                     <img class="lg:w-40 md:w-48 sm:w-40 sm:h-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 object-cover rounded-[24px] xl:float-left md:float-none float-left xl:mr-6 mr-4" src="{{ $author.picture }}" alt="author" />
                     <div>

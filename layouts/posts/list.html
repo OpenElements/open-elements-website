@@ -73,7 +73,7 @@
                                         </svg>
                                         <p class="text-[14px] font-medium">
                                             {{ $data := index .Site.Data .Site.Language.Lang }}
-                                            {{ range $author := where $data.authors "id" .Params.author }}
+                                            {{ range $author := where $data.team "id" .Params.author }}
                                                 <a href="{{$author.link}}">{{$author.firstName}} {{$author.lastName}}</a>
                                             {{ end }}
                                         </p>
