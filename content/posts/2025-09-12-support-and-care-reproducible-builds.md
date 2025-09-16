@@ -2,7 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Reproducible builds"
-date: 2025-12-09
+date: 2025-09-12
 author: sebastian
 excerpt: "This blog post features an overview of what reproducible builds are and why they provide value in the context of software supply chain security. Since the announcement of the European Cyber Security Act (CRA), supply chain security is in the spotlight of many companies. The purpose of this blog post is to provide ideas and guidelines about the critical concept of reproducible builds. The German Sovereign Tech Agency supports this blog post."
 categories: [open-source, support-and-care, maven, security]
