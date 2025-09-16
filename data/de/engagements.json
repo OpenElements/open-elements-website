@@ -25,7 +25,7 @@
     "text": "Der <a class=\"link-purple\" href=\"https://eclipse-apoapsis.github.io/ort-server/\" target=\"_blank\">ORT Server</a> ist eine skalierbare Anwendung zur Automatisierung von Software-Compliance-Prüfungen. Der Server ermöglicht Abhängigkeiten sowie Lizenzen einfach zu verwalten und zu analysieren. Dies ist vor allem für kommende Regulierungen und Gesetze, wie dem <a class=\"link-purple\" href=\"https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act\" target=\"_blank\">Cyber Resilience Act (CRA)</a> der EU, relevant. Open Elements arbeitet aktiv am Projekt mit.",
     "logo": "/illustrations/logos/logo-ort-server.svg",
     "link": "https://eclipse-apoapsis.github.io/ort-server/",
-    "visible": true
+    "visible": false
   },
   {
     "title": "JakartaEE",
@@ -101,6 +101,13 @@
     "title": "iJUG e.V.",
     "text": "Im <a class=\"link-purple\" href=\"https://www.ijug.eu\" target=\"_blank\">iJUG e.V.</a> sind alle Java User Groups Deutschlands vereint. Als Leiter der JUG Dortmund bringt <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> sich aktiv ein und ist auch bei der Leitung verschiedener Projekte des iJUG wie etwa der JavaLand oder der Cyberland involviert.",
     "logo": "/illustrations/logo-ijug.svg",
+    "link": "https://www.ijug.eu/de/home/",
+    "visible": true
+  },
+  {
+    "title": "Der Mittelstand",
+    "text": "Open Elements ist Mitglied im <a class=\"link-purple\" href=\"https://www.bvmw.de\" target=\"_blank\">BVMW – Bundesverband mittelständische Wirtschaft e.V.</a> und Gründungsmitglied des <a class=\"link-purple\" href=\"https://www.bvmw.de/de/ruhrgebiet-ost-und-mitte/fachkreis-digitale-souveraenitaet\" target=\"_blank\">Fachkreises 'Digitale Souveränität'</a> und unterstützt sowohl Kommunen als auch KMUs bei der Nutzung von Open Source Software (OSS).",
+    "logo": "/illustrations/logos/bvmw-logo.svg",
     "link": "https://www.ijug.eu/de/home/",
     "visible": true
   }

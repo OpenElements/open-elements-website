@@ -30,7 +30,7 @@
     "id": "catrice",
     "firstName": "Catrice",
     "lastName": "Keibel",
-    "x": "/employees/catrice",
+    "link": "/employees/catrice",
     "bio": "Catrice discovered her passion for software development after studying law. Her curiosity and thirst for knowledge help her to master her studies in software development and provide fresh impetus for Open Elements.",
     "picture": "/team/catrice.jpg",
     "role": "Student Assistant",
@@ -47,7 +47,7 @@
     "id": "jessie",
     "firstName": "Jessie",
     "lastName": "Ssebuliba",
-    "x": "/employees/jessie",
+    "link": "/employees/jessie",
     "bio": "Jessy is passionate about Web3 technologies and blockchain. He regularly contributes to the Eclipse Foundation, actively participating in and supporting various open-source development projects. As a dedicated learner, he is always happy to share his knowledge and contribute to the growth of the wider tech community.",
     "picture": "/team/jessie.jpg",
     "role": "Junior Developer",
@@ -74,7 +74,7 @@
     "id": "natascha",
     "firstName": "Natascha",
     "lastName": "Dönges",
-    "x": "/employees/natascha",
+    "link": "/employees/natascha",
     "bio": "Natascha works behind the scenes in the back office, handling all the essential operations outside of the main spotlight. Leveraging her extensive experience in customer relations, she is not only a \nfantastic team player but also the heart and soul of Open Elements.",
     "picture": "/team/natascha.jpg",
     "role": "Executive Assistant",
@@ -91,7 +91,7 @@
     "id": "noah",
     "firstName": "Tayebwa",
     "lastName": "Noah",
-    "x": "/employees/noah",
+    "link": "/employees/noah",
     "bio": "Noah enjoys learning by doing and sharing along the way. His curiosity naturally led him into the world of open source, where he contributes to projects like Jakarta EE, Eclipse Adoptium, Apache Maven, and Hiero. At Open Elements, he brings a thoughtful, community minded approach to software development.",
     "picture": "/team/noah.jpg",
     "role": "Junior Developer",
@@ -113,7 +113,7 @@
     "id": "sandra",
     "firstName": "Sandra",
     "lastName": "Parsick",
-    "x": "/employees/sandra",
+    "link": "/employees/sandra",
     "bio": "Sandra is a Java Champion and works as a freelance software developer and consultant in the Java environment. She has been involved in agile software development in various roles since 2008. She specialises in Java Enterprise, Cloud, Software Craftsmanship, Open Source and the automation of development processes. She is involved in various programme committees and community groups. She also contributes to various OSS projects.",
     "picture": "/team/sandra.jpg",
     "role": "Java Champion & OSS Maintainer",
@@ -140,7 +140,7 @@
     "id": "gerd",
     "firstName": "Gerd",
     "lastName": "Aschemann",
-    "x": "/employees/gerd",
+    "link": "/employees/gerd",
     "bio": "Gerd brings years of intensive experience as a software architect with a strong development and operations background (DevOps). His particular strength lies in guiding his team and the organizations of his clients toward new technologies and approaches, and establishing new methods on a long-term basis.",
     "picture": "/team/gerd.jpg",
     "role": "OSS Maintainer",
@@ -164,10 +164,10 @@
     "visible": true
   },
   {
-    "id": "seb",
+    "id": "sebastian",
     "firstName": "Sebastian",
     "lastName": "Tiemann",
-    "x": "/employees/seb",
+    "link": "/employees/sebastian",
     "bio": "Sebastian is a seasoned IT professional with 15+ years of expertise across development, consulting, and community work. As contributor to the Apache Foundation and organizer of the Java Group Dortmund, Sebastian is a committed advocate for tech, learning and collaboration, bridging gaps between developers and industry trends.",
     "picture": "/team/sebastian.jpg",
     "role": "Open Source Software Engineer",
@@ -180,6 +180,28 @@
       {
         "name": "LinkedIn",
         "link": "https://www.linkedin.com/in/sebastiantiemann/",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
+  },
+  {
+    "id": "daniel",
+    "firstName": "Daniel",
+    "lastName": "Ntege",
+    "link": "/employees/daniel",
+    "bio": "Daniel is a passionate software developer with a keen interest in open source technologies. He enjoys collaborating on projects that drive innovation and community growth. With a background in computer science, Daniel is dedicated to continuous learning and contributing to the tech ecosystem.",
+    "picture": "/team/daniel.jpg",
+    "role": "Junior Developer",
+    "socials": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/danielmarv",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/ntege-daniel-a85486242",
         "icon": "mdi:linkedin"
       }
     ],

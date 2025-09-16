@@ -25,7 +25,7 @@
     "text": "The <a class=\"link-purple\" href=\"https://eclipse-apoapsis.github.io/ort-server/\" target=\"_blank\">ORT Server</a> is a scalable application for automating software compliance checks. The server enables easy management and analysis of dependencies and licenses. This is particularly relevant for upcoming regulations and laws, such as the <a class=\"link-purple\" href=\"https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act\" target=\"_blank\">Cyber Resilience Act (CRA)</a>. Open Elements is actively involved in the project.",
     "logo": "/illustrations/logos/logo-ort-server.svg",
     "link": "https://eclipse-apoapsis.github.io/ort-server/",
-    "visible": true
+    "visible": false
   },
   {
     "title": "JakartaEE",
@@ -102,6 +102,13 @@
     "text": "In <a class=\"link-purple\" href=\"https://www.ijug.eu\" target=\"_blank\">iJUG e.V.</a>, all Java User Groups in Germany are united. As the leader of the JUG Dortmund, <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is actively involved and also contributes to the leadership of various projects of the iJUG, such as JavaLand or Cyberland.",
     "logo": "/illustrations/logo-ijug.svg",
     "link": "https://www.ijug.eu",
+    "visible": true
+  },
+  {
+    "title": "BVMW e.V.",
+    "text": "Open Elements is a member of the <a class=\"link-purple\" href=\"https://www.bvmw.de\" target=\"_blank\">BVMW – German Association for Small and Medium-Sized Businesses</a> and a founding member of the Expert Group on 'Digital Sovereignty' that supports both municipalities and SMEs in adopting and leveraging Open Source Software (OSS).",
+    "logo": "/illustrations/logos/bvmw-logo.svg",
+    "link": "https://www.ijug.eu/de/home/",
     "visible": true
   }
 ]

@@ -101,7 +101,7 @@
             <div class="flex flex-col gap-20 lg:gap-32 w-full">
                 <div id="div1" class="scroll-mt-24 scroll-section" x-ref="div1">
                     <div class="flex justify-between items-center gap-5">
-                        <h2 class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
+                        <h2 id="section_team" class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
                             {{.Params.section_prefix}} <span class="text-sky">{{ .Params.section_team}}</span>
                         </h2>
                     </div>
@@ -117,7 +117,7 @@
                                     src="{{ .picture }}" />
                             </div>
                             <div class="text-center">
-                                <a href='{{ .link }}' class="font-bold text-blue text-lg">{{ .firstName }} {{ .lastName}}</a>
+                                <a href='{{relLangURL .link }}' class="font-bold text-blue text-lg">{{ .firstName }} {{ .lastName}}</a>
                                 <p class="font-bold text-purple text-sm">{{ .role }}</p>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                 </div>
 
                 <div id="div2" class="scroll-mt-24 scroll-section" x-ref="div2">
-                    <h2 class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
+                    <h2 id="section_engagement" class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
                         {{.Params.section_prefix}} <span class="text-purple">{{.Params.section_engagement}}</span>
                     </h2>
                     <div class="gap-5 grid md:grid-cols-2 mt-7 md:mt-12 w-full">
@@ -142,7 +142,7 @@
                 </div>
 
                 <div id="div3" class="scroll-mt-24 scroll-section" x-ref="div3">
-                    <h2 class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
+                    <h2 id="section_customers" class="font-bold text-blue text-3xl sm:text-4xl lg:text-5xl">
                         {{.Params.section_prefix}} <span class="text-rose">{{.Params.section_customers}}</span>
                     </h2>
                     <div class="relative flex flex-wrap justify-center mt-7 md:mt-12 w-full">

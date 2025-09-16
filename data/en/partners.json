@@ -54,5 +54,12 @@
     "logo": "/illustrations/logo-takka.svg",
     "link": "https://takka.group",
     "visible": false
+  },
+  {
+    "title": "AKG GmbH",
+    "text": "The <a class=\"link-purple\" href=\"https://www.kammerleitstelle.de\" target=\"_blank\">AKG</a> is a joint venture of all chambers in Germany, operating a shared service center for Chambers of Crafts as well as Chambers of Industry and Commerce. <b>Open Elements</b> supports AKG in the further development of its software, with a strong focus on secure supply chains, open standards, and Open Source Software (OSS).",
+    "logo": "/illustrations/logos/akg-logo.svg",
+    "link": "https://www.kammerleitstelle.de",
+    "visible": true
   }
 ]

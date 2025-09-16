@@ -5,6 +5,7 @@
 
 <head>
   {{ partial "google.html" . }}
+  {{ partial "brevo.html" . }}
   {{ if .Params.Description -}}
   <meta name="description" content="{{ .Params.Description }}" />
   {{ end -}}
@@ -41,5 +42,4 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
   <!-- {{ partial "iubenda.html" . }} -->
-  {{ partial "rapidmail-popup.html" . }}
 </head>
