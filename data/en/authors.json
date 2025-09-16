@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hendrik",
+    "firstName": "Hendrik",
+    "lastName": "Ebbers",
+    "link": "/about-hendrik/",
+    "bio": "Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.",
+    "picture": "/team/hendrik.jpg"
+  },
+  {
+    "id": "sandra",
+    "firstName": "Sandra",
+    "lastName": "Parsick",
+    "link": "https://www.sandra-parsick.de",
+    "bio": "Sandra is part of the Support and Care Team. She is Java Champion and member of several community groups.",
+    "picture": "/team/sandra.jpg"
+  },
+  {
+    "id": "sebastian",
+    "firstName": "Sebastian",
+    "lastName": "Tiemann",
+    "link": "/about-sebastian/",
+    "bio": "Sebastian is a seasoned IT professional with 15+ years of expertise across development, consulting, and community work. As contributor to the Apache Foundation and organizer of the Java Group Dortmund, Sebastian is a committed advocate for tech, learning and collaboration, bridging gaps between developers and industry trends.",
+    "picture": "/team/sebastian.jpg"
+  }
+]
