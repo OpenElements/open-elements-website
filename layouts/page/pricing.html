@@ -1,0 +1,2198 @@
+{{ define "main" }}
+{{ $underline := resources.Get "/illustrations/line-p.svg" }}
+{{ $arrow45 := resources.Get "/illustrations/arrow-45.svg" }}
+{{ $round2 := resources.Get "/illustrations/round2.svg" }}
+{{ $percent := resources.Get "/illustrations/percent.svg" }}
+{{ $plant1 := resources.Get "/images/p-1.png" }}
+{{ $plant2 := resources.Get "/images/p-2.png" }}
+{{ $plant3 := resources.Get "/images/p-3.png" }}
+{{ $y1tick := resources.Get "/icons/y-1-tick.svg" }}
+{{ $g1tick := resources.Get "/icons/g-1-tick.svg" }}
+{{ $b1tick := resources.Get "/icons/b-1-tick.svg" }}
+{{ $greenTick := resources.Get "/icons/green-tick.svg" }}
+{{ $blueTick := resources.Get "/icons/blue-tick.svg" }}
+{{ $purpleTick := resources.Get "/icons/purple-tick.svg" }}
+
+
+<div class="relative">
+  <div class="sm:container mb-28">
+    <div class="max-w-5xl mx-auto sm:px-0 px-6">
+      <div
+        class="flex flex-col items-center justify-center sm:gap-5 gap-1 pt-16 pb-4 lg:pt-36 md:pt-28 sm:pt-24 sm:pb-12">
+        <div class="relative flex flex-col items-center justify-center w-full">
+          <h1 class="text-center h2">Let's get <span class="text-purple"> you started</span> with Buffer</h1>
+          <p class="text-blue mt-4 text-center">
+            Simple, <span class="font-medium">all-inclusive</span> pricing. <span class="font-medium">No "per user"
+              costs</span>. <br class="sm:hidden block" /> <span class="font-medium">No credit card</span> required to
+            get started.
+          </p>
+          <img src="{{ $underline.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+            class="absolute w-48 sm:-bottom-8 -bottom-4 sm:w-72 shrink-0">
+        </div>
+      </div>
+      <div class="relative flex flex-col text-base leading-7 gap-7 text-blue sm:text-center sm:mt-3 mt-6">
+        <img src="{{ $arrow45.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+          class="lg:absolutev hidden -left-[10%] -top-10 size-48">
+        <img src="{{ $round2.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+          class="lg:absolute hidden -right-[15%] -top-10 size-48">
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center mt-3" x-data="{package:'monthly'}">
+      <div class="bg-white rounded-[32px] p-3 flex sm:flex-row flex-col items-stretch sm:gap-2 gap-3">
+        <button type="button" @click="package = 'monthly'"
+          class="text-center font-semibold rounded-full py-2 px-10 border border-green cursor-pointer flex items-center justify-center transition-all"
+          :class="package == 'monthly' ?  'bg-green-100 text-green' : 'text-white shadow-9 bg-green'">
+          Monthly
+        </button>
+        <button type="button" @click="package = 'yearly'"
+          class="text-center font-semibold rounded-full py-2 pl-6 pr-3 border border-green cursor-pointer flex items-center gap-3 transition-all"
+          :class="package == 'yearly' ?  'bg-green-100 text-green' : 'text-white shadow-9 bg-green'">
+          Annually <span class="bg-rose text-white text-xs pr-2 pl-1 py-1 rounded-full flex items-center gap-1">
+            <img src="{{ $percent.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="size-5 shrink-0">
+            Save uo to 20%
+          </span>
+        </button>
+      </div>
+
+      <div class="group/tiers isolate overflow-hidden w-full">
+        <div class="relative lg:pt-24 w-full">
+          <div class="">
+            <!-- Feature comparison (up to lg) -->
+            <section aria-labelledby="mobile-comparison-heading" class="lg:hidden sm:block hidden mt-12">
+              <h2 id="mobile-comparison-heading" class="sr-only">Feature comparison</h2>
+              <div class="mx-auto max-w-2xl space-y-4">
+                <div class="">
+                  <div class="-mt-px w-full border-t-2 border-transparent pt-10 flex items-stretch gap-2.5">
+                    <div
+                      class="bg-green-50 text-green flex items-center justify-center rounded-tl-[32px] text-center text-lg font-bold w-1/2">
+                      Pro
+                    </div>
+
+                    <div class="text-green text-center flex flex-col gap-2.5 py-5 w-1/2 bg-white rounded-tr-[32px]">
+                      <template x-if="package == 'monthly'">
+                        <div class="flex flex-col gap-2.5">
+                          <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub class="text-2xl">mo</sub>
+                          </div>
+                          <div class="text-[22px] font-bold text-center">billed monthly</div>
+                        </div>
+                      </template>
+                      <template x-if="package == 'yearly'">
+                        <div class="flex flex-col gap-2.5">
+                          <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub class="text-2xl">yr</sub>
+                          </div>
+                          <div class="text-[22px] font-bold text-center">billed yearly</div>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                  <div class="space-y-6">
+                    <div>
+                      <dl class="text-sm/6 space-y-2 mt-2">
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            <div class="flex justify-between w-full">
+                              Social Accounts
+                              <div class="relative" x-data="{open:false}" @mouseover="open=true"
+                                @mouseleave="open=false">
+                                <svg class="opacity-50" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18 9C18 4.02978 13.9702 0 9 0C4.02978 0 0 4.02978 0 9C0 13.9702 4.02978 18 9 18C13.9702 18 18 13.9702 18 9ZM10.0767 10.9248H7.51465V10.6685C7.51465 10.2334 7.56152 9.87891 7.66113 9.60645C7.76074 9.33252 7.90723 9.08643 8.10205 8.85938C8.29834 8.63379 8.73926 8.23975 9.42188 7.67139C9.78516 7.37402 9.96826 7.10303 9.96826 6.85693C9.96826 6.60645 9.89355 6.41602 9.74854 6.27832C9.60205 6.14209 9.38086 6.07324 9.0835 6.07324C8.7627 6.07324 8.50049 6.18018 8.29248 6.38965C8.08301 6.60059 7.94971 6.97119 7.89111 7.49707L5.27197 7.17188C5.36133 6.20947 5.71143 5.43457 6.31934 4.8501C6.93018 4.26123 7.86475 3.96973 9.12305 3.96973C10.1045 3.96973 10.8955 4.1748 11.4976 4.5835C12.3179 5.13721 12.7251 5.87549 12.7251 6.79541C12.7251 7.1792 12.6182 7.54834 12.4087 7.90283C12.1978 8.26025 11.7656 8.69238 11.1123 9.20361C10.6597 9.56689 10.3726 9.854 10.2539 10.0723C10.1353 10.2891 10.0767 10.5747 10.0767 10.9248ZM7.42383 11.6089H10.1719V14.0303H7.42383V11.6089Z"
+                                    fill="#020144" />
+                                </svg>
+                                <div class="pl-6 absolute z-30 left-0 top-1/2 -translate-y-1/2" x-show="open">
+                                  <div class="bg-slate rounded-lg w-48 text-xs p-1.5  shadow">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            8 total
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Users</dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            1
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+
+                            <div class="flex justify-between w-full">
+                              Scheduled posts per social account
+                              <div class="relative" x-data="{open:false}" @mouseover="open=true"
+                                @mouseleave="open=false">
+                                <svg class="opacity-50" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18 9C18 4.02978 13.9702 0 9 0C4.02978 0 0 4.02978 0 9C0 13.9702 4.02978 18 9 18C13.9702 18 18 13.9702 18 9ZM10.0767 10.9248H7.51465V10.6685C7.51465 10.2334 7.56152 9.87891 7.66113 9.60645C7.76074 9.33252 7.90723 9.08643 8.10205 8.85938C8.29834 8.63379 8.73926 8.23975 9.42188 7.67139C9.78516 7.37402 9.96826 7.10303 9.96826 6.85693C9.96826 6.60645 9.89355 6.41602 9.74854 6.27832C9.60205 6.14209 9.38086 6.07324 9.0835 6.07324C8.7627 6.07324 8.50049 6.18018 8.29248 6.38965C8.08301 6.60059 7.94971 6.97119 7.89111 7.49707L5.27197 7.17188C5.36133 6.20947 5.71143 5.43457 6.31934 4.8501C6.93018 4.26123 7.86475 3.96973 9.12305 3.96973C10.1045 3.96973 10.8955 4.1748 11.4976 4.5835C12.3179 5.13721 12.7251 5.87549 12.7251 6.79541C12.7251 7.1792 12.6182 7.54834 12.4087 7.90283C12.1978 8.26025 11.7656 8.69238 11.1123 9.20361C10.6597 9.56689 10.3726 9.854 10.2539 10.0723C10.1353 10.2891 10.0767 10.5747 10.0767 10.9248ZM7.42383 11.6089H10.1719V14.0303H7.42383V11.6089Z"
+                                    fill="#020144" />
+                                </svg>
+                                <div class="pl-6 absolute z-30 left-0 top-1/2 -translate-y-1/2" x-show="open">
+                                  <div class="bg-slate rounded-lg w-48 text-xs p-1.5  shadow">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            100
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Social networks
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                            <span class="relative size-full py-3 flex items-center justify-center gap-3">
+                              <a href="#">
+                                <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_2941_748)">
+                                    <path
+                                      d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                      fill="#020144" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2941_748">
+                                      <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                            </span>
+                          </dd>
+                        </div>
+
+
+
+
+                      </dl>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Schedule as you
+                        discover</h4>
+                      <div class="relative mt-6">
+
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Browser extension</dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Mobile apps: iOS + Android
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Create and schedule
+                        content</h4>
+                      <div class="relative mt-6">
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Pablo: Image creator
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Video and GIF: Uploader
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Calendar
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Optimize and analyze
+                      </h4>
+                      <div class="relative mt-6">
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Link shortening and tracking
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Social analytics
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Advanced social analytics
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2.5">
+                      <div></div>
+                      <div class="relative px-4 py-3 text-center bg-white rounded-[32px]">
+                        <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                          <div class="bg-green-50 text-green text-center text-lg font-bold rounded-full py-1 px-5">
+                            Pro</div>
+                          <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                          <a href="#"
+                            class="text-lg text-center text-green font-semibold rounded-full px-8 w-full py-2 border-2 border-green hover:bg-green hover:text-white hover:shadow-7 active:shadow-none transition-all">Start
+                            Trial</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="">
+                  <div class="-mt-px w-full border-t-2 border-transparent pt-10 flex items-stretch gap-2.5">
+                    <div
+                      class="bg-sky-100 text-sky flex items-center justify-center rounded-tl-[32px] text-center text-lg font-bold w-1/2">
+                      Premium
+                    </div>
+                    <div class="text-sky text-center flex flex-col gap-2.5 py-5 w-1/2 bg-white rounded-tr-[32px]">
+                      <template x-if="package == 'monthly'">
+                        <div class="flex flex-col gap-2.5">
+                          <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub class="text-2xl">mo</sub>
+                          </div>
+                          <div class="text-[22px] font-bold text-center">billed monthly</div>
+                        </div>
+                      </template>
+                      <template x-if="package == 'yearly'">
+                        <div class="flex flex-col gap-2.5">
+                          <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub class="text-2xl">yr</sub>
+                          </div>
+                          <div class="text-[22px] font-bold text-center">billed yearly</div>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                  <div class="space-y-6">
+                    <div>
+                      <dl class="text-sm/6 space-y-2 mt-2">
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Social Accounts</dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            8 total
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Users</dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            1
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Scheduled posts per social account
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            100
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Social networks
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                            <span class="relative size-full py-3 flex items-center justify-center gap-3">
+                              <a href="#">
+                                <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_2941_748)">
+                                    <path
+                                      d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                      fill="#020144" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2941_748">
+                                      <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                            </span>
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Schedule as you
+                        discover</h4>
+                      <div class="relative mt-6">
+
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Browser extension</dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Mobile apps: iOS + Android
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Create and schedule
+                        content</h4>
+                      <div class="relative mt-6">
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Pablo: Image creator
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Video and GIF: Uploader
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Calendar
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Optimize and analyze
+                      </h4>
+                      <div class="relative mt-6">
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Link shortening and tracking
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Social analytics
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Advanced social analytics
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2.5">
+                      <div></div>
+                      <div class="relative px-4 py-3 text-center bg-white rounded-[32px]">
+                        <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                          <div class="bg-sky-100 text-sky text-center text-lg font-bold rounded-full py-1 px-5">
+                            Pro</div>
+                          <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                          <a href="#"
+                            class="text-lg text-center font-semibold text-white rounded-full px-8 w-full py-2 border-2 border-sky bg-sky hover:bg-sky-200 hover:border-sky-200 hover:shadow-8 active:shadow-none hover:text-white transition-all">Start
+                            Trial</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="">
+                  <div class="-mt-px w-full border-t-2 border-transparent pt-10 flex items-stretch gap-2.5">
+                    <div
+                      class="bg-purple-200 text-purple flex items-center justify-center rounded-tl-[32px] text-center text-lg font-bold w-1/2">
+                      Small Business
+                    </div>
+                    <div class="text-purple text-center flex flex-col gap-2.5 py-5 w-1/2 bg-white rounded-tr-[32px]">
+                      <template x-if="package == 'monthly'">
+                        <div class="flex flex-col gap-2.5">
+                          <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub class="text-2xl">mo</sub>
+                          </div>
+                          <div class="text-[22px] font-bold text-center">billed monthly</div>
+                        </div>
+                      </template>
+                      <template x-if="package == 'yearly'">
+                        <div class="flex flex-col gap-2.5">
+                          <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub class="text-2xl">yr</sub>
+                          </div>
+                          <div class="text-[22px] font-bold text-center">billed yearly</div>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                  <div class="space-y-6">
+                    <div>
+                      <dl class="text-sm/6 space-y-2 mt-2">
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Social Accounts</dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            8 total
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Users</dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            1
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Scheduled posts per social account
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                            100
+                          </dd>
+                        </div>
+                        <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                          <dt
+                            class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                            Social networks
+                          </dt>
+                          <dd
+                            class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                            <span class="relative size-full py-3 flex items-center justify-center gap-3">
+                              <a href="#">
+                                <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_2941_748)">
+                                    <path
+                                      d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                      fill="#020144" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2941_748">
+                                      <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                            </span>
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Schedule as you
+                        discover</h4>
+                      <div class="relative mt-6">
+
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Browser extension</dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Mobile apps: iOS + Android
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Create and schedule
+                        content</h4>
+                      <div class="relative mt-6">
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Pablo: Image creator
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Video and GIF: Uploader
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Calendar
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-bold text-blue bg-blue/5 rounded-[32px] px-6 py-3">Optimize and analyze
+                      </h4>
+                      <div class="relative mt-6">
+                        <dl class="text-sm/6 space-y-2 mt-2">
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-tl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Link shortening and tracking
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-tr-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Social analytics
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                          <div class="flex items-center justify-between gap-2.5 sm:grid sm:grid-cols-2 sm:px-0">
+                            <dt
+                              class="px-4 py-3 bg-blue/[0.02] rounded-bl-[32px] w-full h-full text-blue/60 font-semibold flex items-center">
+                              Advanced social analytics
+                            </dt>
+                            <dd
+                              class="px-4 py-3 bg-white rounded-br-[32px] w-full h-full text-blue font-semibold flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-6 shrink-0">
+                            </dd>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2.5">
+                      <div></div>
+                      <div class="relative px-4 py-3 text-center bg-white rounded-[32px]">
+                        <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                          <div class="bg-purple-200 text-purple text-center text-lg font-bold rounded-full py-1 px-5">
+                            Pro</div>
+                          <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                          <a href="#"
+                            class="text-lg text-center text-white rounded-full px-8 w-full py-2 border-2 border-purple bg-purple hover:border-purple-700 active:shadow-none hover:text-white hover:bg-purple-700 hover:shadow-3 transition-all">Start
+                            Trial</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Feature comparison (lg+) -->
+            <section aria-labelledby="comparison-heading" class="hidden lg:block">
+              <div class="grid grid-cols-4 gap-x-8 before:block mb-10">
+                <div aria-hidden="true" class="-mt-px">
+                  <div class="border-t-2 border-transparent ">
+                    <div class="bg-green-50 text-green text-center text-lg font-bold rounded-full w-full py-1.5">
+                      Pro</div>
+                  </div>
+                </div>
+                <div aria-hidden="true" class="-mt-px">
+                  <div class=" ">
+                    <div class="bg-sky-100 text-sky text-center text-lg font-bold rounded-full w-full py-1.5">Premium
+                    </div>
+                  </div>
+                </div>
+                <div aria-hidden="true" class="-mt-px">
+                  <div class="border-t-2 border-transparent ">
+                    <div class="bg-purple/10 text-purple text-center text-lg font-bold rounded-full w-full py-1.5">Small
+                      Business</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-4 gap-x-8">
+                <div aria-hidden="true" class="-mt-px w-full h-full">
+                  <div
+                    class="bg-blue/[0.02] w-full h-full rounded-[32px] text-blue/60 font-semibold flex items-center pl-5">
+                    Monthly pricing
+                  </div>
+                </div>
+                <div aria-hidden="true" class="-mt-px">
+                  <div class="text-green text-center flex flex-col gap-2.5 py-3">
+                    <template x-if="package == 'monthly'">
+                      <div class="flex flex-col gap-2.5">
+                        <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub class="text-2xl">mo</sub>
+                        </div>
+                        <div class="text-[22px] font-bold text-center">billed monthly</div>
+                      </div>
+                    </template>
+                    <template x-if="package == 'yearly'">
+                      <div class="flex flex-col gap-2.5">
+                        <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub class="text-2xl">yr</sub>
+                        </div>
+                        <div class="text-[22px] font-bold text-center">billed yearly</div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+                <div aria-hidden="true" class="-mt-px">
+                  <div class="text-sky text-center flex flex-col gap-2.5 py-3">
+                    <template x-if="package == 'monthly'">
+                      <div class="flex flex-col gap-2.5">
+                        <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>65<sub class="text-2xl">mo</sub>
+                        </div>
+                        <div class="text-[22px] font-bold text-center">billed monthly</div>
+                      </div>
+                    </template>
+                    <template x-if="package == 'yearly'">
+                      <div class="flex flex-col gap-2.5">
+                        <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>615<sub class="text-2xl">yr</sub>
+                        </div>
+                        <div class="text-[22px] font-bold text-center">billed yearly</div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+                <div aria-hidden="true" class="-mt-px">
+                  <div class="text-purple text-center flex flex-col gap-2.5 py-3">
+                    <template x-if="package == 'monthly'">
+                      <div class="flex flex-col gap-2.5">
+                        <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>99<sub class="text-2xl">mo</sub>
+                        </div>
+                        <div class="text-[22px] font-bold text-center">billed monthly</div>
+                      </div>
+                    </template>
+                    <template x-if="package == 'yearly'">
+                      <div class="flex flex-col gap-2.5">
+                        <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>999<sub class="text-2xl">yr</sub>
+                        </div>
+                        <div class="text-[22px] font-bold text-center">billed yearly</div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <div>
+                  <div class="relative -mx-8">
+                    <table class="relative w-full border-separate border-spacing-x-8 border-spacing-y-2">
+                      <thead>
+                        <tr class="text-left">
+                          <th scope="col">
+                            <span class="sr-only">Feature</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Starter tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Scale tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Growth tier</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            <div class="flex justify-between items-center">
+                              Social accounts
+                              <div class="relative" x-data="{open:false}" @mouseover="open=true"
+                                @mouseleave="open=false">
+                                <svg class="opacity-50" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18 9C18 4.02978 13.9702 0 9 0C4.02978 0 0 4.02978 0 9C0 13.9702 4.02978 18 9 18C13.9702 18 18 13.9702 18 9ZM10.0767 10.9248H7.51465V10.6685C7.51465 10.2334 7.56152 9.87891 7.66113 9.60645C7.76074 9.33252 7.90723 9.08643 8.10205 8.85938C8.29834 8.63379 8.73926 8.23975 9.42188 7.67139C9.78516 7.37402 9.96826 7.10303 9.96826 6.85693C9.96826 6.60645 9.89355 6.41602 9.74854 6.27832C9.60205 6.14209 9.38086 6.07324 9.0835 6.07324C8.7627 6.07324 8.50049 6.18018 8.29248 6.38965C8.08301 6.60059 7.94971 6.97119 7.89111 7.49707L5.27197 7.17188C5.36133 6.20947 5.71143 5.43457 6.31934 4.8501C6.93018 4.26123 7.86475 3.96973 9.12305 3.96973C10.1045 3.96973 10.8955 4.1748 11.4976 4.5835C12.3179 5.13721 12.7251 5.87549 12.7251 6.79541C12.7251 7.1792 12.6182 7.54834 12.4087 7.90283C12.1978 8.26025 11.7656 8.69238 11.1123 9.20361C10.6597 9.56689 10.3726 9.854 10.2539 10.0723C10.1353 10.2891 10.0767 10.5747 10.0767 10.9248ZM7.42383 11.6089H10.1719V14.0303H7.42383V11.6089Z"
+                                    fill="#020144" />
+                                </svg>
+                                <div class="pl-6 absolute z-30 left-0 top-1/2 -translate-y-1/2" x-show="open">
+                                  <div class="bg-slate rounded-lg w-48 text-xs p-1.5  shadow">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </th>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3">
+                              8 total
+                            </span>
+                          </td>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3">
+                              8 total
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3">
+                              25 total
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Users
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3">
+                              1
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3">
+                              2
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3">
+                              6
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            <div class="flex justify-between gap-3">
+                              Scheduled posts per social account
+                              <div class="relative" x-data="{open:false}" @mouseover="open=true"
+                                @mouseleave="open=false">
+                                <svg class="opacity-50" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18 9C18 4.02978 13.9702 0 9 0C4.02978 0 0 4.02978 0 9C0 13.9702 4.02978 18 9 18C13.9702 18 18 13.9702 18 9ZM10.0767 10.9248H7.51465V10.6685C7.51465 10.2334 7.56152 9.87891 7.66113 9.60645C7.76074 9.33252 7.90723 9.08643 8.10205 8.85938C8.29834 8.63379 8.73926 8.23975 9.42188 7.67139C9.78516 7.37402 9.96826 7.10303 9.96826 6.85693C9.96826 6.60645 9.89355 6.41602 9.74854 6.27832C9.60205 6.14209 9.38086 6.07324 9.0835 6.07324C8.7627 6.07324 8.50049 6.18018 8.29248 6.38965C8.08301 6.60059 7.94971 6.97119 7.89111 7.49707L5.27197 7.17188C5.36133 6.20947 5.71143 5.43457 6.31934 4.8501C6.93018 4.26123 7.86475 3.96973 9.12305 3.96973C10.1045 3.96973 10.8955 4.1748 11.4976 4.5835C12.3179 5.13721 12.7251 5.87549 12.7251 6.79541C12.7251 7.1792 12.6182 7.54834 12.4087 7.90283C12.1978 8.26025 11.7656 8.69238 11.1123 9.20361C10.6597 9.56689 10.3726 9.854 10.2539 10.0723C10.1353 10.2891 10.0767 10.5747 10.0767 10.9248ZM7.42383 11.6089H10.1719V14.0303H7.42383V11.6089Z"
+                                    fill="#020144" />
+                                </svg>
+                                <div class="pl-6 absolute z-30 left-0 top-1/2 -translate-y-1/2" x-show="open">
+                                  <div class="bg-slate rounded-lg w-48 text-xs p-1.5  shadow">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3">
+                              100
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3">
+                              2000
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3">
+                              2000
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Social networks
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center xl:gap-4 gap-2.5">
+                              <a href="#">
+                                <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_2941_748)">
+                                    <path
+                                      d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                      fill="#020144" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2941_748">
+                                      <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center xl:gap-4 gap-2.5">
+                              <a href="#">
+                                <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_2941_748)">
+                                    <path
+                                      d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                      fill="#020144" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2941_748">
+                                      <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center xl:gap-4 gap-2.5">
+                              <a href="#">
+                                <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_2941_748)">
+                                    <path
+                                      d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                      fill="#020144" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2941_748">
+                                      <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                    fill="#020144" />
+                                </svg>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-blue bg-blue/5 rounded-full px-5 py-2">
+                    Schedule as you discover
+                  </h3>
+                  <div class="relative -mx-8">
+                    <table class="relative w-full border-separate border-spacing-x-8 border-spacing-y-2">
+                      <thead>
+                        <tr class="text-left">
+                          <th scope="col">
+                            <span class="sr-only">Feature</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Starter tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Scale tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Growth tier</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Browser extension
+                          </th>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Mobile apps: iOS + Android
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-bold text-blue bg-blue/5 rounded-full px-5 py-2">
+                    Create and schedule content
+                  </h3>
+                  <div class="relative -mx-8">
+                    <table class="relative w-full border-separate border-spacing-x-8 border-spacing-y-2">
+                      <thead>
+                        <tr class="text-left">
+                          <th scope="col">
+                            <span class="sr-only">Feature</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Starter tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Scale tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Growth tier</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Pablo: Image creator
+                          </th>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Video and GIF: Uploader
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Calendar
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-bold text-blue bg-blue/5 rounded-full px-5 py-2">
+                    Optimize and analyze
+                  </h3>
+                  <div class="relative -mx-8">
+                    <table class="relative w-full border-separate border-spacing-x-8 border-spacing-y-2">
+                      <thead>
+                        <tr class="text-left">
+                          <th scope="col">
+                            <span class="sr-only">Feature</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Starter tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Scale tier</span>
+                          </th>
+                          <th scope="col">
+                            <span class="sr-only">Growth tier</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Link shortening and tracking
+                          </th>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-t-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Social analytics
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 bg-blue/[0.02] h-full rounded-[32px] pl-5">
+                            Advanced social analytics
+                          </th>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-b-[32px]">
+                            <span class="relative size-full py-3 flex items-center justify-center">
+                              <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                class="size-8 shrink-0">
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+                <div>
+                  <div class="relative -mx-8">
+                    <table class="relative w-full border-separate border-spacing-x-8 border-spacing-y-2">
+                      <tbody>
+                        <tr class="text-blue font-semibold">
+                          <th scope="row"
+                            class="w-1/4 py-3 pr-4 font-semibold text-left text-base text-blue/60 h-full rounded-[32px] pl-5">
+
+                          </th>
+
+                          <td class="relative w-1/4 px-4 py-3 text-center bg-white rounded-[32px]">
+                            <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                              <div class="bg-green-50 text-green text-center text-lg font-bold rounded-full py-1 px-5">
+                                Pro</div>
+                              <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                              <a href="#"
+                                class="text-lg text-center text-green rounded-full px-8 w-full py-2 border-2 border-green hover:bg-green hover:text-white hover:shadow-7 active:shadow-none transition-all">Start
+                                Trial</a>
+                            </span>
+                          </td>
+
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-[32px]">
+                            <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                              <div class="bg-sky-100 text-sky text-center text-lg font-bold rounded-full py-1 px-5">
+                                Premium</div>
+                              <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                              <a href="#"
+                                class="text-lg text-center text-white rounded-full px-8 w-full py-2 border-2 border-sky bg-sky hover:bg-sky-200 hover:border-sky-200 hover:shadow-8 active:shadow-none hover:text-white transition-all">Start
+                                Trial</a>
+                            </span>
+                          </td>
+                          <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-[32px]">
+                            <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                              <div
+                                class="bg-purple-100 text-purple text-center text-lg font-bold rounded-full py-1 px-5">
+                                Premium</div>
+                              <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                              <a href="#"
+                                class="text-lg text-center text-white rounded-full px-8 w-full py-2 border-2 border-purple bg-purple hover:border-purple-700 active:shadow-none hover:text-white hover:bg-purple-700 hover:shadow-3 transition-all">Start
+                                Trial</a>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- Feature comparison (mobile+) -->
+            <section class="mt-8 sm:px-0 px-6 sm:hidden mx-auto">
+              <div class=" sm:px-6 lg:px-8">
+                <div class="mt-8 flow-root -mx-4">
+                  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 flex w-full h-full relative overflow-hidden">
+                    <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                      <table class="relative min-w-full border-separate border-spacing-3">
+                        <tbody class="divide-y divide-gray-200">
+                          <tr class="">
+                            <td></td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 text-center whitespace-nowrap">
+                              Monthly pricing
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5">
+
+                              <div class="flex justify-between w-full">
+                                Social accounts
+                                <div class="relative" x-data="{open:false}" @mouseover="open=true"
+                                  @mouseleave="open=false">
+                                  <svg class="opacity-50" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M18 9C18 4.02978 13.9702 0 9 0C4.02978 0 0 4.02978 0 9C0 13.9702 4.02978 18 9 18C13.9702 18 18 13.9702 18 9ZM10.0767 10.9248H7.51465V10.6685C7.51465 10.2334 7.56152 9.87891 7.66113 9.60645C7.76074 9.33252 7.90723 9.08643 8.10205 8.85938C8.29834 8.63379 8.73926 8.23975 9.42188 7.67139C9.78516 7.37402 9.96826 7.10303 9.96826 6.85693C9.96826 6.60645 9.89355 6.41602 9.74854 6.27832C9.60205 6.14209 9.38086 6.07324 9.0835 6.07324C8.7627 6.07324 8.50049 6.18018 8.29248 6.38965C8.08301 6.60059 7.94971 6.97119 7.89111 7.49707L5.27197 7.17188C5.36133 6.20947 5.71143 5.43457 6.31934 4.8501C6.93018 4.26123 7.86475 3.96973 9.12305 3.96973C10.1045 3.96973 10.8955 4.1748 11.4976 4.5835C12.3179 5.13721 12.7251 5.87549 12.7251 6.79541C12.7251 7.1792 12.6182 7.54834 12.4087 7.90283C12.1978 8.26025 11.7656 8.69238 11.1123 9.20361C10.6597 9.56689 10.3726 9.854 10.2539 10.0723C10.1353 10.2891 10.0767 10.5747 10.0767 10.9248ZM7.42383 11.6089H10.1719V14.0303H7.42383V11.6089Z"
+                                      fill="#020144" />
+                                  </svg>
+                                  <div class="pl-6 pb-2 absolute z-30 -top-full -translate-x-1/2" x-show="open">
+                                    <div class="bg-slate rounded-lg w-48 text-xs p-1.5  shadow">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5">
+                              Users
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Scheduled posts <br /> per social account
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 text-center">
+                              Social networks
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap"
+                              rowspan="4">
+                              Schedule as you <br /> discover
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5">
+                              Browser extension
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Mobile apps:<br />iOS + Android
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap"
+                              rowspan="4">
+                              Create and <br /> schdule content
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Pablo:<br />
+                              Image creator
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Video and GIF:<br />
+                              Uploader
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Calendar
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap"
+                              rowspan="4">
+                              Optimize and <br /> analyze
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Link shortening <br /> and tracking
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Social <br /> analytics
+                            </td>
+                            <td scope="col"
+                              class="text-sm font-semibold text-blue/60 bg-blue/[0.03] rounded-3xl px-3 py-5 whitespace-nowrap">
+                              Advanced <br /> social analytics
+                            </td>
+                          </tr>
+
+                          <tr class="">
+                            <td
+                              class="bg-[#E7F9F3] sticky left-0 z-20 text-center h-full text-green font-semibold rounded-l-3xl px-2">
+                              pro
+                            </td>
+                            <td class="py-4 px-3">
+                              <div class="text-green text-center flex flex-col gap-2.5 w-44 shrink-0">
+                                <template x-if="package == 'monthly'">
+                                  <div class="flex flex-col gap-2.5">
+                                    <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub
+                                        class="text-2xl">mo</sub>
+                                    </div>
+                                    <div class="text-[22px] font-bold text-center whitespace-nowrap">billed monthly
+                                    </div>
+                                  </div>
+                                </template>
+                                <template x-if="package == 'yearly'">
+                                  <div class="flex flex-col gap-2.5">
+                                    <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub
+                                        class="text-2xl">yr</sub>
+                                    </div>
+                                    <div class="text-[22px] font-bold text-center whitespace-nowrap">billed yearly</div>
+                                  </div>
+                                </template>
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              8 total
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              1
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              100
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <span
+                                class="relative size-full py-3 flex flex-wrap justify-around gap-x-8 gap-y-5 w-32 shrink-0">
+                                <a href="#">
+                                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2941_748)">
+                                      <path
+                                        d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                        fill="#020144" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_2941_748">
+                                        <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+
+                                <a href="#">
+                                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                              </span>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-b-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="relative px-4 py-3 text-center bg-white rounded-3xl">
+                                <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                                  <div
+                                    class="bg-green-50 text-green text-center text-lg font-bold rounded-full py-1 px-5">
+                                    Pro</div>
+                                  <p class="text-blue/60 font-bold text-center text-lg whitespace-nowrap">Try it free
+                                    for 7 days</p>
+                                  <a href="#"
+                                    class="text-lg text-center text-green font-semibold rounded-full px-8 w-full py-2 border-2 border-green hover:bg-green hover:text-white hover:shadow-7 active:shadow-none transition-all">Start
+                                    Trial</a>
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="bg-[#DFF1FD] text-sky font-semibold sticky z-30 left-0 rounded-l-3xl px-2 text-center h-full">
+                              Premium
+                            </td>
+                            <td class="py-4 px-3">
+                              <div class="text-sky text-center flex flex-col gap-2.5 w-44 shrink-0">
+                                <template x-if="package == 'monthly'">
+                                  <div class="flex flex-col gap-2.5">
+                                    <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub
+                                        class="text-2xl">mo</sub>
+                                    </div>
+                                    <div class="text-[22px] font-bold text-center whitespace-nowrap">billed monthly
+                                    </div>
+                                  </div>
+                                </template>
+                                <template x-if="package == 'yearly'">
+                                  <div class="flex flex-col gap-2.5">
+                                    <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub
+                                        class="text-2xl">yr</sub>
+                                    </div>
+                                    <div class="text-[22px] font-bold text-center whitespace-nowrap">billed yearly</div>
+                                  </div>
+                                </template>
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              8 total
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              2
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              2000
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <span
+                                class="relative size-full py-3 flex flex-wrap justify-around gap-x-8 gap-y-5 w-32 shrink-0">
+                                <a href="#">
+                                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2941_748)">
+                                      <path
+                                        d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                        fill="#020144" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_2941_748">
+                                        <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+
+                                <a href="#">
+                                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                              </span>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $blueTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-[32px]">
+                              <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                                <div class="bg-sky-100 text-sky text-center text-lg font-bold rounded-full py-1 px-5">
+                                  Premium</div>
+                                <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                                <a href="#"
+                                  class="text-lg text-center text-white rounded-full px-8 w-full py-2 border-2 border-sky bg-sky hover:bg-sky-200 hover:border-sky-200 hover:shadow-8 active:shadow-none hover:text-white transition-all">Start
+                                  Trial</a>
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="bg-purple-100 text-purple font-semibold sticky z-30 left-0 rounded-l-3xl px-2 text-center h-full">
+                              Small business
+                            </td>
+                            <td class="py-4 px-3">
+                              <div class="text-purple text-center flex flex-col gap-2.5 w-44 shrink-0">
+                                <template x-if="package == 'monthly'">
+                                  <div class="flex flex-col gap-2.5">
+                                    <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>15<sub
+                                        class="text-2xl">mo</sub>
+                                    </div>
+                                    <div class="text-[22px] font-bold text-center whitespace-nowrap">billed monthly
+                                    </div>
+                                  </div>
+                                </template>
+                                <template x-if="package == 'yearly'">
+                                  <div class="flex flex-col gap-2.5">
+                                    <div class="text-6xl font-bold"><sup class="text-4xl">$</sup>215<sub
+                                        class="text-2xl">yr</sub>
+                                    </div>
+                                    <div class="text-[22px] font-bold text-center whitespace-nowrap">billed yearly</div>
+                                  </div>
+                                </template>
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              8 total
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              6
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              2000
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <span
+                                class="relative size-full py-3 flex flex-wrap justify-around gap-x-8 gap-y-5 w-32 shrink-0">
+                                <a href="#">
+                                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2941_748)">
+                                      <path
+                                        d="M13.1009 0H15.5542L10.1943 5.93035L16.5 14H11.5626L7.69566 9.10568L3.27091 14H0.815906L6.54887 7.65694L0.5 0H5.56247L9.05797 4.47348L13.1009 0ZM12.2398 12.5784H13.5993L4.82384 1.34697H3.36509L12.2398 12.5784Z"
+                                        fill="#020144" />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_2941_748">
+                                        <rect width="16" height="14" fill="white" transform="translate(0.5)" />
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M9.13625 0.730135L6.83796 0.727234C4.60919 0.727234 3.16946 2.26757 3.16946 4.65423V6.46362H0.863525V9.73793H3.16946L3.16668 16.6818H6.39304L6.39582 9.73793H9.04171L9.03962 6.46434H6.39582V4.92908C6.39582 4.19082 6.56336 3.81734 7.48449 3.81734L9.1293 3.81661L9.13625 0.730135Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M5.1206 5.13854H8.13679V6.68464H8.18062C8.60071 5.93117 9.62787 5.13854 11.1595 5.13854C14.3445 5.13854 14.9334 7.12059 14.9334 9.69897V15.1504H11.788L11.7876 10.2953C11.7876 9.18516 11.7647 7.75656 10.1519 7.75656C8.51446 7.75656 8.26315 8.96462 8.26315 10.2146V15.1504H5.1206V5.13854ZM3.33811 2.1037C3.33811 3.00636 2.60516 3.73931 1.70249 3.73931C0.799357 3.73931 0.0664062 3.00636 0.0664062 2.1037C0.0664062 1.20056 0.799357 0.468079 1.70249 0.468079C2.60516 0.468079 3.33811 1.20056 3.33811 2.1037ZM0.0664062 5.13854H3.33811V15.1504H0.0664062V5.13854Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+
+                                <a href="#">
+                                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M0.5 10C0.5 14.2691 3.17578 17.9141 6.9418 19.3484C6.85 18.5676 6.75273 17.2801 6.9625 16.377C7.14336 15.6 8.13008 11.4285 8.13008 11.4285C8.13008 11.4285 7.83242 10.8328 7.83242 9.95C7.83242 8.5668 8.63438 7.5332 9.63359 7.5332C10.4836 7.5332 10.8934 8.17109 10.8934 8.93516C10.8934 9.78945 10.3492 11.066 10.0684 12.2504C9.83437 13.241 10.566 14.0492 11.5426 14.0492C13.3117 14.0492 14.6727 12.1832 14.6727 9.49023C14.6727 7.10586 12.9594 5.44023 10.5133 5.44023C7.68203 5.44023 6.01953 7.56445 6.01953 9.76016C6.01953 10.616 6.34844 11.5328 6.76016 12.032C6.81217 12.087 6.84111 12.1599 6.84102 12.2355C6.84102 12.2629 6.83711 12.2906 6.82969 12.3172C6.75391 12.6324 6.58516 13.3082 6.55313 13.4461C6.50898 13.6277 6.40898 13.6672 6.21953 13.5789C4.97656 13.0004 4.19961 11.1828 4.19961 9.72305C4.19961 6.58203 6.48086 3.69883 10.7762 3.69883C14.2297 3.69883 16.9141 6.15977 16.9141 9.44805C16.9141 12.8789 14.7512 15.6406 11.748 15.6406C10.7387 15.6406 9.79141 15.1152 9.46641 14.4961C9.46641 14.4961 8.96719 16.3977 8.84609 16.8629C8.61133 17.7664 7.95937 18.9094 7.55547 19.5586C8.48672 19.8461 9.475 20 10.5 20C16.0227 20 20.5 15.5223 20.5 10C20.5 4.47773 16.0227 0 10.5 0C4.97734 0 0.5 4.47734 0.5 10Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M14.1099 4.48799C13.1216 3.84178 12.4086 2.8075 12.1861 1.60256C12.138 1.3423 12.1113 1.07418 12.1113 0.799988H8.95727L8.95193 13.4773C8.89924 14.8972 7.73409 16.0365 6.30585 16.0365C5.86193 16.0365 5.444 15.9254 5.0759 15.7308C4.23185 15.2856 3.65408 14.3985 3.65408 13.3777C3.65408 11.9115 4.8438 10.7183 6.3055 10.7183C6.57854 10.7183 6.84019 10.7636 7.08761 10.8411V7.61189C6.83129 7.57655 6.57106 7.55513 6.3055 7.55513C3.10443 7.55513 0.5 10.1667 0.5 13.3777C0.5 15.3474 1.48111 17.0907 2.97876 18.1446C3.92143 18.8091 5.06878 19.2 6.30585 19.2C9.50727 19.2 12.1113 16.588 12.1113 13.3777V6.94891C13.3484 7.83931 14.8642 8.36413 16.5 8.36413V5.20059C15.6189 5.20059 14.7984 4.93819 14.1099 4.48799Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                                <a href="#">
+                                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M6.49986 9.00551C6.49694 7.34891 7.83773 6.00317 9.49401 6.00028C11.1506 5.99705 12.4966 7.33724 12.4998 8.99416C12.503 10.6511 11.1622 11.9965 9.50537 11.9997C7.84909 12.0029 6.50306 10.6624 6.49986 9.00551ZM4.87887 9.00875C4.88383 11.5612 6.95682 13.6257 9.5086 13.6207C12.0607 13.6158 14.1264 11.5434 14.1214 8.99096C14.1165 6.43942 12.0432 4.37367 9.49081 4.37867C6.939 4.38362 4.87392 6.45689 4.87887 9.00875ZM13.2146 4.1891C13.2157 4.78514 13.7003 5.26777 14.2964 5.26661C14.8927 5.26541 15.3753 4.78107 15.3744 4.18503C15.3733 3.58899 14.8886 3.10608 14.2923 3.10728C13.696 3.10844 13.2134 3.59307 13.2146 4.1891ZM5.87759 16.3321C5.00016 16.2939 4.52369 16.1481 4.20616 16.0259C3.78566 15.8632 3.4856 15.6681 3.16979 15.3547C2.85458 15.04 2.6589 14.7408 2.49472 14.3212C2.37139 14.0036 2.22296 13.5277 2.18183 12.6503C2.13721 11.7017 2.12702 11.4171 2.12266 9.01398C2.11798 6.61148 2.12674 6.32685 2.16815 5.37739C2.20573 4.50055 2.35244 4.02345 2.47433 3.7062C2.63703 3.28513 2.83155 2.98564 3.1456 2.66986C3.46021 2.35405 3.75939 2.15897 4.1793 1.99479C4.49659 1.87083 4.97246 1.72356 5.84961 1.6819C6.79876 1.63697 7.08307 1.62737 9.48557 1.6227C11.8886 1.61802 12.1732 1.6265 13.1227 1.66819C13.9995 1.70637 14.4766 1.8516 14.7936 1.97437C15.2143 2.13707 15.5144 2.33103 15.8299 2.64564C16.1454 2.96029 16.3411 3.25887 16.5053 3.67969C16.6291 3.99606 16.7765 4.47253 16.8179 5.3494C16.863 6.29855 16.8733 6.58318 16.8776 8.98568C16.8823 11.3888 16.8735 11.6734 16.8319 12.6223C16.7936 13.4997 16.6481 13.9765 16.5257 14.2943C16.3629 14.7146 16.1685 15.0146 15.8541 15.3304C15.5398 15.6451 15.2406 15.8413 14.8204 16.0055C14.5037 16.1291 14.0272 16.2767 13.1507 16.3184C12.2015 16.363 11.9172 16.3732 9.51384 16.3776C7.11133 16.3822 6.82706 16.3732 5.87759 16.3321ZM5.77262 0.0623232C4.815 0.107534 4.16095 0.260886 3.58938 0.484866C2.99773 0.715526 2.49619 1.02462 1.99729 1.5256C1.49776 2.02685 1.19098 2.52927 0.962081 3.12151C0.740492 3.69453 0.590304 4.34889 0.548011 5.30711C0.506034 6.26709 0.496402 6.57326 0.501077 9.01718C0.505753 11.4608 0.516511 11.7676 0.562284 12.7279C0.608058 13.6852 0.760882 14.339 0.984827 14.9108C1.21577 15.5025 1.52458 16.0037 2.02584 16.503C2.52682 17.0022 3.02955 17.3087 3.62207 17.5379C4.19449 17.7592 4.8491 17.91 5.80703 17.9519C6.76698 17.9942 7.07343 18.0035 9.51676 17.9989C11.9612 17.9942 12.2677 17.9834 13.2277 17.9379C14.1853 17.8922 14.8387 17.7388 15.4109 17.5154C16.0025 17.2839 16.5041 16.9756 17.003 16.4744C17.5019 15.9734 17.8087 15.4707 18.0376 14.8782C18.2592 14.3057 18.41 13.6511 18.4516 12.6938C18.4937 11.7332 18.5036 11.4264 18.4989 8.98276C18.4942 6.53884 18.4832 6.23267 18.4377 5.27301C18.3922 4.31479 18.2388 3.6613 18.0152 3.08917C17.7839 2.49753 17.4754 1.99651 16.9745 1.49701C16.4735 0.998077 15.9707 0.690706 15.3782 0.462401C14.8055 0.240776 14.1512 0.0897451 13.1933 0.0483311C12.2333 0.00575684 11.9268 -0.00355957 9.48262 0.00108106C7.03902 0.00575684 6.73256 0.0162334 5.77262 0.0623232Z"
+                                      fill="#020144" />
+                                  </svg>
+                                </a>
+                              </span>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-3 py-4 text-sm text-center text-blue font-semibold bg-white rounded-3xl rounded-t-none">
+                              <div class="flex items-center justify-center">
+                                <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                  class="size-6 shrink-0">
+                              </div>
+                            </td>
+                            <td class="relative w-1/4 px-4 py-0 text-center bg-white rounded-3xl">
+                              <span class="relative size-full py-3 flex flex-col items-center justify-center gap-4">
+                                <div
+                                  class="bg-purple-100 text-purple text-center text-lg font-bold rounded-full py-1 px-5">
+                                  Premium</div>
+                                <p class="text-blue/60 font-bold text-center text-lg">Try it free for 7 days</p>
+                                <a href="#"
+                                  class="text-lg text-center text-white rounded-full px-8 w-full py-2 border-2 border-purple bg-purple hover:border-purple-700 active:shadow-none hover:text-white hover:bg-purple-700 hover:shadow-3 transition-all">Start
+                                  Trial</a>
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{{ end }}
