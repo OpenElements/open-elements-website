@@ -46,9 +46,11 @@ module.exports = {
       'slate': '#EBEBEE',
       'blue': '#020144',
       'green': {
+        50: '#5CBA9E1F',
         DEFAULT: '#5CBA9E',
         100: '#DEF1EC',
         200: '#BEE3D8',
+        300: '#53a78e',
       },
       'rose': {
         DEFAULT: '#E63277',
@@ -56,11 +58,16 @@ module.exports = {
       },
       'sky': {
         DEFAULT: '#5DB9F5',
-        100: '#DFF1FD'
+        100: '#DFF1FD',
+        200: '#54a7dd',
       },
       'yellow': {
         DEFAULT: '#F1E34B',
-        100: '#FCF9DB'
+        50: '#FCF9DB',
+        100: '#FCF9DB',
+        200: '#CDC13B',
+        300: '#E6D73D',
+        400: '#cfc237',
       },
       'purple': {
         DEFAULT: '#9492FD',
@@ -82,6 +89,10 @@ module.exports = {
         3: '2px 4px 22px rgba(117, 115, 255, 0.64)',
         4: '0px 0px 24px rgba(190, 227, 216, 0.6)',
         5: '0px 4px 20px 0px rgba(117, 115, 255, 0.22)',
+        6: '2px 4px 22px 0px rgba(205, 193, 59, 0.60)',
+        7: '2px 4px 22px 0px rgba(92, 186, 158, 0.60)',
+        8: '2px 4px 22px 0px rgba(93, 185, 245, 0.60)',
+        9: '2px 4px 12px 0px rgba(92, 186, 158, 0.70)',        
       }
     },
   },

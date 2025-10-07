@@ -1,0 +1,259 @@
+{{ define "main" }}
+{{ $underline := resources.Get "/illustrations/underline.svg" }}
+{{ $arrow45 := resources.Get "/illustrations/arrow-45.svg" }}
+{{ $round2 := resources.Get "/illustrations/round2.svg" }}
+{{ $plant1 := resources.Get "/images/p-1.png" }}
+{{ $plant2 := resources.Get "/images/p-2.png" }}
+{{ $plant3 := resources.Get "/images/p-3.png" }}
+{{ $y1tick := resources.Get "/icons/y-1-tick.svg" }}
+{{ $g1tick := resources.Get "/icons/g-1-tick.svg" }}
+{{ $b1tick := resources.Get "/icons/b-1-tick.svg" }}
+
+
+<div class="relative">
+    <div class="container mb-28">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col items-center justify-center sm:gap-5 gap-1 pt-16 pb-4 lg:pt-36 md:pt-28 sm:pt-24 sm:pb-12">
+                <h2 class="font-bold text-center sm:h3 text-lg text-green">Direkte Hilfe für Sie</h2>
+                <div class="relative flex flex-col items-center justify-center w-full">
+                  <h1 class="text-center h2">Nachhaltige Stärkung für Open Source.</h1>
+                  <img src="{{ $underline.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="absolute w-48 sm:-bottom-8 -bottom-4 sm:w-72 shrink-0">
+                </div>
+            </div>
+            <div class="relative flex flex-col text-base leading-7 gap-7 text-blue sm:text-center sm:mt-3 mt-6">
+                 <img src="{{ $arrow45.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="lg:absolute lg:inline hidden -left-[10%] -top-10 size-48">
+                 <img src="{{ $round2.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="lg:absolute lg:inline hidden -right-[15%] -top-10 size-48">
+                <p><b>Open Source</b> ist die Grundlage moderner Software, doch oft fehlt es an verlässlicher Unterstützung. Mit Support & Care für Apache Maven kombinieren wir professionelle Servicelevel mit einer klaren Mission: Alle Einnahmen fließen zurück in die Weiterentwicklung von Maven und das Open-Source-Ökosystem. Profitieren Sie von direkter Expertenhilfe und tragen Sie gleichzeitig zu nachhaltiger OSS-Infrastruktur bei.</p>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 lg:max-w-full max-w-sm mx-auto lg:gap-6 gap-9 lg:mt-20 mt-10">
+            <div class="flex flex-col items-center gap-8 justify-between border border-yellow-200/45 rounded-[30px] pb-5 pt-7 px-6 shadow-2xl shadow-yellow-200/20">
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="bg-yellow-50 inline-block rounded-full px-5 py-2 text-yellow-200 text-center xl:text-lg lg:text-base text-lg font-bold">
+                        Basis Subscription
+                    </div>
+                    <img src="{{ $plant1.RelPermalink }}" class="size-48 object-contain mt-2" alt="{{ i18n "altTexts.plant1" }}" />
+                    <ul class="flex flex-col gap-4 mt-2 text-sm text-blue">
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $y1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">4 Stunden Support pro Monat inklusive<sup>1</sup></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $y1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Reaktionszeit 1 Werktag<sup>2</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $y1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Supportanfrage per Helpdesk in Deutsch und Englisch3<sup>3</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $y1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   10% Rabatt auf jede weitere Support-Stunde
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $y1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $y1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    monatlicher Newsletter
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="text-lg w-full font-bold text-white text-center bg-yellow-300 rounded-full px-4 py-2 hover:bg-yellow-400 transition-all ease-in-out duration-150 active:shadow-none hover:shadow-6">See details</button>
+            </div>
+
+            <div class="flex flex-col items-center gap-8 justify-between border border-green/45 rounded-[30px] pb-5 pt-7 px-6 shadow-2xl shadow-green/20">
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="bg-green-50 inline-block rounded-full px-5 py-2 text-green text-center xl:text-lg lg:text-base text-lg font-bold">
+                        Standard Subscription
+                    </div>
+                    <img src="{{ $plant2.RelPermalink }}" class="size-48 object-contain mt-2" alt="{{ i18n "altTexts.plant1" }}" />
+                    <ul class="flex flex-col gap-4 mt-2 text-sm text-blue">
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">48 Stunden Support pro Monat inklusive<sup>1</sup></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Reaktionszeit 1 Werktag<sup>2</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Supportanfrage per Helpdesk in Deutsch und Englisch3<sup>3</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   15% Rabatt auf jede weitere Support-Stunde
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    monatlicher Newsletter
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    10% Trainingsrabatt
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $g1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="text-lg w-full font-bold text-white text-center bg-green rounded-full px-4 py-2 hover:bg-green-300 transition-all ease-in-out duration-150 hover:shadow-7 active:shadow-none">See details</button>
+            </div>
+
+            <div class="flex flex-col items-center gap-8 justify-between border border-sky/45 rounded-[30px] pb-5 pt-7 px-6 shadow-2xl shadow-sky/20">
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="bg-sky-100 inline-block rounded-full px-5 py-2 text-sky text-center xl:text-lg lg:text-base text-lg font-bold">
+                        Premium Subscription
+                    </div>
+                    <img src="{{ $plant3.RelPermalink }}" class="size-48 object-contain mt-2" alt="{{ i18n "altTexts.plant1" }}" />
+                    <ul class="flex flex-col gap-4 mt-2 text-sm text-blue">
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">8 Stunden Support pro Monat inklusive1<sup>1</sup></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                  Reaktionszeit <b>1 Stunde</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Supportanfrage per Helpdesk und <b>Hotline</b> in Deutsch und Englisch<sup>3</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   15% Rabatt auf jede weitere Support-Stunde
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                   Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    monatlicher Newsletter
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    10% Trainingsrabatt
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start gap-1.5">
+                                <img src="{{ $b1tick.RelPermalink }}" class="size-4 shrink-0 mt-0.5" alt="{{ i18n "altTexts.plant1" }}" />
+                                <p class="text-sm text-blue">
+                                    Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="text-lg w-full font-bold text-white text-center bg-sky rounded-full px-4 py-2 hover:bg-sky-200 transition-all ease-in-out duration-150 hover:shadow-8 active:shadow-none">See details</button>
+            </div>
+        </div>
+
+        <div class="border-2 border-dashed w-full border-green rounded-[30px] sm:p-10 p-5 mt-14 text-blue">
+            <ul class="flex flex-col gap-5">
+                <li>
+                    <sup class="font-semibold">1 </sup>Nicht genutzte Support-Stunden verfallen zum Monatsende - Ihr Beitrag unterstützt in diesem Fall direkt die Weiterentwicklung der betreffenden Open-Source-Komponenten.
+                </li>
+                <li>
+                    <sup class="font-semibold">2 </sup>Werktage sind Montag bis Freitag, mit Ausnahme gesetzlicher Feiertage in NRW
+                </li>
+                <li>
+                    <sup class="font-semibold">3 </sup>Als Helpdesk nutzen wir eine DSGVO-konforme, in der EU gehostete Lösung. Unsere Kund:innen erhalten individuelle Accounts, und die Kommunikation ist sowohl auf Deutsch als auch auf Englisch möglich.
+                </li>
+                <li>
+                    <sup class="font-semibold">4 </sup>Unsere Expertinnen sind Entwickler innen und technische Mitarbeitende, die direkt an den jeweiligen OSS-Projekten (z. B. als Committer oder Maintainer) mitwirken.
+                </li>
+                 <li>
+                    <sup class="font-semibold">5 </sup>5 5Für Webinare und individuelle Gespräche nutzen wir Zoom.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}
