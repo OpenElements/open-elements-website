@@ -1,99 +1,70 @@
 ---
 title: "Support & Care for Apache Maven™"
+showTitle: false
 description: "Support & Care for Apache Maven™ stärkt die Zukunft des Java-Ökosystems durch nachhaltige Förderung und transparente Entwicklung. Als erstes Projekt der Support & Care Initiative ermöglicht es die langfristige Unterstützung eines der wichtigsten Open-Source-Tools mit Fokus auf Sicherheit, LTS-Versionen und Community-Beteiligung."
 layout: "article"
 url: "/de/support-care-maven"
 newsletterPopup: true
-
 ---
 
+{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" alt="Support and Care for Apache Maven logo" width="100%" >}}
+
 **Open Elements** hat mit seinem Programm **Support & Care for Apache Maven™** einen entscheidenden Beitrag zur Sicherung eines zentralen Werkzeugs im Java-Ökosystem initiiert.
-Mit Unterstützung des [Sovereign Tech Agency](https://www.sovereign.tech/de) wird erstmals eine nachhaltige Förderung von Apache Maven ermöglicht, einem der meistgenutzten Open-Source-Projekte weltweit.
+Mit Unterstützung des [Sovereign Tech Agency](https://www.sovereign.tech/de) wird erstmals eine nachhaltige Förderung von [Apache Maven]({{< relref "articles/what-is-maven" >}}) ermöglicht, einem der meistgenutzten Open-Source-Projekte weltweit.
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
+Nun bieten wir Unternehmen und Organisationen die Möglichkeit, sich an diesem wichtigen Vorhaben zu beteiligen.
+Durch den Abschluss eines **Support & Care Abonnements** tragen Sie dazu bei, die langfristige Stabilität und Weiterentwicklung von Apache Maven zu sichern.
+Ihre Unterstützung hilft, kritische Aufgaben wie Sicherheitsupdates, Bugfixes und die Entwicklung neuer Features zu finanzieren.
 
-## Die Bedeutung von Apache Maven
-Apache Maven ist mehr als nur ein Build-Tool – es ist ein unverzichtbares Rückgrat für die Entwicklung und Verwaltung von Java-Projekten.
-Es unterstützt Entwickler, indem es wiederkehrende Aufgaben wie Dependency-Management, Build-Prozesse und Testing automatisiert.
-Mit rund 75 % der Java-Projekte, die Maven nutzen, und durchschnittlich 1,97 Milliarden Downloads pro Jahr ist Maven ein zentraler Bestandteil der globalen Java-Community.
-Es wird in Unternehmen jeder Größe eingesetzt, von Start-ups bis zu globalen Konzernen, und hat sich als Standard für die Verwaltung von Java-Projekten etabliert.
+## Unser Subscriptionmodell für Apache Maven™
 
-[Docker](https://www.docker.com), ein weltweit führendes Unternehmen im Bereich moderner Softwareentwicklungs-Tools, betont die Relevanz von Maven:
-> Das Open Source Werkzeug Maven ist für uns bei Docker unverzichtbar, da es als Industriestandard-Technologie im Java-Ökosystem eingesetzt wird.
-> Jede Veröffentlichung unserer Software Testcontainers for Java wird auf ihre Kompatibilität mit aktuellen Maven-Versionen überprüft.
-> Eine nachhaltige Förderung wie die von Open Elements angestoßene ist entscheidend für die langfristige Stabilität kritischer Open Source Komponenten
+Wir bieten 3 verschiedene Pakete an, die auf die Bedürfnisse unterschiedlicher Nutzergruppen zugeschnitten sind.
+Gerne beraten wir Sie, welches Paket am besten zu Ihren Anforderungen passt.
 
-Weitere Details über Apache Maven finden Sie [hier]({{< relref "articles/what-is-maven" >}}) – von seiner Funktionsweise über Vorteile bis hin zur Community, die das Projekt trägt.
+{{< support-care-subscription-packages >}}
+
+<p style="text-align: center; font-weight: bold;">Wir freuen uns darauf, gemeinsam mit Ihnen die Zukunft von Apache Maven zu gestalten!</p>
 
 ## Unterstützung durch die Sovereign Tech Agency
+
 Die Sovereign Tech Agency (STA) ist ein Förderprogramm des deutschen Bundesministeriums für Wirtschaft und Klimaschutz, das sich der nachhaltigen Unterstützung von Open-Source-Software widmet.
 Ziel des Programms ist es, kritische digitale Infrastrukturen langfristig zu sichern und die Resilienz des europäischen Technologieökosystems zu stärken.
 Projekte, in die STA investiert, müssen eine wesentliche Bedeutung für Wirtschaft und Gesellschaft haben und gleichzeitig nachhaltige Entwicklungsmethoden verfolgen.
 
-{{< centered-image src="diagram.png" alt="How Support and Care for Apache Maven is payed " width="100%" >}}
+Die STA investiert seit 2024 in das Projekt Support & Care for Apache Maven™ wodurch eine nachhaltige Kostenteilung zwischen öffentlichen Mitteln und kommerziellen Beiträgen entsteht.
+Die Investitionen der Sovereign Tech Agency legen den Grundstein für eine nachhaltige Zukunft des Projekts und des gesamten Java-Ökosystems.
+Für die langfristige Sicherung von Apache Maven ist allerdings eine breite Unterstützung durch die Community und Unternehmen entscheidend.
 
-Open Elements hat den Förderantrag für Support & Care for Apache Maven™ im Rahmen des STA erfolgreich eingereicht. Dieser Prozess umfasste mehrere Schritte:
-
-- **Bezahlung von Entwicklern und Maintainern:** Erstmals werden Entwickler für ihre Arbeit an Maven bezahlt, um kritische Aufgaben wie Sicherheitsupdates,
-  Bugfixes und die Weiterentwicklung des Tools effizient umzusetzen.
-- **Erstellung einer Roadmap und Meilensteinplanung:** In Zusammenarbeit mit der Community werden die Aufgabenpakete priorisiert.
-  Die Ziele und Fortschritte werden transparent in einem [öffentlichen GitHub-Repository](https://github.com/support-and-care/maven-support-and-care) dokumentiert.
-- **Fokus auf Sicherheit:** Die Komponenten von Maven werden mit SBOMs (Software Bill of Materials) sowie [OpenSSF-Scorecards](https://openssf.org/projects/scorecard/) ausgestattet.
-  Diese Maßnahmen erfüllen die Anforderungen aktueller Vorschriften wie der [US-amerikanischen Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
-  und des [EU Cyber Resilience Acts](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act).
-- **Dokumentation und Tutorials:** Neben technischen Dokumentationen werden auch Tutorials für Einsteiger entwickelt, um den Zugang zu Maven zu erleichtern.
-  Diese Inhalte werden kostenlos in Deutsch und Englisch zur Verfügung stehen.
-- **Langfristige Stabilität durch LTS-Versionen:** Es werden Long Term Support-Versionen (LTS) für die meistgenutzten Maven-Versionen bereitgestellt,
-  die insbesondere Unternehmen eine stabile und planbare Nutzung ermöglichen.
-- **Koordination und Organisation:** Ein kleiner Teil der Fördermittel wird für die Verwaltung des Projekts genutzt, um sicherzustellen, dass die Mittel effizient und zielgerichtet eingesetzt werden.
-
-Diese gezielten Maßnahmen sichern nicht nur die technische Weiterentwicklung von Maven, sondern legen den Grundstein für eine nachhaltige Zukunft des Projekts und des gesamten Java-Ökosystems.
-
-## Transparenz und Nachhaltigkeit im Fokus
-
-Ein zentraler Bestandteil des Programms ist die **transparente Verwaltung** der Fördermittel.
-Open Elements verpflichtet sich, **100 % der finanziellen Unterstützung direkt in die Entwicklung von Maven** fließen zu lassen.
-Nur ein kleiner Anteil der Ressourcen wird für die Organisation und Verwaltung des Projekts verwendet.
-
-{{< centered-image src="roadmap.png" alt="Roadmap of Support & Care for Apache Maven" width="100%" >}}
-
-Die Fortschritte des Programms werden über eine öffentliche Roadmap und regelmäßige Updates im [GitHub-Repository](https://github.com/support-and-care/maven-support-and-care) geteilt.
-Die Community ist eingeladen, Vorschläge und Feedback einzubringen, um gemeinsam die Zukunft von Maven zu gestalten.
+{{< centered-image src="diagram-1.png" alt="How Support and Care for Apache Maven is payed " width="100%" >}}
 
 ## Wer arbeitet an Support & Care for Apache Maven™?
 
-Sowohl angestellte von Open Elements auch als externe Entwickler und Maintainer arbeiten gemeinsam an der Umsetzung des Förderprojektes.
-Während das Projektmanagement und die Koordination von Open Elements übernommen wird, sind vor allem externe Entwickler und Maintainer von Apache Maven für die technische Umsetzung verantwortlich.
-Hierbei arbeitet Open Elements nicht nur nah mit einzelnen Entwicklern, sondern auch mit der gesamten Maven-Community, zusammen.
-
-Falk Sippach von der embarc Software Consulting GmbH beschreibt auf [Heise Developer](https://www.heise.de/blog/Java-Einladung-zur-Mitgestaltung-des-Programms-Support-Care-for-Apache-Maven-9718336.html) die Zusammenarbeit wie folgt:
-> Das Vertrauen, das die Maven-Community hierbei Open Elements als transparenten Player im Open Source Bereich entgegenbringt, ist einmalig und ermöglicht dieses Vorhaben überhaupt erst.
-
-{{< centered-image src="/illustrations/general/people-network.svg" width="60%" alt="More people start to care">}}
+Sowohl angestellte von Open Elements auch als externe Entwickler und Maintainer arbeiten gemeinsam an Support & Care for Apache Maven™.
+Während das Projektmanagement und die Koordination von Open Elements übernommen wird, arbeiten neben unseren Entwickler:innen auch externe, langjährige Maintainer von Apache Maven an der technischen Umsetzung.
+Diese enge Zusammenarbeit mit der Apache Software Foundation und der aktiven Community von Apache Maven stellt sicher, dass die Weiterentwicklung des Projekts im Einklang mit den Bedürfnissen der Nutzer steht.
 
 ## Ein Modellprojekt für Open Source
 
 Mit Support & Care for Apache Maven™ setzt Open Elements ein starkes Zeichen für die nachhaltige Unterstützung von Open-Source-Projekten.
 Dieses Programm dient als Pilotprojekt innerhalb der Support & Care Initiative von Open Elements, die darauf abzielt, in weitere kritische Open-Source-Komponenten zu investieren.
 
-Das Konzept vereint öffentliche Förderung, transparente Mittelverwaltung und eine aktive Community-Beteiligung.
+Das Konzept vereint öffentliche Förderung, kommerziellen Support, transparente Mittelverwaltung und eine aktive Community-Beteiligung.
 Es zeigt, wie essenzielle Open-Source-Projekte zukunftssicher gestaltet und gleichzeitig Innovationen gefördert werden können – ein Ansatz, der Modellcharakter für andere Open-Source-Projekte hat.
-
-## Ein Schritt Richtung Nachhaltigkeit
-
-Support & Care for Apache Maven™ ist mehr als nur ein Förderprojekt – es ist der erste Schritt der umfassenden Support & Care Initiative von Open Elements.
-Diese Initiative zielt darauf ab, nachhaltig in weitere kritische Open-Source-Komponenten zu investieren und zukunftssicher zu gestalten.
 
 {{< centered-image src="/illustrations/general/many-care-tree.svg" width="60%" alt="More people start to care">}}
 
-Mit dieser wegweisenden Maßnahme zeigt Open Elements, wie öffentliche Förderung, transparente Mittelverwaltung und aktive Community-Beteiligung erfolgreich kombiniert werden können.
-Das Programm dient als Modell für andere Open-Source-Projekte und unterstreicht die Bedeutung gemeinsamer Verantwortung für die digitale Infrastruktur der Zukunft.
 
-## Mitwirken durch die Community
-
-Wir laden Entwickler und Interessierte ein, an der Initiative teilzunehmen, Feedback zu geben und Teil unserer Community zu werden.
-Kontaktieren Sie uns unter [info@open-elements.com](mailto:info@open-elements.com), um mehr Informationen zu erhalten und zu erfahren, wie Sie beitragen können.
-
-## Warenzeichen
+## Anmerkungen
 
 Apache&trade; und Apache Maven&trade; sind Warenzeichen der Apache Software Foundation.
+
+<sup class="font-semibold">1</sup>Nicht genutzte Support-Stunden verfallen zum Monatsende - Ihr Beitrag unterstützt in diesem Fall direkt die Weiterentwicklung der betreffenden Open-Source-Komponenten.
+
+<sup class="font-semibold">2</sup>Werktage sind Montag bis Freitag, mit Ausnahme gesetzlicher Feiertage in NRW.
+
+<sup class="font-semibold">3</sup>Als Helpdesk nutzen wir eine DSGVO-konforme, in der EU gehostete Lösung. Unsere Kund:innen erhalten individuelle Accounts, und die Kommunikation ist sowohl auf Deutsch als auch auf Englisch möglich.
+
+<sup class="font-semibold">4</sup>Unsere Expertinnen sind Entwickler innen und technische Mitarbeitende, die direkt an den jeweiligen OSS-Projekten (z. B. als Committer oder Maintainer) mitwirken.
+
+<sup class="font-semibold">5</sup>Für Webinare und individuelle Gespräche nutzen wir Zoom.
+
