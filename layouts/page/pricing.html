@@ -1,11 +1,8 @@
 {{ define "main" }}
 {{ $underline := resources.Get "/illustrations/line-p.svg" }}
-{{ $arrow45 := resources.Get "/illustrations/arrow-45.svg" }}
-{{ $round2 := resources.Get "/illustrations/round2.svg" }}
+{{ $arrowPink := resources.Get "/illustrations/pink-arrow.svg" }}
+{{ $round2 := resources.Get "/illustrations/circles-222.svg" }}
 {{ $percent := resources.Get "/illustrations/percent.svg" }}
-{{ $plant1 := resources.Get "/images/p-1.png" }}
-{{ $plant2 := resources.Get "/images/p-2.png" }}
-{{ $plant3 := resources.Get "/images/p-3.png" }}
 {{ $y1tick := resources.Get "/icons/y-1-tick.svg" }}
 {{ $g1tick := resources.Get "/icons/g-1-tick.svg" }}
 {{ $b1tick := resources.Get "/icons/b-1-tick.svg" }}
@@ -16,25 +13,23 @@
 
 <div class="relative">
   <div class="sm:container mb-28">
-    <div class="max-w-5xl mx-auto sm:px-0 px-6">
-      <div
-        class="flex flex-col items-center justify-center sm:gap-5 gap-1 pt-16 pb-4 lg:pt-36 md:pt-28 sm:pt-24 sm:pb-12">
-        <div class="relative flex flex-col items-center justify-center w-full">
-          <h1 class="text-center h2">Let's get <span class="text-purple"> you started</span> with Buffer</h1>
-          <p class="text-blue mt-4 text-center">
-            Simple, <span class="font-medium">all-inclusive</span> pricing. <span class="font-medium">No "per user"
-              costs</span>. <br class="sm:hidden block" /> <span class="font-medium">No credit card</span> required to
-            get started.
-          </p>
-          <img src="{{ $underline.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
-            class="absolute w-48 sm:-bottom-8 -bottom-4 sm:w-72 shrink-0">
+    <div class="">
+      <div class="max-w-5xl mx-auto sm:px-0 px-6 relative">
+        <img src="{{ $round2.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="lg:absolute lg:inline hidden -bottom-12 -left-[12%] size-36">
+             <img src="{{ $arrowPink.RelPermalink }}" alt="{{ i18n "altTexts.underline" }}" class="lg:absolute lg:inline hidden -bottom-12 -right-[10%] size-48">
+        <div
+          class="flex flex-col items-center justify-center sm:gap-5 gap-1 pt-16 pb-4 lg:pt-36 md:pt-28 sm:pt-24 sm:pb-12">
+          <div class="relative flex flex-col items-center justify-center w-full">
+            <h1 class="text-center h2">Let's get <span class="text-purple"> you started</span> with Buffer</h1>
+            <p class="text-blue mt-4 text-center">
+              Simple, <span class="font-medium">all-inclusive</span> pricing. <span class="font-medium">No "per user"
+                costs</span>. <br class="sm:hidden block" /> <span class="font-medium">No credit card</span> required to
+              get started.
+            </p>
+            <img src="{{ $underline.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+              class="absolute w-48 sm:-bottom-8 -bottom-4 sm:w-72 shrink-0">
+          </div>
         </div>
-      </div>
-      <div class="relative flex flex-col text-base leading-7 gap-7 text-blue sm:text-center sm:mt-3 mt-6">
-        <img src="{{ $arrow45.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
-          class="lg:absolutev hidden -left-[10%] -top-10 size-48">
-        <img src="{{ $round2.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
-          class="lg:absolute hidden -right-[15%] -top-10 size-48">
       </div>
     </div>
 
