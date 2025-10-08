@@ -25,7 +25,7 @@ To achieve this goal, improving the security levels of the supply chain in softw
 But what is part of a software supply chain?
 In general, everything touching anything from the software, including the IDE, necessary software libraries, and the used CI/CD pipeline, is part of this chain.
 And with it as part of the chain, everything is also a worthy target for an attack.
-[Exploit statistics](https://www.sonatype.com/state-of-the-software-supply-chain/2024/10-year-look) and even older exploits like CVE-2002-0083 are showing that even a single bit will decide whether a piece of software,
+[Exploit statistics](https://www.sonatype.com/state-of-the-software-supply-chain/2024/10-year-look) and even older exploits like [CVE-2002-0083](https://www.cvedetails.com/cve/CVE-2002-0083/) are showing that even a single bit will decide whether a piece of software,
 OpenSSH, in that particular example, is secure or may be used to manipulate code or execute malicious software. Therefore, it is essential to be aware of the risks that a software supply chain can involve.
 {{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/software-supply-chain.png" width="80%" showCaption="false" alt="Software Supply Chain Security">}}
 
@@ -38,7 +38,7 @@ The *install* command makes sure that this artifact is also moved to my local Ma
 Luckily, there already exists such a tool: *diffoscope*.
 
 ## diffoscope
-The actively maintained open-source tool diffoscope can compare two files or archives bit-by-bit and output a list of differences. Plenty of file types are supported, even images like .png or whole filesystems, see (https://diffoscope.org/) for details.
+The actively maintained open-source tool [diffoscope](https://diffoscope.org/) can compare two files or archives bit-by-bit and output a list of differences. Plenty of file types are supported, even images like .png or whole filesystems.
 Diffoscope can be executed on various operating systems, as well as in a prepared Docker image, and is licensed under the GPL-3.
 Now that we have the context of our software project, we know what we need to do to hopefully achieve a reproducible build, and we know the tool that can compare our builds. So are we done yet?
 Maybe we should stick to our context for a moment. Maven, as a Java build tool, has a broad community and ecosystem, speaking of plugins and extensions.
