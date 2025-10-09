@@ -20,12 +20,12 @@ Our [Support and Care]({{< relref "support-care-maven" >}}) project got financia
 One task in the *Security of the Supply Chain* working package was to share information about existing solutions and what how to improve existing projects.
 
 ## Security of the Supply Chain in software development
-Since December 2014, the Cyber Resilience Act has been active as the *first European regulation to set a minimum level of cybersecurity for all connected products available*.(https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Cyber_Resilience_Act/cyber_resilience_act_node.html)
+Since December 2014, the [Cyber Resilience Act](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Cyber_Resilience_Act/cyber_resilience_act_node.html) has been active as the *first European regulation to set a minimum level of cybersecurity for all connected products available*.
 To achieve this goal, improving the security levels of the supply chain in software projects is a significant milestone.
 But what is part of a software supply chain?
 In general, everything touching anything from the software, including the IDE, necessary software libraries, and the used CI/CD pipeline, is part of this chain.
 And with it as part of the chain, everything is also a worthy target for an attack.
-Exploit statistics (https://www.sonatype.com/state-of-the-software-supply-chain/2024/10-year-look) and even older exploits like CVE-2002-0083 are showing that even a single bit will decide whether a piece of software,
+[Exploit statistics](https://www.sonatype.com/state-of-the-software-supply-chain/2024/10-year-look) and even older exploits like [CVE-2002-0083](https://www.cvedetails.com/cve/CVE-2002-0083/) are showing that even a single bit will decide whether a piece of software,
 OpenSSH, in that particular example, is secure or may be used to manipulate code or execute malicious software. Therefore, it is essential to be aware of the risks that a software supply chain can involve.
 {{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/software-supply-chain.png" width="80%" showCaption="false" alt="Software Supply Chain Security">}}
 
@@ -38,17 +38,17 @@ The *install* command makes sure that this artifact is also moved to my local Ma
 Luckily, there already exists such a tool: *diffoscope*.
 
 ## diffoscope
-The actively maintained open-source tool diffoscope can compare two files or archives bit-by-bit and output a list of differences. Plenty of file types are supported, even images like .png or whole filesystems, see (https://diffoscope.org/) for details.
+The actively maintained open-source tool [diffoscope](https://diffoscope.org/) can compare two files or archives bit-by-bit and output a list of differences. Plenty of file types are supported, even images like .png or whole filesystems.
 Diffoscope can be executed on various operating systems, as well as in a prepared Docker image, and is licensed under the GPL-3.
 Now that we have the context of our software project, we know what we need to do to hopefully achieve a reproducible build, and we know the tool that can compare our builds. So are we done yet?
 Maybe we should stick to our context for a moment. Maven, as a Java build tool, has a broad community and ecosystem, speaking of plugins and extensions.
 The Maven community has already prepared something to make things a bit easier:
 
 ## Maven Artifact Plugin
-The Maven Artifact plugin serves as a wrapper around *diffoscope* that can be easily integrated into any Maven project. (https://github.com/apache/maven-artifact-plugin)
+The [Maven Artifact plugin](https://github.com/apache/maven-artifact-plugin) serves as a wrapper around *diffoscope* that can be easily integrated into any Maven project.
 The plugin can compare the artifact we build against locally installed variants or those located in a remote repository, such as Maven Central or the company's Nexus.
 It does even more. While comparing, it generates a *buildinfo* file. As long as we are developing some open-source artifact or component,
-we can put this file into the reproducible central project on GitHub (https://github.com/apache/maven-artifact-plugin)
+we can put this file into the reproducible central project on GitHub.
 
 ## Reproducible Central
 Again, there is something already prepared for our use case: the GitHub repository *Reproducible-Central*. On the overview page, we find a list of 900 projects that are already reproducible or at least on their way to becoming fully reproducible.
@@ -61,13 +61,13 @@ Of course, having a Maven build that never fails is an auspicious start. But sad
 In our example, a Java project built with Maven, we have plenty of risk factors that may prevent us from having a real reproducible build.
 Let's start with the JVM as an example. When I rebuild the exact project with different JVMs, my build is **not** reproducible. The reason is quite simple: Different JVMs produce different bytecode from the same Java files. Even some dependencies behave differently depending on the Java version they are built with.
 At last, it all depends on your project. Java code, dependencies, and even Maven itself may contain pitfalls such as generated content, timestamps, or even differing usages of Maven as a standalone version or an Eclipse-built-in version.
-At this point, I recommend starting by using the maven plugin as described here(https://maven.apache.org/guides/mini/guide-reproducible-builds.html) and trying to understand what is preventing you from having a fully reproducible build. Unfortunately, reproducibility can be a huge task to fulfill.
+At this point, I recommend starting by using the maven plugin as described [here](https://maven.apache.org/guides/mini/guide-reproducible-builds.html) and trying to understand what is preventing you from having a fully reproducible build. Unfortunately, reproducibility can be a huge task to fulfill.
 If you are more interested in what can possibly go wrong, you can find plenty of documentation and academic papers even outside the Java and Maven ecosystem:
-https://reproducible-builds.org/docs/publications/ or https://arxiv.org/html/2504.21679v1 as a concrete example may be good starting points.
+Publication from [reproducible-builds.org](https://reproducible-builds.org/docs/publications) or [this whitepaper](https://arxiv.org/html/2504.21679v1) may be good starting points.
 
 ## Putting all pieces together
 Let's assume we have a Java project that is built with Maven. To not mix too many things up, we start with common approach:
-We go to the Spring initializr project (https://start.spring.io/) and generate a Maven POM. To keep it simple but pragmatic, we only use Spring Web as feature. 
+We go to the [Spring initializr project](https://start.spring.io/) and generate a Maven POM. To keep it simple but pragmatic, we only use Spring Web as feature. 
 After importing the project in our preferred IDE, we can build this project as usual with _mvn clean install_.
 In order to use the Artfiact Plugin mentioned above we need to add it to the POM:
 {{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/artifact-plugin.png" width="80%" showCaption="false" alt="Maven artifact plugin in POM">}}
@@ -76,7 +76,7 @@ With _mvn verify artifact:compare_, we can run the plugin and let it check if th
 As expected, we don't have a reproducible build, but the console is telling us at least what is not fully reproducible.
 The POM looks fine, but our built jar seems to have an issue with the build timestamp. 
 (Screenshot console)
-Therefore, let's add the property project.build.outputTimestamp to the POM with a default value as mentioned on https://maven.apache.org/guides/mini/guide-reproducible-builds.html.
+Therefore, let's add the property project.build.outputTimestamp to the POM with a default value as mentioned on [this guide](https://maven.apache.org/guides/mini/guide-reproducible-builds.html).
 Running _mvn verify artifact:compare_ again shows: The build is now reproducible!
 That was easy, maybe a bit too easy? Well, this is a brand-new project without any technical debt or source code.
 Let's try something from reproducible-central, that is not reproducible: What about Jetty 12.1.1?
@@ -98,6 +98,7 @@ Another timestamp issue! Let's try to temporarily fix the issue by entering a st
 After generating two new jar files with the approach described before, I compared them again.
 Hurray, both jetty.jar and jetty-sources.jar are now considered reproducible!
 Therefore, the open issue, at least for this submodule, is to find a suitable solution for this always-varying timestamp. Since I am not a contributor to this project, I cannot decide whether it is a good idea to use a static value here in general or if other parts are relying on this number.
+But, of course, I contacted one of the committers about the issue.
 Reproducibility can be a challenging goal to achieve, but now you should be best prepared to start with reproducible builds and how to improve.
 
 ## Summary
