@@ -1,7 +1,7 @@
 ---
 title: "Support & Care for Apache Maven™"
 showTitle: false
-description: "Support & Care for Apache Maven™ stärkt die Zukunft des Java-Ökosystems durch nachhaltige Förderung und transparente Entwicklung. Als erstes Projekt der Support & Care Initiative ermöglicht es die langfristige Unterstützung eines der wichtigsten Open-Source-Tools mit Fokus auf Sicherheit, LTS-Versionen und Community-Beteiligung."
+description: "Support & Care for Apache Maven™ stärkt die Zukunft des Java-Ökosystems durch nachhaltige Förderung und transparente Entwicklung. Als erstes Projekt der Support & Care-Initiative ermöglicht es die langfristige Unterstützung eines der wichtigsten Open-Source-Tools mit Fokus auf Sicherheit, LTS-Versionen und Community-Beteiligung."
 layout: "article"
 url: "/de/support-care-maven"
 newsletterPopup: true
@@ -31,15 +31,15 @@ Die Sovereign Tech Agency (STA) ist ein Förderprogramm des deutschen Bundesmini
 Ziel des Programms ist es, kritische digitale Infrastrukturen langfristig zu sichern und die Resilienz des europäischen Technologieökosystems zu stärken.
 Projekte, in die STA investiert, müssen eine wesentliche Bedeutung für Wirtschaft und Gesellschaft haben und gleichzeitig nachhaltige Entwicklungsmethoden verfolgen.
 
-Die STA investiert seit 2024 in das Projekt Support & Care for Apache Maven™ wodurch eine nachhaltige Kostenteilung zwischen öffentlichen Mitteln und kommerziellen Beiträgen entsteht.
+Die STA investiert seit 2024 in das Projekt Support & Care for Apache Maven™, wodurch eine nachhaltige Kostenteilung zwischen öffentlichen Mitteln und kommerziellen Beiträgen entsteht.
 Die Investitionen der Sovereign Tech Agency legen den Grundstein für eine nachhaltige Zukunft des Projekts und des gesamten Java-Ökosystems.
 Für die langfristige Sicherung von Apache Maven ist allerdings eine breite Unterstützung durch die Community und Unternehmen entscheidend.
 
-{{< centered-image src="diagram-1.png" alt="How Support and Care for Apache Maven is payed " width="100%" >}}
+{{< centered-image src="diagram-1.png" alt="How Support and Care for Apache Maven is paid " width="100%" >}}
 
 ## Wer arbeitet an Support & Care for Apache Maven™?
 
-Sowohl angestellte von Open Elements auch als externe Entwickler und Maintainer arbeiten gemeinsam an Support & Care for Apache Maven™.
+Sowohl Angestellte von Open Elements als auch externe Entwickler und Maintainer arbeiten gemeinsam an Support & Care for Apache Maven™.
 Während das Projektmanagement und die Koordination von Open Elements übernommen wird, arbeiten neben unseren Entwickler:innen auch externe, langjährige Maintainer von Apache Maven an der technischen Umsetzung.
 Diese enge Zusammenarbeit mit der Apache Software Foundation und der aktiven Community von Apache Maven stellt sicher, dass die Weiterentwicklung des Projekts im Einklang mit den Bedürfnissen der Nutzer steht.
 
@@ -58,13 +58,13 @@ Es zeigt, wie essenzielle Open-Source-Projekte zukunftssicher gestaltet und glei
 
 Apache&trade; und Apache Maven&trade; sind Warenzeichen der Apache Software Foundation.
 
-<sup class="font-semibold">1</sup>Nicht genutzte Support-Stunden verfallen zum Monatsende - Ihr Beitrag unterstützt in diesem Fall direkt die Weiterentwicklung der betreffenden Open-Source-Komponenten.
+<sup class="font-semibold">1</sup>Nicht genutzte Support-Stunden verfallen zum Monatsende – Ihr Beitrag unterstützt in diesem Fall direkt die Weiterentwicklung der betreffenden Open-Source-Komponenten.
 
 <sup class="font-semibold">2</sup>Werktage sind Montag bis Freitag, mit Ausnahme gesetzlicher Feiertage in NRW.
 
 <sup class="font-semibold">3</sup>Als Helpdesk nutzen wir eine DSGVO-konforme, in der EU gehostete Lösung. Unsere Kund:innen erhalten individuelle Accounts, und die Kommunikation ist sowohl auf Deutsch als auch auf Englisch möglich.
 
-<sup class="font-semibold">4</sup>Unsere Expertinnen sind Entwickler innen und technische Mitarbeitende, die direkt an den jeweiligen OSS-Projekten (z. B. als Committer oder Maintainer) mitwirken.
+<sup class="font-semibold">4</sup>Unsere Expertinnen sind Entwickler innen und technische Mitarbeitende, die direkt an den jeweiligen OSS-Projekten (z. B. als Committer oder Maintainer) mitwirken.
 
 <sup class="font-semibold">5</sup>Für Webinare und individuelle Gespräche nutzen wir Zoom.
 
