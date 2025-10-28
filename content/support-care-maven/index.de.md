@@ -16,7 +16,10 @@ Nun bieten wir Unternehmen und Organisationen die Möglichkeit, sich an diesem w
 Durch den Abschluss eines **Support & Care Abonnements** tragen Sie dazu bei, die langfristige Stabilität und Weiterentwicklung von Apache Maven zu sichern.
 Ihre Unterstützung hilft, kritische Aufgaben wie Sicherheitsupdates, Bugfixes und die Entwicklung neuer Features zu finanzieren.
 
-## Unser Subscriptionmodell für Apache Maven™
+Zusätzlich zur Unterstützung der communitygetriebenen Weiterentwicklung bietet Ihnen ein **Support & Care Abonnement** die Möglichkeit, direkt auf unsere ExpertInnen und Maintainer
+zugreifen zu können, um Bugfixes priorisiert zu lösen oder Sie bei anderen Themen rund um Apache Maven™ zu unterstützten.
+
+## Unser Subscription-Modell für Apache Maven™
 
 Wir bieten 3 verschiedene Pakete an, die auf die Bedürfnisse unterschiedlicher Nutzergruppen zugeschnitten sind.
 Gerne beraten wir Sie, welches Paket am besten zu Ihren Anforderungen passt.
@@ -39,7 +42,7 @@ Für die langfristige Sicherung von Apache Maven ist allerdings eine breite Unte
 
 ## Wer arbeitet an Support & Care for Apache Maven™?
 
-Sowohl Angestellte von Open Elements als auch externe Entwickler und Maintainer arbeiten gemeinsam an Support & Care for Apache Maven™.
+Sowohl Angestellte von Open Elements als auch externe EntwicklerInnen und Maintainer arbeiten gemeinsam an Support & Care for Apache Maven™.
 Während das Projektmanagement und die Koordination von Open Elements übernommen wird, arbeiten neben unseren Entwickler:innen auch externe, langjährige Maintainer von Apache Maven an der technischen Umsetzung.
 Diese enge Zusammenarbeit mit der Apache Software Foundation und der aktiven Community von Apache Maven stellt sicher, dass die Weiterentwicklung des Projekts im Einklang mit den Bedürfnissen der Nutzer steht.
 
