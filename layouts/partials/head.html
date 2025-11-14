@@ -4,7 +4,6 @@
 {{ $style := $css | resources.Minify -}}
 
 <head>
-  {{ partial "google.html" . }}
   {{ partial "brevo.html" . }}
   {{ partial "plausible.html" . }}
   {{ if .Params.Description -}}
