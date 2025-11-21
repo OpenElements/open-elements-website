@@ -44,3 +44,37 @@ underline = "Grafisches Element zum Unterstreichen des Textes"
 other = "Vorlesung zu Digital Trust"
 [newsletter]
 other = "Unser Newsletter"
+
+[support_care.subscription]
+contactUs = "Kontaktieren Sie uns"
+
+[support_care.subscription.basic]
+name = "Basis Subscription"
+bulletpoint1 = "4 Stunden Support pro Monat inklusive<sup>1</sup>"
+bulletpoint2 = "Reaktionszeit 1 Werktag<sup>2</sup>"
+bulletpoint3 = "Supportanfrage per Helpdesk in Deutsch und Englisch<sup>3</sup>"
+bulletpoint4 = "10% Rabatt auf jede weitere Support-Stunde"
+bulletpoint5 = "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>"
+bulletpoint6 = "monatlicher Newsletter"
+
+[support_care.subscription.standard]
+name = "Standard Subscription"
+bulletpoint1 = "8 Stunden Support pro Monat inklusive<sup>1</sup>"
+bulletpoint2 = "Reaktionszeit 1 Werktag<sup>2</sup>"
+bulletpoint3 = "Supportanfrage per Helpdesk in Deutsch und Englisch<sup>3</sup>"
+bulletpoint4 = "15% Rabatt auf jede weitere Support-Stunde"
+bulletpoint5 = "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>"
+bulletpoint6 = "monatlicher Newsletter"
+bulletpoint7 = "10% Trainingsrabatt"
+bulletpoint8 = "Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>"
+
+[support_care.subscription.premium]
+name = "Premium Subscription"
+bulletpoint1 = "8 Stunden Support pro Monat inklusive<sup>1</sup>"
+bulletpoint2 = "Reaktionszeit <b>1 Stunde</b>"
+bulletpoint3 = "Supportanfrage per Helpdesk und <b>Hotline</b> in Deutsch und Englisch<sup>3</sup>"
+bulletpoint4 = "15% Rabatt auf jede weitere Support-Stunde"
+bulletpoint5 = "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>"
+bulletpoint6 = "monatlicher Newsletter"
+bulletpoint7 = "10% Trainingsrabatt"
+bulletpoint8 = "Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>"
