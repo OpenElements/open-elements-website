@@ -48,3 +48,8 @@ other = "Unser Newsletter"
 [support_care.subscription.basic]
 name = "Basis Subscription"
 bulletpoint1 = "4 Stunden Support pro Monat inklusive<sup>1</sup>"
+bulletpoint2 = "Reaktionszeit 1 Werktag<sup>2</sup>"
+bulletpoint3 = "Supportanfrage per Helpdesk in Deutsch und Englisch<sup>3</sup>"
+bulletpoint4 = "10% Rabatt auf jede weitere Support-Stunde"
+bulletpoint5 = "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>"
+bulletpoint6 = "monatlicher Newsletter"
