@@ -2,14 +2,14 @@
     <div class="flex flex-col items-center gap-8 justify-between border border-yellow-200/45 rounded-[30px] pb-5 pt-7 px-6 shadow-2xl shadow-yellow-200/20">
         <div class="flex flex-col gap-3 items-center">
             <div class="bg-yellow-50 inline-block rounded-full px-5 py-2 text-yellow-200 text-center xl:text-lg lg:text-base text-lg font-bold">
-                {{ i18n "support_care.subscription.basic.name" }}
+                {{ i18n "support_care.subscription.basic.name" | safeHTML }}
             </div>
             <img src="/illustrations/support-care-subscription/basic.svg" class="size-48 object-contain mt-2" alt="{{ i18n " altTexts.plant1" }}" />
             <ul class="flex flex-col mt-2 text-sm text-blue no-list-style-type">
                 <li>
                     <div class="flex items-start gap-1.5">
                         <img src="/illustrations/general/yellow-checkmark.svg" class="size-4 shrink-0 mt-0.5" alt="{{ i18n " altTexts.plant1" }}" />
-                        <p class="text-sm text-blue m-0 pt-0">{{ i18n "support_care.subscription.basic.bulletpoint1" }}</p>
+                        <p class="text-sm text-blue m-0 pt-0">{{ i18n "support_care.subscription.basic.bulletpoint1" | safeHTML }}</p>
                     </div>
                 </li>
                 <li>
