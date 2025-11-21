@@ -69,12 +69,15 @@ can inspire similar initiatives across the open-source ecosystem.
 
 Apache™ and Apache Maven™ are trademarks of the Apache Software Foundation.
 
-<sup class="font-semibold">1</sup>Unused support hours expire at the end of the month — in this case, your contribution directly supports the continued development of the respective open-source components.
+<sup class="font-semibold">1</sup>Unused support hours expire at the end of the month — in this case, your contribution
+directly supports the continued development of the respective open-source components.
 
 <sup class="font-semibold">2</sup>Business days are Monday through Friday, excluding public holidays in North Rhine-Westphalia, Germany.
 
-<sup class="font-semibold">3</sup>Our helpdesk uses a GDPR-compliant, EU-hosted solution. Customers receive individual accounts, and communication is available in both German and English.
+<sup class="font-semibold">3</sup>Our helpdesk uses a GDPR-compliant, EU-hosted solution. Customers receive individual accounts,
+and communication is available in both German and English.
 
-<sup class="font-semibold">4</sup>Our experts are developers and technical staff who are directly involved in the respective OSS projects (e.g., as committers or maintainers).
+<sup class="font-semibold">4</sup>Our experts are developers and technical staff who are directly involved in the respective
+OSS projects (e.g., as committers or maintainers).
 
 <sup class="font-semibold">5</sup>We use Zoom for webinars and individual meetings.
