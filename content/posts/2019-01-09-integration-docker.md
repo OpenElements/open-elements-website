@@ -4,7 +4,6 @@ showInBlog: false
 title: 'Integration tests with Docker'
 date: "2019-01-09"
 author: hendrik
-date: "2019-01-09"
 origin: "https://dev.karakun.com"
 excerpt: 'This post gives an overview how we at Karakun use Docker to create integration tests for 
 JavaEE / JakartaEE based libraries and frameworks.'
