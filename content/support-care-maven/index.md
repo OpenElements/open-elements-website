@@ -3,7 +3,7 @@ title: "Support & Care for Apache Maven™"
 showTitle: false
 description: "Support & Care for Apache Maven™ strengthens the future of the Java ecosystem through sustainable funding and transparent development. As the first project of the Support & Care initiative, it enables long-term support for one of the most important open-source tools, with a focus on security, LTS releases, and community engagement."
 layout: "article"
-url: "/support-care-maven”
+url: "/support-care-maven"
 newsletterPopup: true
 ---
 
