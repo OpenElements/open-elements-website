@@ -1,7 +1,52 @@
 {{ define "main" }}
+{{ $underline := resources.Get "/illustrations/line-p.svg" }}
+{{ $roundGreen := resources.Get "/illustrations/round-13.svg" }}
+{{ $book := resources.Get "/illustrations/book.png" }}
+{{ $plane := resources.Get "/illustrations/plane.svg" }}
+{{ $skyRound := resources.Get "/illustrations/sky-round.svg" }}
+{{ $greenRound := resources.Get "/illustrations/round-11.svg" }}
+{{ $greenArrow := resources.Get "/illustrations/green-arrow.svg" }}
+{{ $round1 := resources.Get "/illustrations/round-1.svg" }}
+{{ $circles := resources.Get "/illustrations/round11.svg" }}
+{{ $planeSm := resources.Get "/illustrations/plane-sm.svg" }}
 
-<div class="relative">
-    {{ partial "partials/article-headline.html" (dict "title" .Title )}}
-    {{ partial "partials/brevo-newsletter-form-de.html"}}
+<div class="relative bg-white">
+    <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full relative">
+        <img src="{{ $roundGreen.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                    class="absolute right-28 top-24 w-20 shrink-0">
+
+        <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+            <div class="relative flex flex-col items-center justify-center w-full">
+                <h1 class="text-center h1">{{ $.Param "title" | safeHTML }}</h1>
+                <p class="max-w-3xl mx-auto text-center text-base">
+                    {{ $.Param "description" | safeHTML }}
+                </p>
+                <img src="{{ $underline.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                    class="absolute w-48 -bottom-7 sm:w-72 shrink-0">
+            </div>
+        </div>
+    </div>
+
+    <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full relative flex items-center justify-center">
+        <img src="{{ $book.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="shrink-0 sm:mt-14 mt-28 lg:scale-100 scale-110 relative z-10">
+        
+        <img src="{{ $plane.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute top-0 lg:scale-105 scale-125 xl:-right-24 sm:block hidden">
+        <img src="{{ $planeSm.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute -right-3 top-16 sm:hidden">
+
+        <img src="{{ $skyRound.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute xl:left-44 lg:left-12 md:-left-28 sm:-left-28 -left-44 lg:scale-100 sm:scale-90 sm:top-12 scale-50">
+        
+        <img src="{{ $greenRound.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute opacity-50 size-36 xl:right-72 lg:right-28 md:right-12 sm:right-8 -right-4 sm:top-14 top-20">
+        <img src="{{ $greenArrow.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute size-44 xl:right-52 lg:right-7 md:-right-10 sm:-right-12 sm:top-12 top-0 -right-7 sm:scale-100 scale-75">
+    </div>
+
+    <div class="bg-gray -mt-12 sm:mt-0">
+        <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full relative flex items-center justify-center">
+            <img src="{{ $round1.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute lg:size-96 sm:size-72 size-60 sm:-left-56 sm:right-auto -right-32 sm:top-16 sm:bottom-auto bottom-24">
+            <img src="{{ $circles.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}" class="absolute lg:size-56 sm:size-40 size-24 lg:right-10 sm:-right-5 right-2 sm:top-16 top-8">
+            <div class="pb-28 pt-36 max-w-2xl mx-auto relative">
+                   {{ partial "partials/brevo-newsletter-form-de.html"}}
+            </div>
+        </div>
+    </div>
 </div>
 {{ end }}
