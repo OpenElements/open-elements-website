@@ -7,37 +7,28 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:css": "npx tailwindcss -i input.css -o assets/css/style.css -w",
-    "dev:hugo": "HUGO_ENV=development hugo server -D",
-    "dev:react": "cd react-src && node build.mjs",
-    "build:css": "NODE_ENV=production npx tailwindcss -i input.css -o assets/css/style.css -m",
-    "build:react": "cd react-src && node build.mjs",
-    "build:hugo": "hugo",
-    "build:legacy": "run-p build:*",
-    "lint:html": "htmlhint layouts/**/*.html",
     "prepare": "husky"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "esbuild": "^0.19.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8",
-    "eslint-config-next": "^14.2.0",
-    "htmlhint": "^1.1.4",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.23",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.0",
     "husky": "^9.1.7",
     "npm-run-all": "^4.1.5",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5"
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^4.39.0",
-    "next": "^14.2.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwind-scrollbar": "^2.1.0"
+    "@netlify/plugin-nextjs": "^5.15.3",
+    "next": "^16.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwind-scrollbar": "^4.0.2"
   }
 }
