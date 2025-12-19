@@ -3,4 +3,4 @@
 
 set -e  # die on error
 
-npm run lint:html
+pnpm run lint
