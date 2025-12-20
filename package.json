@@ -1,31 +1,37 @@
 {
+  "name": "open-elements-website",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "dev:css": "npx tailwindcss -i input.css -o assets/css/style.css -w",
-    "dev:hugo": "HUGO_ENV=development hugo server -D",
-    "dev:react": "cd react-src && node build.mjs",
-    "dev": "run-p dev:*",
-    "build:css": "NODE_ENV=production npx tailwindcss -i input.css -o assets/css/style.css -m",
-    "build:react": "cd react-src && node build.mjs",
-    "build:hugo": "hugo",
-    "build": "run-p build:*",
-    "lint:html": "htmlhint layouts/**/*.html",
-    "prepare": "husky",
-    "netlify:build": "npm run build:css && npm run build:react && hugo --minify",
-    "netlify:build:deploy-preview": "npm run build:css && npm run build:react && hugo --minify --baseURL $DEPLOY_PRIME_URL",
-    "netlify:build:production": "npm run build:css && npm run build:react && hugo --minify --baseURL https://open-elements.com"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.9",
-    "esbuild": "^0.19.0",
-    "htmlhint": "^1.1.4",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.23",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.0",
     "husky": "^9.1.7",
     "npm-run-all": "^4.1.5",
-    "tailwindcss": "^3.4.14"
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwind-scrollbar": "^2.1.0"
+    "@netlify/plugin-nextjs": "^5.15.3",
+    "next": "^16.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwind-scrollbar": "^4.0.2"
   }
 }

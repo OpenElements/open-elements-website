@@ -1,14 +1,17 @@
 [build]
-command = "npm run netlify:build"
-publish = "public"
+command = "pnpm install && pnpm run build"
 
 [build.environment]
-HUGO_VERSION = "0.118.2"
+NODE_VERSION = "22"
+PNPM_VERSION = "10"
 
 # Production build
 [context.production]
-command = "npm run netlify:build:production"
+command = "pnpm install && pnpm run build"
 
 # Deploy Preview build
 [context.deploy-preview]
-command = "npm run netlify:build:deploy-preview"
+command = "pnpm install && pnpm run build"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
