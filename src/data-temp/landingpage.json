@@ -1,0 +1,10 @@
+{
+    "category_navbar_visible": true,
+    "open_knowledge_visible": true,
+    "open_events_visible": true,
+    "open_source_visible": true,
+    "open_doors_visible": true,
+    "open_data_visible": false,
+    "open_office_visible": true,
+    "open_diversity_visible": false
+}
