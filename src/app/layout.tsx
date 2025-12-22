@@ -14,6 +14,23 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Open Elements - Open Source made right',
   description: 'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
+  keywords: ['open source', 'Java', 'OSS', 'open source Support', 'Java Support'],
+  openGraph: {
+    type: 'website',
+    url: 'https://open-elements.com/',
+    title: 'Open Elements - Open Source made right',
+    description: 'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
+    siteName: 'Open Elements',
+    images: [
+      {
+        url: '/open-graph/open-elements.png',
+        width: 1200,
+        height: 630,
+        alt: 'OpenElements Logo',
+      },
+    ],
+    locale: 'en_US',
+  },
 }
 
 export default function RootLayout({
@@ -23,6 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} scroll-smooth`}>
+      <head>
+        <link rel="icon" href="/icons/favicon.ico" />
+      </head>
       <body className={montserrat.className}>
         <div id="top" className="relative">
           <Navbar />

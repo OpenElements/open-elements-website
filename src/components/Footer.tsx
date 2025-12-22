@@ -81,9 +81,32 @@ export default function Footer() {
               <div>
                 <p className="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Privacy</p>
                 <div className="flex flex-col gap-5">
-                  <Link href="/impressum" className="flex items-start gap-3 group">
+                  <a 
+                    href="https://www.iubenda.com/privacy-policy/63821551" 
+                    className="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed" 
+                    title="Privacy Policy"
+                  >
                     <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                    <span className="footer-link">Imprint</span>
+                    <span className="footer-link">Privacy Policy</span>
+                  </a>
+                  <a 
+                    href="https://www.iubenda.com/privacy-policy/63821551/cookie-policy" 
+                    className="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed" 
+                    title="Cookie Policy"
+                  >
+                    <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                    <span className="footer-link">Cookie Policy</span>
+                  </a>
+                  <a 
+                    href="#" 
+                    className="flex items-center gap-3 iubenda-cs-preferences-link group"
+                  >
+                    <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                    <span className="footer-link">Privacy Settings</span>
+                  </a>
+                  <Link href="/impressum" className="flex items-center gap-3 group">
+                    <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                    <span className="footer-link">Impressum</span>
                   </Link>
                 </div>
               </div>
@@ -98,24 +121,45 @@ export default function Footer() {
                 </div>
               </div>
               
-              <div className="items-center gap-4 lg:hidden flex col-span-2">
-                {social.map((item, index) => (
-                  <a 
-                    key={index}
-                    href={item.link} 
-                    aria-label={item.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11"
-                  >
-                    <span className="iconify" data-icon={item.icon}></span>
-                  </a>
-                ))}
+              <div className="relative w-full col-span-2 xl:col-span-2">
+                <div className="items-center justify-start gap-4 mt-6 lg:hidden flex">
+                  {social.map((item, index) => (
+                    <a 
+                      key={index}
+                      href={item.link} 
+                      aria-label={item.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11"
+                    >
+                      <span className="iconify" data-icon={item.icon}></span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          (function (w,d) {
+            var loader = function () {
+              var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; 
+              s.src="https://cdn.iubenda.com/iubenda.js"; 
+              tag.parentNode.insertBefore(s,tag);
+            }; 
+            if(w.addEventListener){
+              w.addEventListener("load", loader, false);
+            }else if(w.attachEvent){
+              w.attachEvent("onload", loader);
+            }else{
+              w.onload = loader;
+            }
+          })(window, document);
+        `
+      }} />
     </div>
   )
 }
