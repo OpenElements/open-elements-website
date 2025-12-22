@@ -12,11 +12,11 @@
   }
 
   .nav-link {
-    @apply font-medium text-lg text-gray hover:text-sky transition-colors ease-in-out duration-150 focus:outline-none;
+    @apply font-medium text-2xl text-gray hover:text-sky transition-colors ease-in-out duration-150 focus:outline-none;
   }
 
   .nav-icon {
-    @apply text-2xl leading-none text-white hover:text-green transition-colors ease-in-out duration-150;
+    @apply text-4xl leading-none text-white hover:text-green transition-colors ease-in-out duration-150;
   }
 
   .nav-icon-mb {

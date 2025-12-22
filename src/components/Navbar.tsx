@@ -37,14 +37,14 @@ export default function Navbar() {
 
         <div className="container pt-16">
           <div className="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue">
-            <div className="container relative mx-auto max-w-7xl">
+            <div className="container relative max-w-sm px-6 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl lg:px-0">
               <nav className="flex items-center justify-between pt-5 pb-3">
                 <Link href="/">
-                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-5 sm:h-7 w-auto" />
+                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-8 sm:h-10 w-auto" />
                 </Link>
                 
-                <div className="items-center hidden xl:flex gap-9">
-                  <div className="flex items-center gap-9">
+                <div className="items-center hidden xl:flex gap-12">
+                  <div className="flex items-center gap-12">
                     {mainMenu.map((item, index) => {
                       if (!item.visibleInNavigation) return null
                       
@@ -86,18 +86,18 @@ export default function Navbar() {
                   </div>
                   
                   <div>
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-green">
+                    <div className="flex items-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-green">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                       </svg>
-                      <div className="flex items-center gap-1">
-                        <span className="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
-                        <Link href="/de" className="bg-transparent rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150 text-white">DE</Link>
+                      <div className="flex items-center gap-2">
+                        <span className="bg-green rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center text-blue">EN</span>
+                        <Link href="/de" className="bg-transparent rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150 text-white">DE</Link>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-5">
+                  <div className="flex items-center gap-6">
                     {social.map((item, index) => (
                       <a 
                         key={index}
