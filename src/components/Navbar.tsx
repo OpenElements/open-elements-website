@@ -40,7 +40,7 @@ export default function Navbar() {
             <div className="container relative max-w-sm px-6 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl lg:px-0">
               <nav className="flex items-center justify-between pt-5 pb-3">
                 <Link href="/">
-                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-8 sm:h-10 w-auto" />
+                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-8 sm:h-10 w-60" />
                 </Link>
                 
                 <div className="items-center hidden xl:flex gap-12">
