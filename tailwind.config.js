@@ -10,7 +10,12 @@ module.exports = {
   //     focusedWithinParentPlugin,
   //   ]
   // },
-  content: ["content/**/*.md", "layouts/**/*.html"],
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "content/**/*.md", 
+    "layouts/**/*.html"
+  ],
   theme: {
     screens: {
       sm: "640px",
