@@ -111,16 +111,6 @@ export default function Footer() {
                 </div>
               </div>
               
-              <div>
-                <p className="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Contact</p>
-                <div className="flex flex-col gap-5">
-                  <Link href="/contact" className="flex items-start gap-3 group">
-                    <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                    <span className="footer-link">Get in Touch</span>
-                  </Link>
-                </div>
-              </div>
-              
               <div className="relative w-full col-span-2 xl:col-span-2">
                 <div className="items-center justify-start gap-4 mt-6 lg:hidden flex">
                   {social.map((item, index) => (
