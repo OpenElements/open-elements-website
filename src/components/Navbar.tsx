@@ -12,29 +12,6 @@ export default function Navbar() {
   return (
     <>
       <div className="relative">
-        <div className="absolute top-0 flex items-start w-full">
-          <div className="bg-blue h-[244px] w-full 2xl:block hidden"></div>
-          <div className="w-full 2xl:shrink-0">
-            <Image
-              className="hidden w-full mt-3 xl:mt-0 lg:block"
-              src="/illustrations/home-bg-2.svg"
-              alt="Hero background"
-              width={2000}
-              height={600}
-              priority
-            />
-            <Image
-              className="absolute inset-0 block object-cover object-center w-full md:-top-28 sm:-top-24 -top-10 lg:hidden"
-              src="/illustrations/m-bg-hero.svg"
-              alt="hero background for mobile"
-              width={800}
-              height={600}
-              priority
-            />
-          </div>
-          <div className="bg-blue h-[595px] w-full 2xl:block hidden"></div>
-        </div>
-
         <div className="container pt-16">
           <div className="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue">
             <div className="container relative max-w-sm px-6 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl lg:px-0">

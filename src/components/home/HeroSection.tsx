@@ -4,8 +4,32 @@ import landingpage from '@/data/landingpage.json'
 
 export default function HeroSection() {
   return (
-    <div className="relative mx-auto">
-      <div className="max-w-sm px-6 mx-auto mt-12 lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full sm:pb-0 pb-14 sm:px-0">
+    <div className="relative mx-auto overflow-hidden">
+      {/* Hero Background Illustrations */}
+      <div className="absolute -top-40 left-0 right-0 flex items-start w-full -z-10">
+        <div className="bg-blue h-[244px] w-full 2xl:block hidden"></div>
+        <div className="w-full 2xl:shrink-0">
+          <Image
+            className="hidden w-full mt-3 xl:mt-0 lg:block"
+            src="/illustrations/home-bg-2.svg"
+            alt="Hero background"
+            width={2000}
+            height={600}
+            priority
+          />
+          <Image
+            className="absolute inset-0 block object-cover object-center w-full md:-top-28 sm:-top-24 -top-10 lg:hidden"
+            src="/illustrations/m-bg-hero.svg"
+            alt="hero background for mobile"
+            width={800}
+            height={600}
+            priority
+          />
+        </div>
+        <div className="bg-blue h-[595px] w-full 2xl:block hidden"></div>
+      </div>
+
+      <div className="relative max-w-sm px-6 mx-auto mt-12 lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full sm:pb-0 pb-14 sm:px-0">
         <div className="flex flex-col items-center gap-8 mt-20 lg:flex-row lg:mt-40">
           <div className="relative w-full">
             <Image 
