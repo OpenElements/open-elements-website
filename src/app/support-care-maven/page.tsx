@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function SupportCareMavenPage() {
   return (
-    <div className="relative pb-40">
+    <div className=" pb-40">
       {/* Hero Background */}
       <div className="absolute top-0 left-0 w-full h-40  -z-10 overflow-hidden">
         <Image
@@ -58,6 +58,140 @@ export default function SupportCareMavenPage() {
             We offer three different packages tailored to the needs of various user groups.
             We are happy to help you determine which package best suits your requirements.
           </p>
+
+          {/* Subscription Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {/* Basic Subscription */}
+            <div className="bg-gray-100 rounded-[30px] shadow-lg p-6 pb-9 flex flex-col h-full">
+              <h3 className="text-lg font-bold text-center text-blue mb-6">Basic Subscription</h3>
+              <ul className="space-y-3 mb-8 flex-grow text-blue text-sm leading-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>4 hours of support per month included<sup>1</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Response time: 1 business day<sup>2</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Support requests via helpdesk in German and English<sup>3</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>10% discount on every additional support hour</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Quarterly webinar directly with the experts<sup>4,5</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Monthly newsletter</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-purple rounded-full hover:bg-purple-700 hover:shadow-lg transition-all active:shadow-none active:bg-purple"
+              >
+                Contact us
+              </Link>
+            </div>
+
+            {/* Standard Subscription */}
+            <div className="bg-gray-100 rounded-[30px] shadow-lg p-6 pb-9 flex flex-col h-full border-2 border-purple">
+              <h3 className="text-lg font-bold text-center text-blue mb-6">Standard Subscription</h3>
+              <ul className="space-y-3 mb-8 flex-grow text-blue text-sm leading-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>8 hours of support per month included<sup>1</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Response time: 1 business day<sup>2</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Support requests via helpdesk in German and English<sup>3</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>15% discount on every additional support hour</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Quarterly webinar directly with the experts<sup>4,5</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Monthly newsletter</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>10% training discount</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Individual monthly call with experts<sup>4,5</sup></span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-purple rounded-full hover:bg-purple-700 hover:shadow-lg transition-all active:shadow-none active:bg-purple"
+              >
+                Contact us
+              </Link>
+            </div>
+
+            {/* Premium Subscription */}
+            <div className="bg-gray-100 rounded-[30px] shadow-lg p-6 pb-9 flex flex-col h-full">
+              <h3 className="text-lg font-bold text-center text-blue mb-6">Premium Subscription</h3>
+              <ul className="space-y-3 mb-8 flex-grow text-blue text-sm leading-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>8 hours of support per month included<sup>1</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Response time: 1 hour</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Support requests via helpdesk and hotline in German and English<sup>3</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>15% discount on every additional support hour</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Quarterly webinar directly with the experts<sup>4,5</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Monthly newsletter</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>10% training discount</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green mt-0.5 shrink-0">✓</span>
+                  <span>Individual monthly call with experts<sup>4,5</sup></span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-purple rounded-full hover:bg-purple-700 hover:shadow-lg transition-all active:shadow-none active:bg-purple"
+              >
+                Contact us
+              </Link>
+            </div>
+          </div>
+
+          <p className="text-center text-blue mt-12 text-lg">
+            We look forward to shaping the future of Apache Maven together with you!
+          </p>
         </div>
       </div>
 
@@ -78,6 +212,34 @@ export default function SupportCareMavenPage() {
               Since 2024, the STA has been investing in the Support & Care for Apache Maven™ project, enabling sustainable cost-sharing between public funding 
               and commercial contributions. The STA's investment lays the foundation for a sustainable future of the project and the entire Java ecosystem. 
               However, broad support from the community and industry is essential to secure Apache Maven in the long term.
+            </p>
+          </div>
+
+          {/* How Support is Paid Illustration */}
+          <div className="flex justify-center mt-12">
+            <Image
+              src="/support-care-maven/diagram-1.png"
+              alt="How Support and Care for Apache Maven is paid"
+              className="w-full max-w-3xl"
+              width={900}
+              height={500}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Who Works Section */}
+      <div className="container mt-20">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue mb-8">
+            Who Works on Support & Care for Apache Maven™?
+          </h2>
+          <div className="flex flex-col gap-6 text-base leading-7 text-blue">
+            <p>
+              Employees of Open Elements as well as external developers and maintainers work together on Support & Care for Apache Maven™. 
+              While project management and coordination are handled by Open Elements, development is carried out by both our engineers and 
+              long-standing external maintainers of Apache Maven. This close collaboration with the Apache Software Foundation and the active 
+              Apache Maven community ensures that the project evolves in line with user needs.
             </p>
           </div>
         </div>
@@ -124,6 +286,38 @@ export default function SupportCareMavenPage() {
             <Image src="/icons/call.svg" alt="Call icon" width={20} height={20} />
             Contact us
           </Link>
+        </div>
+      </div>
+
+      {/* Footnotes Section */}
+      <div className="container mt-20 mb-20">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue mb-8">
+            Footnotes & Service Information
+          </h2>
+          <div className="flex flex-col gap-4 text-sm leading-6 text-blue">
+            <p>
+              Apache™ and Apache Maven™ are trademarks of the Apache Software Foundation.
+            </p>
+            <p>
+              <sup>1</sup>Unused support hours expire at the end of the month — in this case, your contribution directly supports 
+              the continued development of the respective open-source components.
+            </p>
+            <p>
+              <sup>2</sup>Business days are Monday through Friday, excluding public holidays in North Rhine-Westphalia, Germany.
+            </p>
+            <p>
+              <sup>3</sup>Our helpdesk uses a GDPR-compliant, EU-hosted solution. Customers receive individual accounts, 
+              and communication is available in both German and English.
+            </p>
+            <p>
+              <sup>4</sup>Our experts are developers and technical staff who are directly involved in the respective OSS projects 
+              (e.g., as committers or maintainers).
+            </p>
+            <p>
+              <sup>5</sup>We use Zoom for webinars and individual meetings.
+            </p>
+          </div>
         </div>
       </div>
 
