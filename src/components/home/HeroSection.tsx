@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div className="relative mx-auto overflow-hidden">
       {/* Hero Background Illustrations */}
-      <div className="absolute -top-40 left-0 right-0 flex items-start w-full -z-10">
+      <div className="absolute -top-15 left-0 right-0 flex items-start w-full -z-10">
         <div className="bg-blue h-[244px] w-full 2xl:block hidden"></div>
         <div className="w-full 2xl:shrink-0">
           <Image
