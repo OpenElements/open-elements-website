@@ -17,6 +17,7 @@
 
   .nav-icon {
     @apply text-4xl leading-none text-white hover:text-green transition-colors ease-in-out duration-150;
+
   }
 
   .nav-icon-mb {
