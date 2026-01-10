@@ -48,8 +48,8 @@
 
 
         
-        <div class="relative flex 2xl:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
-            <div class="relative w-full 2xl:w-[325px] 2xl:shrink-0" x-data="observerSection()" x-init="initObserver()">
+        <div class="relative flex md:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
+            <div class="relative w-full md:w-[325px] md:shrink-0" x-data="observerSection()" x-init="initObserver()">
                 <div class="top-20 sticky -mt-36">
                     <div class="mb-16">
                         <div class="relative flex justify-center sm:justify-start items-center sm:items-start text-left">
@@ -58,8 +58,8 @@
                         </div>
                     </div>
                     
-                    <div class="flex flex-col gap-6 bg-white shadow-5 px-7 py-8 rounded-[28px]" :class="open ? 'w-full ' : 'w-24'" x-data="{open: window.innerWidth >= 1280}"    x-init="window.addEventListener('resize', () => open = window.innerWidth >= 1280)">
-                        <button @click="open =!open" type="button" class="xl:hidden">
+                    <div class="flex flex-col gap-6 bg-white shadow-5 px-7 py-8 rounded-[28px]" :class="open ? 'w-full ' : 'w-24'" x-data="{open: window.innerWidth >= 768}"    x-init="window.addEventListener('resize', () => open = window.innerWidth >= 768)">
+                        <button @click="open =!open" type="button" class="md:hidden">
                             <svg width="38" height="21" viewBox="0 0 38 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="38" height="3" fill="#469F85"/>
                                 <rect y="9" width="38" height="3" fill="#469F85"/>
