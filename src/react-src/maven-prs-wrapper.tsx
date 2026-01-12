@@ -7,7 +7,7 @@ class MavenPRsElement extends HTMLElement {
     const status = this.getAttribute('status'); // 👈 Attribut auslesen
 
     const root = createRoot(this);
-    root.render(<MavenPRs status={status}/>);
+    root.render(<MavenPRs status={status || undefined}/>);
   }
 }
 
