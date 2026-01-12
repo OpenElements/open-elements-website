@@ -218,7 +218,7 @@ export default function SupportCareMavenPage() {
           {/* How Support is Paid Illustration */}
           <div className="flex justify-center mt-12">
             <Image
-              src="/support-care-maven/diagram-1.png"
+              src="/support-care-maven/diagram.png"
               alt="How Support and Care for Apache Maven is paid"
               className="w-full max-w-3xl"
               width={900}
