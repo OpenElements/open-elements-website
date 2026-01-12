@@ -35,6 +35,17 @@ export default function AboutPage() {
 
   return (
     <div className="">
+      {/* Hero Background */}
+      <div className="absolute  left-0 w-full top-0 h-34 -z-10 overflow-hidden">
+        <Image
+          src="/illustrations/hero-bg-2.svg"
+          alt="Hero background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       <div className="flow-root relative pb-20 sm:pb-36 container">
         {/* Decorative images */}
         <Image
@@ -80,7 +91,7 @@ export default function AboutPage() {
           height={224}
         />
 
-        <div className="relative flex 2xl:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
+        <div className="relative flex md:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
           <AboutSidebar 
             activeSection={activeSection} 
             onSectionClick={setActiveSection} 
