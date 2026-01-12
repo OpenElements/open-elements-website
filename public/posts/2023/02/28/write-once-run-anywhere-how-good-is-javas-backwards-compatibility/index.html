@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYPMHW7YG2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MYPMHW7YG2');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+    Open Elements &ndash; Write Once, Run Anywhere - how good is Java&#39;s Backwards Compatibility?
+    </title>
+  <meta property="og:type" content="website" />
+<meta property="og:url" content='http://localhost:1313/posts/2023/02/28/write-once-run-anywhere-how-good-is-javas-backwards-compatibility' />
+<meta property="og:image" content='http://localhost:1313/open-graph/open-elements.png' />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OpenElements Logo" />
+<meta property="og:site_name" content="Open Elements" />
+
+
+    <meta property="og:title" content='Open Elements - Write Once, Run Anywhere - how good is Java&#39;s Backwards Compatibility?' />
+
+
+
+    <meta property="og:description" content='Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java' />
+
+
+
+    <meta property="og:locale" content="en_US" />
+
+
+
+<meta name="keywords" content="open source, Java, OSS, open source Support, Java Support" />
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/prism/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+  
+  <link rel="canonical" href="http://localhost:1313/posts/2023/02/28/write-once-run-anywhere-how-good-is-javas-backwards-compatibility/" />
+  
+  
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2023/02/28/write-once-run-anywhere-how-good-is-javas-backwards-compatibility/" />
+  <link rel="alternate" hreflang="de" href="http://localhost:1313//de/posts/2023/02/28/write-once-run-anywhere-how-good-is-javas-backwards-compatibility/" />
+  
+  <link rel="alternate" hreflang="x-default" href="https://open-elements.com/" />
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+  
+  
+
+</head>
+
+<body>
+  <main class="overflow-x-hidden antialiased bg-gray" id="top">
+    
+
+
+
+
+
+
+
+
+
+<div class="relative">
+  <div class="absolute top-0 flex items-start w-full">
+    
+    <div class="bg-blue h-[274px] w-full 2xl:block hidden"></div>
+    
+    <div class="w-full 2xl:shrink-0">
+      
+      <img class="hidden w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block" src="/illustrations/hero-bg-2.svg" alt="Hero" />
+      <img class="object-contain object-center w-full -mt-4 sm:hidden" src="/illustrations/bg-hero-mb.svg" alt="Hero" />
+      
+    </div>
+    
+    <div class="bg-blue h-[179.5px] w-full 2xl:block hidden"></div>
+    
+  </div>
+
+  <div class="container pt-16" x-data="{ open:false }">
+    <div class="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue ">
+      <div class="container relative mx-auto max-w-7xl">
+        <nav class="flex items-center justify-between pt-5 pb-3">
+          <a href="/"><img src="/images/logo.svg" alt="logo"
+              class="h-5 sm:h-7"></a>
+          <div class="items-center hidden xl:flex gap-9">
+            <div class="flex items-center gap-9">
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/posts/" class="nav-link inline-flex items-center">
+                  Blog
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/support-care-maven/" class="nav-link inline-flex items-center">
+                  Support &amp; Care
+                </a>
+                
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/about/" class="nav-link inline-flex items-center">
+                  About us
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/contact/" class="nav-link inline-flex items-center">
+                  Contact us
+                </a>
+                
+              </div>
+              
+              
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-5 h-5 text-green">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+                <div class="flex items-center gap-1">
+                  
+                  
+                  <span
+                    class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              
+              
+              <a href="https://github.com/OpenElements" aria-label="Github" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="mdi:github"></span></a>
+              
+              <a href="https://www.linkedin.com/company/open-elements" aria-label="LinkedIn" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="mdi:linkedin"></span></a>
+              
+              <a href="https://twitter.com/hendrikebbers" aria-label="Twitter" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="proicons:x-twitter"></span></a>
+              
+            </div>
+          </div>
+          <button class="xl:hidden">
+            <img class="w-8" @click="open = true" alt="burger" src="/illustrations/burger-menu.svg" aria-multiline="Menu" />
+          </button>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="fixed inset-0 top-0 z-30 h-full bg-blue xl:hidden" x-show="open" x-cloak
+      x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95"
+      x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+      x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+      <div class="relative w-full h-screen">
+        <img class="absolute inset-0 object-cover w-full h-full" alt="menu background"
+          src="/illustrations/menu-bg.svg" />
+        <nav class="container relative flex items-center justify-between pt-4 pb-3 mx-auto sm:pt-5 max-w-7xl">
+          <a href="/"><img src="/images/logo.svg" alt="" class="h-5 sm:h-7"></a>
+          <button class="xl:hidden">
+            <img class="w-7" @click="open = false" alt="close button icon" src="/illustrations/close.svg" />
+          </button>
+        </nav>
+        <div
+          class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
+          <div class="flex flex-col gap-11 sm:items-center">
+            <div class="flex flex-col sm:items-center gap-7">
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/posts/" class="nav-link inline-flex items-center">
+                  Blog
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/support-care-maven/" class="nav-link inline-flex items-center">
+                  Support &amp; Care
+                </a>
+                
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/about/" class="nav-link inline-flex items-center">
+                  About us
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/contact/" class="nav-link inline-flex items-center">
+                  Contact us
+                </a>
+                
+              </div>
+              
+              
+            </div>
+            <div class="flex items-center gap-4 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 text-green">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+              <div class="flex items-center gap-3">
+                
+                
+                <span
+                  class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            
+            
+            <a href="https://github.com/OpenElements" aria-label="Github" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="mdi:github"></span></a>
+            
+            <a href="https://www.linkedin.com/company/open-elements" aria-label="LinkedIn" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="mdi:linkedin"></span></a>
+            
+            <a href="https://twitter.com/hendrikebbers" aria-label="Twitter" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="proicons:x-twitter"></span></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative">
+    <article class="container relative pb-28 xl:max-w-7xl">
+        <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+            <div class="relative flex flex-col items-center justify-center w-auto">
+                <h1 class="text-center h1">
+                    Write Once, Run Anywhere - how good is Java&#39;s Backwards Compatibility?
+                </h1>
+                <img src="/illustrations/post-underline.svg" alt=""
+                    class="absolute w-36 sm:-mr-32 sm:w-72 -bottom-3 shrink-0">
+            </div>
+        </div>
+        <div class="flex flex-col-reverse items-start gap-12 mt-12 overflow-hidden xl:gap-8 xl:flex-row">
+            <div class="flex-1 w-full space-y-8">
+                <div class="space-y-4 sm:space-y-3">
+                    <div class="flex flex-wrap items-center gap-4 sm:gap-6 ">
+                        <div class="flex items-center gap-2 text-purple">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <time class="text-base font-medium" datetime="2023-02-28">
+                                February 28, 2023
+                            </time>
+                        </div>
+                        <div class="flex items-center gap-2 text-purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-base font-medium">
+                                
+                                
+                                    <a href="/about-hendrik/">Hendrik Ebbers</a>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                        
+                            <p>#Java</p>
+                        
+                    </div>
+                </div>
+                <div class="max-w-full prose prose-a:text-purple-700 prose-code:bg-yellow xl:max-w-prose">
+                    <p>With the slogan &ldquo;Write Once, Run Anywhere&rdquo; (WORA), Sun Microsystems promoted the Java platform starting in 1995.
+This slogan combined two different advantages of Java: By using the JVM (Java Virtual Machine), compiled programs can run on all platforms where a JVM is available.
+For example, a Java application compiled on Windows can run seamlessly on Linux within a JVM.</p>
+<p>The second aspect of the slogan is Java&rsquo;s backward compatibility.
+Software compiled with one Java version should run without issues on future Java versions.
+However, this promise has changed over the years.</p>
+<h2 id="backward-compatibility-through-private-apis-in-the-jcl" class=" scroll-mt-10">Backward Compatibility through Private APIs in the JCL<a href="#backward-compatibility-through-private-apis-in-the-jcl" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>Backward compatibility in Java has always been enabled by separating the public and private APIs in the Java Class Library (JCL).
+The JCL includes all classes of the Java API that we work with every day, such as <code>java.lang.String</code> or <code>java.util.List</code>.
+But it also contains more exotic classes like <code>sun.misc.Unsafe</code>.
+Together with the Java Virtual Machine (JVM) and various tools like the Java compiler (javac), the JCL defines the JDK for JavaSE that developers use daily.</p>
+<figure style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%;  max-width: 100%;">
+  <img src="/posts/2023-02-28-java-backwards-compatibility/java-structure.jpg" alt="Java Structure" style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;" />
+  
+  <figcaption style="font-style: italic; font-size: 0.8rem; text-align: center;">Java Structure</figcaption>
+  
+</figure>
+
+<p>The private API of the JCL is on the classpath but should never be used directly by applications.
+Internal changes in the OpenJDK are often implemented in this area, which could lead to potential changes in the interfaces of the private API.
+Generally, all classes in the JCL whose packages do not start with <code>java.*</code> or <code>javax.*</code> belong to the private API.
+Since some Java distributions include JavaFX, you can add <code>javafx.*</code> to this list.</p>
+<p>Software that used classes from the private API at compile-time or runtime was at risk of becoming non-functional with every (major) release of Java.
+While the usage at compile-time could be detected directly, runtime usage through reflection or transitive dependencies sometimes led to unexpected problems in production.</p>
+<p>However, this changed with Java 9 and the introduction of the module system.
+The module system allows hiding APIs from the outside world, making them usable only within their own module.
+This enabled the complete hiding of Java&rsquo;s private APIs.</p>
+<figure style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%;  max-width: 100%;">
+  <img src="/posts/2023-02-28-java-backwards-compatibility/java-modules.jpg" alt="Java Modules" style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;" />
+  
+  <figcaption style="font-style: italic; font-size: 0.8rem; text-align: center;">Java Modules</figcaption>
+  
+</figure>
+
+<p>Since many programs and libraries used these private APIs, this change in Java 9 would have led to immense refactoring.
+Therefore, the OpenJDK decided that the private APIs from Java 9 to Java 15 could still be used, with only a warning issued when software accesses private APIs.
+For this, the <code>illegal-access</code> parameter was introduced, which was set to warn by default in Java 9 to 15.
+This parameter could be easily changed at the JVM startup as a command-line argument.</p>
+<p>In these versions, you could also ensure that a Java program could not use the JCL&rsquo;s private APIs by adding <code>--illegal-access=deny</code>.
+This became the default behavior in JDK 16.
+Here, you must actively set the flag to <code>warn</code> if you want to allow your application to use private APIs.
+However, with the LTS release of Java 17, this option was completely removed.
+The values <code>permit</code>, <code>warn</code>, and <code>debug</code> were removed for the <code>illegal-access</code> flag, making it impossible to allow general access to private APIs.
+If you still need to use private APIs with Java 17, you can enable this for specific modules using the <code>--add-opens</code> flag or the <code>Add-Opens</code> attribute in the manifest.</p>
+<h2 id="changes-in-tools-or-the-jvm" class=" scroll-mt-10">Changes in Tools or the JVM<a href="#changes-in-tools-or-the-jvm" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>Changes in the tools or the JVM can also affect Java&rsquo;s backward compatibility.
+For example, with Java 10, the Java language was extended with the use of <code>var</code> through <a href="https://openjdk.org/jeps/286" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> JEP 286<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+.
+This allows omitting the explicit type declaration for a variable when the compiler can infer it.
+Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>(); <span style="color:#75715e">// infers ArrayList&lt;String&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> stream <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>(); <span style="color:#f92672">//</span> infers Stream<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span></span></span></code></pre></div>
+<p>The introduction of <code>var</code> into the Java language had some implications.
+Although <code>var</code> was not added as a keyword to the Java syntax, allowing it to still be used as a variable name, its status in the Java language is defined as a &ldquo;Reserved Type Name&rdquo; (see <a href="https://openjdk.org/jeps/286" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> JEP 286<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+).
+This means it is no longer possible to name classes or interfaces <code>var</code>, which, although rare, is a break in backward compatibility with Java.</p>
+<h2 id="deprecated-apis-for-maintaining-backward-compatibility" class=" scroll-mt-10">Deprecated APIs for Maintaining Backward Compatibility<a href="#deprecated-apis-for-maintaining-backward-compatibility" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>The first version of Java was released in 1996.
+Since both the Java programming language and programming paradigms have evolved significantly since then, many APIs in Java have been refactored.
+Patterns that were typical in 1996 are now considered outdated.
+Additionally, the OpenJDK developers occasionally make mistakes, leading to APIs that should no longer be used based on current knowledge.</p>
+<p>To maintain Java&rsquo;s backward compatibility, such APIs were not removed if they were part of the JCL&rsquo;s public APIs.
+Initially, the JavaDoc warned against using them and often suggested alternative APIs.
+With the introduction of annotations in Java 1.5, this was further improved through the use of the <code>@Deprecated</code> annotation.
+This annotation not only warns the user that an API should no longer be used but also causes the Java compiler to generate a warning (or an error, depending on the configuration).
+IDEs today also highlight this prominently, making it easy to see if code is accessing APIs marked as deprecated.</p>
+<p>Although this approach worked for a long time, more and more code in the OpenJDK became annotated with <code>@Deprecated</code>, requiring maintenance with every version and change.
+The Java API also became increasingly bloated.
+With the introduction of the Java module system and the division of the JCL into individual modules, other problems arose: Due to the many outdated code sections that were never removed, there were wild dependencies in the OpenJDK that could not be easily resolved.</p>
+<p>Therefore, with Java 9, the <code>@Deprecated</code> annotation was extended with the <code>forRemoval</code> attribute.
+This attribute indicates that an API annotated with <code>@Deprecated(forRemoval=true)</code> can be removed in a future version of Java.
+With Java&rsquo;s new release train and new versions every six months, this can happen very quickly.
+Recent Java versions show that this is being utilized.
+For example, the CORBA API, various interfaces under <code>java.security.acl.*</code>, or methods from <code>java.lang.SecurityManager</code> have been removed.
+The <code>java.lang.SecurityManager</code> itself is even scheduled for complete removal from the JCL.</p>
+<h2 id="tracking-changes" class=" scroll-mt-10">Tracking Changes<a href="#tracking-changes" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>To review and assess the differences and changes between two Java versions, there is now the website <a href="https://javaalmanac.io/" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> javaalmanac.io<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+.
+Here, all differences in the Java Class Library between two Java versions can be displayed.
+Since not only versions with Long-term Support (LTS) are listed but all major releases since Java 1.0, you can start adapting your software even before a new LTS version of Java is released.
+In addition to changes, the tool also shows all classes, functions, and other elements that have been annotated with <code>@Deprecated</code>.</p>
+<figure style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%;  max-width: 100%;">
+  <img src="/posts/2023-02-28-java-backwards-compatibility/java-new-apis.jpg" alt="New APIs in Java 17" style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;" />
+  
+  <figcaption style="font-style: italic; font-size: 0.8rem; text-align: center;">New APIs in Java 17</figcaption>
+  
+</figure>
+
+<h2 id="what-does-this-mean-for-developers" class=" scroll-mt-10">What Does This Mean for Developers?<a href="#what-does-this-mean-for-developers" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>Java has shown that programming languages must eventually choose between innovative and agile development and constant backward compatibility.
+The older a language gets, the more legacy baggage it carries.
+Many parts of the API are no longer up-to-date and difficult to adapt to modern paradigms.
+Therefore, it makes sense for a language to shed some of its legacy baggage.
+Of course, users should not be forgotten, and these issues must be handled sensitively.</p>
+<p>In my opinion, the people responsible for Java have handled this balancing act well by announcing the new concepts, such as removing deprecated APIs, over a long period.
+They have also responded to criticism and feedback from the community.
+The handling of the <code>sun.misc.Unsafe</code> class is certainly a good example.
+Its removal from the OpenJDK was discussed for a very long time.
+Additional features were also added to the OpenJDK for framework and library developers to ensure backward compatibility.
+With Multi-Release JAR files (<a href="https://openjdk.org/jeps/238" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> JEP 238<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+), JARs can now contain specific classes for different Java versions, significantly increasing compatibility.</p>
+<p>Nevertheless, such changes result in more work for developers who wait a long time before switching between Java versions.
+However, if you always upgrade to the latest LTS version of Java and are familiar with the concepts and tools described here, the work generally remains manageable.</p>
+
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Crossposting</strong>
+                        <span class="block sm:inline">This article has originally posted <a href="https://www.heise.de/blog/Write-Once-Run-Anywhere-wie-abwaertskompatibel-ist-Java-eigentlich-wirklich-7342188.html" target="_blank">here</a>.</span>
+                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
+                    </div>
+                    </div>
+            </div>
+            <div class="w-full xl:max-w-sm shrink-0">
+                
+                
+                <div class=" rounded-[30px] w-full shadow-4 bg-white xl:p-5 p-4 xl:block md:flex lg:items-center">
+                    <img class="lg:w-40 md:w-48 sm:w-40 sm:h-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 object-cover rounded-[24px] xl:float-left md:float-none float-left xl:mr-6 mr-4" src="/team/hendrik.jpg" alt="author" />
+                    <div>
+                        <h4 class="mb-2 text-lg font-bold">
+                            Hendrik Ebbers
+                        </h4>
+                        <p class="text-sm leading-6">
+                            Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </article>
+</div>
+
+
+    
+
+
+
+<div class="bg-blue">
+    <div class="container relative max-w-sm mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
+        <div class="absolute sm:-top-20 -top-16 sm:right-[12%] right-[8%] z-10">
+            <a href="#top" alt="go up" name="go up" class="flex items-center justify-center w-12 h-12 transition-all duration-150 ease-in-out rounded-full shadow-2xl bg-green shadow-green hover:scale-110 sm:w-14 sm:h-14">
+                <span class="text-4xl text-white iconify" data-icon="iconoir:nav-arrow-up"></span>
+            </a>
+        </div>
+    </div>
+    <div class="overflow-hidden">
+        <div class="container relative max-w-sm py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full lg:py-20 sm:py-16">
+            <img src="/illustrations/round-1.svg" alt="Circle" class="absolute w-full max-w-sm lg:-right-32 -bottom-16 -right-16 lg:-top-1/2" />
+            <img src="/illustrations/round-2.svg" alt="Circle" class="absolute left-0 w-32 lg:right-80 lg:top-16 bottom-1/2 lg:left-auto" />
+            <div class="relative flex flex-col gap-5 lg:flex-row 2xl:gap-20 sm:gap-12">
+                <div class="flex flex-col justify-between gap-6 xl:w-64 lg:w-1/3 shrink-0">
+                    <div class="flex flex-col gap-6">
+                        <a href="/"><img src="/images/logo.svg" alt="logo" class="h-8"></a>
+                        <p class="text-sm leading-7 text-white">Open Source made right</p>
+                    </div>
+                    <div class="items-center hidden gap-4 lg:flex">
+                        
+                        
+                        <a href="https://github.com/OpenElements/" aria-label="Github"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="mdi:github"></span>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/open-elements/" aria-label="LinkedIn"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="mdi:linkedin"></span>
+                        </a>
+                        
+                        <a href="https://twitter.com/hendrikebbers/" aria-label="Twitter"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="proicons:x-twitter"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 xl:w-full lg:w-2/3 xl:grid-cols-4 gap-x-5 gap-y-10">
+                    <div class="">
+                        <p class="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Explore</p>
+                        <div class="flex flex-col gap-5">
+                            
+                            
+                            
+                            <a href="/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Home</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/posts/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Blog</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/support-care-maven/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Support &amp; Care</span>
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/dlt-lecture/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Digital Trust Lecture</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/about/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">About us</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/contact/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Contact us</span>
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Privacy</p>
+                        <div class="flex flex-col gap-5">
+                            
+                            <a href="https://www.iubenda.com/privacy-policy/63821551" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed " title="Privacy Policy ">
+                            
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Privacy Policy</span>
+                            </a>
+                            
+                            <a href="https://www.iubenda.com/privacy-policy/63821551/cookie-policy" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed " title="Cookie Policy ">
+                            
+                            <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                            <span class="footer-link">Cookie Policy</span>
+                            </a>
+                            <a href="" class="flex items-center gap-3 iubenda-cs-preferences-link group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Privacy Config</span>
+                            </a>
+                            <a href="/impressum/" class="flex items-center gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Impressum</span>
+                            </a>
+                            <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                        </div>
+                    </div>
+                    <div class="relative w-full col-span-2 xl:col-span-2">
+                        <div class="flex items-center justify-start gap-4 mt-6 lg:hidden">
+                            
+                            
+                            <a href="https://github.com/OpenElements/" aria-label="Github" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="mdi:github"></span>
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/company/open-elements/" aria-label="LinkedIn" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="mdi:linkedin"></span>
+                            </a>
+                            
+                            <a href="https://twitter.com/hendrikebbers/" aria-label="Twitter" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="proicons:x-twitter"></span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </main>
+  <scrip src="/prism/prism.js"></scrip>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  
+  <script src="/js/maven-prs.js" defer></script>
+
+</body>
+
+</html>
