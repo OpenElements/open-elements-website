@@ -57,13 +57,13 @@ export default function MavenPRs({status}: { status?: string }) {
             (status === 'merged' && pr.merged);
         return belongsToProject && statusMatches;
       })
-      .map((pr: any) => ({
+      .map((pr: any): PR => ({
         title: pr.title,
         url: `https://github.com/${pr.org}/${pr.repository}/pull/${pr.gitHubId}`,
         repository: `${pr.org}/${pr.repository}`,
         status: pr.merged ? 'merged' : 'open',
       }))
-      .sort((a, b) => a.repository.localeCompare(b.repository));
+      .sort((a: PR, b: PR) => a.repository.localeCompare(b.repository));
 
       setPrs(filtered);
     }

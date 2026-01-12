@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import CalendlyButton from '@/components/contact/CalendlyButton'
 import ContactInfo from '@/components/contact/ContactInfo'
