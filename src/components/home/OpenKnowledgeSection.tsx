@@ -1,12 +1,17 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function OpenKnowledgeSection() {
+  const t = useTranslations('openKnowledge')
+
   return (
     <div id="open-knowledge-section" className="container relative max-w-sm px-6 py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:py-28 sm:py-16 lg:px-0">
       <div className="flex flex-col items-center justify-between gap-6 lg:flex-row 2xl:gap-28 xl:gap-16 sm:gap-12">
         <div className="relative w-full lg:w-1/2">
           <div className="relative flex items-start gap-6 lg:hidden sm:mb-12 mb-7">
-            <h2 className="h2">Open Knowledge</h2>
+            <h2 className="h2">{t('title')}</h2>
             <Image 
               src="/illustrations/star.svg" 
               alt="Stars" 
@@ -49,7 +54,7 @@ export default function OpenKnowledgeSection() {
           
           <div className="relative">
             <div className="items-start hidden gap-6 lg:flex">
-              <h2 className="h2">Open <br /> Knowledge</h2>
+              <h2 className="h2" dangerouslySetInnerHTML={{ __html: t('title').replace(' ', '<br />') }} />
               <Image 
                 src="/illustrations/star.svg" 
                 alt="Star" 
@@ -60,37 +65,36 @@ export default function OpenKnowledgeSection() {
             </div>
             
             <p className="text-base leading-7 sm:text-lg sm:leading-8 lg:mt-5">
-              The open availability of well-prepared knowledge is essential for us, therefore we share a large part of our know-how in
+              {t('intro')}
             </p>
             
             <div className="flex flex-col gap-3 mt-5 text-base sm:text-lg">
               <div className="flex items-center gap-2">
                 <span className="text-lg iconify text-rose" data-icon="teenyicons:tick-circle-solid"></span>
-                blog posts
+                {t('item1')}
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg iconify text-green" data-icon="teenyicons:tick-circle-solid"></span>
-                professional articles
+                {t('item2')}
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg iconify text-sky" data-icon="teenyicons:tick-circle-solid"></span>
-                lectures
+                {t('item3')}
               </div>
             </div>
             
             <p className="mt-5 text-base leading-7 sm:text-lg sm:leading-8">
-              even though – or better said – because we earn our money with expertise.
+              {t('outro1')}
             </p>
             
             <p className="mt-5 text-base leading-7 sm:text-lg sm:leading-8">
-              The free accessibility of knowledge is very important to us, even outside of our area of expertise. 
-              Therefore, we act as a sponsor of{' '}
+              {t('outro2')}{' '}
               <a className="link-green" href="https://wikimediafoundation.org/" target="_blank" rel="noopener noreferrer">
-                Wikimedia
+                {t('wikimedia')}
               </a>
-              {' '}and{' '}
+              {' '}{t('and')}{' '}
               <a className="link-green" href="https://correctiv.org" target="_blank" rel="noopener noreferrer">
-                CORRECTIV
+                {t('correctiv')}
               </a>.
             </p>
           </div>

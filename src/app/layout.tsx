@@ -33,24 +33,12 @@ export const metadata: Metadata = {
   },
 }
 
+// RootLayout is now in [locale]/layout.tsx for i18n support
+// This is just a redirect wrapper
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en" className={`${montserrat.variable} scroll-smooth`}>
-      <head>
-        <link rel="icon" href="/icons/favicon.ico" />
-      </head>
-      <body className={montserrat.className}>
-        <div id="top" className="relative overflow-x-hidden">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </div>
-        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-      </body>
-    </html>
-  )
+  return children;
 }

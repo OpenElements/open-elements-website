@@ -1,9 +1,18 @@
-import Link from 'next/link'
+'use client'
+
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import mainMenu from '@/data/mainMenu.json'
 import social from '@/data/social.json'
 
-export default function Footer() {
+interface FooterProps {
+  locale: string;
+}
+
+export default function Footer({ locale }: FooterProps) {
+  const t = useTranslations()
+
   return (
     <div className="bg-blue">
       <div className="container relative max-w-sm mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
@@ -42,7 +51,7 @@ export default function Footer() {
                   <Image src="/images/logo.svg" alt="logo" width={150} height={32} className="h-8 w-auto" />
                 </Link>
                 <p className="text-sm leading-7 text-white">
-                  Open Elements is a modern company with a clear focus on Open Source and Java
+                  {t('footerPhrase')}
                 </p>
               </div>
               
@@ -71,7 +80,7 @@ export default function Footer() {
                     return (
                       <Link key={index} href={item.link} className="flex items-start gap-3 group">
                         <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                        <span className="footer-link">{item.name}</span>
+                        <span className="footer-link">{item.i18nKey ? t(item.i18nKey) : item.name}</span>
                       </Link>
                     )
                   })}
@@ -79,7 +88,7 @@ export default function Footer() {
               </div>
               
               <div>
-                <p className="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Privacy</p>
+                <p className="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">{t('privacy')}</p>
                 <div className="flex flex-col gap-5">
                   <a 
                     href="https://www.iubenda.com/privacy-policy/63821551" 
@@ -87,7 +96,7 @@ export default function Footer() {
                     title="Privacy Policy"
                   >
                     <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                    <span className="footer-link">Privacy Policy</span>
+                    <span className="footer-link">{t('privacyPolicy')}</span>
                   </a>
                   <a 
                     href="https://www.iubenda.com/privacy-policy/63821551/cookie-policy" 
@@ -95,18 +104,18 @@ export default function Footer() {
                     title="Cookie Policy"
                   >
                     <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                    <span className="footer-link">Cookie Policy</span>
+                    <span className="footer-link">{t('privacyCookies')}</span>
                   </a>
                   <a 
                     href="#" 
                     className="flex items-center gap-3 iubenda-cs-preferences-link group"
                   >
                     <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                    <span className="footer-link">Privacy Settings</span>
+                    <span className="footer-link">{t('privacySettings')}</span>
                   </a>
                   <Link href="/impressum" className="flex items-center gap-3 group">
                     <span className="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
-                    <span className="footer-link">Impressum</span>
+                    <span className="footer-link">{t('impressum')}</span>
                   </Link>
                 </div>
               </div>

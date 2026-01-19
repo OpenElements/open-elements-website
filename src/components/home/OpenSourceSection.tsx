@@ -1,6 +1,11 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function OpenSourceSection() {
+  const t = useTranslations('openSource')
+
   return (
     <div id="open-source-section" className="container relative max-w-sm px-6 py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:py-28 sm:py-16 lg:px-0">
       <div className="flex flex-col items-center justify-between gap-5 lg:flex-row xl:gap-28 lg:gap-20">
@@ -53,25 +58,23 @@ export default function OpenSourceSection() {
             </h2>
             
             <p className="text-base leading-7 lg:mt-6 sm:text-lg sm:leading-8">
-              Open Source is a matter close to our heart. We believe that software must be largely openly available 
-              in order to advance society – by, among other things, establishing open standards or enabling manufacturer 
-              independence and transparent security audits.
+              {t('description1')}
             </p>
             
             <p className="mt-4 text-base leading-7 sm:text-lg sm:leading-8">
-              Therefore, we are a member of the{' '}
+              {t('description2')}{' '}
               <a className="link-purple" href="https://www.eclipse.org/" target="_blank" rel="noopener noreferrer">
-                Eclipse Foundation
+                {t('eclipseFoundation')}
               </a>
-              {' '}and also actively work with others on key projects in the Java ecosystem, such as{' '}
+              {' '}{t('description3')}{' '}
               <a className="link-purple" href="https://adoptium.net/" target="_blank" rel="noopener noreferrer">
-                Eclipse Adoptium
+                {t('eclipseAdoptium')}
               </a>
-              {' '}and{' '}
+              {' '}{t('and')}{' '}
               <a className="link-purple" href="https://jakarta.ee/" target="_blank" rel="noopener noreferrer">
-                JakartaEE
+                {t('jakartaEE')}
               </a>
-              . Furthermore, we support small OS projects and develop core components ourselves as open source software.
+              {t('description4')}
             </p>
           </div>
         </div>
