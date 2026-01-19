@@ -1,12 +1,17 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function OpenDoorsSection() {
+  const t = useTranslations('openDoors')
+
   return (
     <div id="open-doors-section" className="container relative max-w-sm px-6 py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:py-28 sm:py-16 lg:px-0">
       <div>
         <div className="flex flex-col items-center justify-center gap-10 lg:items-start lg:flex-row lg:justify-start">
           <div className="relative inline-block w-full py-3 pl-6 pr-6 text-center bg-purple-100 border rounded-sm border-purple lg:pr-11 sm:w-auto">
-            <h2 className="h2 text-purple">Open Doors</h2>
+            <h2 className="h2 text-purple">{t('title')}</h2>
             <span className="absolute hidden text-3xl iconify text-purple -right-6 -bottom-6 sm:block" data-icon="clarity:cursor-arrow-solid"></span>
             <Image 
               src="/illustrations/click-2.svg" 
@@ -45,8 +50,7 @@ export default function OpenDoorsSection() {
             <div className="relative flex justify-end order-2 mx-auto mt-8 lg:order-1 lg:mx-0 lg:mt-0">
               <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[380px] sm:w-96 w-full h-64 flex items-center justify-center text-center">
                 <p className="text-base leading-7 sm:text-lg sm:leading-8">
-                  This puts us on an equal footing with interested applicants, existing and new customers, 
-                  potential partner companies, and people for whom our main topics are of interest.
+                  {t('box1')}
                 </p>
               </div>
             </div>
@@ -54,7 +58,7 @@ export default function OpenDoorsSection() {
             <div className="flex relative lg:mt-[-12%] lg:order-2 order-1 lg:ml-0 mx-auto mt-12">
               <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 xl:w-60 lg:w-56 sm:w-96 w-full h-32 flex items-center justify-center text-center">
                 <p className="text-base leading-7 sm:text-lg sm:leading-8">
-                  We always have an open ear for others.
+                  {t('box2')}
                 </p>
               </div>
             </div>
@@ -62,11 +66,11 @@ export default function OpenDoorsSection() {
             <div className="flex relative lg:ml-[25%] lg:mt-20 mt-4 lg:order-3 order-3 mx-auto">
               <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 sm:w-96 w-full flex flex-col items-center justify-center text-center">
                 <p className="text-base leading-7 sm:text-lg sm:leading-8">
-                  Anyone can easily{' '}
+                  {t('box3')}{' '}
                   <a className="link-purple" href="https://cal.com/open-elements/15min" target="_blank" rel="noopener noreferrer">
-                    book a free appointment
+                    {t('bookAppointment')}
                   </a>
-                  {' '}to chat with us about topics like open source and Java or discuss technical issues with us.
+                  {' '}{t('box3End')}
                 </p>
                 <a 
                   href="https://cal.com/open-elements/15min"
@@ -80,7 +84,7 @@ export default function OpenDoorsSection() {
                     width={20}
                     height={20}
                   />
-                  schedule appointment
+                  {t('scheduleButton')}
                 </a>
               </div>
             </div>

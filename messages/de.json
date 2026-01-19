@@ -1,0 +1,129 @@
+{
+  "home": "Startseite",
+  "blog": "Blog",
+  "aboutUs": "Über uns",
+  "projects": "Projekte",
+  "supportCare": "Support & Care",
+  "supportAndCare": "Support & Care",
+  "aboutSupportCare": "Über Support & Care",
+  "mavenSupport": "Support & Care for Maven",
+  "temurinSupport": "Support & Care for Temurin",
+  "temurinSupport2": "Support & Care for Temurin 2",
+  "OpenSourceJava": "Open Source Java",
+  "OpenElements2023": "Open Elements 2023",
+  "contactUs": "Kontakt",
+  "footerPhrase": "Open Source, aber richtig",
+  "privacy": "Datenschutz",
+  "privacyPolicy": "Datenschutzerklärung",
+  "privacySettings": "Datenschutzeinstellungen",
+  "privacyCookies": "Cookie-Richtlinie",
+  "impressum": "Impressum",
+  "notFound": "Seite nicht gefunden!!",
+  "digitalTrustLecture": "Vorlesung zu Digital Trust",
+  "newsletter": "Unser Newsletter",
+  "altTexts": {
+    "underline": "Grafisches Element zum Unterstreichen des Textes"
+  },
+  "hero": {
+    "tagline": "Open Source, aber richtig",
+    "title1": "Wir vertrauen auf die",
+    "title2": "Kraft",
+    "title3": "der",
+    "title4": "offenen Zusammenarbeit!",
+    "description": "Wir sind davon überzeugt, dass Offenheit und Transparenz einen substanziellen Wert für Unternehmen, Projekte und Einzelpersonen schafft. Unser Ziel ist es, unsere Partner dabei zu unterstützen, wichtige Konzepte wie Open Source und Open Data zu etablieren. Dadurch werden automatisch zentrale Aspekte der IT wie Standards und Sicherheit im Unternehmen gestärkt. Durch unsere Arbeit fördern wir zudem die aktive Teilnahme in der IT-Szene und darüber hinaus."
+  },
+  "sections": {
+    "openKnowledge": "Offenes Wissen",
+    "openEvents": "Offene Veranstaltungen",
+    "openSource": "Open Source",
+    "openDoors": "Offene Türen",
+    "openData": "Offene Daten",
+    "openOffice": "Offenes Büro",
+    "openDiversity": "Offene Vielfalt"
+  },
+  "openKnowledge": {
+    "title": "Offenes Wissen",
+    "intro": "Die offene Verfügbarkeit von gut aufbereitetem Wissen ist für uns essenziell, daher teilen wir einen großen Teil unseres Know-hows in",
+    "item1": "Blogbeiträgen",
+    "item2": "Fachartikeln",
+    "item3": "Vorträgen",
+    "outro1": "obwohl – oder besser gesagt – gerade weil wir unser Geld mit Expertise verdienen.",
+    "outro2": "Die freie Zugänglichkeit von Wissen ist uns auch außerhalb unseres Fachgebiets sehr wichtig. Daher sind wir Sponsor von",
+    "wikimedia": "Wikimedia",
+    "and": "und",
+    "correctiv": "CORRECTIV"
+  },
+  "openEvents": {
+    "title": "Offene Veranstaltungen",
+    "description1": "Wir organisieren die",
+    "jugDortmund": "Java User Group Dortmund",
+    "description2": "und ermöglichen durch Sponsoring kostenlose Meetups und physische Events in der Metropolregion Rhein-Ruhr. Wir beteiligen uns aktiv an der Organisation der",
+    "javaland": "JavaLand",
+    "description3": "Konferenz und der",
+    "cyberland": "Cyberland",
+    "description4": "Initiative. Damit unterstützen wir das Angebot kostenloser oder kostendeckender Veranstaltungen in der deutschsprachigen Java- und IT-Szene."
+  },
+  "openSource": {
+    "title": "Open Source",
+    "description1": "Open Source ist uns eine Herzensangelegenheit. Wir glauben, dass Software weitgehend offen verfügbar sein muss, um die Gesellschaft voranzubringen – durch die Etablierung offener Standards oder die Ermöglichung von Herstellerunabhängigkeit und transparenten Sicherheitsüberprüfungen.",
+    "description2": "Daher sind wir Mitglied der",
+    "eclipseFoundation": "Eclipse Foundation",
+    "description3": "und arbeiten aktiv mit anderen an wichtigen Projekten im Java-Ökosystem, wie",
+    "eclipseAdoptium": "Eclipse Adoptium",
+    "and": "und",
+    "jakartaEE": "JakartaEE",
+    "description4": ". Darüber hinaus unterstützen wir kleine OS-Projekte und entwickeln Kernkomponenten selbst als Open-Source-Software."
+  },
+  "openDoors": {
+    "title": "Offene Türen",
+    "box1": "Damit begegnen wir interessierten Bewerbern, bestehenden und neuen Kunden, potenziellen Partnerunternehmen und Menschen, für die unsere Hauptthemen von Interesse sind, auf Augenhöhe.",
+    "box2": "Wir haben immer ein offenes Ohr für andere.",
+    "box3": "Jeder kann ganz einfach",
+    "bookAppointment": "einen kostenlosen Termin buchen",
+    "box3End": "um mit uns über Themen wie Open Source und Java zu sprechen oder technische Fragen mit uns zu besprechen.",
+    "scheduleButton": "Termin vereinbaren"
+  },
+  "openOffice": {
+    "title": "Offenes Büro",
+    "percentage": "100%",
+    "percentageText": "Jeder Mitarbeiter hat bei uns 100% freie Wahl des Arbeitsortes.",
+    "description1": "Wir möchten allen Mitarbeitern die komfortabelste Integration der Arbeitszeit in ihr individuelles Leben bieten.",
+    "description2": "Im Home-Office oder irgendwo auf der Welt in einem Co-Working-Space: Für uns ist Open Office kein Statussymbol, sondern ein gelebter Wert."
+  },
+  "support_care": {
+    "subscription": {
+      "contactUs": "Kontaktieren Sie uns",
+      "basic": {
+        "name": "Basis Subscription",
+        "bulletpoint1": "4 Stunden Support pro Monat inklusive<sup>1</sup>",
+        "bulletpoint2": "Reaktionszeit 1 Werktag<sup>2</sup>",
+        "bulletpoint3": "Supportanfrage per Helpdesk in Deutsch und Englisch<sup>3</sup>",
+        "bulletpoint4": "10% Rabatt auf jede weitere Support-Stunde",
+        "bulletpoint5": "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>",
+        "bulletpoint6": "monatlicher Newsletter"
+      },
+      "standard": {
+        "name": "Standard Subscription",
+        "bulletpoint1": "8 Stunden Support pro Monat inklusive<sup>1</sup>",
+        "bulletpoint2": "Reaktionszeit 1 Werktag<sup>2</sup>",
+        "bulletpoint3": "Supportanfrage per Helpdesk in Deutsch und Englisch<sup>3</sup>",
+        "bulletpoint4": "15% Rabatt auf jede weitere Support-Stunde",
+        "bulletpoint5": "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>",
+        "bulletpoint6": "monatlicher Newsletter",
+        "bulletpoint7": "10% Trainingsrabatt",
+        "bulletpoint8": "Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>"
+      },
+      "premium": {
+        "name": "Premium Subscription",
+        "bulletpoint1": "8 Stunden Support pro Monat inklusive<sup>1</sup>",
+        "bulletpoint2": "Reaktionszeit <b>1 Stunde</b>",
+        "bulletpoint3": "Supportanfrage per Helpdesk und <b>Hotline</b> in Deutsch und Englisch<sup>3</sup>",
+        "bulletpoint4": "15% Rabatt auf jede weitere Support-Stunde",
+        "bulletpoint5": "Quartals-Webinar direkt mit den Expert:innen<sup>4,5</sup>",
+        "bulletpoint6": "monatlicher Newsletter",
+        "bulletpoint7": "10% Trainingsrabatt",
+        "bulletpoint8": "Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>"
+      }
+    }
+  }
+}

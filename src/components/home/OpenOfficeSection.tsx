@@ -1,6 +1,11 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function OpenOfficeSection() {
+  const t = useTranslations('openOffice')
+
   return (
     <div id="open-office-section" className="container relative max-w-sm px-6 py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:py-28 sm:py-16 lg:px-0">
       <div className="flex flex-col items-center justify-between gap-20 lg:flex-row xl:gap-28 lg:gap-20">
@@ -43,18 +48,18 @@ export default function OpenOfficeSection() {
                 height={10}
                 className="absolute w-full lg:-bottom-10 sm:-bottom-8 -bottom-5"
               />
-              <p className="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">100%</p>
+              <p className="text-purple lg:text-[100px] sm:text-7xl text-[48px] font-bold">{t('percentage')}</p>
               <p className="mt-2 text-base leading-7 xl:mt-0 sm:mt-4 sm:text-lg sm:leading-8">
-                Every employee has a 100% free choice of a workplace with us.
+                {t('percentageText')}
               </p>
             </div>
             
             <p className="mt-8 text-base leading-7 lg:mt-20 sm:mt-16 sm:text-lg sm:leading-8">
-              We want to offer all employees the most comfortable integration of working time into their individual life.
+              {t('description1')}
             </p>
             
             <p className="xl:text-[32px] text-xl font-bold xl:leading-10 leading-8 text-purple sm:mt-7 mt-5">
-              In a home office or anywhere in the world in a co-working space: for us, "open office" is not a status symbol but a lived value.
+              {t('description2')}
             </p>
           </div>
         </div>

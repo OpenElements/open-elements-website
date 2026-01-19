@@ -1,6 +1,11 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function OpenEventsSection() {
+  const t = useTranslations('openEvents')
+
   return (
     <div id="open-events-section" className="bg-slate">
       <div className="container max-w-sm px-6 py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full sm:py-16 lg:px-0">
@@ -16,32 +21,31 @@ export default function OpenEventsSection() {
             
             <div>
               <div className="relative hidden px-6 py-3 border rounded-sm bg-rose-100 border-rose lg:inline-block">
-                <h2 className="h2 text-rose">Open Events</h2>
+                <h2 className="h2 text-rose">{t('title')}</h2>
                 <span className="absolute text-3xl iconify text-rose -right-6 -bottom-6" data-icon="clarity:cursor-arrow-solid"></span>
               </div>
               
               <p className="text-base leading-7 lg:mt-8 sm:text-lg sm:leading-8">
-                We organize the{' '}
+                {t('description1')}{' '}
                 <a className="link-rose" href="https://www.meetup.com/jug-dortmund" target="_blank" rel="noopener noreferrer">
-                  Java User Group Dortmund
+                  {t('jugDortmund')}
                 </a>
-                {' '}and enable via sponsorship, free meetups and physical events in the metropolitan region Rhine-Ruhr. 
-                We actively participate in the management of the{' '}
+                {' '}{t('description2')}{' '}
                 <a className="link-rose" href="https://www.javaland.eu" target="_blank" rel="noopener noreferrer">
-                  JavaLand
+                  {t('javaland')}
                 </a>
-                {' '}conference and the{' '}
+                {' '}{t('description3')}{' '}
                 <a className="link-rose" href="https://cyberland.ijug.eu" target="_blank" rel="noopener noreferrer">
-                  Cyberland
+                  {t('cyberland')}
                 </a>
-                {' '}initiative. In doing so, we support the offering of free or cost-covering events in the German-speaking Java and IT scene.
+                {' '}{t('description4')}
               </p>
             </div>
           </div>
           
           <div className="flex flex-col items-center justify-center w-full lg:w-1/2">
             <div className="relative inline-block w-full px-6 py-3 text-center border rounded-sm bg-rose-100 border-rose lg:hidden sm:w-auto sm:mb-12 mb-7">
-              <h2 className="h2 text-rose">Open Events</h2>
+              <h2 className="h2 text-rose">{t('title')}</h2>
               <span className="absolute hidden text-3xl iconify text-rose -right-6 -bottom-6 sm:block" data-icon="clarity:cursor-arrow-solid"></span>
               <Image 
                 src="/illustrations/click.svg" 

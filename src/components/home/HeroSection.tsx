@@ -1,8 +1,12 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import Link from 'next/link'
 import landingpage from '@/data/landingpage.json'
 
 export default function HeroSection() {
+  const t = useTranslations()
+
   return (
     <div className="relative mx-auto overflow-hidden">
       {/* Hero Background Illustrations */}
@@ -48,12 +52,12 @@ export default function HeroSection() {
             />
             
             <p className="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3 lg:px-0 md:px-12 sm:px-8 px-6">
-              Open Source made right
+              {t('hero.tagline')}
             </p>
             
             <h1 className="max-w-2xl px-6 h1 lg:px-0 md:px-12 sm:px-8">
               <div className="inline tracking-tight lg:inline sm:block">
-                <span className="relative z-10 inline">We trust in the</span> &nbsp;
+                <span className="relative z-10 inline">{t('hero.title1')}</span> &nbsp;
                 <div className="relative z-0 inline-flex items-center justify-center px-5 -ml-5 -mr-5 sm:px-16 sm:-ml-16 sm:-mr-16">
                   <Image 
                     className="absolute lg:w-56 sm:w-48 w-32 inset-0 sm:ml-8 sm:-mt-2.5 -mt-1" 
@@ -62,20 +66,17 @@ export default function HeroSection() {
                     width={224}
                     height={80}
                   />
-                  <span className="relative"> power </span> &nbsp;
+                  <span className="relative"> {t('hero.title2')} </span> &nbsp;
                 </div>
               </div>
               <div className="relative inline">
-                <span>of</span>
-                <span className="relative block sm:inline">Open Collaboration!</span>
+                <span>{t('hero.title3')}</span>
+                <span className="relative block sm:inline">{t('hero.title4')}</span>
               </div>
             </h1>
             
             <p className="px-6 mt-4 2xl:text-lg text-base text-blue lg:px-0 md:px-12 sm:px-8">
-              We believe that openness and transparency create substantial value for companies, projects, and individuals. 
-              Our goal is to support our partners in establishing important concepts such as Open Source and Open Data. 
-              This strengthens core aspects of IT, such as standards and security automatically within the company. 
-              Through our work, we also promote active engagement in the IT scene and beyond.
+              {t('hero.description')}
             </p>
           </div>
           
@@ -83,25 +84,25 @@ export default function HeroSection() {
             <div className="relative hidden mx-auto -mt-8 lg:hidden sm:block">
               <div className="flex gap-2 px-5 py-6 overflow-x-auto xl:items-center lg:px-0 sm:px-12 xl:justify-center scrollbar-none">
                 {landingpage.open_knowledge_visible && (
-                  <a href="#open-knowledge-section" className="badge-purple">Open Knowledge</a>
+                  <a href="#open-knowledge-section" className="badge-purple">{t('sections.openKnowledge')}</a>
                 )}
                 {landingpage.open_events_visible && (
-                  <a href="#open-events-section" className="badge-purple">Open Events</a>
+                  <a href="#open-events-section" className="badge-purple">{t('sections.openEvents')}</a>
                 )}
                 {landingpage.open_source_visible && (
-                  <a href="#open-source-section" className="badge-purple">Open Source</a>
+                  <a href="#open-source-section" className="badge-purple">{t('sections.openSource')}</a>
                 )}
                 {landingpage.open_doors_visible && (
-                  <a href="#open-doors-section" className="badge-purple">Open Doors</a>
+                  <a href="#open-doors-section" className="badge-purple">{t('sections.openDoors')}</a>
                 )}
                 {landingpage.open_data_visible && (
-                  <a href="#open-data-section" className="badge-purple">Open Data</a>
+                  <a href="#open-data-section" className="badge-purple">{t('sections.openData')}</a>
                 )}
                 {landingpage.open_office_visible && (
-                  <a href="#open-office-section" className="badge-purple">Open Office</a>
+                  <a href="#open-office-section" className="badge-purple">{t('sections.openOffice')}</a>
                 )}
                 {landingpage.open_diversity_visible && (
-                  <a href="#open-diversity-section" className="badge-purple">Open Diversity</a>
+                  <a href="#open-diversity-section" className="badge-purple">{t('sections.openDiversity')}</a>
                 )}
               </div>
             </div>
@@ -138,25 +139,25 @@ export default function HeroSection() {
         <div className="relative hidden mx-auto lg:container xl:mt-5 mt-7 lg:block">
           <div className="flex items-center justify-center gap-2 px-5 py-6 mx-auto overflow-x-auto lg:px-0 sm:px-8 xl:justify-center scrollbar-none">
             {landingpage.open_knowledge_visible && (
-              <a href="#open-knowledge-section" className="badge-purple">Open Knowledge</a>
+              <a href="#open-knowledge-section" className="badge-purple">{t('sections.openKnowledge')}</a>
             )}
             {landingpage.open_events_visible && (
-              <a href="#open-events-section" className="badge-purple">Open Events</a>
+              <a href="#open-events-section" className="badge-purple">{t('sections.openEvents')}</a>
             )}
             {landingpage.open_source_visible && (
-              <a href="#open-source-section" className="badge-purple">Open Source</a>
+              <a href="#open-source-section" className="badge-purple">{t('sections.openSource')}</a>
             )}
             {landingpage.open_doors_visible && (
-              <a href="#open-doors-section" className="badge-purple">Open Doors</a>
+              <a href="#open-doors-section" className="badge-purple">{t('sections.openDoors')}</a>
             )}
             {landingpage.open_data_visible && (
-              <a href="#open-data-section" className="badge-purple">Open Data</a>
+              <a href="#open-data-section" className="badge-purple">{t('sections.openData')}</a>
             )}
             {landingpage.open_office_visible && (
-              <a href="#open-office-section" className="badge-purple">Open Office</a>
+              <a href="#open-office-section" className="badge-purple">{t('sections.openOffice')}</a>
             )}
             {landingpage.open_diversity_visible && (
-              <a href="#open-diversity-section" className="badge-purple">Open Diversity</a>
+              <a href="#open-diversity-section" className="badge-purple">{t('sections.openDiversity')}</a>
             )}
           </div>
         </div>

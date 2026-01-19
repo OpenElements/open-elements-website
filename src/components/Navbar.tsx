@@ -1,13 +1,21 @@
 'use client'
 
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import { useState } from 'react'
 import mainMenu from '@/data/mainMenu.json'
 import social from '@/data/social.json'
 
-export default function Navbar() {
+interface NavbarProps {
+  locale: string;
+}
+
+export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations()
+
+  const otherLocale = locale === 'en' ? 'de' : 'en'
 
   return (
     <>
@@ -30,7 +38,7 @@ export default function Navbar() {
                           {item.children ? (
                             <>
                               <button className="flex items-center justify-between nav-link">
-                                {item.name}
+                                {item.i18nKey ? t(item.i18nKey) : item.name}
                                 <svg className="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
@@ -42,7 +50,7 @@ export default function Navbar() {
                                       <div key={childIndex} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
                                         <div>
                                           <Link href={child.link} className="nav-link whitespace-nowrap">
-                                            {child.name}
+                                            {child.i18nKey ? t(child.i18nKey) : child.name}
                                             <span className="absolute inset-0"></span>
                                           </Link>
                                         </div>
@@ -54,7 +62,7 @@ export default function Navbar() {
                             </>
                           ) : (
                             <Link href={item.link} className="nav-link inline-flex items-center">
-                              {item.name}
+                              {item.i18nKey ? t(item.i18nKey) : item.name}
                             </Link>
                           )}
                         </div>
@@ -68,8 +76,12 @@ export default function Navbar() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                       </svg>
                       <div className="flex items-center gap-2">
-                        <span className="bg-green rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center text-blue">EN</span>
-                        <Link href="/de" className="bg-transparent rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150 text-white">DE</Link>
+                        <span className={`rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
+                          <Link href="/" locale="en">EN</Link>
+                        </span>
+                        <span className={`rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
+                          <Link href="/" locale="de">DE</Link>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -145,7 +157,7 @@ export default function Navbar() {
                         {item.children ? (
                           <>
                             <button className="flex items-center justify-between nav-link">
-                              {item.name}
+                              {item.i18nKey ? t(item.i18nKey) : item.name}
                               <svg className="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                               </svg>
@@ -157,7 +169,7 @@ export default function Navbar() {
                                     <div key={childIndex} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
                                       <div>
                                         <Link href={child.link} className="nav-link whitespace-nowrap">
-                                          {child.name}
+                                          {child.i18nKey ? t(child.i18nKey) : child.name}
                                           <span className="absolute inset-0"></span>
                                         </Link>
                                       </div>
@@ -169,7 +181,7 @@ export default function Navbar() {
                           </>
                         ) : (
                           <Link href={item.link} className="nav-link inline-flex items-center" onClick={() => setIsOpen(false)}>
-                            {item.name}
+                            {item.i18nKey ? t(item.i18nKey) : item.name}
                           </Link>
                         )}
                       </div>
@@ -181,8 +193,12 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                   </svg>
                   <div className="flex items-center gap-3">
-                    <span className="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
-                    <Link href="/de" className="bg-transparent rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center hover:bg-white/20 transition-all ease-in-out duration-150 text-white">DE</Link>
+                    <span className={`rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
+                      <Link href="/" locale="en">EN</Link>
+                    </span>
+                    <span className={`rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
+                      <Link href="/" locale="de">DE</Link>
+                    </span>
                   </div>
                 </div>
               </div>
