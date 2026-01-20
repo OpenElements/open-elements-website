@@ -90,6 +90,26 @@
     "description1": "Wir möchten allen Mitarbeitern die komfortabelste Integration der Arbeitszeit in ihr individuelles Leben bieten.",
     "description2": "Im Home-Office oder irgendwo auf der Welt in einem Co-Working-Space: Für uns ist Open Office kein Statussymbol, sondern ein gelebter Wert."
   },
+  "about": {
+    "title": "Über uns",
+    "sidebar": {
+      "team": "Unser Team",
+      "engagements": "Unsere Engagements",
+      "partners": "Unsere Kunden & Partner"
+    },
+    "team": {
+      "title": "Unser",
+      "titleHighlight": "Team"
+    },
+    "engagements": {
+      "title": "Unsere",
+      "titleHighlight": "Engagements"
+    },
+    "partners": {
+      "title": "Unsere",
+      "titleHighlight": "Kunden & Partner"
+    }
+  },
   "support_care": {
     "page": {
       "title": "Support & Care",
@@ -163,26 +183,6 @@
         "bullet6": "Monatlicher Newsletter",
         "bullet7": "10% Schulungsrabatt",
         "bullet8": "Individueller monatlicher Austausch mit Experten<sup>4,5</sup>"
-      }
-    },
-    "about": {
-      "title": "Über uns",
-      "sidebar": {
-        "team": "Unser Team",
-        "engagements": "Unsere Engagements",
-        "partners": "Unsere Kunden & Partner"
-      },
-      "team": {
-        "title": "Unser",
-        "titleHighlight": "Team"
-      },
-      "engagements": {
-        "title": "Unsere",
-        "titleHighlight": "Engagements"
-      },
-      "partners": {
-        "title": "Unsere",
-        "titleHighlight": "Kunden & Partner"
       }
     },
     "subscription": {
