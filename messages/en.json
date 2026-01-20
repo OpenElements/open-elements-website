@@ -208,25 +208,5 @@
     "subscription": {
       "contactUs": "Contact us"
     }
-  },
-  "about": {
-    "title": "About us",
-    "sidebar": {
-      "team": "Our Team",
-      "engagements": "Our Engagements",
-      "partners": "Our Customers & Partners"
-    },
-    "team": {
-      "title": "Our",
-      "titleHighlight": "Team"
-    },
-    "engagements": {
-      "title": "Our",
-      "titleHighlight": "Engagements"
-    },
-    "partners": {
-      "title": "Our",
-      "titleHighlight": "Customers & Partners"
-    }
   }
 }

@@ -1,52 +1,47 @@
-'use client'
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+import { getAllPosts } from '@/lib/markdown';
+import BlogCard from '@/components/blog/BlogCard';
+import BlogPagination from '@/components/blog/BlogPagination';
 
-import { useState } from 'react'
-import Image from 'next/image'
-import BlogCard from '@/components/blog/BlogCard'
-import Pagination from '@/components/blog/Pagination'
+interface BlogPageProps {
+  params: Promise<{
+    locale: string;
+  }>;
+  searchParams: Promise<{
+    page?: string;
+  }>;
+}
 
-// Placeholder data - in a real application, this would come from a CMS or API
-const mockPosts = [
-  {
-    id: '1',
-    title: 'Java Module System',
-    excerpt: 'Learn about the Java Module System and how it helps organize your code.',
-    date: '2024-01-11',
-    author: 'Hendrik Ebbers',
-    categories: ['Java', 'Open Source'],
-    preview_image: '/posts/preview-images/software-development-green.svg',
-    slug: 'java-module-system',
-  },
-  {
-    id: '2',
-    title: 'Open Elements in 2024',
-    excerpt: 'A look back at what we achieved in 2024 and our plans for the future.',
-    date: '2025-01-16',
-    author: 'Hendrik Ebbers',
-    categories: ['Open Elements', 'General'],
-    preview_image: '/posts/preview-images/software-development-green.svg',
-    slug: 'open-elements-in-2024',
-  },
-  {
-    id: '3',
-    title: 'DCO Signing',
-    excerpt: 'Understanding Developer Certificate of Origin and why it matters.',
-    date: '2025-01-03',
-    author: 'Hendrik Ebbers',
-    categories: ['Open Source', 'General'],
-    preview_image: '/posts/preview-images/software-development-green.svg',
-    slug: 'dco-signing',
-  },
-]
+export default async function BlogPage({ params, searchParams }: BlogPageProps) {
+  const { locale } = await params;
+  const { page } = await searchParams;
+  
+  const currentPage = parseInt(page || '1', 10);
+  const postsPerPage = 7;
+  
+  // Fetch all posts for the current locale
+  const allPosts = getAllPosts(locale);
+  const totalPages = Math.ceil(allPosts.length / postsPerPage);
+  
+  // Paginate posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = allPosts.slice(indexOfFirstPost, indexOfLastPost);
+  
+  // Transform posts to match BlogCard expected format
+  const formattedPosts = currentPosts.map((post, index) => ({
+    id: index.toString(),
+    title: post.frontmatter.title,
+    excerpt: post.frontmatter.excerpt || '',
+    date: new Date(post.frontmatter.date).toISOString().split('T')[0],
+    author: post.frontmatter.author || 'Open Elements',
+    categories: post.frontmatter.categories || [],
+    preview_image: post.frontmatter.preview_image || '/posts/preview-images/software-development-green.svg',
+    slug: post.slug,
+  }));
 
-export default function BlogPage() {
-  const [currentPage, setCurrentPage] = useState(1)
-  const postsPerPage = 7
-  const totalPages = Math.ceil(mockPosts.length / postsPerPage)
-
-  const indexOfLastPost = currentPage * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = mockPosts.slice(indexOfFirstPost, indexOfLastPost)
+  const t = await getTranslations();
 
   return (
     <div className="relative">
@@ -70,10 +65,12 @@ export default function BlogPage() {
       <div className="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
         <div className="flex items-center justify-center pt-16 pb-12 sm:pt-36 sm:pb-12">
           <div className="relative flex flex-col items-center justify-center w-auto px-12">
-            <h1 className="text-center h1">Articles</h1>
+            <h1 className="text-center h1">
+              {locale === 'de' ? 'Artikel' : 'Articles'}
+            </h1>
             <Image
               src="/illustrations/blog-underline.svg"
-              alt="Underline"
+              alt={t('altTexts.underline')}
               className="absolute w-full -bottom-3 shrink-0"
               width={300}
               height={20}
@@ -83,18 +80,28 @@ export default function BlogPage() {
       </div>
 
       {/* Blog posts */}
-      {currentPosts.map((post) => (
-        <BlogCard key={post.id} post={post} />
-      ))}
+      {formattedPosts.length > 0 ? (
+        formattedPosts.map((post) => (
+          <BlogCard key={post.id} post={post} locale={locale} />
+        ))
+      ) : (
+        <div className="container mx-auto px-4 py-16 text-center">
+          <p className="text-lg text-gray-600">
+            {locale === 'de' 
+              ? 'Keine Artikel gefunden.' 
+              : 'No articles found.'}
+          </p>
+        </div>
+      )}
 
       {/* Pagination */}
       <div className="sm:pb-44 pb-36">
-        <Pagination
+        <BlogPagination
           currentPage={currentPage}
           totalPages={totalPages}
-          onPageChange={setCurrentPage}
+          locale={locale}
         />
       </div>
     </div>
-  )
+  );
 }

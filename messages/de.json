@@ -1,6 +1,6 @@
 {
   "home": "Startseite",
-  "blog": "Blog",
+  "blogNav": "Blog",
   "aboutUs": "Über uns",
   "projects": "Projekte",
   "supportCare": "Support & Care",
@@ -239,5 +239,22 @@
         "bulletpoint8": "Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>"
       }
     }
+  },
+  "blog": {
+    "title": "Artikel",
+    "backToBlog": "Zurück zum Blog",
+    "viewAllArticles": "Alle Artikel ansehen",
+    "noArticlesFound": "Keine Artikel gefunden.",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "readMore": "Weiterlesen",
+    "minuteRead": "Min. Lesezeit",
+    "publishedOn": "Veröffentlicht am",
+    "by": "von"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Sprache ändern",
+    "english": "Englisch",
+    "german": "Deutsch"
   }
 }
