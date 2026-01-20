@@ -1,8 +1,13 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import CalendlyButton from '@/components/contact/CalendlyButton'
 import ContactInfo from '@/components/contact/ContactInfo'
 
 export default function ContactPage() {
+  const t = useTranslations('contact')
+  
   return (
     <div className="relative">
       <div className="container relative max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:pb-36 pb-28">
@@ -33,7 +38,7 @@ export default function ContactPage() {
                 width={256}
                 height={100}
               />
-              <span className="relative">Contact us</span>
+              <span className="relative">{t('title')}</span>
             </div>
           </h1>
         </div>
