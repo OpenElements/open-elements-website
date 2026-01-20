@@ -1,8 +1,10 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function CalendlyButton() {
+  const t = useTranslations('contact.calendly')
   const handleClick = () => {
     // This would integrate with Cal.com or Calendly
     // For now, opening the cal.com link
@@ -13,9 +15,7 @@ export default function CalendlyButton() {
     <div className="max-w-[1080px] w-full pt-3 mx-auto">
       <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-full flex flex-col items-center justify-center text-center">
         <p>
-          The easiest way to get in touch with us is by booking a free 30 min slot in our open
-          calendar. By doing so we can start a discussion and talk about your concerns, interest or
-          problems regarding any of our focused topics like Open Source and Java.
+          {t('description')}
         </p>
         <button
           onClick={handleClick}
@@ -27,7 +27,7 @@ export default function CalendlyButton() {
             width={20}
             height={20}
           />
-          schedule appointment
+          {t('button')}
         </button>
       </div>
     </div>
