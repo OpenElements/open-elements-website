@@ -91,6 +91,100 @@
     "description2": "In a home office or anywhere in the world in a co-working space: for us, open office is not a status symbol but a lived value."
   },
   "support_care": {
+    "page": {
+      "title": "Support & Care",
+      "subtitle": "Sustainable support for open source software",
+      "intro1": "Support & Care is a program for the sustainable further development, stabilization and support of open source software (OSS). Open Elements works with both the industry and the open source community to ensure the quality, independence and development of critical open source projects and components.",
+      "intro2": "With Support & Care, Open Elements offers a solution for critical projects so that the products can be used without hesitation in a professional environment. Our open source strategy aims to improve the direction of the projects through financial support and active collaboration and to prevent underfunding, poor maintenance and security of this critical OSS.",
+      "services": "Through Support & Care, we provide comprehensive services to ensure the performance and security of your applications. Our services go beyond classic troubleshooting and promote the sustainable improvement of your infrastructure.",
+      "contactUs": "Contact us",
+      "offeringsTitle": "Our Support & Care Offerings",
+      "learnMore": "Learn more →",
+      "maven": {
+        "title": "Support & Care for Apache Maven™",
+        "description": "Support & Care for Apache Maven™ strengthens the future of the Java ecosystem through sustainable funding and transparent development. Secure the long-term stability and continued development of Apache Maven."
+      },
+      "temurin": {
+        "title": "Eclipse Temurin Support & Care",
+        "description": "Professional support for Eclipse Temurin, the most widely used Java runtime environment with over 20 million downloads per month. Ensure the long-term functionality of your Java applications."
+      }
+    },
+    "maven": {
+      "intro1": "Open Elements has launched a major initiative with its program Support & Care for Apache Maven™, helping to secure a central tool of the Java ecosystem. With funding from the {sta}, sustainable support for Apache Maven is enabled for the first time—one of the world's most widely used open-source projects.",
+      "staLink": "Sovereign Tech Agency",
+      "intro2": "We now offer companies and organizations the opportunity to participate in this important undertaking. By subscribing to a Support & Care subscription, you contribute to securing the long-term stability and continued development of Apache Maven. Your support helps finance critical tasks such as security updates, bug fixes, and the development of new features.",
+      "intro3": "In addition to supporting community-driven development, a Support & Care subscription allows you to directly access our experts and maintainers to prioritize bug fixes or assist you with other topics related to Apache Maven™.",
+      "subscriptionTitle": "Our Subscription Model for Apache Maven™",
+      "subscriptionSubtitle": "We offer three different packages tailored to the needs of various user groups. We are happy to help you determine which package best suits your requirements.",
+      "contactUs": "Contact us",
+      "closingStatement": "We look forward to shaping the future of Apache Maven together with you!",
+      "staTitle": "Support from the Sovereign Tech Agency",
+      "sta1": "The Sovereign Tech Agency (STA) is a funding program of the German Federal Ministry for Economic Affairs and Climate Action dedicated to the sustainable support of open-source software. The program aims to secure critical digital infrastructures in the long term and strengthen the resilience of the European technology ecosystem. Projects funded by the STA must be of significant importance to the economy and society while following sustainable development practices.",
+      "sta2": "Since 2024, the STA has been investing in the Support & Care for Apache Maven™ project, enabling sustainable cost-sharing between public funding and commercial contributions. The STA's investment lays the foundation for a sustainable future of the project and the entire Java ecosystem. However, broad support from the community and industry is essential to secure Apache Maven in the long term.",
+      "whoWorksTitle": "Who Works on Support & Care for Apache Maven™?",
+      "whoWorks": "Employees of Open Elements as well as external developers and maintainers work together on Support & Care for Apache Maven™. While project management and coordination are handled by Open Elements, development is carried out by both our engineers and long-standing external maintainers of Apache Maven. This close collaboration with the Apache Software Foundation and the active Apache Maven community ensures that the project evolves in line with user needs.",
+      "modelTitle": "A Model Project for Open Source",
+      "model1": "With Support & Care for Apache Maven™, Open Elements is taking a strong step toward sustainable support for open-source projects. This program serves as a pilot within the Support & Care initiative, which aims to invest in additional critical open-source components.",
+      "model2": "The concept combines public funding, commercial support, transparent financial management, and active community involvement. It demonstrates how essential open-source projects can be made future-proof while fostering innovation — a model that can inspire similar initiatives across the open-source ecosystem.",
+      "footnotesTitle": "Footnotes & Service Information",
+      "trademark": "Apache™ and Apache Maven™ are trademarks of the Apache Software Foundation.",
+      "footnote1": "Unused support hours expire at the end of the month — in this case, your contribution directly supports the continued development of the respective open-source components.",
+      "footnote2": "Business days are Monday through Friday, excluding public holidays in North Rhine-Westphalia, Germany.",
+      "footnote3": "Our helpdesk uses a GDPR-compliant, EU-hosted solution. Customers receive individual accounts, and communication is available in both German and English.",
+      "footnote4": "Our experts are developers and technical staff who are directly involved in the respective OSS projects (e.g., as committers or maintainers).",
+      "footnote5": "We use Zoom for webinars and individual meetings.",
+      "basic": {
+        "name": "Basic Subscription",
+        "bullet1": "4 hours of support per month included<sup>1</sup>",
+        "bullet2": "Response time: 1 business day<sup>2</sup>",
+        "bullet3": "Support requests via helpdesk in German and English<sup>3</sup>",
+        "bullet4": "10% discount on every additional support hour",
+        "bullet5": "Quarterly webinar directly with the experts<sup>4,5</sup>",
+        "bullet6": "Monthly newsletter"
+      },
+      "standard": {
+        "name": "Standard Subscription",
+        "bullet1": "8 hours of support per month included<sup>1</sup>",
+        "bullet2": "Response time: 1 business day<sup>2</sup>",
+        "bullet3": "Support requests via helpdesk in German and English<sup>3</sup>",
+        "bullet4": "15% discount on every additional support hour",
+        "bullet5": "Quarterly webinar directly with the experts<sup>4,5</sup>",
+        "bullet6": "Monthly newsletter",
+        "bullet7": "10% training discount",
+        "bullet8": "Individual monthly call with experts<sup>4,5</sup>"
+      },
+      "premium": {
+        "name": "Premium Subscription",
+        "bullet1": "8 hours of support per month included<sup>1</sup>",
+        "bullet2": "Response time: 1 hour",
+        "bullet3": "Support requests via helpdesk and hotline in German and English<sup>3</sup>",
+        "bullet4": "15% discount on every additional support hour",
+        "bullet5": "Quarterly webinar directly with the experts<sup>4,5</sup>",
+        "bullet6": "Monthly newsletter",
+        "bullet7": "10% training discount",
+        "bullet8": "Individual monthly call with experts<sup>4,5</sup>"
+      }
+    },
+    "about": {
+      "title": "About us",
+      "sidebar": {
+        "team": "Our Team",
+        "engagements": "Our Engagements",
+        "partners": "Our Customers & Partners"
+      },
+      "team": {
+        "title": "Our",
+        "titleHighlight": "Team"
+      },
+      "engagements": {
+        "title": "Our",
+        "titleHighlight": "Engagements"
+      },
+      "partners": {
+        "title": "Our",
+        "titleHighlight": "Customers & Partners"
+      }
+    },
     "subscription": {
       "contactUs": "Contact us"
     }

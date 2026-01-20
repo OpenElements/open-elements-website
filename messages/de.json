@@ -91,6 +91,100 @@
     "description2": "Im Home-Office oder irgendwo auf der Welt in einem Co-Working-Space: Für uns ist Open Office kein Statussymbol, sondern ein gelebter Wert."
   },
   "support_care": {
+    "page": {
+      "title": "Support & Care",
+      "subtitle": "Nachhaltige Unterstützung für Open-Source-Software",
+      "intro1": "Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisierung und Unterstützung von Open-Source-Software (OSS). Open Elements arbeitet sowohl mit der Industrie als auch mit der Open-Source-Community zusammen, um die Qualität, Unabhängigkeit und Weiterentwicklung kritischer Open-Source-Projekte und -Komponenten sicherzustellen.",
+      "intro2": "Mit Support & Care bietet Open Elements eine Lösung für kritische Projekte, damit die Produkte bedenkenlos in einer professionellen Umgebung eingesetzt werden können. Unsere Open-Source-Strategie zielt darauf ab, durch finanzielle Unterstützung und aktive Zusammenarbeit die Entwicklungsrichtung der Projekte zu verbessern und Unterfinanzierung, schlechte Wartung und Sicherheitslücken dieser kritischen OSS zu verhindern.",
+      "services": "Durch Support & Care bieten wir umfassende Dienstleistungen, um die Leistung und Sicherheit Ihrer Anwendungen zu gewährleisten. Unsere Leistungen gehen über die klassische Fehlerbehebung hinaus und fördern die nachhaltige Verbesserung Ihrer Infrastruktur.",
+      "contactUs": "Kontaktieren Sie uns",
+      "offeringsTitle": "Unsere Support & Care Angebote",
+      "learnMore": "Mehr erfahren →",
+      "maven": {
+        "title": "Support & Care für Apache Maven™",
+        "description": "Support & Care für Apache Maven™ stärkt die Zukunft des Java-Ökosystems durch nachhaltige Finanzierung und transparente Entwicklung. Sichern Sie die langfristige Stabilität und Weiterentwicklung von Apache Maven."
+      },
+      "temurin": {
+        "title": "Eclipse Temurin Support & Care",
+        "description": "Professionelle Unterstützung für Eclipse Temurin, die am weitesten verbreitete Java-Laufzeitumgebung mit über 20 Millionen Downloads pro Monat. Sichern Sie die langfristige Funktionsfähigkeit Ihrer Java-Anwendungen."
+      }
+    },
+    "maven": {
+      "intro1": "Open Elements hat mit seinem Programm Support & Care für Apache Maven™ eine wichtige Initiative gestartet, die ein zentrales Werkzeug des Java-Ökosystems absichert. Mit Förderung der {sta} wird erstmalig eine nachhaltige Unterstützung für Apache Maven ermöglicht – eines der weltweit am häufigsten genutzten Open-Source-Projekte.",
+      "staLink": "Sovereign Tech Agency",
+      "intro2": "Wir bieten Unternehmen und Organisationen nun die Möglichkeit, sich an diesem wichtigen Vorhaben zu beteiligen. Mit dem Abschluss einer Support & Care Subscription tragen Sie dazu bei, die langfristige Stabilität und Weiterentwicklung von Apache Maven zu sichern. Ihre Unterstützung hilft dabei, kritische Aufgaben wie Sicherheitsupdates, Bugfixes und die Entwicklung neuer Features zu finanzieren.",
+      "intro3": "Neben der Unterstützung der Community-getriebenen Entwicklung ermöglicht Ihnen eine Support & Care Subscription den direkten Zugang zu unseren Experten und Maintainern, um Bugfixes zu priorisieren oder Sie bei anderen Themen rund um Apache Maven™ zu unterstützen.",
+      "subscriptionTitle": "Unser Subscription-Modell für Apache Maven™",
+      "subscriptionSubtitle": "Wir bieten drei verschiedene Pakete an, die auf die Bedürfnisse verschiedener Nutzergruppen zugeschnitten sind. Gerne helfen wir Ihnen dabei, das für Sie passende Paket zu ermitteln.",
+      "contactUs": "Kontaktieren Sie uns",
+      "closingStatement": "Wir freuen uns darauf, gemeinsam mit Ihnen die Zukunft von Apache Maven zu gestalten!",
+      "staTitle": "Förderung durch die Sovereign Tech Agency",
+      "sta1": "Die Sovereign Tech Agency (STA) ist ein Förderprogramm des Bundesministeriums für Wirtschaft und Klimaschutz, das sich der nachhaltigen Unterstützung von Open-Source-Software widmet. Das Programm zielt darauf ab, kritische digitale Infrastrukturen langfristig abzusichern und die Resilienz des europäischen Technologie-Ökosystems zu stärken. Projekte, die durch die STA gefördert werden, müssen von erheblicher Bedeutung für Wirtschaft und Gesellschaft sein und nachhaltige Entwicklungspraktiken verfolgen.",
+      "sta2": "Seit 2024 investiert die STA in das Projekt Support & Care für Apache Maven™ und ermöglicht damit eine nachhaltige Kostenaufteilung zwischen öffentlicher Förderung und kommerziellen Beiträgen. Die Investition der STA legt die Grundlage für eine nachhaltige Zukunft des Projekts und des gesamten Java-Ökosystems. Jedoch ist eine breite Unterstützung durch die Community und die Industrie unerlässlich, um Apache Maven langfristig abzusichern.",
+      "whoWorksTitle": "Wer arbeitet an Support & Care für Apache Maven™?",
+      "whoWorks": "An Support & Care für Apache Maven™ arbeiten Mitarbeiter von Open Elements sowie externe Entwickler und Maintainer zusammen. Während das Projektmanagement und die Koordination durch Open Elements erfolgen, wird die Entwicklung sowohl von unseren Ingenieuren als auch von langjährigen externen Maintainern von Apache Maven durchgeführt. Diese enge Zusammenarbeit mit der Apache Software Foundation und der aktiven Apache Maven Community stellt sicher, dass das Projekt im Sinne der Nutzerbedürfnisse weiterentwickelt wird.",
+      "modelTitle": "Ein Modellprojekt für Open Source",
+      "model1": "Mit Support & Care für Apache Maven™ geht Open Elements einen starken Schritt in Richtung nachhaltiger Unterstützung von Open-Source-Projekten. Dieses Programm dient als Pilotprojekt innerhalb der Support & Care Initiative, die darauf abzielt, in weitere kritische Open-Source-Komponenten zu investieren.",
+      "model2": "Das Konzept vereint öffentliche Förderung, kommerzielle Unterstützung, transparentes Finanzmanagement und aktive Community-Beteiligung. Es zeigt, wie essenzielle Open-Source-Projekte zukunftsfähig gemacht werden können, während gleichzeitig Innovation gefördert wird – ein Modell, das ähnliche Initiativen im gesamten Open-Source-Ökosystem inspirieren kann.",
+      "footnotesTitle": "Fußnoten & Service-Informationen",
+      "trademark": "Apache™ und Apache Maven™ sind Markenzeichen der Apache Software Foundation.",
+      "footnote1": "Nicht genutzte Support-Stunden verfallen am Ende des Monats – in diesem Fall unterstützt Ihr Beitrag direkt die Weiterentwicklung der jeweiligen Open-Source-Komponenten.",
+      "footnote2": "Werktage sind Montag bis Freitag, ausgenommen gesetzliche Feiertage in Nordrhein-Westfalen, Deutschland.",
+      "footnote3": "Unser Helpdesk nutzt eine DSGVO-konforme, in der EU gehostete Lösung. Kunden erhalten individuelle Konten, und die Kommunikation ist sowohl auf Deutsch als auch auf Englisch möglich.",
+      "footnote4": "Unsere Experten sind Entwickler und technisches Personal, die direkt an den jeweiligen OSS-Projekten beteiligt sind (z. B. als Committer oder Maintainer).",
+      "footnote5": "Wir nutzen Zoom für Webinare und individuelle Meetings.",
+      "basic": {
+        "name": "Basis Subscription",
+        "bullet1": "4 Stunden Support pro Monat inklusive<sup>1</sup>",
+        "bullet2": "Reaktionszeit: 1 Werktag<sup>2</sup>",
+        "bullet3": "Support-Anfragen über Helpdesk auf Deutsch und Englisch<sup>3</sup>",
+        "bullet4": "10% Rabatt auf jede zusätzliche Support-Stunde",
+        "bullet5": "Quartalsweise Webinar direkt mit den Experten<sup>4,5</sup>",
+        "bullet6": "Monatlicher Newsletter"
+      },
+      "standard": {
+        "name": "Standard Subscription",
+        "bullet1": "8 Stunden Support pro Monat inklusive<sup>1</sup>",
+        "bullet2": "Reaktionszeit: 1 Werktag<sup>2</sup>",
+        "bullet3": "Support-Anfragen über Helpdesk auf Deutsch und Englisch<sup>3</sup>",
+        "bullet4": "15% Rabatt auf jede zusätzliche Support-Stunde",
+        "bullet5": "Quartalsweise Webinar direkt mit den Experten<sup>4,5</sup>",
+        "bullet6": "Monatlicher Newsletter",
+        "bullet7": "10% Schulungsrabatt",
+        "bullet8": "Individueller monatlicher Austausch mit Experten<sup>4,5</sup>"
+      },
+      "premium": {
+        "name": "Premium Subscription",
+        "bullet1": "8 Stunden Support pro Monat inklusive<sup>1</sup>",
+        "bullet2": "Reaktionszeit: 1 Stunde",
+        "bullet3": "Support-Anfragen über Helpdesk und Hotline auf Deutsch und Englisch<sup>3</sup>",
+        "bullet4": "15% Rabatt auf jede zusätzliche Support-Stunde",
+        "bullet5": "Quartalsweise Webinar direkt mit den Experten<sup>4,5</sup>",
+        "bullet6": "Monatlicher Newsletter",
+        "bullet7": "10% Schulungsrabatt",
+        "bullet8": "Individueller monatlicher Austausch mit Experten<sup>4,5</sup>"
+      }
+    },
+    "about": {
+      "title": "Über uns",
+      "sidebar": {
+        "team": "Unser Team",
+        "engagements": "Unsere Engagements",
+        "partners": "Unsere Kunden & Partner"
+      },
+      "team": {
+        "title": "Unser",
+        "titleHighlight": "Team"
+      },
+      "engagements": {
+        "title": "Unsere",
+        "titleHighlight": "Engagements"
+      },
+      "partners": {
+        "title": "Unsere",
+        "titleHighlight": "Kunden & Partner"
+      }
+    },
     "subscription": {
       "contactUs": "Kontaktieren Sie uns",
       "basic": {
