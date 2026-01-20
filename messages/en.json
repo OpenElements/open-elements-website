@@ -110,6 +110,26 @@
       "titleHighlight": "Customers & Partners"
     }
   },
+  "contact": {
+    "title": "Contact us",
+    "calendly": {
+      "description": "The easiest way to get in touch with us is by booking a free 30 min slot in our open calendar. By doing so we can start a discussion and talk about your concerns, interest or problems regarding any of our focused topics like Open Source and Java.",
+      "button": "schedule appointment"
+    },
+    "email": {
+      "intro": "Next to this you can send us a mail at"
+    },
+    "phone": {
+      "intro": "or call us directly at"
+    },
+    "address": {
+      "intro": "Our postal address is",
+      "line1": "Open Elements GmbH",
+      "line2": "Gerhart-Hauptmann-Str. 49B",
+      "line3": "51379 Leverkusen",
+      "line4": "Germany"
+    }
+  },
   "support_care": {
     "page": {
       "title": "Support & Care",

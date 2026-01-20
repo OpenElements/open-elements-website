@@ -110,6 +110,26 @@
       "titleHighlight": "Kunden & Partner"
     }
   },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "calendly": {
+      "description": "Der einfachste Weg, mit uns in Kontakt zu treten, ist die Buchung eines kostenlosen 30-Minuten-Termins in unserem offenen Kalender. So können wir ein Gespräch beginnen und über Ihre Anliegen, Interessen oder Probleme in Bezug auf unsere Schwerpunktthemen wie Open Source und Java sprechen.",
+      "button": "Termin vereinbaren"
+    },
+    "email": {
+      "intro": "Darüber hinaus können Sie uns eine E-Mail senden an"
+    },
+    "phone": {
+      "intro": "oder rufen Sie uns direkt an unter"
+    },
+    "address": {
+      "intro": "Unsere Postanschrift lautet",
+      "line1": "Open Elements GmbH",
+      "line2": "Gerhart-Hauptmann-Str. 49B",
+      "line3": "51379 Leverkusen",
+      "line4": "Deutschland"
+    }
+  },
   "support_care": {
     "page": {
       "title": "Support & Care",

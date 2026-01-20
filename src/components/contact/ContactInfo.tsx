@@ -1,10 +1,15 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function ContactInfo() {
+  const t = useTranslations('contact')
+  
   return (
     <div className="relative flex flex-col items-center w-full gap-8 lg:items-start xl:gap-12 lg:gap-6">
       <div className="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col">
-        <p>Next to this you can send us a mail at</p>
+        <p>{t('email.intro')}</p>
         <a 
           href="mailto:info@open-elements.com" 
           className="flex items-center gap-1 text-purple-700 link-purple"
@@ -19,7 +24,7 @@ export default function ContactInfo() {
           </svg>
           <p className="font-semibold">info@open-elements.com</p>
         </a>
-        <p>or call us directly at</p>
+        <p>{t('phone.intro')}</p>
         <a 
           href="tel:+4915122684622" 
           className="flex items-center gap-2 text-purple-700 link-purple"
@@ -42,7 +47,7 @@ export default function ContactInfo() {
       </div>
       
       <div className="bg-sky-100 gap-2 rounded-[28px] border-2 border-dashed border-sky p-6 max-w-[450px] shrink-0 w-full flex flex-col lg:-mr-5 xl:place-self-end">
-        <p>Our postal address is</p>
+        <p>{t('address.intro')}</p>
         <div className="flex items-start gap-2 text-purple-700">
           <svg 
             className="w-6 h-6 mt-1 stroke-2" 
@@ -54,10 +59,10 @@ export default function ContactInfo() {
             <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
           </svg>
           <p className="font-semibold">
-            Open Elements GmbH<br/>
-            Gerhart-Hauptmann-Str. 49B<br/>
-            51379 Leverkusen<br/>
-            Germany
+            {t('address.line1')}<br/>
+            {t('address.line2')}<br/>
+            {t('address.line3')}<br/>
+            {t('address.line4')}
           </p>
         </div>
       </div>
