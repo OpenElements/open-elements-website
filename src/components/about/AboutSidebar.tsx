@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 interface AboutSidebarProps {
@@ -9,6 +10,7 @@ interface AboutSidebarProps {
 }
 
 export default function AboutSidebar({ activeSection, onSectionClick }: AboutSidebarProps) {
+  const t = useTranslations('about')
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
       <div className="top-20 sticky -mt-36">
         <div className="mb-16">
           <div className="relative flex justify-center sm:justify-start items-center sm:items-start text-left">
-            <h1 className="text-center h1">About us</h1>
+            <h1 className="text-center h1">{t('title')}</h1>
             <Image 
               src="/illustrations/underline.svg" 
               alt="Underline"
@@ -75,7 +77,7 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
                     activeSection === 'div1' ? 'bg-green border-green' : 'border-purple bg-transparent'
                   }`}
                 />
-                Our Team
+                {t('sidebar.team')}
               </button>
               <button 
                 type="button" 
@@ -89,7 +91,7 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
                     activeSection === 'div2' ? 'bg-green border-green' : 'border-purple bg-transparent'
                   }`}
                 />
-                Our Engagements
+                {t('sidebar.engagements')}
               </button>
               <button 
                 type="button" 
@@ -103,7 +105,7 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
                     activeSection === 'div3' ? 'bg-green border-green' : 'border-purple bg-transparent'
                   }`}
                 />
-                Our Customers & Partners
+                {t('sidebar.partners')}
               </button>
             </div>
           )}

@@ -1,10 +1,14 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function SupportCareMavenPage() {
+  const t = useTranslations('support_care.maven')
+  
   return (
-    <div className=" pb-40">
-      {/* Hero Background */}
+    <div className="pb-40">
       <div className="absolute top-0 left-0 w-full h-40  -z-10 overflow-hidden">
         <Image
           src="/illustrations/hero-bg-2.svg"
@@ -17,7 +21,6 @@ export default function SupportCareMavenPage() {
 
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          {/* Logo Section */}
           <div className="flex items-center justify-center pt-16 sm:pt-24 pb-8 sm:pb-12">
             <Image
               src="/illustrations/support-care-logos/support-care-maven-logo.svg"
@@ -28,21 +31,17 @@ export default function SupportCareMavenPage() {
             />
           </div>
 
-          {/* Introduction Text */}
           <div className="relative flex flex-col mt-8 text-base leading-7 gap-6 text-blue">
             <p>
-              Open Elements has launched a major initiative with its program Support & Care for Apache Maven™, helping to secure a central tool of the Java ecosystem. 
-              With funding from the <a href="https://www.sovereign.tech/de" className="text-purple hover:underline" target="_blank" rel="noopener noreferrer">Sovereign Tech Agency</a>, 
-              sustainable support for Apache Maven is enabled for the first time—one of the world's most widely used open-source projects.
+              {t.rich('intro1', {
+                sta: (chunks) => <a href="https://www.sovereign.tech/de" className="text-purple hover:underline" target="_blank" rel="noopener noreferrer">{t('staLink')}</a>
+              })}
             </p>
             <p>
-              We now offer companies and organizations the opportunity to participate in this important undertaking. 
-              By subscribing to a Support & Care subscription, you contribute to securing the long-term stability and continued development of Apache Maven. 
-              Your support helps finance critical tasks such as security updates, bug fixes, and the development of new features.
+              {t('intro2')}
             </p>
             <p>
-              In addition to supporting community-driven development, a Support & Care subscription allows you to directly access our experts and maintainers 
-              to prioritize bug fixes or assist you with other topics related to Apache Maven™.
+              {t('intro3')}
             </p>
           </div>
         </div>
@@ -52,145 +51,144 @@ export default function SupportCareMavenPage() {
       <div className="container mt-16">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-center text-3xl sm:text-4xl font-bold text-blue mb-12">
-            Our Subscription Model for Apache Maven™
+            {t('subscriptionTitle')}
           </h2>
           <p className="text-center text-blue mb-12 max-w-3xl mx-auto">
-            We offer three different packages tailored to the needs of various user groups.
-            We are happy to help you determine which package best suits your requirements.
+            {t('subscriptionSubtitle')}
           </p>
 
           {/* Subscription Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {/* Basic Subscription */}
             <div className="bg-gray-100 rounded-[30px] shadow-lg p-6 pb-9 flex flex-col h-full">
-              <h3 className="text-lg font-bold text-center text-blue mb-6">Basic Subscription</h3>
+              <h3 className="text-lg font-bold text-center text-blue mb-6">{t('basic.name')}</h3>
               <ul className="space-y-3 mb-8 flex-grow text-blue text-sm leading-6">
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>4 hours of support per month included<sup>1</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('basic.bullet1') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Response time: 1 business day<sup>2</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('basic.bullet2') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Support requests via helpdesk in German and English<sup>3</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('basic.bullet3') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>10% discount on every additional support hour</span>
+                  <span>{t('basic.bullet4')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Quarterly webinar directly with the experts<sup>4,5</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('basic.bullet5') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Monthly newsletter</span>
+                  <span>{t('basic.bullet6')}</span>
                 </li>
               </ul>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-purple rounded-full hover:bg-purple-700 hover:shadow-lg transition-all active:shadow-none active:bg-purple"
               >
-                Contact us
+                {t('contactUs')}
               </Link>
             </div>
 
             {/* Standard Subscription */}
             <div className="bg-gray-100 rounded-[30px] shadow-lg p-6 pb-9 flex flex-col h-full border-2 border-purple">
-              <h3 className="text-lg font-bold text-center text-blue mb-6">Standard Subscription</h3>
+              <h3 className="text-lg font-bold text-center text-blue mb-6">{t('standard.name')}</h3>
               <ul className="space-y-3 mb-8 flex-grow text-blue text-sm leading-6">
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>8 hours of support per month included<sup>1</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('standard.bullet1') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Response time: 1 business day<sup>2</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('standard.bullet2') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Support requests via helpdesk in German and English<sup>3</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('standard.bullet3') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>15% discount on every additional support hour</span>
+                  <span>{t('standard.bullet4')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Quarterly webinar directly with the experts<sup>4,5</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('standard.bullet5') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Monthly newsletter</span>
+                  <span>{t('standard.bullet6')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>10% training discount</span>
+                  <span>{t('standard.bullet7')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Individual monthly call with experts<sup>4,5</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('standard.bullet8') }} />
                 </li>
               </ul>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-purple rounded-full hover:bg-purple-700 hover:shadow-lg transition-all active:shadow-none active:bg-purple"
               >
-                Contact us
+                {t('contactUs')}
               </Link>
             </div>
 
             {/* Premium Subscription */}
             <div className="bg-gray-100 rounded-[30px] shadow-lg p-6 pb-9 flex flex-col h-full">
-              <h3 className="text-lg font-bold text-center text-blue mb-6">Premium Subscription</h3>
+              <h3 className="text-lg font-bold text-center text-blue mb-6">{t('premium.name')}</h3>
               <ul className="space-y-3 mb-8 flex-grow text-blue text-sm leading-6">
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>8 hours of support per month included<sup>1</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('premium.bullet1') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Response time: 1 hour</span>
+                  <span>{t('premium.bullet2')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Support requests via helpdesk and hotline in German and English<sup>3</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('premium.bullet3') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>15% discount on every additional support hour</span>
+                  <span>{t('premium.bullet4')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Quarterly webinar directly with the experts<sup>4,5</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('premium.bullet5') }} />
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Monthly newsletter</span>
+                  <span>{t('premium.bullet6')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>10% training discount</span>
+                  <span>{t('premium.bullet7')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green mt-0.5 shrink-0">✓</span>
-                  <span>Individual monthly call with experts<sup>4,5</sup></span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw('premium.bullet8') }} />
                 </li>
               </ul>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-purple rounded-full hover:bg-purple-700 hover:shadow-lg transition-all active:shadow-none active:bg-purple"
               >
-                Contact us
+                {t('contactUs')}
               </Link>
             </div>
           </div>
 
           <p className="text-center text-blue mt-12 text-lg">
-            We look forward to shaping the future of Apache Maven together with you!
+            {t('closingStatement')}
           </p>
         </div>
       </div>
@@ -199,19 +197,14 @@ export default function SupportCareMavenPage() {
       <div className="container mt-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue mb-8">
-            Support from the Sovereign Tech Agency
+            {t('staTitle')}
           </h2>
           <div className="flex flex-col gap-6 text-base leading-7 text-blue">
             <p>
-              The Sovereign Tech Agency (STA) is a funding program of the German Federal Ministry for Economic Affairs and Climate Action 
-              dedicated to the sustainable support of open-source software. The program aims to secure critical digital infrastructures in the long term 
-              and strengthen the resilience of the European technology ecosystem. Projects funded by the STA must be of significant importance to the economy 
-              and society while following sustainable development practices.
+              {t('sta1')}
             </p>
             <p>
-              Since 2024, the STA has been investing in the Support & Care for Apache Maven™ project, enabling sustainable cost-sharing between public funding 
-              and commercial contributions. The STA's investment lays the foundation for a sustainable future of the project and the entire Java ecosystem. 
-              However, broad support from the community and industry is essential to secure Apache Maven in the long term.
+              {t('sta2')}
             </p>
           </div>
 
@@ -232,14 +225,11 @@ export default function SupportCareMavenPage() {
       <div className="container mt-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue mb-8">
-            Who Works on Support & Care for Apache Maven™?
+            {t('whoWorksTitle')}
           </h2>
           <div className="flex flex-col gap-6 text-base leading-7 text-blue">
             <p>
-              Employees of Open Elements as well as external developers and maintainers work together on Support & Care for Apache Maven™. 
-              While project management and coordination are handled by Open Elements, development is carried out by both our engineers and 
-              long-standing external maintainers of Apache Maven. This close collaboration with the Apache Software Foundation and the active 
-              Apache Maven community ensures that the project evolves in line with user needs.
+              {t('whoWorks')}
             </p>
           </div>
         </div>
@@ -249,17 +239,14 @@ export default function SupportCareMavenPage() {
       <div className="container mt-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue mb-8">
-            A Model Project for Open Source
+            {t('modelTitle')}
           </h2>
           <div className="flex flex-col gap-6 text-base leading-7 text-blue mb-12">
             <p>
-              With Support & Care for Apache Maven™, Open Elements is taking a strong step toward sustainable support for open-source projects. 
-              This program serves as a pilot within the Support & Care initiative, which aims to invest in additional critical open-source components.
+              {t('model1')}
             </p>
             <p>
-              The concept combines public funding, commercial support, transparent financial management, and active community involvement. 
-              It demonstrates how essential open-source projects can be made future-proof while fostering innovation — a model that can inspire 
-              similar initiatives across the open-source ecosystem.
+              {t('model2')}
             </p>
           </div>
           
@@ -284,7 +271,7 @@ export default function SupportCareMavenPage() {
             className="inline-flex shrink-0 items-center justify-center w-full max-w-xs gap-3 px-4 py-3.5 mx-auto text-base font-bold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple"
           >
             <Image src="/icons/call.svg" alt="Call icon" width={20} height={20} />
-            Contact us
+            {t('contactUs')}
           </Link>
         </div>
       </div>
@@ -293,30 +280,17 @@ export default function SupportCareMavenPage() {
       <div className="container mt-20 mb-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue mb-8">
-            Footnotes & Service Information
+            {t('footnotesTitle')}
           </h2>
           <div className="flex flex-col gap-4 text-sm leading-6 text-blue">
             <p>
-              Apache™ and Apache Maven™ are trademarks of the Apache Software Foundation.
+              {t('trademark')}
             </p>
-            <p>
-              <sup>1</sup>Unused support hours expire at the end of the month — in this case, your contribution directly supports 
-              the continued development of the respective open-source components.
-            </p>
-            <p>
-              <sup>2</sup>Business days are Monday through Friday, excluding public holidays in North Rhine-Westphalia, Germany.
-            </p>
-            <p>
-              <sup>3</sup>Our helpdesk uses a GDPR-compliant, EU-hosted solution. Customers receive individual accounts, 
-              and communication is available in both German and English.
-            </p>
-            <p>
-              <sup>4</sup>Our experts are developers and technical staff who are directly involved in the respective OSS projects 
-              (e.g., as committers or maintainers).
-            </p>
-            <p>
-              <sup>5</sup>We use Zoom for webinars and individual meetings.
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: '<sup>1</sup>' + t('footnote1') }} />
+            <p dangerouslySetInnerHTML={{ __html: '<sup>2</sup>' + t('footnote2') }} />
+            <p dangerouslySetInnerHTML={{ __html: '<sup>3</sup>' + t('footnote3') }} />
+            <p dangerouslySetInnerHTML={{ __html: '<sup>4</sup>' + t('footnote4') }} />
+            <p dangerouslySetInnerHTML={{ __html: '<sup>5</sup>' + t('footnote5') }} />
           </div>
         </div>
       </div>
