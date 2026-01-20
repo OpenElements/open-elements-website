@@ -90,6 +90,26 @@
     "description1": "We want to offer all employees the most comfortable integration of working time into their individual life.",
     "description2": "In a home office or anywhere in the world in a co-working space: for us, open office is not a status symbol but a lived value."
   },
+  "about": {
+    "title": "About us",
+    "sidebar": {
+      "team": "Our Team",
+      "engagements": "Our Engagements",
+      "partners": "Our Customers & Partners"
+    },
+    "team": {
+      "title": "Our",
+      "titleHighlight": "Team"
+    },
+    "engagements": {
+      "title": "Our",
+      "titleHighlight": "Engagements"
+    },
+    "partners": {
+      "title": "Our",
+      "titleHighlight": "Customers & Partners"
+    }
+  },
   "support_care": {
     "page": {
       "title": "Support & Care",
@@ -165,28 +185,28 @@
         "bullet8": "Individual monthly call with experts<sup>4,5</sup>"
       }
     },
-    "about": {
-      "title": "About us",
-      "sidebar": {
-        "team": "Our Team",
-        "engagements": "Our Engagements",
-        "partners": "Our Customers & Partners"
-      },
-      "team": {
-        "title": "Our",
-        "titleHighlight": "Team"
-      },
-      "engagements": {
-        "title": "Our",
-        "titleHighlight": "Engagements"
-      },
-      "partners": {
-        "title": "Our",
-        "titleHighlight": "Customers & Partners"
-      }
-    },
     "subscription": {
       "contactUs": "Contact us"
+    }
+  },
+  "about": {
+    "title": "About us",
+    "sidebar": {
+      "team": "Our Team",
+      "engagements": "Our Engagements",
+      "partners": "Our Customers & Partners"
+    },
+    "team": {
+      "title": "Our",
+      "titleHighlight": "Team"
+    },
+    "engagements": {
+      "title": "Our",
+      "titleHighlight": "Engagements"
+    },
+    "partners": {
+      "title": "Our",
+      "titleHighlight": "Customers & Partners"
     }
   }
 }
