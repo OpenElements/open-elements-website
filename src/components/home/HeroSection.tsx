@@ -8,10 +8,10 @@ export default function HeroSection() {
   const t = useTranslations()
 
   return (
-    <div className="relative mx-auto overflow-hidden">
+    <div className=" mx-auto overflow-hidden">
       {/* Hero Background Illustrations */}
       <div className="absolute -top-15 left-0 right-0 flex items-start w-full -z-10">
-        <div className="bg-blue h-[244px] w-full 2xl:block hidden"></div>
+        <div className="bg-blue h-full w-full 2xl:block hidden"></div>
         <div className="w-full 2xl:shrink-0">
           <Image
             className="hidden w-full mt-3 xl:mt-0 lg:block"
@@ -30,7 +30,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <div className="bg-blue h-[595px] w-full 2xl:block hidden"></div>
+        <div className="bg-blue h-full w-full 2xl:block hidden"></div>
       </div>
 
       <div className="relative max-w-sm px-6 mx-auto mt-12 lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full sm:pb-0 pb-14 sm:px-0">
