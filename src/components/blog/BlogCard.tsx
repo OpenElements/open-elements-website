@@ -14,15 +14,18 @@ interface BlogPost {
 
 interface BlogCardProps {
   post: BlogPost
+  locale?: string
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post, locale = 'en' }: BlogCardProps) {
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  
   return (
     <div className="pt-7 sm:pt-12">
       <div className="container mx-auto space-y-20 lg:max-w-7xl">
         <div className="space-y-6">
           <div className="flex post bg-gray rounded-[30px] shadow-4 w-full relative group sm:flex-row flex-col">
-            <Link href={`/blog/${post.slug}`} className="absolute inset-0 z-10" />
+            <Link href={`${localePath}/posts/${post.slug}`} className="absolute inset-0 z-10" />
             <div className="relative sm:w-52 shrink-0 sm:h-auto h-72 half-rounded overflow-hidden">
               {post.preview_image && (
                 <Image
@@ -41,7 +44,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                       <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clipRule="evenodd" />
                     </svg>
                     <time className="text-[14px] font-medium">
-                      {new Date(post.date).toLocaleDateString('en-US', {
+                      {new Date(post.date).toLocaleDateString(locale === 'de' ? 'de-DE' : 'en-US', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric',

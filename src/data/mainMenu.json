@@ -9,7 +9,7 @@
   },
   {
     "name": "Blog",
-    "i18nKey": "blog",
+    "i18nKey": "blogNav",
     "altI18nKey": "blogDescription",
     "link": "/posts/",
     "visibleInNavigation": true,
