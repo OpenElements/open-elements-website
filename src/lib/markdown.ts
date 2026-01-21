@@ -5,7 +5,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 
 // Path to the posts directory
-const postsDirectory = path.join(process.cwd(), 'src/content/posts');
+const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 export interface PostFrontmatter {
   title: string;
