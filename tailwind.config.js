@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme";
-module.exports = {
+export default {
   // variants: {
   //   extend: {
   //     opacity: ['hover', 'active']
