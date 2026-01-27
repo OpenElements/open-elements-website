@@ -36,24 +36,25 @@ While this enforces boundaries at build time, it introduces new complexity: mana
 Java 9 introduced _[Java Modules](https://openjdk.org/jeps/261)_, providing modularization directly at the language level.
 With `module-info.java` descriptors, modules can declare explicit dependencies and control which packages are accessible to other modules.
 
-**Terminology:**
-
-
-The official name is _Java Platform Module System_, but we use the more accessible term _Java Modules_ throughout this series.
-Some people also refer to it as _JPMS_, but this was never an official abbreviation and the main author, Mark Reinhold, [heavily discourages using it](https://www.youtube.com/watch?v=ny4CqBX_kaQ&t=2062s).
-Java 9 introduced JPMS as part of [Project Jigsaw](https://openjdk.org/projects/jigsaw/).
-So you may also find references to Jigsaw in related documents and samples.
-
-The following terms are essential when working with Java Modules:
-
-* **`module`**\
-A named, self-describing collection of packages with explicit dependencies and exports.
-* **`requires`**\
-Declares a dependency on another module.
-* **`exports`**\
-Makes a package accessible to other modules.
-* **`module-info.java`**\
-The module descriptor file that defines the module’s name, dependencies, and exports.
+> [!NOTE]
+> **Terminology**
+>
+>
+> The official name is _Java Platform Module System_, but we use the more accessible term _Java Modules_ throughout this series.
+> Some people also refer to it as _JPMS_, but this was never an official abbreviation and  the main author, Mark Reinhold, [heavily discourages using it](https://www.youtube.com/watch?v=ny4CqBX_kaQ&t=2062s).
+> Java 9 introduced JPMS as part of [Project Jigsaw](https://openjdk.org/projects/jigsaw/).
+> So you may also find references to Jigsaw in related documents and samples.
+>
+> The following terms are essential when working with Java Modules:
+>
+> * **`module`**\
+> A named, self-describing collection of packages with explicit dependencies and exports.
+> * **`requires`**\
+> Declares a dependency on another module.
+> * **`exports`**\
+> Makes a package accessible to other modules.
+> * **`module-info.java`**\
+> The module descriptor file that defines the module’s name, dependencies, and exports.
 
 
 ### Maven 4 to the rescue
@@ -62,15 +63,16 @@ Maven 4 combines both approaches perfectly.
 With the new _module source hierarchy_, you can define multiple Java modules within a single Maven project, all sharing one `pom.xml`.
 This gives you the benefits of Java Modules encapsulation without the overhead of managing multiple Maven modules.
 
-**Maven 4's Innovation: Multiple Java Modules in a Single Project:**
-
-
-Both Maven 3 and [Gradle](https://docs.gradle.org/current/samples/sample_java_modules_multi_project.html) support compiling and running Java modules.
-However, they require each Java module to be a separate build unit – a Maven subproject (called _module_ in Maven 3) or Gradle subproject with its own build configuration.
-Maven 4 renamed these build units from _modules_ to _subprojects_ to avoid confusion with Java Modules.
-
-Moreover, Maven 4 introduces the _module source hierarchy_, allowing multiple Java modules to coexist within a single Maven project, sharing one `pom.xml`.
-This eliminates the overhead of managing multiple build files while still benefiting from Java module encapsulation.
+> [!NOTE]
+> **Maven 4's Innovation: Multiple Java Modules in a Single Project**
+>
+>
+> Both Maven 3 and [Gradle](https://docs.gradle.org/current/samples/sample_java_modules_multi_project.html) support compiling and running Java modules.
+> However, they require each Java module to be a separate build unit – a Maven subproject (called _module_ in Maven 3) or Gradle subproject with its own build configuration.
+> Maven 4 renamed these build units from _modules_ to _subprojects_ to avoid confusion with Java Modules.
+>
+> Moreover, Maven 4 introduces the _module source hierarchy_, allowing multiple Java modules to coexist within a single Maven project, sharing one `pom.xml`.
+> This eliminates the overhead of managing multiple build files while still benefiting from Java module encapsulation.
 
 
 This blog article starts a series exploring these new opportunities.
@@ -123,17 +125,18 @@ src/
 Each Java module contains a `module-info.java` at the root of its source directory (e.g., `src/<module>/main/java/module-info.java`).
 This file is the module descriptor that defines the module’s name, its dependencies, and which packages it exposes to other modules (cf. [Defining Module Dependencies](#defining-module-dependencies)).
 
-**Module Names and Directory Names:**
-
-
-You’ll notice that the module names (e.g., `com.openelements.showcases.analyzer.core`) match the directory names under `src/`.
-This is a convention that helps keep things organized, but the module name in `module-info.java` can be different from the directory name if needed.
-
-This may look redundant and cumbersome at first, in particular as we have long module names which duplicate the contained package name hierarchies.
-For the sake of clarity, we’ll keep them similar at the beginning of this series.
-
-Note that the module name (as well as Java package names) use a dot-separated format, while the directory structure uses slashes (`/`).
-Over time, we may introduce other opportunities to name directories and modules differently.
+> [!NOTE]
+> **Module Names and Directory Names**
+>
+>
+> You’ll notice that the module names (e.g., `com.openelements.showcases.analyzer.core`) match the directory names under `src/`.
+> This is a convention that helps keep things organized, but the module name in `module-info.java` can be different from the directory name if needed.
+>
+> This may look redundant and cumbersome at first, in particular as we have long module names which duplicate the contained package name hierarchies.
+> For the sake of clarity, we’ll keep them similar at the beginning of this series.
+>
+> Note that the module name (as well as Java package names) use a dot-separated format, while the directory structure uses slashes (`/`).
+> Over time, we may introduce other opportunities to name directories and modules differently.
 
 
 ## Defining Module Dependencies
@@ -156,12 +159,13 @@ module com.openelements.showcases.analyzer.core {
 The `exports` directive makes packages visible to other modules.
 Packages not exported are _encapsulated_ – they cannot be accessed from outside the module, even via reflection.
 
-**Module Dependencies and Maven Dependencies:**
-
-
-The `requires` directive in `module-info.java` declares compile-time and runtime dependencies at the Java module level.
-However, you still need to declare these libraries as `<dependency>` elements in your `pom.xml` so Maven can download and manage them.
-The module system enforces boundaries; Maven provides the artifacts.
+> [!NOTE]
+> **Module Dependencies and Maven Dependencies**
+>
+>
+> The `requires` directive in `module-info.java` declares compile-time and runtime dependencies at the Java module level.
+> However, you still need to declare these libraries as `<dependency>` elements in your `pom.xml` so Maven can download and manage them.
+> The module system enforces boundaries; Maven provides the artifacts.
 
 
 ## Building and Running
@@ -220,18 +224,19 @@ java --module-path "target/classes:target/lib" \
 
 On Windows, you need to use a semicolon (`;`) instead of a colon (`:`) to separate paths in the `--module-path` argument.
 
-**IMPORTANT: Module Path Instead of Classpath**
-
-
-Note that we do not specify the classpath anymore when using modules.
-All dependencies and modules must be available on the module path.
-This is a fundamental change when working with modular Java applications.
-
-The classpath is a flat list of JARs and directories where Java searches for classes.
-It provides no encapsulation – any public class can access any other public class.
-
-The module path can contain modular JARs (with `module-info.class`), exploded module directories, or directories containing modular JARs.
-The Java runtime uses module descriptors to enforce boundaries: only exported packages are accessible, and only declared dependencies can be used.
+> [!IMPORTANT]
+> **Module Path Instead of Classpath**
+>
+>
+> Note that we do not specify the classpath anymore when using modules.
+> All dependencies and modules must be available on the module path.
+> This is a fundamental change when working with modular Java applications.
+>
+> The classpath is a flat list of JARs and directories where Java searches for classes.
+> It provides no encapsulation – any public class can access any other public class.
+>
+> The module path can contain modular JARs (with `module-info.class`), exploded module directories, or directories containing modular JARs.
+> The Java runtime uses module descriptors to enforce boundaries: only exported packages are accessible, and only declared dependencies can be used.
 
 
 Using the module path leads to a significant improvement in runtime dependency management, as the Java runtime can enforce module boundaries and dependencies at runtime.
