@@ -3,7 +3,7 @@ command = "npm run netlify:build"
 publish = "public"
 
 [build.environment]
-HUGO_VERSION = "0.118.2"
+HUGO_VERSION = "0.134.3"
 
 # Production build
 [context.production]
