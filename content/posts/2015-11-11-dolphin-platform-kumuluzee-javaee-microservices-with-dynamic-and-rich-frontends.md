@@ -14,8 +14,7 @@ Have you heard of [KumuluzEE](https://ee.kumuluz.com) that is one of the 2015 Ja
 
 When using KumuluzEE you can work with all the JavaEE specs that you already know. Let's say you want to create an application that provides some REST endpoints and uses CDI internally. To do so you need to add the following dependencies to your project:
 
-{{< highlight xml >}}
-<dependency>
+```xml<dependency>
   <groupId>com.kumuluz.ee</groupId>
   <artifactId>kumuluzee-core</artifactId>
   <version>${kumuluzee.version}</version>
@@ -34,8 +33,7 @@ When using KumuluzEE you can work with all the JavaEE specs that you already kno
   <groupId>com.kumuluz.ee</groupId>
   <artifactId>kumuluzee-jax-rs</artifactId>
   <version>${kumuluzee.version}</version>
-</dependency>
-{{< / highlight >}}
+</dependency>```
 
 Let's have a deeper look what this dependencies define and add to your project:
 
@@ -46,8 +44,7 @@ Let's have a deeper look what this dependencies define and add to your project:
 
 Once this is done you can create your (microservice) JavaEE application. You can use all the defaults of the specs that are added as dependencies. The following code shows how a REST endpoint might look like:
 
-{{< highlight java >}}
-@Path("/orders")
+```java@Path("/orders")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @RequestScoped
@@ -64,8 +61,7 @@ public class OrdersResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         return Response.ok(o).build();
     }
-}
-{{< / highlight >}}
+}```
 
 To start your app kumuluzEE adds the class `com.kumuluz.ee.EeApplication` that contains a default main method. By starting the application your endpoints will be up faster than you can spell "weblogic".
 
@@ -73,8 +69,7 @@ To start your app kumuluzEE adds the class `com.kumuluz.ee.EeApplication` that c
 
 Since KumuluzEE supports all the JavaEE specs that are needed for the Dolphin Platform it's quite easy to create a Dolphin Platform application based on KumuluzEE. To do so you only need to add the following dependencies to your application:
 
-{{< highlight xml >}}
- <dependency>
+```xml <dependency>
   <groupId>com.canoo.dolphin-platform</groupId>
   <artifactId>dolphin-platform-server-javaee</artifactId>
   <version>0.7.0-SNAPSHOT</version>
@@ -93,15 +88,13 @@ Since KumuluzEE supports all the JavaEE specs that are needed for the Dolphin Pl
   <groupId>com.kumuluz.ee</groupId>
   <artifactId>kumuluzee-cdi</artifactId>
   <version>1.0.0</version>
-</dependency>
-{{< / highlight >}}
+</dependency>```
 
 Please notice that the feature is still in development and will be part of Dolphin Platform 0.7.0 ;)
 
 Once this is done you can start to create your Dolphin Controllers that will automatically be managed by JavaEE and support features like CDI.
 
-{{< highlight java >}}
-@DolphinController
+```java@DolphinController
 public class MyController {
 
     @DolphinModel
@@ -124,8 +117,7 @@ public class MyController {
     public void someAction() {
         System.out.println("Action");
     }
-}
-{{< / highlight >}}
+}```
 
 ## Conclusion
 

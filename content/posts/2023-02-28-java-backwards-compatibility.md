@@ -25,7 +25,7 @@ The JCL includes all classes of the Java API that we work with every day, such a
 But it also contains more exotic classes like `sun.misc.Unsafe`.
 Together with the Java Virtual Machine (JVM) and various tools like the Java compiler (javac), the JCL defines the JDK for JavaSE that developers use daily.
 
-{{< centered-image src="/posts/2023-02-28-java-backwards-compatibility/java-structure.jpg" width="100%" showCaption="false" alt="Java Structure">}}
+![Java Structure](/posts/2023-02-28-java-backwards-compatibility/java-structure.jpg)
 
 The private API of the JCL is on the classpath but should never be used directly by applications.
 Internal changes in the OpenJDK are often implemented in this area, which could lead to potential changes in the interfaces of the private API.
@@ -39,7 +39,7 @@ However, this changed with Java 9 and the introduction of the module system.
 The module system allows hiding APIs from the outside world, making them usable only within their own module.
 This enabled the complete hiding of Java's private APIs.
 
-{{< centered-image src="/posts/2023-02-28-java-backwards-compatibility/java-modules.jpg" width="100%" showCaption="false" alt="Java Modules">}}
+![Java Modules](/posts/2023-02-28-java-backwards-compatibility/java-modules.jpg)
 
 Since many programs and libraries used these private APIs, this change in Java 9 would have led to immense refactoring.
 Therefore, the OpenJDK decided that the private APIs from Java 9 to Java 15 could still be used, with only a warning issued when software accesses private APIs.
@@ -60,10 +60,9 @@ For example, with Java 10, the Java language was extended with the use of `var` 
 This allows omitting the explicit type declaration for a variable when the compiler can infer it.
 Here's an example:
 
-{{< highlight java >}}
-var list = new ArrayList<String>(); // infers ArrayList<String>
+```javavar list = new ArrayList<String>(); // infers ArrayList<String>
 var stream = list.stream(); // infers Stream<String>
-{{< / highlight >}}
+```
 
 The introduction of `var` into the Java language had some implications.
 Although `var` was not added as a keyword to the Java syntax, allowing it to still be used as a variable name, its status in the Java language is defined as a "Reserved Type Name" (see [JEP 286](https://openjdk.org/jeps/286)).
@@ -100,7 +99,7 @@ Here, all differences in the Java Class Library between two Java versions can be
 Since not only versions with Long-term Support (LTS) are listed but all major releases since Java 1.0, you can start adapting your software even before a new LTS version of Java is released.
 In addition to changes, the tool also shows all classes, functions, and other elements that have been annotated with `@Deprecated`.
 
-{{< centered-image src="/posts/2023-02-28-java-backwards-compatibility/java-new-apis.jpg" width="100%" showCaption="false" alt="New APIs in Java 17">}}
+![New APIs in Java 17](/posts/2023-02-28-java-backwards-compatibility/java-new-apis.jpg)
 
 ## What Does This Mean for Developers?
 

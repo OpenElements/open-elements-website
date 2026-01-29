@@ -66,7 +66,7 @@ Beim Hacktoberfest konnten sich durch das finanzielle Engagement ca. 30 lokal, r
 Etwa 10 Teilnehmende konnten mit der Unterstützung von Expert*innen ihre ersten Contributions machen.
 Hendrik Ebbers hat mit der Teilnahme des Open-Elements-Teams am JUG-Event im Rahmen des Hacktoberfests Türen geöffnet und den Rahmen geschaffen, einige Open-Source-Projekte kennenzulernen und in das Gefühl der echten Teamarbeit einzutauchen.
 
-{{< youtube-2 id="NQbSPN68tPY" showCaption="true" alt="Hendrik Ebbers über die Vorteile von Open Source Contribution">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NQbSPN68tPY" frameborder="0" allowfullscreen></iframe>
 
 Der Raum für Vernetzung ist für Newcomer oder erfahrene Contributions elementar für das Live-Erlebnis der Community.
 Zum leichteren Einstieg ins Thema wurden einige Aufgaben mit unterschiedlichen Schwierigkeitsgraden gestellt, die von den Teilnehmenden bearbeitet werden konnten.
@@ -103,7 +103,7 @@ Dem Antrag wurde zugestimmt und Hiero als Projekt der Linux Foundation ins Leben
 Open Elements stellte im Nachgang einen Antrag, dass ein eigenes Open-Source-Software Projekt ebenfalls an die Linux Foundation und in das Hiero-Projekt übergeben wird.
 Daraus soll eine standardisierte GitHub-Aktion entstehen, die für viele automatisierte Qualitätssicherungsmaßnahmen im Umfeld des Hiero-Projektes äußerst nützlich sein wird.
 
-{{< youtube-2 id="6jNb3W7ugI8" showCaption="true" alt="Hendrik Ebbers stellt Hiero auf der OCX Konferenz der Eclipse Foundation vor">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6jNb3W7ugI8" frameborder="0" allowfullscreen></iframe>
 
 Und noch etwas zur „Berufung“:
 Hendrik Ebbers, CEO von Open Elements, leitet das Technical Steering Committee des Hiero Projekts in der Linux Foundation und wurde zum „Director of Open Source” bei Hashgraph befördert.

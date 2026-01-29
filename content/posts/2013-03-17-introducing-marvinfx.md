@@ -8,7 +8,7 @@ categories: [JavaFX]
 excerpt: "For all my current JavaFX work I need a simple test framework to check the behavior of controls or complete scenes. Since I'm working more and more with the Property API I mainly wanted to to test the properties and their behavior of controls and scenes."
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-For all my current JavaFX work I need a simple test framework to check the behavior of controls or complete scenes. Since I'm working more and more with the [Property API]({{< ref "/posts/2013-01-10-custom-ui-controls-with-javafx-part3" >}}) I mainly wanted to to test the properties and their behavior of controls and scenes.
+For all my current JavaFX work I need a simple test framework to check the behavior of controls or complete scenes. Since I'm working more and more with the [Property API](/posts/2013-01-10-custom-ui-controls-with-javafx-part3) I mainly wanted to to test the properties and their behavior of controls and scenes.
 
 [FEST](http://fest.easytesting.org) is doing a great job for automated tests in Swing and with [JemmyFX](http://jemmy.java.net/JemmyFXGuide/jemmy-guide.html) a first framework for JavaFX is available. But both of this framework don't have a (good) support for Properties.
 
@@ -16,35 +16,30 @@ Because of this I started my own testing framework for JavaFX. [MarvinFX](https:
 
 You can simply use MarvinFX with a JUnit test. By using Marvin you can create a JavaFX Scene of the Application part you want to test:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void test1() {
 	Button b1 = new Button("Test123");
 	MarvinFx.show(b1);
-}
-{{< / highlight >}}
+}```
 
 Marvin will generate a Parent (StackPane) for the Button and put everything in a Scene. The Scene will automatically be shown on the screen.
 
 To test parts of the ui you need a Robot that will generate user interactions for you. It is planned that MarvinFX will provide a OS based robot (by `AWTRobot`) and a Java based robot (by `JFXRobot`) under the surface. At the current state the mouse handling of the robot is working.
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void test2() {
 	Button b1 = new Button("Test123");
 	MarvinFx.show(b1);
 	NodeFixture<Button> b1Fixture = new NodeFixture<Button>(b1);
 	b1Fixture.mouse().click();
 	b1Fixture.mouse().click(MouseButton.SECONDARY);
-}
-{{< / highlight >}}
+}```
 
 As you can see MarvinFX uses Fixture-classes like FEST does. The fixture is a wrapper for a node and provides all methods that are needed to test the node.
 
 To check the state of properties MarvinFX provide so called PropertySupervisor classes. By using them you can write unit tests for JavaFX properties. A PropertySupervisor is a wrapper class for a property:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void test3() {
 	Button b1 = new Button("Test123");
 	MarvinFx.show(b1);
@@ -54,13 +49,11 @@ public void test3() {
 	TextField textField = new TextField("1");
 	TextfieldFixture textfieldFixture = new TextfieldFixture(textField);
 	PropertySupervisor<String> textSupervisor = textfieldFixture.createTextPropertySupervisor();
-}
-{{< / highlight >}}
+}```
 
 By using the supervisors you can easily check the current value of a property. But a supervisor can do more. You can define rules that will be checked in the future while a property will change:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void test3() {
 	TextField textField = new TextField("1");
 	MarvinFx.show(textField);
@@ -73,15 +66,13 @@ public void test3() {
 	textfieldFixture.setText("7");
 	textfieldFixture.setText("14");
 	textSupervisor.confirm();
-}
-{{< / highlight >}}
+}```
 
 Property supervisors offers some methods that start with `assertWill...`. All this methods defines a rule for the supervisor and every time the property will changed all rules of the supervisor will be checked. After all user interaction is done (in this case by setting the text) you need to invoke a confirm() on the supervisor. If any of the rules were failed the unit test will fail with the confirmation. By calling confirm() all defined rules will be deleted and the supervisor can be used for other tests.
 
 Putting all this stuff together you can simply write unit tests for your JavaFX controls and scenes. Here is a basic example that uses all the features and checks the behavior of a simplified Scene:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void test4() {
 	final TextField textField = new TextField("1");
 	Button button = new Button("Button");
@@ -119,7 +110,6 @@ public void test4() {
 	textfieldFixture.setText("7");
 	buttonFixture.mouse().click();
 	textSupervisor.confirm();
-}
-{{< / highlight >}}
+}```
 
 MarvinFX is [hosted at github](https://github.com/guigarage/MarvinFX). At the moment there is no JavaDoc and as I said the API is not finished and some parts are buggy at the moment. But maybe some people have good ideas for Marvin or can offer some feedback :)

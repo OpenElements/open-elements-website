@@ -22,8 +22,7 @@ Since Open Source Software (OSS) are becoming more and more important, the DCO l
 The idea of the DCO is simple: Every contributor must sign the DCO before contributing to an Open Source project.
 The full text of the DCO, as hosted at https://developercertificate.org is as follows:
 
-{{< highlight bash >}}
-By making a contribution to this project, I certify that:
+```bashBy making a contribution to this project, I certify that:
 
 (a) The contribution was created in whole or in part by me and I
     have the right to submit it under the open source license
@@ -45,8 +44,7 @@ By making a contribution to this project, I certify that:
     are public and that a record of the contribution (including all
     personal information I submit with it, including my sign-off) is
     maintained indefinitely and may be redistributed consistent with
-    this project or the open source license(s) involved.
-{{< / highlight >}}
+    this project or the open source license(s) involved.```
 
 As you can see the text of the DCO reads as a legal statement.
 Since a legal statement normally need to be signed, there must be a way to sign the DCO for a contribution to an OSS.
@@ -58,8 +56,7 @@ Next to that the integration in the workflow of git, and GitHub must be very eas
 
 Therefore, the DCO is even mentioned in [the man page (the documentation) of git](https://git-scm.com/docs/git-commit). By calling `git help commit` you can see the following information:
 
-{{< highlight bash >}}
--s, --signoff, --no-signoff
+```bash-s, --signoff, --no-signoff
 Add a Signed-off-by trailer by the committer at the end of the commit log message.
 The meaning of a signoff depends on the project to which you’re committing.
 For example, it may certify that the committer has the rights to submit the work under the project’s license or agrees
@@ -68,18 +65,15 @@ to some contributor representation, such as a Developer Certificate of Origin.
 Consult the documentation or leadership of the project to which you’re contributing to understand how the signoffs are
 used in that project.
 
-The --no-signoff option can be used to countermand an earlier --signoff option on the command line.
-{{< / highlight >}}
+The --no-signoff option can be used to countermand an earlier --signoff option on the command line.```
 
 As you can see a developer only needs to add the `-s` or `--signoff` option to the `git commit` command to sign the DCO.
 You can easily try this at home by creating a new git repository and adding a new file to it:
 
-{{< highlight bash >}}
-$ git commit -m "DCO post started" -s
+```bash$ git commit -m "DCO post started" -s
 [dco-post d2b4530] DCO post started
  1 file changed, 72 insertions(+)
- create mode 100644 content/posts/2025-01-03-validating-dco-signing.md
-{{< / highlight >}}
+ create mode 100644 content/posts/2025-01-03-validating-dco-signing.md```
 
 I just did exactly that to commit the current state of this post to the git repository.
 As you can see adding the `-s` option to the `git commit` command does not change the output, asks for a signature, or anything else.
@@ -91,16 +85,14 @@ It does not even need the author to read the DCO.
 You can see that the DCO is signed by looking at the commit message.
 The `Signed-off-by` line is added to the commit message:
 
-{{< highlight bash >}}
-$ git log -1
+```bash$ git log -1
 commit d2b45309f4a002dd637e7a83fb524d0be0549853 (HEAD -> dco-post)
 Author: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
 Date:   Thu Jan 2 16:39:43 2025 +0100
 
     DCO post started
     
-    Signed-off-by: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
-{{< / highlight >}}
+    Signed-off-by: Hendrik Ebbers <hendrik.ebbers@open-elements.de>```
 
 The complete signing process is now done.
 It does exactly what you see in the commit message: It adds a single `Signed-off-by` line to the commit message.
@@ -144,11 +136,9 @@ When we looked at the `git log` output before, we saw that the `Signed-off-by` l
 The committer has not been mentioned so far.
 You can see the committer and the author of a commit by using the `git show` command:
 
-{{< highlight bash >}}
-$ git show --pretty=format:"Author: %an <%ae>%nCommitter: %cn <%ce>" -s <commit-hash>
+```bash$ git show --pretty=format:"Author: %an <%ae>%nCommitter: %cn <%ce>" -s <commit-hash>
 Author: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
-Committer: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
-{{< / highlight >}}
+Committer: Hendrik Ebbers <hendrik.ebbers@open-elements.de>```
 
 The `--pretty=format` option in the sample is used to define the output format of the `git show` command:
 - The `%an` and `%ae` placeholders are used to output the author name and email address.
@@ -171,10 +161,8 @@ By creating a single commit from multiple commits, the commit still can only hav
 The message of the squashed commit contains the messages of all squashed commits.
 Here you can find lines like this:
 
-{{< highlight bash >}}
-Co-authored-by: Alice <alice@example.com>
-Co-authored-by: Bob <bob@example.com>
-{{< / highlight >}}
+```bashCo-authored-by: Alice <alice@example.com>
+Co-authored-by: Bob <bob@example.com>```
 
 Those lines are used to mention all authors of the squashed commits.
 GitHub can even use that metadata and visualize the authors of the squashed commits as described in the [GitHub blog](https://github.blog/news-insights/product-news/commit-together-with-co-authors/).
@@ -183,13 +171,11 @@ Maybe it has been defined by GitHub itself.
 If somebody knows more about that, please let me know.
 In the [Linux Kernel Documentation](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/submitting-patches.rst?id=HEAD) the term `Co-developed-by` is used to mention all authors of the squashed commits:
 
-{{< highlight bash >}}
-Co-developed-by: First Co-Author <first@coauthor.example.org>
+```bashCo-developed-by: First Co-Author <first@coauthor.example.org>
 Signed-off-by: First Co-Author <first@coauthor.example.org>
 Co-developed-by: Second Co-Author <second@coauthor.example.org>
 Signed-off-by: Second Co-Author <second@coauthor.example.org>
-Signed-off-by: From Author <from@author.example.org>
-{{< / highlight >}}
+Signed-off-by: From Author <from@author.example.org>```
 
 #### Other problems
 
@@ -198,14 +184,12 @@ When doing the research for the Hiero project I found a lot of commits that are 
 Some of those commits had a different author and Signed-off-by author.
 The following example shows 2 real life commits (with anonymized user info) from a repository that I have checked:
 
-{{< highlight bash >}}
-Author: Aman Ali (He/Him) <aman.example@vitstudent.ac.in>
+```bashAuthor: Aman Ali (He/Him) <aman.example@vitstudent.ac.in>
 Committer: GitHub <noreply@github.com>
 Removed one / at the beginning of console.clear() (#94)
 * removed / at line 269
 
-* Signed-off-by: Author Name aman.example@vitstudent.ac.in
-{{< / highlight >}}
+* Signed-off-by: Author Name aman.example@vitstudent.ac.in```
 
 Here you can see 2 different problems:
 
@@ -215,12 +199,10 @@ Here you can see 2 different problems:
 
 Here is another example I found:
 
-{{< highlight bash >}}
-Author: John Doe <john.doe@swirldslabs.com>
+```bashAuthor: John Doe <john.doe@swirldslabs.com>
 Committer: GitHub <noreply@github.com>
 Update .gitbook.yaml
-Signed-off-by: John Doe <john.doe@hashgraph.com>
-{{< / highlight >}}
+Signed-off-by: John Doe <john.doe@hashgraph.com>```
 
 In this example the mail address of the author and the Signed-off-by author are different.
 They are similar and in fact the company Swirlds Labs has been renamed to [Hashgraph](https://www.hashgraph.com).

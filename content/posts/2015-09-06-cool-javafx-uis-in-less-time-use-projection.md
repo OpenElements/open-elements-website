@@ -8,22 +8,20 @@ categories: [JavaFX]
 excerpt: 'This post shows how you can create UIs by using metadata and the projection pattern in JavaFX. By doing so all developers can create cool UIs.'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-Some weeks ago I blogged about [my first Material Design approach in JavaFX]({{< ref "/posts/2015-07-10-material-design-in-javafx" >}}). But the project contains more than just some new styles for JavaFX. In the project I tried some technics to create good looking application without spending much time in styling. Therefore I created some basic Java layout and styles that will automatically be used for specific data types. It's like projecting the raw data in a nice UI. The basic idea of this approach evolved after some discussions with [Dierk König](https://twitter.com/mittie). In addition Twitter Bootstrap already offers some styles and layouts that I reused here.
+Some weeks ago I blogged about [my first Material Design approach in JavaFX](/posts/2015-07-10-material-design-in-javafx). But the project contains more than just some new styles for JavaFX. In the project I tried some technics to create good looking application without spending much time in styling. Therefore I created some basic Java layout and styles that will automatically be used for specific data types. It's like projecting the raw data in a nice UI. The basic idea of this approach evolved after some discussions with [Dierk König](https://twitter.com/mittie). In addition Twitter Bootstrap already offers some styles and layouts that I reused here.
 
 ## Project your data to the view
 
 Let's have a deeper look how this small approach is working. In the Material Design demo I created a basic interface called [Media](https://github.com/guigarage/sdkfx/blob/master/src/main/java/com/guigarage/sdk/util/Media.java). This interface defines a basic data structures that can hold an image, a title and a description:
 
-{{< highlight java >}}
-public interface Media {
+```javapublic interface Media {
 
     StringProperty titleProperty();
 
     StringProperty descriptionProperty();
 
     ObjectProperty<Image> imageProperty();
-}
-{{< / highlight >}}
+}```
 
 When creating your own custom data model you can simply create complete classes that implement the interface and export some basic metadata based of the class by using the interface. The project includes a basic implementation of the interface called [DefaultMedia](https://github.com/guigarage/sdkfx/blob/master/src/main/java/com/guigarage/sdk/util/DefaultMedia.java).
 
@@ -31,16 +29,14 @@ Let's think about a possible visual presentation of this interface. When having 
 
 ![bootstrap-media](/posts/guigarage-legacy/bootstrap-media-1024x403.png)
 
-I already created a JavaFX list cell that specifies a layout that can be used for media objects. You can find a detailed description [here]({{< ref "/posts/2014-09-30-enrich-list-ui-using-medialistcell" >}}). Based on this I created the MediaList that is completely ready to render media and don't need to be configured anymore.
+I already created a JavaFX list cell that specifies a layout that can be used for media objects. You can find a detailed description [here](/posts/2014-09-30-enrich-list-ui-using-medialistcell). Based on this I created the MediaList that is completely ready to render media and don't need to be configured anymore.
 
-{{< highlight java >}}
-MediaList<Media> list = new MediaList<>();
+```javaMediaList<Media> list = new MediaList<>();
 list.getItems().add(new DefaultMedia("Test01", "This is the description", image1));
 list.getItems().add(new DefaultMedia("Test02", "This is the description", image2));
 list.getItems().add(new DefaultMedia("Test03", "This is the description", image3));
 list.getItems().add(new DefaultMedia("Test04", "This is the description", image4));
-list.getItems().add(new DefaultMedia("Test05", "This is the description", image5));
-{{< / highlight >}}
+list.getItems().add(new DefaultMedia("Test05", "This is the description", image5));```
 
 By using the MediaList class you simply create a list like this one:
 

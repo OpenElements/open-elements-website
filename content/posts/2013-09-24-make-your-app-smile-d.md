@@ -14,4 +14,4 @@ I think most of you know the emoji icons that are used in WhatsApp and other soc
 
 We took this control and added Emoji support to it. All the Emojis are part of the unicode standard and can be defined by simple using a char. The alien emoji <img src="{{ site.baseurl }}/assets/posts/guigarage-legacy/1f47d.png" width="24" height="24" /> is defined by char 0xF47D for example.
 
-You can find out more about the emoji text flow in our [JavaOne slides]({{< ref "/posts/2013-09-24-lets-get-wet" >}}). Because this is still in progress we will post a more detailed description later.
+You can find out more about the emoji text flow in our [JavaOne slides](/posts/2013-09-24-lets-get-wet). Because this is still in progress we will post a more detailed description later.
