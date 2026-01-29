@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { remarkHugoShortcodes } from './remark-hugo-shortcodes';
 
 // Path to the posts directory
 const postsDirectory = path.join(process.cwd(), 'content/posts');
@@ -184,6 +185,7 @@ export async function getPostBySlug(slug: string, locale: string): Promise<PostD
     
     // Convert markdown to HTML
     const processedContent = await remark()
+      .use(remarkHugoShortcodes)
       .use(html, { sanitize: false })
       .process(content);
     const contentHtml = processedContent.toString();
