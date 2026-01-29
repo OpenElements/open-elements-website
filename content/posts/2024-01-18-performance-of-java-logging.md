@@ -28,7 +28,8 @@ A simple example of a benchmark looks like this:
 @Measurement(iterations = 4, time = 4)
 public void runSingleSimpleLog() {
     logger.log("Hello World");
-}```
+}
+```
 
 The example performs four warm-up runs, followed by four measurement runs.
 Each run lasts four seconds, and the measurement result shows how many operations per second could be performed.
@@ -99,4 +100,3 @@ While console logging is certainly very convenient during development, you might
 It also shows that the use of asynchronous loggers can make sense if the performance of the system is really critical.
 Of course, this comes with higher complexity and additional transitive dependencies.
 Ultimately, each project must still decide for itself which logger is most sensible.
-However, with the figures mentioned here, you now have another basis for determining this.

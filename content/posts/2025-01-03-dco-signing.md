@@ -44,7 +44,8 @@ The full text of the DCO, as hosted at https://developercertificate.org is as fo
     are public and that a record of the contribution (including all
     personal information I submit with it, including my sign-off) is
     maintained indefinitely and may be redistributed consistent with
-    this project or the open source license(s) involved.```
+    this project or the open source license(s) involved.
+```
 
 As you can see the text of the DCO reads as a legal statement.
 Since a legal statement normally need to be signed, there must be a way to sign the DCO for a contribution to an OSS.
@@ -65,7 +66,8 @@ to some contributor representation, such as a Developer Certificate of Origin.
 Consult the documentation or leadership of the project to which you’re contributing to understand how the signoffs are
 used in that project.
 
-The --no-signoff option can be used to countermand an earlier --signoff option on the command line.```
+The --no-signoff option can be used to countermand an earlier --signoff option on the command line.
+```
 
 As you can see a developer only needs to add the `-s` or `--signoff` option to the `git commit` command to sign the DCO.
 You can easily try this at home by creating a new git repository and adding a new file to it:
@@ -73,7 +75,8 @@ You can easily try this at home by creating a new git repository and adding a ne
 ```bash$ git commit -m "DCO post started" -s
 [dco-post d2b4530] DCO post started
  1 file changed, 72 insertions(+)
- create mode 100644 content/posts/2025-01-03-validating-dco-signing.md```
+ create mode 100644 content/posts/2025-01-03-validating-dco-signing.md
+```
 
 I just did exactly that to commit the current state of this post to the git repository.
 As you can see adding the `-s` option to the `git commit` command does not change the output, asks for a signature, or anything else.
@@ -92,7 +95,8 @@ Date:   Thu Jan 2 16:39:43 2025 +0100
 
     DCO post started
     
-    Signed-off-by: Hendrik Ebbers <hendrik.ebbers@open-elements.de>```
+    Signed-off-by: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
+```
 
 The complete signing process is now done.
 It does exactly what you see in the commit message: It adds a single `Signed-off-by` line to the commit message.
@@ -138,7 +142,8 @@ You can see the committer and the author of a commit by using the `git show` com
 
 ```bash$ git show --pretty=format:"Author: %an <%ae>%nCommitter: %cn <%ce>" -s <commit-hash>
 Author: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
-Committer: Hendrik Ebbers <hendrik.ebbers@open-elements.de>```
+Committer: Hendrik Ebbers <hendrik.ebbers@open-elements.de>
+```
 
 The `--pretty=format` option in the sample is used to define the output format of the `git show` command:
 - The `%an` and `%ae` placeholders are used to output the author name and email address.
@@ -162,7 +167,8 @@ The message of the squashed commit contains the messages of all squashed commits
 Here you can find lines like this:
 
 ```bashCo-authored-by: Alice <alice@example.com>
-Co-authored-by: Bob <bob@example.com>```
+Co-authored-by: Bob <bob@example.com>
+```
 
 Those lines are used to mention all authors of the squashed commits.
 GitHub can even use that metadata and visualize the authors of the squashed commits as described in the [GitHub blog](https://github.blog/news-insights/product-news/commit-together-with-co-authors/).
@@ -175,7 +181,8 @@ In the [Linux Kernel Documentation](https://git.kernel.org/pub/scm/linux/kernel/
 Signed-off-by: First Co-Author <first@coauthor.example.org>
 Co-developed-by: Second Co-Author <second@coauthor.example.org>
 Signed-off-by: Second Co-Author <second@coauthor.example.org>
-Signed-off-by: From Author <from@author.example.org>```
+Signed-off-by: From Author <from@author.example.org>
+```
 
 #### Other problems
 
@@ -189,7 +196,8 @@ Committer: GitHub <noreply@github.com>
 Removed one / at the beginning of console.clear() (#94)
 * removed / at line 269
 
-* Signed-off-by: Author Name aman.example@vitstudent.ac.in```
+* Signed-off-by: Author Name aman.example@vitstudent.ac.in
+```
 
 Here you can see 2 different problems:
 
@@ -202,7 +210,8 @@ Here is another example I found:
 ```bashAuthor: John Doe <john.doe@swirldslabs.com>
 Committer: GitHub <noreply@github.com>
 Update .gitbook.yaml
-Signed-off-by: John Doe <john.doe@hashgraph.com>```
+Signed-off-by: John Doe <john.doe@hashgraph.com>
+```
 
 In this example the mail address of the author and the Signed-off-by author are different.
 They are similar and in fact the company Swirlds Labs has been renamed to [Hashgraph](https://www.hashgraph.com).
@@ -260,4 +269,3 @@ By using the tool a new contributor can sign the CLA digitally in [docusign](htt
 
 I will continue this research and will keep you updated about my findings.
 Maybe some of you have more information about the DCO and can help me to understand it better.
-I'm happy to get in touch with you by [email](mailto:hendrik.ebbers@open-elements.com), [X](https://twitter.com/hendrikEbbers), or [LinkedIn](https://www.linkedin.com/in/hendrik-ebbers/).
