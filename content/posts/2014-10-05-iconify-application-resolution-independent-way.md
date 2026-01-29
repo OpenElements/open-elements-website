@@ -24,12 +24,10 @@ For me the best resource for vector based icons is [Font Awesome](http://fortawe
 
 ![awe](/posts/guigarage-legacy/video-player-icons.png)
 
-Because it is a font it can simply be integrated to any JavaFX application ([see this post]({{< ref "/posts/2014-10-01-integrate-custom-fonts-javafx-application-using-css" >}})). Once the font is assigned to a control you can define an icon by setting the text of the control. Here a special unicode character need to be set as the text. The following example describes how to set the pen icon to a button:
+Because it is a font it can simply be integrated to any JavaFX application ([see this post](/posts/2014-10-01-integrate-custom-fonts-javafx-application-using-css)). Once the font is assigned to a control you can define an icon by setting the text of the control. Here a special unicode character need to be set as the text. The following example describes how to set the pen icon to a button:
 
-{{< highlight java >}}
-button.setText('\uf040' + "");  
-// \uf040 is the unicode char for the icon as defines here: http://fortawesome.github.io/Font-Awesome/icon/pencil/
-{{< / highlight >}}
+```javabutton.setText('\uf040' + "");  
+// \uf040 is the unicode char for the icon as defines here: http://fortawesome.github.io/Font-Awesome/icon/pencil/```
 
 Once you now this trick you still need to do some steps to display a vector based icon:
 
@@ -40,9 +38,7 @@ Once you now this trick you still need to do some steps to display a vector base
 
 Especially the last point isn't what I want. Icons are part of the style of an application and therefore it would be perfect if we could define them in CSS. There fore I created a new Skin for the JavaFX Button called `IconifiedButtonSkin`. By using the skin the handling of vector based icons in your JavaFX application is much easier. To use the skin you only need one line of Java code:
 
-{{< highlight java >}}
-IconifiedButtonSkin.addStyle(myButton);
-{{< / highlight >}}
+```javaIconifiedButtonSkin.addStyle(myButton);```
 
 Once this is done the new skin for the button is set. This automatically contains the following steps:
 
@@ -52,30 +48,24 @@ Once this is done the new skin for the button is set. This automatically contain
 
 The last think that need to be done is setting the text of the button to define the wanted icon. Thankfully the new skin provides an additional CSS attribute that can be used. By using the -fx-icon-text attribute you can define the wanted icon directly in CSS:
 
-{{< highlight css >}}
-#myButton {
+```css#myButton {
     -fx-icon-text: "\uf0a9";
-}
-{{< / highlight >}}
+}```
 
 The `IconifiedButtonSkin` class is part of the `ui-basics` module that will be found at Maven Central the next days:
 
-{{< highlight xml >}}
-<dependency>
+```xml<dependency>
   <groupId>com.guigarage</groupId>
   <artifactId>ui-basics</artifactId>
   <version>X.Y</version>
-</dependency>
-{{< / highlight >}}
+</dependency>```
 
 ## further development
 
 I plan to add a special CSS Converter in Java to provide a better definition of the icons in CSS. Wouldn't it be cool if you could do the following:
 
-{{< highlight css >}}
-#myButton {
+```css#myButton {
     -fx-icon: "fa fa-pencil";
-}
-{{< / highlight >}}
+}```
 
 Once this is done it would be cool to support more fonts like [ionicons](http://ionicons.com) by default.

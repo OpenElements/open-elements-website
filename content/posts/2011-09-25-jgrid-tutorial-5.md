@@ -13,8 +13,7 @@ In this tutorial we want to take a deeper look at cell rendering. In the last tu
 
 Let´s say we have colors and percentages in our model:
 
-{{< highlight java >}}
-DefaultListModel model = new DefaultListModel();
+```javaDefaultListModel model = new DefaultListModel();
 Random random = new Random();
 
 for(int i=0; i if(random.nextBoolean()) {
@@ -23,13 +22,11 @@ for(int i=0; i if(random.nextBoolean()) {
   model.addElement(new Float(random.nextFloat()));
 }
 
-grid.setModel(model);
-{{< / highlight >}}
+grid.setModel(model);```
 
 To visualize the color values we can use the renderer from the previous tutorial. For the new percentage values we need a different renderer:
 
-{{< highlight java >}}
-public class GridPercentCellRenderer extends JLabel implements GridCellRenderer {
+```javapublic class GridPercentCellRenderer extends JLabel implements GridCellRenderer {
 
   private static final long serialVersionUID = 1L;
 
@@ -59,17 +56,14 @@ public class GridPercentCellRenderer extends JLabel implements GridCellRenderer 
     g.fillRect(0, getHeight() - height, getWidth(), height);
     super.paintComponent(g);
   }
-}
-{{< / highlight >}}
+}```
 
 Until now all tutorials used the `setDefaultRenderer(...)` methode to set a special design to the grid. Just now we have a problem using this practice: we need renderers for different data types. In the JGrid this is as simple as in the JTable.
 
 Here we go:
 
-{{< highlight java >}}
-grid.getCellRendererManager().addRendererMapping(Color.class, new GridColorCellRenderer());
-grid.getCellRendererManager().addRendererMapping(Float.class, new GridPercentCellRenderer());
-{{< / highlight >}}
+```javagrid.getCellRendererManager().addRendererMapping(Color.class, new GridColorCellRenderer());
+grid.getCellRendererManager().addRendererMapping(Float.class, new GridPercentCellRenderer());```
 
 Here you can see the effect:
 

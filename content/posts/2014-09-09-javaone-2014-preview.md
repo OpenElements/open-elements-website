@@ -8,9 +8,9 @@ categories: [JavaFX]
 excerpt: 'I recorded a short video in that I introduce the talks and show a short preview of some JavaFX demos'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-As I mentioned [last week]({{< ref "/posts/2014-08-26-javaone-2014-sessions" >}}) I will give 6 talks at [JavaOne](https://www.oracle.com/javaone/) this year. To get a better overview of this talks I recorded a short video in that I introduce the talks and show a short preview of some JavaFX demos:
+As I mentioned [last week](/posts/2014-08-26-javaone-2014-sessions) I will give 6 talks at [JavaOne](https://www.oracle.com/javaone/) this year. To get a better overview of this talks I recorded a short video in that I introduce the talks and show a short preview of some JavaFX demos:
 
-{{< youtube 6Qp5mezk4dA >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Qp5mezk4dA" frameborder="0" allowfullscreen></iframe>
 
 Most of the talks will be hold with other speakers. Here is a list of all the people I'm currently working on cool stuff for JavaOne:
 

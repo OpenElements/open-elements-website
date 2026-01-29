@@ -14,14 +14,12 @@ For all this solutions you have to specify your system-specific path to the Java
 
 Since Java 7 update 6 JavaFX 2.2 is bundled  in the JRE. You can find JavaFX at `JAVAHOME/lib/jfxrt.jar`. Since Maven 3 you can access the `JAVAHOME` path with the `${java.home}` property. With this informations you are able to create a system independent pom-file:
 
-{{< highlight xml >}}
-<dependency>
+```xml<dependency>
   <groupId>com.oracle</groupId>
   <artifactId>javafx</artifactId>
   <version>2.2</version>
   <systemPath>${java.home}/lib/jfxrt.jar</systemPath>
   <scope>system</scope>
-</dependency>
-{{< / highlight >}}
+</dependency>```
 
 The solution is working since __Java 7u6__. If you have different JDKs / JREs installed on your system you have to start Maven with the right JDK. The pom also works in Eclipse with m2eclipse-plugin. Here you must ensure that Eclipse is started with Java 7u6+.

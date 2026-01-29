@@ -69,7 +69,7 @@ Around 10 participants made their first open-source contributions with guidance 
 Through the Open Elements team’s participation in JUG events, new opportunities were created for exploring open-source
 projects and fostering a sense of real teamwork.
 
-{{< youtube-2 id="NQbSPN68tPY" showCaption="true" alt="Hendrik Ebbers on the benefits of open source contributions">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NQbSPN68tPY" frameborder="0" allowfullscreen></iframe>
 
 Networking opportunities are vital for newcomers and seasoned contributors to experience the community firsthand.
 To ease entry into the open-source world, tasks of varying difficulty were prepared and supported by detailed
@@ -114,7 +114,7 @@ Linux Foundation and integrated into the Hiero project.
 The goal is to create a standardized GitHub Action that will be highly beneficial for many automated quality assurance
 measures within the Hiero ecosystem.
 
-{{< youtube-2 id="6jNb3W7ugI8" showCaption="true" alt="Hendrik Ebbers presents Hiero at the OCX Conference of the Eclipse Foundation">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6jNb3W7ugI8" frameborder="0" allowfullscreen></iframe>
 
 As an additional recognition, Hendrik Ebbers, CEO of Open Elements, was appointed as the chair of the Technical Steering Committee
 for the Hiero project within the Linux Foundation and promoted to "Director of Open Source" at Hashgraph.

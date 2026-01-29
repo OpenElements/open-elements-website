@@ -34,11 +34,11 @@ Ok, I think this was enough description and I hope that you want to see some cod
 
 Here are the links to additional DOlphin Platform sneak peeks:
 
-* I blogged about the [Dolphin Platform controller API]({{< ref "/posts/2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api" >}}).
-* I blogged about the [Dolphin Platform model API]({{< ref "/posts/2015-10-06-dolphin-platform-a-sneak-peek-of-the-model-api" >}}).
-* I blogged about the [Dolphin Platform view API]({{< ref "/posts/2015-10-07-dolphin-platform-a-sneak-peek-of-the-view-api" >}}).
-* I created [a first "getting started" tutorial]({{< ref "/posts/2015-10-18-dolphin-platform-how-to-create-an-application" >}}) for the Dolphin Platform.
-* I blogged about [Dolphin Platform Web Frontends with Polymer]({{< ref "/posts/2015-10-23-dolphin-platform-web-frontends-with-polymer" >}}).
-* I blogged about [the first release of the Dolphin Platform]({{< ref "/posts/2015-11-09-dolphin-platform-has-been-released" >}}).
-* I blogged about how to use [Dolphin Platform with kumuluzEE]({{< ref "/posts/2015-11-11-dolphin-platform-kumuluzee-javaee-microservices-with-dynamic-and-rich-frontends" >}}).
-* I was interviewed for the [Nighthacking YouTube channel]({{< ref "/posts/2015-11-12-dolphin-platform-in-15-minutes-nighthacking" >}}).
+* I blogged about the [Dolphin Platform controller API](/posts/2015-10-05-dolphin-platform-a-sneak-peek-of-the-controller-api).
+* I blogged about the [Dolphin Platform model API](/posts/2015-10-06-dolphin-platform-a-sneak-peek-of-the-model-api).
+* I blogged about the [Dolphin Platform view API](/posts/2015-10-07-dolphin-platform-a-sneak-peek-of-the-view-api).
+* I created [a first "getting started" tutorial](/posts/2015-10-18-dolphin-platform-how-to-create-an-application) for the Dolphin Platform.
+* I blogged about [Dolphin Platform Web Frontends with Polymer](/posts/2015-10-23-dolphin-platform-web-frontends-with-polymer).
+* I blogged about [the first release of the Dolphin Platform](/posts/2015-11-09-dolphin-platform-has-been-released).
+* I blogged about how to use [Dolphin Platform with kumuluzEE](/posts/2015-11-11-dolphin-platform-kumuluzee-javaee-microservices-with-dynamic-and-rich-frontends).
+* I was interviewed for the [Nighthacking YouTube channel](/posts/2015-11-12-dolphin-platform-in-15-minutes-nighthacking).

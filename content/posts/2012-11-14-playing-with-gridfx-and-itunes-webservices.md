@@ -10,5 +10,5 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 I started a second demo for the [GridFX]({{ site.baseurl }}{% link pages/projects/gridfx.md %}) component. The demo let you search for movie trailers and watch them. Therefore I used the [iTunes REST API](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) and a JavaFX [MediaView](http://docs.oracle.com/javafx/2/media/simpleplayer.htm) in combination with the GridFX. Here is a short movie:
 
-{{< vimeo 53462905 >}}
+<iframe src="https://player.vimeo.com/video/53462905" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 

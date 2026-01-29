@@ -22,7 +22,7 @@ As you can see in the image the client and the server can access the same presen
 
 As you can see in the picture all the different clients don't know each other and the sync between the presentation models in centralized by the server. If client A edits a value in the presentation model it will be synchronized with the server. Once the server has updated it's own presentation model with the new value the server synchronizes this change with all other clients. By doing you can create applications that share exactly the same presentation model. The following video shows a short example:
 
-{{< youtube fdTdo7G_hZY >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fdTdo7G_hZY" frameborder="0" allowfullscreen></iframe>
 
 While the sharing of the presentation model between several clients is a very cool feature and big benefit most of the time you need to synchronize a model only between the server and one client. Therefore the examples that will be shown in the following post will all use this approach. Once this workflow is completely described I will start to introduce the sync of several clients in future posts.
 
@@ -38,10 +38,8 @@ Next to the support of different client technologies Open Dolphin is based on th
 
 Let's have a deeper look at the presentation models and how such a model is structured and managed in Open Dolphin. Each presentation model is defined by an unique id. In addition a presentation model can be specified by a type. Both values are defined as a string. Open Dolphin provides methods to find a specific presentation model by its id or all presentation models of a given type.
 
-{{< highlight java >}}
-PresentationModel model = dolphin.findPresentationModelById("myPresentationModel");
-List<PresentationModel> allErrorModels = dolphin.findAllPresentationModelsByType("errorModel");
-{{< / highlight >}}
+```javaPresentationModel model = dolphin.findPresentationModelById("myPresentationModel");
+List<PresentationModel> allErrorModels = dolphin.findAllPresentationModelsByType("errorModel");```
 
 A presentation model contains a set of attributes and each attribute defines a value in the presentation model. Let's have a look at the following example to describe how attributes can be defined:
 
@@ -54,22 +52,16 @@ In this example we have two different input fields and therefore we will define 
 
 To create Attributes the Dolphin interface contains some factory methods. The following code snippet shows how the Attributes can be created:
 
-{{< highlight java >}}
-ClientAttribute nameAttribute = clientDolphin.createAttribute("nameValue", "initial value");
-ClientAttribute descriptionAttribute = clientDolphin.createAttribute("descriptionValue", "initial value");
-{{< / highlight >}}
+```javaClientAttribute nameAttribute = clientDolphin.createAttribute("nameValue", "initial value");
+ClientAttribute descriptionAttribute = clientDolphin.createAttribute("descriptionValue", "initial value");```
 
 In the code a both attributes are created by defining the name of the attribute and an initial value. Once the attributes are created we can create a presentation model that will automatically synced between client and server:
 
-{{< highlight java >}}
-ClientPresentationModel presentationModel = dolphin.presentationModel("myPresentationModel", nameAttribute, descriptionAttribute);
-{{< / highlight >}}
+```javaClientPresentationModel presentationModel = dolphin.presentationModel("myPresentationModel", nameAttribute, descriptionAttribute);```
 
 Once this is done the presentation model is created an can will automatically be synced between client and server whenever anything in it will be changed. This will happen if the value of an attribute will be changed, for example:
 
-{{< highlight java >}}
-nameAttribute.setValue("Hendrik Ebbers");
-{{< / highlight >}}
+```javanameAttribute.setValue("Hendrik Ebbers");```
 
 Next to the name an Open Dolphin attribute is defined by a tag and a qualifier. As shown with the type of  presentation models attributes can be found by using its tag, for example. Since these powerful features aren't needed for a first simple application I will show them in a later post.
 
@@ -83,17 +75,13 @@ By doing so you can trigger server commands from client side. In a server comman
 
 On server side the command handler can be registered by using a method of the ServerDolphin interface:
 
-{{< highlight java >}}
-dolphin.action("action", (command, response) -> {
+```javadolphin.action("action", (command, response) -> {
     System.out.println("action command was triggered");
-}
-{{< / highlight >}}
+}```
 
 Once the command handler is registered it can be called from client side:
 
-{{< highlight java >}}
-clientDolphin.send("action");
-{{< / highlight >}}
+```javaclientDolphin.send("action");```
 
 By doing so the command will be called on server side.
 
@@ -105,8 +93,7 @@ The 3 most important interfaces of Open Dolphin are Dolphin, PresentationModel a
 
 By doing so you need only one dependency for the client and one dependency for the server to use open dolphin:
 
-{{< highlight xml >}}
-<!-- Maven dependency for the server -->
+```xml<!-- Maven dependency for the server -->
 <dependency>
     <groupId>org.open-dolphin</groupId>
     <artifactId>dolphin-server</artifactId>
@@ -118,8 +105,7 @@ By doing so you need only one dependency for the client and one dependency for t
     <groupId>org.open-dolphin</groupId>
     <artifactId>dolphin-client</artifactId>
     <version>0.11</version>
-</dependency>
-{{< / highlight >}}
+</dependency>```
 
 ## Conclusion
 

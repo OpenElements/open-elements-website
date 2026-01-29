@@ -8,7 +8,7 @@ categories: [DataFX, JavaFX]
 excerpt: 'This DataFX 8 preview introduces the ProcessChain. This uses Java 8 features like Lambda to provide multi threaded functionality in JavaFX'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-Some time ago I gave a [first preview of the new APIs and functions]({{< ref "/posts/2013-12-27-datafx-controller-framework-preview" >}}) in [DataFX 8]({{ site.baseurl }}{% link pages/projects/datafx.md %}). We are currently plan to release DataFX 8 once JavaFX 8 is released. I plan to blog about the new features in DataFX in the next weeks. By doing so we hope to receive some useful feedback. In the last preview I described the [controller and flow API]({{< ref "/posts/2013-12-27-datafx-controller-framework-preview" >}}) of DataFX. Today I will show you only only small class :)
+Some time ago I gave a [first preview of the new APIs and functions](/posts/2013-12-27-datafx-controller-framework-preview) in [DataFX 8]({{ site.baseurl }}{% link pages/projects/datafx.md %}). We are currently plan to release DataFX 8 once JavaFX 8 is released. I plan to blog about the new features in DataFX in the next weeks. By doing so we hope to receive some useful feedback. In the last preview I described the [controller and flow API](/posts/2013-12-27-datafx-controller-framework-preview) of DataFX. Today I will show you only only small class :)
 
 Next to new APIs we added some helpful classes to the DataFX core packages. The class that I want to show you today is one of these new classes: The ProcessChain.
 
@@ -35,8 +35,7 @@ The ProcessChain is a fluent API that can be used to create this workflows in Ja
 
 Here is a simple example:
 
-{{< highlight java >}}
-Label label = new Label("No data");
+```javaLabel label = new Label("No data");
 Button button = new Button("Press me“);
 button.setOnAction(new EventHandler() {
     public void handle(ActionEvent event) {
@@ -47,8 +46,7 @@ button.setOnAction(new EventHandler() {
             .inPlatformThread(() -> button.setDisable(false))
             .run();
     }
-});
-{{< / highlight >}}
+});```
 
 As you can see in the example it is very easy to create a chain with the API. By using the `inExecutor(...)` or `inPlatformThread(...)` method a developer can choose if a task should run on the "JavaFX Application Thread" or in background.
 
