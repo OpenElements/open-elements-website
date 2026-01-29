@@ -118,14 +118,14 @@ One of the most popular tools is the [DCO Check GitHub App](https://github.com/a
 The app checks every pull request for the `Signed-off-by` line.
 If a pull request does not contain the `Signed-off-by` line, the PR checks will fail and the PR cannot be merged.
 
-{{< centered-image src="/posts/2025-01-03-dco-signing/dco-github-pr-check.png" width="100%" showCaption="true" alt="Sample of a PR with an failed DCO check">}}
+![Sample of a PR with an failed DCO check](/posts/2025-01-03-dco-signing/dco-github-pr-check.png)
 
 While the app is in general a good idea to ensure that every future contribution is signed, it has some drawbacks.
 If the check fails, the PR cannot be merged in first place but a committer of the repository can "fix" that:
 If you look at the details of the failed check, you can see a help text that explains how to fix the missing DCO signing.
 While that is great and even enabled developers that are not familiar with the DCO to sign it, the details page also contains a button to "set DCO to pass".
 
-{{< centered-image src="/posts/2025-01-03-dco-signing/dco-github-set-pass.png" width="100%" showCaption="true" alt="Sample of a PR with an failed DCO check">}}
+![Sample of a PR with an failed DCO check](/posts/2025-01-03-dco-signing/dco-github-set-pass.png)
 
 When I saw and pressed this button for the first time, I was assuming that I would sign the DCO for all commits in the PR.
 But that is not the case.

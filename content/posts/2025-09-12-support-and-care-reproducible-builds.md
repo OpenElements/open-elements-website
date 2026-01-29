@@ -10,7 +10,7 @@ preview_image: "/posts/preview-images/open-source-green.svg"
 ---
 In this blog post, we'd like to share how to improve the Supply Chain Security in software projects as part of the Cyber Resilience Act.
 
-Our [Support and Care]({{< relref "support-care-maven" >}}) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://open-elements.com/articles/what-is-maven/)™:
+Our [Support and Care](/support-care-maven) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://open-elements.com/articles/what-is-maven/)™:
 
 - Security of the Supply Chain
 - Maintenance
@@ -27,7 +27,7 @@ In general, everything touching anything from the software, including the IDE, n
 And with it as part of the chain, everything is also a worthy target for an attack.
 [Exploit statistics](https://www.sonatype.com/state-of-the-software-supply-chain/2024/10-year-look) and even older exploits like [CVE-2002-0083](https://www.cvedetails.com/cve/CVE-2002-0083/) are showing that even a single bit will decide whether a piece of software,
 OpenSSH, in that particular example, is secure or may be used to manipulate code or execute malicious software. Therefore, it is essential to be aware of the risks that a software supply chain can involve.
-{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/software-supply-chain.png" width="80%" showCaption="false" alt="Software Supply Chain Security">}}
+![Software Supply Chain Security](/posts/2025-09-12-support-and-care-reproducible-builds/software-supply-chain.png)
 
 ## Reproducible Builds
 One tool in the toolbox against those attacks is reproducible builds. To consider a component or project reproducible, it is necessary to produce bitwise identical builds every time.
@@ -70,7 +70,7 @@ Let's assume we have a Java project that is built with Maven. To not mix too man
 We go to the [Spring initializr project](https://start.spring.io/) and generate a Maven POM. To keep it simple but pragmatic, we only use Spring Web as feature. 
 After importing the project in our preferred IDE, we can build this project as usual with _mvn clean install_.
 In order to use the Artfiact Plugin mentioned above we need to add it to the POM:
-{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/artifact-plugin.png" width="80%" showCaption="false" alt="Maven artifact plugin in POM">}}
+![Maven artifact plugin in POM](/posts/2025-09-12-support-and-care-reproducible-builds/artifact-plugin.png)
 
 With _mvn verify artifact:compare_, we can run the plugin and let it check if there are any reproducibility issues compared to the local artifact we have built before.
 As expected, we don't have a reproducible build, but the console is telling us at least what is not fully reproducible.
@@ -85,14 +85,14 @@ As there are plenty of submodules, I focus on Jetty-Util, a submodule of Jetty-C
 To have a faster build, I skip the test execution as tests are not part of the final jar file.
 After running _mvn clean install_, I execute the Artifact plugin with _mvn clean verify artifact:compare_ as before.
 And there we have it: we have reproducibility issues. Again, let's look at the console output:
-{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/blackened-console-output.png" width="80%" showCaption="false" alt="Console output not reproducible build">}}
+![Console output not reproducible build](/posts/2025-09-12-support-and-care-reproducible-builds/blackened-console-output.png)
 
 _project.build.outputTimestamp_ is set, so this is not an issue. We have to dig deeper.
 The console output lists issues in the sources and what command I could use for further investigation. To avoid problems related to my local machine, I use podman as stated on diffoscope.org with
 _podman run --rm -t -w $(pwd) -v $(pwd):$(pwd):ro \ registry.salsa.debian.org/reproducible-builds/diffoscope jetty-util-12.1.1.jar m2-jetty-util-12.1.1.jar_
 where the first jetty file is from the current /target directory of jetty-util, and the latter file is the one I installed before in my local Maven repository.
 The output looks as follows:
-{{< centered-image src="/posts/2025-09-12-support-and-care-reproducible-builds/docker-diffoscope-comparison.png" width="80%" showCaption="false" alt="Docker diffoscope comparison">}}
+![Docker diffoscope comparison](/posts/2025-09-12-support-and-care-reproducible-builds/docker-diffoscope-comparison.png)
 
 Another timestamp issue! Let's try to temporarily fix the issue by entering a static number.
 After generating two new jar files with the approach described before, I compared them again.
