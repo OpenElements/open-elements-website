@@ -12,13 +12,11 @@ categories: [Java, AdoptOpenJDK]
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 
-While in theory, everybody can build it's own JDK based on the OpenJDK sources you normally don't want to do that. For several years people downloaded JDK builds from Oracle but based on the [new Licence for Oracle JDKs]({{< ref "/posts/2018-06-25-java-releases" >}}) this isn't that easy anymore. If you need an up-to-date Oracle JDK for production you need to buy commercial support from Oracle since last year.
+While in theory, everybody can build it's own JDK based on the OpenJDK sources you normally don't want to do that. For several years people downloaded JDK builds from Oracle but based on the [new Licence for Oracle JDKs](/posts/2018-06-25-java-releases) this isn't that easy anymore. If you need an up-to-date Oracle JDK for production you need to buy commercial support from Oracle since last year.
 
 A lot of Linux users do not care about that problem since they used OpenJDK builds that were downloaded from an APT repository, for example. On Linux distributions like ubuntu you only need the following command to add a ready-to-use JDK installation to your system:
 
-{{< highlight shell >}}
-sudo apt-get install openjdk
-{{< / highlight >}}
+```shellsudo apt-get install openjdk```
 
 While this sounds like a really easy solution there are several points that you normally can not answer based on this approach:
 

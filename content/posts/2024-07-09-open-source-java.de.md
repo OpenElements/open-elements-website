@@ -28,7 +28,7 @@ Sie war in den letzten 20 Jahren quasi durchgängig in der Top 3 der populärste
 Neben der Programmiersprache bezieht sich der Begriff Java aber auch auf die Laufzeitumgebung, in der Java Programme
 ausgeführt werden können: der Java Virtual Machine (JVM). 
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/toibe-de.png" width="100%" showCaption="true" alt="Diagramm zur Verbreitung von Java basierend auf Toibe">}}
+![Diagramm zur Verbreitung von Java basierend auf Toibe](/posts/2024-07-09-open-source-java/toibe-de.png)
 
 Diese besondere Kombination aus Programmiersprache und Laufzeitumgebung ermöglicht es, dass Java Anwendungen auf jeder
 Maschine, auf der eine JVM installiert ist, ausgeführt werden. Hierdurch entstand auch einer der Leitsprüche von
@@ -36,7 +36,7 @@ Java: ""Write Once, Run Anywhere" (WORA)”.
 Sowohl die Bestandteile der Programmiersprache als auch der Quelltext der JVM von Java sind im OpenJDK zu finden,
 welches die Open Source Quellen von Java beinhaltet.
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/wora-de.png" width="100%" showCaption="true" alt="Schematischer Stack einer Java Anwendung">}}
+![Schematischer Stack einer Java Anwendung](/posts/2024-07-09-open-source-java/wora-de.png)
 
 ## Was bedeutet Open Source?
 Open Source lässt sich heute **in den meisten Bereichen unseres digitalen Alltags** wiederfinden und wird dabei häufig
@@ -47,7 +47,7 @@ Das gleiche gilt für den Safari bzw. Chrome Browser. Beide basieren zum größt
 Aber nicht nur im Privaten begegnen uns Open-Source-Anwendungen immer mehr – auch die deutliche Mehrheit aller deutschen
 Unternehmen setzt Open-Source-Software ein.
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/os-logo.png" width="80%" showCaption="true" alt="Die offiziellen Logos zum erkennen von Open Source (Software)">}}
+![Die offiziellen Logos zum erkennen von Open Source (Software)](/posts/2024-07-09-open-source-java/os-logo.png)
 
 
 **Open Source ist ein starker Treiber von Innovation.**
@@ -60,7 +60,7 @@ Jedoch gibt es heute Workflows die es projektexternen Personen erlauben, einen B
 leisten. Dies wirkt sich positiv auf die Diversität in OSS aus, da hierdurch jede Person an Open Source mitarbeiten kann.
 Die größte Plattform für Open Source Software, auf der auch die Quellen des OpenJDK – also Java – zu finden sind, ist GitHub.
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/pr-de.png" width="80%" showCaption="true" alt="Pull Request Workflow, um als externer Entwickler an OSS mitzuarbeiten">}}
+![Pull Request Workflow, um als externer Entwickler an OSS mitzuarbeiten](/posts/2024-07-09-open-source-java/pr-de.png)
 
 ### Wo wird Open Source grundsätzlich genutzt?
 
@@ -81,7 +81,7 @@ YouTube, Netflix, PayPal oder eBay sind alle auf einer Open Source Basis aufgeba
 Der wohl offensichtlichste Vorteil von Open Source Software ist die kostenfreie Verwendung.
 Weitere Vorteile die vor allem von Unternehmen als sehr positiv wahrgenommen werden, sind in folgendem Diagramm zu finden:
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/diagramm-benefits-de.png" width="80%" showCaption="true" alt="Ergebnis der Umfrage, welchen Mehrwert Firmen in OSS sehen">}}
+![Ergebnis der Umfrage, welchen Mehrwert Firmen in OSS sehen](/posts/2024-07-09-open-source-java/diagramm-benefits-de.png)
 
 
 OSS bringt allerdings noch weitaus mehr positive Aspekte mit sich:
@@ -121,7 +121,7 @@ zum OpenJDK beitragen. Das OpenJDK ist als Projekt [bei GitHub zu finden](https:
 Auf dem folgenden Bild ist dargestellt, welche Firmen Änderungen zu Java 19 beigetragen haben
 (also Änderungen, die zwischen der Veröffentlichung von Java 18 und 19 hinzugefügt wurden).
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/openjdk-contributions.png" width="100%" alt="Verteilung der Beiträge von verschiedenen Firmen zum OpenJDK">}}
+![Verteilung der Beiträge von verschiedenen Firmen zum OpenJDK](/posts/2024-07-09-open-source-java/openjdk-contributions.png)
 
 
 Der OpenJDK-Quelltext lässt sich in drei Teile teilen:
@@ -142,7 +142,7 @@ Anbieter (Oracle, Microsoft, RedHat) herunterladen.
 Die bei weitem **meistgenutzte Distribution ist hierbei Eclipse Temurin**, welche von der Eclipse Foundation
 als **“anwenderneutrale” Distribution** zur Verfügung gestellt wird.
 
-{{< centered-image src="/posts/2024-07-09-open-source-java/distributions.png" width="100%" showCaption="true" alt="Verschiedene Java Distributionen basieren alle auf dem OpenJDK">}}
+![Verschiedene Java Distributionen basieren alle auf dem OpenJDK](/posts/2024-07-09-open-source-java/distributions.png)
 
 Viele der verfügbaren Laufzeitumgebungen werden heute durch das **Java Test Compatibility Kit (TCK)** auf ihre
 **Kompatibilität zum offiziellen JavaSE Standard** hin überprüft.
@@ -173,7 +173,7 @@ In Unternehmen gibt es selten die erforderlichen Ressourcen, um diese Herausford
 Da Open Source Software wie Java mittlerweile aber häufig zur **kritischen Infrastruktur von Unternehmen** gehört,
 braucht es externen Support. 
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-logo.svg" width="100%" alt="Eclipse Temurin Support & Care Logo">}}
+![Eclipse Temurin Support & Care Logo](/illustrations/support-care-logos/support-care-logo.svg)
 
 Support & Care by Open Elements unterstützt Unternehmen bei dieser wichtigen Aufgabe.
 Wir helfen bei der Instandhaltung und Wartung der Java Laufzeitumgebung.

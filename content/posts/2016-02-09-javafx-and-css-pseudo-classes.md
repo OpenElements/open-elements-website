@@ -8,7 +8,7 @@ categories: [JavaFX]
 excerpt: 'Pseudo classes are a really cool CSS feature that you can use to define styles for different states of a component. This post gives an overview how pseudo classes can be used in JavaFX'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-In [my last post]({{< ref "/posts/2016-02-07-javafx-and-css" >}}) I gave a quick overview of the how CSS can be used in JavaFX by styling nodes based on an id or style classes. Today I want to explain what a pseudo class is and how you can use it to style dynamic controls.
+In [my last post](/posts/2016-02-07-javafx-and-css) I gave a quick overview of the how CSS can be used in JavaFX by styling nodes based on an id or style classes. Today I want to explain what a pseudo class is and how you can use it to style dynamic controls.
 
 ## CSS Pseudo Classes
 
@@ -33,19 +33,15 @@ Since all JavaFX controls are styled by CSS all the different states must be spe
 
 Since all JavaFX controls already support several pseudo classes you can simply define a CSS rule for a specific pseudo class. Let's say you want to change the font color of a button whenever the mouse cursor is over the button. For this special state of a node the `hover` pseudo class is defined in JavaFX. Therefore you can simply define the following CSS rule:
 
-{{< highlight css >}}
-#my-button:hover {
+```css#my-button:hover {
     -fx-text-fill: orange;
-}
-{{< / highlight >}}
+}```
 
 As you can see a pseudo class can simply be added to a CSS selector by using the ":" as a prefix for the pseudo class. In this example the rule is defined for a specific button that is defined by an id (`my-button`) but you can use a pseudo class in combination with every CSS selector. In the last post I described how a selection can be done by using a style class. By doing so you can simply define a specific CSS rule for all buttons by using the following selector:
 
-{{< highlight css >}}
-.button:hover {
+```css.button:hover {
     -fx-text-fill: orange;
-}
-{{< / highlight >}}
+}```
 
 Next to the `hover` pseudo class JavaFX controls support several other pseudo classes. An overview can be found in the [JavaFX CSS documentation](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html).
 
@@ -53,18 +49,15 @@ Next to the `hover` pseudo class JavaFX controls support several other pseudo cl
 
 As you have seen the basic JavaFX controls already support several pseudo classes to style specific states of a control. But maybe that is not enough for your current project. If you extend a control and add new states or create a custom control you need to define your own pseudo classes if you want to support styling with CSS. To define a pseudo class JavaFX contains the class `PseudoClass` that can be used to create a new pseudo class definition for your control. Here it's best practice to use a static instance directly in your control class:
 
-{{< highlight java >}}
-public class MyCustomButton extends Button {
+```javapublic class MyCustomButton extends Button {
   
   private static PseudoClass EXPLODING_PSEUDO_CLASS = PseudoClass.getPseudoClass("exploding");
   
-}
-{{< / highlight >}}
+}```
 
 The pseudo class that is created in the code snippet can be used in CSS selectors by its given name ("exploding"). As a next step we need to active and deactivate the pseudo class. To do so it's best practice to create a boolean property in you control that reflects the state of the pseudo class. By doing so you can simply mutate and check the state in Java by using the property. Internally the state of the pseudo class changes whenever the value of the property changes. To set the state of a pseudo class the JavaFX `Node` class provides the method `pseudoClassStateChanged(PseudoClass pseudoClass, boolean active)`. The following code snippet shows how you can create a control that defines a new state by using a property and automatically updates the pseudo class based on the property value:
 
-{{< highlight java >}}
-public class MyCustomButton extends Button {
+```javapublic class MyCustomButton extends Button {
   
   private static PseudoClass EXPLODING_PSEUDO_CLASS = PseudoClass.getPseudoClass("exploding");
   
@@ -85,13 +78,11 @@ public class MyCustomButton extends Button {
   public void setExploding(boolean exploding) {
     this.exploding.set(exploding);
   }
-}
-{{< / highlight >}}
+}```
 
 The code snippet shows the best practice how it's defined in the JavaFX documentation. If this code is too long for you or you don't like to override the property class you could get the same result by using a listener:
 
-{{< highlight java >}}
-public class MyCustomButton extends Button {
+```javapublic class MyCustomButton extends Button {
   
   private static PseudoClass EXPLODING_PSEUDO_CLASS = PseudoClass.getPseudoClass("exploding");
   
@@ -111,16 +102,13 @@ public class MyCustomButton extends Button {
   public boolean isExploding() {
     return this.exploding.get();
   }
-}
-{{< / highlight >}}
+}```
 
 As you can see in the last code snippet I added the style class `exploding-button` to the costume control. By doing so I can now define the following CSS Rule that will effect my new control type if the `exploding` style class is active:
 
-{{< highlight java >}}
-.exploding-button:exploding {
+```java.exploding-button:exploding {
   -fx-background-color: red;
-}
-{{< / highlight >}}
+}```
 
 ## Conclusion
 

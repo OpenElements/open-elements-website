@@ -8,7 +8,7 @@ categories: [AquaFX, General, JavaFX]
 excerpt: 'I was keen on starting with the first components for the native Look and Feel for JavaFX. Now I want to show you what is the result.'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-Since [my project]({{< ref "/posts/2013-01-16-this-is-for-the-native-ones" >}}) was accepted, I was keen on starting with the first components. Now I want to show you what is the result.
+Since [my project](/posts/2013-01-16-this-is-for-the-native-ones) was accepted, I was keen on starting with the first components. Now I want to show you what is the result.
 
 ## Remember the shutdown dialog?
 
@@ -68,7 +68,7 @@ The good news in this context is, that all of this stuff works on retina- and no
 
 There are some points, which had to be decided before I really could start and which are not absolutely clear.
 
-Currently all CSS-styling is overriding caspian.css, as it is the default style. But we all look forward to modena replacing caspian for JavaFX 8. This may cause some trouble in future concerning new controls, which do not have Mac OS-Styling yet. For this reason, it is not that clear, how to apply mac_os.css to an application. Hendrik describes the different variations using the StyleManager in [his latest blogpost]({{< ref "/posts/2013-03-02-global-stylesheet-for-your-javafx-application" >}}). Thoughtless usage of style management also causes trouble with PopUp-components.
+Currently all CSS-styling is overriding caspian.css, as it is the default style. But we all look forward to modena replacing caspian for JavaFX 8. This may cause some trouble in future concerning new controls, which do not have Mac OS-Styling yet. For this reason, it is not that clear, how to apply mac_os.css to an application. Hendrik describes the different variations using the StyleManager in [his latest blogpost](/posts/2013-03-02-global-stylesheet-for-your-javafx-application). Thoughtless usage of style management also causes trouble with PopUp-components.
 
 The main approach in styling the components is, using CSS as much as possible. Everything, that is not possible in CSS e.g. multiple effects on one component or animations is implemented in Aqua*Skins, which simply override the skin of the affected control. In this way, effects and animations are no problem.
 

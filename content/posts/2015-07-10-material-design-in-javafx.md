@@ -20,4 +20,4 @@ The source of the project [can be found at GitHub](https://github.com/guigarage/
 
 The entry point of the demo application can be found at [`com.guigarage.sdk.demos.SimpleViewAppDemo1`](https://github.com/guigarage/sdkfx/blob/master/src/main/java/com/guigarage/sdk/demos/SimpleViewAppDemo1.java) and by starting this application you can play with the first demo. An overview of this application can be found in this video:
 
-{{< youtube 3hnYnEm6sHA >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3hnYnEm6sHA" frameborder="0" allowfullscreen></iframe>
