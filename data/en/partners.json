@@ -54,5 +54,12 @@
     "logo": "/illustrations/logos/akg-logo.svg",
     "link": "https://www.kammerleitstelle.de",
     "visible": true
+  },
+  {
+    "title": "DUH-IT",
+    "text": "<a class=\"link-purple\" href=\"https://duh-it.de\" target=\"_blank\">DUH-IT</a> helps to sustainably shape structural transformation in Unna and Hamm and to future-proof the regional logistics industry. A key element is the development of an innovation ecosystem that enables companies to meaningfully apply blockchain technologies both in traditional logistics processes and in the emerging hydrogen sector. Through hands-on formats such as workshops, demonstrations, and qualification programs, companies are supported in building digital skills and testing new applications along value-creation networks. <b>Open Elements</b> works together with DUH-IT to achieve these goals.",
+    "logo": "/illustrations/logos/duh-it.svg",
+    "link": "https://duh-it.de",
+    "visible": true
   }
 ]
