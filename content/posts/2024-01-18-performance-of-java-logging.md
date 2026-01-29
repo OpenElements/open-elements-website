@@ -59,7 +59,7 @@ On the other hand, however, they also brought to light a few insights that are c
 
 The following is an overview of measurement results for simple logging of a "Hello World" message:
 
-{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/measure-logging.jpg" width="100%" showCaption="false" alt="Measurement Results">}}
+![Measurement Results](/posts/2024-01-18-performance-of-java-logging/measure-logging.jpg)
 
 ## The Problem with the Console
 
@@ -74,13 +74,13 @@ Another big difference can be seen when looking at the measurement values for sy
 Here it immediately becomes clear that asynchronous logging is significantly faster.
 The following tables show the measurement values of asynchronous logging compared to synchronous logging:
 
-{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/measure-comparision-logging.jpg" width="100%" showCaption="false" alt="Measurement Comparision">}}
+![Measurement Comparision](/posts/2024-01-18-performance-of-java-logging/measure-comparision-logging.jpg)
 
 The clearly higher performance is due to the fact that the write operation of the asynchronous loggers does not block.
 The Log4J2 and Chronicle Logger loggers use different libraries internally, but both are based on a "lock-free inter-thread communication library".
 While [LMAX Disruptor](https://github.com/LMAX-Exchange/disruptor) has to be added as a library for Log4J, which internally enables asynchronous logging via ring buffers, the Chronicle Logger is directly based on the [Chronicle Queue library](https://github.com/OpenHFT/Chronicle-Queue).
 
-{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/synchronous-asynchronous-logging.jpg" width="100%" showCaption="false" alt="Synchronous-Asynchronous Logging">}}
+![Synchronous-Asynchronous Logging](/posts/2024-01-18-performance-of-java-logging/synchronous-asynchronous-logging.jpg)
 
 A concrete description of the internally used libraries and how they enable asynchronous communication or writing to the file system can be found in the documentation.
 
@@ -92,7 +92,7 @@ As a reason, I suspect that the used Chronicle Queue manages the binary data for
 However, this still needs to be further investigated.
 The following table shows an overview of the variance:
 
-{{< centered-image src="/posts/2024-01-18-performance-of-java-logging/variance-logging-performance.jpg" width="100%" showCaption="false" alt="Overview Variance">}}
+![Overview Variance](/posts/2024-01-18-performance-of-java-logging/variance-logging-performance.jpg)
 
 ## Conclusion
 
