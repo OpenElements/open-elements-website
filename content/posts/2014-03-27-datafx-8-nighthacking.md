@@ -10,5 +10,5 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 [Stephen Chin](https://twitter.com/steveonjava) has interviewed me yesterday for [http://nighthacking.com](http://nighthacking.com) about DataFX 8. In the interview I show a lot of new features and APIs of DataFX. Have fun :)
 
-{{< youtube 94oUnzlPUyQ >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/94oUnzlPUyQ" frameborder="0" allowfullscreen></iframe>
 

@@ -22,15 +22,13 @@ Among other things, you can set whether the code should run several times for a 
 These and other parameters can be easily defined in JMH using annotations, similar to JUnit.
 A simple example of a benchmark looks like this:
 
-{{< highlight java >}}
-@Benchmark
+```java@Benchmark
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 4, time = 4)
 @Measurement(iterations = 4, time = 4)
 public void runSingleSimpleLog() {
     logger.log("Hello World");
-}
-{{< / highlight >}}
+}```
 
 The example performs four warm-up runs, followed by four measurement runs.
 Each run lasts four seconds, and the measurement result shows how many operations per second could be performed.

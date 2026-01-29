@@ -14,20 +14,17 @@ In this post I will explain the basic JavaFX Property API because most of the pl
 
 In Swing every Component is a [JavaBean](http://docs.oracle.com/javase/tutorial/javabeans/) and its fields (bean properties) are accessible by getters and setters. If you want to change the text of a button you have to call the setter method:
 
-{{< highlight java >}}
-jbutton.setText("click me");
+```javajbutton.setText("click me");
 
 You can receive the current text by calling the getter method:
 
-String currentText = jbutton.getText();
-{{< / highlight >}}
+String currentText = jbutton.getText();```
 
 With this methods you can easily modify and control your user interface in a static way. For example you can receive and check all entered data by calling the required getter methods on your components once the save button is pressed.
 
 But in the last years user experience has changed. Data should be validated in the moment it has been entered by the user and the background color of a application should change on the fly while the user is dropping the mouse over the colorchooser. All this things can be done with Swing and [PropertyChangeSupport](http://docs.oracle.com/javase/6/docs/api/java/beans/PropertyChangeSupport.html). In a well coded Swing Control every change of a bean property fires a PropertyChangeEvent to all its listeners. The official Swing components offer this feature for all properties. Here is a short example that shows `PropertyChangeSupport` in a custom JComponent:
 
-{{< highlight java >}}
-public class JCustomComponent extends JComponent {
+```javapublic class JCustomComponent extends JComponent {
 
    private int volume;
 
@@ -40,21 +37,18 @@ public class JCustomComponent extends JComponent {
       this.volume = volume;
       firePropertyChange("volume", oldValue, this.volume);
    }
-}
-{{< / highlight >}}
+}```
 
 It's quite simple to access this feature outside of the component:
 
-{{< highlight java >}}
-JCustomComponent customComponent = new JCustomComponent();
+```javaJCustomComponent customComponent = new JCustomComponent();
 customComponent.addPropertyChangeListener("volume", new PropertyChangeListener() {
 
    @Override
    public void propertyChange(PropertyChangeEvent evt) {
       System.out.println("Volume changed to " + evt.getNewValue());
    }
-});
-{{< / highlight >}}
+});```
 
 The problem is that all this stuff produces a lot of redundant code and do not last for modern and big applications.
 
@@ -62,8 +56,7 @@ The problem is that all this stuff produces a lot of redundant code and do not l
 
 Most of the time `PropertyChangeSupport` is used in Swing applications to connect the view to a data model. By doing so a lot of code looks like this:
 
-{{< highlight java >}}
-//example code from http://goo.gl/T6Iqg
+```java//example code from http://goo.gl/T6Iqg
 slider.addValueListener(new ChangeListener() {
    public void stateChanged(ChangeEvent e) {
       selectedObject.setFoo(slider.getValue());
@@ -76,19 +69,16 @@ selectedObject.addPropertyChangeListener(new PropertyChangeListener() {
          slider.setValue(selectedObject.getFoo());
       }
    }
-});
-{{< / highlight >}}
+});```
 
 This code is really painful and vulnerable to (copy & paste) errors. Thanks to the BeansBinding API the modern Swing developer do not need this glue code and simply bind properties. The API allow to bind two different properties with each other so that all changes are automatically adopted by the opposite side. Here is a short example of a binding:
 
-{{< highlight java >}}
-//example code from http://goo.gl/KmGz1
+```java//example code from http://goo.gl/KmGz1
 Property slideValue = BeanProperty.create("value");
 Property tintValue = BeanProperty.create("tint");
 Binding tintBinding = Bindings.createAutoBinding(UpdateStrategy.READ, tintSlider, slideValue, tintedPanel, tintValue);
 tintBinding.bind();
-tintSlider.setValue(0);
-{{< / highlight >}}
+tintSlider.setValue(0);```
 
 With the API you can create one way or bidirectional bindings. The difference is that in a one way binding only one side is a observer. In a bidirectional binding every change on any side is adopted by the opposite side.
 
@@ -96,10 +86,9 @@ If you are interested in BeansBinding with Swing I suggest you to [read](http://
 
 ## JavaFX Properties
 
-JavaFX includes the [`javafx.beans.property.Property`](http://docs.oracle.com/javafx/2/api/javafx/beans/property/Property.html) Interface that extend property handling and binding with some great features and a very simple but powerful API. All JavaFX controls use the property API to grant access to their fields. Normally next to the getter & setter methods there is a new method to access the property. Here is a example for the "double cellWidth" attribute of [GridView]({{< ref "/posts/2012-11-29-gridfx-is-moving-forward" >}}):
+JavaFX includes the [`javafx.beans.property.Property`](http://docs.oracle.com/javafx/2/api/javafx/beans/property/Property.html) Interface that extend property handling and binding with some great features and a very simple but powerful API. All JavaFX controls use the property API to grant access to their fields. Normally next to the getter & setter methods there is a new method to access the property. Here is a example for the "double cellWidth" attribute of [GridView](/posts/2012-11-29-gridfx-is-moving-forward):
 
-{{< highlight java >}}
-private DoubleProperty cellWidth;
+```javaprivate DoubleProperty cellWidth;
 
 public final DoubleProperty cellWidthProperty() {
    if (cellWidth == null) {
@@ -114,8 +103,7 @@ public void setCellWidth(double value) {
 
 public double getCellWidth() {
    return cellWidth == null ? 64.0 : cellWidth.get();
-}
-{{< / highlight >}}
+}```
 
 As you can see there is no "double cellWidth" field in the code. Instead of this the attribute is wrapped in a Property. JavaFX offers a set of basic property classes for primitive datatypes like String or double. All this basic implementations are part of the package [`javafx.beans.property.*`](http://docs.oracle.com/javafx/2/api/javafx/beans/property/package-summary.html).
 
@@ -125,8 +113,7 @@ The getter and setter methods work directly with the Property instance and set o
 
 By using the above described design for bean properties in JavaFX you will get a lot of pros in your code. First of all JavaFX properties offer support for [`ChangeListener`](http://docs.oracle.com/javafx/2/api/javafx/beans/value/ChangeListener.html). So you can add listeners to every property:
 
-{{< highlight java >}}
-SimpleStringProperty textProp = new SimpleStringProperty();
+```javaSimpleStringProperty textProp = new SimpleStringProperty();
 textProp.addListener(new ChangeListener<String>() {
 
    @Override
@@ -142,8 +129,7 @@ mySlider.valueProperty().addListener(new ChangeListener<Number>() {
    public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
       System.out.println("Value changed!");
    }
-});
-{{< / highlight >}}
+});```
 
 The usage of `ChangeListener` in JavaFX is equivalent to PropertyChangeSupport in Swing. But in my eyes there are some benefits. The code looks much cleaner and it's very easy to add a listener to one specific field / property. In Swing you have to add the field name as a String parameter and produce plenty of refactoring risk. Next to the ChangeLister you can register [`InvalidationListener`](http://docs.oracle.com/javafx/2/api/javafx/beans/InvalidationListener.html) to your properties. You can read more about the difference between this two listener types [here](http://blog.netopyr.com/2012/02/08/when-to-use-a-changelistener-or-an-invalidationlistener/).
 
@@ -151,8 +137,7 @@ The usage of `ChangeListener` in JavaFX is equivalent to PropertyChangeSupport i
 
 Another and in my opinion the best feature of JavaFX properties is the binding function. For this the Property interface offers the following methods:
 
-{{< highlight java >}}
-void bind(javafx.beans.value.ObservableValue other);
+```javavoid bind(javafx.beans.value.ObservableValue other);
   
 void unbind();
   
@@ -160,56 +145,47 @@ boolean isBound();
   
 void bindBidirectional(javafx.beans.property.Property other);
   
-void unbindBidirectional(javafx.beans.property.Property other);
-{{< / highlight >}}
+void unbindBidirectional(javafx.beans.property.Property other);```
 
 By using this methods you can create bindings between JavaFX properties very easy and with much cleaner code than in Swing. In the following example the value of a slider will be bound to the cell width of a grid:
 
-{{< highlight java >}}
-GridView<ITunesMedia> myGrid = new GridView<>();
+```javaGridView<ITunesMedia> myGrid = new GridView<>();
 Slider columnWidthSlider = SliderBuilder.create().min(10).max(512).build();
-myGrid.cellWidthProperty().bind(columnWidthSlider.valueProperty());
-{{< / highlight >}}
+myGrid.cellWidthProperty().bind(columnWidthSlider.valueProperty());```
 
 By doing so the change of the slider will directly change the cell width of the grid because this property is bound to the value property of the slider. You can see the result in a video (0:20):
 
-{{< vimeo 53462905 >}}
+<iframe src="https://player.vimeo.com/video/53462905" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 By using the `bind(..)` method a change of the column width will not influence the slider value because we have a one way binding. But creating a bidirectional binding is easy as pie:
 
-{{< highlight java >}}
-Slider mySlider1 = SliderBuilder.create().min(10).max(512).build();
+```javaSlider mySlider1 = SliderBuilder.create().min(10).max(512).build();
 Slider mySlider2 = SliderBuilder.create().min(10).max(512).build();
-mySlider1.valueProperty().bindBidirectional(mySlider2.valueProperty());
-{{< / highlight >}}
+mySlider1.valueProperty().bindBidirectional(mySlider2.valueProperty());```
 
 Now whatever slider is changed, the other one will adopt it's value:
 
-{{< vimeo 57128737 >}}
+<iframe src="https://player.vimeo.com/video/57128737" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 You can simply remove a binding by calling `property.unbind()` in your code.
 
 With this methods you can easily bind two or more properties with the same value type (String, double, etc.). But sometimes you need a more complex binding. Maybe you need to bind a slider value to the visible property of a label. The label should appear once the slider value reaches a maximum. The JavaFX Property API offers some conversion methods for this needs. Most property types provides specific methods that create a new binding. Here is an sample that uses some of this methods:
 
-{{< highlight java >}}
-Slider mySlider1 = new Slider();
+```javaSlider mySlider1 = new Slider();
 Label myLabel = LabelBuilder.create().text("ALERT!").visible(false).build();
-myLabel.visibleProperty().bind(mySlider1.valueProperty().multiply(2).greaterThan(100));
-{{< / highlight >}}
+myLabel.visibleProperty().bind(mySlider1.valueProperty().multiply(2).greaterThan(100));```
 
 In line 3 the valueProperty in converted to a new double binding that is always double the size of the wrapped property. Now by calling the greaterThan(..) method we create a boolean binding that is wrapped around the double binding. This bindings value is true while the wrapped value is > 100. So if the value of the slider is greater than 50 (50 * 2 > 100) the label will be visible:
 
-{{< vimeo 57133467 >}}
+<iframe src="https://player.vimeo.com/video/57133467" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 Next to this functions there is the util class [`javafx.beans.binding.Bindings`](http://docs.oracle.com/javafx/2/api/javafx/beans/binding/Bindings.html) that provides a lot of additional functions and support. For example you can add converters to a binding by using this class:
 
-{{< highlight java >}}
-SimpleIntegerProperty intProp = new SimpleIntegerProperty();
+```javaSimpleIntegerProperty intProp = new SimpleIntegerProperty();
 SimpleStringProperty textProp = new SimpleStringProperty();
 StringConverter<? extends Number> converter =  new IntegerStringConverter();
 
-Bindings.bindBidirectional(textProp, intProp,  (StringConverter<Number>)converter);
-{{< / highlight >}}
+Bindings.bindBidirectional(textProp, intProp,  (StringConverter<Number>)converter);```
 
 Once you set the value of the StringProperty to "8" the IntegerProperty will update it's wrapped value to 8 and vice versa.
 

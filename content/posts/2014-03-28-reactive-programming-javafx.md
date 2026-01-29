@@ -16,24 +16,20 @@ Java 8 is finally released and Lambda expression are an official part of Java. T
 
 By using Lambdas it's very easy to define callbacks that can react on specific events. Here is a short example about an event driven design without the usage of Lambda expressions:
 
-{{< highlight java >}}
-public static void hello(String... names) {
+```javapublic static void hello(String... names) {
     Observable.from(names).subscribe(new Action<String>() {
         @Override
         public void call(String s) {
             System.out.println("Hello " + s + "!");
         }
     });
-}
-{{< / highlight >}}
+}```
 
 Thanks to Lambda expressions the same functionallity can be coded in Java 8 this way:
 
-{{< highlight java >}}
-public static void hello(String... names) {
+```javapublic static void hello(String... names) {
     Observable.from(names).subscribe((s) -> System.out.println("Hello " + s + "!"));
-}
-{{< / highlight >}}
+}```
 
 The example is part of the [RxJava tutorial](https://github.com/Netflix/RxJava/wiki/Getting-Started).
 
@@ -43,10 +39,8 @@ Let's take a look at JavaFX. Because the JavaFX API was designed for Java 8 it p
 
 By using ReactFX you can do a lot of cool event driven stuff with only a few lines of code. Here is an example how event handlers can be designed to react on user inputs:
 
-{{< highlight java >}}
-EventStream<MouseEvent> clicks = EventStreams.eventsOf(node, MouseEvent.MOUSE_CLICKED);
-clicks.subscribe(click -> System.out.println("Click!"));
-{{< / highlight >}}
+```javaEventStream<MouseEvent> clicks = EventStreams.eventsOf(node, MouseEvent.MOUSE_CLICKED);
+clicks.subscribe(click -> System.out.println("Click!"));```
 
 I think the API provides a lot of cool functionallity that let you design JavaFX applications that are more reactive and I hope to see a lot of more code like shown in the example above.
 

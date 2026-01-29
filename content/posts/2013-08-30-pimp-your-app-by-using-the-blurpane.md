@@ -18,8 +18,7 @@ Whenever a message will be shown the complete applications will become blurred:
 
 We have choosen a similar approach as it is done in the JXLayer in Swing. A invisible StackPane is placed on top of the application as an overlay. When a message appears the StackPane will become visible. The StackPane contains a ImageView that shows a blurred snapshot of the complete area under the Pane. By doing so the applications seams to be blurred. The BlurPane will be part in one of our next open source libs. But because this class has only dependencies to the JDK we want to share it here with you:
 
-{{< highlight java >}}
-import javafx.geometry.Point2D;
+```javaimport javafx.geometry.Point2D;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.effect.BoxBlur;
@@ -61,5 +60,4 @@ public class BlurPane extends StackPane {
             setVisible(true);
         }
     }
-}
-{{< / highlight >}}
+}```

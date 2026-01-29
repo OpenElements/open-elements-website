@@ -8,7 +8,7 @@ categories: [Web Frontends]
 excerpt: 'This post gives a short introduction to Bower from a Java developers point of view.'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-Some weeks ago [I blogged about web components]({{< ref "/posts/2014-11-12-first-steps-webcomponents" >}}). Since that post I did a lot of research about this topic and had a [talk about web components at JFokus](http://www.jfokus.se/jfokus/talks.jsp#WebComponents). I really like this new technology and therefore I plan to blog about it more often in future. All the JavaFX lovers and readers of my blog shouldn't be afraid. I will continue work with JavaFX ;)
+Some weeks ago [I blogged about web components](/posts/2014-11-12-first-steps-webcomponents). Since that post I did a lot of research about this topic and had a [talk about web components at JFokus](http://www.jfokus.se/jfokus/talks.jsp#WebComponents). I really like this new technology and therefore I plan to blog about it more often in future. All the JavaFX lovers and readers of my blog shouldn't be afraid. I will continue work with JavaFX ;)
 
 Before going deep in the web components topic I want to introduce a tool that I think is needed when working with this new technology: [bower](http://bower.io).
 
@@ -20,8 +20,7 @@ Bower is an open source tool that is created by Twitter and helps you to manage 
 
 Bower can be [installed by using NPM](http://bower.io/#install-bower) and once it's on your system you can create a bower configuration for your project by simply calling `bower init`. By doing so you need to define some metadata for your project and bower will create a json file (`bower.json`) in your project folder. This file contains the definition of your project and might look like this:
 
-{{< highlight json >}}
-{
+```json{
   "name": "bootstrap-layout",
   "version": "0.0.0",
   "authors": [
@@ -35,8 +34,7 @@ Bower can be [installed by using NPM](http://bower.io/#install-bower) and once i
     "test",
     "tests"
   ]
-}
-{{< / highlight >}}
+}```
 
 Developers who are familiar with [Maven](http://maven.apache.org) might notice some parallels. Once the file is created you can add dependencies to your project by calling a bower command like `bower install --save webcomponentsjs` that installs the web components polyfill (I plan to blog later about that module). When looking at the bower file you will find a dependencies section that contains the added module. In addition a `bower_components` folder was created in your project that contains the defined dependency. Once this is done you can simply use any content of the `bower_components` folder in your application. But don't forget to add the `bower_components` folder to `.gitignore` ;) When checking out the project from git you only need to call `bower install` and the cool little tool will download all the defined dependencies for you and add them to the `bower_components` folder automatically. So from a Java developer point of view this is mostly what Maven does for my Java project.
 

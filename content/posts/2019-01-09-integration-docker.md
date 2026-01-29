@@ -35,8 +35,7 @@ response. The following image shows how such information would be rendered in th
 When developing such a feature for JavaEE an implementation of the `javax.servlet.Filter` interface is a good choice. In
 our library we could provide the following class:
 
-{{< highlight java >}}
-package com.karakun.enterprise;
+```javapackage com.karakun.enterprise;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -59,23 +58,20 @@ public class ServerTimingFilter implements Filter {
     @Override
     public void destroy() {}
 
-}
-{{< / highlight >}}
+}```
 
 As you see, we call the static `ServerTiming.writeTiming()` method in our filter. This methods adds some headers to the
 HTTP response which is represented by the `ServletResponse` instance that is passed to the method. Even if this method
 is using APIs from the JavaEE specifications (the `ServletResponse` interface that is part of the servlet specification)
 we can easily provide some unit tests to check the functionality of the method. A test method could look like this:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void testServerTiming() {
 final ServletResponse response = new ResponseMock();
 ServerTiming.addTiming("Call DB", 3450);
 ServerTiming.writeTiming(response);
 assertTrue(response.containsTiming("Call DB", 3450));
-}
-{{< / highlight >}}
+}```
 
 Thus, we can easily test that all information is added to the response and our Server Timing implementation is working.
 If you want to see how the Server Timing feature can be implemented in detail you can find an implementation
@@ -86,11 +82,9 @@ context and then mutate every response for a defined endpoint. If you want to ad
 server application receives you can add the `javax.servlet.annotation.WebFilter` annotation to your class or do the
 registration in code like it is shown in the following snippet:
 
-{{< highlight java >}}
-final Filter filter = new ServerTimingFilter(true);
+```javafinal Filter filter = new ServerTimingFilter(true);
 final FilterRegistration.Dynamic createdFilter = servletContext.addFilter("ServerTiming", filter);
-createdFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
-{{< / highlight >}}
+createdFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");```
 
 To check that the code snippet is working and your custom filter will be called for every request you need to test your
 library with an application server.
@@ -134,29 +128,25 @@ the response. TestNG's data provider functionality can be used to write a test w
 can provide a list of configurations for our tests. The following snippet contains a method that is annotated with
 the `org.testng.annotations.DataProvider` annotation and provides the configurations for our tests:
 
-{{< highlight java >}}
-@DataProvider(name = "endpoints")
+```java@DataProvider(name = "endpoints")
 public Object[][] getEndpoints() {
 return new Object[][]{
 new Object[]{"TomEE", "8080"},
 new Object[]{"Payara", "8081"}
 };
-}
-{{< / highlight >}}
+}```
 
 The method provides the configuration for 2 endpoints (TomEE on port 8080 and Payara on port 8081).
 
 This configurations can now be used in a test method:
 
-{{< highlight java >}}
-@Test(dataProvider =  "endpoints")
+```java@Test(dataProvider =  "endpoints")
 public void testEndpoints(String containerType, String port) {
 print("Testing " + containerType);
 final String url = "http://localhost:" + port + "/test";
 final Map<String, Long> timings = callEndpoint(url);
 assertContains(timings, "Call DB", 3450);
-}
-{{< / highlight >}}
+}```
 
 By executing the test, TestNG will automatically call it once for every given configuration. At the moment the tests
 will fail since we do not have any applications running or maybe an application is not even deployed.
@@ -169,11 +159,9 @@ containers. You can find all the needed Docker files [at Github](https://github.
 we will use these container descriptions as a base and extend them with the needed functionality. For TomEE, our Docker
 file will look like this:
 
-{{< highlight docker >}}
-FROM airhacks/tomee:7.0.4-plus
+```dockerFROM airhacks/tomee:7.0.4-plus
 MAINTAINER Hendrik Ebbers, karakun.com
-COPY sample.war ${DEPLOYMENT_DIR}
-{{< / highlight >}}
+COPY sample.war ${DEPLOYMENT_DIR}```
 
 The `DEPLOYMENT_DIR` variable is already defined in the Docker file from Adam and we can easily use it to add our
 application (the `sample.war`) to the TomEE instance that is running in the Docker container. The only important point
@@ -181,9 +169,7 @@ is that the war is in the same folder as the Docker file when you build the imag
 hand you can easily map the internal port of the application server (8080) to any free port of your local system by
 adding a port mapping:
 
-{{< highlight shell >}}
-docker run -p 8080:8080
-{{< / highlight >}}
+```shelldocker run -p 8080:8080```
 
 After starting the containers in Docker we need to wait until the containers are started and the internal application is
 deployed. To do so we can write a small Java method that for example checks if a health-endpoint of the app can be
@@ -197,8 +183,7 @@ and `@AfterGroup`) annotations to execute good before running the tests after an
 start a native process in Java the following code gives an idea of how a first implementation to run our integration
 tests might look like:
 
-{{< highlight java >}}
-public class DockerBasedTest() {
+```javapublic class DockerBasedTest() {
 
     @BeforeClass
     public void init() {
@@ -229,8 +214,7 @@ public class DockerBasedTest() {
         Runtime.getRuntime().exec("docker stop Payara");
     }
 
-}
-{{< / highlight >}}
+}```
 
 With this class, we already defined a full workflow to test the internals of the sample app on several application
 servers. The following diagram gives an overview of the implemented steps:
@@ -251,22 +235,18 @@ The testcontainers library uses the rule support of JUnit to define Docker conta
 created for unit tests. The library provides a pretty good API that lets you easily define containers. The following
 example shows how a container with a [Redis](https://redis.io) instance can be defined for unit tests:
 
-{{< highlight java >}}
-@ClassRule
+```java@ClassRule
 public static GenericContainer redis =
 new GenericContainer("redis:3.0.2")
-.withExposedPorts(6379);
-{{< / highlight >}}
+.withExposedPorts(6379);```
 
 Additionally, testcontainers provides support for Docker Compose. With this, you can easily create a container landscape
 for tests. All containers that are needed for your tests can be defined in a yml file that Docker Compose will use to
 start several Docker containers. The following snippet shows how Docker Compose can be used with testcontainers:
 
-{{< highlight java >}}
-@ClassRule
+```java@ClassRule
 public static DockerComposeContainer environment =
-new DockerComposeContainer(new File("src/test/resources/compose-test.yml"));
-{{< / highlight >}}
+new DockerComposeContainer(new File("src/test/resources/compose-test.yml"));```
 
 From my point of view, the biggest limitation of testcontainer is that you can only use it with JUnit at the moment. If
 your tests are based on TestNG for example you cannot easily integrate it into your project. In this case, you need to

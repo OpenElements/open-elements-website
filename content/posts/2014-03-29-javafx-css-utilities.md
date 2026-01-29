@@ -10,8 +10,7 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Ever tried to add a Styleable property to a JavaFX Control or Skin? By doing so you can add additional CSS support to a Control type. [Gerrit Grunwald](https://twitter.com/hansolo_) has described the benefits of styleable properties in a [blog post](http://harmoniccode.blogspot.de/2013/05/css-confusing-style-sheets.html). One big problem is the boilerplate code that will be created when implementing these properties in a Control class. Here is an example how a Control with only one property will look like:
 
-{{< highlight java >}}
-public class MyControl extends Control {
+```javapublic class MyControl extends Control {
     private StyleableObjectProperty<Paint> backgroundFill;
     public Paint getBackgroundFill() {
         return backgroundFill == null ? Color.GRAY : backgroundFill.get();
@@ -55,15 +54,13 @@ public class MyControl extends Control {
     public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
         return StyleableProperties.STYLEABLES;
     }
-}
-{{< / highlight >}}
+}```
 
 That's a lot of code for only one property. Therefore I created some helper classes to do all the work. These classes are part of the "css-helper" library that I released today.
 
 Here is an example how the Control will look like when using the "css-helper" library:
 
-{{< highlight java >}}
-public class MyControl extends Control {
+```javapublic class MyControl extends Control {
     private StyleableObjectProperty<Paint> backgroundFill;
     public Paint getBackgroundFill() {
         return backgroundFill == null ? Color.GRAY : backgroundFill.get();
@@ -88,8 +85,7 @@ public class MyControl extends Control {
     public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
         return StyleableProperties.STYLEABLES;
     }
-}
-{{< / highlight >}}
+}```
 
 By using the static methods of the CssHelper class the code is much more readable.
 
@@ -97,10 +93,8 @@ But there is one problem with the API: It uses reflection internally and because
 
 The Library is deployed to [Maven Central](http://search.maven.org/#artifactdetails%7Ccom.guigarage%7Ccss-helper%7C0.1%7Cjar) and can be easily added to a Maven project:
 
-{{< highlight xml >}}
-<dependency>
+```xml<dependency>
     <groupid>com.guigarage</groupid>
     <artifactid>css-helper</artifactid>
     <version>0.1</version>
-</dependency>
-{{< / highlight >}}
+</dependency>```
