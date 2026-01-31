@@ -125,8 +125,8 @@ export default async function PostPage({ params }: PostPageProps) {
         <div className="container mt-12 w-full max-w-screen-2xl">
           <div className="flex flex-col xl:flex-row gap-12 xl:gap-8">
             <div className="flex-1 w-full space-y-8">
-              <div className="space-y-4 sm:space-y-3">
-                <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+              <div className="space-y-6 sm:space-y-5">
+                <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                   <div className="flex items-center gap-2 text-purple">
                     <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                       <path
@@ -154,7 +154,7 @@ export default async function PostPage({ params }: PostPageProps) {
                     )}
                   </div>
                 </div>
-                <div className="flex flex-wrap items-center gap-3 mt-3 text-sm sm:text-base sm:mt-2 text-purple">
+                <div className="flex flex-wrap items-center gap-4 mt-4 text-sm sm:text-base sm:mt-3 text-purple">
                   {post.frontmatter.categories?.map((category, index) => (
                     <p key={index}>#{category}</p>
                   ))}
