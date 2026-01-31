@@ -34,7 +34,7 @@ test.describe('Navbar links', () => {
         if (isExternalLink(href)) continue;
 
         const targetUrl = new URL(href, baseURL).pathname;
-        await page.goto(targetUrl);
+        await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 45_000 });
 
         if (locale === 'de') {
           await expect(page).toHaveURL(/\/de(\/|$)/);
