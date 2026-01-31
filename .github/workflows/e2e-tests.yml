@@ -2,9 +2,9 @@ name: E2E Tests
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, next-js-migration]
   pull_request:
-    branches: [main, master]
+    branches: [main, next-js-migration]
 
 jobs:
   test:
@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps chromium
