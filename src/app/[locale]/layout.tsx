@@ -74,11 +74,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${montserrat.variable} scroll-smooth`}>
+    <html lang={locale} className={`${montserrat.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icons/favicon.ico" />
       </head>
-      <body className={montserrat.className}>
+      <body className={montserrat.className} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <div id="top" className="relative overflow-x-hidden">
             <Navbar locale={locale} />
