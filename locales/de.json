@@ -140,6 +140,9 @@
       "contactUs": "Kontaktieren Sie uns",
       "offeringsTitle": "Unsere Support & Care Angebote",
       "learnMore": "Mehr erfahren →",
+      "altTexts": {
+        "underline": "Unterstreichung"
+      },
       "maven": {
         "title": "Support & Care für Apache Maven™",
         "description": "Support & Care für Apache Maven™ stärkt die Zukunft des Java-Ökosystems durch nachhaltige Finanzierung und transparente Entwicklung. Sichern Sie die langfristige Stabilität und Weiterentwicklung von Apache Maven."
