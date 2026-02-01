@@ -1,15 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-
-const montserrat = Montserrat({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Open Elements - Open Source made right',
@@ -33,8 +23,8 @@ export const metadata: Metadata = {
   },
 }
 
-// RootLayout is now in [locale]/layout.tsx for i18n support
-// This is just a redirect wrapper
+// Root layout delegates to [locale]/layout.tsx for i18n support
+// The locale layout provides html/body with proper lang attributes
 export default function RootLayout({
   children,
 }: {
