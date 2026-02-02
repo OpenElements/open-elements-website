@@ -17,7 +17,7 @@ bei **Eclipse Adoptium**, bei **Hiero**, der **Linux Foundation** und der **Linu
 {{< centered-image src="/posts/2025-01-16-open-elements-in-2024/oss-meets-java.png" width="100%" showCaption="false" alt="Open Elements setzt weiterhin den Fokus der Firma auf Open Source und Java">}}
 
 Für Hendrik Ebbers und Open Elements ist Open Source eine Herzensangelegenheit, und das zeigt sich in den
-Unternehmenswerten, die stets präsent sind und sichtbar gelebt werden: 
+Unternehmenswerten, die stets präsent sind und sichtbar gelebt werden:
 
 - neuen Menschen die Community nahezubringen,
 - den (akademischen) Nachwuchs zu fördern, Wissen zu teilen,
@@ -153,7 +153,7 @@ Folgende Beiträge wurden im Java Blog bei Heise veröffentlicht:
 - [Oracles Lizenzpolitik: Ein Angebot, das Sie nicht ablehnen können](https://www.heise.de/blog/Kommentar-zu-Oracles-Lizenzen-Ein-Angebot-das-Sie-nicht-ablehnen-koennen-9781727.html)
 
 Weitere Publikationen:
- 
+
 - [Eclipse Adoptium: Ein Leuchtturmprojekt für sichere und transparente Softwarelieferketten, Scott Fryer & Hendrik Ebbers](https://www.cloudland.org/de/news/details/java-aktuell-3-24-tools/)
 - [CI for Hedera based projects](https://dev.to/hendrikebbers/ci-for-hedera-based-projects-2nja)
 - [Gaming & Web3 - How an Open and Secure Future of Ownership in Games Could Look](https://dev.to/hendrikebbers/gaming-web3-how-an-open-and-secure-future-of-ownership-in-games-could-look-2ihf)
@@ -164,10 +164,10 @@ Open Elements wächst stetig und hat am 01.09.2024 mit Natascha Dönges eine wun
 
 {{< centered-image src="/posts/2025-01-16-open-elements-in-2024/natascha.jpg" width="60%" showCaption="true" alt="Natascha Dönges">}}
 
-Jessie Ssebuliba und Tayebwa Noah sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
+Jessie Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
 Seit Mitte 2024 sind die beiden in Vollzeit für das Unternehmen tätig.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Tayebwa Noah und Jessie Ssebuliba">}}
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Noah Tayebwa und Jessie Ssebuliba">}}
 
 In dieser Konstellation zeigt sich deutlich, wie sich die globale Zusammenarbeit an Open-Source-Projekten auswirken kann.
 Geschäftsführer Hendrik Ebbers hat das Potential der jungen Männer erkannt und beiden eine Stelle angeboten.
