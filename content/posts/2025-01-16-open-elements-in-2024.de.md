@@ -127,7 +127,7 @@ Open Elements hat die Verwaltung der bereitgestellten Fördermittel für Apache 
 Der Projektstatus, die Projektziele sowie die Verwendung der (Förder-)Gelder werden transparent in einem GitHub Repository dargestellt.
 
 Falk Sippach von der embarc Software Consulting GmbH beschreibt es auf [Heise Developer](https://www.heise.de/blog/Java-Einladung-zur-Mitgestaltung-des-Programms-Support-Care-for-Apache-Maven-9718336.html) so:
-_„Das Vertrauen, das die Maven-Community hierbei Open Elements als transparenten Player im Open-Source-Bereich entgegenbringt, ist einmalig und ermöglicht dieses Vorhaben überhaupt erst.”_
+*„Das Vertrauen, das die Maven-Community hierbei Open Elements als transparenten Player im Open-Source-Bereich entgegenbringt, ist einmalig und ermöglicht dieses Vorhaben überhaupt erst.”*
 
 {{< centered-image src="/posts/2025-01-16-open-elements-in-2024/habeck.jpg" width="100%" showCaption="true" alt="Hendrik Ebbers hat sich in Lissabon zu diesem Thema mit Dr. Robert Habeck, Bundesminister für Wirtschaft und Klimaschutz, ausgetauscht">}}
 
