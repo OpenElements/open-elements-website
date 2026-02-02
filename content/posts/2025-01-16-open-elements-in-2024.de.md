@@ -63,7 +63,7 @@ Ein weiteres Sponsoring und persönliches Engagement lebt Hendrik Ebbers in der 
 Als mitverantwortlicher Leiter der JUG Dortmund gab es im vergangenen Jahr mehrere gemeinsame Events, die es zu organisieren und zu finanzieren galt.
 
 Beim Hacktoberfest konnten sich durch das finanzielle Engagement ca. 30 lokal, regional und international ansässige Personen aktiv einbringen.
-Etwa 10 Teilnehmende konnten mit der Unterstützung von Expert\*innen ihre ersten Contributions machen.
+Etwa 10 Teilnehmende konnten mit der Unterstützung von Expert*innen ihre ersten Contributions machen.
 Hendrik Ebbers hat mit der Teilnahme des Open-Elements-Teams am JUG-Event im Rahmen des Hacktoberfests Türen geöffnet und den Rahmen geschaffen, einige Open-Source-Projekte kennenzulernen und in das Gefühl der echten Teamarbeit einzutauchen.
 
 {{< youtube-2 id="NQbSPN68tPY" showCaption="true" alt="Hendrik Ebbers über die Vorteile von Open Source Contribution">}}
@@ -83,7 +83,7 @@ Hendrik Ebbers hat im Wintersemester 23/24 einen Lehrauftrag an der OTH Regensbu
 In der Vorlesung [Distribution Ledger Technology und Digital Trust]({{< ref "dlt-lecture" >}}) vermittelt er den Studierenden die grundlegenden Kenntnisse, um DLT-basierte Systeme zu entwickeln.
 Zudem werden weitergehende Ansätze behandelt, wie z. B. Smart Contracts und NFTs.
 
-_„Der Programmieraspekt des Fachs schafft ein hochinteressantes Seminar, bei welchem sowohl Kryptointeressierte als auch herkömmliche Softwareentwickler auf ihre Kosten kommen“_, so die Aussage eines Studenten.
+*„Der Programmieraspekt des Fachs schafft ein hochinteressantes Seminar, bei welchem sowohl Kryptointeressierte als auch herkömmliche Softwareentwickler auf ihre Kosten kommen“*, so die Aussage eines Studenten.
 
 ## Eigene Open-Source-Projekte und Beiträge
 
