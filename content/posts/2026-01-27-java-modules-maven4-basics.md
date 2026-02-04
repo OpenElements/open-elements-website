@@ -82,7 +82,7 @@ Our showcase is a simple Text Analyzer that reads text files and produces statis
 We split the application into two Java modules: a **core** module containing the domain model and analysis services, and a **cli** module providing a command-line interface using [picocli](https://picocli.info/).
 Both modules use [Log4j 2](https://logging.apache.org/log4j/) for logging, which is itself a fully modular library.
 
-<img src="images/module-structure.svg" alt="Module dependencies">
+<img src="/posts/2026-01-27-java-modules-maven4-basics/module-structure.svg" alt="Module dependencies">
 
 For readability, the diagram uses shortened module names (`analyzer.cli`, `analyzer.core`) corresponding to the fully qualified modules `com.openelements.showcases.analyzer.cli` and `com.openelements.showcases.analyzer.core`.
 
