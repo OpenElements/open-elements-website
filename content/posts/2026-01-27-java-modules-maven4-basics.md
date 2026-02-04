@@ -265,6 +265,4 @@ We will address both issues in one of the next articles.
 
 ---
 
-This article is published on the [Open Elements blog](https://open-elements.com/posts/2026/01/27/java-modules-maven4-basics/).
-
 Apache Maven and Maven are trademarks of the [Apache Software Foundation](https://www.apache.org/).
