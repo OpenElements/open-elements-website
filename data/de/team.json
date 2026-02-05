@@ -72,8 +72,8 @@
   },
   {
     "id": "noah",
-    "firstName": "Tayebwa",
-    "lastName": "Noah",
+    "firstName": "Noah",
+    "lastName": "Tayebwa",
     "link": "/employees/noah",
     "bio": "Noah lernt am liebsten durch Ausprobieren und teilt sein Wissen gerne weiter. Seine Neugier führte ihn in die Welt des Open Source, wo er zu Projekten wie Jakarta EE, Eclipse Adoptium, Apache Maven und Hiero beiträgt. Bei Open Elements bringt er einen überlegten, gemeinschaftsorientierten Ansatz für die Softwareentwicklung mit.",
     "picture": "/team/noah.jpg",

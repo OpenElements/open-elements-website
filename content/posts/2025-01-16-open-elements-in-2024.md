@@ -184,10 +184,10 @@ Open Elements continues to grow, and on September 1, 2024, the team welcomed Nat
 
 {{< centered-image src="/posts/2025-01-16-open-elements-in-2024/natascha.jpg" width="60%" showCaption="true" alt="Natascha Dönges">}}
 
-Jessie Ssebuliba and Tayebwa Noah, developers from Uganda, joined Open Elements at the beginning of 2024 on a part-time basis.
+Jessie Ssebuliba and Noah Tayebwa, developers from Uganda, joined Open Elements at the beginning of 2024 on a part-time basis.
 Since mid-2024, both have been working full-time for the company.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Tayebwa Noah and Jessie Ssebuliba">}}
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Noah Tayebwa and Jessie Ssebuliba">}}
 
 This collaboration highlights the impact of global teamwork on open-source projects.
 Recognizing their potential, CEO Hendrik Ebbers offered both developers positions at Open Elements.
