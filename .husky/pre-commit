@@ -3,4 +3,8 @@
 
 set -e  # die on error
 
-pnpm run lint
+if command -v pnpm >/dev/null 2>&1; then
+	pnpm run lint
+else
+	echo "pnpm not found. Skipping lint." >&2
+fi
