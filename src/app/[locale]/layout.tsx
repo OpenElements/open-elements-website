@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import Script from 'next/script'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -85,7 +86,7 @@ export default async function LocaleLayout({
             <main>{children}</main>
             <Footer locale={locale} />
           </div>
-          <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+          <Script src="https://code.iconify.design/2/2.2.1/iconify.min.js" strategy="afterInteractive" />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -11,6 +11,7 @@ export default defineConfig([
     "build/**",
     "next-env.d.ts",
     "content/**",
-    "src/react-src/**"
+    "public/**",
+    "react-src/**"
   ])
 ]);

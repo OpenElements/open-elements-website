@@ -69,7 +69,7 @@ export default function MavenPRs({status}: { status?: string }) {
     }
 
     fetchPRs();
-  }, []);
+  }, [status]);
 
   if (!prs) return <div>Keine Pull Requests gefunden</div>;
 
