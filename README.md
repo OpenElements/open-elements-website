@@ -1,90 +1,65 @@
 # Open Elements Website
 
-This repo contains the website of Open Elements.
-The website is still work in progress.
-In future the website will be available at https://www.open-elements.de and https://www.open-elements.com.
+This repository contains the Open Elements website.
 
-Netlify status of English page:
+## Architecture (2026)
 
-[![Netlify status of English page](https://api.netlify.com/api/v1/badges/0a7875a4-d4ba-4358-8616-87200dcbe7c5/deploy-status)](https://app.netlify.com/sites/open-elements-en/deploys)
+The project is now a Next.js application with App Router, Tailwind CSS, and `next-intl` for i18n. Legacy Hugo content and templates are still kept in the repo for migration and historical content.
 
-Netlify status of German page:
+### Runtime layers
 
-[![Netlify status of German page](https://api.netlify.com/api/v1/badges/935f5408-eef5-4889-9cb6-ee55a0990a0f/deploy-status)](https://app.netlify.com/sites/open-elements-de/deploys)
+- **Next.js App (primary)**
+  - App Router pages and layouts in `src/app`.
+  - UI components in `src/components`.
+  - Shared utilities in `src/lib`, data in `src/data`, types in `src/types`.
+  - Styling via Tailwind CSS and `src/app/globals.css`.
 
+- **Internationalization**
+  - `next-intl` routing and helpers in `src/i18n`.
+  - Translation messages in `locales`.
 
-## Building the website
+- **Legacy Hugo content (migrating)**
+  - Markdown content in `content`.
+  - Hugo templates in `src/layouts`.
+  - Hugo configuration in `config.toml`.
+  - Built static artifacts live in `public` (do not edit manually).
 
-Since the page is based on Hugo and React we use `npm-run-all` to execute several dev executions in parallel.
-Therefore you need to install `npm-run-all` as a dev dependency:
+- **Web components**
+  - Custom elements live in `react-src` and are bundled via `react-src/build.mjs` into `public/js`.
 
-```
-npm install --save-dev npm-run-all
-```
+- **E2E tests**
+  - Playwright specs in `tests/e2e`.
 
+## Development
 
-The project is based on [Hugo](https://gohugo.io/) and you need to [install Hugo](https://gohugo.io/installation/) to build the website.
-Once Hugo is installed you can host the website on localhost by executing to following command from the root folder of the repository:
+### Requirements
 
-```
-hugo serve
-```
+- Node.js 22
+- pnpm 10
 
-While the process is running the English (default) version of the website can be reached at http://localhost:1313/ and the German can be reached at http://localhost:1314/.
-
-## Adding Tailwind CSS
-
-### 1-Install Tailwind CSS
-
-Install tailwindcss via npm, and create your tailwind.config.js file in the root folder.
-
-```
-npm install -D tailwindcss
-npx tailwindcss init
-```
-
-### 2-Configure your template paths
-
-Add the paths to all of your template files in your tailwind.config.js file.
+### Install dependencies
 
 ```
-content: [
-  "content/**/*.md", "layouts/**/*.html"
-],
+pnpm install
 ```
 
-### 3-Add the Tailwind directives to your CSS
-Create 'input.css' file in the root folder and add the @tailwind directives for each of Tailwind’s layers to your input CSS file.
+### Run locally
 
 ```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+pnpm run dev
 ```
 
-### 4-Code snippet for Package.json
+The app is available at http://localhost:3000.
 
-Add the following code in 'Package.json'
+### Build & start
 
 ```
-  "scripts": {
-    "dev:css": "npx tailwindcss -i input.css -o assets/css/style.css -w",
-    "dev:hugo": "hugo server",
-    "dev": "run-p dev:*",
-    "build:css": "NODE_ENV=production npx tailwindcss -i input.css -o assets/css/style.css -m",
-    "build:hugo": "hugo",
-    "build": "run-s build:*"
-  },
+pnpm run build
+pnpm run start
 ```
 
-### 5-Dev environment
-For development run the following command in terminal.
-```
-npm run dev
-```
+### E2E tests
 
-### 6-Production
-For production ready css, run the following command in terminal.
 ```
-npm run build
+pnpm run test:e2e
 ```
