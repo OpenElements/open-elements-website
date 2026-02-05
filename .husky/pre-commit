@@ -1,6 +1,12 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
 set -e  # die on error
 
-pnpm run lint
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+
+if command -v pnpm >/dev/null 2>&1; then
+	cd "$REPO_ROOT"
+	pnpm run lint
+else
+	echo "pnpm not found. Skipping lint." >&2
+fi
