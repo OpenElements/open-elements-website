@@ -6,7 +6,7 @@ date: 2026-01-27
 author: gerd
 excerpt: "Apache Maven 4 introduces a new way to structure multi-module Java projects using the module source hierarchy. Instead of spreading your code across multiple Maven modules with separate POMs, you can now define all Java modules in a single POM."
 categories: [open-source, support-and-care, maven, java]
-preview_image: "/posts/preview-images/open-source-green.svg"
+preview_image: "/posts/preview-images/lego-green.svg"
 ---
 
 
