@@ -35,7 +35,6 @@ export default function AboutPage() {
 
   return (
     <div className="">
-      {/* Hero Background */}
       <div className="absolute  left-0 w-full top-0 h-34 -z-10 overflow-hidden">
         <Image
           src="/illustrations/hero-bg-2.svg"
@@ -47,7 +46,6 @@ export default function AboutPage() {
       </div>
 
       <div className="flow-root relative pb-20 sm:pb-36 container">
-        {/* Decorative images */}
         <Image
           className="top-20 right-0 absolute size-40 shrink-0"
           src="/illustrations/circles-2.svg"
