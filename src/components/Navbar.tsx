@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/routing'
+import { Link, usePathname } from '@/i18n/routing'
 import Image from 'next/image'
 import { useState } from 'react'
 import mainMenu from '@/data/mainMenu.json'
@@ -14,6 +14,7 @@ interface NavbarProps {
 export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const t = useTranslations()
+  const pathname = usePathname()
 
   const otherLocale = locale === 'en' ? 'de' : 'en'
 
@@ -77,10 +78,10 @@ export default function Navbar({ locale }: NavbarProps) {
                       </svg>
                       <div className="flex items-center gap-2">
                         <span className={`rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                          <Link href="/" locale="en">EN</Link>
+                          <Link href={pathname} locale="en">EN</Link>
                         </span>
                         <span className={`rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                          <Link href="/" locale="de">DE</Link>
+                          <Link href={pathname} locale="de">DE</Link>
                         </span>
                       </div>
                     </div>
@@ -194,10 +195,10 @@ export default function Navbar({ locale }: NavbarProps) {
                   </svg>
                   <div className="flex items-center gap-3">
                     <span className={`rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                      <Link href="/" locale="en">EN</Link>
+                      <Link href={pathname} locale="en">EN</Link>
                     </span>
                     <span className={`rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                      <Link href="/" locale="de">DE</Link>
+                      <Link href={pathname} locale="de">DE</Link>
                     </span>
                   </div>
                 </div>

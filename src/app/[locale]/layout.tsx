@@ -7,6 +7,7 @@ import { Montserrat } from 'next/font/google'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Script from 'next/script';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -85,7 +86,7 @@ export default async function LocaleLayout({
             <main>{children}</main>
             <Footer locale={locale} />
           </div>
-          <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+          <Script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></Script>
         </NextIntlClientProvider>
       </body>
     </html>
