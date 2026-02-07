@@ -8,6 +8,7 @@ import Script from 'next/script'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Script from 'next/script';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
