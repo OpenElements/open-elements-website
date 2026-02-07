@@ -23,8 +23,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Root layout delegates to [locale]/layout.tsx for i18n support
-// The locale layout provides html/body with proper lang attributes
 export default function RootLayout({
   children,
 }: {
