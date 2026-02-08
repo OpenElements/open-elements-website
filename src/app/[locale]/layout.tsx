@@ -5,7 +5,6 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import Script from 'next/script'
-import '../globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
