@@ -1,2 +1,6 @@
+# Allow all crawlers
 User-agent: *
-Sitemap: http://localhost:1313//sitemap.xml
+Allow: /
+
+# Sitemap location
+Sitemap: https://open-elements.com/sitemap.xml
