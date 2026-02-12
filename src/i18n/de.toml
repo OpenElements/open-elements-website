@@ -42,6 +42,8 @@ notFound = "Seite nicht gefunden!!"
 underline = "Grafisches Element zum Unterstreichen des Textes"
 [digitalTrustLecture]
 other = "Vorlesung zu Digital Trust"
+[dltLecture]
+other = "Vorlesung zu DLT & Digital Trust"
 [newsletter]
 other = "Unser Newsletter"
 
