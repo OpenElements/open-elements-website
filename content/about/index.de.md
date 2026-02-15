@@ -8,7 +8,7 @@ section_intro: 'Die Open Elements GmbH wurde im Jahr 2022 von <a class="link-pur
 
 section_engagement_title: 'Unser Engagement'
 
-section_prefix: 'Unser'
+section_prefix: 'Unsere'
 section_engagement: 'Engagement'
 section_team: 'Team'
 section_customers: 'Kunden & Partner'
