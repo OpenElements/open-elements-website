@@ -21,6 +21,9 @@
   "notFound": "Page Not Found!!",
   "digitalTrustLecture": "Digital Trust Lecture",
   "newsletter": "Newsletter",
+  "404": {
+    "notFound": "Page Not Found"
+  },
   "altTexts": {
     "underline": "Graphical element that underlines the text"
   },
