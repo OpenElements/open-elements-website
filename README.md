@@ -91,3 +91,8 @@ Custom elements in `react-src` are bundled with esbuild via `react-src/build.mjs
 ## Deployment
 
 Netlify builds run `pnpm install` and `pnpm run build` (see `netlify.toml`).
+
+## Documentation
+
+- **[Adding New Pages Guide](ADDING_PAGES.md)** - Complete guide on how to add new pages with EN/DE versions, including image handling and layout options
+
