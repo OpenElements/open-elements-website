@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <div className=" mx-auto overflow-hidden">
       {/* Hero Background Illustrations */}
-      <div className="absolute -top-15 left-0 right-0 flex items-start w-full -z-10">
+      <div className="absolute top-0 left-0 right-0 flex items-start w-full">
         <div className="bg-blue h-full w-full 2xl:block hidden"></div>
         <div className="w-full 2xl:shrink-0">
           <Image
@@ -33,7 +33,7 @@ export default function HeroSection() {
         <div className="bg-blue h-full w-full 2xl:block hidden"></div>
       </div>
 
-      <div className="relative max-w-sm px-6 mx-auto mt-12 lg:container lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full sm:pb-0 pb-14 sm:px-0">
+      <div className="relative mx-auto mt-12 container  sm:pb-0 pb-14">
         <div className="flex flex-col items-center gap-8 mt-20 lg:flex-row lg:mt-40">
           <div className="relative w-full">
             <Image 
@@ -51,12 +51,12 @@ export default function HeroSection() {
               height={80}
             />
             
-            <p className="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3 lg:px-0 md:px-12 sm:px-8 px-6">
+            <p className="lg:text-[28px] sm:text-2xl text-[22px] font-medium text-green mb-3 lg:px-0 md:px-12 sm:px-8">
               {t('hero.tagline')}
             </p>
             
-            <h1 className="max-w-2xl px-6 h1 lg:px-0 md:px-12 sm:px-8">
-              <div className="inline tracking-tight lg:inline sm:block">
+            <h1 className="max-w-2xl h1 lg:px-0 md:px-12 sm:px-8 tracking-tight">
+              <div className="inline  lg:inline sm:block">
                 <span className="relative z-10 inline">{t('hero.title1')}</span> &nbsp;
                 <div className="relative z-0 inline-flex items-center justify-center px-5 -ml-5 -mr-5 sm:px-16 sm:-ml-16 sm:-mr-16">
                   <Image 
@@ -66,16 +66,16 @@ export default function HeroSection() {
                     width={224}
                     height={80}
                   />
-                  <span className="relative"> {t('hero.title2')} </span> &nbsp;
+                  <span className="relative">{t('hero.title2')} </span> &nbsp;
                 </div>
               </div>
               <div className="relative inline">
                 <span>{t('hero.title3')}</span>
-                <span className="relative block sm:inline">{t('hero.title4')}</span>
+                <span className="relative block sm:inline"> {t('hero.title4')}</span>
               </div>
             </h1>
             
-            <p className="px-6 mt-4 2xl:text-lg text-base text-blue lg:px-0 md:px-12 sm:px-8">
+            <p className=" mt-4 2xl:text-lg text-base text-blue lg:px-0 md:px-12 sm:px-8">
               {t('hero.description')}
             </p>
           </div>
