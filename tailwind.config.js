@@ -78,7 +78,9 @@ module.exports = {
       'lightgray': '#D3D3D3'
     },
     extend: {
-
+      fontSize:{
+        32: '2rem',
+      },
       fontFamily: {
         'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
