@@ -78,7 +78,6 @@ src/components     UI components
 src/i18n           next-intl routing/messages helpers
 locales            Translation JSON files
 content            Legacy Hugo Markdown content
-src/layouts        Legacy Hugo templates
 public             Static assets and generated artifacts
 react-src          Web components source (bundled to public/js)
 tests/e2e          Playwright specs
