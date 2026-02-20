@@ -22,15 +22,15 @@ export default function Navbar({ locale }: NavbarProps) {
     <>
       <div className="relative">
         <div className="container pt-16">
-          <div className="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue">
-            <div className="container relative max-w-sm px-6 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl lg:px-0">
-              <nav className="flex items-center justify-between pt-5 pb-3">
+          <div className="fixed inset-x-0 top-0 z-30 w-full bg-blue">
+            <div className="mx-auto relative container-box">
+              <nav className="flex items-center justify-between py-5">
                 <Link href="/">
-                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-8 sm:h-10 w-60" />
+                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-5 sm:h-7 w-full object-contain" />
                 </Link>
                 
-                <div className="items-center hidden xl:flex gap-12">
-                  <div className="flex items-center gap-12">
+                <div className="items-center hidden xl:flex gap-8">
+                  <div className="flex items-center gap-8">
                     {mainMenu.map((item, index) => {
                       if (!item.visibleInNavigation) return null
                       
@@ -44,7 +44,7 @@ export default function Navbar({ locale }: NavbarProps) {
                                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
                               </button>
-                              <div className="hidden absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 group-hover:block">
+                              <div className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 group-hover:block">
                                 <div className="dropdownBox w-screen max-w-md flex-auto overflow-hidden bg-blue text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 rounded-lg">
                                   <div className="p-4">
                                     {item.children.map((child, childIndex) => (
@@ -72,22 +72,22 @@ export default function Navbar({ locale }: NavbarProps) {
                   </div>
                   
                   <div>
-                    <div className="flex items-center gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-green">
+                    <div className="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5 text-green">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                       </svg>
                       <div className="flex items-center gap-2">
-                        <span className={`rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
+                        <span className={`rounded-full px-2 py-1 text-xs font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
                           <Link href={pathname} locale="en">EN</Link>
                         </span>
-                        <span className={`rounded-full px-2.5 py-1 text-sm font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
+                        <span className={`rounded-full px-2 py-1 text-xs font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
                           <Link href={pathname} locale="de">DE</Link>
                         </span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-5">
                     {social.map((item, index) => (
                       <a 
                         key={index}
@@ -104,7 +104,7 @@ export default function Navbar({ locale }: NavbarProps) {
                 </div>
 
                 <button 
-                  className="xl:hidden"
+                  className="xl:hidden cursor-pointer"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   <Image 
@@ -139,7 +139,7 @@ export default function Navbar({ locale }: NavbarProps) {
               </Link>
               <button className="xl:hidden" onClick={() => setIsOpen(false)}>
                 <Image 
-                  className="w-7" 
+                  className="w-7 cursor-pointer" 
                   alt="close button icon" 
                   src="/illustrations/close.svg"
                   width={28}
