@@ -23,6 +23,22 @@ export default function Navbar({ locale }: NavbarProps) {
       <div className="relative">
         <div className="container pt-16">
           <div className="fixed inset-x-0 top-0 z-30 w-full bg-blue">
+            {pathname !== '/' && (
+              <>   
+                <Image className="absolute w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block hidden"
+                  src="/illustrations/hero-bg-2.svg"
+                  alt="Description"
+                  width={500}
+                  height={300}
+                />
+                <Image className="absolute object-contain object-center w-full -mt-4 -z-10 pointer-events-none sm:hidden"
+                  src="/illustrations/bg-hero-mb.svg"
+                  alt="Description"
+                  width={500}
+                  height={300}
+                />
+              </>
+            )}
             <div className="mx-auto relative container-box">
               <nav className="flex items-center justify-between py-5">
                 <Link href="/">

@@ -15,7 +15,7 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
 
   useEffect(() => {
     const handleResize = () => {
-      setIsOpen(window.innerWidth >= 768)
+      setIsOpen(window.innerWidth >= 1280)
     }
     
     handleResize()
@@ -32,8 +32,8 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
   }
 
   return (
-    <div className="relative w-full md:w-81 md:shrink-0">
-      <div className="top-20 sticky -mt-36">
+    <div className="relative w-full xl:w-81 xl:shrink-0">
+      <div className="top-40 xl:sticky -mt-36">
         <div className="mb-16">
           <div className="relative flex justify-center sm:justify-start items-center sm:items-start text-left">
             <h1 className="text-center h1">{t('title')}</h1>
@@ -55,7 +55,7 @@ export default function AboutSidebar({ activeSection, onSectionClick }: AboutSid
           <button 
             onClick={() => setIsOpen(!isOpen)} 
             type="button" 
-            className="md:hidden"
+            className="xl:hidden cursor-pointer"
           >
             <svg width="38" height="21" viewBox="0 0 38 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="38" height="3" fill="#469F85"/>
