@@ -77,7 +77,7 @@ export default async function LocaleLayout({
       </head>
       <body className={montserrat.className} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <div id="top" className="relative overflow-x-hidden bg-gray">
+          <div id="top" className="relative overflow-x-clip bg-gray">
             <Navbar locale={locale} />
             <main>{children}</main>
             <Footer locale={locale} />

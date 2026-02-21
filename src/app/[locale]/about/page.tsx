@@ -34,8 +34,8 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="">
-      <div className="absolute  left-0 w-full top-0 h-34 -z-10 overflow-hidden">
+    <>
+      {/* <div className="absolute  left-0 w-full top-0 h-34 -z-10 overflow-hidden">
         <Image
           src="/illustrations/hero-bg-2.svg"
           alt="Hero background"
@@ -43,9 +43,9 @@ export default function AboutPage() {
           className="object-cover"
           priority
         />
-      </div>
+      </div> */}
 
-      <div className="flow-root relative pb-20 sm:pb-36 container">
+      <div className="relative pb-20 sm:pb-36 container">
         <Image
           className="top-20 right-0 absolute size-40 shrink-0"
           src="/illustrations/circles-2.svg"
@@ -61,7 +61,7 @@ export default function AboutPage() {
           height={80}
         />
         <Image
-          className="top-[32%] left-12 absolute size-20 shrink-0"
+          className="top-[32%] left-12 absolute size-20 shrink-0 xl:block hidden"
           src="/illustrations/line-7.svg"
           alt=""
           width={80}
@@ -89,7 +89,7 @@ export default function AboutPage() {
           height={224}
         />
 
-        <div className="relative flex md:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
+        <div className="relative flex xl:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
           <AboutSidebar 
             activeSection={activeSection} 
             onSectionClick={setActiveSection} 
@@ -102,6 +102,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
+ 
   )
 }

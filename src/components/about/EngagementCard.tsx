@@ -17,11 +17,10 @@ export default function EngagementCard({ engagement }: EngagementCardProps) {
   return (
     <div className="bg-gray rounded-[30px] shadow-4 p-6 h-full flex flex-col gap-5">
       <div className="flex items-center justify-start gap-3 py-2">
-        <div className="flex items-center justify-start w-24">
           {engagement.link ? (
-            <Link href={engagement.link} target="_blank" rel="noopener noreferrer">
+            <Link href={engagement.link} target="_blank" rel="noopener noreferrer" className="shrink-0 object-contain w-24">
               <Image 
-                className="w-full" 
+                className="object-contain w-24" 
                 src={engagement.logo} 
                 alt={`${engagement.title} logo`}
                 width={96}
@@ -30,14 +29,13 @@ export default function EngagementCard({ engagement }: EngagementCardProps) {
             </Link>
           ) : (
             <Image 
-              className="w-full" 
+              className="shrink-0 w-24 object-contain" 
               src={engagement.logo} 
               alt={`${engagement.title} logo`}
               width={96}
               height={96}
             />
           )}
-        </div>
         <h2 className="text-lg font-bold text-blue">{engagement.title}</h2>
       </div>
       <div 
