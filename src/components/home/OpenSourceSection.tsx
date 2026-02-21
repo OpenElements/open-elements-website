@@ -15,7 +15,7 @@ export default function OpenSourceSection() {
             alt="arrow" 
             width={200}
             height={200}
-            className="absolute left-0 hidden -top-20 lg:block"
+            className="absolute -left-6 hidden h-28 -top-20 lg:block"
           />
           
           <h2 className="h2 lg:hidden sm:mb-12 mb-7">

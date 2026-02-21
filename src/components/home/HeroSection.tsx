@@ -8,7 +8,7 @@ export default function HeroSection() {
   const t = useTranslations()
 
   return (
-    <div className=" mx-auto overflow-hidden">
+    <div className="mx-auto">
       {/* Hero Background Illustrations */}
       <div className="absolute top-0 left-0 right-0 flex items-start w-full">
         <div className="bg-blue h-full w-full 2xl:block hidden"></div>
@@ -37,14 +37,14 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-8 mt-20 lg:flex-row lg:mt-40">
           <div className="relative w-full">
             <Image 
-              className="absolute hidden 2xl:right-20 right-12 -top-24 lg:block" 
+              className="absolute hidden 2xl:right-20 right-12 h-28 -top-24 lg:block" 
               alt="arrow" 
               src="/illustrations/arrow-1.svg" 
               width={200}
               height={200}
             />
             <Image 
-              className="absolute right-[20%] -bottom-64 lg:block hidden w-20" 
+              className="absolute right-[20%] -bottom-64 lg:block hidden h-20 w-20" 
               alt="arrow" 
               src="/illustrations/arrow-sm.svg"
               width={80}
@@ -108,16 +108,16 @@ export default function HeroSection() {
             </div>
           )}
           
-          <div className="relative w-full max-w-sm px-6 2xl:max-w-md shrink-0 sm:px-0">
+          <div className="relative w-full max-w-sm 2xl:max-w-md shrink-0 sm:px-0">
             <Image 
-              className="absolute w-16 sm:-right-24 md:-right-40 -right-2 sm:bottom-2 -bottom-6 md:w-28 sm:w-24 lg:hidden" 
+              className="absolute w-16 sm:-right-24 md:-right-40 -right-6 sm:bottom-2 -bottom-6 md:w-28 sm:w-24 lg:hidden" 
               alt="Arrow" 
               src="/illustrations/m-arrow-1.svg"
               width={112}
               height={112}
             />
             <Image 
-              className="absolute w-20 -bottom-12 md:-left-40 sm:-left-24 -left-2 md:w-36 sm:w-28 lg:hidden" 
+              className="absolute w-20 -bottom-12 md:-left-40 sm:-left-24 -left-6 md:w-36 sm:w-28 lg:hidden" 
               alt="Arrow" 
               src="/illustrations/m-arrow-2.svg"
               width={144}

@@ -8,7 +8,7 @@ export default function OpenKnowledgeSection() {
 
   return (
     <div id="open-knowledge-section" className="container relative max-w-sm px-6 py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:py-28 sm:py-16 lg:px-0">
-      <div className="flex flex-col items-center justify-between gap-6 lg:flex-row 2xl:gap-28 xl:gap-16 sm:gap-12">
+      <div className="flex flex-col items-center justify-between gap-6 lg:flex-row xl:gap-28 sm:gap-12">
         <div className="relative w-full lg:w-1/2">
           <div className="relative flex items-start gap-6 lg:hidden sm:mb-12 mb-7">
             <h2 className="h2">{t('title')}</h2>

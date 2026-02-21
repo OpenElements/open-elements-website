@@ -16,7 +16,7 @@ export default function OpenEventsSection() {
               alt="Arrow" 
               width={208}
               height={208}
-              className="absolute w-32 2xl:w-52 xl:w-44 lg:w-36 sm:w-40 2xl:-bottom-72 xl:-bottom-56 lg:-bottom-48 lg:-right-20 lg:left-auto -left-14 sm:-bottom-32 -bottom-24"
+              className="absolute w-32 xl:w-52 lg:w-36 sm:w-40 xl:-bottom-72 lg:-bottom-48 lg:-right-20 lg:left-auto -left-14 sm:-bottom-32 -bottom-24"
             />
             
             <div>
@@ -52,7 +52,7 @@ export default function OpenEventsSection() {
                 alt="Click SVG" 
                 width={40}
                 height={40}
-                className="absolute -right-5 -bottom-6 sm:hidden"
+                className="absolute -right-5 -bottom-6 size-8 sm:hidden"
               />
             </div>
             <Image 
