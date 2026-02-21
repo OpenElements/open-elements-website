@@ -18,7 +18,7 @@ export default function OpenDoorsSection() {
               alt="click svg" 
               width={40}
               height={40}
-              className="absolute -right-5 -bottom-6 sm:hidden"
+              className="absolute -right-5 -bottom-6 size-8 sm:hidden"
             />
           </div>
           <Image 
@@ -31,24 +31,24 @@ export default function OpenDoorsSection() {
         </div>
         
         <div className="flex flex-col items-end w-full mx-auto xl:flex-row">
-          <div className="relative lg:-mt-16 flex flex-col lg:gap-5 sm:gap-24 gap-11 2xl:max-w-3xl xl:max-w-[800px] mx-auto shrink-0 w-full ml-0">
+          <div className="relative lg:-mt-16 flex flex-col lg:gap-5 sm:gap-24 gap-11 2xl:max-w-3xl mx-auto shrink-0 w-full ml-0">
             <Image 
               src="/illustrations/connected-line-2.svg" 
               alt="lines" 
               width={700}
               height={400}
-              className="absolute inset-0 lg:block hidden w-full max-w-[700px] top-20 ml-10"
+              className="absolute inset-0 lg:block hidden w-full max-w-175 top-20 ml-10"
             />
             <Image 
               src="/illustrations/vertical-line.svg" 
               alt="vertical lines" 
               width={450}
               height={600}
-              className="absolute inset-0 lg:hidden max-w-[450px] sm:ml-2 -ml-3 w-full mx-auto mt-20"
+              className="absolute inset-0 lg:hidden max-w-112.5 sm:ml-2 -ml-3 w-full mx-auto mt-20"
             />
             
             <div className="relative flex justify-end order-2 mx-auto mt-8 lg:order-1 lg:mx-0 lg:mt-0">
-              <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-[380px] sm:w-96 w-full h-64 flex items-center justify-center text-center">
+              <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 lg:w-95 sm:w-96 w-full h-64 flex items-center justify-center text-center">
                 <p className="text-base leading-7 sm:text-lg sm:leading-8">
                   {t('box1')}
                 </p>
@@ -78,7 +78,7 @@ export default function OpenDoorsSection() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-full gap-3 px-4 py-3 mt-4 text-base font-semibold text-center text-white capitalize transition-all duration-150 ease-in-out rounded-full bg-purple sm:px-6 hover:bg-purple-700 hover:shadow-3 active:shadow-none active:bg-purple"
                 >
-                  <Image 
+                  <Image className="size-6"
                     src="/icons/call.svg" 
                     alt="call icon" 
                     width={20}
