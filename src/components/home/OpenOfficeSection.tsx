@@ -16,7 +16,7 @@ export default function OpenOfficeSection() {
               alt="arrow" 
               width={200}
               height={200}
-              className="absolute hidden -top-16 -right-5 lg:block"
+              className="absolute hidden -top-16 -right-5 lg:block w-92"
             />
             <h2 className="h2">
               Open <span className="text-purple">Office</span>
