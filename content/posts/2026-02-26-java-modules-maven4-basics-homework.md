@@ -256,6 +256,4 @@ We’ll update this blog series when that happens.
 
 ---
 
-This article is published on the <a href="/posts/2026/02/26/java-modules-maven4-basics-homework/" target="_blank">Open Elements blog</a>.
-
 Apache Maven and Maven are trademarks of the [Apache Software Foundation](https://www.apache.org/).
