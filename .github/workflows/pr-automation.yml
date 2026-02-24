@@ -1,0 +1,67 @@
+name: PR Automation
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  auto-label-and-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: files
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: { files } } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            const fileNames = files.map(f => f.filename);
+            const labels = new Set();
+            
+            fileNames.forEach(file => {
+              if (file.match(/\.(ts|tsx|jsx|js)$/)) labels.add('typescript');
+              if (file.match(/\.(css|scss|postcss)$/)) labels.add('styling');
+              if (file.match(/test|spec/)) labels.add('tests');
+              if (file.match(/package\.json|tsconfig|eslint|tailwind/)) labels.add('configuration');
+              if (file.match(/README|\.md$/)) labels.add('documentation');
+              if (file.match(/next\.config|public/)) labels.add('build');
+            });
+            
+            core.setOutput('labels', Array.from(labels).join(','));
+
+      - name: Auto-label PR
+        if: steps.files.outputs.labels != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = '${{ steps.files.outputs.labels }}'.split(',').filter(l => l);
+            if (labels.length > 0) {
+              github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: labels
+              });
+            }
+
+      - name: Auto-assign PR to author
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addAssignees({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              assignees: [context.payload.pull_request.user.login]
+            }).catch(err => {
+              console.log('Could not assign author: ' + err.message);
+            })
