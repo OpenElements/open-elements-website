@@ -1,0 +1,187 @@
+name: Status Labels
+
+on:
+  issues:
+    types: [opened, reopened, assigned, unassigned, labeled, unlabeled, closed]
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, converted_to_draft, review_requested, review_request_removed, closed]
+  pull_request_review:
+    types: [submitted, dismissed]
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  issue-status-labels:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync issue status labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue = context.payload.issue;
+            const issueNumber = issue.number;
+            const state = issue.state;
+            const assignees = issue.assignees || [];
+            const labels = (issue.labels || []).map(l => l.name.toLowerCase());
+            const workingLabel = 'in progress';
+            const blockedLabels = ['blocked', 'needs-triage', 'do-not-assign'];
+
+            const STATUS_TRIAGE = 'status: triage';
+            const STATUS_IN_PROGRESS = 'status: in-progress';
+            const STATUS_BLOCKED = 'status: blocked';
+            const STATUS_CLOSED = 'status: closed';
+            const statusLabels = [STATUS_TRIAGE, STATUS_IN_PROGRESS, STATUS_BLOCKED, STATUS_CLOSED];
+
+            async function ensureLabel(name) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name });
+              } catch (e) {
+                if (e.status !== 404) throw e;
+                await github.rest.issues.createLabel({
+                  owner,
+                  repo,
+                  name,
+                  color: 'BFDADC',
+                  description: `Issue status label: ${name}`
+                });
+              }
+            }
+
+            for (const label of statusLabels) await ensureLabel(label);
+
+            const shouldBe = new Set();
+            const isBlocked = labels.some(l => blockedLabels.includes(l));
+            const hasAssignee = assignees.length > 0;
+            const hasWorking = labels.includes(workingLabel);
+
+            if (state === 'closed') {
+              shouldBe.add(STATUS_CLOSED);
+            } else if (isBlocked) {
+              shouldBe.add(STATUS_BLOCKED);
+            } else if (hasAssignee || hasWorking) {
+              shouldBe.add(STATUS_IN_PROGRESS);
+            } else {
+              shouldBe.add(STATUS_TRIAGE);
+            }
+
+            const remove = statusLabels.filter(l => !shouldBe.has(l) && labels.includes(l.toLowerCase()));
+            if (remove.length > 0) {
+              for (const name of remove) {
+                try {
+                  await github.rest.issues.removeLabel({ owner, repo, issue_number: issueNumber, name });
+                } catch (e) {
+                  if (e.status !== 404) throw e;
+                }
+              }
+            }
+
+            const add = [...shouldBe].filter(l => !labels.includes(l.toLowerCase()));
+            if (add.length > 0) {
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number: issueNumber,
+                labels: add
+              });
+            }
+
+  pr-status-labels:
+    if: github.event_name == 'pull_request' || github.event_name == 'pull_request_review'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync PR status labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pullNumber = context.payload.pull_request.number;
+
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: pullNumber
+            });
+
+            const STATUS_DRAFT = 'status: draft';
+            const STATUS_REVIEW = 'status: in-review';
+            const STATUS_APPROVED = 'status: approved';
+            const STATUS_CHANGES = 'status: changes-requested';
+            const STATUS_MERGED = 'status: merged';
+            const STATUS_CLOSED = 'status: closed';
+            const statusLabels = [STATUS_DRAFT, STATUS_REVIEW, STATUS_APPROVED, STATUS_CHANGES, STATUS_MERGED, STATUS_CLOSED];
+
+            async function ensureLabel(name) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name });
+              } catch (e) {
+                if (e.status !== 404) throw e;
+                await github.rest.issues.createLabel({
+                  owner,
+                  repo,
+                  name,
+                  color: 'D4C5F9',
+                  description: `PR status label: ${name}`
+                });
+              }
+            }
+
+            for (const label of statusLabels) await ensureLabel(label);
+
+            const currentLabels = (pr.data.labels || []).map(l => l.name.toLowerCase());
+            const shouldBe = new Set();
+
+            if (pr.data.state === 'closed') {
+              if (pr.data.merged_at) shouldBe.add(STATUS_MERGED);
+              else shouldBe.add(STATUS_CLOSED);
+            } else if (pr.data.draft) {
+              shouldBe.add(STATUS_DRAFT);
+            } else {
+              const reviews = await github.paginate(github.rest.pulls.listReviews, {
+                owner,
+                repo,
+                pull_number: pullNumber,
+                per_page: 100
+              });
+
+              const latestByUser = new Map();
+              for (const r of reviews) {
+                const login = r.user?.login;
+                if (!login) continue;
+                latestByUser.set(login, r.state);
+              }
+
+              const states = [...latestByUser.values()];
+              if (states.includes('CHANGES_REQUESTED')) shouldBe.add(STATUS_CHANGES);
+              else if (states.includes('APPROVED')) shouldBe.add(STATUS_APPROVED);
+              else shouldBe.add(STATUS_REVIEW);
+            }
+
+            const remove = statusLabels.filter(l => !shouldBe.has(l) && currentLabels.includes(l.toLowerCase()));
+            for (const name of remove) {
+              try {
+                await github.rest.issues.removeLabel({
+                  owner,
+                  repo,
+                  issue_number: pullNumber,
+                  name
+                });
+              } catch (e) {
+                if (e.status !== 404) throw e;
+              }
+            }
+
+            const add = [...shouldBe].filter(l => !currentLabels.includes(l.toLowerCase()));
+            if (add.length > 0) {
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number: pullNumber,
+                labels: add
+              });
+            }
