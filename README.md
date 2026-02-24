@@ -18,10 +18,8 @@ The project is a Next.js application using App Router, Tailwind CSS, and `next-i
   - `next-intl` routing and helpers in `src/i18n`.
   - Translation messages in `locales`.
 
-- **Legacy Hugo content (migrating)**
-  - Markdown content in `content`.
-  - Hugo templates in `src/layouts`.
-  - Hugo configuration in `config.toml`.
+- **Markdown content**
+  - Markdown content in `content/`.
   - Built static artifacts live in `public` (do not edit manually).
 
 - **Web components**
@@ -77,7 +75,7 @@ src/app            Next.js App Router pages & layouts
 src/components     UI components
 src/i18n           next-intl routing/messages helpers
 locales            Translation JSON files
-content            Legacy Hugo Markdown content
+content            Markdown content
 public             Static assets and generated artifacts
 react-src          Web components source (bundled to public/js)
 tests/e2e          Playwright specs
