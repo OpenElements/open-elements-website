@@ -16,7 +16,7 @@ This follow-up explains why things don’t work out of the box and provides work
 
 ## The Homework Challenges
 
-If you tried the homework from Blog 1, you likely encountered two issues:
+If you tried the homework from the previous article, you likely encountered two issues:
 
 1. **Missing log output** – The application runs but doesn’t show the expected logging messages
 2. **JAR packaging problems** - Running `./mvnw package` creates a single JAR that doesn’t work as expected on the module path
@@ -72,7 +72,7 @@ It completely ignores our module-specific resource directories.
 ### Why It Doesn't Work
 
 Maven’s [standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html) expects resources in `src/main/resources/`.
-The module source hierarchy places resources in `src/<module>/main/resources/`, but Maven’s core resource handling doesn’t yet recognize this convention.
+The <a href="/posts/2026/01/27/your-first-modular-java-project-with-apache-maven-4/#the-module-source-hierarchy" target="_blank">module source hierarchy</a> places resources in `src/<module>/main/resources/`, but Maven’s core resource handling doesn’t yet recognize this convention.
 
 You can track the fix in [Maven Core PR 11505](https://github.com/apache/maven/pull/11505).
 
@@ -255,5 +255,6 @@ These workarounds will become unnecessary once the respective Maven releases inc
 We’ll update this blog series when that happens.
 
 ---
+
 
 Apache Maven and Maven are trademarks of the [Apache Software Foundation](https://www.apache.org/).
