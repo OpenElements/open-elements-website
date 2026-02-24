@@ -2,7 +2,12 @@ name: PR Automation
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, reopened, ready_for_review, synchronize]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
 
 jobs:
   auto-label-and-assign:
@@ -66,3 +71,86 @@ jobs:
             }).catch(err => {
               console.log('Could not assign author: ' + err.message);
             })
+
+      - name: Auto-request reviewers from JSON config
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            function toRegex(glob) {
+              const escaped = glob
+                .replace(/[.+^${}()|[\]\\]/g, '\\$&')
+                .replace(/\*\*/g, '::DOUBLE_STAR::')
+                .replace(/\*/g, '[^/]*')
+                .replace(/::DOUBLE_STAR::/g, '.*');
+              return new RegExp(`^${escaped}$`);
+            }
+
+            const configPath = '.github/reviewers.json';
+            if (!fs.existsSync(configPath)) {
+              core.info('No .github/reviewers.json found. Skipping reviewer requests.');
+              return;
+            }
+
+            let config;
+            try {
+              config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+            } catch (e) {
+              core.setFailed(`Invalid JSON in ${configPath}: ${e.message}`);
+              return;
+            }
+
+            const defaultReviewers = Array.isArray(config.default_reviewers) ? config.default_reviewers : [];
+            const pathRules = Array.isArray(config.path_reviewers) ? config.path_reviewers : [];
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100
+            });
+            const changed = files.map(f => f.filename);
+
+            const collected = new Set(defaultReviewers.filter(Boolean));
+            for (const rule of pathRules) {
+              if (!rule || !rule.glob || !Array.isArray(rule.reviewers)) continue;
+              const re = toRegex(String(rule.glob));
+              if (changed.some(f => re.test(f))) {
+                for (const reviewer of rule.reviewers) {
+                  if (reviewer) collected.add(reviewer);
+                }
+              }
+            }
+
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+
+            const author = pr.data.user?.login;
+            const alreadyRequested = new Set((pr.data.requested_reviewers || []).map(r => r.login));
+            const reviewers = Array.from(collected)
+              .map(r => String(r).trim())
+              .filter(Boolean)
+              .filter(r => r !== author)
+              .filter(r => !alreadyRequested.has(r))
+              .slice(0, 15);
+
+            if (reviewers.length === 0) {
+              core.info('No new reviewers to request.');
+              return;
+            }
+
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                reviewers
+              });
+              core.info(`Requested reviewers: ${reviewers.join(', ')}`);
+            } catch (e) {
+              core.warning(`Could not request reviewers: ${e.message}`);
+            }
