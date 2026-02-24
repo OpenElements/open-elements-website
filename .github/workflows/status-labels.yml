@@ -37,19 +37,34 @@ jobs:
             const STATUS_CLOSED = 'status: closed';
             const statusLabels = [STATUS_TRIAGE, STATUS_IN_PROGRESS, STATUS_BLOCKED, STATUS_CLOSED];
 
-            async function ensureLabel(name) {
+            async function safeWrite(fn, op) {
               try {
-                await github.rest.issues.getLabel({ owner, repo, name });
+                return await fn();
               } catch (e) {
-                if (e.status !== 404) throw e;
-                await github.rest.issues.createLabel({
+                if (e.status === 403) {
+                  core.warning(`Skipping ${op}: token cannot write in this context (403).`);
+                  return null;
+                }
+                throw e;
+              }
+            }
+
+            async function ensureLabel(name) {
+              const existing = await github.rest.issues.getLabel({ owner, repo, name }).catch(e => {
+                if (e.status === 404) return null;
+                throw e;
+              });
+              if (existing) return;
+              await safeWrite(
+                () => github.rest.issues.createLabel({
                   owner,
                   repo,
                   name,
                   color: 'BFDADC',
                   description: `Issue status label: ${name}`
-                });
-              }
+                }),
+                `create label ${name}`
+              );
             }
 
             for (const label of statusLabels) await ensureLabel(label);
@@ -73,7 +88,10 @@ jobs:
             if (remove.length > 0) {
               for (const name of remove) {
                 try {
-                  await github.rest.issues.removeLabel({ owner, repo, issue_number: issueNumber, name });
+                  await safeWrite(
+                    () => github.rest.issues.removeLabel({ owner, repo, issue_number: issueNumber, name }),
+                    `remove label ${name} from issue #${issueNumber}`
+                  );
                 } catch (e) {
                   if (e.status !== 404) throw e;
                 }
@@ -82,12 +100,15 @@ jobs:
 
             const add = [...shouldBe].filter(l => !labels.includes(l.toLowerCase()));
             if (add.length > 0) {
-              await github.rest.issues.addLabels({
-                owner,
-                repo,
-                issue_number: issueNumber,
-                labels: add
-              });
+              await safeWrite(
+                () => github.rest.issues.addLabels({
+                  owner,
+                  repo,
+                  issue_number: issueNumber,
+                  labels: add
+                }),
+                `add labels to issue #${issueNumber}`
+              );
             }
 
   pr-status-labels:
@@ -101,6 +122,8 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const pullNumber = context.payload.pull_request.number;
+            const prPayload = context.payload.pull_request;
+            const fromFork = !!prPayload.head?.repo?.fork || prPayload.head?.repo?.full_name !== `${owner}/${repo}`;
 
             const pr = await github.rest.pulls.get({
               owner,
@@ -116,19 +139,39 @@ jobs:
             const STATUS_CLOSED = 'status: closed';
             const statusLabels = [STATUS_DRAFT, STATUS_REVIEW, STATUS_APPROVED, STATUS_CHANGES, STATUS_MERGED, STATUS_CLOSED];
 
-            async function ensureLabel(name) {
+            async function safeWrite(fn, op) {
               try {
-                await github.rest.issues.getLabel({ owner, repo, name });
+                return await fn();
               } catch (e) {
-                if (e.status !== 404) throw e;
-                await github.rest.issues.createLabel({
+                if (e.status === 403) {
+                  core.warning(`Skipping ${op}: token cannot write in this context (403).`);
+                  return null;
+                }
+                throw e;
+              }
+            }
+
+            if (fromFork) {
+              core.warning('Skipping PR status label writes for fork-origin PR context.');
+              return;
+            }
+
+            async function ensureLabel(name) {
+              const existing = await github.rest.issues.getLabel({ owner, repo, name }).catch(e => {
+                if (e.status === 404) return null;
+                throw e;
+              });
+              if (existing) return;
+              await safeWrite(
+                () => github.rest.issues.createLabel({
                   owner,
                   repo,
                   name,
                   color: 'D4C5F9',
                   description: `PR status label: ${name}`
-                });
-              }
+                }),
+                `create label ${name}`
+              );
             }
 
             for (const label of statusLabels) await ensureLabel(label);
@@ -165,12 +208,15 @@ jobs:
             const remove = statusLabels.filter(l => !shouldBe.has(l) && currentLabels.includes(l.toLowerCase()));
             for (const name of remove) {
               try {
-                await github.rest.issues.removeLabel({
-                  owner,
-                  repo,
-                  issue_number: pullNumber,
-                  name
-                });
+                await safeWrite(
+                  () => github.rest.issues.removeLabel({
+                    owner,
+                    repo,
+                    issue_number: pullNumber,
+                    name
+                  }),
+                  `remove label ${name} from PR #${pullNumber}`
+                );
               } catch (e) {
                 if (e.status !== 404) throw e;
               }
@@ -178,10 +224,13 @@ jobs:
 
             const add = [...shouldBe].filter(l => !currentLabels.includes(l.toLowerCase()));
             if (add.length > 0) {
-              await github.rest.issues.addLabels({
-                owner,
-                repo,
-                issue_number: pullNumber,
-                labels: add
-              });
+              await safeWrite(
+                () => github.rest.issues.addLabels({
+                  owner,
+                  repo,
+                  issue_number: pullNumber,
+                  labels: add
+                }),
+                `add labels to PR #${pullNumber}`
+              );
             }
