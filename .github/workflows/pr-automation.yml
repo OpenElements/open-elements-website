@@ -18,16 +18,17 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const { data: { files } } = await github.rest.pulls.listFiles({
+            const response = await github.rest.pulls.listFiles({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
             });
             
-            const fileNames = files.map(f => f.filename);
+            const files = response.data || [];
             const labels = new Set();
             
-            fileNames.forEach(file => {
+            files.forEach(fileObj => {
+              const file = fileObj.filename || '';
               if (file.match(/\.(ts|tsx|jsx|js)$/)) labels.add('typescript');
               if (file.match(/\.(css|scss|postcss)$/)) labels.add('styling');
               if (file.match(/test|spec/)) labels.add('tests');
