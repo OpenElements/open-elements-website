@@ -11,7 +11,7 @@ preview_image: "/posts/preview-images/open-source-green.svg"
 ---
 
 
-In the <a href="/posts/2026/01/27/your-first-modular-java-project-with-apache-maven-4/" target="_blank">previous article</a>, we left you with two homework assignments.
+In the [previous article]({{< relref "posts/2026-01-27-java-modules-maven4-basics" >}}), we left you with two homework assignments.
 This follow-up explains why things don’t work out of the box and provides workarounds until [Apache Maven](https://maven.apache.org/) 4 fully supports these features.
 
 ## The Homework Challenges
@@ -40,7 +40,7 @@ src/com.openelements.showcases.analyzer.cli/
 │   └── resources/
 │       └── log4j2.xml  ①
 ```
-Our Log4j configuration file
+1. Our Log4j configuration file
 
 And the compiled output:
 
@@ -52,7 +52,7 @@ target/classes/
     └── com/openelements/showcases/analyzer/cli/
         └── AnalyzerCommand.class  ①
 ```
-Notice: no `log4j2.xml` here!
+1. Notice: no `log4j2.xml` here!
 
 The `log4j2.xml` file is missing from the compiled output.
 
@@ -72,7 +72,7 @@ It completely ignores our module-specific resource directories.
 ### Why It Doesn't Work
 
 Maven’s [standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html) expects resources in `src/main/resources/`.
-The <a href="/posts/2026/01/27/your-first-modular-java-project-with-apache-maven-4/#the-module-source-hierarchy" target="_blank">module source hierarchy</a> places resources in `src/<module>/main/resources/`, but Maven’s core resource handling doesn’t yet recognize this convention.
+The [module source hierarchy]({{< relref "posts/2026-01-27-java-modules-maven4-basics#the-module-source-hierarchy" >}}) places resources in `src/<module>/main/resources/`, but Maven’s core resource handling doesn’t yet recognize this convention.
 
 You can track the fix in [Maven Core PR 11505](https://github.com/apache/maven/pull/11505).
 
