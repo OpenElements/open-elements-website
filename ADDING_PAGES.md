@@ -1,5 +1,10 @@
 # Adding New Pages to the Open Elements Website
 
+For first-time contributors, start with the docs hub first:
+
+- [Repository Docs Hub](docs/README.md)
+- [Content Folder Guide](docs/02-content-folder.md)
+
 This guide explains how to add new pages to the Open Elements website, using the [dlt-lecture](https://open-elements.com/dlt-lecture/) page as a reference example.
 
 ## Overview

@@ -93,5 +93,6 @@ Netlify builds run `pnpm install` and `pnpm run build` (see `netlify.toml`).
 
 ## Documentation
 
+- **[Docs Hub](docs/README.md)** - First stop for contributors (repo overview, content guide, first contribution checklist, automation)
 - **[Adding New Pages Guide](ADDING_PAGES.md)** - Complete guide on how to add new pages with EN/DE versions, including image handling and layout options
 
