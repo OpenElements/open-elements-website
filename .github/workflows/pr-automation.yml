@@ -2,7 +2,7 @@ name: PR Automation
 
 on:
   pull_request:
-    types: [opened, reopened, ready_for_review, synchronize]
+    types: [opened, reopened, ready_for_review, synchronize, review_request_removed]
 
 permissions:
   pull-requests: write
@@ -44,6 +44,34 @@ jobs:
             
             core.setOutput('labels', Array.from(labels).join(','));
 
+      - name: Enforce reviewers config edit policy
+        uses: actions/github-script@v7
+        env:
+          MAINTAINER_ALLOWLIST: ${{ vars.MAINTAINER_ALLOWLIST }}
+        with:
+          script: |
+            const allowlist = (process.env.MAINTAINER_ALLOWLIST || '')
+              .split(',')
+              .map(v => v.trim().toLowerCase())
+              .filter(Boolean);
+            const actor = context.actor.toLowerCase();
+            const owner = context.repo.owner.toLowerCase();
+            const isMaintainer = allowlist.includes(actor) || actor === owner;
+
+            if (isMaintainer) return;
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100
+            });
+
+            const changed = files.map(f => f.filename);
+            if (changed.includes('.github/reviewers.json')) {
+              core.setFailed('Only maintainers may modify .github/reviewers.json');
+            }
+
       - name: Auto-label PR
         if: steps.files.outputs.labels != ''
         uses: actions/github-script@v7
@@ -74,6 +102,8 @@ jobs:
 
       - name: Auto-request reviewers from JSON config
         uses: actions/github-script@v7
+        env:
+          MAINTAINER_ALLOWLIST: ${{ vars.MAINTAINER_ALLOWLIST }}
         with:
           script: |
             const fs = require('fs');
@@ -103,6 +133,13 @@ jobs:
 
             const defaultReviewers = Array.isArray(config.default_reviewers) ? config.default_reviewers : [];
             const pathRules = Array.isArray(config.path_reviewers) ? config.path_reviewers : [];
+            const allowlist = (process.env.MAINTAINER_ALLOWLIST || '')
+              .split(',')
+              .map(v => v.trim().toLowerCase())
+              .filter(Boolean);
+            const actor = context.actor.toLowerCase();
+            const ownerLower = context.repo.owner.toLowerCase();
+            const actorIsMaintainer = allowlist.includes(actor) || actor === ownerLower;
 
             const files = await github.paginate(github.rest.pulls.listFiles, {
               owner: context.repo.owner,
@@ -137,6 +174,18 @@ jobs:
               .filter(r => r !== author)
               .filter(r => !alreadyRequested.has(r))
               .slice(0, 15);
+
+            const action = context.payload.action;
+            const shouldEnforce = ['opened', 'reopened', 'ready_for_review', 'review_request_removed'].includes(action);
+            if (!shouldEnforce) {
+              core.info(`Skipping reviewer enforcement on action: ${action}`);
+              return;
+            }
+
+            if (action === 'review_request_removed' && actorIsMaintainer) {
+              core.info('Maintainer removed reviewer; skipping re-request.');
+              return;
+            }
 
             if (reviewers.length === 0) {
               core.info('No new reviewers to request.');
