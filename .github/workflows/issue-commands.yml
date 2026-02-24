@@ -1,0 +1,265 @@
+name: Issue Command Automation
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  handle-issue-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse and handle issue commands
+        uses: actions/github-script@v7
+        with:
+          script: |
+            if (context.payload.issue.pull_request) return;
+
+            const comment = context.payload.comment.body.trim();
+            const actor = context.payload.sender.login;
+            const issue_number = context.payload.issue.number;
+            const repo_owner = context.repo.owner;
+            const repo_name = context.repo.repo;
+            const issue_labels = context.payload.issue.labels.map(l => l.name);
+
+            // Config variables
+            const FRONTEND_TEAM = (process.env.FRONTEND_TEAM || '').split(',').map(u => u.trim()).filter(Boolean);
+            const BACKEND_TEAM = (process.env.BACKEND_TEAM || '').split(',').map(u => u.trim()).filter(Boolean);
+            const ASSIGN_ALLOWLIST = (process.env.ASSIGN_ALLOWLIST || '').split(',').map(u => u.trim()).filter(Boolean);
+            const MAINTAINER_ALLOWLIST = (process.env.MAINTAINER_ALLOWLIST || '').split(',').map(u => u.trim()).filter(Boolean);
+            const WORKING_LABEL = (process.env.WORKING_LABEL || 'in progress').trim();
+
+            // Command parsing
+            const assignMatch = comment.match(/^\/assign(?:\s+@?(\w[\w-]+))?$/);
+            const unassignMatch = comment.match(/^\/unassign(?:\s+@?(\w[\w-]+))?$/);
+            const workingMatch = comment.match(/^\/working$/);
+            if (!assignMatch && !unassignMatch && !workingMatch) return;
+
+            const assignees = context.payload.issue.assignees.map(a => a.login);
+            const toSet = list => new Set(list.map(v => v.toLowerCase()));
+            const assigneeSet = toSet(assignees);
+            const maintainerSet = toSet(MAINTAINER_ALLOWLIST);
+            const actorIsMaintainer = maintainerSet.has(actor.toLowerCase());
+
+            async function upsertWorkingMarker(timestampIso) {
+              const marker = `[bot-working:${timestampIso}]`;
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                owner: repo_owner,
+                repo: repo_name,
+                issue_number,
+                per_page: 100
+              });
+              const existing = comments.find(c =>
+                c.user?.login === 'github-actions[bot]' &&
+                /\[bot-working:[^\]]+\]/.test(c.body || '')
+              );
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner: repo_owner,
+                  repo: repo_name,
+                  comment_id: existing.id,
+                  body: marker
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner: repo_owner,
+                  repo: repo_name,
+                  issue_number,
+                  body: marker
+                });
+              }
+            }
+
+            async function addReaction(content) {
+              await github.rest.reactions.createForIssueComment({
+                comment_id: context.payload.comment.id,
+                owner: repo_owner,
+                repo: repo_name,
+                content
+              });
+            }
+
+            async function commentIssue(body) {
+              await github.rest.issues.createComment({
+                issue_number,
+                owner: repo_owner,
+                repo: repo_name,
+                body
+              });
+            }
+
+            if (workingMatch) {
+              const actorIsAssigned = assigneeSet.has(actor.toLowerCase());
+              if (!actorIsAssigned && !actorIsMaintainer) {
+                await addReaction('confused');
+                await commentIssue('Only a current assignee (or maintainer allowlist member) can use `/working`.');
+                return;
+              }
+
+              if (!issue_labels.some(l => l.toLowerCase() === WORKING_LABEL.toLowerCase())) {
+                await github.rest.issues.addLabels({
+                  issue_number,
+                  owner: repo_owner,
+                  repo: repo_name,
+                  labels: [WORKING_LABEL]
+                });
+              }
+
+              const nowIso = new Date().toISOString();
+              await upsertWorkingMarker(nowIso);
+              await addReaction('rocket');
+              await commentIssue(`Marked as actively worked on by @${actor}.`);
+              return;
+            }
+
+            // Assignment rules
+            const allowedLabels = ['ready', 'help wanted', 'good first issue', 'available'];
+            const restrictedLabels = ['security', 'private'];
+            const frontendLabel = 'frontend';
+            const backendLabel = 'backend';
+
+            // Helper: check org membership
+            async function isOrgMember(username) {
+              try {
+                const res = await github.rest.orgs.checkMembershipForUser({
+                  org: repo_owner,
+                  username
+                });
+                return res.status === 204;
+              } catch (e) {
+                return false;
+              }
+            }
+
+            // Helper: check collaborator
+            async function isCollaborator(username) {
+              try {
+                const res = await github.rest.repos.checkCollaborator({
+                  owner: repo_owner,
+                  repo: repo_name,
+                  username
+                });
+                return res.status === 204;
+              } catch (e) {
+                return false;
+              }
+            }
+
+            // Determine target user
+            let targetUser = actor;
+            if (assignMatch && assignMatch[1]) targetUser = assignMatch[1];
+            if (unassignMatch && unassignMatch[1]) targetUser = unassignMatch[1];
+
+            // Assignment restrictions
+            if (assignMatch) {
+              // Blocked labels
+              const blockedLabels = ['blocked', 'do-not-assign', 'needs-triage'];
+              if (issue_labels.some(l => blockedLabels.includes(l))) {
+                await commentIssue('Cannot assign: blocked label present.');
+                return;
+              }
+
+              // Only allow self-assignment if allowed label present
+              if (targetUser === actor && !issue_labels.some(l => allowedLabels.includes(l))) {
+                await commentIssue('Cannot self-assign until label help wanted, ready, available, or good first issue is applied.');
+                return;
+              }
+              // Restricted labels
+              if (issue_labels.some(l => restrictedLabels.includes(l))) {
+                if (!ASSIGN_ALLOWLIST.includes(targetUser)) {
+                  const isMember = await isOrgMember(targetUser);
+                  const isCollab = await isCollaborator(targetUser);
+                  if (!isMember && !isCollab) {
+                    await commentIssue('Assignment restricted: only org members, collaborators, or allowlisted users may be assigned.');
+                    return;
+                  }
+                }
+              }
+              // Frontend label
+              if (issue_labels.includes(frontendLabel) && !FRONTEND_TEAM.includes(targetUser)) {
+                await commentIssue('Assignment restricted: only frontend team members may be assigned.');
+                return;
+              }
+              // Backend label
+              if (issue_labels.includes(backendLabel) && !BACKEND_TEAM.includes(targetUser)) {
+                await commentIssue('Assignment restricted: only backend team members may be assigned.');
+                return;
+              }
+              // Already assigned?
+              if (assignees.includes(targetUser)) {
+                await commentIssue(`Already assigned to @${targetUser}.`);
+                return;
+              }
+              // Assign
+              try {
+                await github.rest.issues.addAssignees({
+                  issue_number,
+                  owner: repo_owner,
+                  repo: repo_name,
+                  assignees: [targetUser]
+                });
+                await addReaction('rocket');
+                await commentIssue(`Assigned to @${targetUser}.`);
+              } catch (e) {
+                await commentIssue(`Assignment failed: ${e.message}`);
+              }
+              return;
+            }
+
+            // Unassign
+            if (unassignMatch) {
+              if (targetUser !== actor && !actorIsMaintainer) {
+                await addReaction('confused');
+                await commentIssue('You may only unassign yourself unless you are in `MAINTAINER_ALLOWLIST`.');
+                return;
+              }
+
+              if (!assignees.includes(targetUser)) {
+                await commentIssue(`@${targetUser} is not assigned.`);
+                return;
+              }
+              try {
+                await github.rest.issues.removeAssignees({
+                  issue_number,
+                  owner: repo_owner,
+                  repo: repo_name,
+                  assignees: [targetUser]
+                });
+                const refreshed = await github.rest.issues.get({
+                  owner: repo_owner,
+                  repo: repo_name,
+                  issue_number
+                });
+                const remaining = refreshed.data.assignees?.length || 0;
+                if (remaining === 0 && issue_labels.some(l => l.toLowerCase() === WORKING_LABEL.toLowerCase())) {
+                  try {
+                    await github.rest.issues.removeLabel({
+                      owner: repo_owner,
+                      repo: repo_name,
+                      issue_number,
+                      name: WORKING_LABEL
+                    });
+                  } catch (err) {
+                    if (err.status !== 404) throw err;
+                  }
+                }
+
+                await addReaction('eyes');
+                if (remaining === 0) {
+                  await commentIssue(`Unassigned @${targetUser}. This issue is now available for others to assign.`);
+                } else {
+                  await commentIssue(`Unassigned @${targetUser}.`);
+                }
+              } catch (e) {
+                await commentIssue(`Unassignment failed: ${e.message}`);
+              }
+            }
+        env:
+          FRONTEND_TEAM: ${{ vars.FRONTEND_TEAM }}
+          BACKEND_TEAM: ${{ vars.BACKEND_TEAM }}
+          ASSIGN_ALLOWLIST: ${{ vars.ASSIGN_ALLOWLIST }}
+          MAINTAINER_ALLOWLIST: ${{ vars.MAINTAINER_ALLOWLIST }}
+          WORKING_LABEL: ${{ vars.WORKING_LABEL }}
