@@ -25,18 +25,20 @@ export default function BlogPagination({ currentPage, totalPages, locale }: Blog
   const visiblePages = getVisiblePages();
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-12">
+    <div className="flex items-center justify-center gap-7 mt-12">
       {/* Previous Button */}
       {currentPage > 1 ? (
         <Link
           href={`${localePath}/posts?page=${currentPage - 1}`}
-          className="px-4 py-2 text-sm font-medium text-blue bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple transition-colors"
+          className="inline-flex items-center justify-center text-white bg-purple-700 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link"
         >
-          {locale === 'de' ? 'Zurück' : 'Previous'}
+          <span className="sr-only">{locale === 'de' ? 'Zurück' : 'Previous'}</span>
+          <svg className="size-5 -ml-0.5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
         </Link>
       ) : (
-        <span className="px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">
-          {locale === 'de' ? 'Zurück' : 'Previous'}
+        <span className="inline-flex items-center justify-center text-white bg-purple-100 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link cursor-not-allowed">
+          <span className="sr-only">{locale === 'de' ? 'Zurück' : 'Previous'}</span>
+          <svg className="size-5 -ml-0.5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
         </span>
       )}
 
@@ -60,7 +62,7 @@ export default function BlogPagination({ currentPage, totalPages, locale }: Blog
         page === currentPage ? (
           <span
             key={page}
-            className="px-4 py-2 text-sm font-medium bg-purple text-white rounded-lg shadow-md"
+            className="inline-flex items-center justify-center size-11 text-white rounded-full bg-green font-medium text-sm page-link"
           >
             {page}
           </span>
@@ -68,7 +70,7 @@ export default function BlogPagination({ currentPage, totalPages, locale }: Blog
           <Link
             key={page}
             href={`${localePath}/posts?page=${page}`}
-            className="px-4 py-2 text-sm font-medium text-blue bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple transition-colors"
+            className="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px] page-link"
           >
             {page}
           </Link>
@@ -79,7 +81,7 @@ export default function BlogPagination({ currentPage, totalPages, locale }: Blog
       {visiblePages[visiblePages.length - 1] < totalPages && (
         <>
           {visiblePages[visiblePages.length - 1] < totalPages - 1 && (
-            <span className="px-2 text-gray-400">...</span>
+            <span className="inline-flex items-center justify-center w-5 h-11 text-blue rounded-full font-medium text-[14px] page-link">...</span>
           )}
           <Link
             href={`${localePath}/posts?page=${totalPages}`}
@@ -94,13 +96,15 @@ export default function BlogPagination({ currentPage, totalPages, locale }: Blog
       {currentPage < totalPages ? (
         <Link
           href={`${localePath}/posts?page=${currentPage + 1}`}
-          className="px-4 py-2 text-sm font-medium text-blue bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple transition-colors"
+          className="inline-flex items-center justify-center text-white bg-purple-700 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link"
         >
-          {locale === 'de' ? 'Weiter' : 'Next'}
+          <span className="sr-only">{locale === 'de' ? 'Weiter' : 'Next'}</span>
+          <svg className="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </Link>
       ) : (
-        <span className="px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">
-          {locale === 'de' ? 'Weiter' : 'Next'}
+        <span className="inline-flex items-center justify-center text-white bg-purple-100 rounded-full sm:w-16 sm:h-16 w-11 h-11 text-whit shrink-0 page-link cursor-not-allowed">
+          <span className="sr-only">{locale === 'de' ? 'Weiter' : 'Next'}</span>
+          <svg className="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg>
         </span>
       )}
     </div>

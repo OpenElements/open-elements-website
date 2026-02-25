@@ -50,7 +50,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
       <Image
         src="/illustrations/blog-arrow.svg"
         alt=""
-        className="absolute w-32 sm:w-64 2xl:w-96 lg:w-80 2xl:left-32 xl:left-9 lg:top-36 sm:top-28 top-12 shrink-0"
+        className="absolute w-32 sm:w-64 2xl:w-96 lg:w-80  xl:left-9 lg:top-36 sm:top-28 top-12 shrink-0"
         width={384}
         height={100}
       />

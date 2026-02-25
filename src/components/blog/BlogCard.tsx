@@ -67,7 +67,7 @@ export default function BlogCard({ post, locale = 'en' }: BlogCardProps) {
                   <h2 className="text-lg font-bold text-center transition-colors duration-150 ease-in-out text-blue sm:text-left sm:line-clamp-none line-clamp-2 group-hover:text-purple-700">
                     {post.title}
                   </h2>
-                  <p className="text-sm leading-[22px] text-blue line-clamp-3">
+                  <p className="text-sm leading-5.5 text-blue line-clamp-3">
                     {post.excerpt}
                   </p>
                 </div>
