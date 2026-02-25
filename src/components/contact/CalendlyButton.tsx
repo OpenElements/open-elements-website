@@ -12,7 +12,7 @@ export default function CalendlyButton() {
   }
 
   return (
-    <div className="max-w-[1080px] w-full pt-3 mx-auto">
+    <div className="max-w-270 w-full pt-3 mx-auto">
       <div className="bg-sky-100 rounded-[28px] border-2 border-dashed border-sky p-6 w-full flex flex-col items-center justify-center text-center">
         <p>
           {t('description')}

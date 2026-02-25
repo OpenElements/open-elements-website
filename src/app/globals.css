@@ -93,9 +93,14 @@
     background-color: var(--color-white);
   } */
 
-  p {
+  /* p {
     padding-top: 0.8em;
+  } */
+
+  .prose > iframe{
+    @apply w-full xl:min-h-103.5 lg:min-h-130 md:min-h-96 sm:min-h-81 h-46
   }
+
 }
 
 @layer utilities {

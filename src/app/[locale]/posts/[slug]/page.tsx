@@ -106,10 +106,10 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div className="">
-      <div className="container w-full max-w-screen-2xl">
+      <div className="container w-full max-w-7xl">
         <div className="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
           <div className="relative flex flex-col items-center justify-center w-full">
-            <h1 className="text-center h1 text-4xl sm:text-5xl lg:text-6xl">{post.frontmatter.title}</h1>
+            <h1 className="text-center h1">{post.frontmatter.title}</h1>
             <Image
               src="/illustrations/underline.svg"
               alt={locale === 'de' ? 'Unterstrich' : 'Underline'}
@@ -122,9 +122,9 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
 
       <div className="lg:pb-48 sm:pb-32 pb-28">
-        <div className="container mt-12 w-full max-w-screen-2xl">
-          <div className="flex flex-col xl:flex-row gap-12 xl:gap-8">
-            <div className="flex-1 w-full space-y-8">
+        <div className="container mt-12 w-full">
+          <div className="flex flex-col-reverse xl:flex-row gap-12 xl:gap-8">
+            <div className="space-y-8">
               <div className="space-y-6 sm:space-y-5">
                 <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                   <div className="flex items-center gap-2 text-purple">
@@ -135,9 +135,9 @@ export default async function PostPage({ params }: PostPageProps) {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <time className="text-lg font-medium">{formattedDate}</time>
+                    <time className="text-base font-medium">{formattedDate}</time>
                   </div>
-                  <div className="flex items-center gap-2 text-purple">
+                  <div className="flex items-center gap-2 text-purple hover:text-purple-700 group">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                       <path
                         fillRule="evenodd"
@@ -146,15 +146,15 @@ export default async function PostPage({ params }: PostPageProps) {
                       />
                     </svg>
                     {author?.link ? (
-                      <Link href={author.link} className="text-lg font-medium text-blue hover:text-purple transition-colors">
+                      <Link href={author.link} className="text-lg font-medium text-purple group-hover:text-purple-700 transition-colors">
                         {authorName}
                       </Link>
                     ) : (
-                      <span className="text-lg font-medium">{authorName}</span>
+                      <span className="text-base font-medium">{authorName}</span>
                     )}
                   </div>
                 </div>
-                <div className="flex flex-wrap items-center gap-4 mt-4 text-sm sm:text-base sm:mt-3 text-purple">
+                <div className="flex flex-wrap items-center gap-4 mt-4 text-sm sm:text-sm sm:mt-3 text-purple">
                   {post.frontmatter.categories?.map((category, index) => (
                     <p key={index}>#{category}</p>
                   ))}
@@ -176,8 +176,7 @@ export default async function PostPage({ params }: PostPageProps) {
               )}
 
               <div
-                className="text-blue prose prose-lg prose-a:text-purple-700 prose-code:bg-yellow prose-p:text-lg prose-p:leading-8 prose-blockquote:border-l-0 prose-blockquote:bg-green-100 prose-blockquote:not-italic prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:rounded-3xl relative"
-                style={{ maxWidth: '100%' }}
+                className="text-blue sm:prose-base prose prose-sm prose-pre:prose-code:text-sm prose-ul:marker:text-blue prose-a:text-purple-700 prose-pre:prose-code:bg-transparent prose-code:bg-yellow prose-p:sm:leading-7 prose-blockquote:border-l-0 prose-blockquote:bg-green-100 prose-blockquote:not-italic prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:rounded-3xl relative"
                 dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
               />
             </div>
@@ -186,18 +185,17 @@ export default async function PostPage({ params }: PostPageProps) {
               <aside className="w-full xl:max-w-sm shrink-0">
                 <div className="rounded-[30px] w-full shadow-4 bg-white xl:p-5 p-4 xl:block md:flex lg:items-center">
                   {author.picture && (
-                    <div className="relative lg:w-40 md:w-48 sm:w-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 overflow-hidden rounded-3xl bg-gray-100 xl:float-left md:float-none float-left xl:mr-6 mr-4">
+                    <div className="relative lg:size-40 md:size-44 sm:size-36 size-28 shrink-0 overflow-hidden rounded-3xl bg-gray-100 xl:float-left md:float-none float-left xl:mr-6 mr-4">
                       <Image
                         src={author.picture}
                         alt={authorName}
                         fill
-                        sizes="(max-width: 640px) 112px, (max-width: 1024px) 160px, 192px"
-                        className="object-cover"
+                        className="object-cover sm:size-28 xl:size-40 md:size-56"
                       />
                     </div>
                   )}
                   <div>
-                    <h4 className="mb-2 text-xl font-bold">
+                    <h4 className="mb-2 text-lg font-bold">
                       {author.link ? (
                         <Link href={author.link} className="hover:text-purple transition-colors">
                           {authorName}
@@ -207,7 +205,7 @@ export default async function PostPage({ params }: PostPageProps) {
                       )}
                     </h4>
                     {author.bio && (
-                      <p className="text-base leading-7">
+                      <p className="text-sm leading-6 text-blue">
                         {author.bio}
                       </p>
                     )}
