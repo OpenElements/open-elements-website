@@ -1,0 +1,7 @@
+---
+- id: support-care-maven
+  name: "Support and Care for Apache Maven"
+  description: "Support and Care for Apache Maven is a project that aims to improve the support and care for the Apache Maven project."
+  link: https://open-elements.com/support-care-maven/
+  source: https://github.com/support-and-care
+  logo: support-care-maven.svg
