@@ -1,6 +1,6 @@
 <!-- Begin Brevo Form -->
 <!-- START - We recommend to place the below code in head tag of your website html  -->
-<style>
+<!-- <style>
   @font-face {
     font-display: block;
     font-family: Roboto;
@@ -43,15 +43,14 @@
     text-decoration: underline;
     color: #2BB2FC;
   }
-</style>
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+</style> -->
+<!-- <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> -->
 <!--  END - We recommend to place the above code in head tag of your website html -->
 
 <!-- START - We recommend to place the below code where you want the form in your website html  -->
-<div class="sib-form" style="text-align: center;
-         background-color: transparent;                                 ">
+<div class="sib-form">
     <div id="sib-form-container" class="sib-form-container">
-        <div id="error-message" class="sib-form-message-panel"
+        <!-- <div id="error-message" class="sib-form-message-panel"
              style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
             <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                 <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
@@ -62,9 +61,9 @@
                           Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.
                       </span>
             </div>
-        </div>
+        </div> -->
         <div></div>
-        <div id="success-message" class="sib-form-message-panel"
+        <!-- <div id="success-message" class="sib-form-message-panel"
              style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
             <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                 <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
@@ -75,38 +74,31 @@
                           Deine Anmeldung war erfolgreich.
                       </span>
             </div>
-        </div>
+        </div> -->
         <div></div>
-        <div id="sib-container" class="sib-container--large sib-container--vertical"
-             style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+        <div id="sib-container" class="sib-container--large sib-container--vertical ">
             <form id="sib-form" method="POST"
                   action="https://83f3e12d.sibforms.com/serve/MUIFAB9sPNc3vI_F5JWU2bS-86BYNSqnfAE1iEffv9m5QAMla1vDwNMH018M6CMOEAayrpPErJwxgmRV2HONP5VCeXqpiRm9pE9PDqyKvT9-mdLefQARE-ZzgPXXqqRU6WUay4AjAXyo3QVaUkuLKJ8Uwi51A4s__AYJERdqu88aZC1bL5ot2NJzfX9lu3oTNSgY6hHDVqr04aOS"
                   data-type="subscription">
-                <div style="padding: 8px 0;">
+                <!-- <div style="padding: 8px 0;">
                     <div class="sib-form-block"
                          style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
                         <div class="sib-text-form-block">
                             <p>Melde dich zu unserem Newsletter an, um auf dem Laufenden zu bleiben.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div style="padding: 8px 0;">
                     <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
-                                <label class="entry__label"
-                                       style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;"
-                                       for="VORNAME">Gib dein(e) VORNAME ein</label>
-
+                                <label class="entry__label text-blue sm:text-base text-sm font-medium inline-block sm:ml-4 ml-3 mb-0.5" for="VORNAME">Gib dein(e) VORNAME ein</label>
                                 <div class="entry__field">
-                                    <input class="input " maxlength="200" type="text" id="VORNAME" name="VORNAME"
+                                    <input class="input border border-purple rounded-full sm:text-base text-sm sm:px-6 px-5 py-3 w-full focus:border-purple-700 focus:ring-0 focus:outline-none" maxlength="200" type="text" id="VORNAME" name="VORNAME"
                                            autocomplete="off" placeholder="VORNAME"/>
                                 </div>
                             </div>
-
-                            <label class="entry__error entry__error--primary"
-                                   style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                            </label>
+                            <label class="entry__error entry__error--primary text-xs text-rose"></label>
                         </div>
                     </div>
                 </div>
@@ -114,19 +106,13 @@
                     <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
-                                <label class="entry__label"
-                                       style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;"
-                                       for="NACHNAME">Gib dein(e) NACHNAME ein</label>
-
+                                <label class="entry__label text-blue sm:text-base text-sm font-medium inline-block sm:ml-4 ml-3 mb-0.5" for="NACHNAME">Gib dein(e) NACHNAME ein</label>
                                 <div class="entry__field">
-                                    <input class="input " maxlength="200" type="text" id="NACHNAME" name="NACHNAME"
+                                    <input class="input border border-purple rounded-full sm:px-6 px-5 py-3 sm:text-base text-sm w-full focus:border-purple-700 focus:ring-0 focus:outline-none" maxlength="200" type="text" id="NACHNAME" name="NACHNAME"
                                            autocomplete="off" placeholder="NACHNAME"/>
                                 </div>
                             </div>
-
-                            <label class="entry__error entry__error--primary"
-                                   style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                            </label>
+                            <label class="entry__error entry__error--primary text-rose text-xs"></label>
                         </div>
                     </div>
                 </div>
@@ -134,44 +120,35 @@
                     <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
-                                <label class="entry__label"
-                                       style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;"
-                                       for="EMAIL" data-required="*">Gib deine E-Mail-Adresse ein, um dich
-                                    anzumelden</label>
-
+                                <label class="entry__label text-blue SM:text-base text-sm font-medium inline-block sm:ml-4 ml-3 mb-0.5" for="EMAIL" data-required="*">Gib deine E-Mail-Adresse ein, um dich anzumelden</label>
                                 <div class="entry__field">
-                                    <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
-                                           placeholder="EMAIL" data-required="true" required/>
+                                    <input class="input border border-purple rounded-full sm:px-6 px-5 py-3 sm:text-base text-sm w-full focus:border-purple-700 focus:ring-0 focus:outline-none" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required/>
                                 </div>
                             </div>
 
                             <label class="entry__error entry__error--primary"
                                    style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
                             </label>
-                            <label class="entry__specification"
-                                   style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
+                            <label class="entry__specification text-sm sm:ml-5 ml-4 mt-3 inline-block">
                                 Gib bitte deine E-Mail-Adresse für die Anmeldung an, z. B. abc@xyz.com.
                             </label>
                         </div>
                     </div>
                 </div>
-                <div style="padding: 8px 0;">
+                <div style="padding: 8px 0;" class="">
                     <div class="sib-form-block" style="text-align: left">
-                        <button class="sib-form-block__button sib-form-block__button-with-loader"
-                                style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;"
+                        <button class="sib-form-block__button sib-form-block__button-with-loader flex items-center justify-center gap-3 bg-purple hover:bg-purple-700 rounded-full font-bold text-white w-full py-2.5 text-center"
                                 form="sib-form" type="submit">
-                            <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
-                                 viewBox="0 0 512 512" style="">
-                                <path
-                                  d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
+                            <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon animate-spin size-5 text-white fill-current" viewBox="0 0 512 512">
+                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
                             </svg>
                             ANMELDEN
                         </button>
                     </div>
                 </div>
                 <div style="padding: 8px 0;">
-                    <div class="sib-form__declaration" style="direction:ltr">
-                        <div class="declaration-block-icon">
+                    <div class="sib-form__declaration flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-1 sm:mt-0 mt-5">
+                        <div class="declaration-block-icon sm:size-16 size-14 shrink-0">
                             <svg class="icon__SVG" width="0" height="0" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <defs>
@@ -182,22 +159,19 @@
                                     </symbol>
                                 </defs>
                             </svg>
-                            <svg class="svgIcon-sphere" style="width:63px; height:63px;">
+                            <svg class="svgIcon-sphere w-full h-full">
                                 <use xlink:href="#svgIcon-sphere"></use>
                             </svg>
                         </div>
-                        <div
-                          style="font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#687484; background-color:transparent;">
-                            <p>Wir verwenden Brevo als unsere Marketing-Plattform. Indem du das Formular absendest,
-                                erklärst du dich einverstanden, dass die von dir angegebenen persönlichen Informationen
-                                an Brevo zur Bearbeitung übertragen werden gemäß den <a
-                                  href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank">Datenschutzrichtlinien
-                                    von Brevo.</a></p>
-                        </div>
+                        <p class="text-blue sm:text-sm text-xs leading-6">Wir verwenden Brevo als unsere Marketing-Plattform. Indem du das Formular absendest,
+                            erklärst du dich einverstanden, dass die von dir angegebenen persönlichen Informationen
+                            an Brevo zur Bearbeitung übertragen werden gemäß den 
+                            <a href="https://www.brevo.com/de/legal/privacypolicy/" class="text-purple-700 font-medium underline" target="_blank">Datenschutzrichtlinien von Brevo.</a>
+                        </p>
                     </div>
                 </div>
 
-                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="text" name="email_address_check" value="" class="input--hidden hidden">
                 <input type="hidden" name="locale" value="de">
             </form>
         </div>
