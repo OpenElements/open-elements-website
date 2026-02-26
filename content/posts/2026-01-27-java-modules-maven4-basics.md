@@ -261,7 +261,7 @@ If you take a close look at the Maven output and the resulting target directory 
 You may try to package the application as a JAR file and run it from there by executing `./mvnw package` (a JAR file will appear in the `target` folder).
 What do you observe when trying to run the JAR file by replacing the `target/classes` path with the JAR file path in the `--module-path` argument?
 
-We will address both issues in one of the next articles.
+We address both issues in the [follow-up homework article]({{< relref "posts/2026-02-26-java-modules-maven4-basics-homework" >}}).
 
 ---
 
