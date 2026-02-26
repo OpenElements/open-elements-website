@@ -6,7 +6,7 @@ date: 2026-02-26
 author: noah
 excerpt: "Initializer for Apache Maven™ uses Maveniverse Toolbox for programmatic Maven project generation. This post explains why we chose it and how it helps with version resolution and POM editing."
 categories: [open-source, support-and-care, maven]
-preview_image: "static/posts/preview-images/build-pink.svg"
+preview_image: "/posts/preview-images/build-pink.svg"
 ---
 
 # Using Maveniverse Toolbox in Initializer for Apache Maven™
