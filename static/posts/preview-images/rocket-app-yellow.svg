@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1080 1081" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <rect id="_01_Java-Variant-1_Yellow" serif:id="01_Java Variant 1_Yellow" x="0" y="0.26" width="1080" height="1080" style="fill:none;"/>
+    <g>
+        <clipPath id="_clip1">
+            <rect x="0" y="0.26" width="1080" height="1080"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="Background">
+                <rect x="0" y="0.26" width="1080" height="1080" style="fill:rgb(252,249,218);"/>
+            </g>
+            <g transform="matrix(0.488662,0,0,0.488662,531.742,515.405)">
+                <g transform="matrix(1,0,0,1,-1250.5,-1250.5)">
+                    <rect id="_05-software-launch" serif:id="05-software-launch" x="0.158" y="0.46" width="2500" height="2500" style="fill:none;"/>
+                    <g>
+                        <rect x="429.351" y="953.787" width="1641.61" height="1121.64" style="fill:white;stroke:black;stroke-width:16.67px;"/>
+                        <rect x="429.351" y="953.787" width="1641.61" height="152.482" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="570.773" cy="1030.03" r="25.751" style="fill:rgb(187,23,86);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="688.308" cy="1030.03" r="25.751" style="fill:rgb(241,227,75);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="805.843" cy="1030.03" r="25.751" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                    </g>
+                    <g>
+                        <path d="M1415.86,1435.72C1388.23,1399.7 1363.73,1361.17 1342.76,1320.52C1305.71,1248.73 1279.69,1170.34 1266.91,1087.61C1260.99,1049.25 1257.92,1009.95 1257.92,969.938C1257.92,759.444 1342.98,568.659 1480.56,430.108C1604.95,555.366 1686.4,723.316 1700.89,909.925C1702.42,929.729 1703.21,949.743 1703.21,969.938C1703.21,1073.07 1682.79,1171.47 1645.78,1261.31C1619.93,1324.05 1586,1382.62 1545.27,1435.72" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1648.64,685.605C1601.59,698.708 1552.01,705.713 1500.81,705.713C1436.41,705.713 1374.58,694.633 1317.13,674.277" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1691.57,1103.63C1773.15,1199.66 1822.39,1324.01 1822.39,1459.76C1822.39,1481.16 1821.16,1502.27 1818.78,1523.04" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1125.55,1523.04C1123.17,1502.28 1121.95,1481.16 1121.95,1459.76C1121.95,1316.33 1176.91,1185.63 1266.92,1087.61M1125.55,1523.04C1123.17,1502.28 1121.95,1481.16 1121.95,1459.76C1121.95,1316.33 1176.91,1185.63 1266.92,1087.61" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1614.7,1327.55C1698.49,1373.92 1768.94,1441.51 1818.78,1523.04" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1125.55,1523.04C1177.97,1437.29 1253.19,1366.96 1342.76,1320.52M1125.55,1523.04C1177.97,1437.29 1253.19,1366.96 1342.76,1320.52" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="1472.16" cy="969.937" r="86.686" style="fill:rgb(93,185,245);stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1415.86,1579.51L1415.86,1421.78L1545.27,1421.78L1545.27,1579.51" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1264.13,1676.24L1264.13,1649.83C1264.13,1631.18 1271.54,1613.3 1284.73,1600.11C1297.91,1586.92 1315.8,1579.51 1334.45,1579.51L1415.86,1579.51M1545.27,1579.51L1626.68,1579.51C1645.33,1579.51 1663.22,1586.92 1676.41,1600.11C1689.6,1613.3 1697,1631.18 1697,1649.83L1697,1676.24" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1697,1676.24L1746.15,1676.24C1764.8,1676.24 1782.69,1683.65 1795.87,1696.84C1809.06,1710.02 1816.47,1727.91 1816.47,1746.56" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1144.66,1746.56C1144.66,1727.91 1152.07,1710.02 1165.26,1696.84C1178.44,1683.65 1196.33,1676.24 1214.98,1676.24L1264.13,1676.24" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="1264.13" cy="1795.89" r="49.335" style="fill:rgb(93,185,245);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="1402.85" cy="1860" r="34.567" style="fill:rgb(3,2,111);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="1697" cy="1845.23" r="49.335" style="fill:rgb(93,185,245);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="1545.27" cy="1700.38" r="72.507" style="fill:rgb(93,185,245);stroke:black;stroke-width:16.67px;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
