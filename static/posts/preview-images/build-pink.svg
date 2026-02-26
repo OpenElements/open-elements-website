@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1081 1081" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <rect id="_04_Community_Pink" serif:id="04_Community_Pink" x="0.786" y="0.513" width="1080" height="1080" style="fill:none;"/>
+    <g>
+        <clipPath id="_clip1">
+            <rect x="0.786" y="0.513" width="1080" height="1080"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="Background">
+                <rect x="0.786" y="0.513" width="1080" height="1080" style="fill:rgb(250,214,228);"/>
+            </g>
+            <g transform="matrix(0.476603,0,0,0.476603,565.58,526.572)">
+                <g transform="matrix(1,0,0,1,-1250.5,-1250.5)">
+                    <rect id="_07-builidng-software" serif:id="07-builidng-software" x="0.604" y="0.739" width="2500" height="2500" style="fill:none;"/>
+                    <g>
+                        <path d="M1116.14,1281.6L343.909,1281.6" style="fill:none;stroke:rgb(62,146,121);stroke-width:16.67px;"/>
+                        <path d="M929.647,837.768L929.647,1462.51" style="fill:none;stroke:rgb(62,146,121);stroke-width:16.67px;"/>
+                        <path d="M1116.14,1053.35L343.909,1053.35" style="fill:none;stroke:rgb(62,146,121);stroke-width:16.67px;"/>
+                        <path d="M725.813,837.768L725.813,1462.51" style="fill:none;stroke:rgb(62,146,121);stroke-width:16.67px;"/>
+                        <path d="M527.372,837.768L527.372,1462.51" style="fill:none;stroke:rgb(62,146,121);stroke-width:16.67px;"/>
+                        <path d="M344.13,838.238L344.13,500.695L1736.98,500.695L1736.98,1452.36L1118.07,1452.36L1118.07,838.238L344.13,838.238Z" style="fill:white;stroke:black;stroke-width:16.67px;"/>
+                        <rect x="344.13" y="500.695" width="1392.85" height="129.375" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="464.121" cy="565.382" r="21.849" style="fill:rgb(187,23,86);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="563.845" cy="565.382" r="21.849" style="fill:rgb(241,227,75);stroke:black;stroke-width:16.67px;"/>
+                        <circle cx="663.569" cy="565.382" r="21.849" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                    </g>
+                    <g>
+                        <path d="M1259.55,1036.81L2146.19,1923.45L2066.35,2003.29L1179.71,1116.65L1259.55,1036.81Z" style="fill:rgb(158,213,249);stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1579.2,949.855L1655.45,1026.11L1190.13,1491.42L1040.44,1341.73L1377.65,1004.52C1435.51,1023.04 1513.1,1002.89 1579.2,949.855" style="fill:rgb(36,150,239);stroke:black;stroke-width:16.67px;"/>
+                    </g>
+                    <g>
+                        <path d="M2120.3,1047.61C2154.81,1082.12 2154.81,1138.07 2120.3,1172.58C1933.09,1359.79 1389.64,1903.23 1389.64,1903.23L1224.55,1738.14C1224.55,1738.14 1768,1194.69 1955.21,1007.49C1989.72,972.978 2045.67,972.978 2080.18,1007.49C2093.31,1020.62 2107.17,1034.48 2120.3,1047.61Z" style="fill:white;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1157.89,1931.51C1154.13,1942.43 1156.92,1954.53 1165.08,1962.7C1173.25,1970.86 1185.36,1973.65 1196.27,1969.89C1270.71,1944.23 1389.65,1903.23 1389.65,1903.23L1224.55,1738.14C1224.55,1738.14 1183.55,1857.07 1157.89,1931.51Z" style="fill:rgb(93,185,245);stroke:black;stroke-width:16.67px;"/>
+                        <path d="M2057.79,1235.09L2011.48,1281.4L1846.39,1116.31L1892.7,1070L2057.79,1235.09Z" style="fill:rgb(93,185,245);stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1742.87,1322.72L1276,1789.59" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                        <path d="M1805.07,1384.92L1338.2,1851.79" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
