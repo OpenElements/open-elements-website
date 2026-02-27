@@ -1,4 +1,4 @@
-# 04 - First Contribution Checklist
+# 05 - First Contribution Checklist
 
 ## Purpose and Scope
 
@@ -438,4 +438,4 @@ git push origin fix/issue-123-description
 - **Stuck on implementation?** → Check [01 - Repository Overview](./01-repo-overview.md)
 - **Content structure unclear?** → See [02 - Content Folder Guide](./02-content-folder.md)
 - **Adding a new page?** → Follow [03 - Adding Pages](./03-adding-pages.md)
-- **Build or test failures?** → Check [05 - Testing and Quality Checks](./05-testing-and-quality-checks.md)
+- **Build or test failures?** → Check [06 - Testing and Quality Checks](./06-testing-and-quality-checks.md)

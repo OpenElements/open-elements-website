@@ -1,4 +1,4 @@
-# 06 - GitHub Automation Guide
+# 07 - GitHub Automation Guide
 
 ## Purpose and Scope
 
@@ -159,7 +159,7 @@ Welcome to your first contribution! Here's what you need to know:
 1. Start with: docs/README.md → "Getting Started"
 2. Next, read: docs/01-repo-overview.md
 3. For implementation help: see docs/03-adding-pages.md
-4. Before submitting PR: review docs/04-first-contribution-checklist.md
+4. Before submitting PR: review docs/05-first-contribution-checklist.md
 
 Questions? Ask here in the issue - maintainers are happy to help!
 ```
@@ -410,7 +410,7 @@ If you need to modify workflow behavior:
    - Ensure JSON is valid
 
 3. **Update this documentation**:
-   - In the same PR, update this file (06-github-automation.md)
+   - In the same PR, update this file (07-github-automation.md)
    - Explain what changed and why
    - Give examples if behavior is user-visible
 
