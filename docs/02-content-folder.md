@@ -72,6 +72,8 @@ content/posts/
 
 **Usage**: Blog articles, release notes, announcements
 
+For a complete, post-specific workflow (including front matter and link conventions), see [07 - Adding Blog Posts](./07-adding-blog-post.md).
+
 ### Pattern 3: Version Updates CHANGELOG
 
 Release notes and version updates use semantic versioning for organization.
@@ -117,21 +119,26 @@ Every markdown file begins with YAML front matter enclosed by `---` delimiters. 
 
 ### Common Front Matter Fields
 
-| Field | Type | Purpose | Example |
-|-------|------|---------|---------|
-| `title` | String | Page title displayed in browser tab and page header | `"Getting Started with Open Elements"` |
-| `description` | String | SEO description for search results and social sharing | `"Learn how to set up and use Open Elements in your projects"` |
-| `layout` | String | Template/layout used for rendering (defines page structure) | `"article"`, `"page"`, `"post"` |
-| `url` | String | URL path for the page (must match routing structure) | `"/getting-started"` or `"/de/getting-started"` |
-| `keywords` | Array | SEO keywords for search optimization | `["open-elements", "tutorial", "setup"]` |
-| `aliases` | Array | Alternative URLs that redirect to this page (for migrations) | `["/old-path", "/another-path"]` |
-| `date` | String | Publication or creation date in YYYY-MM-DD format | `"2024-02-25"` |
-| `author` | String | Content author name (for blog posts) | `"John Smith"` |
-| `newsletterPopup` | Boolean | Whether to show newsletter signup popup | `true` or `false` |
+Different content types use different metadata shapes.
 
-### Minimum Required Front Matter
+| Field | Type | Primary Use | Example |
+|-------|------|-------------|---------|
+| `title` | String | Pages and posts | `"Getting Started with Open Elements"` |
+| `description` | String | Standard pages (SEO) | `"Learn how to set up and use Open Elements"` |
+| `layout` | String | Standard pages | `"article"`, `"single"`, `"contact"` |
+| `url` | String | Standard pages only | `"/getting-started"` or `"/de/getting-started"` |
+| `keywords` | Array | Standard pages (optional SEO) | `["open-elements", "tutorial", "setup"]` |
+| `aliases` | Array | Standard pages redirects | `["/old-path", "/another-path"]` |
+| `newsletterPopup` | Boolean | Standard pages where needed | `true` or `false` |
+| `date` | String | Blog posts (publication date) | `"2024-02-25"` |
+| `author` | String | Blog posts (team id) | `"hendrik"` |
+| `excerpt` | String | Blog posts (listing/meta summary) | `"Short preview for cards"` |
+| `categories` | Array | Blog posts (tags) | `["open-source", "maven"]` |
+| `preview_image` | String | Blog posts card/OG image | `"/posts/preview-images/open-source-green.svg"` |
+| `showInBlog` | Boolean | Blog posts visibility filter | `true` or `false` |
+| `outdated` | Boolean | Blog posts visibility filter | `false` |
 
-Every content file must include these fields at minimum:
+### Minimum Required Front Matter for Standard Pages
 
 ```yaml
 ---
@@ -142,39 +149,54 @@ url: "/page-slug"
 ---
 ```
 
-### Front Matter Best Practices
+### Minimum Required Front Matter for Blog Posts
 
-- **Title**: Keep it concise (50-60 characters), clear, and descriptive
-- **Description**: Write for search engines (160 characters max), include key terms
-- **URL**: Must match the actual route and locale prefix (`/de/...` for German)
-- **Keywords**: Use 3-7 relevant keywords, separated by commas in array format
-- **Dates**: Use ISO 8601 format (YYYY-MM-DD) for consistency
-
-### Example Front Matter
-
-**English Blog Post:**
 ```yaml
 ---
+outdated: false
+showInBlog: true
 title: "How to Build Scalable Java Applications"
-description: "Discover best practices and patterns for building scalable Java applications in production environments"
-layout: "post"
-url: "/blog/scalable-java"
-keywords: ["java", "scalability", "performance", "architecture"]
-author: "Jane Developer"
-date: "2024-02-25"
+date: 2024-02-25
+author: hendrik
+excerpt: "Discover best practices and patterns for scalable Java applications."
+categories: [java, scalability, performance, architecture]
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 ```
 
-**German Translation of Same Post:**
+### Front Matter Best Practices
+
+- **Title**: Keep it concise (50-60 characters), clear, and descriptive
+- **Description**: Use on standard pages for SEO metadata (150-160 characters)
+- **URL**: Use on standard pages only; must match route and locale prefix for German (`/de/...`)
+- **Dates**: Use ISO 8601 format (`YYYY-MM-DD`) for posts
+- **Author IDs**: Use team ids that exist in `src/data/en/team.json` and `src/data/de/team.json`
+- **Post Images**: Use web paths (for example `/posts/...`), never filesystem paths
+
+### Example Front Matter
+
+**Standard Page (EN):**
 ```yaml
 ---
-title: "Skalierbare Java-Anwendungen entwickeln"
-description: "Entdecken Sie Best Practices und Muster für die Entwicklung skalierbarer Java-Anwendungen in Produktionsumgebungen"
-layout: "post"
-url: "/de/blog/skalierbare-java"
-keywords: ["java", "skalierbarkeit", "performance", "architektur"]
-author: "Jane Developer"
-date: "2024-02-25"
+title: "Frequently Asked Questions"
+description: "Find answers to common questions about Open Elements."
+layout: "article"
+url: "/faq"
+keywords: ["faq", "help", "support"]
+---
+```
+
+**Blog Post (EN):**
+```yaml
+---
+outdated: false
+showInBlog: true
+title: "How to Build Scalable Java Applications"
+date: 2024-02-25
+author: hendrik
+excerpt: "Discover best practices and patterns for scalable Java applications."
+categories: [java, scalability, performance, architecture]
+preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 ```
 
@@ -208,14 +230,15 @@ content/posts/
 ### Parity Requirements
 
 **User-Facing Pages**
-- Pages visible to end users must maintain structural parityBetween English and German
+- Pages visible to end users must maintain structural parity between English and German
 - Both language versions must exist before merging the PR
 - Update simultaneous in the same PR rather than separate PRs
 
 **Content Structure Parity**
-- Headings, section organization should match between EN and DE versions
-- Same media (images, etc.) referenced in both versions
-- Front matter structure identical except for `url` (includes `/de/` prefix) and translated `title`/`description`
+- Headings and section organization should match between EN and DE versions
+- Same media (images, etc.) should generally be referenced in both versions
+- For standard pages: front matter structure is identical except localized `title`/`description` and `url` with `/de/` prefix
+- For blog posts: front matter fields should stay aligned across locales while keeping translated text in `title` and `excerpt`
 
 **When Single-Language Content is Acceptable**
 - Technical documentation or release notes specifically for developers
@@ -229,7 +252,7 @@ When translating content from English to German:
 1. **Maintain Meaning**: Preserve semantic meaning even if literal translation doesn't fit
 2. **Preserve Formatting**: Keep heading levels, lists, code blocks identical
 3. **Terminology**: Use consistent terminology across all German content
-4. **Links**: Update internal links to use German routing (`/de/...`)
+4. **Links**: Update internal links to use German routing (`/de/...` for standard pages, `/de/posts/...` for blog posts)
 5. **Date Format**: Adapt date formatting if appropriate for German audience
 
 ## URL and SEO Configuration
@@ -238,11 +261,11 @@ When translating content from English to German:
 
 **English URLs:**
 - Start with `/` immediately (no locale prefix)
-- Examples: `/about`, `/blog/post-title`, `/contact`
+- Examples: `/about`, `/posts/2024-02-25-post-title`, `/contact`
 
 **German URLs:**
 - Include `/de/` at the beginning
-- Examples: `/de/about`, `/de/blog/post-title`, `/de/kontakt`
+- Examples: `/de/about`, `/de/posts/2024-02-25-post-title`, `/de/kontakt`
 
 ### URL Naming Rules
 
@@ -251,18 +274,22 @@ When translating content from English to German:
    - If a URL change is necessary, implement 301 redirects or use `aliases` in front matter
 
 2. **Consistency**: Use lowercase letters and hyphens (kebab-case)
-   - ✅ `/blog/new-release`
-   - ❌ `/blog/New_Release`
-   - ❌ `/blog/NewRelease`
+   - ✅ `/posts/2024-02-25-new-release`
+   - ❌ `/posts/2024-02-25-New_Release`
+   - ❌ `/posts/2024-02-25-NewRelease`
 
 3. **Descriptiveness**: URLs should indicate content topic
-   - ✅ `/blog/performance-optimization-tips`
-   - ❌ `/blog/post-123`
-   - ❌ `/blog/article-1`
+   - ✅ `/posts/2024-02-25-performance-optimization-tips`
+   - ❌ `/posts/2024-02-25-post-123`
+   - ❌ `/posts/2024-02-25-article-1`
 
-4. **Front Matter URL Field**: Must exactly match the route structure
-   - English: `"url": "/blog/my-post"`
-   - German: `"url": "/de/blog/my-post"`
+4. **Front Matter URL Field (Standard Pages Only)**: Must exactly match the route structure
+   - English page: `"url": "/about"`
+   - German page: `"url": "/de/about"`
+
+5. **Blog Post URL Source**: URL is derived from filename
+   - English file: `content/posts/2024-02-25-my-post.md` -> `/posts/2024-02-25-my-post`
+   - German file: `content/posts/2024-02-25-my-post.de.md` -> `/de/posts/2024-02-25-my-post`
 
 ### SEO Best Practices
 
@@ -363,7 +390,7 @@ When referencing assets in markdown or JSX, use **web paths only** (not filesyst
 | Mistake | ❌ Wrong | ✅ Right | Impact |
 |---------|---------|---------|--------|
 | Asset path with `public/` | `![](/public/img.png)` | `![](/img.png)` | Assets won't load |
-| Wrong URL in front matter | `url: "/about"` (EN) | `url: "/de/about"` (DE) | Broken routing for German version |
+| Wrong localized page URL in front matter | `url: "/about"` in `index.de.md` | `url: "/de/about"` in `index.de.md` | Broken routing for German version |
 | Inconsistent heading hierarchy | Skip from H2 to H4 | H2 → H3 → H4 | SEO and accessibility issues |
 | Inconsistent filename patterns | Mix `.md` and `.en.md` | Use `.md` and `.de.md` consistently | Localization breaks |
 | Removing old aliases | Delete `aliases` field | Keep for backward compatibility | Broken external links and SEO loss |
@@ -389,14 +416,16 @@ Before submitting a pull request with content changes, systematically verify eac
 
 - [ ] **Front Matter**: 
   - YAML is syntactically valid (no indentation errors)
-  - All required fields present: `title`, `description`, `layout`, `url`
-  - `url` field exactly matches the route structure
+  - Standard pages include required fields: `title`, `description`, `layout`, `url`
+  - Blog posts include required fields: `title`, `date`, `author`, `excerpt`, `categories`, `preview_image`
+  - If blog post visibility is intentional, `showInBlog` and `outdated` are set correctly
 
 - [ ] **Localization Parity**:
-  - Both English and German versions exist
+  - Standard pages: both English and German versions exist
+  - Blog posts: German translation is added when user-facing and intended for DE listing
   - Content is structurally similar between language versions
-  - `url` fields differ only in `/de/` prefix
-  - Titles and descriptions are properly translated
+  - Standard page `url` fields differ only in `/de/` prefix
+  - Localized text fields are translated (`title`, `description` for pages; `title`, `excerpt` for posts)
 
 - [ ] **SEO Optimization**:
   - `title`: 50-60 characters, descriptive, includes keyword

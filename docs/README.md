@@ -24,6 +24,7 @@ The following guides provide structured information organized by topic and use c
 | [04 - First Contribution Checklist](./04-first-contribution-checklist.md) | Pre-submission validation checklist ensuring code quality, documentation completeness, and testing coverage | All contributors |
 | [05 - Testing and Quality Checks](./05-testing-and-quality-checks.md) | Comprehensive guide to automated testing, linting, build validation, and quality assurance procedures | Developers, QA reviewers |
 | [06 - GitHub Automation Guide](./06-github-automation.md) | Documentation of automated workflows, CI/CD processes, and GitHub Actions behavior | Maintainers, advanced contributors |
+| [07 - Adding Blog Posts](./07-adding-blog-post.md) | Dedicated workflow for post creation in `content/posts/`, including front matter, URL rules, and linking conventions | Content contributors, editors |
 
 ## Getting Started: Recommended Reading Path
 
@@ -46,7 +47,12 @@ To successfully onboard and make your first contribution, please follow this rea
    - Learn the integration pattern between content and routing
    - Understand asset management
 
-4. **[04 - First Contribution Checklist](./04-first-contribution-checklist.md)** (5 min)
+4. **[07 - Adding Blog Posts](./07-adding-blog-post.md)** (5 min, when working on posts)
+   - Learn the post-specific filename and front matter schema
+   - Follow `/posts/...` routing conventions and linking rules
+   - Avoid common metadata and visibility mistakes
+
+5. **[04 - First Contribution Checklist](./04-first-contribution-checklist.md)** (5 min)
    - Validate your work before submitting a pull request
    - Ensure all quality gates are met
    - Review PR submission requirements
@@ -57,6 +63,7 @@ Consult these documents as needed while actively developing:
 
 - **[05 - Testing and Quality Checks](./05-testing-and-quality-checks.md)** - When running validation commands or debugging test failures
 - **[06 - GitHub Automation Guide](./06-github-automation.md)** - When troubleshooting CI failures or understanding review workflows
+- **[07 - Adding Blog Posts](./07-adding-blog-post.md)** - When adding or translating any file in `content/posts/`
 
 ## Local Development Environment
 
@@ -180,8 +187,9 @@ All documentation updates must:
 
 1. Follow [02 - Content Folder Guide](./02-content-folder.md) for content structure
 2. Study [03 - Adding Pages](./03-adding-pages.md) if adding new pages
-3. Verify quality with the validation commands
-4. Reference [04 - First Contribution Checklist](./04-first-contribution-checklist.md) when ready to submit
+3. Use [07 - Adding Blog Posts](./07-adding-blog-post.md) for any blog/article work in `content/posts/`
+4. Verify quality with the validation commands
+5. Reference [04 - First Contribution Checklist](./04-first-contribution-checklist.md) when ready to submit
 
 ### Implementing a Feature
 
@@ -196,6 +204,7 @@ All documentation updates must:
 - **Build or test failures?** → Consult [05 - Testing and Quality Checks](./05-testing-and-quality-checks.md)
 - **Unsure about automation behavior?** → Review [06 - GitHub Automation Guide](./06-github-automation.md)
 - **Need help with page structure?** → Check [03 - Adding Pages](./03-adding-pages.md) or [02 - Content Folder Guide](./02-content-folder.md)
+- **Need help with post metadata or `/posts/...` links?** → Check [07 - Adding Blog Posts](./07-adding-blog-post.md)
 - **Repository questions?** → See [01 - Repository Overview](./01-repo-overview.md) for architecture and structure details
 
 ## Additional Resources
