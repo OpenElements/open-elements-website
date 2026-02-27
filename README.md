@@ -92,6 +92,6 @@ Netlify builds run `pnpm install` and `pnpm run build` (see `netlify.toml`).
 ## Documentation
 
 - **[Docs Hub](docs/README.md)** - First stop for contributors (repository architecture, content workflows, quality checks)
-- **[Adding Blog Posts](docs/07-adding-blog-post.md)** - Post-specific workflow for `content/posts/`, front matter, and `/posts/...` linking conventions
+- **[Adding Blog Posts](docs/04-adding-blog-post.md)** - Post-specific workflow for `content/posts/`, front matter, and `/posts/...` linking conventions
 - **[Adding New Pages Guide](ADDING_PAGES.md)** - Legacy page-creation guide with EN/DE examples and image/layout notes
 

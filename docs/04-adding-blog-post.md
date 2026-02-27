@@ -1,4 +1,4 @@
-# 07 - Adding Blog Posts
+# 04 - Adding Blog Posts
 
 ## Purpose
 
@@ -112,5 +112,5 @@ Reference them with web paths:
 ## Related Docs
 
 - [02 - Content Folder Guide](./02-content-folder.md)
-- [04 - First Contribution Checklist](./04-first-contribution-checklist.md)
-- [05 - Testing and Quality Checks](./05-testing-and-quality-checks.md)
+- [05 - First Contribution Checklist](./05-first-contribution-checklist.md)
+- [06 - Testing and Quality Checks](./06-testing-and-quality-checks.md)

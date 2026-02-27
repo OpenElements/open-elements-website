@@ -9,11 +9,11 @@ This comprehensive guide walks you through the entire process of adding a new pa
 Before starting, ensure you're familiar with:
 - [01 - Repository Overview](./01-repo-overview.md): Project structure and technology stack
 - [02 - Content Folder Guide](./02-content-folder.md): Content organization, front matter standards, and localization
-- [07 - Adding Blog Posts](./07-adding-blog-post.md): Use this instead when your change is in `content/posts/`
+- [04 - Adding Blog Posts](./04-adding-blog-post.md): Use this instead when your change is in `content/posts/`
 - Basic Next.js App Router concepts (routes, layouts, page components)
 
 This guide is for standard pages (`content/<slug>/index.md` + route files).  
-For posts in `content/posts/`, follow [07 - Adding Blog Posts](./07-adding-blog-post.md).
+For posts in `content/posts/`, follow [04 - Adding Blog Posts](./04-adding-blog-post.md).
 
 ## Step-by-Step Implementation Workflow
 

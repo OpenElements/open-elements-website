@@ -72,7 +72,7 @@ content/posts/
 
 **Usage**: Blog articles, release notes, announcements
 
-For a complete, post-specific workflow (including front matter and link conventions), see [07 - Adding Blog Posts](./07-adding-blog-post.md).
+For a complete, post-specific workflow (including front matter and link conventions), see [04 - Adding Blog Posts](./04-adding-blog-post.md).
 
 ### Pattern 3: Version Updates CHANGELOG
 
