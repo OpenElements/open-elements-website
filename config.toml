@@ -28,3 +28,19 @@ unsafe = true
 posts = '/posts/:year/:month/:day/:slug/'
 [permalinks.section]
 posts = '/posts'
+
+[outputs]
+home = ["HTML", "RSS", "Atom"]
+page = ["HTML"]
+section = ["HTML", "RSS", "Atom"]
+
+[mediaTypes."application/atom+xml"]
+suffixes = ["xml"]
+
+[outputFormats.Atom]
+mediaType = "application/atom+xml"
+baseName = "atom"
+isPlainText = false
+
+[services.rss]
+limit = 20
