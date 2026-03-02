@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="bg-blue h-full w-full 2xl:block hidden"></div>
         <div className="w-full 2xl:shrink-0">
           <Image
-            className="hidden w-full mt-3 xl:mt-0 lg:block"
+            className="hidden w-full xl:mt-0 lg:block"
             src="/illustrations/home-bg-2.svg"
             alt="Hero background"
             width={2000}

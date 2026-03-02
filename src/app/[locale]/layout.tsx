@@ -75,7 +75,7 @@ export default async function LocaleLayout({
       <head>
         <link rel="icon" href="/icons/favicon.ico" />
       </head>
-      <body className={montserrat.className} suppressHydrationWarning>
+      <body className={`${montserrat.className} bg-blue`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <div id="top" className="relative overflow-x-clip bg-gray">
             <Navbar locale={locale} />
