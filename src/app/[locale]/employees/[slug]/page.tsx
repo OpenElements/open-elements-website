@@ -117,7 +117,6 @@ export default async function EmployeePage({
               priority
             />
           </div>
-
           <div className="w-full max-w-lg">
             <div>{member.bio}</div>
             {member.socials && member.socials.length > 0 ? (
