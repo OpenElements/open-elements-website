@@ -75,46 +75,63 @@ export default async function EmployeePage({
   }
 
   return (
-    <div className="container pt-56 sm:pt-64 lg:pt-72 pb-20 sm:pb-36">
-      <div className="mx-auto max-w-4xl">
-        <div className="flex md:flex-row flex-col items-center md:items-start gap-8 md:gap-10">
-          <div className="relative shrink-0">
+    <div className="relative">
+      <Image
+        className="absolute hidden lg:block lg:right-[15%] lg:top-[25%]"
+        alt="Circles"
+        src="/illustrations/circles.svg"
+        width={100}
+        height={100}
+      />
+      <Image
+        className="absolute hidden lg:block lg:right-[31%] lg:top-[25%]"
+        alt="Arrow"
+        src="/illustrations/arrow-dashed.svg"
+        width={100}
+        height={100}
+      />
+
+      <div className="container px-0 max-w-xs sm:max-w-full pt-56 sm:pt-64 lg:pt-72 pb-20 sm:pb-36">
+        <div className="pt-16 pb-4 sm:pt-36 sm:pb-12">
+          <h1 className="text-center h1">
+            {member.firstName} {member.lastName}
+          </h1>
+          <p className="text-center font-bold text-purple">{member.role}</p>
+        </div>
+
+        <div className="flex flex-col gap-8 items-center justify-center mb-16 lg:flex-row w-full">
+          <div className="relative flex items-center justify-center w-full max-w-md lg:w-1/2">
             <Image
-              className="size-60 sm:size-72 object-contain"
-              src="/illustrations/team-placeholder.svg"
-              alt=""
-              width={288}
-              height={288}
+              className="w-full max-w-md"
+              alt="background"
+              src="/illustrations/bg-employee.svg"
+              width={512}
+              height={512}
             />
             <Image
-              className="bottom-6 left-2.5 absolute rounded-full size-45 sm:size-54 object-cover"
+              className="xl:w-77.5 xl:h-77.5 lg:w-66.25 lg:h-66.25 sm:w-77.5 sm:h-77.5 w-48.75 h-48.75 border border-purple rounded-full object-cover absolute top-[17%] xl:right-[10%] lg:right-[10.5%] sm:right-[9%] right-[11%]"
+              alt="employee"
               src={member.picture}
-              alt={`${member.firstName} ${member.lastName}`}
-              width={216}
-              height={216}
+              width={310}
+              height={310}
               priority
             />
           </div>
 
-          <div className="flex-1">
-            <h1 className="h2 text-blue">
-              {member.firstName} <span className="text-sky">{member.lastName}</span>
-            </h1>
-            <p className="mt-2 font-bold text-purple text-base sm:text-lg">{member.role}</p>
-
-            <p className="mt-6 text-blue leading-relaxed">{member.bio}</p>
-
+          <div className="w-full max-w-lg">
+            <div>{member.bio}</div>
             {member.socials && member.socials.length > 0 ? (
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="flex items-center gap-5 mt-4">
                 {member.socials.map((social) => (
                   <a
                     key={social.name}
                     href={social.link}
+                    aria-label={social.name}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full border border-blue/20 px-4 py-2 text-sm font-semibold text-blue hover:text-purple hover:border-purple/40 transition-colors"
+                    className="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group focus:outline-none w-11 h-11 bg-sky"
                   >
-                    {social.name}
+                    <span className="iconify text-3xl" data-icon={social.icon}></span>
                   </a>
                 ))}
               </div>
