@@ -54,8 +54,10 @@ Hierdurch entsteht eine Fülle an Problemen:
   Grade diese zentralen und sicherheitskritischen Projekte werden aber auch as Ziel von sinnlos generierten AI Beiträgen, da die Personen hinter den AI Agents sich fälschlicherweise Prestige durch mögliche angenommene Beiträge in diesen Projekten erhoffen.
   Dazu kommt, dass Angriffe auf OSS Bibliotheken, wie im Fall von XZ, immer einfacher durchzuführen sind.
 - **Verzerrung der OSS-Indikatoren**, weil quantitative Metriken alleine nicht mehr aussagekräftig über tatsächliche Kompetenz oder Wert sind.
-- Durch immer mehr automatisch erstellte Beiträge an willkürlichen eigenen Projekten, wird das Bild von Accounts bei GitHub verzerrt.
-- Konnte man in der Vergangenheit durch einen Blick auf den GitHub Accounts eines potentiellen Contributors wichtige Informationen finde, so zerstört die Masse an sinnlosen Contributions jegliche Erkenntnis.
+  Durch immer mehr automatisch erstellte Beiträge an willkürlichen eigenen Projekten, wird das Bild von Accounts bei GitHub verzerrt.
+  Konnte man in der Vergangenheit durch einen Blick auf den GitHub Accounts eines potentiellen Contributors wichtige Informationen finde, so zerstört die Masse an sinnlosen Contributions jegliche Erkenntnis.
+
+{{< centered-image src="/posts/2026-03-05-oss-ai-slop/alone.svg" width="80%" alt="Einzelne Personen müssen die neue Last allein tragen">}}
 
 Solche Entwicklungen werden in der Community bereits als strukturelle Risiken diskutiert.
 Hierbei geht es nicht um einzelne Projekte, sondern um eine Gefahr für das gesamte OSS-Ökosystem.
@@ -99,3 +101,5 @@ Generative KI-Tools haben das Potenzial, Entwickler:innen zu unterstützen, Rout
 Gleichzeitig zeigt die Diskussion um AI-Slop, dass wir bewusst darauf achten müssen, Qualität über Quantität zu stellen, Review-Workflows zu stärken und Maintainer:innen echte Werkzeuge zur Entlastung zu geben.
 
 Durch alle diese verschiedenen Bemühungen bleibt Open Source auch in Zukunft offen, nachhaltig und menschlich.
+
+{{< centered-image src="/posts/2026-03-05-oss-ai-slop/oss-tree.svg" width="80%" alt="Personen arbeiten zusammen am Projekt">}}
