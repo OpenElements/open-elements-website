@@ -1,7 +1,7 @@
 ---
 outdated: false
 showInBlog: true
-title: "Wenn „Contribution“ zur Belastung wird – Wie Open Source auf ungewöhnliche Contribution-Muster reagiert"
+title: "Wenn „Contribution“ zur Belastung wird"
 date: 2026-03-05
 author: hendrik
 excerpt: "TODO"
