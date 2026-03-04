@@ -22,7 +22,7 @@ Diese Entwicklung ist kein theoretisches Problem: Viele Projekte stellen sich ak
 
 Ein konkretes Beispiel für ungewöhnliche Contribution-Muster zeigt ein GitHub-Account, der nach etwa sieben Jahren ohne nennenswerte Aktivität in kurzer Zeit tausende Commits erzeugte – darunter Aktivitäten an Wochenenden und in hoher Zahl, die teilweise automatisch generiert zu sein scheinen.
 
-BILD: GitHub Interaction Chart des Accounts
+{{< centered-image src="/posts/2026-03-05-oss-ai-slop/github-timeline.png" width="100%" showCaption=true alt="Contribution Timeline des Accounts auf GitHub">}}
 
 Bei oberflächlicher Betrachtung könnte ein unbedarfter Beobachter bei dieser Menge an Beiträgen denken:
 „Das ist ein sehr aktiver Entwickler.“
