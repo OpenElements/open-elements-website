@@ -28,7 +28,7 @@ Ein konkretes Beispiel für ungewöhnliche Contribution-Muster zeigt ein GitHub-
 
 Bei oberflächlicher Betrachtung könnte ein unbedarfter Beobachter bei dieser Menge an Beiträgen denken:
 „Das ist ein sehr aktiver Entwickler.“
-Doch bei näherer Betrachtung zeigt sich, dass viele dieser "Contributions" inhaltslos sind und selten echten Mehrwert liefern, wie man am Beispiel des automatischen und zyklischen Überschreibens von Temperaturdaten in einem persönlichen Repository sehen kann (https://github.com/ambicuity/Weather)
+Doch bei näherer Betrachtung zeigt sich, dass viele dieser "Contributions" inhaltslos sind und selten echten Mehrwert liefern, wie man am Beispiel des automatischen und zyklischen Überschreibens von Temperaturdaten in einer Text-Datei sehen kann (https://github.com/ambicuity/Weather).
 Vom selben Account werden immer wieder Beiträge in mehreren bekannten Open-Source-Projekten eingereicht. Hier ein paar Beispiele der letzten Vergangenheit:
 
 - In einem SDK des [Hiero Projektes](https://hiero.org) wurde ein Issue erstellt, in dem der Account beschreibt, dass er ein “white-box security and architectural review“ des Projektes durchgeführt hat und verschiedene Sicherheitslücken entdeckt hat: https://github.com/hiero-ledger/hiero-sdk-python/issues/1859
