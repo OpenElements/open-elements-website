@@ -17,7 +17,7 @@ Doch diese Offenheit bringt in Zeiten generativer KI neue Herausforderungen mit 
 
 
 Viele Projekte berichten aktuell, dass die Zahl von maschinell erstellten und wenig durchdachten Beiträgen (meist in Form von Pull-Requests) so stark gestiegen ist, dass Maintainer an ihre Grenzen kommen und traditionelle Review-Prozesse zunehmend ungeeignet sind.
-Beispielsweise berichten Teams wie die Maintainer des Godot-Projekts, dass sie täglich Dutzende solcher Beiträge erhalten, die zwar automatisch erzeugt wurden, aber meist nicht ausreichend geprüft oder sinnvoll sind.
+Beispielsweise berichten Teams wie die Maintainer des [Godot-Projekts](https://godotengine.org/de/), dass sie täglich Dutzende solcher Beiträge erhalten, die zwar automatisch erzeugt wurden, aber meist nicht ausreichend geprüft oder sinnvoll sind.
 Die Maintainer beschreiben den Review-Aufwand als „demoralizing“ und warnen, dass diese Last langfristig die Sicherstellung von Qualität und Sicherheit belastet (Quelle: https://www.pcgamer.com/software/platforms/open-source-game-engine-godot-is-drowning-in-ai-slop-code-contributions-i-dont-know-how-long-we-can-keep-it-up/).
 Diese Entwicklung ist kein theoretisches Problem: Viele Projekte stellen sich aktuell die Frage, wie sie mit einer steigenden Zahl von low-value, AI-gestützten Beiträgen umgehen sollen, ohne dabei legitime menschliche Contributions zu behindern.
 
@@ -32,9 +32,9 @@ Bei oberflächlicher Betrachtung könnte ein unbedarfter Beobachter bei dieser M
 Doch bei näherer Betrachtung zeigt sich, dass viele dieser “Contributions” inhaltslos sind und selten echten Mehrwert liefern, wie man am Beispiel des automatischen und zyklischen Überschreibens von Temperaturdaten in einem persönlichen Repository sehen kann (https://github.com/ambicuity/Weather)
 Vom selben Account werden immer wieder Beiträge in mehreren bekannten Open-Source-Projekten eingereicht. Hier ein paar Beispiele der letzten Vergangenheit:
 
-- In einem SDK des Hiero Projektes wurde ein Issue erstellt, in dem der Account beschreibt, dass er ein “white-box security and architectural review“ des Projektes durchgeführt hat und verschiedene Sicherheitslücken entdeckt hat: https://github.com/hiero-ledger/hiero-sdk-python/issues/1859
-- Ein Beitrag im zentralen Kubernetes-Repository in dem es um “dynamic gpu sharing“ geht: https://github.com/kubernetes/kubernetes/pull/137156
-- In dem aktuell in Social Media und AI Kreisen gehypten, aber aus Sicherheitsaspekten extrem kritisch und problematisch angesehen AI Projekt OpenClaw wurden versucht Code beizutragen: https://github.com/openclaw/openclaw/pull/22785
+- In einem SDK des [Hiero Projektes](https://hiero.org) wurde ein Issue erstellt, in dem der Account beschreibt, dass er ein “white-box security and architectural review“ des Projektes durchgeführt hat und verschiedene Sicherheitslücken entdeckt hat: https://github.com/hiero-ledger/hiero-sdk-python/issues/1859
+- Ein Beitrag im zentralen [Kubernetes-Repository](https://kubernetes.io) in dem es um “dynamic gpu sharing“ geht: https://github.com/kubernetes/kubernetes/pull/137156
+- In dem aktuell in Social Media und AI Kreisen gehypten, aber aus Sicherheitsaspekten extrem kritisch und problematisch angesehen AI Projekt [OpenClaw](https://openclaw.ai) wurden versucht Code beizutragen: https://github.com/openclaw/openclaw/pull/22785
 
 Diese Beispiele dienen hier nicht dazu, eine Person an den Pranger zu stellen, sondern zu zeigen, wie sich ungewöhnliche Contribution-Patterns manifestieren können, auch dort, wo Review-Qualität und Sicherheitsprozesse besonders wichtig sind.
 In den genannten Projekten wurden diese Beiträge nicht akzeptiert.
@@ -55,7 +55,7 @@ Hierdurch entsteht eine Fülle an Problemen:
 - **Risiko von Qualitäts- und Sicherheitsproblemen**, da Maintainer erschöpft sind und Fehler leichter übersehen werden können.
   Vorfälle wir Log4Shell zeigen, wie schnell ein Bug in einer zentralen OSS Library starke Auswirkungen für die gesamte Welt haben kann.
   Grade diese zentralen und sicherheitskritischen Projekte werden aber auch as Ziel von sinnlos generierten AI Beiträgen, da die Personen hinter den AI Agents sich fälschlicherweise Prestige durch mögliche angenommene Beiträge in diesen Projekten erhoffen.
-  Dazu kommt, dass Angriffe auf OSS Bibliotheken, wie im Fall von XZ, immer einfacher durchzuführen sind.
+  Dazu kommt, dass Angriffe auf OSS Bibliotheken, wie im Fall von [XZ](https://www.bsi.bund.de/SharedDocs/Cybersicherheitswarnungen/DE/2024/2024-223608-1032.pdf?__blob=publicationFile), immer einfacher durchzuführen sind.
 - **Verzerrung der OSS-Indikatoren**, weil quantitative Metriken alleine nicht mehr aussagekräftig über tatsächliche Kompetenz oder Wert sind.
   Durch immer mehr automatisch erstellte Beiträge an willkürlichen eigenen Projekten, wird das Bild von Accounts bei GitHub verzerrt.
   Konnte man in der Vergangenheit durch einen Blick auf den GitHub Accounts eines potentiellen Contributors wichtige Informationen finde, so zerstört die Masse an sinnlosen Contributions jegliche Erkenntnis.
@@ -75,7 +75,7 @@ Die OSS Community muss hier Best Practices teilen, damit Projekte gemeinsam lern
 
 Generell muss die Balance zwischen Mensch, Maschine und Automatismen neu betrachtet und wieder in Einklang gebracht werden.
 AI sollte nicht nur automatisch Beiträge erzeugen, sondern immer im Kontext menschlicher Nachvollziehbarkeit und Verantwortung genutzt werden.
-Richtig eingesetzt können und Tools wie GitHub Co-Pilot oder Claude Code wichtige Mehrwerte im Bereich OSS liefern.
+Richtig eingesetzt können und Tools wie [GitHub Co-Pilot](https://github.com/features/copilot) oder [Claude Code](https://code.claude.com/docs/de/overview) wichtige Mehrwerte im Bereich OSS liefern.
 Sie können Contributions verbessern und Reviews deutlich vereinfachen. Dafür muss allerdings auch ein Mind-Shift der Personen passieren, die aktuell durch Agenten die Community mit AI-Slop befeuern.
 Auch wenn Mentoring hier sicherlich ein gutes Mittel der Wahl wäre, darf es nicht wieder den Maintainer:innen der Projekte als Bürde auferlegt werden.
 AI Tools sind immernoch Tools die von einem Menschen bedient werden.
