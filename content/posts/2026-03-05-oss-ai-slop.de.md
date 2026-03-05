@@ -13,6 +13,9 @@ Open-Source-Software ist die Grundlage moderner Software-Ökosysteme.
 Freiwillige und aktive Kontributionen tragen dazu bei, Bibliotheken, Frameworks und Infrastrukturcode zu entwickeln, zu verbessern und langfristig zu pflegen.
 Doch diese Offenheit bringt in Zeiten generativer KI neue Herausforderungen mit sich.
 
+{{< centered-image src="/posts/2026-03-05-oss-ai-slop/small-tree.svg" width="80%" showCaption=true alt="Symbolbild Pflege von Open Source">}}
+
+
 Viele Projekte berichten aktuell, dass die Zahl von maschinell erstellten und wenig durchdachten Beiträgen (meist in Form von Pull-Requests) so stark gestiegen ist, dass Maintainer an ihre Grenzen kommen und traditionelle Review-Prozesse zunehmend ungeeignet sind.
 Beispielsweise berichten Teams wie die Maintainer des Godot-Projekts, dass sie täglich Dutzende solcher Beiträge erhalten, die zwar automatisch erzeugt wurden, aber meist nicht ausreichend geprüft oder sinnvoll sind.
 Die Maintainer beschreiben den Review-Aufwand als „demoralizing“ und warnen, dass diese Last langfristig die Sicherstellung von Qualität und Sicherheit belastet (Quelle: https://www.pcgamer.com/software/platforms/open-source-game-engine-godot-is-drowning-in-ai-slop-code-contributions-i-dont-know-how-long-we-can-keep-it-up/).
@@ -57,7 +60,8 @@ Hierdurch entsteht eine Fülle an Problemen:
   Durch immer mehr automatisch erstellte Beiträge an willkürlichen eigenen Projekten, wird das Bild von Accounts bei GitHub verzerrt.
   Konnte man in der Vergangenheit durch einen Blick auf den GitHub Accounts eines potentiellen Contributors wichtige Informationen finde, so zerstört die Masse an sinnlosen Contributions jegliche Erkenntnis.
 
-{{< centered-image src="/posts/2026-03-05-oss-ai-slop/alone.svg" width="80%" alt="Einzelne Personen müssen die neue Last allein tragen">}}
+{{< centered-image src="/posts/2026-03-05-oss-ai-slop/ai-slop.png" width="80%" alt="AI-Slop zerstört Projekte">}}
+
 
 Solche Entwicklungen werden in der Community bereits als strukturelle Risiken diskutiert.
 Hierbei geht es nicht um einzelne Projekte, sondern um eine Gefahr für das gesamte OSS-Ökosystem.
