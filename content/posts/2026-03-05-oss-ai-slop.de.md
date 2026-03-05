@@ -1,7 +1,7 @@
 ---
 outdated: false
 showInBlog: true
-title: "Wenn "Contributions" zur Belastung werden"
+title: "Wenn \"Contributions\" zur Belastung werden"
 date: 2026-03-05
 author: hendrik
 excerpt: "Generative KI verändert Open Source: Immer mehr automatisch erzeugte Pull Requests überlasten Maintainer und stellen Review-Prozesse vor neue Herausforderungen. Wie Projekte versuchen, Qualität und Offenheit trotz wachsender AI-Slop-Flut zu bewahren."
