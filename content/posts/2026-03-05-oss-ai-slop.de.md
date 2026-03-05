@@ -18,6 +18,7 @@ Doch diese Offenheit bringt in Zeiten generativer KI neue Herausforderungen mit 
 Viele Projekte berichten aktuell, dass die Zahl von maschinell erstellten und wenig durchdachten Beiträgen (meist in Form von Pull-Requests) so stark gestiegen ist, dass Maintainer an ihre Grenzen kommen und traditionelle Review-Prozesse zunehmend ungeeignet sind.
 Beispielsweise berichten Teams wie die Maintainer des [Godot-Projekts](https://godotengine.org/de/), dass sie täglich Dutzende solcher Beiträge erhalten, die zwar automatisch erzeugt wurden, aber meist nicht ausreichend geprüft oder sinnvoll sind.
 Die Maintainer beschreiben den Review-Aufwand als „demoralizing“ und warnen, dass diese Last langfristig die Sicherstellung von Qualität und Sicherheit belastet (Quelle: https://www.pcgamer.com/software/platforms/open-source-game-engine-godot-is-drowning-in-ai-slop-code-contributions-i-dont-know-how-long-we-can-keep-it-up/).
+
 Diese Entwicklung ist kein theoretisches Problem: Viele Projekte stellen sich aktuell die Frage, wie sie mit einer steigenden Zahl von low-value, AI-gestützten Beiträgen umgehen sollen, ohne dabei legitime menschliche Contributions zu behindern.
 
 ## Fallstudie: Ein ungewöhnlicher Beitragstrend im Kontext größerer Projekte
