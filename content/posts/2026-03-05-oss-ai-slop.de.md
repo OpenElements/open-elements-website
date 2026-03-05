@@ -1,20 +1,19 @@
 ---
 outdated: false
 showInBlog: true
-title: "Wenn „Contribution“ zur Belastung wird"
+title: "Wenn "Contributions" zur Belastung werden"
 date: 2026-03-05
 author: hendrik
-excerpt: "TODO"
-categories: [open-source]
-preview_image: "/posts/preview-images/open-source-green.svg"
+excerpt: "Generative KI verändert Open Source: Immer mehr automatisch erzeugte Pull Requests überlasten Maintainer und stellen Review-Prozesse vor neue Herausforderungen. Wie Projekte versuchen, Qualität und Offenheit trotz wachsender AI-Slop-Flut zu bewahren."
+categories: [open-source, ai]
+preview_image: "/posts/preview-images/ai-slop-yellow.svg"
 ---
 
 Open-Source-Software ist die Grundlage moderner Software-Ökosysteme.
 Freiwillige und aktive Kontributionen tragen dazu bei, Bibliotheken, Frameworks und Infrastrukturcode zu entwickeln, zu verbessern und langfristig zu pflegen.
 Doch diese Offenheit bringt in Zeiten generativer KI neue Herausforderungen mit sich.
 
-{{< centered-image src="/posts/2026-03-05-oss-ai-slop/small-tree.svg" width="80%" showCaption=true alt="Symbolbild Pflege von Open Source">}}
-
+{{< centered-image src="/posts/2026-03-05-oss-ai-slop/small-tree.svg" width="80%" alt="Symbolbild Pflege von Open Source">}}
 
 Viele Projekte berichten aktuell, dass die Zahl von maschinell erstellten und wenig durchdachten Beiträgen (meist in Form von Pull-Requests) so stark gestiegen ist, dass Maintainer an ihre Grenzen kommen und traditionelle Review-Prozesse zunehmend ungeeignet sind.
 Beispielsweise berichten Teams wie die Maintainer des [Godot-Projekts](https://godotengine.org/de/), dass sie täglich Dutzende solcher Beiträge erhalten, die zwar automatisch erzeugt wurden, aber meist nicht ausreichend geprüft oder sinnvoll sind.
@@ -29,7 +28,7 @@ Ein konkretes Beispiel für ungewöhnliche Contribution-Muster zeigt ein GitHub-
 
 Bei oberflächlicher Betrachtung könnte ein unbedarfter Beobachter bei dieser Menge an Beiträgen denken:
 „Das ist ein sehr aktiver Entwickler.“
-Doch bei näherer Betrachtung zeigt sich, dass viele dieser “Contributions” inhaltslos sind und selten echten Mehrwert liefern, wie man am Beispiel des automatischen und zyklischen Überschreibens von Temperaturdaten in einem persönlichen Repository sehen kann (https://github.com/ambicuity/Weather)
+Doch bei näherer Betrachtung zeigt sich, dass viele dieser "Contributions" inhaltslos sind und selten echten Mehrwert liefern, wie man am Beispiel des automatischen und zyklischen Überschreibens von Temperaturdaten in einem persönlichen Repository sehen kann (https://github.com/ambicuity/Weather)
 Vom selben Account werden immer wieder Beiträge in mehreren bekannten Open-Source-Projekten eingereicht. Hier ein paar Beispiele der letzten Vergangenheit:
 
 - In einem SDK des [Hiero Projektes](https://hiero.org) wurde ein Issue erstellt, in dem der Account beschreibt, dass er ein “white-box security and architectural review“ des Projektes durchgeführt hat und verschiedene Sicherheitslücken entdeckt hat: https://github.com/hiero-ledger/hiero-sdk-python/issues/1859
@@ -61,7 +60,6 @@ Hierdurch entsteht eine Fülle an Problemen:
   Konnte man in der Vergangenheit durch einen Blick auf den GitHub Accounts eines potentiellen Contributors wichtige Informationen finde, so zerstört die Masse an sinnlosen Contributions jegliche Erkenntnis.
 
 {{< centered-image src="/posts/2026-03-05-oss-ai-slop/ai-slop.png" width="80%" alt="AI-Slop zerstört Projekte">}}
-
 
 Solche Entwicklungen werden in der Community bereits als strukturelle Risiken diskutiert.
 Hierbei geht es nicht um einzelne Projekte, sondern um eine Gefahr für das gesamte OSS-Ökosystem.
