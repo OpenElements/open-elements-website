@@ -63,7 +63,7 @@ Hierdurch entsteht eine Fülle an Problemen:
 
 Solche Entwicklungen werden in der Community bereits als strukturelle Risiken diskutiert.
 Hierbei geht es nicht um einzelne Projekte, sondern um eine Gefahr für das gesamte OSS-Ökosystem.
-In der Community hat sich für diese große Anzahl von wenig hilfreichen oder automatisierten Beiträgen mittlerweile der Begriff AI-Slop etabliert.
+In der Community hat sich für diese große Anzahl von wenig hilfreichen oder automatisierten Beiträgen mittlerweile der Begriff **AI-Slop** etabliert.
 
 ## Wie OSS mit der Flut von Beiträgen umgehen kann
 
