@@ -84,23 +84,23 @@ export default async function EmployeePage({
         height={100}
       />
       <Image
-        className="absolute hidden lg:block lg:right-[31%] lg:top-[25%]"
+        className="absolute hidden lg:block lg:right-[31%] lg:top-[15%]"
         alt="Arrow"
         src="/illustrations/arrow-dashed.svg"
         width={100}
         height={100}
       />
 
-      <div className="container px-0 max-w-xs sm:max-w-full pt-56 sm:pt-64 lg:pt-72 pb-20 sm:pb-36">
-        <div className="pt-16 pb-4 sm:pt-36 sm:pb-12">
-          <h1 className="text-center h1">
+      <div className="container px-0 sm:max-w-full pt-16 pb-4 sm:pt-36 sm:pb-12 relative">
+        <div className="sm:mb-8 mb-4 lg:hidden">
+          <h1 className="text-center h2 sm:mb-2">
             {member.firstName} {member.lastName}
           </h1>
           <p className="text-center font-bold text-purple">{member.role}</p>
         </div>
 
-        <div className="flex flex-col gap-8 items-center justify-center mb-16 lg:flex-row w-full">
-          <div className="relative flex items-center justify-center w-full max-w-md lg:w-1/2">
+        <div className="flex flex-col sm:gap-8 gap-6 items-center justify-center mb-16 lg:flex-row w-full">
+          <div className="relative flex items-center justify-center w-full max-w-xs sm:max-w-md lg:w-1/2">
             <Image
               className="w-full max-w-md"
               alt="background"
@@ -109,7 +109,7 @@ export default async function EmployeePage({
               height={512}
             />
             <Image
-              className="xl:w-77.5 xl:h-77.5 lg:w-66.25 lg:h-66.25 sm:w-77.5 sm:h-77.5 w-48.75 h-48.75 border border-purple rounded-full object-cover absolute top-[17%] xl:right-[10%] lg:right-[10.5%] sm:right-[9%] right-[11%]"
+              className="xl:size-77 lg:size-66.25 sm:size-77 size-54 border border-purple rounded-full object-cover absolute top-[17%] xl:right-[10%] lg:right-[10.5%] sm:right-[9%] right-[11%]"
               alt="employee"
               src={member.picture}
               width={310}
@@ -117,10 +117,16 @@ export default async function EmployeePage({
               priority
             />
           </div>
-          <div className="w-full max-w-lg">
-            <div>{member.bio}</div>
+          <div className="w-full sm:max-w-lg lg:text-left text-center">
+            <div className="mb-4 lg:block hidden">
+              <h1 className="h2 mb-2">
+                {member.firstName} {member.lastName}
+              </h1>
+              <p className="font-bold text-purple">{member.role}</p>
+            </div>
+            <div className="text-base text-blue leading-7">{member.bio}</div>
             {member.socials && member.socials.length > 0 ? (
-              <div className="flex items-center gap-5 mt-4">
+              <div className="flex items-center lg:justify-start justify-center gap-2 mt-6">
                 {member.socials.map((social) => (
                   <a
                     key={social.name}
@@ -128,9 +134,9 @@ export default async function EmployeePage({
                     aria-label={social.name}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group focus:outline-none w-11 h-11 bg-sky"
+                    className="flex items-center justify-center transition-colors duration-150 ease-in-out rounded-full focus:outline-none size-9 shrink-0 bg-blue/90 hover:bg-purple-700"
                   >
-                    <span className="iconify text-3xl" data-icon={social.icon}></span>
+                    <span className="iconify text-xl text-white fill-current" data-icon={social.icon}></span>
                   </a>
                 ))}
               </div>
