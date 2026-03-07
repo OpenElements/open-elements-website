@@ -18,7 +18,7 @@ export default function TeamSection() {
           {t('title')} <span className="text-sky">{t('titleHighlight')}</span>
         </h2>
       </div>
-      <div className="place-content-center gap-x-6 gap-y-6 sm:gap-y-4 grid sm:grid-cols-3 mt-8 w-full">
+      <div className="place-content-center gap-x-6 gap-y-8 grid sm:grid-cols-3 mt-8 w-full">
         {visibleTeam.map((member) => (
           <TeamCard key={member.id} member={member} />
         ))}

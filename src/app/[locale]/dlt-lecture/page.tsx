@@ -74,12 +74,9 @@ export default async function DltLecturePage({ params }: DltLecturePageProps) {
 
       {/* Content Section */}
       <div className=" lg:pb-48 sm:pb-32 pb-28">
-        <div className="container mt-12 xl:max-w-1xl">
-          <div
-            className="text-blue prose prose-lg prose-a:text-purple-700 prose-code:bg-yellow prose-blockquote:border-l-0 prose-blockquote:bg-green-100 prose-blockquote:not-italic prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:rounded-3xl relative mx-auto"
-            style={{ maxWidth: '100%' }}
-          >
-            <p className="lead">
+        <div className="container mt-3 xl:max-w-6xl">
+          <div className="text-blue w-full max-w-none prose prose-a:text-purple-700 prose-code:bg-yellow prose-blockquote:border-l-0 prose-blockquote:bg-green-100 prose-blockquote:not-italic prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:rounded-3xl relative mx-auto">
+            <p className="">
               Seit 2023 bietet <Link href="/de/about-hendrik">Hendrik Ebbers</Link> die Vorlesung{' '}
               <strong>&quot;Distribution Ledger Technology und Digital Trust&quot;</strong> an.
               Aktuell wird die Vorlesung als Lehrauftrag an der{' '}
