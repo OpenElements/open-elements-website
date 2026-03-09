@@ -34,33 +34,36 @@ export interface PostData {
  */
 function getPostFilename(slug: string, locale: string): string | null {
   const files = fs.readdirSync(postsDirectory);
-  
+
   // For non-default locale (e.g., German), look for files with locale suffix
   if (locale !== 'en') {
     // Try to find a file with the locale suffix
-    const localeFile = files.find((file) => {
+    const localeFile = files.find(file => {
       const withoutExt = file.replace(/\.md$/, '');
-      return withoutExt.endsWith(`.${locale}`) && withoutExt.replace(`.${locale}`, '').endsWith(slug);
+      return (
+        withoutExt.endsWith(`.${locale}`) &&
+        withoutExt.replace(`.${locale}`, '').endsWith(slug)
+      );
     });
-    
+
     if (localeFile) return localeFile;
-    
+
     // Also check if the slug itself matches
-    const directMatch = files.find((file) => {
+    const directMatch = files.find(file => {
       const withoutLocaleExt = file.replace(`.${locale}.md`, '');
       return withoutLocaleExt === slug || file === `${slug}.${locale}.md`;
     });
-    
+
     if (directMatch) return directMatch;
   }
-  
+
   // For English or fallback, look for files without locale suffix
-  const englishFile = files.find((file) => {
+  const englishFile = files.find(file => {
     if (file.endsWith('.de.md')) return false; // Skip German files
     const withoutExt = file.replace(/\.md$/, '');
     return withoutExt.endsWith(slug) || withoutExt === slug;
   });
-  
+
   return englishFile || null;
 }
 
@@ -81,17 +84,17 @@ function extractSlugFromFilename(filename: string, locale: string): string {
  */
 export function getAllPosts(locale: string): PostData[] {
   const files = fs.readdirSync(postsDirectory);
-  
+
   const posts: PostData[] = [];
-  
+
   for (const filename of files) {
     // Skip non-markdown files
     if (!filename.endsWith('.md')) continue;
-    
+
     // Determine which posts to include based on locale
     const isLocaleFile = filename.endsWith(`.${locale}.md`);
     const isDefaultFile = !filename.includes('.de.md'); // No locale suffix = English
-    
+
     // For German locale, prefer .de.md files
     if (locale === 'de') {
       if (!isLocaleFile) continue; // Skip non-German files for German locale list
@@ -99,33 +102,28 @@ export function getAllPosts(locale: string): PostData[] {
       // For English, skip locale-specific files
       if (!isDefaultFile) continue;
     }
-    
+
     const slug = extractSlugFromFilename(filename, locale);
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    
+
     const frontmatter = data as PostFrontmatter;
-    
-    // Skip posts that shouldn't be shown in blog
-    if (frontmatter.showInBlog === false || frontmatter.outdated === true) {
-      continue;
-    }
-    
+
     posts.push({
       slug,
       frontmatter,
       content,
     });
   }
-  
+
   // Sort by date (newest first)
   posts.sort((a, b) => {
     const dateA = new Date(a.frontmatter.date);
     const dateB = new Date(b.frontmatter.date);
     return dateB.getTime() - dateA.getTime();
   });
-  
+
   return posts;
 }
 
@@ -135,21 +133,21 @@ export function getAllPosts(locale: string): PostData[] {
 export function getAllPostSlugs(): Array<{ locale: string; slug: string }> {
   const files = fs.readdirSync(postsDirectory);
   const slugs: Array<{ locale: string; slug: string }> = [];
-  
+
   for (const filename of files) {
     if (!filename.endsWith('.md')) continue;
-    
+
     // Parse file to check if it should be shown
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
     const frontmatter = data as PostFrontmatter;
-    
+
     // Skip hidden posts
     if (frontmatter.showInBlog === false || frontmatter.outdated === true) {
       continue;
     }
-    
+
     if (filename.endsWith('.de.md')) {
       // German post
       const slug = filename.replace('.de.md', '');
@@ -160,17 +158,20 @@ export function getAllPostSlugs(): Array<{ locale: string; slug: string }> {
       slugs.push({ locale: 'en', slug });
     }
   }
-  
+
   return slugs;
 }
 
 /**
  * Get a single post by slug and locale
  */
-export async function getPostBySlug(slug: string, locale: string): Promise<PostData | null> {
+export async function getPostBySlug(
+  slug: string,
+  locale: string,
+): Promise<PostData | null> {
   try {
     const filename = getPostFilename(slug, locale);
-    
+
     if (!filename) {
       // Fallback to English if locale-specific post doesn't exist
       if (locale !== 'en') {
@@ -178,18 +179,18 @@ export async function getPostBySlug(slug: string, locale: string): Promise<PostD
       }
       return null;
     }
-    
+
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    
+
     // Convert markdown to HTML
     const processedContent = await remark()
       .use(remarkHugoShortcodes)
       .use(html, { sanitize: false })
       .process(content);
     const contentHtml = processedContent.toString();
-    
+
     return {
       slug,
       frontmatter: data as PostFrontmatter,
