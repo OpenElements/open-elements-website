@@ -1,69 +1,29 @@
 import { NextResponse } from 'next/server';
-import { getAllPostSlugs } from '@/lib/markdown';
 import { routing } from '@/i18n/routing';
+import { headers } from 'next/headers';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://open-elements.com';
-
-const staticRoutes = [
-  '',           // home
-  'about',
-  'contact',
-  'impressum',
-  'posts',
-  'support-care',
-  'support-care-maven',
-  'updates'
-];
-
-function generateSitemap(): string {
+export async function GET(request: Request) {
+  const headersList = await headers();
+  const host = headersList.get('host') || 'localhost:3000';
+  const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
+  const baseUrl = `${protocol}://${host}`;
   const locales = routing.locales;
-  const allUrls: Array<{ loc: string; lastmod: string; changefreq: string; priority: string }> = [];
+  const lastmod = new Date().toISOString();
 
-  for (const locale of locales) {
-    for (const route of staticRoutes) {
-      const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-      const path = route ? `${localePrefix}/${route}` : localePrefix;
-      allUrls.push({
-        loc: `${BASE_URL}${path}`,
-        lastmod: new Date().toISOString(),
-        changefreq: route === '' ? 'daily' : 'weekly',
-        priority: route === '' ? '1.0' : '0.8'
-      });
-    }
-  }
+  const sitemaps = locales
+    .map(
+      locale =>
+        `<sitemap><loc>${baseUrl}/${locale}/sitemap.xml</loc><lastmod>${lastmod}</lastmod></sitemap>`,
+    )
+    .join('');
 
-  const postSlugs = getAllPostSlugs();
-  for (const { locale, slug } of postSlugs) {
-    const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-    allUrls.push({
-      loc: `${BASE_URL}${localePrefix}/posts/${slug}`,
-      lastmod: new Date().toISOString(),
-      changefreq: 'monthly',
-      priority: '0.7'
-    });
-  }
+  const xml = `<?xml version="1.0" encoding="utf-8" standalone="yes"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemaps}</sitemapindex>`;
 
-  const xmlUrls = allUrls.map(({ loc, lastmod, changefreq, priority }) => `
-  <url>
-    <loc>${loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`).join('');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${xmlUrls}
-</urlset>`;
-}
-
-export async function GET() {
-  const sitemap = generateSitemap();
-  
-  return new NextResponse(sitemap, {
+  return new NextResponse(xml, {
     status: 200,
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400'
-    }
+      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+    },
   });
 }
