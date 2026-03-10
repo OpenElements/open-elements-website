@@ -41,7 +41,7 @@
         "icon": "mdi:linkedin"
       }
     ],
-    "visible": true
+    "visible": false
   },
   {
     "id": "jessie",
@@ -161,7 +161,7 @@
         "icon": "mdi:linkedin"
       }
     ],
-    "visible": true
+    "visible": false
   },
   {
     "id": "sebastian",
