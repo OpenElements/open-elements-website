@@ -40,7 +40,7 @@ Three protocols are particularly relevant.
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-11-25) is an open specification — originally created by Anthropic, now under the [Agentic AI Foundation (AAIF)](https://aaif.io) at the Linux Foundation — that defines how AI agents connect to external tools and data sources.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/mcp.svg" width="90%" alt="MCP architecture: an LLM application connects to multiple MCP servers that provide tools and resources">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/mcp.png" width="100%" alt="MCP architecture: an LLM application connects to multiple MCP servers that provide tools and resources">}}
 
 MCP uses JSON-RPC 2.0 and follows a client-server model: the AI application (host) connects to MCP servers that expose **tools** (executable functions) and **resources** (contextual data).
 When an agent needs to interact with a blockchain, it does not build raw transactions itself — it calls tools on an MCP server that handles the blockchain-specific logic.
