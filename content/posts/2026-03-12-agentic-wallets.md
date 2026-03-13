@@ -40,7 +40,7 @@ Three protocols are particularly relevant.
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/specification/2025-11-25) is an open specification — originally created by Anthropic, now under the [Agentic AI Foundation (AAIF)](https://aaif.io) at the Linux Foundation — that defines how AI agents connect to external tools and data sources.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/mcp.png" width="100%" alt="MCP architecture: an LLM application connects to multiple MCP servers that provide tools and resources">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/mcp.png" width="100%" showCaption=true alt="MCP architecture: an LLM application connects to multiple MCP servers that provide tools and resources">}}
 
 MCP uses JSON-RPC 2.0 and follows a client-server model: the AI application (host) connects to MCP servers that expose **tools** (executable functions) and **resources** (contextual data).
 When an agent needs to interact with a blockchain, it does not build raw transactions itself — it calls tools on an MCP server that handles the blockchain-specific logic.
@@ -53,7 +53,7 @@ A "Hedera MCP Server" or "Coinbase MCP Server" would expose tools like `pay(amou
 [x402](https://www.x402.org/) is an open payment specification — co-founded by [Coinbase and Cloudflare](https://blog.cloudflare.com/x402/) — that embeds payments directly into HTTP.
 It revives the long-dormant HTTP 402 "Payment Required" status code and turns it into a fully functional payment protocol.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.png" width="100%" alt="x402 flow: agent calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.png" width="100%" showCaption=true alt="x402 flow: agent calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
 
 The flow is simple and elegant:
 
