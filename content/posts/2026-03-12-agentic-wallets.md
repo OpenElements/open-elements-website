@@ -53,7 +53,7 @@ A "Hedera MCP Server" or "Coinbase MCP Server" would expose tools like `pay(amou
 [x402](https://www.x402.org/) is an open payment standard — co-founded by [Coinbase and Cloudflare](https://blog.cloudflare.com/x402/) — that embeds payments directly into HTTP.
 It revives the long-dormant HTTP 402 "Payment Required" status code and turns it into a fully functional payment protocol.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.svg" width="90%" alt="x402 flow: agent calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.png" width="100%" alt="x402 flow: agent calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
 
 The flow is simple and elegant:
 
