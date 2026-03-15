@@ -70,7 +70,7 @@ x402 currently supports stablecoin payments across multiple networks, with over 
 
 For agentic wallets, x402 is the **discovery mechanism**: the way an agent learns that a service costs money and how much.
 
-## My Proposal: A Wallet Architecture for Agentic Payments
+## My Proposal for Agentic Wallets
 
 As a member of the AAIF working groups — specifically "Agentic Commerce" and "Agentic Identity & Trust" — I am actively working on exactly these topics.
 By studying the current specifications and approaches in this space, I have developed an idea for how agentic wallets could be implemented in a provider-agnostic way.
@@ -106,6 +106,12 @@ Crucially, the human **always retains full control**.
 Through the wallet interface, the user can at any time revoke an agent's access, withdraw remaining funds, or reduce the spending limit — regardless of whether the backend is a smart contract or a centralized service.
 In the smart contract scenario, these are explicit on-chain operations: revoking an agent's registered public key or withdrawing the deposited budget are straightforward contract calls that take effect immediately.
 The agent has no way to prevent or circumvent this — the policy enforcement lives on-chain, outside the agent's control.
+
+This is the fundamental difference between an agentic wallet and a traditional wallet: **an agentic wallet is a server-side construct**.
+The wallet's real state — balances, spending policies, authorized keys, transaction history — lives on the server, whether that server is a smart contract on a distributed ledger or a centralized payment provider.
+A client application (the wallet app on your phone or browser) can and should exist to configure and monitor the wallet, but it is not the wallet itself.
+In traditional wallets, the client *is* the wallet — it holds the key, it signs the transaction, it is the authority.
+In an agentic wallet, the client is just a window into a server-side system that operates independently of any single device.
 
 ### The Flow
 
