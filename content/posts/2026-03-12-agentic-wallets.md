@@ -19,7 +19,7 @@ Today's payment infrastructure is built for humans.
 Credit cards require identity verification, bank transfers need account holders, and payment providers enforce KYC (Know Your Customer) regulations.
 None of this works well when the "customer" is an autonomous software agent acting on behalf of a user or organization.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/problem.svg" width="90%" alt="AI agents are blocked by traditional payment infrastructure that requires human identity verification">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/payment-problem.png" width="100%" showCaption=true alt="AI agents are blocked by traditional payment infrastructure that requires human identity verification">}}
 
 Imagine an AI agent that manages your cloud infrastructure.
 It detects a traffic spike and needs to spin up additional compute resources from a different provider.
