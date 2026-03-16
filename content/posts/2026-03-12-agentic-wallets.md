@@ -33,8 +33,8 @@ Think of it like giving an employee a corporate credit card with a spending limi
 
 ## The Building Blocks: Specifications That Make This Possible
 
-Before diving into wallet architecture, we need to understand the emerging specifications that provide the foundation.
-Three protocols are particularly relevant.
+Before diving into wallet architecture and ideas about agentic wallets, we need to understand the emerging specifications that provide the foundation.
+two protocols are particularly relevant.
 
 ### MCP — How Agents Talk to Tools
 
@@ -44,14 +44,16 @@ It has originally been created by Anthropic and is now under the [Agentic AI Fou
 {{< centered-image src="/posts/2026-03-12-agentic-wallets/mcp.png" width="100%" showCaption=true alt="MCP architecture:an LLM application connects to multiple MCP servers that provide tools and resources">}}
 
 MCP uses JSON-RPC 2.0 and follows a client-server model: the AI application (host) connects to MCP servers that expose **tools** (executable functions) and **resources** (contextual data).
-When an agent needs to interact with a blockchain, it does not build raw transactions itself. Instead it calls tools on an MCP server that handles the blockchain-specific logic.
+When an agent needs to interact with an external service it does not call the API of that service directly.
+Instead it calls tools on an MCP server that handles the service specific calls.
 
 For agentic wallets, MCP is the communication channel between the agent and the payment infrastructure.
 A "Hedera MCP Server" or "Coinbase MCP Server" would expose tools like `pay(amount, recipient)` that the agent can call without knowing the details of the underlying ledger or payment system.
 
 ### x402 — How Services Signal "You Need to Pay"
 
-[x402](https://www.x402.org/) is an open payment specification that embeds payments directly into HTTP. The x402 spec is owned by Coinbase.
+[x402](https://www.x402.org/) is an open payment specification that embeds payments directly into HTTP.
+The x402 spec is owned by Coinbase.
 It revives the long-dormant HTTP 402 "Payment Required" status code and turns it into a fully functional payment protocol.
 
 {{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.png" width="100%" showCaption=true alt="x402 flow: agent calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
@@ -73,51 +75,43 @@ For agentic wallets, x402 is the **discovery mechanism**: the way an agent learn
 
 ## My Proposal for Agentic Wallets
 
-As a member of the AAIF working groups — specifically "Agentic Commerce" and "Agentic Identity & Trust" — I am actively working on exactly these topics.
-By studying the current specifications and approaches in this space, I have developed an idea for how agentic wallets could be implemented in a provider-agnostic way.
+As a member of the AAIF working groups I am actively working on exactly these topics.
+Currently, I'm part of the "Agentic Commerce" and "Agentic Identity & Trust" working groups.
+By studying the current specifications and approaches in those spaces, I have developed an idea for how agentic wallets could be implemented in a provider-agnostic way.
 I want to be transparent: I am still learning in this area and do not claim to have all the answers.
 I would be grateful for any feedback on this proposal — it is meant as a starting point for discussion, not a final design.
 
-### The Key Insight: The Payment Backend Must Be Always Available
+### The Key Insight: Payment must be always possible
 
-The first challenge is **where the wallet lives**.
-If it runs on your local machine, it must be reachable 24/7. That is unrealistic for mostly all users even if it runs on a mobile device.
-If it runs as a hosted service (e.g., Coinbase), you hand over control to an intermediary.
-The external manage the keys, they set the rules, and they can restrict your access at any time.
+If an AI should autonomously pay for things, the components that are needed for a payment must be **always available**.
+We need to give the agent a **reliable, always-available payment endpoint** with policy enforcement — while the human only needs to be involved for setup and oversight.
 
-The core requirement is that the component handling **fund management, authorization, and policy enforcement** must be always available and reachable by the agent.
-How this is realized depends on the approach:
-
-In a **decentralized setup**, this means splitting the wallet into two components: a **wallet app** on your phone or computer for configuration and monitoring, and a **smart contract** on a distributed ledger that is always on-chain, always available, and enforces spending rules autonomously.
-
-In a **centralized setup** (e.g., Coinbase), no such split is necessary — the wallet interface and payment backend are part of the same service.
-Coinbase could offer agentic wallet configuration directly in their web UI, with their servers handling both the user interaction and the agent communication.
-
-Both approaches serve the same goal: giving the agent a **reliable, always-available payment endpoint** with policy enforcement — while the human only needs to be involved for setup and oversight.
-
-This represents a fundamental shift from how traditional Web3 wallets work.
+The first challenge is **where the wallet lives** for this use case.
 In a classical wallet like MetaMask, the user's device holds the private key and signs every transaction.
 But for agentic wallets, we **do not want a personal device to be always online and reachable** — that would be a significant security risk.
 A permanently exposed wallet becomes an attack vector: the device and the private key it holds are targets for remote exploitation, key extraction, or side-channel attacks.
+Next to that if it runs on your local machine, it must be reachable 24/7.
+That is unrealistic for mostly all users even if it runs on a mobile device.
+If it fully runs as a hosted service (e.g., Coinbase), you hand over control to an intermediary.
 
-Instead, the transaction signing and authorization logic moves to the server side — either into a smart contract (which is always on-chain and has no private key to steal) or into a hosted service (which manages keys in a hardened environment).
+Based on all that we need a new architecture that allows the user to have full control but do all interactions without the need of a personal device being in the loop.
+
 The client side of an agentic wallet is reduced to what it should be: a **configuration and monitoring interface** where the human sets policies, approves budgets, and reviews activity.
 It does not need to be online when the agent transacts, and it does not hold the keys that authorize payments.
 
 Crucially, the human **always retains full control**.
 Through the wallet interface, the user can at any time revoke an agent's access, withdraw remaining funds, or reduce the spending limit — regardless of whether the backend is a smart contract or a centralized service.
-In the smart contract scenario, these are explicit on-chain operations: revoking an agent's registered public key or withdrawing the deposited budget are straightforward contract calls that take effect immediately.
-The agent has no way to prevent or circumvent this — the policy enforcement lives on-chain, outside the agent's control.
+
+The following diagram shows a very basic idea of how an agentic wallet could work:
 
 {{< centered-image src="/posts/2026-03-12-agentic-wallets/base-structure.png" width="100%" showCaption=true alt="Base structure of an agentic wallet payment flow">}}
 
-This is the fundamental difference between an agentic wallet and a traditional wallet: **an agentic wallet is a server-side construct**.
-The wallet's real state — balances, spending policies, authorized keys, transaction history — lives on the server, whether that server is a smart contract on a distributed ledger or a centralized payment provider.
-A client application (the wallet app on your phone or browser) can and should exist to configure and monitor the wallet, but it is not the wallet itself.
-In traditional wallets, the client *is* the wallet — it holds the key, it signs the transaction, it is the authority.
-In an agentic wallet, the client is just a window into a server-side system that operates independently of any single device.
-
 ### The Flow of Agentic Wallet Payment
+
+Let's define a concrete flow for an agentic wallet that allows an AI agent to spend money on behalf of a user.
+My idea how that can be done in a secure and controlable way is by using a private & public key based approach.
+Here the agent generates its own key pair and the payment provider only needs to know the public key.
+The agent can then use its private key to sign transactions and the payment provider can verify the signature.
 
 Here is the complete flow for setting up and using an agentic wallet:
 
