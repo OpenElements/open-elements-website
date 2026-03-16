@@ -1,13 +1,14 @@
 ---
 outdated: false
 showInBlog: true
-title: "Open Elements 2024 Year in Review"
+title: 'Open Elements 2024 Year in Review'
 date: 2025-01-16
 author: hendrik
-excerpt: "In 2024, Open Elements achieved remarkable success and drove groundbreaking developments in the open-source ecosystem with projects like Support & Care for Apache Maven™. CEO Hendrik Ebbers took on key roles at the Eclipse and Linux Foundations, strengthening the global open-source community."
+excerpt: 'In 2024, Open Elements achieved remarkable success and drove groundbreaking developments in the open-source ecosystem with projects like Support & Care for Apache Maven™. CEO Hendrik Ebbers took on key roles at the Eclipse and Linux Foundations, strengthening the global open-source community.'
 categories: [Open Elements]
-preview_image: "/posts/preview-images/openelements-yellow.svg"
+preview_image: '/posts/preview-images/openelements-yellow.svg'
 ---
+
 The year 2024 at Open Elements was marked by growth and successful project developments.
 The company’s strong commitment to the open-source ecosystem was demonstrated by the additional or renewed appointments
 of CEO [Hendrik Ebbers](/about-hendrik) to various positions at the **Eclipse Foundation**,
@@ -86,8 +87,8 @@ In his lecture on [Distributed Ledger Technology and Digital Trust](/dlt-lecture
 he taught students the foundational skills required to develop DLT-based systems. The course also covered advanced
 topics such as smart contracts and NFTs.
 
-*"The programming aspect of the course creates a highly engaging seminar that appeals to both crypto enthusiasts and
-traditional software developers alike,"* said one student.
+_"The programming aspect of the course creates a highly engaging seminar that appeals to both crypto enthusiasts and
+traditional software developers alike,"_ said one student.
 
 ## Own Open-Source Projects and Contributions
 
@@ -144,8 +145,8 @@ The project's status, goals, and funding utilization are transparently documente
 
 Falk Sippach from embarc Software Consulting GmbH described it on
 [Heise Developer](https://www.heise.de/blog/Java-Einladung-zur-Mitgestaltung-des-Programms-Support-Care-for-Apache-Maven-9718336.html) as follows:  
-*"The trust that the Maven community places in Open Elements as a transparent player in the open-source field is
-unparalleled and is what makes this initiative possible in the first place."*
+_"The trust that the Maven community places in Open Elements as a transparent player in the open-source field is
+unparalleled and is what makes this initiative possible in the first place."_
 
 ![Hendrik Ebbers discussing this topic with Dr. Robert Habeck, Federal Minister for Economic Affairs and Climate Action, in Lisbon](/posts/2025-01-16-open-elements-in-2024/habeck.jpg)
 
@@ -184,10 +185,10 @@ Open Elements continues to grow, and on September 1, 2024, the team welcomed Nat
 
 ![Natascha Dönges](/posts/2025-01-16-open-elements-in-2024/natascha.jpg)
 
-Jessie Ssebuliba and Tayebwa Noah, developers from Uganda, joined Open Elements at the beginning of 2024 on a part-time basis.
+Jessie Ssebuliba and Noah Tayebwa, developers from Uganda, joined Open Elements at the beginning of 2024 on a part-time basis.
 Since mid-2024, both have been working full-time for the company.
 
-![Tayebwa Noah and Jessie Ssebuliba](/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg)
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Noah Tayebwa and Jessie Ssebuliba">}}
 
 This collaboration highlights the impact of global teamwork on open-source projects.
 Recognizing their potential, CEO Hendrik Ebbers offered both developers positions at Open Elements.

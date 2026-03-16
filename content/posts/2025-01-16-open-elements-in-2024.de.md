@@ -1,12 +1,12 @@
 ---
 outdated: false
 showInBlog: true
-title: "Jahresrückblick Open Elements 2024"
+title: 'Jahresrückblick Open Elements 2024'
 date: 2025-01-16
 author: hendrik
-excerpt: "Im Jahr 2024 hat Open Elements beeindruckende Erfolge erzielt und mit Projekten wie Support & Care for Apache Maven™ wegweisende Entwicklungen im Open-Source-Ökosystem vorangetrieben. CEO Hendrik Ebbers übernahm zentrale Rollen bei der Eclipse und Linux Foundation und stärkte die globale Open-Source-Community."
+excerpt: 'Im Jahr 2024 hat Open Elements beeindruckende Erfolge erzielt und mit Projekten wie Support & Care for Apache Maven™ wegweisende Entwicklungen im Open-Source-Ökosystem vorangetrieben. CEO Hendrik Ebbers übernahm zentrale Rollen bei der Eclipse und Linux Foundation und stärkte die globale Open-Source-Community.'
 categories: [Open Elements]
-preview_image: "/posts/preview-images/openelements-yellow.svg"
+preview_image: '/posts/preview-images/openelements-yellow.svg'
 ---
 
 Das Jahr 2024 von Open Elements war von Wachstum und erfolgreichen Projekt-Entwicklungen geprägt.
@@ -17,7 +17,7 @@ bei **Eclipse Adoptium**, bei **Hiero**, der **Linux Foundation** und der **Linu
 ![Open Elements setzt weiterhin den Fokus der Firma auf Open Source und Java](/posts/2025-01-16-open-elements-in-2024/oss-meets-java.png)
 
 Für Hendrik Ebbers und Open Elements ist Open Source eine Herzensangelegenheit, und das zeigt sich in den
-Unternehmenswerten, die stets präsent sind und sichtbar gelebt werden: 
+Unternehmenswerten, die stets präsent sind und sichtbar gelebt werden:
 
 - neuen Menschen die Community nahezubringen,
 - den (akademischen) Nachwuchs zu fördern, Wissen zu teilen,
@@ -63,7 +63,7 @@ Ein weiteres Sponsoring und persönliches Engagement lebt Hendrik Ebbers in der 
 Als mitverantwortlicher Leiter der JUG Dortmund gab es im vergangenen Jahr mehrere gemeinsame Events, die es zu organisieren und zu finanzieren galt.
 
 Beim Hacktoberfest konnten sich durch das finanzielle Engagement ca. 30 lokal, regional und international ansässige Personen aktiv einbringen.
-Etwa 10 Teilnehmende konnten mit der Unterstützung von Expert*innen ihre ersten Contributions machen.
+Etwa 10 Teilnehmende konnten mit der Unterstützung von Expert\*innen ihre ersten Contributions machen.
 Hendrik Ebbers hat mit der Teilnahme des Open-Elements-Teams am JUG-Event im Rahmen des Hacktoberfests Türen geöffnet und den Rahmen geschaffen, einige Open-Source-Projekte kennenzulernen und in das Gefühl der echten Teamarbeit einzutauchen.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NQbSPN68tPY" frameborder="0" allowfullscreen></iframe>
@@ -83,7 +83,7 @@ Hendrik Ebbers hat im Wintersemester 23/24 einen Lehrauftrag an der OTH Regensbu
 In der Vorlesung [Distribution Ledger Technology und Digital Trust](/dlt-lecture) vermittelt er den Studierenden die grundlegenden Kenntnisse, um DLT-basierte Systeme zu entwickeln.
 Zudem werden weitergehende Ansätze behandelt, wie z. B. Smart Contracts und NFTs.
 
-*„Der Programmieraspekt des Fachs schafft ein hochinteressantes Seminar, bei welchem sowohl Kryptointeressierte als auch herkömmliche Softwareentwickler auf ihre Kosten kommen“*, so die Aussage eines Studenten.
+_„Der Programmieraspekt des Fachs schafft ein hochinteressantes Seminar, bei welchem sowohl Kryptointeressierte als auch herkömmliche Softwareentwickler auf ihre Kosten kommen“_, so die Aussage eines Studenten.
 
 ## Eigene Open-Source-Projekte und Beiträge
 
@@ -127,7 +127,7 @@ Open Elements hat die Verwaltung der bereitgestellten Fördermittel für Apache 
 Der Projektstatus, die Projektziele sowie die Verwendung der (Förder-)Gelder werden transparent in einem GitHub Repository dargestellt.
 
 Falk Sippach von der embarc Software Consulting GmbH beschreibt es auf [Heise Developer](https://www.heise.de/blog/Java-Einladung-zur-Mitgestaltung-des-Programms-Support-Care-for-Apache-Maven-9718336.html) so:
-*„Das Vertrauen, das die Maven-Community hierbei Open Elements als transparenten Player im Open-Source-Bereich entgegenbringt, ist einmalig und ermöglicht dieses Vorhaben überhaupt erst.”*
+_„Das Vertrauen, das die Maven-Community hierbei Open Elements als transparenten Player im Open-Source-Bereich entgegenbringt, ist einmalig und ermöglicht dieses Vorhaben überhaupt erst.”_
 
 ![Hendrik Ebbers hat sich in Lissabon zu diesem Thema mit Dr. Robert Habeck, Bundesminister für Wirtschaft und Klimaschutz, ausgetauscht](/posts/2025-01-16-open-elements-in-2024/habeck.jpg)
 
@@ -153,7 +153,7 @@ Folgende Beiträge wurden im Java Blog bei Heise veröffentlicht:
 - [Oracles Lizenzpolitik: Ein Angebot, das Sie nicht ablehnen können](https://www.heise.de/blog/Kommentar-zu-Oracles-Lizenzen-Ein-Angebot-das-Sie-nicht-ablehnen-koennen-9781727.html)
 
 Weitere Publikationen:
- 
+
 - [Eclipse Adoptium: Ein Leuchtturmprojekt für sichere und transparente Softwarelieferketten, Scott Fryer & Hendrik Ebbers](https://www.cloudland.org/de/news/details/java-aktuell-3-24-tools/)
 - [CI for Hedera based projects](https://dev.to/hendrikebbers/ci-for-hedera-based-projects-2nja)
 - [Gaming & Web3 - How an Open and Secure Future of Ownership in Games Could Look](https://dev.to/hendrikebbers/gaming-web3-how-an-open-and-secure-future-of-ownership-in-games-could-look-2ihf)
@@ -164,7 +164,7 @@ Open Elements wächst stetig und hat am 01.09.2024 mit Natascha Dönges eine wun
 
 ![Natascha Dönges](/posts/2025-01-16-open-elements-in-2024/natascha.jpg)
 
-Jessie Ssebuliba und Tayebwa Noah sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
+Jessie Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
 Seit Mitte 2024 sind die beiden in Vollzeit für das Unternehmen tätig.
 
 ![Tayebwa Noah und Jessie Ssebuliba](/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg)

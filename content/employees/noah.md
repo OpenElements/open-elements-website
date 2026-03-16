@@ -1,4 +1,4 @@
 ---
-title: "Tayebwa Noah"
+title: "Noah Tayebwa"
 id: "noah"
 ---

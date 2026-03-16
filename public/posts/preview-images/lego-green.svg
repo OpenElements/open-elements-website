@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1081 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <rect id="_07_GitHub_Green" serif:id="07_GitHub_Green" x="0.624" y="0" width="1080" height="1080" style="fill:none;"/>
+    <g>
+        <g id="Background">
+            <rect x="0.624" y="-0" width="1080" height="1080" style="fill:rgb(222,241,236);"/>
+        </g>
+    </g>
+    <g transform="matrix(0.466797,0,0,0.466797,546.419,542.616)">
+        <g transform="matrix(1,0,0,1,-1250.5,-1250.5)">
+            <rect id="_41-lego" serif:id="41-lego" x="0.158" y="0.102" width="2500" height="2500" style="fill:none;"/>
+            <rect x="315.054" y="1467.11" width="1143.95" height="469.062" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+            <rect x="315.054" y="998.049" width="1143.95" height="469.062" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+            <rect x="385.18" y="1537.24" width="1003.7" height="328.814" style="fill:rgb(222,241,236);"/>
+            <rect x="385.18" y="1068.17" width="1003.7" height="328.814" style="fill:rgb(222,241,236);"/>
+            <path d="M724.763,846.568C736.988,846.568 748.713,851.424 757.357,860.069C766.002,868.713 770.858,880.438 770.858,892.663L770.858,998.049L485.21,998.049L485.21,892.663C485.21,880.438 490.066,868.713 498.711,860.069C507.355,851.424 519.08,846.568 531.305,846.568L724.763,846.568Z" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+            <path d="M1242.75,846.568C1254.98,846.568 1266.7,851.424 1275.35,860.069C1283.99,868.713 1288.85,880.438 1288.85,892.663L1288.85,998.049L1003.2,998.049L1003.2,892.663C1003.2,880.438 1008.05,868.713 1016.7,860.069C1025.34,851.424 1037.07,846.568 1049.29,846.568L1242.75,846.568Z" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+            <g>
+                <rect x="1041.31" y="1295.94" width="1143.95" height="790.12" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                <circle cx="1872.28" cy="1870.45" r="142.824" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                <circle cx="1354.29" cy="1870.45" r="142.824" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                <circle cx="1872.28" cy="1514.91" r="142.824" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+                <circle cx="1354.29" cy="1514.91" r="142.824" style="fill:rgb(92,186,158);stroke:black;stroke-width:16.67px;"/>
+            </g>
+            <path d="M2185.26,850.389L2038.61,1295.94L952.009,938.284L1098.66,492.736L2185.26,850.389Z" style="fill:white;stroke:black;stroke-width:16.67px;"/>
+            <path d="M2096.73,895.074L1993.93,1207.4L1040.54,893.599L1143.35,581.269L2096.73,895.074Z" style="fill:rgb(222,241,236);"/>
+            <path d="M1535.19,476.943C1546.8,480.765 1556.42,489.044 1561.93,499.958C1567.44,510.872 1568.38,523.527 1564.56,535.139C1550.63,577.469 1531.61,635.242 1531.61,635.242L1260.29,545.935C1260.29,545.935 1279.3,488.162 1293.23,445.832C1297.06,434.22 1305.34,424.601 1316.25,419.093C1327.16,413.584 1339.82,412.637 1351.43,416.459C1401.98,433.098 1484.64,460.304 1535.19,476.943Z" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+            <path d="M2027.21,638.892C2038.82,642.714 2048.44,650.992 2053.95,661.906C2059.46,672.82 2060.41,685.476 2056.58,697.088C2042.65,739.418 2023.63,797.191 2023.63,797.191L1752.31,707.883C1752.31,707.883 1771.32,650.111 1785.25,607.781C1789.08,596.168 1797.36,586.55 1808.27,581.041C1819.18,575.533 1831.84,574.585 1843.45,578.408C1894,595.046 1976.66,622.253 2027.21,638.892Z" style="fill:none;stroke:black;stroke-width:16.67px;"/>
+        </g>
+    </g>
+</svg>
