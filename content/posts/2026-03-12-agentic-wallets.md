@@ -31,10 +31,10 @@ The idea is not to give agents unlimited financial freedom.
 Instead, agentic wallets operate under **policy-based constraints**: maximum transaction amounts, whitelisted recipients, time-based budgets, and human override mechanisms.
 Think of it like giving an employee a corporate credit card with a spending limit — except the employee is an AI agent.
 
-## The Building Blocks: Specifications That Make This Possible
+## The Building Blocks: Specifications that exist today
 
 Before diving into wallet architecture and ideas about agentic wallets, we need to understand the emerging specifications that provide the foundation.
-two protocols are particularly relevant.
+Two protocols are particularly relevant for agentic commerce since they already define specifications AI agents can interact with.
 
 ### MCP — How Agents Talk to Tools
 
@@ -81,7 +81,7 @@ By studying the current specifications and approaches in those spaces, I have de
 I want to be transparent: I am still learning in this area and do not claim to have all the answers.
 I would be grateful for any feedback on this proposal — it is meant as a starting point for discussion, not a final design.
 
-### The Key Insight: Payment must be always possible
+### The Key Insight: Payment must always be possible
 
 If an AI should autonomously pay for things, the components that are needed for a payment must be **always available**.
 We need to give the agent a **reliable, always-available payment endpoint** with policy enforcement — while the human only needs to be involved for setup and oversight.
@@ -154,17 +154,25 @@ Generating a fresh key pair per wallet also limits the blast radius if a key is 
 
 ### Provider-Agnostic by Design
 
+Every payment that an AI agent triggers in the given idea can be done by an MCP server.
+Here a payment provider (independent if it is a distributed ledger that allows payment in cryptocurrencies or a classical bank) can provide an MCP server that handles the payment logic.
 A key property of this architecture: **the agent does not need to know what is behind the MCP server**.
-The payment backend can be a smart contract on Hedera, Ethereum, Base, or any other DLT — or it can be a centralized service like Coinbase.
-
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/provider-agnostic.svg" width="90%" alt="The same agent interface works with any payment backend: DLT smart contracts, Coinbase, or other providers">}}
+The payment backend can be a smart contract on the Hedera network or a centralized service like Coinbase.
 
 From the agent's perspective, the interface is identical:
 
-- It generates a key pair and publishes its public key
+- It is requested by a wallet, generates a key pair and provides its public key as part of the response
 - It receives a payment endpoint
-- It signs payment requests and sends them to the MCP server
-- The MCP server handles the backend-specific logic
+- It signs payment requests by its private key and sends them to the MCP server
+- The MCP server handles the backend-specific logic like calling a transaction on a distributed ledger or calling an API endpoint.
+
+The following diagram shows how the process could like for a distributed ledger as Hedera where a Smart Contract is used to handle the payment logic:
+
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/flow-dlt.png" width="100%" alt="Flow that shows how agentic wallet support can look like for a distributed ledger backend">}}
+
+For a centralized payment provider like Coinbase, the flow looks quite similar:
+
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/flow-service.png" width="100%" alt="Flow that shows how centralized payment providers can be supported by agentic wallets">}}
 
 This means the protocol for wallet-agent communication can — and should — be specified **independently** of the payment backend.
 Whether the MCP server talks to a Hedera smart contract, a Coinbase API, or a Stripe integration is an implementation detail, not a protocol concern.
@@ -180,7 +188,7 @@ Whether the MCP server talks to a Hedera smart contract, a Coinbase API, or a St
 
 ## What Is Still Missing
 
-This architecture relies on existing specifications (MCP, x402, A2A) and established technology (EVM smart contracts, stablecoins).
+This architecture relies on existing specifications (MCP, x402) and established technology (EVM smart contracts, stablecoins).
 But two critical pieces are not yet defined.
 
 ### 1. Mutual Identity Verification
@@ -188,19 +196,17 @@ But two critical pieces are not yet defined.
 In the current flow, the wallet app contacts the agent and trusts the response.
 But **how does the wallet know it is talking to the real agent** and not an impersonator?
 If an attacker intercepts the communication and sends their own public key, they receive the spending allowance.
-
 Conversely, how does the agent know the wallet request is legitimate?
 While sharing a public key with a fake wallet is not dangerous by itself, an attacker could potentially direct the agent to work against a malicious payment backend.
 
 The solution is a **mutual identity layer**: both the wallet and the agent verify each other's identity before exchanging credentials.
 Specifications for this exist in adjacent domains:
 
-- **[HCS-14](https://github.com/hiero-ledger/hiero-consensus-specifications)** (Hiero/Hedera) provides W3C DID-based agent identifiers that work across web2 and web3
 - **[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)** provides on-chain identity registries with reputation and validation — already live with 45,000+ registered agents
 - **[A2A Agent Cards](https://a2a-protocol.org/latest/specification/)** provide signed identity and capability declarations
 
 But none of these specifications define the **specific flow** of mutual verification between a wallet and an agent in the context of payment authorization.
-This needs to be specified.
+This needs to be specified. Here the "Agent identity & trust" working group of AAIF would be an ideal place to define this specification, building on the existing identity standards but tailoring it to the wallet-agent use case.
 
 ### 2. Wallet-Agent Credential Provisioning
 
@@ -208,39 +214,29 @@ The communication between wallet and agent — steps 2 through 5 in the flow abo
 
 There is no defined protocol for:
 
-- How a wallet discovers an agent's endpoint and requests its public key
+- How a wallet contacts an agent's endpoint and requests its public key
 - How an agent responds with credentials in a verifiable way
 - How a wallet communicates the payment endpoint and budget constraints back to the agent
 
-Existing approaches address parts of this problem.
-[Coinbase's AgentKit](https://github.com/coinbase/agentkit), for example, provisions wallet access to agents via API keys and environment variables — pragmatic, but tied to Coinbase and not portable.
-[AP2](https://ap2-protocol.org/) defines a Credential Provider role that manages tokenized payment credentials, but only for card networks.
-Academic work on [authenticated delegation](https://arxiv.org/html/2501.09674v1) proposes a delegation token model built on OAuth 2.0 and OpenID Connect that comes closest to what is needed.
-And specifications like [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) define how verifiable credentials can be issued to wallets — a mechanism that could be adapted for issuing payment authorization credentials to agents.
+Existing approaches address parts of this problem:
+- [Coinbase's AgentKit](https://github.com/coinbase/agentkit), for example, provisions wallet access to agents via API keys and environment variables — pragmatic, but tied to Coinbase and not portable.
+- [AP2](https://ap2-protocol.org/) defines a Credential Provider role that manages tokenized payment credentials, but only for card networks.
 
-But none of these provide an **open, provider-agnostic specification** for the complete wallet-to-agent credential provisioning flow.
-MCP defines agent-to-tool communication. A2A defines agent-to-agent communication. Neither defines **wallet-to-agent credential setup**.
-This is a gap that needs to be filled with a dedicated specification.
+None of these provide an **open, provider-agnostic specification** for the complete wallet-to-agent credential provisioning flow.
+The protocol that is needed here must be as agnostic as possible to the payment backend.
+Next to that topics like post quantum cryptography and zero-knowledge proofs are important to consider in the design of the protocol to ensure it is future-proof.
+The "Agentic commerce" working group of AAIF looks like a good place to start working on a specification for this.
 
 ## Call to Action
 
-The architecture I have described works today — the individual specifications exist, the technology is mature, and the pattern is provider-agnostic.
-But it relies on two pieces that are not yet specified:
-
-**1. Define the identity layer for wallet-agent interaction.**
-How do a wallet and an agent mutually verify each other before exchanging payment credentials?
-This should build on existing identity specifications (W3C DIDs, A2A Agent Cards, ERC-8004) but define the concrete verification flow for payment authorization.
-
-**2. Draft the wallet-agent credential provisioning interface.**
-What does the protocol look like when a wallet configures an agent with payment capabilities?
-This needs to be backend-agnostic — the same spec must work whether the payment backend is a smart contract or Coinbase.
-
-Both of these are natural tasks for the **[Agentic AI Foundation (AAIF)](https://aaif.io)** and its Agentic AI Working Group.
-The AAIF already hosts MCP and brings together the right players — Anthropic, Google, Microsoft, Coinbase, Cloudflare, and others.
-Defining how agents handle payments is a logical next step for this foundation.
+The architecture I have described can works today.
+Mayn parts of it already exist in the open.
+The important next step is to define the pieces that are missing in an open, transparent, secure and provider-agnostic way.
+For me that are natural tasks for the **[Agentic AI Foundation (AAIF)](https://aaif.io)**.
 
 The building blocks are here.
 The specifications are converging.
 What we need now is the connective tissue that ties them together.
 
 AI agents will need wallets — and those wallets will need a standard way to talk to agents.
+Let's try to build a open standard that can be used by all agents and wallets.
