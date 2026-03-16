@@ -229,7 +229,7 @@ The "Agentic commerce" working group of AAIF looks like a good place to start wo
 
 ## Call to Action
 
-The architecture I have described can works today.
+The architecture I have described can work today.
 Mayn parts of it already exist in the open.
 The important next step is to define the pieces that are missing in an open, transparent, secure and provider-agnostic way.
 For me that are natural tasks for the **[Agentic AI Foundation (AAIF)](https://aaif.io)**.
