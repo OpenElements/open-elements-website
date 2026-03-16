@@ -107,6 +107,8 @@ Through the wallet interface, the user can at any time revoke an agent's access,
 In the smart contract scenario, these are explicit on-chain operations: revoking an agent's registered public key or withdrawing the deposited budget are straightforward contract calls that take effect immediately.
 The agent has no way to prevent or circumvent this — the policy enforcement lives on-chain, outside the agent's control.
 
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/base-structure.png" width="100%" showCaption=true alt="Base structure of an agentic wallet payment flow">}}
+
 This is the fundamental difference between an agentic wallet and a traditional wallet: **an agentic wallet is a server-side construct**.
 The wallet's real state — balances, spending policies, authorized keys, transaction history — lives on the server, whether that server is a smart contract on a distributed ledger or a centralized payment provider.
 A client application (the wallet app on your phone or browser) can and should exist to configure and monitor the wallet, but it is not the wallet itself.
