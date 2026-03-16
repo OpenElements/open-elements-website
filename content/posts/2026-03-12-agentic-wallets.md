@@ -21,8 +21,7 @@ Credit cards require identity verification, bank transfers need account holders,
 Your Customer) regulations.
 None of this works well when the "customer" is an autonomous software agent acting on behalf of a user or organization.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/payment-problem.png" width="100%" showCaption=true alt="AI
-agents are blocked by traditional payment infrastructure that requires human identity verification">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/payment-problem.png" width="100%" showCaption=true alt="AI agents are blocked by traditional payment infrastructure that requires human identity verification">}}
 
 Imagine an AI agent that manages your cloud infrastructure.
 It detects a traffic spike and needs to spin up additional compute resources from a different provider.
@@ -68,8 +67,7 @@ by [Coinbase and Cloudflare](https://blog.cloudflare.com/x402/) — that embeds 
 It revives the long-dormant HTTP 402 "Payment Required" status code and turns it into a fully functional payment
 protocol.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.png" width="100%" showCaption=true alt="x402 flow: agent
-calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/x402.png" width="100%" showCaption=true alt="x402 flow: agent calls service, gets HTTP 402 with payment instructions, pays, and retries the request">}}
 
 The flow is simple and elegant:
 
@@ -141,8 +139,7 @@ In the smart contract scenario, these are explicit on-chain operations: revoking
 withdrawing the deposited budget are straightforward contract calls that take effect immediately.
 The agent has no way to prevent or circumvent this — the policy enforcement lives on-chain, outside the agent's control.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/base-structure.png" width="100%" showCaption=true alt="Base
-structure of an agentic wallet payment flow">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/base-structure.png" width="100%" showCaption=true alt="Base structure of an agentic wallet payment flow">}}
 
 This is the fundamental difference between an agentic wallet and a traditional wallet: **an agentic wallet is a
 server-side construct**.
@@ -158,8 +155,7 @@ device.
 
 Here is the complete flow for setting up and using an agentic wallet:
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/basic-flow.png" width="100%" alt="Complete agentic wallet
-flow: human configures wallet, agent generates key, payment provider registers key, agent pays">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/basic-flow.png" width="100%" alt="Complete agentic wallet flow: human configures wallet, agent generates key, payment provider registers key, agent pays">}}
 
 **Setup phase:**
 
@@ -207,8 +203,7 @@ A key property of this architecture: **the agent does not need to know what is b
 The payment backend can be a smart contract on Hedera, Ethereum, Base, or any other DLT — or it can be a centralized
 service like Coinbase.
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/provider-agnostic.svg" width="90%" alt="The same agent
-interface works with any payment backend: DLT smart contracts, Coinbase, or other providers">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/provider-agnostic.svg" width="90%" alt="The same agent interface works with any payment backend: DLT smart contracts, Coinbase, or other providers">}}
 
 From the agent's perspective, the interface is identical:
 
