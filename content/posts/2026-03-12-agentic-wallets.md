@@ -204,6 +204,7 @@ Specifications for this exist in adjacent domains:
 
 - **[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)** provides on-chain identity registries with reputation and validation — already live with 45,000+ registered agents
 - **[A2A Agent Cards](https://a2a-protocol.org/latest/specification/)** provide signed identity and capability declarations
+- **[HCS-14](https://github.com/hiero-ledger/hiero-consensus-specifications/blob/main/docs/standards/hcs-14/index.md)** at the Hiero project of LFDT provides W3C DID-based agent identifiers that work across web2 and web3
 
 But none of these specifications define the **specific flow** of mutual verification between a wallet and an agent in the context of payment authorization.
 This needs to be specified. Here the "Agent identity & trust" working group of AAIF would be an ideal place to define this specification, building on the existing identity standards but tailoring it to the wallet-agent use case.
