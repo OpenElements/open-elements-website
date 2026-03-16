@@ -6,7 +6,7 @@ date: 2026-03-12
 author: hendrik
 excerpt: "AI agents are becoming autonomous actors — but they cannot pay for things. I explore the challenges behind agentic wallets, the emerging specifications that make them possible, and propose a concrete architecture that works across decentralized and centralized payment providers."
 categories: [ ai, web3 ]
-preview_image: "/posts/preview-images/community-purple.svg"
+preview_image: "/posts/preview-images/agentic-wallet.svg"
 ---
 
 AI agents are no longer just answering questions.
@@ -176,15 +176,6 @@ For a centralized payment provider like Coinbase, the flow looks quite similar:
 
 This means the protocol for wallet-agent communication can — and should — be specified **independently** of the payment backend.
 Whether the MCP server talks to a Hedera smart contract, a Coinbase API, or a Stripe integration is an implementation detail, not a protocol concern.
-
-|                 | Decentralized (DLT)        | Centralized (Coinbase)   |
-|-----------------|----------------------------|--------------------------|
-| Payment backend | Smart contract on-chain    | Coinbase server          |
-| Fund custody    | User-controlled (on-chain) | Provider-custodial       |
-| Verification    | On-chain signature check   | Server-side verification |
-| Settlement      | Atomic, on-chain           | Internal transfer        |
-| MCP server      | DLT-specific MCP server    | Coinbase MCP server      |
-| Agent interface | **Identical**              | **Identical**            |
 
 ## What Is Still Missing
 
