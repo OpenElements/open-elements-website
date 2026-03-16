@@ -119,7 +119,7 @@ In an agentic wallet, the client is just a window into a server-side system that
 
 Here is the complete flow for setting up and using an agentic wallet:
 
-{{< centered-image src="/posts/2026-03-12-agentic-wallets/wallet-flow.svg" width="100%" alt="Complete agentic wallet flow: human configures wallet, agent generates key, wallet registers key on-chain, agent pays via MCP server">}}
+{{< centered-image src="/posts/2026-03-12-agentic-wallets/basic-flow.png" width="100%" alt="Complete agentic wallet flow: human configures wallet, agent generates key, payment provider registers key, agent pays">}}
 
 **Setup phase:**
 
