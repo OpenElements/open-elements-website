@@ -1,0 +1,701 @@
+{{ define "main" }}
+{{ $underline := resources.Get "/illustrations/line-p.svg" }}
+{{ $greenArrow := resources.Get "/illustrations/green-arrow.svg" }}
+{{ $roundGreen := resources.Get "/illustrations/round-13.svg" }}
+{{ $roundG := resources.Get "/illustrations/round11.svg" }}
+
+
+{{ $redTick := resources.Get "/icons/redTick.svg" }}
+{{ $greenTick := resources.Get "/icons/greenTick.svg" }}
+{{ $purpleTick := resources.Get "/icons/purpleTick.svg" }}
+{{ $star := resources.Get "/icons/star.svg" }}
+
+<div class="relative bg-white">
+    <div class="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full relative">
+        <img src="{{ $greenArrow.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+            class="absolute lg:block hidden right-28 top-24 w-40 shrink-0">
+        <img src="{{ $roundGreen.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+            class="absolute lg:block hidden right-48 top-16 w-20 shrink-0">
+        <img src="{{ $roundG.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+            class="absolute lg:block hidden left-36 top-24 w-36 -rotate-90 shrink-0">
+
+        <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+            <div class="relative flex flex-col items-center justify-center w-full">
+                <h1 class="text-center h1">{{ $.Param "title" | safeHTML }}</h1>
+                <p class="max-w-3xl mx-auto text-center text-base">
+                    {{ $.Param "description" | safeHTML }}
+                </p>
+                <img src="{{ $underline.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                    class="absolute w-48 -bottom-7 sm:w-72 shrink-0">
+            </div>
+        </div>
+    </div>
+
+    <ul role="list"
+        class="sm:space-y-12 space-y-8 container lg:max-w-6xl w-full relative lg:pt-16 pt-12 pb-28 lg:pl-28">
+        <li class="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
+            <div class="absolute -bottom-12 left-0 top-0 flex sm:w-6 w-5 justify-center">
+                <div class="w-px bg-purple"></div>
+            </div>
+            <p class="-top-3 font-semibold absolute lg:block hidden -left-12 text-xs uppercase">NOV</p>
+            <div class="relative flex sm:size-6 size-5 flex-none items-center justify-center -mt-1">
+                <div class="sm:size-5 size-4 rounded-full bg-purple-100 flex items-center justify-center">
+                    <div class="size-1.5 rounded-full bg-purple">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white w-full shadow-5 rounded-[32px] rounded-tl-none sm:p-6 p-4 relative">
+                <h3 class="font-bold sm:text-32 text-2xl relative">
+                    v0.1.8
+                    <span
+                        class="sm:text-sm text-xs bg-purple-200 text-purple font-bold sm:px-4 px-3 sm:py-2 py-1.5 rounded-full absolute ml-2 sm:mt-2">Latest</span>
+                </h3>
+                <time
+                    class=" text-green text-sm font-medium uppercase sm:absolute right-8 top-8 sm:mt-0 mt-1.5 inline-block">NOVEMBER,
+                    2025</time>
+
+                <div class="divide-y divide-green-50">
+                    <div class="flex flex-col gap-3 py-6 last:pb-0">
+                        <h4 class="font-bold">
+                            Overview
+                        </h4>
+                        <div>
+                            <p class="text-sm font-medium first:pt-0">
+                                Pretium augue urna sit vulputate in. Venenatis amet dui augue et interdum. Dolor feugiat
+                                morbi pellentesque in at ullamcorper. Quis imperdiet sit ipsum et sodales amet urna.
+                            </p>
+                            <p class="text-sm font-medium first:pt-0">
+                                Pretium augue urna sit vulputate in. Venenatis amet dui augue et interdum. Dolor feugiat
+                                morbi pellentesque in at ullamcorper. Quis imperdiet sit ipsum et sodales amet urna.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 py-6 last:pb-0" x-data="{open:false}">
+                        <h4 class="font-semibold">
+                            Refactored Documentation:
+                        </h4>
+                        <div class="space-y-1">
+                            <ul class="text-sm space-y-1">
+                                <li>
+                                    docs: added changelog conflict resolution examples to docs/common_issues.md
+                                </li>
+                                <li>
+                                    docs: added "One Issue Per Pull Request" section to
+                                    examples/sdk_developers/common_issues.md.
+                                </li>
+                                <li>
+                                    docs: update pyproject.toml maintainers list.
+                                </li>
+                                <li>
+                                    docs: added to README a social follow section
+                                </li>
+                            </ul>
+                            <ul x-show="open" x-collapse class="space-y-1 text-sm">
+                                <li>
+                                    docs: added changelog conflict resolution examples to docs/common_issues.md
+                                </li>
+                                <li>
+                                    docs: added "One Issue Per Pull Request" section to
+                                    examples/sdk_developers/common_issues.md.
+                                </li>
+                                <li>
+                                    docs: update pyproject.toml maintainers list.
+                                </li>
+                                <li>
+                                    docs: added to README a social follow section
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" @click="open = !open"
+                            class="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2">
+                            <span x-show="!open">See More</span>
+                            <span x-show="open">See Less</span>
+                            <svg class="size-3.5 mt-px transition-all" :class="open && 'rotate-180'" width="12"
+                                height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.56859 8.25969C5.77951 9.46983 4.00704 9.46983 3.21796 8.25968L1.57727 5.74348L0.218515 3.06449C-0.434962 1.77606 0.451277 0.241051 1.89383 0.162762L4.89328 -2.09808e-05L7.89272 0.162762C9.33528 0.241051 10.2215 1.77606 9.56804 3.06449L8.20929 5.74348L6.56859 8.25969Z"
+                                    fill="#7573FF" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <h4 class="font-semibold">
+                            Bug Fixes:
+                        </h4>
+                        <div class="text-sm">
+                            <ul class="space-y-2 text-sm leading-6">
+                                <li class="flex gap-2">
+                                    <img src="{{ $redTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-6 shrink-0">
+                                    Pharetra sed pellentesque pretium euismod risus iaculis netus. Ac scelerisque
+                                    posuere viverra sit. Consequat in odio sed tempus faucibus risus. Malesuada turpis
+                                    nisi lorem volutpat ullamcorper magna.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $redTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-6 shrink-0">
+                                    Pharetra sed pellentesque pretium euismod risus iaculis netus. Ac scelerisque
+                                    posuere viverra sit. Consequat in odio sed tempus faucibus risus. Malesuada turpis
+                                    nisi lorem volutpat ullamcorper magna.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <h4 class="font-semibold">
+                            New Fixes:
+                        </h4>
+                        <div class="text-sm">
+                            <ul class="space-y-2 text-sm leading-6">
+                                <li class="flex gap-2">
+                                    <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-6 shrink-0">
+                                    Pharetra sed pellentesque pretium euismod risus iaculis netus. Ac scelerisque
+                                    posuere viverra sit. Consequat in odio sed tempus faucibus risus. Malesuada turpis
+                                    nisi lorem volutpat ullamcorper magna.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-6 shrink-0">
+                                    Nunc quis nec urna pellentesque. Mus tempor placerat at lacinia nulla justo iaculis
+                                    bibendum pretium. Dis ullamcorper scelerisque eget ultricies fermentum fermentum
+                                    nisi. Eu auctor lorem sed nisl elit posuere purus est.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-6 shrink-0">
+                                    Quam enim rhoncus fames et vitae enim molestie tellus. Pulvinar eget diam vestibulum
+                                    pellentesque sit fringilla ornare augue pellentesque. Consequat nec at proin et
+                                    vitae elit. Vitae ut cursus suspendisse elementum euismod sit.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $greenTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-6 shrink-0">
+                                    Purus habitant consectetur vulputate gravida. Lacus in neque fermentum viverra eros
+                                    viverra. Dui odio urna nunc volutpat. In nunc arcu augue eu eu tellus.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0" x-data="{open:false}">
+                        <h4 class="font-semibold sm:text-base text-sm">
+                            New Features:
+                        </h4>
+                        <div class="text-sm space-y-2">
+                            <ul class="space-y-2 text-sm leading-6">
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Quis quam pellentesque at sed in sed orci. Purus varius non arcu cursus malesuada
+                                    convallis nisl sem pulvinar.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Nisl commodo quis blandit nibh. Odio mauris id eget quis tempor.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Sed gravida morbi elit a sit. Nec non amet tortor purus neque amet libero.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Consequat consectetur cras neque mattis. In quam aliquam mattis ut risus risus dis
+                                    proin lorem.
+                                </li>
+                            </ul>
+                            <ul class="space-y-2 text-sm leading-6" x-show="open" x-collapse>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Quis quam pellentesque at sed in sed orci. Purus varius non arcu cursus malesuada
+                                    convallis nisl sem pulvinar.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Nisl commodo quis blandit nibh. Odio mauris id eget quis tempor.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Sed gravida morbi elit a sit. Nec non amet tortor purus neque amet libero.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $purpleTick.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-3.5 mt-1.5 shrink-0">
+                                    Consequat consectetur cras neque mattis. In quam aliquam mattis ut risus risus dis
+                                    proin lorem.
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" @click="open = !open"
+                            class="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2">
+                            <span x-show="!open">See More</span>
+                            <span x-show="open">See Less</span>
+                            <svg class="size-3.5 mt-px transition-all" :class="open && 'rotate-180'" width="12"
+                                height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.56859 8.25969C5.77951 9.46983 4.00704 9.46983 3.21796 8.25968L1.57727 5.74348L0.218515 3.06449C-0.434962 1.77606 0.451277 0.241051 1.89383 0.162762L4.89328 -2.09808e-05L7.89272 0.162762C9.33528 0.241051 10.2215 1.77606 9.56804 3.06449L8.20929 5.74348L6.56859 8.25969Z"
+                                    fill="#7573FF" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <div class="relative mb-2 sm:block flex flex-col-reverse gap-2 items-start">
+                            <h3 class="font-bold sm:text-2xl text-base inline">
+                                What's Changed
+                            </h3>
+                            <span
+                                class="sm:text-sm text-xs bg-rose-100 text-rose font-bold sm:px-4 px-2.5 sm:py-2 py-1.5 rounded-full sm:ml-2 sm:absolute inline-block">Semper</span>
+                        </div>
+
+                        <h4 class="font-semibold sm:text-base text-sm">
+                            New Features
+                        </h4>
+                        <div class="text-sm">
+                            <ul class="space-y-2 text-sm leading-6">
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Eleifend nunc dui ullamcorper lectus at sociis. Gravida eget velit amet at tortor
+                                    duis. Convallis id pellentesque aenean orci vestibulum arcu nisi arcu. Egestas nulla
+                                    ullamcorper vulputate venenatis.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Feugiat convallis quam leo faucibus tristique sed vitae. Enim lectus consectetur eu
+                                    facilisi nullam. Ut leo morbi condimentum sed. Quis nibh ornare mi orci morbi sed.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Sit senectus nulla ullamcorper pretium ac vitae. Sem interdum elementum viverra in.
+                                    Sit sit tincidunt libero vestibulum amet consectetur mi. Nulla etiam urna placerat
+                                    id diam.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <h4 class="text-blue sm:text-2xl text-base font-bold flex items-center gap-3">
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.3537 4.95005C12.5638 5.73913 12.5638 7.5116 11.3537 8.30068L7.3845 10.8888L3.15851 13.0322C1.87008 13.6857 0.335071 12.7994 0.256782 11.3569L-3.93402e-07 6.62537L0.256782 1.89387C0.335071 0.451317 1.87008 -0.434922 3.15851 0.218555L7.3845 2.36192L11.3537 4.95005Z"
+                                    fill="#5DB9F5" />
+                            </svg>
+                            Assets
+                            <span
+                                class=" bg-sky-100/50 font-bold text-sky-200 rounded-full text-sm size-8 inline-flex items-center justify-center">2</span>
+                        </h4>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <div
+                            class="flex flex-wrap gap-2 text-sm font-semibold *:px-3 *:py-1 *:bg-yellow-50 *:rounded-full">
+                            <span>#Tortor</span>
+                            <span>#Tellus</span>
+                            <span>#Mattis</span>
+                            <span>#Luctus</span>
+                            <span>#Tellus</span>
+                        </div>
+                    </div>
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <h4 class="font-semibold">
+                            Contributors
+                        </h4>
+                        <div class="flex flex-wrap gap-3 font-semibold *:size-10 *:overflow-hidden *:rounded-full">
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                        </div>
+                        <p class="text-sm pt-0">
+                            Tellus massa commodo at neque eget morbi mus porta mauris. Ac elementum natoque massa arcu
+                            tellus lorem eu hac amet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
+            <div class="absolute -bottom-12 left-0 top-0 flex sm:w-6 w-5 justify-center">
+                <div class="w-px bg-purple"></div>
+            </div>
+            <p class="-top-3 font-semibold absolute lg:block hidden -left-12 text-xs uppercase">OKT</p>
+            <div class="relative flex sm:size-6 size-5 flex-none items-center justify-center -mt-1">
+                <div class="sm:size-5 size-4 rounded-full bg-purple-100 flex items-center justify-center">
+                    <div class="size-1.5 rounded-full bg-purple">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white w-full shadow-5 rounded-[32px] rounded-tl-none sm:p-6 p-4 relative">
+                <h3 class="font-bold sm:text-32 text-2xl relative">
+                    v0.1.7
+                </h3>
+                <time
+                    class=" text-green text-sm font-medium uppercase sm:absolute right-8 top-8 sm:mt-0 mt-1.5 inline-block">OKTOBER,
+                    2025</time>
+
+                <div class="divide-y divide-green-50">
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <div class="relative mb-2 sm:block flex flex-col gap-2 items-start">
+                            <h3 class="font-bold sm:text-2xl text-base inline">
+                                What's Changed
+                            </h3>
+                            <span
+                                class="sm:text-sm text-xs bg-rose-100 text-rose font-bold sm:px-4 px-2.5 sm:py-2 py-1.5 rounded-full sm:ml-2 sm:absolute inline-block">Semper</span>
+                        </div>
+
+                        <h4 class="font-semibold sm:text-base text-sm">
+                            New Features
+                        </h4>
+                        <div class="text-sm">
+                            <ul class="space-y-2 text-sm leading-6">
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Eleifend nunc dui ullamcorper lectus at sociis. Gravida eget velit amet at tortor
+                                    duis. Convallis id pellentesque aenean orci vestibulum arcu nisi arcu. Egestas nulla
+                                    ullamcorper vulputate venenatis.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Feugiat convallis quam leo faucibus tristique sed vitae. Enim lectus consectetur eu
+                                    facilisi nullam. Ut leo morbi condimentum sed. Quis nibh ornare mi orci morbi sed.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Sit senectus nulla ullamcorper pretium ac vitae. Sem interdum elementum viverra in.
+                                    Sit sit tincidunt libero vestibulum amet consectetur mi. Nulla etiam urna placerat
+                                    id diam.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <h4 class="text-blue sm:text-2xl text-base font-bold flex items-center gap-3">
+                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.3537 4.95005C12.5638 5.73913 12.5638 7.5116 11.3537 8.30068L7.3845 10.8888L3.15851 13.0322C1.87008 13.6857 0.335071 12.7994 0.256782 11.3569L-3.93402e-07 6.62537L0.256782 1.89387C0.335071 0.451317 1.87008 -0.434922 3.15851 0.218555L7.3845 2.36192L11.3537 4.95005Z"
+                                    fill="#5DB9F5" />
+                            </svg>
+
+                            Assets <span
+                                class=" bg-sky-100/50 font-bold text-sky-200 rounded-full text-sm size-8 inline-flex items-center justify-center">2</span>
+                        </h4>
+                    </div>
+
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <h4 class="font-semibold">
+                            Contributors
+                        </h4>
+                        <div class="flex flex-wrap gap-3 font-semibold *:size-10 *:overflow-hidden *:rounded-full">
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                            <a href="#">
+                                <img src="https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg" alt="alt text" />
+                            </a>
+                        </div>
+                        <p class="text-sm pt-0">
+                            Tellus massa commodo at neque eget morbi mus porta mauris. Ac elementum natoque massa arcu
+                            tellus lorem eu hac amet.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+
+        <li class="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
+            <div class="absolute -bottom-12 left-0 top-0 flex sm:w-6 w-5 justify-center">
+                <div class="w-px bg-purple"></div>
+            </div>
+            <p class="-top-3 font-semibold absolute lg:block hidden -left-12 text-xs uppercase">AUG</p>
+            <div class="relative flex sm:size-6 size-5 flex-none items-center justify-center -mt-1">
+                <div class="sm:size-5 size-4 rounded-full bg-purple-100 flex items-center justify-center">
+                    <div class="size-1.5 rounded-full bg-purple">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white w-full shadow-5 rounded-[32px] rounded-tl-none sm:p-6 p-4 relative">
+                <h3 class="font-bold sm:text-32 text-2xl relative">
+                    v0.1.6
+                </h3>
+                <time
+                    class=" text-green text-sm font-medium uppercase sm:absolute right-8 top-8 sm:mt-0 mt-1.5 inline-block">August,
+                    2025</time>
+
+                <div class="divide-y divide-green-50">
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <div class="relative mb-2 sm:block flex flex-col gap-2 items-start">
+                            <h3 class="font-bold sm:text-2xl text-base inline">
+                                What's Changed
+                            </h3>
+                            <span
+                                class="sm:text-sm text-xs bg-rose-100 text-rose font-bold sm:px-4 px-2.5 sm:py-2 py-1.5 rounded-full sm:ml-2 sm:absolute inline-block">Semper</span>
+                        </div>
+                        <h4 class="font-semibold sm:text-base text-sm sm:mb-0 -mb-2.5">
+                            New Features
+                        </h4>
+                        <div class="text-sm space-y-2" x-data="{open:false}">
+                            <ul class="space-y-2 text-sm leading-6 relative" :class="!open && 'h-28 overflow-hidden'">
+                                <div x-show="!open" x-transition
+                                    class="bg-gradient-to-t from-white via-white/50 h-16 w-full absolute bottom-0">
+                                </div>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Eleifend nunc dui ullamcorper lectus at sociis. Gravida eget velit amet at tortor
+                                    duis. Convallis id pellentesque aenean orci vestibulum arcu nisi arcu. Egestas nulla
+                                    ullamcorper vulputate venenatis.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Feugiat convallis quam leo faucibus tristique sed vitae. Enim lectus consectetur eu
+                                    facilisi nullam. Ut leo morbi condimentum sed. Quis nibh ornare mi orci morbi sed.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Sit senectus nulla ullamcorper pretium ac vitae. Sem interdum elementum viverra in.
+                                    Sit sit tincidunt libero vestibulum amet consectetur mi. Nulla etiam urna placerat
+                                    id diam.
+                                </li>
+
+                            </ul>
+                            <ul class="space-y-2 text-sm leading-6 relative" x-show="open" x-collapse
+                                :class="!open && 'h-28 overflow-hidden'">
+
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Eleifend nunc dui ullamcorper lectus at sociis. Gravida eget velit amet at tortor
+                                    duis. Convallis id pellentesque aenean orci vestibulum arcu nisi arcu. Egestas nulla
+                                    ullamcorper vulputate venenatis.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Feugiat convallis quam leo faucibus tristique sed vitae. Enim lectus consectetur eu
+                                    facilisi nullam. Ut leo morbi condimentum sed. Quis nibh ornare mi orci morbi sed.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Sit senectus nulla ullamcorper pretium ac vitae. Sem interdum elementum viverra in.
+                                    Sit sit tincidunt libero vestibulum amet consectetur mi. Nulla etiam urna placerat
+                                    id diam.
+                                </li>
+
+                            </ul>
+                            <button type="button" @click="open = !open"
+                                class="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2">
+                                <span x-show="!open">See More</span>
+                                <span x-show="open">See Less</span>
+                                <svg class="size-3.5 mt-px transition-all" :class="open && 'rotate-180'" width="12"
+                                    height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.56859 8.25969C5.77951 9.46983 4.00704 9.46983 3.21796 8.25968L1.57727 5.74348L0.218515 3.06449C-0.434962 1.77606 0.451277 0.241051 1.89383 0.162762L4.89328 -2.09808e-05L7.89272 0.162762C9.33528 0.241051 10.2215 1.77606 9.56804 3.06449L8.20929 5.74348L6.56859 8.25969Z"
+                                        fill="#7573FF" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
+            <div class="absolute bottom-0 left-0 top-0 flex sm:w-6 w-5 justify-center">
+                <div class="w-px bg-purple"></div>
+            </div>
+            <div class="w-6 h-3/4 absolute bottom-0 bg-gradient-to-t from-white "></div>
+            <p class="-top-3 font-semibold absolute lg:block hidden -left-12 text-xs uppercase">SEP</p>
+            <div class="relative flex sm:size-6 size-5 flex-none items-center justify-center -mt-1">
+                <div class="sm:size-5 size-4 rounded-full bg-purple-100 flex items-center justify-center">
+                    <div class="size-1.5 rounded-full bg-purple">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white w-full shadow-5 rounded-[32px] rounded-tl-none sm:p-6 p-4 relative">
+                <h3 class="font-bold sm:text-32 text-2xl relative">
+                    v0.1.5
+                </h3>
+                <time
+                    class=" text-green text-sm font-medium uppercase sm:absolute right-8 top-8 sm:mt-0 mt-1.5 inline-block">September,
+                    2025</time>
+
+                <div class="divide-y divide-green-50">
+                    <div class="py-6 flex flex-col gap-3 last:pb-0">
+                        <div class="relative mb-2 sm:block flex flex-col gap-2 items-start">
+                            <h3 class="font-bold sm:text-2xl text-base inline">
+                                What's Changed
+                            </h3>
+                            <span
+                                class="sm:text-sm text-xs bg-rose-100 text-rose font-bold sm:px-4 px-2.5 sm:py-2 py-1.5 rounded-full sm:ml-2 sm:absolute inline-block">Semper</span>
+                        </div>
+                        <h4 class="font-semibold sm:text-base text-sm sm:mb-0 -mb-2.5">
+                            New Features
+                        </h4>
+                        <div class="text-sm space-y-2" x-data="{open:false}">
+                            <ul class="space-y-2 text-sm leading-6 relative" :class="!open && 'h-28 overflow-hidden'">
+                                <div x-show="!open" x-transition
+                                    class="bg-gradient-to-t from-white via-white/50 h-16 w-full absolute bottom-0">
+                                </div>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Eleifend nunc dui ullamcorper lectus at sociis. Gravida eget velit amet at tortor
+                                    duis. Convallis id pellentesque aenean orci vestibulum arcu nisi arcu. Egestas nulla
+                                    ullamcorper vulputate venenatis.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Feugiat convallis quam leo faucibus tristique sed vitae. Enim lectus consectetur eu
+                                    facilisi nullam. Ut leo morbi condimentum sed. Quis nibh ornare mi orci morbi sed.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Sit senectus nulla ullamcorper pretium ac vitae. Sem interdum elementum viverra in.
+                                    Sit sit tincidunt libero vestibulum amet consectetur mi. Nulla etiam urna placerat
+                                    id diam.
+                                </li>
+
+                            </ul>
+                            <ul class="space-y-2 text-sm leading-6 relative" x-show="open" x-collapse
+                                :class="!open && 'h-28 overflow-hidden'">
+
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Eleifend nunc dui ullamcorper lectus at sociis. Gravida eget velit amet at tortor
+                                    duis. Convallis id pellentesque aenean orci vestibulum arcu nisi arcu. Egestas nulla
+                                    ullamcorper vulputate venenatis.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Feugiat convallis quam leo faucibus tristique sed vitae. Enim lectus consectetur eu
+                                    facilisi nullam. Ut leo morbi condimentum sed. Quis nibh ornare mi orci morbi sed.
+                                </li>
+                                <li class="flex gap-2">
+                                    <img src="{{ $star.RelPermalink }}" alt="{{ i18n " altTexts.underline" }}"
+                                        class="size-4 mt-1.5 shrink-0">
+                                    Sit senectus nulla ullamcorper pretium ac vitae. Sem interdum elementum viverra in.
+                                    Sit sit tincidunt libero vestibulum amet consectetur mi. Nulla etiam urna placerat
+                                    id diam.
+                                </li>
+
+                            </ul>
+                            <button type="button" @click="open = !open"
+                                class="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2">
+                                <span x-show="!open">See More</span>
+                                <span x-show="open">See Less</span>
+                                <svg class="size-3.5 mt-px transition-all" :class="open && 'rotate-180'" width="12"
+                                    height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.56859 8.25969C5.77951 9.46983 4.00704 9.46983 3.21796 8.25968L1.57727 5.74348L0.218515 3.06449C-0.434962 1.77606 0.451277 0.241051 1.89383 0.162762L4.89328 -2.09808e-05L7.89272 0.162762C9.33528 0.241051 10.2215 1.77606 9.56804 3.06449L8.20929 5.74348L6.56859 8.25969Z"
+                                        fill="#7573FF" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+{{ end }}
