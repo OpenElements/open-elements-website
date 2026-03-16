@@ -180,14 +180,14 @@ flow: human configures wallet, agent generates key, payment provider registers k
 The agent calls a service and receives that is not free and needs to be payed. This could be done by an **HTTP 402**
 response (x402).
 
-A. The agent sends a payment transaction to the payment provider: *"Pay 35 USDC to address Y"*
-The agent signs the transaction with its private key.
-Today no spec exists that defines how the agent generates its own key pair.
-B. The payment provider uses the agent's public key to verify the signature and sends back a payment proof.
-The payment backend verifies the signature (by using the agent's public key) and budget, then executes the transfer.
-C. The payment provider informs the agent that the payment was successful.
-D. The user wallet checks the payment agent for any updates and get notified about the payment.
-E. The user receives a notification that the payment was successful.
+- A. The agent sends a payment transaction to the payment provider: *"Pay 35 USDC to address Y"*
+  The agent signs the transaction with its private key.
+  Today no spec exists that defines how the agent generates its own key pair.
+- B. The payment provider uses the agent's public key to verify the signature and sends back a payment proof.
+  The payment backend verifies the signature (by using the agent's public key) and budget, then executes the transfer.
+- C. The payment provider informs the agent that the payment was successful.
+- D. The user wallet checks the payment agent for any updates and get notified about the payment.
+- E. The user receives a notification that the payment was successful.
 
 A critical design decision: **the agent generates its own key pair** for each wallet relationship.
 The private key never leaves the agent.
