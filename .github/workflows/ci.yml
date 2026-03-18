@@ -2,47 +2,64 @@ name: CI
 
 on:
   push:
-    branches: [main, develop]
+    branches: ["main"]
   pull_request:
-    branches: [main, develop]
+    branches: ["main"]
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  ci:
+  build-and-test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Harden Runner
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: 20
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
         with:
-          version: 8
+          version: 10
+          run_install: false
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint (if available)
-        run: pnpm lint 2>/dev/null || echo "Lint script not found, skipping"
-        continue-on-error: true
+      - name: Run lint check
+        run: pnpm lint
 
-      - name: Type check (if available)
-        run: pnpm type-check 2>/dev/null || echo "Type check script not found, skipping"
-        continue-on-error: true
-
-      - name: Test (if available)
-        run: pnpm test 2>/dev/null || echo "Test script not found, skipping"
-        continue-on-error: true
-
-      - name: Build (if available)
-        run: pnpm build 2>/dev/null || echo "Build script not found, skipping"
-        continue-on-error: true
+      - name: Build Next.js application
+        run: pnpm build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
