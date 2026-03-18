@@ -154,6 +154,7 @@ Folgende Beiträge wurden im Java Blog bei Heise veröffentlicht:
 
 Weitere Publikationen:
 
+
 - [Eclipse Adoptium: Ein Leuchtturmprojekt für sichere und transparente Softwarelieferketten, Scott Fryer & Hendrik Ebbers](https://www.cloudland.org/de/news/details/java-aktuell-3-24-tools/)
 - [CI for Hedera based projects](https://dev.to/hendrikebbers/ci-for-hedera-based-projects-2nja)
 - [Gaming & Web3 - How an Open and Secure Future of Ownership in Games Could Look](https://dev.to/hendrikebbers/gaming-web3-how-an-open-and-secure-future-of-ownership-in-games-could-look-2ihf)
@@ -165,9 +166,11 @@ Open Elements wächst stetig und hat am 01.09.2024 mit Natascha Dönges eine wun
 ![Natascha Dönges](/posts/2025-01-16-open-elements-in-2024/natascha.jpg)
 
 Jessie Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
+Jessie Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
 Seit Mitte 2024 sind die beiden in Vollzeit für das Unternehmen tätig.
 
 ![Tayebwa Noah und Jessie Ssebuliba](/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg)
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Noah Tayebwa und Jessie Ssebuliba">}}
 
 In dieser Konstellation zeigt sich deutlich, wie sich die globale Zusammenarbeit an Open-Source-Projekten auswirken kann.
 Geschäftsführer Hendrik Ebbers hat das Potential der jungen Männer erkannt und beiden eine Stelle angeboten.

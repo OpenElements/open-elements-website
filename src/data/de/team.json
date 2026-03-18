@@ -3,8 +3,8 @@
     "id": "hendrik",
     "firstName": "Hendrik",
     "lastName": "Ebbers",
-    "link": "/employees/hendrik",
-    "bio": "Hendrik ist der Gründer von Open Elements. Als Java Champion und Mitglied verschiedener JSR-Expertengruppen und JavaOne-Stars verkörpert er die Leidenschaft und das Know-how, das unsere Firma ausmacht. Er engagiert sich aktiv in der Eclipse JakartaEE und Eclipse Adoptium Working Groups und ist zudem Mitglied im Board of Directors der Eclipse Foundation.",
+    "link": "/about-hendrik/",
+    "bio": "Hendrik Ebbers ist Gründer von Open Elements und Director of Open Source bei Hashgraph. Bei der Linux Foundation ist Hendrik Vorsitzender des Technical Steering Committee des Hiero-Projekts sowie stellvertretender Vorsitzender des LFDT Technical Advisory Board und Mitglied von AAIF-Arbeitsgruppen. Hendrik ist außerdem Mitglied des Board of Directors der Eclipse Foundation. Dort leitet er mehrere wichtige Open-Source-Projekte mit und arbeitet aktiv an ihnen mit, darunter Jakarta EE und Adoptium.",
     "picture": "/team/hendrik.jpg",
     "role": "Founder Open Elements",
     "visible": true
@@ -24,7 +24,7 @@
         "icon": "mdi:linkedin"
       }
     ],
-    "visible": true
+    "visible": false
   },
   {
     "id": "jessie",
@@ -149,7 +149,7 @@
         "icon": "mdi:linkedin"
       }
     ],
-    "visible": true
+    "visible": false
   },
   {
     "id": "sebastian",
