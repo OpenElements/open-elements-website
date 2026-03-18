@@ -62,7 +62,7 @@ test.describe('SEO', () => {
     expect(response?.status()).toBe(200);
     
     const content = await page.content();
-    expect(content).toContain('User-agent');
+    expect(content.toLowerCase()).toContain('user-agent');
   });
 
   test('sitemap.xml exists and is accessible', async ({ page, baseURL }) => {
