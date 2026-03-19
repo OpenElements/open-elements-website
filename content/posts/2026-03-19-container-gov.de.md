@@ -12,8 +12,6 @@ preview_image: "/posts/preview-images/open-source-2-green.svg"
 Open Elements gehört ab sofort zu den ausgewählten Organisationen, die gehärtete Container-Images für [container.gov.de](https://container.gov.de) bereitstellen dürfen.
 Neben dem [Zentrum für Digitale Souveränität (ZenDiS)](https://www.zendis.de) und dem [Auswärtigen Amt](https://www.auswaertiges-amt.de/de) ist Open Elements damit eine der ersten Entitäten, die in diese exklusive Gruppe aufgenommen wurde.
 
-Nach und nach werden weitere ausgewählte Firmen hinzugekommen, doch Open Elements war als **erstes privatwirtschaftliches Unternehmen** mit Fokus auf Open-Source-Technologie dabei.
-
 ## Was ist container.gov.de?
 
 Die **Secure Government Container Initiative (SGCI)** hinter container.gov.de stellt geprüfte, gehärtete und signierte Container-Images speziell für die deutsche öffentliche Verwaltung bereit.
