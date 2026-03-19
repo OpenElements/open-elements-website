@@ -1,7 +1,7 @@
 ---
 outdated: false
 showInBlog: true
-title: "Open Elements liefert gehärtete Container-Images für die deutsche Verwaltung"
+title: "Open Elements liefert gehärtete Software für die deutsche Verwaltung"
 date: 2026-03-19
 author: hendrik
 excerpt: "Open Elements ist neben ZenDiS und dem Auswärtigen Amt eine der ersten Entitäten, die gehärtete Container-Images für container.gov.de bereitstellen darf. Im Fokus: sichere Eclipse-Temurin-Images für alle Java-LTS-Versionen und die Open-Source-PaaS Coolify."
