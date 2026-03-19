@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/routing'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import mainMenu from '@/data/mainMenu.json'
 import social from '@/data/social.json'
 
@@ -13,31 +13,53 @@ interface NavbarProps {
 
 export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [illustrationOffset, setIllustrationOffset] = useState(0)
   const t = useTranslations()
   const pathname = usePathname()
 
   const otherLocale = locale === 'en' ? 'de' : 'en'
 
+  useEffect(() => {
+    const maxOffset = 180
+
+    const updateIllustrationOffset = () => {
+      const nextOffset = Math.min(window.scrollY, maxOffset)
+      setIllustrationOffset(nextOffset)
+    }
+
+    updateIllustrationOffset()
+    window.addEventListener('scroll', updateIllustrationOffset, { passive: true })
+
+    return () => window.removeEventListener('scroll', updateIllustrationOffset)
+  }, [pathname])
+
   return (
     <>
-      <div className="relative">
+      <div className="">
         <div className="container pt-16">
-          <div className="fixed inset-x-0 top-0 z-30 w-full bg-blue">
+          <div className={`fixed inset-x-0 top-0 z-30 w-full bg-blue ${pathname !== '/' ? 'border-b border-white/15' : ''}`}>
             {pathname !== '/' && (
-              <>   
-                <Image className="absolute w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block hidden"
-                  src="/illustrations/hero-bg-2.svg"
-                  alt="Description"
-                  width={500}
-                  height={300}
-                />
-                <Image className="absolute object-contain object-center w-full -mt-4 -z-10 pointer-events-none sm:hidden"
-                  src="/illustrations/bg-hero-mb.svg"
-                  alt="Description"
-                  width={500}
-                  height={300}
-                />
-              </>
+              <div
+                className="absolute inset-x-0 top-0 flex items-start w-full pointer-events-none"
+                style={{ transform: `translateY(-${illustrationOffset}px)` }}
+              >
+                <div className="w-full 2xl:shrink-0">
+                  <Image
+                    className="hidden w-full xl:mt-0 lg:block"
+                    src="/illustrations/hero-bg-2.svg"
+                    alt="Description"
+                    width={500}
+                    height={300}
+                  />
+                  <Image
+                    className="absolute inset-0 block object-cover object-center w-full md:-top-28 sm:-top-24 -top-10 lg:hidden"
+                    src="/illustrations/bg-hero-mb.svg"
+                    alt="Description"
+                    width={500}
+                    height={300}
+                  />
+                </div>
+              </div>
             )}
             <div className="mx-auto relative container-box">
               <nav className="flex items-center justify-between py-5">

@@ -162,7 +162,7 @@ export default async function PostPage({ params }: PostPageProps) {
               </div>
 
               {post.frontmatter.preview_image && (
-                <div className="rounded-[30px] overflow-hidden shadow-4">
+                <div className="rounded-[30px] overflow-hidden">
                   <div className="relative aspect-video">
                     <Image
                       src={post.frontmatter.preview_image}

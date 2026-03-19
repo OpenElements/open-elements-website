@@ -61,7 +61,7 @@ class ShortcodeRegistry {
       const width = attrs.width || '100%';
       const showCaption = attrs.showCaption !== 'false';
       
-      const imageHtml = `<img src="${src}" alt="${alt}" style="max-width: ${width}; height: auto; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);" />`;
+      const imageHtml = `<img src="${src}" alt="${alt}" style="max-width: ${width}; height: auto; border-radius: 0.75rem;" />`;
       const captionHtml = showCaption && alt ? `<p style="text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">${alt}</p>` : '';
       
       return `<div style="text-align: center; margin: 2rem 0;">${imageHtml}${captionHtml}</div>`;
