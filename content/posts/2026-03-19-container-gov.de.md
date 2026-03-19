@@ -6,7 +6,7 @@ date: 2026-03-19
 author: hendrik
 excerpt: "Open Elements ist neben ZenDiS und dem Auswärtigen Amt eine der ersten Entitäten, die gehärtete Container-Images für container.gov.de bereitstellen darf. Im Fokus: sichere Eclipse-Temurin-Images für alle Java-LTS-Versionen und die Open-Source-PaaS Coolify."
 categories: [Open Elements, Open-Source, Security]
-preview_image: "/posts/preview-images/security-green.svg"
+preview_image: "/posts/preview-images/open-source-2-green.svg"
 ---
 
 Open Elements gehört ab sofort zu den ausgewählten Organisationen, die gehärtete Container-Images für [container.gov.de](https://container.gov.de) bereitstellen dürfen.
