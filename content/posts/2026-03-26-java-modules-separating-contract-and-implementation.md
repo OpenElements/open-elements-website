@@ -18,7 +18,7 @@ Java Modules provide an elegant solution: separate the domain types into their o
 
 ## The problem: mixed concerns
 
-After Blog 2, the core module looks like this:
+After the [previous article]({{< relref "posts/2026-03-12-java-modules-encapsulation-internal-packages" >}}), the core module looks like this:
 
 ```java
 module com.openelements.showcases.analyzer.core {
@@ -68,7 +68,7 @@ It is a pure contract that any module can depend on without pulling in implement
 
 The `Document` and `Statistics` types moved from `com.openelements.showcases.analyzer.core.model` to `com.openelements.showcases.analyzer.api`.
 
-**NOTE:** In Blog 1 and Blog 2, a separate `DocumentReader` class in the core module handled reading files from disk.
+**NOTE:** In the [first]({{< relref "posts/2026-01-27-java-modules-maven4-basics" >}}) and [previous]({{< relref "posts/2026-03-12-java-modules-encapsulation-internal-packages" >}}) articles, a separate `DocumentReader` class in the core module handled reading files from disk.
 With the API/core split, `DocumentReader` remains in the core module — and any module that needs to read a `Document` from disk must depend on core.
 This becomes a problem when consumers should depend only on the API.
 The clean alternative — a `DocumentReader` interface in the API module with an implementation in core — would require its own service wiring and add complexity.
@@ -135,12 +135,12 @@ The key change is `requires transitive com.openelements.showcases.analyzer.api`.
 This means the API types appear in core’s exported signatures — `TextAnalyzer.analyze(Document)` returns `Statistics` — so consumers of core automatically need access to the API module.
 The `transitive` keyword makes this explicit and automatic.
 
-The `TextAnalyzer` class itself is unchanged — it still delegates to the internal `TextNormalizer` encapsulated in Blog 2.
+The `TextAnalyzer` class itself is unchanged — it still delegates to the internal `TextNormalizer` encapsulated in the [previous article]({{< relref "posts/2026-03-12-java-modules-encapsulation-internal-packages" >}}).
 Only its imports changed from `core.model.Document` to `api.Document`, and likewise for `Statistics`.
 
 ## How `requires transitive` works
 
-The command-line module’s descriptor has _not changed_ from Blog 2:
+The command-line module’s descriptor has _not changed_ from the [previous article]({{< relref "posts/2026-03-12-java-modules-encapsulation-internal-packages" >}}):
 
 ```java
 module com.openelements.showcases.analyzer.cli {
@@ -254,6 +254,24 @@ git clone https://github.com/support-and-care/maven-modular-sources-showcases # 
 cd maven-modular-sources-showcases
 git checkout blog-3-api-impl
 ```
+
+## Building and running
+
+As described in the [first article]({{< relref "posts/2026-01-27-java-modules-maven4-basics" >}}), compile and prepare the dependencies:
+
+```bash
+./mvnw prepare-package
+```
+
+Then run the application:
+
+```bash
+java --module-path "target/classes:target/lib" \
+     --module com.openelements.showcases.analyzer.cli/com.openelements.showcases.analyzer.cli.AnalyzerCommand \
+     README.*
+```
+
+The output is unchanged from the [previous article]({{< relref "posts/2026-03-12-java-modules-encapsulation-internal-packages" >}}) — the API extraction is an internal restructuring that does not affect runtime behavior.
 
 ## Summary
 
