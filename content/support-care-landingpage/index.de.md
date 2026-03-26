@@ -1,161 +1,233 @@
 ---
-title: "Support & Care"
-description: "Erhalten Sie umfassenden Open Source Support ✔ Updates ✔ Webinare ✔ direkter Support ✔ Wartungsservice für eine sichere und effiziente Infrastruktur."
+title: "Support & Care -- Professionelle Betreuung für geschäftskritische Java-Komponenten"
+description: "Support & Care by Open Elements: Professionelle Wartung, Sicherheitsupdates und Long Term Support für Apache Maven, JUnit, Log4j, Apache Commons und Eclipse Temurin. CRA-konform. Direkt von den Maintainern."
 layout: "single"
 url: "/de/about-support-care"
 aliases: ['/de/javaland-2024/support-care']
 newsletterPopup: true
 ---
 
-Support & Care ist ein Programm zur nachhaltigen Weiterentwicklung, Stabilisierung und **Support von Open Source Software (OSS)**.
-Hierbei arbeitet Open Elements sowohl mit der Industrie als auch mit der Open Source Community zusammen, um die Qualität,
-Unabhängigkeit und Entwicklung von kritischen Open Source Projekten und Komponenten sicherzustellen.
+# Ihre Java-Basis professionell betreut
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-logo.svg" alt="Support & Care Logo" width="80%" >}}
+**Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Okosystem -- direkt von den Maintainern.**
 
-## Warum Open Source für unser heutiges Leben so wichtig ist
+Moderne Software besteht zu uber 70 % aus Open-Source-Komponenten.
+Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich -- einschliesslich aller OSS-Abhangigkeiten.
+Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung uber Build-Tools bis zur Teststrategie.
 
-Open Source gewährleistet die Qualität, Sicherheit und Fortschrittlichkeit von Software, fördert die Gemeinschaft und
-bietet wirtschaftliche und soziale Vorteile. [Diese Vorzüge bietet Open Source](https://opensource.com/resources/what-open-source)
-sowohl für Einzelpersonen, Unternehmen als auch für die gesamte Gesellschaft.
-Es ist daher im Interesse aller, OSS-Projekte finanziell zu unterstützen.
-Aufgrund der Fülle der Vorteile wollen wir uns hier auf 4 wichtige Teilaspekte konzentrieren:
+{{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
+{{< centered-button link="#unsere-leistungen"  >}}Leistungen entdecken{{</ centered-button >}}
 
+TODO: LOGO SUPPORT & CARE
 
-- **Wissensteilung und Bildung:** Open Source Projekte sind oft nicht nur Softwarelösungen, sondern auch Bildungsressourcen.
-  Interessierte können den Code studieren, daraus lernen und sich weiterbilden.
-  Damit fördert Open Source den Wissensaustausch und ermöglicht es vielen, technische Fähigkeiten zu erwerben und zu vertiefen.
-- **Vertrauen durch Transparenz:** Da der Quellcode von OSS öffentlich zugänglich ist, kann jede Person ihn überprüfen.
-  Dies schafft ein hohes Maß an Vertrauen, da eventuelle Mängel oder versteckte Funktionen sichtbar sind.
-- **Unabhängigkeit von einzelnen Anbietern:** OSS verringert die Abhängigkeit von einzelnen Softwareanbietern und deren
-  Geschäftsmodellen.
-  Besonders in kritischen Infrastrukturen ist das wichtig, um sicherzustellen, dass Anwendungen und Systeme auch in
-  Zukunft betrieben werden können.
-- **Soziale Gerechtigkeit:** Open Source Software ist oft für jeden zugänglich, unabhängig von finanziellen Mitteln.
-  OSS-Projekte ermöglichen es Menschen aus allen sozialen und wirtschaftlichen Hintergründen,
-  Zugang zu Technologie und Bildung zu haben.
+TODO: LOGOS DER UNTERSTÜTZTEN KOMPONENTEN
 
-{{< centered-image src="os-benefits-de.png" showCaption="true" alt="Ergebnis zur Umfrage bzgl. Vorteilen von Open Source bei mittelständischen Unternehmen" width="80%" >}}
+## Das Problem: Unsichtbare Abhangigkeiten
 
-### Bedeutung von Open Source Support
+Ein einfaches Java-Projekt mit Spring Boot bringt uber 70 transitive Abhangigkeiten mit -- die meisten davon Open Source.
+Ihr individueller Code ist nur die Spitze des Eisbergs.
+Darunter liegen Laufzeitumgebungen, Build-Tools, Logging-Frameworks, Test-Bibliotheken und Utility-Libraries, die den eigentlichen Betrieb Ihrer Anwendung tragen.
 
-Um die langfristige Nachhaltigkeit von Open Source Projekten zu gewährleisten, ist es entscheidend, diese finanziell
-zu unterstützen.
-Viele Entwickler und Maintainer arbeiten freiwillig an diesen Projekten, oft ohne finanzielle Kompensation.
-Durch einen Open Source Support können diese Projekte kontinuierlich weiterentwickelt und verbessert werden.
-Zudem ermöglicht Open Source Support es den Entwicklern, sich stärker auf die Qualität und Sicherheit der Software
-zu konzentrieren und schneller auf Sicherheitslücken oder Fehler zu reagieren.
-Die Unterstützung schafft auch Anreize für neue Entwickler, sich zu beteiligen und innovative Lösungen zu entwickeln.
-Kurz gesagt, finanzielle Unterstützung trägt dazu bei, die Open Source Gemeinschaft lebendig und produktiv zu halten,
-was letztlich allen zugutekommt.
+TODO: **Umfragen? Analysen? zeigen: 70 % von Software basiert auf OSS und liegt somit ausserhalb Ihrer Kontrolle**
 
-{{< centered-image src="tree.png" alt="Illustration bzgl. Zusammenarbeit" width="80%" >}}
+Diese Basiskomponenten werden häufig von einzelnen Entwicklern in ihrer Freizeit gepflegt.
+Gleichzeitig tragen sie den Grossteil der technischen Risiken:
+Sicherheitslucken, transitive Abhangigkeiten, fehlende Dokumentation und Compliance-Verantwortung.
 
-Die [aktive Beteiligung an Open-Source-Projekten](https://hbswk.hbs.edu/item/the-hidden-benefit-of-giving-back-to-open-source-software)
-ermöglicht es den Unternehmen, wertvolle Einblicke und technologische Fortschritte zu gewinnen, was den langfristigen
-Erfolg und die Wettbewerbsfähigkeit fördert, während gleichzeitig die Open-Source-Community gestärkt wird.
+**Was das fur Sie bedeutet:**
+- Schwachstellen in Basiskomponenten bleiben oft unbemerkt, bis es zu spat ist
+- Framework-Support allein schutzt nicht vor Lucken in der Basis -- das hat Log4Shell TODO LINK eindeutig gezeigt
+- Der CRA macht Sie ab 2027 fur die gesamte Software-Lieferkette haftbar
 
-## Wie Support & Care Open Source Software fördert
+TODO: BILD EISBERG MIT SCHICHTEN
 
-Mit **Support & Care** hat Open Elements gezielt ein Programm zur **fairen und leichtgewichtigen Förderung**
-von Open Source gestartet.
-Support & Care hilft hierbei sowohl den Open Source Projekten als auch den Personen hinter diesen Projekten.
-Wir konzentrieren uns in unserem Support auf Projekte in der Programmiersprache Java.
-Diese Spezialisierung ist sinnvoll, weil sie es uns ermöglicht, unsere tiefgreifende Expertise in einer
-bestimmten Programmiersprache anzuwenden.
-Dadurch können wir effizientere und qualitativ hochwertigere Unterstützung für die spezifischen Anforderungen und
-Herausforderungen bieten, die in kritischen Java-basierten Open-Source-Projekten auftreten.
+## Die betreuten Komponenten {ANCHOR #komponenten}
 
-Mit kritischer OSS sind hierbei Projekte gemeint, die in einer Vielzahl von kritischen System und Anwendungen
-in Branchen wie Banken, Gesundheit, Politik als Abhängigkeiten enthalten sind.
-Ein Beispiel hierfür ist die Java Distribution Eclipse Temurin, welche mit über 500.000 Downloads die meistgenutzte
-Java Laufzeitumgebung ist, oder Apache Maven, dessen Hauptkomponenten im letzten Jahr an die 2 Milliarden mal
-heruntergeladen wurden.
-Für beide Projekte bietet Open Elements mit Support & Care eine Lösung an, um im professionellen Umfeld die
-Produkte bedenkenlos einsetzen zu können.
+Support & Care betreut gezielt fünf geschäftskritischste Open-Source-Basiskomponenten des Java-Okosystems.
+Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendung.
 
-Zur Förderung von OSS arbeitet Open Elements aktiv an den Projekten mit.
-So ist Open Elements beispielsweise Mitglied der Arbeitsgruppe hinter Eclipse Temurin – unser Geschäftsführer
-Hendrik Ebbers war sogar Gründungsmitglied – und hat den Leiter der Entwicklung von Maven
-(Chair des Project Management Committee) unter Vertrag.
+**Eclipse Temurin -- Java-Runtime**
+- Fuhrende herstellerunabhangige OpenJDK-Distribution weltweit
+- Uber 500.000 Downloads pro Tag
+- TCK-zertifiziert, AQAvit-verifiziert, Community-getragen
+- **Abgedeckt:** Laufzeitumgebung fur Ihre Java-Anwendungen
 
-{{< centered-image src="roundtable.png" alt="Illustration bzgl. Aufgabenteilung" width="80%" >}}
+**Apache Maven -- Build & Dependency Management**
+- Uber 75 % aller Java-Projekte setzen auf Maven
+- Ca. 2 Milliarden Downloads jahrlich
+- **Abgedeckt:** Build-Pipeline, Dependency-Management, Projektstruktur
 
-Unsere [Open Source Strategie](https://www.linuxfoundation.org/resources/open-source-guides/setting-an-open-source-strategy)
-zielt darauf ab, durch finanzielle Förderung und aktive Mitarbeit an den Projekten deren Ausrichtung zu verbessern und
-eine Unterfinanzierung bzw. schlechte Wartung sowie Sicherheit dieser kritischen OSS zu unterbinden.
-Durch die gezielte Anwendung dieser Strategie können wir die im Support & Care Programm aufgenommen Projekte wegweisend
-verbessern und sicherstellen, dass Entwickler weiterhin in der Lage sind, ihre wichtige Arbeit ohne finanzielle
-Rückschläge fortzuführen.
-Denn auch wenn Open Source ein wachsender Markt ist: Ohne finanzielle Rücklagen könnten dessen Entwickler gezwungen sein,
-ihre Arbeit an den Projekten zu reduzieren oder ganz einzustellen.
+**JUnit -- Testframework**
+- Uber 1 Milliarde Downloads pro Monat
+- Ca. 85 % Marktanteil im Java-Okosystem
+- **Abgedeckt:** Teststrategie, Qualitätssicherung, CI/CD-Integration
 
-## Warum Open Elements der richtige Partner zur Förderung von OSS ist
+**Apache Log4j -- Logging**
+- Ca. 76 % aller Java-Anwendungen nutzen Log4j
+- Geschäftskritisch fur Protokollierung, Monitoring und Fehleranalyse
+- **Abgedeckt:** Logging-Infrastruktur, Sicherheitsuberwachung
 
-Das Ziel von Support & Care ist die ganzheitliche Förderung und Unterstützung von OSS anstelle “nur” finanzieller
-Spenden oder Mitarbeit zu liefern.
-Unsere jahrelange Erfahrung in der Open-Source-Entwicklung hat uns die entscheidende Bedeutung dieses Supports
-aufgezeigt.
-Aus diesem Grund wurde Open Elements als ein Unternehmen gegründet, das OSS sowohl aus der technischen als auch aus
-wirtschaftlichen und organisatorischen Perspektiven betrachtet und fördert. 
+**Apache Commons -- Standard-Libraries**
+- Ca. 49 % der Java-Entwickler setzen Apache Commons aktiv ein
+- Modulare Sammlung: Lang, IO, Collections und weitere
+- **Abgedeckt:** Standardbibliotheken, wiederverwendbare Basisfunktionen
 
-Durch die Mitarbeit von Open Elements in Gremien wie der Eclipse Adoptium Working Group haben wir Erfahrung mit
-großen bzw. kritischen Open Source Projekten und kennen deren Probleme und Herausforderungen.
-Diese Kenntnisse werden mit der Mitgliedschaft von unserem Geschäftsführer im Aufsichtsrat der Eclipse Foundation
-unterstrichen.
-Aufgrund unserer Firmenstruktur sind wir aber so dynamisch, dass wir auch mit kleinen Open Source Projekten einfach
-zusammenarbeiten können und diese z. B. über Github Sponsorship unterstützen, Newcomern helfen oder aktiv Beiträge
-zum Quelltext der Projekte liefern. 
+**Kurz gesagt: Die essentielle Basis der technischen Vertrauenskette Ihrer Java-Anwendungen.**
 
-Durch all diese Punkte ist Open Elements ein perfektes Bindeglied zwischen Open Source und Wirtschaft.
+## Wo Support & Care ansetzt
 
-## Wie Support & Care ihrem Unternehmen helfen kann
+Java-Anwendungen lassen sich in drei Schichten gliedern:
 
-Die Bereitstellung von Support Modellen für Open Source Software ist mittlerweile ein beliebtes Geschäftsmodell.
-Anders als viele Firmen bietet Support & Care aber nicht einfach nur Support für eigene Open Source Produkte an.
-Wir suchen explizit OSS, die verstärkt im Enterprise Bereich eingesetzt wird und dort oft als sicherheitskritisch
-eingestuft ist.
-Zusammen mit den Entwicklern hinter diesen Open Source Projekten schafft das Support & Care Programm ein Bindeglied,
-um sowohl die Projekte zu unterstützen als auch explizit auf die Wünsche und Bedürfnisse von Support & Care Kunden
-einzugehen. 
+TODO: Bild der Pyramide
 
-Dabei handelt es sich nicht nur um die transparente Bearbeitung von technischen Tickets durch die jeweiligen Experten
-der Projekte, sondern auch um die Aufbereitung und Transformation von Wissen.
-Support & Care Kunden erhalten Benachrichtigungen über wichtige Sicherheitsupdates, Fixes und Releases und werden zu
-regelmäßig stattfindenden Workshops und Infoveranstaltungen eingeladen. So können die Nutzer der OSS ihre eigenen
-Bedürfnisse und Interessen auf kurzem Weg in die Projekte einbringen.
-Durch diese Maßnahmen fördert Open Elements aktiv das Prinzip der Gemeinschaftsbildung für die jeweiligen Projekte:
-Gemeinschaften, bestehend aus Entwicklern, Nutzern und anderen Beteiligten, können gemeinsam die
-Innovationen vorantreiben.
+1. **Anwendungsspezifischer Code** 
+   Ihr individueller Geschafts- und Fachlogik-Code. Diese Ebene ist hochst wertvoll, aber relativ klein im Umfang -- sie baut auf Frameworks und Basistechnologien auf.
 
-{{< centered-image src="networking.png" alt="Illustration bzgl. Aufgabenteilung" width="80%" >}}
+2. **Frameworks & Anwendungsplattformen** 
+   Spring Boot, Quarkus, Jakarta EE und andere. Fur diese Ebene gibt es vielfach kommerziellen Support der jeweiligen Anbieter.
 
-### Welche Leistungen umfasst der Open Source Support?
-
-Der Open Source Support & Care-Service bietet umfassende Leistungen zur Sicherstellung der Performance und Sicherheit
-Ihrer Anwendungen.
-Unsere Services gehen über klassisches Troubleshooting hinaus und fördern die nachhaltige Verbesserung Ihrer
-Infrastruktur.
-
-- **Updates zu Open Source Projekten:** Sie erhalten regelmäßige Berichte und detaillierte Informationen zu Major Releases,
-  Bugfix Releases und neuen Projekten, einschließlich Sicherheitsupdates und Critical Patch Updates (CPU).
-- **Webinare & Meetings:** Quartalsweise Webinare und 1-on-1 Calls bieten Ihnen aufbereitete Informationen und die
-  Möglichkeit, Fragen zu stellen und Bedürfnisse direkt in die Projekte einzubringen.
-- **Direkter Support:** Kunden haben jederzeit Zugang zu mehrsprachigem Support mit garantierten Reaktionszeiten und der
-  Möglichkeit für Video-Calls zur schnellen Problemlösung.
-- **Support-Bereiche:** Unser Service deckt verschiedene Open Source Projekte ab, beispielsweise im Rahmen unseres
-  [Temurin Support & Care Angebots]({{< relref "support-care-temurin" >}}) und unseres
-  [Maven Support & Care Angebots]({{< relref "support-care-maven" >}}).
-  Wir übernehmen die Ticketerstellung, -pflege und -überwachung, um technische Probleme effizient zu lösen.
-- **Wartungsservice:** Unser Service umfasst die Wartung kundenspezifischer Docker-Container, die alle notwendigen
-  Komponenten für Ihre Anwendung enthalten und regelmäßig aktualisiert werden.
-  Die Container werden in einer Docker-Registry bereitgestellt und automatisch getestet.
-
-Je nach Bedarf lässt sich der Supportvertrag individuell anpassen.
-
-[Kontaktieren Sie uns]({{< relref "contact" >}}) für eine individuelle Beratung und erfahren Sie mehr darüber,
-wie unser Open Source Support & Care-Service Ihre IT-Infrastruktur verbessern kann.
-
-{{< centered-button link="/contact"  >}}Beratungstermin vereinbaren{{</ centered-button >}}
+3. **Basiskomponenten** -- **Hier setzt Support & Care an.**
+   Laufzeitumgebung, Build- und Dependency-Management, Standardbibliotheken, Logging- und Test-Frameworks. Diese Komponenten kommen in praktisch jedem Java-Projekt vor -- doch professionellen Support gibt es dafur bisher kaum.
 
 
+**Framework-Support allein reicht nicht. Die Log4Shell-Schwachstelle hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen -- trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.**
+
+## Unsere Leistungen
+
+Alle Leistungen werden direkt von den Maintainern und Committern der betreuten Projekte erbracht -- nicht von einem nachgelagerten Support-Team.
+
+TODO: LAYOUT mit Bildern / RASTER
+
+- **Long Term Support (LTS)**: Weiterfuhrung fur die wichtigsten Versionen zur besseren Planung und Organisation Ihrer Updates. Sie mussen keine unsicheren oder nicht gewarteten Versionen einsetzen.
+- **Sicherheitsupdates & Bugfixes**: Fruhzeitige Informationen und Benachrichtigungen zu Schwachstellen und Patches. Schnelle Reaktionszeiten durch direkten Zugang zu den Entwicklern.
+- **Dokumentation & Transparenz**: Unterstutzung bei SBOM-Strategien und technischer Dokumentation -- auf Deutsch oder Englisch. Transparente Nachvollziehbarkeit aller Anderungen.
+- **Workshops & Beratung**_ Direkter Austausch mit den Maintainern und Committern der Projekte -- auf Deutsch oder Englisch. Individuelle Beratung zu Migration, Best Practices und Architekturentscheidungen.
+- **Regelmassige Webinare & Statusupdates**: Quartalsweise Webinare zu aktuellen Sicherheitsrisiken, wichtigen Versionsanderungen, Best-Practice-Empfehlungen und konkreten Auswirkungen auf Ihre OSS-Lieferkette.
+- **Kundenspezifische Builds & Tooling**: Massgeschneiderte Umsetzungen direkt durch die Maintainer -- von speziellen Build-Konfigurationen bis zu individualisierten Tooling-Losungen.
+
+### Vorbereitet auf den Cyber Resilience Act
+
+Ab 2027 sind Hersteller im Rahmen des Cyber Resilience Act (CRA) fur 100 % ihrer Software verantwortlich -- einschliesslich aller Open-Source-Abhangigkeiten.
+Das betrifft Patchzeiten, Schwachstellenmanagement, Dokumentation und langfristige Wartbarkeit.
+Open Elements agiert als Open-Source-Steward und gestaltet die regulatorischen Rahmenbedingungen aktiv mit.
+Als Grundungsmitglied der **Open Regulatory Compliance Working Group (ORC WG)** der Eclipse Foundation arbeiten wir gemeinsam mit fuhrenden Open-Source-Foundations, grossen Technologieunternehmen und Vertretern der EU an konkreten Spezifikationen und Praxisleitfaden zur CRA-Umsetzung.
+
+**Support & Care hilft Ihnen konkret bei:**
+- Deutliche Reduzierung von Patchzeiten
+- Systematische Schwachstellenuberwachung
+- Planbare Verfugbarkeit von Updates
+- Sicherstellung von Dokumentation und Transparenz (inkl. SBOM)
+- Langfristige Wartbarkeitsgarantie
+- Perspektivisch: CRA-konforme Attestierungen fur betreute Projekte
+
+**Open Elements ist Grundungsmitglied der ORC WG und arbeitet direkt an den Best Practices, die definieren, wie CRA-Compliance fur Open-Source-Software umgesetzt wird. Diese Expertise fliesst unmittelbar in Support & Care ein.**
+
+### Gehärtete Container für Staat und Verwaltung
+
+Auch das ist Support & Care: Gehärtete Container fur die deutsche Verwaltung
+
+Open Elements gehort zu einer exklusiven Gruppe von Organisationen, die gehärtete Container-Images fur **container.gov.de** bereitstellen durfen -- neben dem Zentrum fur Digitale Souveranitat (ZenDiS) und dem Auswartigen Amt.
+Für Support & Care Kunden bedeutet das: Die gehärteten Eclipse-Temurin-Images für alle aktuellen Java-LTS-Versionen (Java 11, 17, 21, 25+) sind Teil des Leistungsumfangs.
+Verifiziert, signiert und kontinuierlich gegen aktuelle Schwachstellendatenbanken abgeglichen.
+
+**Was gehärtete Container auszeichnet:**
+- Verifizierte Herkunft und Qualitätssicherung
+- Aktuelle Abhängigkeiten ohne bekannte Schwachstellen
+- Software Bill of Materials (SBOM) fur volle Transparenz
+- Kryptographische Signierung gegen Manipulation
+- Minimierte Angriffsflache durch systematisches Hardening
+
+TODO: BILD OE LIEFERT CONTAINER
+
+## Mehr als nur Support: Unser Modell
+
+Support & Care funktioniert anders als klassischer Vendor-Support.
+Sie tragen gemeinsam mit uns die laufenden Pflege- und Verbesserungsaufwande fur die betreuten Open-Source-Komponenten -- offen, nachvollziehbar und messbar.
+
+Hier folgt Support & Care drei wichtigen Prinzipien:
+
+- **1. Gelder fliessen direkt an die Maintainer**: Statt oberflachliche Support-Schichten daruber zu legen, investieren wir in die Vitalitat des jeweiligen Projekt-Kerns. Die Menschen, die den Code tatsachlich pflegen, Sicherheitsupdates bereitstellen und neue Features entwickeln, werden direkt bezahlt.
+- **2. Ihre Prioritaten in den Roadmaps**: Kundenanforderungen werden aktiv in die Entwicklungs-Roadmaps der betreuten Projekte integriert. So spiegeln Weiterentwicklungen direkt reale Unternehmensbedurfnisse wider.
+- **3. Proaktive Kommunikation**: Sie werden nicht nur bei Problemen informiert, sondern kontinuierlich uber relevante Entwicklungen auf dem Laufenden gehalten:
+  - Sicherheitswarnungen und neue Patches
+  - Geplante API- oder Major-Version-Anderungen
+  - Empfehlungen zu Versionsupdates und Abhangigkeitsbereinigungen
+  - Trends und Risiken im OSS-Okosystem
+
+> Nicht genutzte Support-Stunden verfallen nicht -- sie fliessen direkt in die Weiterentwicklung der Open-Source-Komponenten. Jede Subscription starkt die Projekte, auf die Sie sich verlassen.
+
+Hierbei liefern wir flexible Leistungsmodelle für nachhaltige Sicherheit.
+Wählen Sie das Modell, das zu Ihren Anforderungen in Verfügbarkeit, Compliance und SLA passt.
+
+TODO: MODELL als gestyltes HTML
+
+{{< centered-button link="/contact"  >}}Preise und individuelle Beratung anfragen{{</ centered-button >}}
+
+## Warum Open Elements
+
+Wir sind die Maintainer -- nicht nur Berater:
+Unsere Mitarbeiter sind keine externen Consultants, die Projekte erst kennenlernen müssen.
+Sie sind die Menschen, die diese Projekte pflegen, weiterentwickeln und in den Foundations mitgestalten.
+
+TODO: Bild Personen mit Position
+
+Open Elements ist ein bekanntes und aktives Mitglied der Open Source Community und arbeitet nicht nur auf technischer Basis sondern auch auf Leitender Ebene in vielen Open Source Foundation mit:
+
+TODO: Später Logo der Foundation und dann text
+
+- Eclipse Foundation: Wir sind im Board der Eclipse Foundation vertrehten und aktives Mitglied in Arbeitsgruppen wie Eclipse Adoptium, Eclipse JakartaEE oder ORGWG.
+- Linux Foundation: TODO
+- Apache Foundation: TODO
+
+> Open Source -- aber richtig. Unsere Einnahmen aus Support & Care fliessen direkt in die betreuten Open-Source-Projekte.
+
+## 12. Haufig gestellte Fragen
+
+**Ist Support & Care nur fur Apache Maven?**
+Nein.
+Support & Care deckt fünf geschäftskritische Java-Basiskomponenten ab: Eclipse Temurin, Apache Maven, JUnit, Apache Log4j und Apache Commons.
+Das Programm startete 2024 mit Maven und wurde seitdem kontinuierlich erweitert.
+
+**Wer leistet den Support?**
+Committer und Maintainer der jeweiligen Open-Source-Projekte -- die Personen, die den Code tatsachlich schreiben und pflegen.
+Kein nachgelagertes Support-Team, sondern direkter Zugang zu den Experten.
+
+**Was passiert mit meiner Subscription-Gebühr?**
+Die Einnahmen fliessen transparent und nachvollziehbar in die betreuten Open-Source-Projekte:
+Bezahlung der Maintainer, Sicherheitsupdates, Bugfixes, Dokumentation und Infrastruktur.
+
+**Muss ich alle fünf Komponenten abonnieren?**
+Sprechen Sie uns an -- wir schneiden das Angebot auf Ihre konkreten Anforderungen zu.
+
+**Hilft Support & Care bei der CRA-Compliance?**
+Ja.
+Support & Care adressiert zentrale CRA-Anforderungen:
+Schwachstellenüberwachung, Patchzeiten, Dokumentation, SBOM und langfristige Wartbarkeit.
+Perspektivisch unterstutzen wir auch bei CRA-konformen Attestierungen.
+
+**In welchen Sprachen wird Support geleistet?**
+Deutsch und Englisch -- sowohl für Helpdesk-Anfragen als auch für Workshops, Beratung und Dokumentation.
+
+**Was ist der Unterschied zu Framework-Support (z.B. bei Spring Boot)?**
+Framework-Support deckt die mittlere Schicht Ihres Software-Stacks ab.
+Support & Care betreut die Basisschicht darunter: Laufzeit, Build-Tools, Logging, Testing und Utility-Libraries.
+Beides ergänzt sich -- Log4Shell (TODO:LINK) hat gezeigt, dass Framework-Support allein nicht ausreicht.
+
+## Sichern Sie die Basis Ihrer Java-Anwendungen
+
+Lassen Sie uns gemeinsam besprechen, wie Support & Care Ihre Software-Lieferkette absichert.
+Ob Privatwirtschaft oder offentliche Verwaltung -- wir finden das passende Modell für Sie.
+
+{{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
+
+Open Elements GmbH
+Gerhart-Hauptmann-Str. 49B
+51379 Leverkusen, Germany
+info@open-elements.de
+
+**Fussnoten:**
+1. Nicht genutzte Support-Stunden verfallen monatlich und fliessen in die Weiterentwicklung der betreuten Projekte.
+2. Werktage ohne Feiertage in NRW.
+3. Helpdesk DSGVO-konform und EU-gehostet.
+4. Expert:innen sind Committer und Maintainer der betreuten OSS-Projekte.
+5. Webinare und Calls per Videokonferenz.
