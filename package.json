@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.15.3",
+    "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "next": "^16.1.0",
     "next-intl": "^4.7.0",

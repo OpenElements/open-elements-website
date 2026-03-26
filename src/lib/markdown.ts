@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import GithubSlugger from 'github-slugger';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
-import { remarkHugoShortcodes } from './remark-hugo-shortcodes';
+import { transformHugoShortcodes } from './remark-hugo-shortcodes';
 
 // Path to the posts directory
 const postsDirectory = path.join(process.cwd(), 'content/posts');
@@ -37,6 +38,8 @@ const INTERNAL_HOSTNAMES = new Set([
 
 const EXTERNAL_LINK_ICON_HTML =
   '<span class="iconify inline" data-icon="mdi-open-in-new" aria-hidden="true"></span>';
+const HEADING_ANCHOR_ICON_HTML =
+  '<span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant" aria-hidden="true"></span>';
 
 /**
  * Get the filename for a post based on locale
@@ -179,6 +182,91 @@ function decorateExternalLinks(contentHtml: string): string {
   );
 }
 
+function decodeHtmlEntities(text: string): string {
+  const namedEntities: Record<string, string> = {
+    amp: '&',
+    apos: "'",
+    gt: '>',
+    lt: '<',
+    nbsp: ' ',
+    quot: '"',
+  };
+
+  return text.replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (entity, value: string) => {
+    const normalizedValue = value.toLowerCase();
+
+    if (normalizedValue.startsWith('#x')) {
+      const codePoint = Number.parseInt(normalizedValue.slice(2), 16);
+      return Number.isNaN(codePoint) ? entity : String.fromCodePoint(codePoint);
+    }
+
+    if (normalizedValue.startsWith('#')) {
+      const codePoint = Number.parseInt(normalizedValue.slice(1), 10);
+      return Number.isNaN(codePoint) ? entity : String.fromCodePoint(codePoint);
+    }
+
+    return namedEntities[normalizedValue] ?? entity;
+  });
+}
+
+function extractHeadingText(headingHtml: string): string {
+  return decodeHtmlEntities(headingHtml.replace(/<[^>]*>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function appendHtmlAttribute(attributes: string, attribute: string): string {
+  const normalizedAttributes = attributes.trimEnd();
+  return normalizedAttributes ? `${normalizedAttributes} ${attribute}` : ` ${attribute}`;
+}
+
+function ensureHtmlClass(attributes: string, className: string): string {
+  const classPattern = /\bclass\s*=\s*(["'])(.*?)\1/i;
+
+  if (classPattern.test(attributes)) {
+    return attributes.replace(classPattern, (_match, quote: string, classValue: string) => {
+      const classes = new Set(classValue.split(/\s+/).filter(Boolean));
+      classes.add(className);
+      return `class=${quote}${Array.from(classes).join(' ')}${quote}`;
+    });
+  }
+
+  return appendHtmlAttribute(attributes, `class="${className}"`);
+}
+
+function createHeadingAnchorHtml(headingId: string): string {
+  return `<a href="#${headingId}" class="inline ml-2" aria-label="Link to this section">${HEADING_ANCHOR_ICON_HTML}</a>`;
+}
+
+function decorateHeadlinesWithAnchors(contentHtml: string): string {
+  const slugger = new GithubSlugger();
+
+  return contentHtml.replace(
+    /<h([2-6])([^>]*)>([\s\S]*?)<\/h\1>/gi,
+    (fullMatch, level: string, attributes: string, headingContent: string) => {
+      if (/data-icon\s*=\s*(["'])mdi-link-variant\1/i.test(headingContent)) {
+        return fullMatch;
+      }
+
+      const headingText = extractHeadingText(headingContent);
+      if (!headingText) {
+        return fullMatch;
+      }
+
+      const existingIdMatch = attributes.match(/\bid\s*=\s*(["'])(.*?)\1/i);
+      const headingId = existingIdMatch?.[2] || slugger.slug(headingText);
+
+      let nextAttributes = attributes;
+      if (!existingIdMatch) {
+        nextAttributes = appendHtmlAttribute(nextAttributes, `id="${headingId}"`);
+      }
+      nextAttributes = ensureHtmlClass(nextAttributes, 'scroll-mt-10');
+
+      return `<h${level}${nextAttributes}>${headingContent}${createHeadingAnchorHtml(headingId)}</h${level}>`;
+    },
+  );
+}
+
 /**
  * Get all posts for a specific locale
  */
@@ -280,13 +368,16 @@ export async function getPostBySlug(
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    const transformedContent = transformHugoShortcodes(content);
+
     // Convert markdown to HTML
     const processedContent = await remark()
       .use(remarkGfm)
-      .use(remarkHugoShortcodes)
       .use(html, { sanitize: false })
-      .process(content);
-    const contentHtml = decorateExternalLinks(processedContent.toString());
+      .process(transformedContent);
+    const contentHtml = decorateHeadlinesWithAnchors(
+      decorateExternalLinks(processedContent.toString()),
+    );
 
     return {
       slug,

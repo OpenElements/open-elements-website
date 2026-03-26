@@ -73,6 +73,11 @@ class ShortcodeRegistry {
       const path = attrs._content || attrs.path || '';
       return `/${path.replace(/^\/+/, '')}`;
     });
+
+    this.register('ref', (attrs) => {
+      const path = attrs._content || attrs.path || '';
+      return `/${path.replace(/^\/+/, '')}`;
+    });
   }
 
   /**
@@ -88,6 +93,33 @@ class ShortcodeRegistry {
     };
     return text.replace(/[&<>"']/g, (char) => escapeMap[char] || char);
   }
+}
+
+function replaceShortcodes(text: string, registry: ShortcodeRegistry): string {
+  const shortcodes = ShortcodeParser.parse(text);
+
+  if (shortcodes.length === 0) {
+    return text;
+  }
+
+  let result = text;
+
+  // Process in reverse order to maintain correct indices
+  for (let i = shortcodes.length - 1; i >= 0; i--) {
+    const shortcode = shortcodes[i];
+    const handler = registry.getHandler(shortcode.name);
+
+    if (handler) {
+      const replacement = handler(shortcode.attributes);
+      result = result.slice(0, shortcode.startIndex) + replacement + result.slice(shortcode.endIndex);
+    }
+  }
+
+  return result;
+}
+
+export function transformHugoShortcodes(text: string): string {
+  return replaceShortcodes(text, new ShortcodeRegistry());
 }
 
 /**
@@ -165,25 +197,7 @@ export const remarkHugoShortcodes: Plugin<[], Root> = () => {
         return;
       }
 
-      const shortcodes = ShortcodeParser.parse(node.value);
-
-      if (shortcodes.length === 0) {
-        return;
-      }
-
-      // Process shortcodes and build replacement string
-      let result = node.value;
-      
-      // Process in reverse order to maintain correct indices
-      for (let i = shortcodes.length - 1; i >= 0; i--) {
-        const shortcode = shortcodes[i];
-        const handler = registry.getHandler(shortcode.name);
-
-        if (handler) {
-          const html = handler(shortcode.attributes);
-          result = result.slice(0, shortcode.startIndex) + html + result.slice(shortcode.endIndex);
-        }
-      }
+      const result = replaceShortcodes(node.value, registry);
 
       // Replace text node with HTML node if changes were made
       if (result !== node.value) {
