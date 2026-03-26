@@ -1,18 +1,18 @@
----
-title: "Support & Care -- Professionelle Betreuung für geschäftskritische Java-Komponenten"
+—-
+title: "Support & Care — Professionelle Betreuung für geschäftskritische Java-Komponenten"
 description: "Support & Care by Open Elements: Professionelle Wartung, Sicherheitsupdates und Long Term Support für Apache Maven, JUnit, Log4j, Apache Commons und Eclipse Temurin. CRA-konform. Direkt von den Maintainern."
 layout: "single"
 url: "/de/about-support-care"
 aliases: ['/de/javaland-2024/support-care']
 newsletterPopup: true
----
+—-
 
 # Ihre Java-Basis professionell betreut
 
-**Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Okosystem -- direkt von den Maintainern.**
+**Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Okosystem — direkt von den Maintainern.**
 
 Moderne Software besteht zu uber 70 % aus Open-Source-Komponenten.
-Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich -- einschliesslich aller OSS-Abhangigkeiten.
+Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich — einschliesslich aller OSS-Abhangigkeiten.
 Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung uber Build-Tools bis zur Teststrategie.
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem auto;">
@@ -32,7 +32,7 @@ Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebun
 
 ## Das Problem: Unsichtbare Abhängigkeiten
 
-Ein einfaches Java-Projekt mit Spring Boot bringt uber 70 transitive Abhangigkeiten mit -- die meisten davon Open Source.
+Ein einfaches Java-Projekt mit Spring Boot bringt uber 70 transitive Abhangigkeiten mit — die meisten davon Open Source.
 Ihr individueller Code ist nur die Spitze des Eisbergs.
 Darunter liegen Laufzeitumgebungen, Build-Tools, Logging-Frameworks, Test-Bibliotheken und Utility-Libraries, die den eigentlichen Betrieb Ihrer Anwendung tragen.
 
@@ -44,7 +44,7 @@ Sicherheitslucken, transitive Abhangigkeiten, fehlende Dokumentation und Complia
 
 **Was das fur Sie bedeutet:**
 - Schwachstellen in Basiskomponenten bleiben oft unbemerkt, bis es zu spat ist
-- Framework-Support allein schutzt nicht vor Lucken in der Basis -- das hat Log4Shell TODO LINK eindeutig gezeigt
+- Framework-Support allein schutzt nicht vor Lucken in der Basis — das hat Log4Shell TODO LINK eindeutig gezeigt
 - Der CRA macht Sie ab 2027 fur die gesamte Software-Lieferkette haftbar
 
 TODO: BILD EISBERG MIT SCHICHTEN
@@ -54,9 +54,9 @@ TODO: BILD EISBERG MIT SCHICHTEN
 Support & Care betreut gezielt fünf geschäftskritischste Open-Source-Basiskomponenten des Java-Okosystems.
 Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendung.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0;">
 
-  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
     <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
     <strong>Eclipse Temurin — Java-Runtime</strong>
     <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
@@ -67,7 +67,7 @@ Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendun
     </ul>
   </div>
 
-  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
     <img src="component-logos/apache-maven.svg" alt="Apache Maven" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
     <strong>Apache Maven — Build & Dependency Management</strong>
     <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
@@ -77,7 +77,7 @@ Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendun
     </ul>
   </div>
 
-  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
     <img src="component-logos/junit.svg" alt="JUnit" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
     <strong>JUnit — Testframework</strong>
     <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
@@ -87,7 +87,7 @@ Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendun
     </ul>
   </div>
 
-  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
     <img src="component-logos/apache-log4j.png" alt="Apache Log4j" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
     <strong>Apache Log4j — Logging</strong>
     <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
@@ -97,7 +97,7 @@ Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendun
     </ul>
   </div>
 
-  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
     <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
     <strong>Apache Commons — Standard-Libraries</strong>
     <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
@@ -118,33 +118,33 @@ Java-Anwendungen lassen sich in drei Schichten gliedern:
 TODO: Bild der Pyramide
 
 1. **Anwendungsspezifischer Code** 
-   Ihr individueller Geschafts- und Fachlogik-Code. Diese Ebene ist hochst wertvoll, aber relativ klein im Umfang -- sie baut auf Frameworks und Basistechnologien auf.
+   Ihr individueller Geschafts- und Fachlogik-Code. Diese Ebene ist hochst wertvoll, aber relativ klein im Umfang — sie baut auf Frameworks und Basistechnologien auf.
 
 2. **Frameworks & Anwendungsplattformen** 
    Spring Boot, Quarkus, Jakarta EE und andere. Fur diese Ebene gibt es vielfach kommerziellen Support der jeweiligen Anbieter.
 
-3. **Basiskomponenten** -- **Hier setzt Support & Care an.**
-   Laufzeitumgebung, Build- und Dependency-Management, Standardbibliotheken, Logging- und Test-Frameworks. Diese Komponenten kommen in praktisch jedem Java-Projekt vor -- doch professionellen Support gibt es dafur bisher kaum.
+3. **Basiskomponenten** — **Hier setzt Support & Care an.**
+   Laufzeitumgebung, Build- und Dependency-Management, Standardbibliotheken, Logging- und Test-Frameworks. Diese Komponenten kommen in praktisch jedem Java-Projekt vor — doch professionellen Support gibt es dafur bisher kaum.
 
 
-**Framework-Support allein reicht nicht. Die Log4Shell-Schwachstelle hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen -- trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.**
+**Framework-Support allein reicht nicht. Die Log4Shell-Schwachstelle hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen — trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.**
 
 ## Unsere Leistungen
 
-Alle Leistungen werden direkt von den Maintainern und Committern der betreuten Projekte erbracht -- nicht von einem nachgelagerten Support-Team.
+Alle Leistungen werden direkt von den Maintainern und Committern der betreuten Projekte erbracht — nicht von einem nachgelagerten Support-Team.
 
 TODO: LAYOUT mit Bildern / RASTER
 
 - **Long Term Support (LTS)**: Weiterfuhrung fur die wichtigsten Versionen zur besseren Planung und Organisation Ihrer Updates. Sie mussen keine unsicheren oder nicht gewarteten Versionen einsetzen.
 - **Sicherheitsupdates & Bugfixes**: Fruhzeitige Informationen und Benachrichtigungen zu Schwachstellen und Patches. Schnelle Reaktionszeiten durch direkten Zugang zu den Entwicklern.
-- **Dokumentation & Transparenz**: Unterstutzung bei SBOM-Strategien und technischer Dokumentation -- auf Deutsch oder Englisch. Transparente Nachvollziehbarkeit aller Anderungen.
-- **Workshops & Beratung**_ Direkter Austausch mit den Maintainern und Committern der Projekte -- auf Deutsch oder Englisch. Individuelle Beratung zu Migration, Best Practices und Architekturentscheidungen.
+- **Dokumentation & Transparenz**: Unterstutzung bei SBOM-Strategien und technischer Dokumentation — auf Deutsch oder Englisch. Transparente Nachvollziehbarkeit aller Anderungen.
+- **Workshops & Beratung**_ Direkter Austausch mit den Maintainern und Committern der Projekte — auf Deutsch oder Englisch. Individuelle Beratung zu Migration, Best Practices und Architekturentscheidungen.
 - **Regelmassige Webinare & Statusupdates**: Quartalsweise Webinare zu aktuellen Sicherheitsrisiken, wichtigen Versionsanderungen, Best-Practice-Empfehlungen und konkreten Auswirkungen auf Ihre OSS-Lieferkette.
-- **Kundenspezifische Builds & Tooling**: Massgeschneiderte Umsetzungen direkt durch die Maintainer -- von speziellen Build-Konfigurationen bis zu individualisierten Tooling-Losungen.
+- **Kundenspezifische Builds & Tooling**: Massgeschneiderte Umsetzungen direkt durch die Maintainer — von speziellen Build-Konfigurationen bis zu individualisierten Tooling-Losungen.
 
 ### Vorbereitet auf den Cyber Resilience Act
 
-Ab 2027 sind Hersteller im Rahmen des Cyber Resilience Act (CRA) fur 100 % ihrer Software verantwortlich -- einschliesslich aller Open-Source-Abhangigkeiten.
+Ab 2027 sind Hersteller im Rahmen des Cyber Resilience Act (CRA) fur 100 % ihrer Software verantwortlich — einschliesslich aller Open-Source-Abhangigkeiten.
 Das betrifft Patchzeiten, Schwachstellenmanagement, Dokumentation und langfristige Wartbarkeit.
 Open Elements agiert als Open-Source-Steward und gestaltet die regulatorischen Rahmenbedingungen aktiv mit.
 Als Grundungsmitglied der **Open Regulatory Compliance Working Group (ORC WG)** der Eclipse Foundation arbeiten wir gemeinsam mit fuhrenden Open-Source-Foundations, grossen Technologieunternehmen und Vertretern der EU an konkreten Spezifikationen und Praxisleitfaden zur CRA-Umsetzung.
@@ -163,7 +163,7 @@ Als Grundungsmitglied der **Open Regulatory Compliance Working Group (ORC WG)** 
 
 Auch das ist Support & Care: Gehärtete Container fur die deutsche Verwaltung
 
-Open Elements gehort zu einer exklusiven Gruppe von Organisationen, die gehärtete Container-Images fur **container.gov.de** bereitstellen durfen -- neben dem Zentrum fur Digitale Souveranitat (ZenDiS) und dem Auswartigen Amt.
+Open Elements gehort zu einer exklusiven Gruppe von Organisationen, die gehärtete Container-Images fur **container.gov.de** bereitstellen durfen — neben dem Zentrum fur Digitale Souveranitat (ZenDiS) und dem Auswartigen Amt.
 Für Support & Care Kunden bedeutet das: Die gehärteten Eclipse-Temurin-Images für alle aktuellen Java-LTS-Versionen (Java 11, 17, 21, 25+) sind Teil des Leistungsumfangs.
 Verifiziert, signiert und kontinuierlich gegen aktuelle Schwachstellendatenbanken abgeglichen.
 
@@ -179,7 +179,7 @@ TODO: BILD OE LIEFERT CONTAINER
 ## Mehr als nur Support: Unser Modell
 
 Support & Care funktioniert anders als klassischer Vendor-Support.
-Sie tragen gemeinsam mit uns die laufenden Pflege- und Verbesserungsaufwande fur die betreuten Open-Source-Komponenten -- offen, nachvollziehbar und messbar.
+Sie tragen gemeinsam mit uns die laufenden Pflege- und Verbesserungsaufwande fur die betreuten Open-Source-Komponenten — offen, nachvollziehbar und messbar.
 
 Hier folgt Support & Care drei wichtigen Prinzipien:
 
@@ -191,7 +191,7 @@ Hier folgt Support & Care drei wichtigen Prinzipien:
   - Empfehlungen zu Versionsupdates und Abhangigkeitsbereinigungen
   - Trends und Risiken im OSS-Okosystem
 
-> Nicht genutzte Support-Stunden verfallen nicht -- sie fliessen direkt in die Weiterentwicklung der Open-Source-Komponenten. Jede Subscription starkt die Projekte, auf die Sie sich verlassen.
+> Nicht genutzte Support-Stunden verfallen nicht — sie fliessen direkt in die Weiterentwicklung der Open-Source-Komponenten. Jede Subscription starkt die Projekte, auf die Sie sich verlassen.
 
 Hierbei liefern wir flexible Leistungsmodelle für nachhaltige Sicherheit.
 Wählen Sie das Modell, das zu Ihren Anforderungen in Verfügbarkeit, Compliance und SLA passt.
@@ -202,7 +202,7 @@ TODO: MODELL als gestyltes HTML
 
 ## Warum Open Elements
 
-Wir sind die Maintainer -- nicht nur Berater:
+Wir sind die Maintainer — nicht nur Berater:
 Unsere Mitarbeiter sind keine externen Consultants, die Projekte erst kennenlernen müssen.
 Sie sind die Menschen, die diese Projekte pflegen, weiterentwickeln und in den Foundations mitgestalten.
 
@@ -216,7 +216,7 @@ TODO: Später Logo der Foundation und dann text
 - Linux Foundation: TODO
 - Apache Foundation: TODO
 
-> Open Source -- aber richtig. Unsere Einnahmen aus Support & Care fliessen direkt in die betreuten Open-Source-Projekte.
+> Open Source — aber richtig. Unsere Einnahmen aus Support & Care fliessen direkt in die betreuten Open-Source-Projekte.
 
 ## 12. Haufig gestellte Fragen
 
@@ -226,7 +226,7 @@ Support & Care deckt fünf geschäftskritische Java-Basiskomponenten ab: Eclipse
 Das Programm startete 2024 mit Maven und wurde seitdem kontinuierlich erweitert.
 
 **Wer leistet den Support?**
-Committer und Maintainer der jeweiligen Open-Source-Projekte -- die Personen, die den Code tatsachlich schreiben und pflegen.
+Committer und Maintainer der jeweiligen Open-Source-Projekte — die Personen, die den Code tatsachlich schreiben und pflegen.
 Kein nachgelagertes Support-Team, sondern direkter Zugang zu den Experten.
 
 **Was passiert mit meiner Subscription-Gebühr?**
@@ -234,7 +234,7 @@ Die Einnahmen fliessen transparent und nachvollziehbar in die betreuten Open-Sou
 Bezahlung der Maintainer, Sicherheitsupdates, Bugfixes, Dokumentation und Infrastruktur.
 
 **Muss ich alle fünf Komponenten abonnieren?**
-Sprechen Sie uns an -- wir schneiden das Angebot auf Ihre konkreten Anforderungen zu.
+Sprechen Sie uns an — wir schneiden das Angebot auf Ihre konkreten Anforderungen zu.
 
 **Hilft Support & Care bei der CRA-Compliance?**
 Ja.
@@ -243,17 +243,17 @@ Schwachstellenüberwachung, Patchzeiten, Dokumentation, SBOM und langfristige Wa
 Perspektivisch unterstutzen wir auch bei CRA-konformen Attestierungen.
 
 **In welchen Sprachen wird Support geleistet?**
-Deutsch und Englisch -- sowohl für Helpdesk-Anfragen als auch für Workshops, Beratung und Dokumentation.
+Deutsch und Englisch — sowohl für Helpdesk-Anfragen als auch für Workshops, Beratung und Dokumentation.
 
 **Was ist der Unterschied zu Framework-Support (z.B. bei Spring Boot)?**
 Framework-Support deckt die mittlere Schicht Ihres Software-Stacks ab.
 Support & Care betreut die Basisschicht darunter: Laufzeit, Build-Tools, Logging, Testing und Utility-Libraries.
-Beides ergänzt sich -- Log4Shell (TODO:LINK) hat gezeigt, dass Framework-Support allein nicht ausreicht.
+Beides ergänzt sich — Log4Shell (TODO:LINK) hat gezeigt, dass Framework-Support allein nicht ausreicht.
 
 ## Sichern Sie die Basis Ihrer Java-Anwendungen
 
 Lassen Sie uns gemeinsam besprechen, wie Support & Care Ihre Software-Lieferkette absichert.
-Ob Privatwirtschaft oder offentliche Verwaltung -- wir finden das passende Modell für Sie.
+Ob Privatwirtschaft oder offentliche Verwaltung — wir finden das passende Modell für Sie.
 
 {{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
 
