@@ -20,6 +20,28 @@
   "impressum": "Impressum",
   "notFound": "Seite nicht gefunden!!",
   "digitalTrustLecture": "Vorlesung zu Digital Trust",
+  "dltLecture": {
+    "metaTitle": "Vorlesung zu \"DLT & Digital Trust\" - Open Elements",
+    "metaDescription": "Seit 2023 bietet Hendrik Ebbers die Vorlesung 'Distribution Ledger Technology und Digital Trust' an",
+    "title": "Vorlesung zu \"DLT & Digital Trust\"",
+    "underlineAlt": "Grafisches Element zum Unterstreichen des Textes",
+    "intro": "Seit 2023 bietet <hendrik>Hendrik Ebbers</hendrik> die Vorlesung ‘Distribution Ledger Technology und Digital Trust’ an. Aktuell wird die Vorlesung als Lehrauftrag an der <oth>OTH Regensburg</oth> durchgeführt.",
+    "summary": "Die Vorlesung behandelt die Grundlagen von Distributed Ledger Technologien (DLT) und vermittelt die notwendigen Kenntnisse, um DLT-basierte Systeme zu entwickeln.",
+    "excerptHeading": "Auszug zur Vorlesung aus dem Vorlesungsverzeichnis der OTH Regensburg",
+    "excerptIntro": "Die Vorlesung vermittelt das grundlegende Verständnis über Distributed-Ledger-Technologien. Neben den technischen Grundlagen zu Kryptowährungen werden hierbei auch weitergehende Ansätze wie Smart Contracts und NFTs behandelt. Inhaltlich werden konkret folgende Punkte besprochen:",
+    "bulletPoints": [
+      "Geschichte und Hintergrund von Bitcoin und Distributed-Ledger-Technologien",
+      "Umsetzung von Blockchains und Mining von Kryptowährungen",
+      "Tokens und NFTs",
+      "Einsatzmöglichkeiten von Distributed-Ledger-Technologien",
+      "Nutzung und Einbindung von öffentlichen Distributed-Ledger-Technologien",
+      "Smart Contracts und die Ethereum Virtual Machine (EVM)"
+    ],
+    "quoteHeading": "Meinung der Studenten zur Vorlesung",
+    "quoteNameFallback": "Fabian Geyer",
+    "quoteTitleFallback": "Student",
+    "quoteTextFallback": "Die Vorlesung hat mir sehr gut gefallen. Hendrik hat es geschafft, ein komplexes Thema verständlich und praxisnah zu vermitteln. Besonders die praktischen Übungen haben mir geholfen, das Gelernte anzuwenden."
+  },
   "newsletter": "Unser Newsletter",
   "404": {
     "notFound": "Seite nicht gefunden"
