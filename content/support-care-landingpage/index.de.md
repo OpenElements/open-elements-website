@@ -173,7 +173,7 @@ Verifiziert, signiert und kontinuierlich gegen aktuelle Schwachstellendatenbanke
 - Kryptographische Signierung gegen Manipulation
 - Minimierte Angriffsflache durch systematisches Hardening
 
-TODO: BILD OE LIEFERT CONTAINER
+{{< centered-image src="oe-delivers-container.png" width="100%" showCaption="true" alt="Open Elements liefert in Zukunft offizielle gehärtete Container-Images für die deutsche öffentliche Verwaltung">}}
 
 ## Mehr als nur Support: Unser Modell
 
@@ -195,7 +195,7 @@ Hier folgt Support & Care drei wichtigen Prinzipien:
 Hierbei liefern wir flexible Leistungsmodelle für nachhaltige Sicherheit.
 Wählen Sie das Modell, das zu Ihren Anforderungen in Verfügbarkeit, Compliance und SLA passt.
 
-TODO: MODELL als gestyltes HTML
+{{< support-care-subscription-packages >}}
 
 {{< centered-button link="/contact"  >}}Preise und individuelle Beratung anfragen{{</ centered-button >}}
 
