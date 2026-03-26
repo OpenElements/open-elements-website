@@ -8,9 +8,16 @@ newsletterPopup: true
 showTitle: false
 ---
 
+{{< centered-image src="support-and-care-logo.svg" width="80%" alt="Support & Care Logo">}}
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <h1 style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem;">Ihre Java-Basis professionell betreut</h1>
-  <p style="font-size: 1.2rem; font-weight: 400; color: #5CBA9E; max-width: 900px; margin: 0 auto 1.25rem auto; line-height: 1.5;">Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Ökosystem — direkt von den Maintainern.</p>
+  <p style="font-size: 1.2rem; font-weight: 400; color: #5CBA9E; max-width: 900px; margin: 0 auto 1rem auto; line-height: 1.5;">Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Ökosystem — direkt von den Maintainern.</p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.25rem; margin: 0 auto 1.25rem auto;">
+    <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 28px; width: auto; opacity: 0.7;">
+    <img src="component-logos/apache-maven.svg" alt="Apache Maven" style="height: 28px; width: auto; opacity: 0.7;">
+    <img src="component-logos/junit.svg" alt="JUnit" style="height: 28px; width: auto; opacity: 0.7;">
+    <img src="component-logos/apache-log4j.png" alt="Apache Log4j" style="height: 28px; width: auto; opacity: 0.7;">
+    <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 28px; width: auto; opacity: 0.7;">
+  </div>
   <p style="font-size: 1rem; max-width: 800px; margin: 0 auto 1.5rem auto; line-height: 1.6; color: #020144;">Moderne Software besteht zu uber 70 % aus Open-Source-Komponenten. Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich — einschliesslich aller OSS-Abhangigkeiten. Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung uber Build-Tools bis zur Teststrategie.</p>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
     <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Kontakt aufnehmen</a>
@@ -19,18 +26,6 @@ showTitle: false
 </div>
 
 <hr style="border: none; border-top: 2px solid #e5e7eb; width: 40%; margin: 2.5rem auto;">
-
-{{< centered-image src="support-and-care-logo.svg" width="80%" alt="Support & Care Logo">}}
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5rem; margin: 0 auto; max-width: 700px;">
-  <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 50px; width: auto;">
-  <img src="component-logos/apache-maven.svg" alt="Apache Maven" style="height: 50px; width: auto;">
-  <img src="component-logos/junit.svg" alt="JUnit" style="height: 50px; width: auto;">
-  <img src="component-logos/apache-log4j.png" alt="Apache Log4j" style="height: 50px; width: auto;">
-  <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 50px; width: auto;">
-</div>
-
-<hr style="border: none; border-top: 2px solid #e5e7eb; width: 40%; margin: 3rem auto;">
 
 ## Das Problem: Unsichtbare Abhängigkeiten
 
