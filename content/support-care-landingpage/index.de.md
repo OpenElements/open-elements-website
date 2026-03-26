@@ -18,7 +18,7 @@ Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebun
 {{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
 {{< centered-button link="#unsere-leistungen"  >}}Leistungen entdecken{{</ centered-button >}}
 
-{{< centered-image src="support-and-care-logo.svg" width="100%" showCaption="false" alt="Support & Care Logo">}}
+{{< centered-image src="support-and-care-logo.svg" width="80%" alt="Support & Care Logo">}}
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem; margin: 2rem auto; max-width: 800px;">
   <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 60px; width: auto;">
@@ -28,7 +28,7 @@ Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebun
   <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 60px; width: auto;">
 </div>
 
-## Das Problem: Unsichtbare Abhangigkeiten
+## Das Problem: Unsichtbare Abhängigkeiten
 
 Ein einfaches Java-Projekt mit Spring Boot bringt uber 70 transitive Abhangigkeiten mit -- die meisten davon Open Source.
 Ihr individueller Code ist nur die Spitze des Eisbergs.
