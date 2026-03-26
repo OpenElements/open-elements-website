@@ -279,14 +279,11 @@ Ob Privatwirtschaft oder offentliche Verwaltung — wir finden das passende Mode
   <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Kontakt aufnehmen</a>
 </div>
 
-Open Elements GmbH
-Gerhart-Hauptmann-Str. 49B
-51379 Leverkusen, Germany
-info@open-elements.de
-
-**Fussnoten:**
-1. Nicht genutzte Support-Stunden verfallen monatlich und fliessen in die Weiterentwicklung der betreuten Projekte.
-2. Werktage ohne Feiertage in NRW.
-3. Helpdesk DSGVO-konform und EU-gehostet.
-4. Expert:innen sind Committer und Maintainer der betreuten OSS-Projekte.
-5. Webinare und Calls per Videokonferenz.
+<hr style="border: none; border-top: 1px solid #e5e7eb; margin: 3rem 0 1.5rem 0;">
+<div style="font-size: 0.75rem; color: #6b7280; line-height: 1.8;">
+  <sup>1</sup> Nicht genutzte Support-Stunden verfallen monatlich und fliessen in die Weiterentwicklung der betreuten Projekte.<br>
+  <sup>2</sup> Werktage ohne Feiertage in NRW.<br>
+  <sup>3</sup> Helpdesk DSGVO-konform und EU-gehostet.<br>
+  <sup>4</sup> Expert:innen sind Committer und Maintainer der betreuten OSS-Projekte.<br>
+  <sup>5</sup> Webinare und Calls per Videokonferenz.
+</div>
