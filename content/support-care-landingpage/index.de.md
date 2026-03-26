@@ -212,11 +212,23 @@ TODO: Bild Personen mit Position
 
 Open Elements ist ein bekanntes und aktives Mitglied der Open Source Community und arbeitet nicht nur auf technischer Basis sondern auch auf Leitender Ebene in vielen Open Source Foundation mit:
 
-TODO: Später Logo der Foundation und dann text
-
-- Eclipse Foundation: Wir sind im Board der Eclipse Foundation vertrehten und aktives Mitglied in Arbeitsgruppen wie Eclipse Adoptium, Eclipse JakartaEE oder ORGWG.
-- Linux Foundation: TODO
-- Apache Foundation: TODO
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="foundation-logos/eclipse.png" alt="Eclipse Foundation" style="height: 64px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Eclipse Foundation</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Wir sind im Board der Eclipse Foundation vertreten und aktives Mitglied in Arbeitsgruppen wie Eclipse Adoptium, Eclipse JakartaEE oder ORC WG.</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="foundation-logos/lf.svg" alt="Linux Foundation" style="height: 64px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Linux Foundation</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">TODO</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="foundation-logos/afs.svg" alt="Apache Software Foundation" style="height: 64px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Apache Software Foundation</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">TODO</p>
+  </div>
+</div>
 
 <div style="background-color: #DFF1FD; border-left: 4px solid #5DB9F5; border-radius: 0.5rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 1.1rem; font-weight: 600; color: #020144;">
   Open Source — aber richtig. Unsere Einnahmen aus Support & Care fliessen direkt in die betreuten Open-Source-Projekte.
