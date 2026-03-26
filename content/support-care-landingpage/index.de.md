@@ -18,7 +18,9 @@ showTitle: false
   </div>
 </div>
 
-{{< centered-image src="support-and-care-logo.svg" width="60%" alt="Support & Care Logo">}}
+<hr style="border: none; border-top: 2px solid #e5e7eb; width: 40%; margin: 2.5rem auto;">
+
+{{< centered-image src="support-and-care-logo.svg" width="80%" alt="Support & Care Logo">}}
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5rem; margin: 0 auto; max-width: 700px;">
   <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 50px; width: auto;">
