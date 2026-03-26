@@ -57,14 +57,18 @@ function getPostFilename(slug: string, locale: string): string | null {
     if (directMatch) return directMatch;
   }
 
-  // For English or fallback, look for files without locale suffix
-  const englishFile = files.find(file => {
-    if (file.endsWith('.de.md')) return false; // Skip German files
-    const withoutExt = file.replace(/\.md$/, '');
-    return withoutExt.endsWith(slug) || withoutExt === slug;
-  });
+  // For English, look for files without locale suffix
+  if (locale === 'en') {
+    const englishFile = files.find(file => {
+      if (file.endsWith('.de.md')) return false; // Skip German files
+      const withoutExt = file.replace(/\.md$/, '');
+      return withoutExt.endsWith(slug) || withoutExt === slug;
+    });
 
-  return englishFile || null;
+    return englishFile || null;
+  }
+
+  return null;
 }
 
 /**
@@ -173,10 +177,6 @@ export async function getPostBySlug(
     const filename = getPostFilename(slug, locale);
 
     if (!filename) {
-      // Fallback to English if locale-specific post doesn't exist
-      if (locale !== 'en') {
-        return getPostBySlug(slug, 'en');
-      }
       return null;
     }
 

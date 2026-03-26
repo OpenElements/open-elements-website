@@ -7,6 +7,10 @@ import { useEffect, useState } from 'react'
 import mainMenu from '@/data/mainMenu.json'
 import social from '@/data/social.json'
 
+type SupportedLocale = 'en' | 'de'
+
+const allLocales: SupportedLocale[] = ['en', 'de']
+
 interface NavbarProps {
   locale: string;
 }
@@ -16,8 +20,13 @@ export default function Navbar({ locale }: NavbarProps) {
   const [illustrationOffset, setIllustrationOffset] = useState(0)
   const t = useTranslations()
   const pathname = usePathname()
-
-  const otherLocale = locale === 'en' ? 'de' : 'en'
+  const postSlug = pathname.match(/^\/posts\/([^/]+)\/?$/)?.[1] ?? null
+  const [postLocaleAvailability, setPostLocaleAvailability] = useState<{
+    slug: string
+    locales: SupportedLocale[]
+  } | null>(
+    null,
+  )
 
   useEffect(() => {
     const maxOffset = 180
@@ -32,6 +41,94 @@ export default function Navbar({ locale }: NavbarProps) {
 
     return () => window.removeEventListener('scroll', updateIllustrationOffset)
   }, [pathname])
+
+  useEffect(() => {
+    let cancelled = false
+
+    if (!postSlug) {
+      return () => {
+        cancelled = true
+      }
+    }
+
+    fetch(`/api/post-locales/${encodeURIComponent(postSlug)}`)
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load post locales')
+        }
+
+        const data = await response.json()
+        if (cancelled) {
+          return
+        }
+
+        if (!Array.isArray(data.availableLocales)) {
+          throw new Error('Invalid post locale response')
+        }
+
+        const locales = data.availableLocales.filter((value: string): value is SupportedLocale =>
+          allLocales.includes(value as SupportedLocale),
+        )
+
+        setPostLocaleAvailability({
+          slug: postSlug,
+          locales,
+        })
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setPostLocaleAvailability({
+            slug: postSlug,
+            locales: allLocales,
+          })
+        }
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [postSlug])
+
+  const availableLocales =
+    postSlug && postLocaleAvailability?.slug === postSlug
+      ? postLocaleAvailability.locales
+      : postSlug
+        ? []
+        : allLocales
+  const showLocaleSwitcher = availableLocales.length > 1
+
+  const renderLocaleSwitcher = (variant: 'desktop' | 'mobile') => {
+    if (!showLocaleSwitcher) {
+      return null
+    }
+
+    const gapClass = variant === 'desktop' ? 'gap-2' : 'gap-3'
+    const paddingClass = variant === 'desktop' ? 'px-2 py-1' : 'px-2 py-[3px]'
+
+    return (
+      <div className={`flex items-center ${gapClass}`} data-locale-switcher={variant}>
+        {availableLocales.map((languageCode) => (
+          <span
+            key={languageCode}
+            className={`rounded-full ${paddingClass} text-xs font-medium leading-none text-center ${
+              locale === languageCode
+                ? 'bg-green text-blue'
+                : 'bg-transparent text-white hover:bg-white/20'
+            } transition-all ease-in-out duration-150`}
+          >
+            <Link
+              href={pathname}
+              locale={languageCode}
+              data-locale-link={languageCode}
+              onClick={variant === 'mobile' ? () => setIsOpen(false) : undefined}
+            >
+              {languageCode.toUpperCase()}
+            </Link>
+          </span>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <>
@@ -110,19 +207,14 @@ export default function Navbar({ locale }: NavbarProps) {
                   </div>
                   
                   <div>
+                    {showLocaleSwitcher && (
                     <div className="flex items-center gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5 text-green">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                       </svg>
-                      <div className="flex items-center gap-2">
-                        <span className={`rounded-full px-2 py-1 text-xs font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                          <Link href={pathname} locale="en">EN</Link>
-                        </span>
-                        <span className={`rounded-full px-2 py-1 text-xs font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                          <Link href={pathname} locale="de">DE</Link>
-                        </span>
-                      </div>
+                      {renderLocaleSwitcher('desktop')}
                     </div>
+                    )}
                   </div>
                   
                   <div className="flex items-center gap-5">
@@ -227,19 +319,14 @@ export default function Navbar({ locale }: NavbarProps) {
                     )
                   })}
                 </div>
+                {showLocaleSwitcher && (
                 <div className="flex items-center gap-4">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-green">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                   </svg>
-                  <div className="flex items-center gap-3">
-                    <span className={`rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center ${locale === 'en' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                      <Link href={pathname} locale="en">EN</Link>
-                    </span>
-                    <span className={`rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center ${locale === 'de' ? 'bg-green text-blue' : 'bg-transparent text-white hover:bg-white/20'} transition-all ease-in-out duration-150`}>
-                      <Link href={pathname} locale="de">DE</Link>
-                    </span>
-                  </div>
+                  {renderLocaleSwitcher('mobile')}
                 </div>
+                )}
               </div>
               <div className="flex items-center gap-6">
                 {social.map((item, index) => (
