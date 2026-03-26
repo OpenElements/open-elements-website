@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image'
 import { Link } from '@/i18n/routing'
 
@@ -19,6 +20,9 @@ interface TeamCardProps {
 export default function TeamCard({ member }: TeamCardProps) {
   return (
     <div>
+      <Link 
+        href={member.link} 
+      >
       <div className="relative">
         <Image
           className="size-56 object-contain shrink-0"
@@ -44,6 +48,7 @@ export default function TeamCard({ member }: TeamCardProps) {
         </Link>
         <p className="font-bold text-purple text-sm">{member.role}</p>
       </div>
+      </Link>
     </div>
   )
 }
