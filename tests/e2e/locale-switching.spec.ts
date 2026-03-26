@@ -4,7 +4,7 @@ test.describe('Locale Switching', () => {
   test('can switch between EN and DE on home page', async ({ page }) => {
     // Start with English
     await page.goto('/');
-    await expect(page).not.toHaveURL(/\/de\//);
+    await expect(page).not.toHaveURL(/\/de(?:\/|$)/);
     
     // Find and click language switcher to German
     const languageSwitcher = page.locator('[data-locale-switcher], a[href*="/de/"], button[aria-label*="Deutsch"], button[aria-label*="German"]').first();
@@ -13,7 +13,7 @@ test.describe('Locale Switching', () => {
       await languageSwitcher.click();
       
       // Should switch to German
-      await expect(page).toHaveURL(/\/de\//);
+      await expect(page).toHaveURL(/\/de(?:\/|$)/);
     }
   });
 

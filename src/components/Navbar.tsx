@@ -106,7 +106,7 @@ export default function Navbar({ locale }: NavbarProps) {
     const paddingClass = variant === 'desktop' ? 'px-2 py-1' : 'px-2 py-[3px]'
 
     return (
-      <div className={`flex items-center ${gapClass}`} data-locale-switcher={variant}>
+      <div className={`flex items-center ${gapClass}`} data-locale-switcher-group={variant}>
         {availableLocales.map((languageCode) => (
           <span
             key={languageCode}
@@ -119,6 +119,7 @@ export default function Navbar({ locale }: NavbarProps) {
             <Link
               href={pathname}
               locale={languageCode}
+              data-locale-switcher={languageCode !== locale ? languageCode : undefined}
               data-locale-link={languageCode}
               onClick={variant === 'mobile' ? () => setIsOpen(false) : undefined}
             >
