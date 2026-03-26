@@ -86,7 +86,9 @@ Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendun
   </div>
 </div>
 
-**Kurz gesagt: Die essentielle Basis der technischen Vertrauenskette Ihrer Java-Anwendungen.**
+<div style="background-color: #DFF1FD; border-left: 4px solid #5DB9F5; border-radius: 0.5rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 1.1rem; font-weight: 600; color: #020144;">
+  Kurz gesagt: Die essentielle Basis der technischen Vertrauenskette Ihrer Java-Anwendungen.
+</div>
 
 ## Wo Support & Care ansetzt
 
@@ -104,7 +106,9 @@ TODO: Bild der Pyramide
    Laufzeitumgebung, Build- und Dependency-Management, Standardbibliotheken, Logging- und Test-Frameworks. Diese Komponenten kommen in praktisch jedem Java-Projekt vor — doch professionellen Support gibt es dafur bisher kaum.
 
 
-**Framework-Support allein reicht nicht. Die <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell-Schwachstelle</a> hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen — trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.**
+<div style="background-color: #DFF1FD; border-left: 4px solid #5DB9F5; border-radius: 0.5rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 1.1rem; font-weight: 600; color: #020144;">
+  Framework-Support allein reicht nicht. Die <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell-Schwachstelle</a> hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen — trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.
+</div>
 
 ## Unsere Leistungen
 
@@ -158,7 +162,9 @@ Als Grundungsmitglied der **Open Regulatory Compliance Working Group (ORC WG)** 
 - Langfristige Wartbarkeitsgarantie
 - Perspektivisch: CRA-konforme Attestierungen fur betreute Projekte
 
-**Open Elements ist Grundungsmitglied der ORC WG und arbeitet direkt an den Best Practices, die definieren, wie CRA-Compliance fur Open-Source-Software umgesetzt wird. Diese Expertise fliesst unmittelbar in Support & Care ein.**
+<div style="background-color: #DFF1FD; border-left: 4px solid #5DB9F5; border-radius: 0.5rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; font-size: 1.1rem; font-weight: 600; color: #020144;">
+  Open Elements ist Grundungsmitglied der ORC WG und arbeitet direkt an den Best Practices, die definieren, wie CRA-Compliance fur Open-Source-Software umgesetzt wird. Diese Expertise fliesst unmittelbar in Support & Care ein.
+</div>
 
 ### Gehärtete Container für Staat und Verwaltung
 
