@@ -32,6 +32,8 @@ Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebun
   <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 60px; width: auto;">
 </div>
 
+<hr style="border: none; border-top: 2px solid #e5e7eb; width: 40%; margin: 3rem auto;">
+
 ## Das Problem: Unsichtbare Abhängigkeiten
 
 Ein einfaches Java-Projekt mit Spring Boot bringt uber 70 transitive Abhangigkeiten mit — die meisten davon Open Source.
@@ -229,35 +231,44 @@ TODO: Später Logo der Foundation und dann text
 
 ## 12. Haufig gestellte Fragen
 
-**Ist Support & Care nur fur Apache Maven?**
-Nein.
-Support & Care deckt fünf geschäftskritische Java-Basiskomponenten ab: Eclipse Temurin, Apache Maven, JUnit, Apache Log4j und Apache Commons.
-Das Programm startete 2024 mit Maven und wurde seitdem kontinuierlich erweitert.
+<div style="display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0;">
 
-**Wer leistet den Support?**
-Committer und Maintainer der jeweiligen Open-Source-Projekte — die Personen, die den Code tatsachlich schreiben und pflegen.
-Kein nachgelagertes Support-Team, sondern direkter Zugang zu den Experten.
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">Ist Support & Care nur fur Apache Maven?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Nein. Support & Care deckt fünf geschäftskritische Java-Basiskomponenten ab: Eclipse Temurin, Apache Maven, JUnit, Apache Log4j und Apache Commons. Das Programm startete 2024 mit Maven und wurde seitdem kontinuierlich erweitert.</p>
+  </details>
 
-**Was passiert mit meiner Subscription-Gebühr?**
-Die Einnahmen fliessen transparent und nachvollziehbar in die betreuten Open-Source-Projekte:
-Bezahlung der Maintainer, Sicherheitsupdates, Bugfixes, Dokumentation und Infrastruktur.
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">Wer leistet den Support?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Committer und Maintainer der jeweiligen Open-Source-Projekte — die Personen, die den Code tatsachlich schreiben und pflegen. Kein nachgelagertes Support-Team, sondern direkter Zugang zu den Experten.</p>
+  </details>
 
-**Muss ich alle fünf Komponenten abonnieren?**
-Sprechen Sie uns an — wir schneiden das Angebot auf Ihre konkreten Anforderungen zu.
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">Was passiert mit meiner Subscription-Gebühr?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Die Einnahmen fliessen transparent und nachvollziehbar in die betreuten Open-Source-Projekte: Bezahlung der Maintainer, Sicherheitsupdates, Bugfixes, Dokumentation und Infrastruktur.</p>
+  </details>
 
-**Hilft Support & Care bei der CRA-Compliance?**
-Ja.
-Support & Care adressiert zentrale CRA-Anforderungen:
-Schwachstellenüberwachung, Patchzeiten, Dokumentation, SBOM und langfristige Wartbarkeit.
-Perspektivisch unterstutzen wir auch bei CRA-konformen Attestierungen.
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">Muss ich alle fünf Komponenten abonnieren?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Sprechen Sie uns an — wir schneiden das Angebot auf Ihre konkreten Anforderungen zu.</p>
+  </details>
 
-**In welchen Sprachen wird Support geleistet?**
-Deutsch und Englisch — sowohl für Helpdesk-Anfragen als auch für Workshops, Beratung und Dokumentation.
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">Hilft Support & Care bei der CRA-Compliance?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Ja. Support & Care adressiert zentrale CRA-Anforderungen: Schwachstellenüberwachung, Patchzeiten, Dokumentation, SBOM und langfristige Wartbarkeit. Perspektivisch unterstutzen wir auch bei CRA-konformen Attestierungen.</p>
+  </details>
 
-**Was ist der Unterschied zu Framework-Support (z.B. bei Spring Boot)?**
-Framework-Support deckt die mittlere Schicht Ihres Software-Stacks ab.
-Support & Care betreut die Basisschicht darunter: Laufzeit, Build-Tools, Logging, Testing und Utility-Libraries.
-Beides ergänzt sich — <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell</a> hat gezeigt, dass Framework-Support allein nicht ausreicht.
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">In welchen Sprachen wird Support geleistet?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Deutsch und Englisch — sowohl für Helpdesk-Anfragen als auch für Workshops, Beratung und Dokumentation.</p>
+  </details>
+
+  <details style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem 1.5rem; cursor: pointer;">
+    <summary style="font-weight: 700; font-size: 1.05rem; color: #020144;">Was ist der Unterschied zu Framework-Support (z.B. bei Spring Boot)?</summary>
+    <p style="margin-top: 0.75rem; line-height: 1.6;">Framework-Support deckt die mittlere Schicht Ihres Software-Stacks ab. Support & Care betreut die Basisschicht darunter: Laufzeit, Build-Tools, Logging, Testing und Utility-Libraries. Beides ergänzt sich — <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell</a> hat gezeigt, dass Framework-Support allein nicht ausreicht.</p>
+  </details>
+
+</div>
 
 ## Sichern Sie die Basis Ihrer Java-Anwendungen
 
