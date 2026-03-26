@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 1366 768">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill: #5cba9e;
+      }
+
+      .cls-5 {
+        stroke: #5cba9e;
+        stroke-linecap: round;
+        stroke-opacity: .5;
+      }
+
+      .cls-5, .cls-3, .cls-6 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-linejoin: round;
+        stroke-width: 11.9px;
+      }
+
+      .cls-2 {
+        fill-opacity: .5;
+      }
+
+      .cls-6 {
+        stroke: #020144;
+      }
+    </style>
+  </defs>
+  <rect id="_01_Docker" data-name=" 01 Docker" class="cls-3" x="299" width="768" height="768" serif:id="01_Docker"/>
+  <g id="_01_Docker1" data-name=" 01 Docker1" serif:id="01_Docker">
+    <rect class="cls-6" x="641" y="218.8" width="66.6" height="66.6"/>
+    <rect class="cls-6" x="641" y="120.6" width="66.6" height="66.6"/>
+    <rect class="cls-4" x="463.4" y="336.6" width="47.4" height="47.4"/>
+    <rect class="cls-4" x="561.5" y="336.6" width="47.4" height="47.4"/>
+    <rect class="cls-4" x="758.7" y="336.6" width="47.4" height="47.4"/>
+    <path class="cls-1" d="M741.3,588.4h0c-34.9,7.2-76.6,6.3-125.8-7.9,0,0-112.1-35.2-93.4-161.7h345.7s-36.9-48.4,5.3-87.9c0,0,39.6,17.7,39.6,51.9,0,0,33.4-12.1,63.5,9.8,0,0-21.1,57.3-72.4,46.7,0,0-3.9,11.8-12.8,28.9,0,0-58.1,91.7-149.7,120.1Z"/>
+    <path class="cls-6" d="M755.7,623.4c-55.1,24.7-126.9,33.7-219.1,7,0,0-147.1-46.2-122.5-212.1h453.5s-48.5-63.5,6.9-115.3c0,0,51.9,23.2,51.9,68.1,0,0,43.9-15.9,83.2,12.9,0,0-27.7,75.2-95,61.3,0,0-3.8,11.5-12.3,29.1-55.8,105.3-146.7,149-146.7,149Z"/>
+    <rect class="cls-6" x="444.2" y="317.4" width="66.6" height="66.6"/>
+    <rect class="cls-6" x="542.6" y="317.4" width="66.6" height="66.6"/>
+    <rect class="cls-6" x="542.6" y="218.8" width="66.6" height="66.6"/>
+    <rect class="cls-6" x="641" y="317.4" width="66.6" height="66.6"/>
+    <rect class="cls-6" x="739.5" y="317.4" width="66.6" height="66.6"/>
+    <circle class="cls-5" cx="442.5" cy="234.6" r="37.7"/>
+    <circle class="cls-2" cx="386.9" cy="290.2" r="17.9"/>
+    <circle class="cls-4" cx="843.7" cy="238.1" r="24.3"/>
+  </g>
+</svg>

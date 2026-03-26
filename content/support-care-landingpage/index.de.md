@@ -108,14 +108,38 @@ TODO: Bild der Pyramide
 
 Alle Leistungen werden direkt von den Maintainern und Committern der betreuten Projekte erbracht — nicht von einem nachgelagerten Support-Team.
 
-TODO: LAYOUT mit Bildern / RASTER
-
-- **Long Term Support (LTS)**: Weiterfuhrung fur die wichtigsten Versionen zur besseren Planung und Organisation Ihrer Updates. Sie mussen keine unsicheren oder nicht gewarteten Versionen einsetzen.
-- **Sicherheitsupdates & Bugfixes**: Fruhzeitige Informationen und Benachrichtigungen zu Schwachstellen und Patches. Schnelle Reaktionszeiten durch direkten Zugang zu den Entwicklern.
-- **Dokumentation & Transparenz**: Unterstutzung bei SBOM-Strategien und technischer Dokumentation — auf Deutsch oder Englisch. Transparente Nachvollziehbarkeit aller Anderungen.
-- **Workshops & Beratung**_ Direkter Austausch mit den Maintainern und Committern der Projekte — auf Deutsch oder Englisch. Individuelle Beratung zu Migration, Best Practices und Architekturentscheidungen.
-- **Regelmassige Webinare & Statusupdates**: Quartalsweise Webinare zu aktuellen Sicherheitsrisiken, wichtigen Versionsanderungen, Best-Practice-Empfehlungen und konkreten Auswirkungen auf Ihre OSS-Lieferkette.
-- **Kundenspezifische Builds & Tooling**: Massgeschneiderte Umsetzungen direkt durch die Maintainer — von speziellen Build-Konfigurationen bis zu individualisierten Tooling-Losungen.
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0;">
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="services-pictograms/long-term-support.svg" alt="Long Term Support" style="height: 56px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Long Term Support (LTS)</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Weiterfuhrung fur die wichtigsten Versionen zur besseren Planung und Organisation Ihrer Updates. Sie mussen keine unsicheren oder nicht gewarteten Versionen einsetzen.</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="services-pictograms/security.svg" alt="Sicherheitsupdates" style="height: 56px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Sicherheitsupdates & Bugfixes</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Fruhzeitige Informationen und Benachrichtigungen zu Schwachstellen und Patches. Schnelle Reaktionszeiten durch direkten Zugang zu den Entwicklern.</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="services-pictograms/documentation.svg" alt="Dokumentation" style="height: 56px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Dokumentation & Transparenz</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Unterstutzung bei SBOM-Strategien und technischer Dokumentation — auf Deutsch oder Englisch. Transparente Nachvollziehbarkeit aller Anderungen.</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="services-pictograms/workshops.svg" alt="Workshops" style="height: 56px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Workshops & Beratung</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Direkter Austausch mit den Maintainern und Committern der Projekte — auf Deutsch oder Englisch. Individuelle Beratung zu Migration, Best Practices und Architekturentscheidungen.</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="services-pictograms/workshops.svg" alt="Webinare" style="height: 56px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Regelmässige Webinare & Statusupdates</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Quartalsweise Webinare zu aktuellen Sicherheitsrisiken, wichtigen Versionsanderungen, Best-Practice-Empfehlungen und konkreten Auswirkungen auf Ihre OSS-Lieferkette.</p>
+  </div>
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem; width: 320px; flex-shrink: 0;">
+    <img src="services-pictograms/custom-containers.svg" alt="Kundenspezifische Builds" style="height: 56px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Kundenspezifische Builds & Tooling</strong>
+    <p style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6;">Massgeschneiderte Umsetzungen direkt durch die Maintainer — von speziellen Build-Konfigurationen bis zu individualisierten Tooling-Losungen.</p>
+  </div>
+</div>
 
 ### Vorbereitet auf den Cyber Resilience Act
 
