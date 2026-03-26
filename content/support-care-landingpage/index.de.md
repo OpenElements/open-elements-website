@@ -15,8 +15,10 @@ Moderne Software besteht zu uber 70 % aus Open-Source-Komponenten.
 Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich -- einschliesslich aller OSS-Abhangigkeiten.
 Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung uber Build-Tools bis zur Teststrategie.
 
-{{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
-{{< centered-button link="#unsere-leistungen"  >}}Leistungen entdecken{{</ centered-button >}}
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem auto;">
+  <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-base font-bold text-center text-green capitalize transition-all duration-150 ease-in-out rounded-full border border-green bg-green-100 hover:bg-green-200 hover:shadow-5 active:shadow-none active:bg-green active:text-white">Kontakt aufnehmen</a>
+  <a href="#unsere-leistungen" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-base font-bold text-center text-green capitalize transition-all duration-150 ease-in-out rounded-full border border-green bg-green-100 hover:bg-green-200 hover:shadow-5 active:shadow-none active:bg-green active:text-white">Leistungen entdecken</a>
+</div>
 
 {{< centered-image src="support-and-care-logo.svg" width="80%" alt="Support & Care Logo">}}
 
