@@ -20,8 +20,8 @@ showTitle: false
   </div>
   <p style="font-size: 1rem; margin: 0 auto 1.5rem auto; line-height: 1.6; color: #020144;">Moderne Software besteht zu uber 70 % aus Open-Source-Komponenten. Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich — einschliesslich aller OSS-Abhangigkeiten. Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung uber Build-Tools bis zur Teststrategie.</p>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
-    <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Kontakt aufnehmen</a>
-    <a href="#unsere-leistungen" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Leistungen entdecken</a>
+    <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none" style="color: white !important; text-decoration: none !important;">Kontakt aufnehmen</a>
+    <a href="#unsere-leistungen" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none" style="color: white !important; text-decoration: none !important;">Leistungen entdecken</a>
   </div>
 </div>
 
@@ -295,7 +295,7 @@ Lassen Sie uns gemeinsam besprechen, wie Support & Care Ihre Software-Lieferkett
 Ob Privatwirtschaft oder offentliche Verwaltung — wir finden das passende Modell für Sie.
 
 <div style="display: flex; justify-content: center; margin: 1.5rem auto;">
-  <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Kontakt aufnehmen</a>
+  <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none" style="color: white !important; text-decoration: none !important;">Kontakt aufnehmen</a>
 </div>
 
 <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 3rem 0 1.5rem 0;">
