@@ -208,17 +208,17 @@ Sie sind die Menschen, die diese Projekte pflegen, weiterentwickeln und in den F
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0;">
   <a href="/de/about-hendrik/" style="text-align: center; width: 180px; text-decoration: none; color: inherit;">
-    <img src="/team/hendrik.jpg" alt="Hendrik Ebbers" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem auto; display: block;">
+    <img src="/team/hendrik.jpg" alt="Hendrik Ebbers" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem auto; display: block; border: 3px solid #5DB9F5;">
     <strong style="display: block; font-size: 0.95rem;">Hendrik Ebbers</strong>
     <span style="font-size: 0.8rem; color: #5CBA9E;">Founder & Eclipse Board Member</span>
   </a>
   <a href="/de/employees/sandra" style="text-align: center; width: 180px; text-decoration: none; color: inherit;">
-    <img src="/team/sandra.jpg" alt="Sandra Parsick" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem auto; display: block;">
+    <img src="/team/sandra.jpg" alt="Sandra Parsick" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem auto; display: block; border: 3px solid #5DB9F5;">
     <strong style="display: block; font-size: 0.95rem;">Sandra Parsick</strong>
     <span style="font-size: 0.8rem; color: #5CBA9E;">Java Champion & OSS Maintainer</span>
   </a>
   <a href="/de/employees/sebastian" style="text-align: center; width: 180px; text-decoration: none; color: inherit;">
-    <img src="/team/sebastian.jpg" alt="Sebastian Tiemann" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem auto; display: block;">
+    <img src="/team/sebastian.jpg" alt="Sebastian Tiemann" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem auto; display: block; border: 3px solid #5DB9F5;">
     <strong style="display: block; font-size: 0.95rem;">Sebastian Tiemann</strong>
     <span style="font-size: 0.8rem; color: #5CBA9E;">OSS Engineer & Maintainer Log4j</span>
   </a>
