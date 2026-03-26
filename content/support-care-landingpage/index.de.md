@@ -5,6 +5,7 @@ layout: "single"
 url: "/de/about-support-care"
 aliases: ['/de/javaland-2024/support-care']
 newsletterPopup: true
+showTitle: false
 ---
 
 # Ihre Java-Basis professionell betreut
@@ -49,7 +50,7 @@ Sicherheitslucken, transitive Abhangigkeiten, fehlende Dokumentation und Complia
 
 TODO: BILD EISBERG MIT SCHICHTEN
 
-## Die betreuten Komponenten {ANCHOR #komponenten}
+## Die betreuten Komponenten
 
 Support & Care betreut gezielt fünf geschäftskritischste Open-Source-Basiskomponenten des Java-Okosystems.
 Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendung.
@@ -91,7 +92,7 @@ Java-Anwendungen lassen sich in drei Schichten gliedern:
 TODO: Bild der Pyramide
 
 1. **Anwendungsspezifischer Code** 
-   Ihr individueller Geschafts- und Fachlogik-Code. Diese Ebene ist hochst wertvoll, aber relativ klein im Umfang — sie baut auf Frameworks und Basistechnologien auf.
+   Ihr individueller Geschäfts- und Fachlogik-Code. Diese Ebene ist hochst wertvoll, aber relativ klein im Umfang — sie baut auf Frameworks und Basistechnologien auf.
 
 2. **Frameworks & Anwendungsplattformen** 
    Spring Boot, Quarkus, Jakarta EE und andere. Fur diese Ebene gibt es vielfach kommerziellen Support der jeweiligen Anbieter.
