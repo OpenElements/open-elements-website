@@ -54,31 +54,60 @@ TODO: BILD EISBERG MIT SCHICHTEN
 Support & Care betreut gezielt fünf geschäftskritischste Open-Source-Basiskomponenten des Java-Okosystems.
 Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendung.
 
-**Eclipse Temurin -- Java-Runtime**
-- Fuhrende herstellerunabhangige OpenJDK-Distribution weltweit
-- Uber 500.000 Downloads pro Tag
-- TCK-zertifiziert, AQAvit-verifiziert, Community-getragen
-- **Abgedeckt:** Laufzeitumgebung fur Ihre Java-Anwendungen
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
 
-**Apache Maven -- Build & Dependency Management**
-- Uber 75 % aller Java-Projekte setzen auf Maven
-- Ca. 2 Milliarden Downloads jahrlich
-- **Abgedeckt:** Build-Pipeline, Dependency-Management, Projektstruktur
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+    <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Eclipse Temurin — Java-Runtime</strong>
+    <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
+      <li>Fuhrende herstellerunabhangige OpenJDK-Distribution weltweit</li>
+      <li>Uber 500.000 Downloads pro Tag</li>
+      <li>TCK-zertifiziert, AQAvit-verifiziert, Community-getragen</li>
+      <li><strong>Abgedeckt:</strong> Laufzeitumgebung fur Ihre Java-Anwendungen</li>
+    </ul>
+  </div>
 
-**JUnit -- Testframework**
-- Uber 1 Milliarde Downloads pro Monat
-- Ca. 85 % Marktanteil im Java-Okosystem
-- **Abgedeckt:** Teststrategie, Qualitätssicherung, CI/CD-Integration
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+    <img src="component-logos/apache-maven.svg" alt="Apache Maven" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Apache Maven — Build & Dependency Management</strong>
+    <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
+      <li>Uber 75 % aller Java-Projekte setzen auf Maven</li>
+      <li>Ca. 2 Milliarden Downloads jahrlich</li>
+      <li><strong>Abgedeckt:</strong> Build-Pipeline, Dependency-Management, Projektstruktur</li>
+    </ul>
+  </div>
 
-**Apache Log4j -- Logging**
-- Ca. 76 % aller Java-Anwendungen nutzen Log4j
-- Geschäftskritisch fur Protokollierung, Monitoring und Fehleranalyse
-- **Abgedeckt:** Logging-Infrastruktur, Sicherheitsuberwachung
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+    <img src="component-logos/junit.svg" alt="JUnit" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
+    <strong>JUnit — Testframework</strong>
+    <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
+      <li>Uber 1 Milliarde Downloads pro Monat</li>
+      <li>Ca. 85 % Marktanteil im Java-Okosystem</li>
+      <li><strong>Abgedeckt:</strong> Teststrategie, Qualitätssicherung, CI/CD-Integration</li>
+    </ul>
+  </div>
 
-**Apache Commons -- Standard-Libraries**
-- Ca. 49 % der Java-Entwickler setzen Apache Commons aktiv ein
-- Modulare Sammlung: Lang, IO, Collections und weitere
-- **Abgedeckt:** Standardbibliotheken, wiederverwendbare Basisfunktionen
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+    <img src="component-logos/apache-log4j.png" alt="Apache Log4j" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Apache Log4j — Logging</strong>
+    <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
+      <li>Ca. 76 % aller Java-Anwendungen nutzen Log4j</li>
+      <li>Geschäftskritisch fur Protokollierung, Monitoring und Fehleranalyse</li>
+      <li><strong>Abgedeckt:</strong> Logging-Infrastruktur, Sicherheitsuberwachung</li>
+    </ul>
+  </div>
+
+  <div style="text-align: center; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 1rem;">
+    <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 48px; margin: 0 auto 1rem auto; display: block;">
+    <strong>Apache Commons — Standard-Libraries</strong>
+    <ul style="text-align: left; margin-top: 0.75rem; padding-left: 1.25rem;">
+      <li>Ca. 49 % der Java-Entwickler setzen Apache Commons aktiv ein</li>
+      <li>Modulare Sammlung: Lang, IO, Collections und weitere</li>
+      <li><strong>Abgedeckt:</strong> Standardbibliotheken, wiederverwendbare Basisfunktionen</li>
+    </ul>
+  </div>
+
+</div>
 
 **Kurz gesagt: Die essentielle Basis der technischen Vertrauenskette Ihrer Java-Anwendungen.**
 
