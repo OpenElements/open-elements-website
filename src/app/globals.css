@@ -101,6 +101,79 @@
     @apply w-full xl:min-h-103.5 lg:min-h-130 md:min-h-96 sm:min-h-81 h-46
   }
 
+  .prose .highlight {
+    @apply my-2 overflow-hidden rounded-3xl;
+  }
+
+  .prose .highlight pre {
+    background: #272822;
+    color: #f8f8f2;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 1.5rem;
+  }
+
+  .prose .highlight code {
+    background: transparent;
+    color: inherit;
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-shadow: none;
+  }
+
+  .prose .highlight .token.comment,
+  .prose .highlight .token.prolog,
+  .prose .highlight .token.doctype,
+  .prose .highlight .token.cdata {
+    color: #75715e;
+  }
+
+  .prose .highlight .token.punctuation,
+  .prose .highlight .token.operator,
+  .prose .highlight .token.tag,
+  .prose .highlight .token.deleted {
+    color: #f92672;
+  }
+
+  .prose .highlight .token.keyword {
+    color: #66d9ef;
+  }
+
+  .prose .highlight .token.class-name,
+  .prose .highlight .token.function,
+  .prose .highlight .token.function-variable,
+  .prose .highlight .token.method,
+  .prose .highlight .token.selector,
+  .prose .highlight .token.attr-name,
+  .prose .highlight .token.builtin,
+  .prose .highlight .token.property {
+    color: #a6e22e;
+  }
+
+  .prose .highlight .token.string,
+  .prose .highlight .token.char,
+  .prose .highlight .token.attr-value,
+  .prose .highlight .token.regex,
+  .prose .highlight .token.variable {
+    color: #e6db74;
+  }
+
+  .prose .highlight .token.number,
+  .prose .highlight .token.boolean,
+  .prose .highlight .token.constant,
+  .prose .highlight .token.symbol,
+  .prose .highlight .token.important {
+    color: #ae81ff;
+  }
+
+  .prose .highlight .token.entity,
+  .prose .highlight .token.url,
+  .prose .highlight .token.namespace {
+    color: #f8f8f2;
+  }
+
 }
 
 @layer utilities {

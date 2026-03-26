@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
+import Prism from 'prismjs';
+import loadLanguages from 'prismjs/components/index.js';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
@@ -40,6 +42,76 @@ const EXTERNAL_LINK_ICON_HTML =
   '<span class="iconify inline" data-icon="mdi-open-in-new" aria-hidden="true"></span>';
 const HEADING_ANCHOR_ICON_HTML =
   '<span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant" aria-hidden="true"></span>';
+const CODE_BLOCK_PATTERN = /<pre><code class="language-([^"]+)">([\s\S]*?)<\/code><\/pre>/gi;
+const PRISM_TOKEN_COLORS = new Map<string, string>([
+  ['comment', '#75715e'],
+  ['prolog', '#75715e'],
+  ['doctype', '#75715e'],
+  ['cdata', '#75715e'],
+  ['punctuation', '#f92672'],
+  ['operator', '#f92672'],
+  ['tag', '#f92672'],
+  ['deleted', '#f92672'],
+  ['keyword', '#66d9ef'],
+  ['class-name', '#a6e22e'],
+  ['function', '#a6e22e'],
+  ['function-variable', '#a6e22e'],
+  ['method', '#a6e22e'],
+  ['selector', '#a6e22e'],
+  ['attr-name', '#a6e22e'],
+  ['builtin', '#a6e22e'],
+  ['property', '#a6e22e'],
+  ['string', '#e6db74'],
+  ['char', '#e6db74'],
+  ['attr-value', '#e6db74'],
+  ['regex', '#e6db74'],
+  ['variable', '#e6db74'],
+  ['number', '#ae81ff'],
+  ['boolean', '#ae81ff'],
+  ['constant', '#ae81ff'],
+  ['symbol', '#ae81ff'],
+  ['important', '#ae81ff'],
+  ['entity', '#f8f8f2'],
+  ['url', '#f8f8f2'],
+  ['namespace', '#f8f8f2'],
+]);
+
+loadLanguages([
+  'bash',
+  'css',
+  'docker',
+  'html',
+  'java',
+  'javascript',
+  'jsdoc',
+  'json',
+  'log',
+  'markup',
+  'shell-session',
+  'typescript',
+  'xml',
+]);
+
+Prism.hooks.add('wrap', (environment) => {
+  const tokenClass = environment.classes.find(
+    (className) => className !== 'token' && PRISM_TOKEN_COLORS.has(className),
+  );
+
+  if (!tokenClass) {
+    return;
+  }
+
+  const color = PRISM_TOKEN_COLORS.get(tokenClass);
+
+  if (!color) {
+    return;
+  }
+
+  const existingStyle = environment.attributes.style;
+  environment.attributes.style = existingStyle
+    ? `${existingStyle};color:${color};`
+    : `color:${color};`;
+});
 
 /**
  * Get the filename for a post based on locale
@@ -182,6 +254,15 @@ function decorateExternalLinks(contentHtml: string): string {
   );
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 function decodeHtmlEntities(text: string): string {
   const namedEntities: Record<string, string> = {
     amp: '&',
@@ -263,6 +344,77 @@ function decorateHeadlinesWithAnchors(contentHtml: string): string {
       nextAttributes = ensureHtmlClass(nextAttributes, 'scroll-mt-10');
 
       return `<h${level}${nextAttributes}>${headingContent}${createHeadingAnchorHtml(headingId)}</h${level}>`;
+    },
+  );
+}
+
+function normalizeCodeLanguage(language: string): string | null {
+  const normalizedLanguage = language.trim().toLowerCase();
+
+  if (!normalizedLanguage) {
+    return null;
+  }
+
+  const aliases: Array<[string, string | null]> = [
+    ['bash', 'bash'],
+    ['sh', 'bash'],
+    ['shell', 'bash'],
+    ['shell-session', 'shell-session'],
+    ['css', 'css'],
+    ['docker', 'docker'],
+    ['html', 'markup'],
+    ['java', 'java'],
+    ['javascript', 'javascript'],
+    ['js', 'javascript'],
+    ['json', 'json'],
+    ['log', 'log'],
+    ['text', null],
+    ['txt', null],
+    ['plaintext', null],
+    ['typescript', 'typescript'],
+    ['ts', 'typescript'],
+    ['xml', 'markup'],
+  ];
+
+  for (const [prefix, mappedLanguage] of aliases) {
+    if (normalizedLanguage === prefix || normalizedLanguage.startsWith(prefix)) {
+      return mappedLanguage;
+    }
+  }
+
+  return normalizedLanguage in Prism.languages ? normalizedLanguage : null;
+}
+
+function highlightCode(language: string, code: string): string {
+  const normalizedLanguage = normalizeCodeLanguage(language);
+
+  if (!normalizedLanguage) {
+    return escapeHtml(code);
+  }
+
+  const grammar = Prism.languages[normalizedLanguage];
+
+  if (!grammar) {
+    return escapeHtml(code);
+  }
+
+  return Prism.highlight(code, grammar, normalizedLanguage);
+}
+
+function highlightCodeBlocks(contentHtml: string): string {
+  return contentHtml.replace(
+    CODE_BLOCK_PATTERN,
+    (_fullMatch, language: string, encodedCode: string) => {
+      const decodedCode = decodeHtmlEntities(encodedCode);
+      const highlightedCode = highlightCode(language, decodedCode);
+
+      return [
+        '<div class="highlight">',
+        `<pre tabindex="0" class="language-${language}" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">`,
+        `<code class="language-${language}" data-lang="${language}">${highlightedCode}</code>`,
+        '</pre>',
+        '</div>',
+      ].join('');
     },
   );
 }
@@ -375,8 +527,10 @@ export async function getPostBySlug(
       .use(remarkGfm)
       .use(html, { sanitize: false })
       .process(transformedContent);
-    const contentHtml = decorateHeadlinesWithAnchors(
-      decorateExternalLinks(processedContent.toString()),
+    const contentHtml = highlightCodeBlocks(
+      decorateHeadlinesWithAnchors(
+        decorateExternalLinks(processedContent.toString()),
+      ),
     );
 
     return {
