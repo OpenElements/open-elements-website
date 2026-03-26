@@ -46,8 +46,6 @@ Sicherheitslucken, transitive Abhangigkeiten, fehlende Dokumentation und Complia
 - Framework-Support allein schutzt nicht vor Lucken in der Basis — das hat <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell</a> eindeutig gezeigt
 - Der CRA macht Sie ab 2027 fur die gesamte Software-Lieferkette haftbar
 
-TODO: BILD EISBERG MIT SCHICHTEN
-
 ## Die betreuten Komponenten
 
 Support & Care betreut gezielt fünf geschäftskritischste Open-Source-Basiskomponenten des Java-Okosystems.
