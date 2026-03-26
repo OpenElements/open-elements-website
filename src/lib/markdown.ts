@@ -26,6 +26,17 @@ export interface PostData {
   contentHtml?: string;
 }
 
+const INTERNAL_HOSTNAMES = new Set([
+  'open-elements.com',
+  'www.open-elements.com',
+  'localhost',
+  '127.0.0.1',
+  '::1',
+]);
+
+const EXTERNAL_LINK_ICON_HTML =
+  '<span class="iconify inline" data-icon="mdi-open-in-new" aria-hidden="true"></span>';
+
 /**
  * Get the filename for a post based on locale
  * The content uses locale suffixes like:
@@ -81,6 +92,90 @@ function extractSlugFromFilename(filename: string, locale: string): string {
   }
   // Remove .md extension
   return filename.replace(/\.md$/, '');
+}
+
+function isInternalHostname(hostname: string): boolean {
+  const normalizedHostname = hostname.toLowerCase();
+  return (
+    INTERNAL_HOSTNAMES.has(normalizedHostname) ||
+    normalizedHostname.endsWith('.open-elements.com')
+  );
+}
+
+function isExternalContentLink(href: string): boolean {
+  const normalizedHref = href.trim();
+
+  if (
+    !normalizedHref ||
+    normalizedHref.startsWith('/') ||
+    normalizedHref.startsWith('#') ||
+    normalizedHref.startsWith('mailto:') ||
+    normalizedHref.startsWith('tel:')
+  ) {
+    return false;
+  }
+
+  try {
+    const url = new URL(normalizedHref, 'https://open-elements.com');
+    return !isInternalHostname(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+function ensureBlankTarget(attributes: string): string {
+  if (/\btarget\s*=/i.test(attributes)) {
+    return attributes.replace(/\btarget\s*=\s*(["']).*?\1/i, 'target="_blank"');
+  }
+
+  return `${attributes} target="_blank"`;
+}
+
+function ensureSafeRel(attributes: string): string {
+  const relPattern = /\brel\s*=\s*(["'])(.*?)\1/i;
+
+  if (relPattern.test(attributes)) {
+    return attributes.replace(relPattern, (_match, quote: string, relValue: string) => {
+      const tokens = new Set(relValue.split(/\s+/).filter(Boolean));
+      tokens.add('noopener');
+      tokens.add('noreferrer');
+      return `rel=${quote}${Array.from(tokens).join(' ')}${quote}`;
+    });
+  }
+
+  return `${attributes} rel="noopener noreferrer"`;
+}
+
+function addExternalLinkIcon(linkContent: string): string {
+  if (/data-icon\s*=\s*(["'])mdi-open-in-new\1/i.test(linkContent)) {
+    return linkContent;
+  }
+
+  return `${linkContent}${EXTERNAL_LINK_ICON_HTML}`;
+}
+
+function decorateExternalLinks(contentHtml: string): string {
+  return contentHtml.replace(
+    /<a\b([^>]*?)href=(["'])(.*?)\2([^>]*)>([\s\S]*?)<\/a>/gi,
+    (
+      fullMatch,
+      attributesBeforeHref: string,
+      quote: string,
+      href: string,
+      attributesAfterHref: string,
+      linkContent: string,
+    ) => {
+      if (!isExternalContentLink(href)) {
+        return fullMatch;
+      }
+
+      let attributes = `${attributesBeforeHref}href=${quote}${href}${quote}${attributesAfterHref}`;
+      attributes = ensureBlankTarget(attributes);
+      attributes = ensureSafeRel(attributes);
+
+      return `<a${attributes}>${addExternalLinkIcon(linkContent)}</a>`;
+    },
+  );
 }
 
 /**
@@ -189,7 +284,7 @@ export async function getPostBySlug(
       .use(remarkHugoShortcodes)
       .use(html, { sanitize: false })
       .process(content);
-    const contentHtml = processedContent.toString();
+    const contentHtml = decorateExternalLinks(processedContent.toString());
 
     return {
       slug,
