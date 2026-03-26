@@ -18,8 +18,8 @@ Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software
 Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung uber Build-Tools bis zur Teststrategie.
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem auto;">
-  <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-base font-bold text-center text-green capitalize transition-all duration-150 ease-in-out rounded-full border border-green bg-green-100 hover:bg-green-200 hover:shadow-5 active:shadow-none active:bg-green active:text-white">Kontakt aufnehmen</a>
-  <a href="#unsere-leistungen" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-base font-bold text-center text-green capitalize transition-all duration-150 ease-in-out rounded-full border border-green bg-green-100 hover:bg-green-200 hover:shadow-5 active:shadow-none active:bg-green active:text-white">Leistungen entdecken</a>
+  <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Kontakt aufnehmen</a>
+  <a href="#unsere-leistungen" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Leistungen entdecken</a>
 </div>
 
 {{< centered-image src="support-and-care-logo.svg" width="80%" alt="Support & Care Logo">}}
@@ -46,7 +46,7 @@ Sicherheitslucken, transitive Abhangigkeiten, fehlende Dokumentation und Complia
 
 **Was das fur Sie bedeutet:**
 - Schwachstellen in Basiskomponenten bleiben oft unbemerkt, bis es zu spat ist
-- Framework-Support allein schutzt nicht vor Lucken in der Basis — das hat Log4Shell TODO LINK eindeutig gezeigt
+- Framework-Support allein schutzt nicht vor Lucken in der Basis — das hat <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell</a> eindeutig gezeigt
 - Der CRA macht Sie ab 2027 fur die gesamte Software-Lieferkette haftbar
 
 TODO: BILD EISBERG MIT SCHICHTEN
@@ -102,7 +102,7 @@ TODO: Bild der Pyramide
    Laufzeitumgebung, Build- und Dependency-Management, Standardbibliotheken, Logging- und Test-Frameworks. Diese Komponenten kommen in praktisch jedem Java-Projekt vor — doch professionellen Support gibt es dafur bisher kaum.
 
 
-**Framework-Support allein reicht nicht. Die Log4Shell-Schwachstelle hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen — trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.**
+**Framework-Support allein reicht nicht. Die <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell-Schwachstelle</a> hat gezeigt: Eine kritische Sicherheitslucke in einer Basiskomponente kann Millionen von Anwendungen treffen — trotz aktueller Framework-Updates. Support & Care schliesst genau diese Lucke.**
 
 ## Unsere Leistungen
 
@@ -173,7 +173,7 @@ Verifiziert, signiert und kontinuierlich gegen aktuelle Schwachstellendatenbanke
 - Kryptographische Signierung gegen Manipulation
 - Minimierte Angriffsflache durch systematisches Hardening
 
-{{< centered-image src="oe-delivers-container.png" width="100%" showCaption="true" alt="Open Elements liefert in Zukunft offizielle gehärtete Container-Images für die deutsche öffentliche Verwaltung">}}
+{{< centered-image src="oe-delivers-container.png" width="60%" showCaption="true" alt="Open Elements liefert in Zukunft offizielle gehärtete Container-Images für die deutsche öffentliche Verwaltung">}}
 
 ## Mehr als nur Support: Unser Modell
 
@@ -196,8 +196,6 @@ Hierbei liefern wir flexible Leistungsmodelle für nachhaltige Sicherheit.
 Wählen Sie das Modell, das zu Ihren Anforderungen in Verfügbarkeit, Compliance und SLA passt.
 
 {{< support-care-subscription-packages >}}
-
-{{< centered-button link="/contact"  >}}Preise und individuelle Beratung anfragen{{</ centered-button >}}
 
 ## Warum Open Elements
 
@@ -247,14 +245,16 @@ Deutsch und Englisch — sowohl für Helpdesk-Anfragen als auch für Workshops, 
 **Was ist der Unterschied zu Framework-Support (z.B. bei Spring Boot)?**
 Framework-Support deckt die mittlere Schicht Ihres Software-Stacks ab.
 Support & Care betreut die Basisschicht darunter: Laufzeit, Build-Tools, Logging, Testing und Utility-Libraries.
-Beides ergänzt sich — Log4Shell (TODO:LINK) hat gezeigt, dass Framework-Support allein nicht ausreicht.
+Beides ergänzt sich — <a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html" target="_blank" rel="noopener">Log4Shell</a> hat gezeigt, dass Framework-Support allein nicht ausreicht.
 
 ## Sichern Sie die Basis Ihrer Java-Anwendungen
 
 Lassen Sie uns gemeinsam besprechen, wie Support & Care Ihre Software-Lieferkette absichert.
 Ob Privatwirtschaft oder offentliche Verwaltung — wir finden das passende Modell für Sie.
 
-{{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
+<div style="display: flex; justify-content: center; margin: 1.5rem auto;">
+  <a href="/contact" class="inline-flex shrink-0 items-center justify-center gap-3 px-6 py-3.5 text-lg font-bold text-white text-center bg-sky rounded-full transition-all duration-150 ease-in-out hover:bg-sky-200 hover:shadow-8 active:shadow-none">Kontakt aufnehmen</a>
+</div>
 
 Open Elements GmbH
 Gerhart-Hauptmann-Str. 49B
