@@ -78,6 +78,22 @@ class ShortcodeRegistry {
       const path = attrs._content || attrs.path || '';
       return `/${path.replace(/^\/+/, '')}`;
     });
+
+    this.register('youtube', (attrs) => {
+      const videoId = this.escapeHtml(attrs._content || attrs.id || '');
+
+      if (!videoId) {
+        return '';
+      }
+
+      return [
+        '<div style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%; max-width: 100%">',
+        '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; display: flex;">',
+        `    <iframe src="https://www.youtube.com/embed/${videoId}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="YouTube Video"></iframe>`,
+        '</div>',
+        '</div>',
+      ].join('');
+    });
   }
 
   /**
@@ -127,7 +143,7 @@ export function transformHugoShortcodes(text: string): string {
  */
 class ShortcodeParser {
   private static readonly SHORTCODE_PATTERN = /\{\{<\s*([a-z-]+)\s+([^>]*?)\s*>\}\}/g;
-  private static readonly ATTRIBUTE_PATTERN = /(\w+)="([^"]*)"|"([^"]*)"/g;
+  private static readonly ATTRIBUTE_PATTERN = /(\w+)=(?:"([^"]*)"|([^\s"]+))|"([^"]*)"|([^\s"]+)/g;
 
   /**
    * Parse all shortcodes in a text string
@@ -168,14 +184,19 @@ class ShortcodeParser {
     this.ATTRIBUTE_PATTERN.lastIndex = 0;
 
     while ((match = this.ATTRIBUTE_PATTERN.exec(attrString)) !== null) {
-      if (match[1] && match[2] !== undefined) {
-        // Named attribute: key="value"
-        attrs[match[1]] = match[2];
-      } else if (match[3] !== undefined) {
-        // Unnamed attribute: "value"
-        attrs[`_content${contentIndex > 0 ? contentIndex : ''}`] = match[3];
+      if (match[1]) {
+        // Named attribute: key="value" or key=value
+        attrs[match[1]] = match[2] ?? match[3] ?? '';
+        continue;
+      }
+
+      const unnamedValue = match[4] ?? match[5];
+
+      if (unnamedValue !== undefined) {
+        // Unnamed attribute: "value" or bareword
+        attrs[`_content${contentIndex > 0 ? contentIndex : ''}`] = unnamedValue;
         if (contentIndex === 0) {
-          attrs._content = match[3];
+          attrs._content = unnamedValue;
         }
         contentIndex++;
       }
