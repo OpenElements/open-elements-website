@@ -18,9 +18,15 @@ Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebun
 {{< centered-button link="/contact"  >}}Kontakt aufnehmen{{</ centered-button >}}
 {{< centered-button link="#unsere-leistungen"  >}}Leistungen entdecken{{</ centered-button >}}
 
-TODO: LOGO SUPPORT & CARE
+{{< centered-image src="support-and-care-logo.svg" width="100%" showCaption="false" alt="Support & Care Logo">}}
 
-TODO: LOGOS DER UNTERSTÜTZTEN KOMPONENTEN
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem; margin: 2rem auto; max-width: 800px;">
+  <img src="component-logos/eclipse-temurin.svg" alt="Eclipse Temurin" style="height: 60px; width: auto;">
+  <img src="component-logos/apache-maven.svg" alt="Apache Maven" style="height: 60px; width: auto;">
+  <img src="component-logos/junit.svg" alt="JUnit" style="height: 60px; width: auto;">
+  <img src="component-logos/apache-log4j.png" alt="Apache Log4j" style="height: 60px; width: auto;">
+  <img src="component-logos/apache-commons.svg" alt="Apache Commons" style="height: 60px; width: auto;">
+</div>
 
 ## Das Problem: Unsichtbare Abhangigkeiten
 
