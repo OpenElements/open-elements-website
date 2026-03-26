@@ -94,7 +94,7 @@ Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendun
 
 Java-Anwendungen lassen sich in drei Schichten gliedern:
 
-{{< centered-image src="oe-delivers-container.png" width="60%" alt="Die 3 Schichten einer Java-Anwendung">}}
+{{< centered-image src="pyramid.png" width="60%" alt="Die 3 Schichten einer Java-Anwendung">}}
 
 1. **Anwendungsspezifischer Code** 
    Ihr individueller Geschäfts- und Fachlogik-Code. Diese Ebene ist hochst wertvoll, aber relativ klein im Umfang — sie baut auf Frameworks und Basistechnologien auf.
