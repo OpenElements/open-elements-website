@@ -41,6 +41,7 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "tailwind-scrollbar": "^4.0.2",
     "unist-util-visit": "^5.1.0"

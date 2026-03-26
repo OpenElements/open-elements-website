@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
 import { remarkHugoShortcodes } from './remark-hugo-shortcodes';
 
@@ -281,6 +282,7 @@ export async function getPostBySlug(
 
     // Convert markdown to HTML
     const processedContent = await remark()
+      .use(remarkGfm)
       .use(remarkHugoShortcodes)
       .use(html, { sanitize: false })
       .process(content);
