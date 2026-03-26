@@ -8,9 +8,10 @@ newsletterPopup: true
 showTitle: false
 ---
 
-# Ihre Java-Basis professionell betreut
-
-**Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Okosystem — direkt von den Maintainern.**
+<div style="text-align: center; margin-bottom: 2rem;">
+  <h1 style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">Ihre Java-Basis professionell betreut</h1>
+  <p style="font-size: 1.25rem; font-weight: 400; color: #5CBA9E; max-width: 720px; margin: 0 auto; line-height: 1.5;">Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Ökosystem — direkt von den Maintainern.</p>
+</div>
 
 Moderne Software besteht zu uber 70 % aus Open-Source-Komponenten.
 Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller fur 100 % ihrer Software verantwortlich — einschliesslich aller OSS-Abhangigkeiten.
