@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYPMHW7YG2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MYPMHW7YG2');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+    Open Elements &ndash; Jira Issue to GitHub Issue Migration in Apache Maven
+    </title>
+  <meta property="og:type" content="website" />
+<meta property="og:url" content='http://localhost:1313/posts/2025/08/08/jira-issue-to-github-issue-migration-in-apache-maven' />
+<meta property="og:image" content='http://localhost:1313/open-graph/open-elements.png' />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OpenElements Logo" />
+<meta property="og:site_name" content="Open Elements" />
+
+
+    <meta property="og:title" content='Open Elements - Jira Issue to GitHub Issue Migration in Apache Maven' />
+
+
+
+    <meta property="og:description" content='Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java' />
+
+
+
+    <meta property="og:locale" content="en_US" />
+
+
+
+<meta name="keywords" content="open source, Java, OSS, open source Support, Java Support" />
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/prism/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+  
+  <link rel="canonical" href="http://localhost:1313/posts/2025/08/08/jira-issue-to-github-issue-migration-in-apache-maven/" />
+  
+  
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2025/08/08/jira-issue-to-github-issue-migration-in-apache-maven/" />
+  <link rel="alternate" hreflang="de" href="http://localhost:1313//de/posts/2025/08/08/jira-issue-to-github-issue-migration-in-apache-maven/" />
+  
+  <link rel="alternate" hreflang="x-default" href="https://open-elements.com/" />
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+  
+  
+
+</head>
+
+<body>
+  <main class="overflow-x-hidden antialiased bg-gray" id="top">
+    
+
+
+
+
+
+
+
+
+
+<div class="relative">
+  <div class="absolute top-0 flex items-start w-full">
+    
+    <div class="bg-blue h-[274px] w-full 2xl:block hidden"></div>
+    
+    <div class="w-full 2xl:shrink-0">
+      
+      <img class="hidden w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block" src="/illustrations/hero-bg-2.svg" alt="Hero" />
+      <img class="object-contain object-center w-full -mt-4 sm:hidden" src="/illustrations/bg-hero-mb.svg" alt="Hero" />
+      
+    </div>
+    
+    <div class="bg-blue h-[179.5px] w-full 2xl:block hidden"></div>
+    
+  </div>
+
+  <div class="container pt-16" x-data="{ open:false }">
+    <div class="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue ">
+      <div class="container relative mx-auto max-w-7xl">
+        <nav class="flex items-center justify-between pt-5 pb-3">
+          <a href="/"><img src="/images/logo.svg" alt="logo"
+              class="h-5 sm:h-7"></a>
+          <div class="items-center hidden xl:flex gap-9">
+            <div class="flex items-center gap-9">
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/posts/" class="nav-link inline-flex items-center">
+                  Blog
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/support-care-maven/" class="nav-link inline-flex items-center">
+                  Support &amp; Care
+                </a>
+                
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/about/" class="nav-link inline-flex items-center">
+                  About us
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/contact/" class="nav-link inline-flex items-center">
+                  Contact us
+                </a>
+                
+              </div>
+              
+              
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-5 h-5 text-green">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+                <div class="flex items-center gap-1">
+                  
+                  
+                  <span
+                    class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              
+              
+              <a href="https://github.com/OpenElements" aria-label="Github" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="mdi:github"></span></a>
+              
+              <a href="https://www.linkedin.com/company/open-elements" aria-label="LinkedIn" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="mdi:linkedin"></span></a>
+              
+              <a href="https://twitter.com/hendrikebbers" aria-label="Twitter" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="proicons:x-twitter"></span></a>
+              
+            </div>
+          </div>
+          <button class="xl:hidden">
+            <img class="w-8" @click="open = true" alt="burger" src="/illustrations/burger-menu.svg" aria-multiline="Menu" />
+          </button>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="fixed inset-0 top-0 z-30 h-full bg-blue xl:hidden" x-show="open" x-cloak
+      x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95"
+      x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+      x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+      <div class="relative w-full h-screen">
+        <img class="absolute inset-0 object-cover w-full h-full" alt="menu background"
+          src="/illustrations/menu-bg.svg" />
+        <nav class="container relative flex items-center justify-between pt-4 pb-3 mx-auto sm:pt-5 max-w-7xl">
+          <a href="/"><img src="/images/logo.svg" alt="" class="h-5 sm:h-7"></a>
+          <button class="xl:hidden">
+            <img class="w-7" @click="open = false" alt="close button icon" src="/illustrations/close.svg" />
+          </button>
+        </nav>
+        <div
+          class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
+          <div class="flex flex-col gap-11 sm:items-center">
+            <div class="flex flex-col sm:items-center gap-7">
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/posts/" class="nav-link inline-flex items-center">
+                  Blog
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/support-care-maven/" class="nav-link inline-flex items-center">
+                  Support &amp; Care
+                </a>
+                
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/about/" class="nav-link inline-flex items-center">
+                  About us
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/contact/" class="nav-link inline-flex items-center">
+                  Contact us
+                </a>
+                
+              </div>
+              
+              
+            </div>
+            <div class="flex items-center gap-4 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 text-green">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+              <div class="flex items-center gap-3">
+                
+                
+                <span
+                  class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            
+            
+            <a href="https://github.com/OpenElements" aria-label="Github" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="mdi:github"></span></a>
+            
+            <a href="https://www.linkedin.com/company/open-elements" aria-label="LinkedIn" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="mdi:linkedin"></span></a>
+            
+            <a href="https://twitter.com/hendrikebbers" aria-label="Twitter" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="proicons:x-twitter"></span></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative">
+    <article class="container relative pb-28 xl:max-w-7xl">
+        <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+            <div class="relative flex flex-col items-center justify-center w-auto">
+                <h1 class="text-center h1">
+                    Jira Issue to GitHub Issue Migration in Apache Maven
+                </h1>
+                <img src="/illustrations/post-underline.svg" alt=""
+                    class="absolute w-36 sm:-mr-32 sm:w-72 -bottom-3 shrink-0">
+            </div>
+        </div>
+        <div class="flex flex-col-reverse items-start gap-12 mt-12 overflow-hidden xl:gap-8 xl:flex-row">
+            <div class="flex-1 w-full space-y-8">
+                <div class="space-y-4 sm:space-y-3">
+                    <div class="flex flex-wrap items-center gap-4 sm:gap-6 ">
+                        <div class="flex items-center gap-2 text-purple">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <time class="text-base font-medium" datetime="2025-08-08">
+                                August 8, 2025
+                            </time>
+                        </div>
+                        <div class="flex items-center gap-2 text-purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-base font-medium">
+                                
+                                
+                                    <a href="https://www.sandra-parsick.de">Sandra Parsick</a>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                        
+                            <p>#open-source</p>
+                        
+                            <p>#support-and-care</p>
+                        
+                            <p>#maven</p>
+                        
+                    </div>
+                </div>
+                <div class="max-w-full prose prose-a:text-purple-700 prose-code:bg-yellow xl:max-w-prose">
+                    <p>In this blog post, we&rsquo;d like to share how funding can help in doing maintenance tasks in open-source projects.</p>
+<p>Our <a href="/support-care-maven/"><i class="fa fa-external-link" aria-hidden="true"></i> Support and Care</a>
+
+ project got financially supported by the <a href="https://www.sovereign.tech/" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> German Sovereign Tech Fund<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ (STF) to work on the following four packages of <a href="https://maven.apache.org/" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> Apache Maven<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+™:</p>
+<ul>
+<li>Security of the Supply Chain</li>
+<li>Maintenance</li>
+<li>Modernization of Core Features</li>
+<li>Documentation</li>
+</ul>
+<p>One task in the <em>maintenance</em> working package was to support the migration of Jira issues to GitHub issues.</p>
+<figure style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%;  max-width: 80%;">
+  <img src="/posts/2025-08-08-support-and-care-jira-gh-migration/migration-automation.png" alt="Jira Issue to GitHub Isssue Migration" style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;" />
+  
+  <figcaption style="font-style: italic; font-size: 0.8rem; text-align: center;">Jira Issue to GitHub Isssue Migration</figcaption>
+  
+</figure>
+
+<h2 id="how-the-journey-started" class=" scroll-mt-10">How the journey started<a href="#how-the-journey-started" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>In April 2024, a <a href="https://lists.apache.org/thread/yt819f08rvfoywlpwtbkk3w1kpow4ynb" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> first voting<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ was started to move two small projects (AFS Parent POM and Maven Parent POM) to GitHub (GH). If you are not familiar with Maven you can get an overview in our <a href="/articles/what-is-maven/"><i class="fa fa-external-link" aria-hidden="true"></i> &ldquo;What is Maven&rdquo; article</a>
+
+.
+The motivation was that the most changes in these projects are done by <a href="https://github.com/dependabot" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> DependaBot<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ and the Jira issues are created manually by copy-and-paste for creating the release notes.
+It passed the voting, and the migration path was</p>
+<ul>
+<li>Enable the GH issues feature in the GH repository.</li>
+<li>Make the JIRA project read-only.</li>
+<li>Leave current open issues in Jira.
+If someone wants to work on it, they can copy it to GH.</li>
+</ul>
+<p>For these projects, this migration path was good enough because most issues were about version updates.</p>
+<p>In October 2024, a common <a href="https://lists.apache.org/thread/v23tj8s8f6oyrmbyn1m6xg2pv7k92n4p" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> discussion<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ about migration to GH has started.
+The common sense among the Maven committers was, yes, we want to have GH issues instead of Jira issues.
+The reasons were</p>
+<ul>
+<li>Improve linking between issues and pull requests (PRs).</li>
+<li>Better user experience in writing issues (Jira custom syntax vs. Markdown).</li>
+<li>It is clearer for the user where to open an issue.</li>
+<li>The barrier to writing an issue is smaller because the reporter does not need an additional Jira account.</li>
+</ul>
+<p>But the migration process was still unclear.
+Therefore, a <a href="https://lists.apache.org/thread/jskz22vsbv2n5ks1q42690ohp7cbt1qw" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> discussion<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ has started in November 2024.
+Three options were discussed:</p>
+<ol>
+<li>Trying an issue migration and make Jira read-only.</li>
+<li>Make Jira read-only, and new issues would be raised on GH.</li>
+<li>Do not change Jira but slowly switch to GH.</li>
+</ol>
+<p>We, as the <strong>Support and Care</strong> Team, saw a value in migrating the whole issue from Jira to GH.
+The main argument for us was, as a user, I don&rsquo;t have to think about in which tracking system, I have to search for getting information.
+Everything is in one location.</p>
+<p>In the discussion, a <a href="https://spring.io/blog/2019/01/15/spring-framework-s-migration-from-jira-to-github-issues" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> blog post<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ of the Spring Team was mentioned.
+It describes how they have migrated their Jira issues to GH.
+They wrote a <a href="https://github.com/rwinch/jira-to-gh-issues" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> migration tool<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ that uses an unofficial import GH API.
+We <a href="https://github.com/support-and-care/jira-to-gh-issues" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> have forked<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ it and tested if we can reuse it for the Maven repositories.</p>
+<p>Not everyone saw a value in investing volunteer time in such a migration task.
+To be fair, in Maven&rsquo;s context, such a kind of migration means touching <strong>83 repositories</strong> (check the <a href="https://cwiki.apache.org/confluence/display/MAVEN/JIRA&#43;to&#43;GitHub&#43;Issues&#43;switching" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> whole migration documentation<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ to get a better feeling).</p>
+<p>Of course, such a migration is not fun, and nobody wants to do it in their spare time, although it can add value in the long term.
+Therefore, we, as a Support and Care Team, decided to spend some of our maintenance budget to help with the migration and concentrate on the automation of moving Jira issues to GH issues.</p>
+<p>At the end, the whole migration project was divided into three phases:</p>
+<ul>
+<li>Phase 1: Enable GH issues and stop new issues in Jira.</li>
+<li>Phase 2: Migrate Jira issues history to GH issues.</li>
+<li>Phase 3: Clean up and &quot;archive&quot; Jira projects.</li>
+</ul>
+<p>We were involved in phase 2.
+Therefore, we want to give some background information on how phase 2 proceeded.</p>
+<h2 id="phase-2-migrate-jira-issues-history-to-gh-issues--a-recap" class=" scroll-mt-10">Phase 2: Migrate Jira issues history to GH issues — A recap<a href="#phase-2-migrate-jira-issues-history-to-gh-issues--a-recap" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>We forked <a href="https://github.com/support-and-care/jira-to-gh-issues" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> Spring&rsquo;s migration tool<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ and adjusted it to match the requirements that we had on Apache Maven&rsquo;s side.
+Some requirements were clear before we started the migration, some of them turned out during testing and others during the first real
+migrations.</p>
+<p>While preparing the list which Jira project should be migrated, it became clear that some Jira projects have to be split to many repositories.
+Fortunately, we could use the Jira component field as the source of truth for the splitting, so we could adjust the migration tool
+easily.</p>
+<p>During testing, we have recognized that doing the migration with your personal token is a bad idea, since you are the author of every imported GH issue then, and this has consequences in notification
+Our solution was to set up <a href="https://github.com/support-and-care/jira-to-gh-issues/blob/master/docs/how-to-create-gh-service-account.adoc" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> a service account<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+ in GitHub.</p>
+<p>We wanted the old PRs to be linked to the new related GH issues.
+In the UI, you have a specific field for that, but the GH REST API has not implemented this feature.
+As a work-around, we had to add a comment to the GH issue so that GH events are triggered that link the issue with
+the PR.</p>
+<p>During the GH import, some imported issues got a pending status
+That means that they are created but not visible.
+In the first migration runs, we didn&rsquo;t recognize it, and therefore, we accidentally imported some Jira issues twice.
+We could clean it up with the help of the GitHub support.
+Unfortunately, we have realized too late that GH stores PRs and issues on the same domain object (issue), and so some PRs of
+m-jlink-plugin were deleted during the cleanup.
+Our lesson learned was to introduce better handling of pending issues.</p>
+<p>The complete list of changes:</p>
+<ul>
+<li>Add handling of a prefix in Apache&rsquo;s Jira path.</li>
+<li>Add handling for GH URLs of an organization.</li>
+<li>Prepare an author mapping file.</li>
+<li>Customize the issue title for migrated issues.</li>
+<li>Preparing Label Mapping:
+<ul>
+<li>Map Jira Issue Types to GH Labels.</li>
+<li>Map Jira Priority field to GH Labels.</li>
+<li>Map the special Jira Version field to GH Labels.</li>
+<li>Dependency-update-related Jira issues are mapped automatically with the dependency label.</li>
+<li>Create labels that don&rsquo;t exist automatically.</li>
+</ul>
+</li>
+<li>Add a filter to skip bot comments during importing.</li>
+<li>Add a filter to skip Jira issues that don&rsquo;t have a specific Jira component set.</li>
+<li>Create only non-existing milestones on GH.</li>
+<li>Grab related PRs to a Jira issue and add a link to the new GH issue.</li>
+<li>Introduce a mechanism to add links to PRs for ex-pending issues.</li>
+<li>Improve the retry mechanism because of pending issues.</li>
+<li>Add mapping a Jira resolution type to GH state reason not planned.</li>
+</ul>
+<p>But we have also learnt on the organization level.
+During the migration, we learnt that the GH import API was already retired, so that we had luck that it was still running.
+It does not match all features that GH already has, for example, the GH state field was not supported, but we found a workaround for that.</p>
+<p>The GH has rate limits for its REST API.
+So for Jira projects with a huge number of issues, we have to organize the migration of it in many steps.</p>
+<p>Every migration run has created a huge number of email notifications.
+Of course, not everyone was amused about it, and it costs some migration runs to find out which configuration is responsible for which kind of email notification.
+In the end, we could not disable all email notifications in all systems, only reduce them.
+For example, in GH, every user can have personal email notifications; in Jira, it was a global setting for all Jira projects.</p>
+<p>At the end of every migration run, we could improve the tool and our process in general.</p>
+<p>In conclusion, without funding, nobody could spend so much time to prepare and support such a huge migration.</p>
+<h2 id="we-want-to-say-thank-you" class=" scroll-mt-10">We want to say Thank You<a href="#we-want-to-say-thank-you" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>The whole migration was a result of good teamwork and based on another person&rsquo;s work.</p>
+<figure style="text-align: center; display: block; margin-left: auto; margin-right: auto; margin-top: 0em; margin-bottom: 2em; width: 100%;  max-width: 80%;">
+  <img src="/posts/2025-08-08-support-and-care-jira-gh-migration/friends.png" alt="Community rulez" style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;" />
+  
+  <figcaption style="font-style: italic; font-size: 0.8rem; text-align: center;">Community rulez</figcaption>
+  
+</figure>
+
+<p>Therefore, a big <em>Thank-you</em> in particular to</p>
+<ul>
+<li>The Spring team for creating the original migration tool.</li>
+<li>Benjamin Marwell for running the first migrations and troubleshooting.</li>
+<li>Sławomir Jaranowski for driving the first phase and giving the first feedback.</li>
+<li>Sylwester Lachiewicz for giving the first feedback.</li>
+<li>Hervé Boutemy for providing feedback and supporting on the organization side.</li>
+<li>Matthias Bünger and Olivier Lamy for speeding up Phase 2.</li>
+<li>The ASF infra team, especially Gavin McDonald and Daniel Gruno, for supporting us with the whole infrastructure stuff.</li>
+<li>GitHub support.</li>
+</ul>
+
+                    </div>
+            </div>
+            <div class="w-full xl:max-w-sm shrink-0">
+                
+                
+                <div class=" rounded-[30px] w-full shadow-4 bg-white xl:p-5 p-4 xl:block md:flex lg:items-center">
+                    <img class="lg:w-40 md:w-48 sm:w-40 sm:h-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 object-cover rounded-[24px] xl:float-left md:float-none float-left xl:mr-6 mr-4" src="/team/sandra.jpg" alt="author" />
+                    <div>
+                        <h4 class="mb-2 text-lg font-bold">
+                            Sandra Parsick
+                        </h4>
+                        <p class="text-sm leading-6">
+                            Sandra is part of the Support and Care Team. She is Java Champion and member of several community groups.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </article>
+</div>
+
+
+    
+
+
+
+<div class="bg-blue">
+    <div class="container relative max-w-sm mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
+        <div class="absolute sm:-top-20 -top-16 sm:right-[12%] right-[8%] z-10">
+            <a href="#top" alt="go up" name="go up" class="flex items-center justify-center w-12 h-12 transition-all duration-150 ease-in-out rounded-full shadow-2xl bg-green shadow-green hover:scale-110 sm:w-14 sm:h-14">
+                <span class="text-4xl text-white iconify" data-icon="iconoir:nav-arrow-up"></span>
+            </a>
+        </div>
+    </div>
+    <div class="overflow-hidden">
+        <div class="container relative max-w-sm py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full lg:py-20 sm:py-16">
+            <img src="/illustrations/round-1.svg" alt="Circle" class="absolute w-full max-w-sm lg:-right-32 -bottom-16 -right-16 lg:-top-1/2" />
+            <img src="/illustrations/round-2.svg" alt="Circle" class="absolute left-0 w-32 lg:right-80 lg:top-16 bottom-1/2 lg:left-auto" />
+            <div class="relative flex flex-col gap-5 lg:flex-row 2xl:gap-20 sm:gap-12">
+                <div class="flex flex-col justify-between gap-6 xl:w-64 lg:w-1/3 shrink-0">
+                    <div class="flex flex-col gap-6">
+                        <a href="/"><img src="/images/logo.svg" alt="logo" class="h-8"></a>
+                        <p class="text-sm leading-7 text-white">Open Source made right</p>
+                    </div>
+                    <div class="items-center hidden gap-4 lg:flex">
+                        
+                        
+                        <a href="https://github.com/OpenElements/" aria-label="Github"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="mdi:github"></span>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/open-elements/" aria-label="LinkedIn"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="mdi:linkedin"></span>
+                        </a>
+                        
+                        <a href="https://twitter.com/hendrikebbers/" aria-label="Twitter"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="proicons:x-twitter"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 xl:w-full lg:w-2/3 xl:grid-cols-4 gap-x-5 gap-y-10">
+                    <div class="">
+                        <p class="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Explore</p>
+                        <div class="flex flex-col gap-5">
+                            
+                            
+                            
+                            <a href="/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Home</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/posts/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Blog</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/support-care-maven/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Support &amp; Care</span>
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/dlt-lecture/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Digital Trust Lecture</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/about/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">About us</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/contact/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Contact us</span>
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Privacy</p>
+                        <div class="flex flex-col gap-5">
+                            
+                            <a href="https://www.iubenda.com/privacy-policy/63821551" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed " title="Privacy Policy ">
+                            
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Privacy Policy</span>
+                            </a>
+                            
+                            <a href="https://www.iubenda.com/privacy-policy/63821551/cookie-policy" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed " title="Cookie Policy ">
+                            
+                            <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                            <span class="footer-link">Cookie Policy</span>
+                            </a>
+                            <a href="" class="flex items-center gap-3 iubenda-cs-preferences-link group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Privacy Config</span>
+                            </a>
+                            <a href="/impressum/" class="flex items-center gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Impressum</span>
+                            </a>
+                            <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                        </div>
+                    </div>
+                    <div class="relative w-full col-span-2 xl:col-span-2">
+                        <div class="flex items-center justify-start gap-4 mt-6 lg:hidden">
+                            
+                            
+                            <a href="https://github.com/OpenElements/" aria-label="Github" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="mdi:github"></span>
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/company/open-elements/" aria-label="LinkedIn" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="mdi:linkedin"></span>
+                            </a>
+                            
+                            <a href="https://twitter.com/hendrikebbers/" aria-label="Twitter" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="proicons:x-twitter"></span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </main>
+  <scrip src="/prism/prism.js"></scrip>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  
+  <script src="/js/maven-prs.js" defer></script>
+
+</body>
+
+</html>

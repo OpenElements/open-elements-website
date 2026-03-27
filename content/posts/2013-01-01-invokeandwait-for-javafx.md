@@ -10,10 +10,9 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 Swing offers the two methods `SwingUtilities.invokeAndWait(...)` and `SwingUtilities.invokeLater(...) to execute a Runnable object on Swings event dispatching thread. You can read more about this methods [http://javarevisited.blogspot.de/2011/09/invokeandwait-invokelater-swing-example.html](here).
 
-As I currently know JavaFX provides only `Platform.runLater(...)` that is the equivalent of SwingUtilities.invokeLater(...). A "runAndWait" method doesn't exist at the moment. While developing some [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) stuff and my [first Raspberry Pi demo]({{< ref "/posts/2012-12-28-my-first-steps-with-javafx-on-raspberry-pi" >}}) I needed this feature in JavaFX. So I created a `runAndWait` method that will hopefully be part of DataFX in some future. Until then you can use this code in your project:
+As I currently know JavaFX provides only `Platform.runLater(...)` that is the equivalent of SwingUtilities.invokeLater(...). A "runAndWait" method doesn't exist at the moment. While developing some [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) stuff and my [first Raspberry Pi demo](/posts/2012-12-28-my-first-steps-with-javafx-on-raspberry-pi) I needed this feature in JavaFX. So I created a `runAndWait` method that will hopefully be part of DataFX in some future. Until then you can use this code in your project:
 
-{{< highlight java >}}
-import java.util.concurrent.ExecutionException;
+```javaimport java.util.concurrent.ExecutionException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -78,7 +77,6 @@ public class FXUtilities {
 			}
 		}
 	}
-}
-{{< / highlight >}}
+}```
 
 It's working for all my needs. Please give me some feedback if there are any problems or bug.

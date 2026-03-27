@@ -1,0 +1,46 @@
+name: Issue Automation
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto-label-and-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-label bug reports
+        if: contains(github.event.issue.title, 'bug') || contains(github.event.issue.body, 'bug')
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['bug']
+            })
+
+      - name: Auto-label feature requests
+        if: contains(github.event.issue.title, 'feature') || contains(github.event.issue.title, 'enhancement')
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['enhancement']
+            })
+
+      - name: Auto-assign to maintainer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addAssignees({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              assignees: ['${{ vars.DEFAULT_MAINTAINER || github.repository_owner }}']
+            }).catch(err => {
+              console.log('Could not assign maintainer: ' + err.message);
+            })

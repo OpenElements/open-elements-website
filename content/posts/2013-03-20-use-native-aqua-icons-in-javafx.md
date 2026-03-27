@@ -12,8 +12,7 @@ While planning [AquaFX]({{ site.baseurl }}{% link pages/projects/aquafx.md %}) w
 
 This enum contains all fetch able images that we found:
 
-{{< highlight java >}}
-public enum NsImageIcon {
+```javapublic enum NsImageIcon {
     QUICK_LOOK_TEMPLATE("NSQuickLookTemplate"),
     BLUETOOTH_TEMPLATE("NSBluetoothTemplate"),
     I_CHAT_THEATER_TEMPLATE("NSIChatTheaterTemplate"),
@@ -83,13 +82,11 @@ public enum NsImageIcon {
     public String getName() {
         return name;
     }
-}
-{{< / highlight >}}
+}```
 
 And here is the loader class:
 
-{{< highlight java >}}
-import java.awt.Graphics;
+```javaimport java.awt.Graphics;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 
@@ -114,8 +111,7 @@ public class NsImageIconLoader {
         }
         return SwingFXUtils.toFXImage(bufferedImage, null);
     }
-}
-{{< / highlight >}}
+}```
 
 Here is a overview of all icons that we have found:
 

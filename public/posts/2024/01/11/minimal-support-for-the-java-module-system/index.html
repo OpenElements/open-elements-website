@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYPMHW7YG2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MYPMHW7YG2');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>
+    Open Elements &ndash; Minimal Support for the Java Module System
+    </title>
+  <meta property="og:type" content="website" />
+<meta property="og:url" content='http://localhost:1313/posts/2024/01/11/minimal-support-for-the-java-module-system' />
+<meta property="og:image" content='http://localhost:1313/open-graph/open-elements.png' />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OpenElements Logo" />
+<meta property="og:site_name" content="Open Elements" />
+
+
+    <meta property="og:title" content='Open Elements - Minimal Support for the Java Module System' />
+
+
+
+    <meta property="og:description" content='Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java' />
+
+
+
+    <meta property="og:locale" content="en_US" />
+
+
+
+<meta name="keywords" content="open source, Java, OSS, open source Support, Java Support" />
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/prism/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+  
+  <link rel="canonical" href="http://localhost:1313/posts/2024/01/11/minimal-support-for-the-java-module-system/" />
+  
+  
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2024/01/11/minimal-support-for-the-java-module-system/" />
+  <link rel="alternate" hreflang="de" href="http://localhost:1313//de/posts/2024/01/11/minimal-support-for-the-java-module-system/" />
+  
+  <link rel="alternate" hreflang="x-default" href="https://open-elements.com/" />
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+  
+  
+
+</head>
+
+<body>
+  <main class="overflow-x-hidden antialiased bg-gray" id="top">
+    
+
+
+
+
+
+
+
+
+
+<div class="relative">
+  <div class="absolute top-0 flex items-start w-full">
+    
+    <div class="bg-blue h-[274px] w-full 2xl:block hidden"></div>
+    
+    <div class="w-full 2xl:shrink-0">
+      
+      <img class="hidden w-full mt-10 2xl:-mt-2 lg:mt-5 md:mt-16 sm:block" src="/illustrations/hero-bg-2.svg" alt="Hero" />
+      <img class="object-contain object-center w-full -mt-4 sm:hidden" src="/illustrations/bg-hero-mb.svg" alt="Hero" />
+      
+    </div>
+    
+    <div class="bg-blue h-[179.5px] w-full 2xl:block hidden"></div>
+    
+  </div>
+
+  <div class="container pt-16" x-data="{ open:false }">
+    <div class="fixed inset-x-0 top-0 z-30 w-full pb-3 bg-blue ">
+      <div class="container relative mx-auto max-w-7xl">
+        <nav class="flex items-center justify-between pt-5 pb-3">
+          <a href="/"><img src="/images/logo.svg" alt="logo"
+              class="h-5 sm:h-7"></a>
+          <div class="items-center hidden xl:flex gap-9">
+            <div class="flex items-center gap-9">
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/posts/" class="nav-link inline-flex items-center">
+                  Blog
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/support-care-maven/" class="nav-link inline-flex items-center">
+                  Support &amp; Care
+                </a>
+                
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/about/" class="nav-link inline-flex items-center">
+                  About us
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/contact/" class="nav-link inline-flex items-center">
+                  Contact us
+                </a>
+                
+              </div>
+              
+              
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-5 h-5 text-green">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+                <div class="flex items-center gap-1">
+                  
+                  
+                  <span
+                    class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              
+              
+              <a href="https://github.com/OpenElements" aria-label="Github" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="mdi:github"></span></a>
+              
+              <a href="https://www.linkedin.com/company/open-elements" aria-label="LinkedIn" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="mdi:linkedin"></span></a>
+              
+              <a href="https://twitter.com/hendrikebbers" aria-label="Twitter" target="_blank" class="focus:outline-none"><span
+                  class="iconify nav-icon" data-icon="proicons:x-twitter"></span></a>
+              
+            </div>
+          </div>
+          <button class="xl:hidden">
+            <img class="w-8" @click="open = true" alt="burger" src="/illustrations/burger-menu.svg" aria-multiline="Menu" />
+          </button>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="fixed inset-0 top-0 z-30 h-full bg-blue xl:hidden" x-show="open" x-cloak
+      x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95"
+      x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+      x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+      <div class="relative w-full h-screen">
+        <img class="absolute inset-0 object-cover w-full h-full" alt="menu background"
+          src="/illustrations/menu-bg.svg" />
+        <nav class="container relative flex items-center justify-between pt-4 pb-3 mx-auto sm:pt-5 max-w-7xl">
+          <a href="/"><img src="/images/logo.svg" alt="" class="h-5 sm:h-7"></a>
+          <button class="xl:hidden">
+            <img class="w-7" @click="open = false" alt="close button icon" src="/illustrations/close.svg" />
+          </button>
+        </nav>
+        <div
+          class="flex flex-col sm:items-center justify-between py-12 sm:px-12 px-8 gap-24 relative h-[calc(100vh-70px)]">
+          <div class="flex flex-col gap-11 sm:items-center">
+            <div class="flex flex-col sm:items-center gap-7">
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/posts/" class="nav-link inline-flex items-center">
+                  Blog
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/support-care-maven/" class="nav-link inline-flex items-center">
+                  Support &amp; Care
+                </a>
+                
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/about/" class="nav-link inline-flex items-center">
+                  About us
+                </a>
+                
+              </div>
+              
+              
+              
+              <div class="nav-item group relative">
+                
+                <a href="/contact/" class="nav-link inline-flex items-center">
+                  Contact us
+                </a>
+                
+              </div>
+              
+              
+            </div>
+            <div class="flex items-center gap-4 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 text-green">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+              <div class="flex items-center gap-3">
+                
+                
+                <span
+                  class="bg-green rounded-full px-2 py-[3px] text-xs font-medium leading-none text-center text-blue">EN</span>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            
+            
+            <a href="https://github.com/OpenElements" aria-label="Github" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="mdi:github"></span></a>
+            
+            <a href="https://www.linkedin.com/company/open-elements" aria-label="LinkedIn" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="mdi:linkedin"></span></a>
+            
+            <a href="https://twitter.com/hendrikebbers" aria-label="Twitter" target="_blank" class="focus:outline-none"><span
+                class="iconify nav-icon" data-icon="proicons:x-twitter"></span></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative">
+    <article class="container relative pb-28 xl:max-w-7xl">
+        <div class="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
+            <div class="relative flex flex-col items-center justify-center w-auto">
+                <h1 class="text-center h1">
+                    Minimal Support for the Java Module System
+                </h1>
+                <img src="/illustrations/post-underline.svg" alt=""
+                    class="absolute w-36 sm:-mr-32 sm:w-72 -bottom-3 shrink-0">
+            </div>
+        </div>
+        <div class="flex flex-col-reverse items-start gap-12 mt-12 overflow-hidden xl:gap-8 xl:flex-row">
+            <div class="flex-1 w-full space-y-8">
+                <div class="space-y-4 sm:space-y-3">
+                    <div class="flex flex-wrap items-center gap-4 sm:gap-6 ">
+                        <div class="flex items-center gap-2 text-purple">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <time class="text-base font-medium" datetime="2024-01-11">
+                                January 11, 2024
+                            </time>
+                        </div>
+                        <div class="flex items-center gap-2 text-purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-base font-medium">
+                                
+                                
+                                    <a href="/about-hendrik/">Hendrik Ebbers</a>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-3 text-xs sm:mt-2 text-purple">
+                        
+                            <p>#Java</p>
+                        
+                    </div>
+                </div>
+                <div class="max-w-full prose prose-a:text-purple-700 prose-code:bg-yellow xl:max-w-prose">
+                    <p>Over the past few years, there have been many differing opinions about the Java Module System.
+While many developers are positive about the standardized way to define modules, there are also critical voices pointing out missing features, such as version support.
+However, I do not intend to delve into this debate here.
+Personally, I see many advantages in the module system and understand why framework and library developers would (want to) use it.</p>
+<p>One major drawback is that a (transitive) dependency that is not adapted to the Java Module System may not fit the definitions and constraints of the module system and thus cannot be added to the module path.
+The Java Module System automatically creates a module for each JAR it finds on the module path.
+This can lead to some issues, which can often be resolved with minor adjustments in a library.</p>
+<p>In several posts, I will take a closer look at these problems and suggest possible solutions.
+This post focuses on the use and definition of automatic modules.</p>
+<h2 id="implementing-modules-as-automatic-modules" class=" scroll-mt-10">Implementing Modules as Automatic Modules<a href="#implementing-modules-as-automatic-modules" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>A key definition of the module system is that each module requires a unique name.
+There is a distinction between explicitly declared modules, which have a <code>module-info.java</code>, and automatic modules, which are implicitly declared.
+More information can be found in the <a href="https://docs.oracle.com/javase/specs/jls/se16/html/jls-7.html#jls-7.7.1" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> Java SE Spec<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+.
+If you do not want to leverage the benefits of the module system by using a <code>module-info.java</code> in your project, it is sufficient to define your library as an automatic module.</p>
+<p>The only requirement is that the module has a unique name.
+Although Java can extract a name from the JAR file name if necessary, this is not recommended.
+Defining a name for an automatic module is very simple.
+You only need to define the <code>Automatic-Module-Name</code> property in the <code>MANIFEST.MF</code> of the JAR.
+If you use Maven or Gradle as your build tool, you can even automate this process with a plugin.</p>
+<p>As shown in the following example, you only need to configure the maven-jar-plugin for a Maven build:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>maven-jar-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>3.3.0<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;archive&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;manifestEntries&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;Automatic-Module-Name&gt;</span>com.example.lib<span style="color:#f92672">&lt;/Automatic-Module-Name&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/manifestEntries&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/archive&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/plugin&gt;</span></span></span></code></pre></div>
+<p>In Gradle, you can achieve this by using the Java Library Plugin, which should be part of every Java build.
+Detailed documentation for using Gradle can be found <a href="https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_modular_auto" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> here<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+, while the following code shows a simple integration into a project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>tasks.<span style="color:#a6e22e">jar</span> {
+</span></span><span style="display:flex;"><span>    manifest {
+</span></span><span style="display:flex;"><span>        attributes(<span style="color:#e6db74">&#34;Automatic-Module-Name&#34;</span> to <span style="color:#e6db74">&#34;com.example.lib&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="next-steps" class=" scroll-mt-10">Next Steps<a href="#next-steps" class="inline ml-2"><span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant"></span></a></h2>
+
+
+
+<p>Since these changes are very simple, they are also ideal for offering as a pull request for open-source libraries.
+<a href="https://github.com/offbynull/portmapper/pull/48" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> In one example<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+, I added a PR to define an <code>Automatic-Module-Name</code> to an open-source Java library.
+Perhaps an open-source developer is reading this and will create a &ldquo;Good First Issue&rdquo; for such a change to their libraries, which could be implemented by newcomers during events like <a href="https://hacktoberfest.com/" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> Hacktoberfest<span class="iconify inline" data-icon="mdi-open-in-new"></span></a>
+
+.</p>
+
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Crossposting</strong>
+                        <span class="block sm:inline">This article has originally posted <a href="https://www.heise.de/blog/Softwareentwicklung-Minimale-Unterstuetzung-fuer-das-Java-Modulsystem-7434695.html" target="_blank">here</a>.</span>
+                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
+                    </div>
+                    </div>
+            </div>
+            <div class="w-full xl:max-w-sm shrink-0">
+                
+                
+                <div class=" rounded-[30px] w-full shadow-4 bg-white xl:p-5 p-4 xl:block md:flex lg:items-center">
+                    <img class="lg:w-40 md:w-48 sm:w-40 sm:h-40 w-28 h-28 md:h-auto lg:h-40 shrink-0 object-cover rounded-[24px] xl:float-left md:float-none float-left xl:mr-6 mr-4" src="/team/hendrik.jpg" alt="author" />
+                    <div>
+                        <h4 class="mb-2 text-lg font-bold">
+                            Hendrik Ebbers
+                        </h4>
+                        <p class="text-sm leading-6">
+                            Hendrik Ebbers is the founder of Open Elements. He is a Java champion, a member of JSR expert groups and a JavaOne rockstar. Hendrik is a member of the Eclipse JakartaEE working group (WG) and the Eclipse Adoptium WG. In addition, Hendrik Ebbers is a member of the Board of Directors of the Eclipse Foundation.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </article>
+</div>
+
+
+    
+
+
+
+<div class="bg-blue">
+    <div class="container relative max-w-sm mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full">
+        <div class="absolute sm:-top-20 -top-16 sm:right-[12%] right-[8%] z-10">
+            <a href="#top" alt="go up" name="go up" class="flex items-center justify-center w-12 h-12 transition-all duration-150 ease-in-out rounded-full shadow-2xl bg-green shadow-green hover:scale-110 sm:w-14 sm:h-14">
+                <span class="text-4xl text-white iconify" data-icon="iconoir:nav-arrow-up"></span>
+            </a>
+        </div>
+    </div>
+    <div class="overflow-hidden">
+        <div class="container relative max-w-sm py-12 mx-auto lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full lg:py-20 sm:py-16">
+            <img src="/illustrations/round-1.svg" alt="Circle" class="absolute w-full max-w-sm lg:-right-32 -bottom-16 -right-16 lg:-top-1/2" />
+            <img src="/illustrations/round-2.svg" alt="Circle" class="absolute left-0 w-32 lg:right-80 lg:top-16 bottom-1/2 lg:left-auto" />
+            <div class="relative flex flex-col gap-5 lg:flex-row 2xl:gap-20 sm:gap-12">
+                <div class="flex flex-col justify-between gap-6 xl:w-64 lg:w-1/3 shrink-0">
+                    <div class="flex flex-col gap-6">
+                        <a href="/"><img src="/images/logo.svg" alt="logo" class="h-8"></a>
+                        <p class="text-sm leading-7 text-white">Open Source made right</p>
+                    </div>
+                    <div class="items-center hidden gap-4 lg:flex">
+                        
+                        
+                        <a href="https://github.com/OpenElements/" aria-label="Github"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="mdi:github"></span>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/open-elements/" aria-label="LinkedIn"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="mdi:linkedin"></span>
+                        </a>
+                        
+                        <a href="https://twitter.com/hendrikebbers/" aria-label="Twitter"  target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                            <span class="iconify" data-icon="proicons:x-twitter"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 xl:w-full lg:w-2/3 xl:grid-cols-4 gap-x-5 gap-y-10">
+                    <div class="">
+                        <p class="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Explore</p>
+                        <div class="flex flex-col gap-5">
+                            
+                            
+                            
+                            <a href="/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Home</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/posts/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Blog</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/support-care-maven/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Support &amp; Care</span>
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/dlt-lecture/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Digital Trust Lecture</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/about/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">About us</span>
+                            </a>
+                            
+                            
+                            
+                            <a href="/contact/" class="flex items-start gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Contact us</span>
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-4 text-base font-semibold leading-10 text-white sm:text-2xl sm:mb-6">Privacy</p>
+                        <div class="flex flex-col gap-5">
+                            
+                            <a href="https://www.iubenda.com/privacy-policy/63821551" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed " title="Privacy Policy ">
+                            
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Privacy Policy</span>
+                            </a>
+                            
+                            <a href="https://www.iubenda.com/privacy-policy/63821551/cookie-policy" class="flex items-center gap-3 group iubenda-nostyle no-brand iubenda-noiframe iubenda-embed " title="Cookie Policy ">
+                            
+                            <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                            <span class="footer-link">Cookie Policy</span>
+                            </a>
+                            <a href="" class="flex items-center gap-3 iubenda-cs-preferences-link group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Privacy Config</span>
+                            </a>
+                            <a href="/impressum/" class="flex items-center gap-3 group">
+                                <span class="iconify footer-link-icon" data-icon="ph:arrow-right-bold"></span>
+                                <span class="footer-link">Impressum</span>
+                            </a>
+                            <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                        </div>
+                    </div>
+                    <div class="relative w-full col-span-2 xl:col-span-2">
+                        <div class="flex items-center justify-start gap-4 mt-6 lg:hidden">
+                            
+                            
+                            <a href="https://github.com/OpenElements/" aria-label="Github" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="mdi:github"></span>
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/company/open-elements/" aria-label="LinkedIn" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="mdi:linkedin"></span>
+                            </a>
+                            
+                            <a href="https://twitter.com/hendrikebbers/" aria-label="Twitter" target="_blank" class="flex items-center justify-center text-3xl text-white transition-colors duration-150 ease-in-out rounded group hover:text-blue focus:outline-none bg-white/40 hover:bg-green w-11 h-11">
+                                <span class="iconify" data-icon="proicons:x-twitter"></span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </main>
+  <scrip src="/prism/prism.js"></scrip>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  
+  <script src="/js/maven-prs.js" defer></script>
+
+</body>
+
+</html>

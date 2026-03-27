@@ -16,4 +16,4 @@ Since I have to wait 1 more month I started to recreate the effect by using Java
 
 Here is a first preview (and yes I only used JavaFX to create this):
 
-{{< youtube zLR7oCh7U5g >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zLR7oCh7U5g" frameborder="0" allowfullscreen></iframe>

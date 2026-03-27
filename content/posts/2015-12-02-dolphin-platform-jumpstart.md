@@ -18,6 +18,6 @@ The Maven multi module project that is created by using this first archetype con
 
 The following video shows how you can create your first Dolphin Platform application in 1 minute by using IntelliJ:
 
-{{< youtube e0vdf0coNuc >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e0vdf0coNuc" frameborder="0" allowfullscreen></iframe>
 
-I will post about other IDE and the commandline usage later. If you have any questions about Dolphin Platform you can now use the ["dolphin-platform" tag at stackoverflow](http://stackoverflow.com/questions/tagged/dolphin-platform). If you are new to Dolphin Platform you can find general information and tutorials [here](http://www.dolphin-platform.io) and [here]({{< ref "/posts/2015-11-09-dolphin-platform-has-been-released" >}}).
+I will post about other IDE and the commandline usage later. If you have any questions about Dolphin Platform you can now use the ["dolphin-platform" tag at stackoverflow](http://stackoverflow.com/questions/tagged/dolphin-platform). If you are new to Dolphin Platform you can find general information and tutorials [here](http://www.dolphin-platform.io) and [here](/posts/2015-11-09-dolphin-platform-has-been-released).

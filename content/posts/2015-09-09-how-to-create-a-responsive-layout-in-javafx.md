@@ -8,7 +8,7 @@ categories: [JavaFX, Layout & UI]
 excerpt: 'Some days ago I was asked at twitter about a responsive layout problem in JavaFX. Here I will show how a first solution to create such a responsive layout.'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-Some days ago [I was asked at twitter about a responsive layout problem in JavaFX](https://twitter.com/j_e_willis/status/641000236119257088). Based on the work that I did with [ResponsiveFX]({{< ref "/posts/2014-11-04-responsive-design-javafx" >}}) I was asked how I would create a specific responsive behavior.
+Some days ago [I was asked at twitter about a responsive layout problem in JavaFX](https://twitter.com/j_e_willis/status/641000236119257088). Based on the work that I did with [ResponsiveFX](/posts/2014-11-04-responsive-design-javafx) I was asked how I would create a specific responsive behavior.
 
 In this special case, an image and a text should next to each other on a desktop. In a smaller (mobile) version the text should be placed under the image. You can find the [question at stackoverflow](http://stackoverflow.com/questions/32021293/javafx-creating-a-responsive-layout), too.
 
@@ -22,8 +22,7 @@ Let's discuss several approaches that we can use to create this behavior.
 
 One suggested solution is to switch between an HBox and a VBox at runtime. This means that on a big screen you will see the image and text wrapped in an HBox and when the size becomes smaller the HBox will be replaced by a VBox. By doing so we need to discuss if we want to reuse the text and image component in both layouts or create a separate instance for each layout. Here I think that recycling of the components is a good idea. If you use 2 instances you need to sync them. By using the JavaFX property API this isn't as hard as it sounds in the first moment but it can still create some errors. So let's have a look at a code snippet that creates the basic view:
 
-{{< highlight java >}}
-public class ResponsiveLayoutDemo extends Application {
+```javapublic class ResponsiveLayoutDemo extends Application {
 
   private Label textLabel;
 
@@ -57,8 +56,7 @@ public class ResponsiveLayoutDemo extends Application {
   public static void main(String... args) {
     launch(args);
   }
-}
-{{< / highlight >}}
+}```
 
 When running this example the view will be shown with the text and image next to each other:
 
@@ -66,8 +64,7 @@ When running this example the view will be shown with the text and image next to
 
 As a next step we want to refactor the code by using a VBox:
 
-{{< highlight java >}}
-public class ResponsiveLayoutDemo extends Application {
+```javapublic class ResponsiveLayoutDemo extends Application {
 
   private Label textLabel;
 
@@ -101,8 +98,7 @@ public class ResponsiveLayoutDemo extends Application {
   public static void main(String... args) {
     launch(args);
   }
-}
-{{< / highlight >}}
+}```
 
 In this example the text will be displayed under the image as it should look on small devices:
 
@@ -110,8 +106,7 @@ In this example the text will be displayed under the image as it should look on 
 
 As a last step we want to modify the code and create an application that will change it's layout dynamically:
 
-{{< highlight java >}}
-public class ResponsiveLayoutDemo extends Application {
+```javapublic class ResponsiveLayoutDemo extends Application {
 
     private Label textLabel;
 
@@ -174,24 +169,21 @@ public class ResponsiveLayoutDemo extends Application {
     public static void main(String... args) {
         launch(args);
     }
-}
-{{< / highlight >}}
+}```
 
 In this first try, the mainPane contains the hBox or the vBox depending on the width of the scene. To do so a lister is attached to the width property. In addition, the children of the vBox and hBox will be cleared and the text and image will be attached to the currently visible panel. As you can see in this video the view already behaves as it should:
 
-{{< youtube wEt8WKDR7r8 >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wEt8WKDR7r8" frameborder="0" allowfullscreen></iframe>
 
 <p>There are still some ugly parts in the code. As you might have noticed the listener will be called for each repaint of our stage. therefore nodes will be replaced and added to the scene graph all the time. Here we can use the JavaFX binding API to create a more performant binding. Here is the code snippet that shows the changed code:
 
-{{< highlight java >}}
-primaryStage.widthProperty().greaterThan(600).addListener((obs, oldValue, newValue) -> {
+```javaprimaryStage.widthProperty().greaterThan(600).addListener((obs, oldValue, newValue) -> {
             if (!newValue) {
                 changeToSmallLayout();
             } else {
                 changeToLargeLayout();
             }
-        });
-{{< / highlight >}}
+        });```
 
 Now the scene graph will only be changed if the size will become greater or smaller than 600 pixels.
 

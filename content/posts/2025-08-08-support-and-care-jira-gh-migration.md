@@ -10,7 +10,7 @@ preview_image: "/posts/preview-images/open-source-green.svg"
 ---
 In this blog post, we'd like to share how funding can help in doing maintenance tasks in open-source projects.
 
-Our [Support and Care]({{< relref "support-care-maven" >}}) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://maven.apache.org/)™:
+Our [Support and Care](/support-care-maven) project got financially supported by the [German Sovereign Tech Fund](https://www.sovereign.tech/) (STF) to work on the following four packages of [Apache Maven](https://maven.apache.org/)™:
 
 - Security of the Supply Chain
 - Maintenance
@@ -19,11 +19,11 @@ Our [Support and Care]({{< relref "support-care-maven" >}}) project got financia
 
 One task in the *maintenance* working package was to support the migration of Jira issues to GitHub issues.
 
-{{< centered-image src="/posts/2025-08-08-support-and-care-jira-gh-migration/migration-automation.png" width="80%" showCaption="false" alt="Jira Issue to GitHub Isssue Migration">}}
+![Jira Issue to GitHub Isssue Migration](/posts/2025-08-08-support-and-care-jira-gh-migration/migration-automation.png)
 
 ## How the journey started
 
-In April 2024, a [first voting](https://lists.apache.org/thread/yt819f08rvfoywlpwtbkk3w1kpow4ynb) was started to move two small projects (AFS Parent POM and Maven Parent POM) to GitHub (GH). If you are not familiar with Maven you can get an overview in our ["What is Maven" article]({{< relref "articles/what-is-maven" >}}).
+In April 2024, a [first voting](https://lists.apache.org/thread/yt819f08rvfoywlpwtbkk3w1kpow4ynb) was started to move two small projects (AFS Parent POM and Maven Parent POM) to GitHub (GH). If you are not familiar with Maven you can get an overview in our ["What is Maven" article](/articles/what-is-maven).
 The motivation was that the most changes in these projects are done by [DependaBot](https://github.com/dependabot) and the Jira issues are created manually by copy-and-paste for creating the release notes.
 It passed the voting, and the migration path was
 
@@ -141,7 +141,7 @@ In conclusion, without funding, nobody could spend so much time to prepare and s
 
 The whole migration was a result of good teamwork and based on another person's work.
 
-{{< centered-image src="/posts/2025-08-08-support-and-care-jira-gh-migration/friends.png" width="80%" showCaption="false" alt="Community rulez">}}
+![Community rulez](/posts/2025-08-08-support-and-care-jira-gh-migration/friends.png)
 
 Therefore, a big *Thank-you* in particular to
 
