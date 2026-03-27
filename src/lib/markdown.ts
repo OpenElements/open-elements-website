@@ -254,6 +254,31 @@ function decorateExternalLinks(contentHtml: string): string {
   );
 }
 
+const STANDALONE_IMAGE_STYLE =
+  'display: block; max-width: 100%; height: auto; margin-left: auto; margin-right: auto;';
+
+function applyStandaloneImageStyle(imageHtml: string): string {
+  if (/\bstyle\s*=/i.test(imageHtml)) {
+    return imageHtml.replace(
+      /\bstyle\s*=\s*(["'])(.*?)\1/i,
+      (_match, quote: string, styleValue: string) => {
+        const normalizedStyle = styleValue.trim().replace(/;?\s*$/, ';');
+        return `style=${quote}${normalizedStyle} ${STANDALONE_IMAGE_STYLE}${quote}`;
+      },
+    );
+  }
+
+  return imageHtml.replace('<img', `<img style="${STANDALONE_IMAGE_STYLE}"`);
+}
+
+function centerStandaloneHtmlImages(contentHtml: string): string {
+  return contentHtml.replace(
+    /(^|\n)\s*(<img\b[^>]*>)\s*(?=\n|$)/gi,
+    (_match, prefix: string, imageHtml: string) =>
+      `${prefix}<div style="text-align: center; margin: 2rem 0;">${applyStandaloneImageStyle(imageHtml)}</div>`,
+  );
+}
+
 function escapeHtml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
@@ -529,7 +554,7 @@ export async function getPostBySlug(
       .process(transformedContent);
     const contentHtml = highlightCodeBlocks(
       decorateHeadlinesWithAnchors(
-        decorateExternalLinks(processedContent.toString()),
+        decorateExternalLinks(centerStandaloneHtmlImages(processedContent.toString())),
       ),
     );
 

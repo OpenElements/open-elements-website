@@ -101,6 +101,16 @@
     @apply w-full xl:min-h-103.5 lg:min-h-130 md:min-h-96 sm:min-h-81 h-46
   }
 
+  /* Center standalone article images without affecting inline emoji-style images. */
+  .prose > img,
+  .prose > a > img:only-child,
+  .prose p > img:only-child,
+  .prose p > a:only-child > img:only-child {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .prose .highlight {
     @apply my-2 overflow-hidden rounded-3xl;
   }
