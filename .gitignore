@@ -10,3 +10,5 @@ dist/
 # pnpm
 .pnpm-store/
 test-results/
+
+next-env.d.ts
