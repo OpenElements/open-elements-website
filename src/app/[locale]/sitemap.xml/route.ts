@@ -7,6 +7,7 @@ const staticRoutes = [
   'about',
   'contact',
   'impressum',
+  'newsletter',
   'posts',
   'support-care',
   'support-care-maven',
