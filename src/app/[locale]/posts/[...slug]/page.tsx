@@ -28,7 +28,7 @@ function getAuthorById(locale: string, authorId: string): TeamMember | undefined
 interface PostPageProps {
   params: Promise<{
     locale: string;
-    slug: string;
+    slug: string[];
   }>;
 }
 
@@ -44,7 +44,8 @@ export async function generateStaticParams() {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = await getPostBySlug(slug, locale);
+  const slugPath = slug.join('/');
+  const post = await getPostBySlug(slugPath, locale);
 
   if (!post) {
     return {
@@ -88,7 +89,8 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 
 export default async function PostPage({ params }: PostPageProps) {
   const { locale, slug } = await params;
-  const post = await getPostBySlug(slug, locale);
+  const slugPath = slug.join('/');
+  const post = await getPostBySlug(slugPath, locale);
 
   if (!post) {
     notFound();

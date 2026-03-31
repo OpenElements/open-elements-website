@@ -19,6 +19,7 @@ export interface PostFrontmatter {
   excerpt: string;
   categories: string[];
   preview_image: string;
+  slug?: string;
   outdated?: boolean;
   showInBlog?: boolean;
 }
@@ -114,60 +115,68 @@ Prism.hooks.add('wrap', (environment) => {
 });
 
 /**
- * Get the filename for a post based on locale
- * The content uses locale suffixes like:
- * - English: `2025-01-16-post-name.md` (no suffix)
- * - German: `2025-01-16-post-name.de.md` (.de suffix)
+ * Generate a URL-friendly slug from text
  */
-function getPostFilename(slug: string, locale: string): string | null {
-  const files = fs.readdirSync(postsDirectory);
-
-  // For non-default locale (e.g., German), look for files with locale suffix
-  if (locale !== 'en') {
-    // Try to find a file with the locale suffix
-    const localeFile = files.find(file => {
-      const withoutExt = file.replace(/\.md$/, '');
-      return (
-        withoutExt.endsWith(`.${locale}`) &&
-        withoutExt.replace(`.${locale}`, '').endsWith(slug)
-      );
-    });
-
-    if (localeFile) return localeFile;
-
-    // Also check if the slug itself matches
-    const directMatch = files.find(file => {
-      const withoutLocaleExt = file.replace(`.${locale}.md`, '');
-      return withoutLocaleExt === slug || file === `${slug}.${locale}.md`;
-    });
-
-    if (directMatch) return directMatch;
-  }
-
-  // For English, look for files without locale suffix
-  if (locale === 'en') {
-    const englishFile = files.find(file => {
-      if (file.endsWith('.de.md')) return false; // Skip German files
-      const withoutExt = file.replace(/\.md$/, '');
-      return withoutExt.endsWith(slug) || withoutExt === slug;
-    });
-
-    return englishFile || null;
-  }
-
-  return null;
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 /**
- * Extract slug from filename
+ * Generate a post slug from frontmatter.
+ * Uses the explicit `slug` property if defined, otherwise slugifies the title.
  */
-function extractSlugFromFilename(filename: string, locale: string): string {
-  if (locale !== 'en' && filename.endsWith(`.${locale}.md`)) {
-    // Remove locale suffix and .md extension
-    return filename.replace(`.${locale}.md`, '');
+function generatePostSlug(frontmatter: PostFrontmatter): string {
+  if (frontmatter.slug) {
+    return frontmatter.slug;
   }
-  // Remove .md extension
-  return filename.replace(/\.md$/, '');
+  return slugify(frontmatter.title);
+}
+
+/**
+ * Generate the full date-based post path from frontmatter.
+ * Format: YYYY/MM/DD/slug-text
+ */
+function generatePostPath(frontmatter: PostFrontmatter): string {
+  const date = new Date(frontmatter.date);
+  const year = date.getUTCFullYear().toString();
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  const slug = generatePostSlug(frontmatter);
+  return `${year}/${month}/${day}/${slug}`;
+}
+
+/**
+ * Find the filename for a post matching the given date-based slug path and locale.
+ * slugPath format: "YYYY/MM/DD/slug-text"
+ */
+function getPostFilename(slugPath: string, locale: string): string | null {
+  const files = fs.readdirSync(postsDirectory);
+
+  for (const filename of files) {
+    if (!filename.endsWith('.md')) continue;
+
+    // Check locale matching
+    const isLocaleFile = filename.endsWith(`.${locale}.md`);
+    const isDefaultFile = !filename.includes('.de.md');
+
+    if (locale === 'de' && !isLocaleFile) continue;
+    if (locale === 'en' && !isDefaultFile) continue;
+
+    const fullPath = path.join(postsDirectory, filename);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data } = matter(fileContents);
+    const frontmatter = data as PostFrontmatter;
+
+    const postPath = generatePostPath(frontmatter);
+    if (postPath === slugPath) {
+      return filename;
+    }
+  }
+
+  return null;
 }
 
 function isInternalHostname(hostname: string): boolean {
@@ -445,9 +454,11 @@ function highlightCodeBlocks(contentHtml: string): string {
 }
 
 /**
- * Get all posts for a specific locale
+ * Get all posts for a specific locale.
+ * By default, posts with showInBlog === false are excluded (for the blog listing UI).
+ * Pass includeHidden = true to include all posts (e.g. for sitemap generation).
  */
-export function getAllPosts(locale: string): PostData[] {
+export function getAllPosts(locale: string, { includeHidden = false }: { includeHidden?: boolean } = {}): PostData[] {
   const files = fs.readdirSync(postsDirectory);
 
   const posts: PostData[] = [];
@@ -468,12 +479,18 @@ export function getAllPosts(locale: string): PostData[] {
       if (!isDefaultFile) continue;
     }
 
-    const slug = extractSlugFromFilename(filename, locale);
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
     const frontmatter = data as PostFrontmatter;
+
+    // Skip posts not meant for the blog listing unless includeHidden is true
+    if (!includeHidden && frontmatter.showInBlog === false) {
+      continue;
+    }
+
+    const slug = generatePostPath(frontmatter);
 
     posts.push({
       slug,
@@ -494,10 +511,11 @@ export function getAllPosts(locale: string): PostData[] {
 
 /**
  * Get all post slugs for all locales (used in generateStaticParams)
+ * Returns slug as a string array for catch-all routing: ['YYYY', 'MM', 'DD', 'slug-text']
  */
-export function getAllPostSlugs(): Array<{ locale: string; slug: string }> {
+export function getAllPostSlugs(): Array<{ locale: string; slug: string[] }> {
   const files = fs.readdirSync(postsDirectory);
-  const slugs: Array<{ locale: string; slug: string }> = [];
+  const slugs: Array<{ locale: string; slug: string[] }> = [];
 
   for (const filename of files) {
     if (!filename.endsWith('.md')) continue;
@@ -508,19 +526,18 @@ export function getAllPostSlugs(): Array<{ locale: string; slug: string }> {
     const { data } = matter(fileContents);
     const frontmatter = data as PostFrontmatter;
 
-    // Skip hidden posts
-    if (frontmatter.showInBlog === false || frontmatter.outdated === true) {
+    // Skip outdated posts from static generation
+    if (frontmatter.outdated === true) {
       continue;
     }
 
+    const postPath = generatePostPath(frontmatter);
+    const slugSegments = postPath.split('/');
+
     if (filename.endsWith('.de.md')) {
-      // German post
-      const slug = filename.replace('.de.md', '');
-      slugs.push({ locale: 'de', slug });
+      slugs.push({ locale: 'de', slug: slugSegments });
     } else {
-      // English post
-      const slug = filename.replace('.md', '');
-      slugs.push({ locale: 'en', slug });
+      slugs.push({ locale: 'en', slug: slugSegments });
     }
   }
 
@@ -528,14 +545,15 @@ export function getAllPostSlugs(): Array<{ locale: string; slug: string }> {
 }
 
 /**
- * Get a single post by slug and locale
+ * Get a single post by slug path and locale.
+ * slugPath can be a joined path like "2026/03/26/slug-text" or segments joined with "/".
  */
 export async function getPostBySlug(
-  slug: string,
+  slugPath: string,
   locale: string,
 ): Promise<PostData | null> {
   try {
-    const filename = getPostFilename(slug, locale);
+    const filename = getPostFilename(slugPath, locale);
 
     if (!filename) {
       return null;
@@ -559,20 +577,21 @@ export async function getPostBySlug(
     );
 
     return {
-      slug,
+      slug: slugPath,
       frontmatter: data as PostFrontmatter,
       content,
       contentHtml,
     };
   } catch (error) {
-    console.error(`Error fetching post ${slug} for locale ${locale}:`, error);
+    console.error(`Error fetching post ${slugPath} for locale ${locale}:`, error);
     return null;
   }
 }
 
 /**
- * Check if a post exists for a given locale
+ * Check if a post exists for a given locale.
+ * slugPath format: "YYYY/MM/DD/slug-text"
  */
-export function postExistsForLocale(slug: string, locale: string): boolean {
-  return getPostFilename(slug, locale) !== null;
+export function postExistsForLocale(slugPath: string, locale: string): boolean {
+  return getPostFilename(slugPath, locale) !== null;
 }

@@ -5,16 +5,17 @@ const supportedLocales = ['en', 'de'] as const;
 
 export async function GET(
   _request: Request,
-  { params }: { params: Promise<{ slug: string }> },
+  { params }: { params: Promise<{ slug: string[] }> },
 ) {
   const { slug } = await params;
+  const slugPath = slug.join('/');
 
   const availableLocales = supportedLocales.filter((locale) =>
-    postExistsForLocale(slug, locale),
+    postExistsForLocale(slugPath, locale),
   );
 
   return NextResponse.json({
-    slug,
+    slug: slugPath,
     availableLocales,
   });
 }

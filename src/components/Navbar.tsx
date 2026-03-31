@@ -20,7 +20,7 @@ export default function Navbar({ locale }: NavbarProps) {
   const [illustrationOffset, setIllustrationOffset] = useState(0)
   const t = useTranslations()
   const pathname = usePathname()
-  const postSlug = pathname.match(/^\/posts\/([^/]+)\/?$/)?.[1] ?? null
+  const postSlug = pathname.match(/^\/posts\/(.+?)\/?$/)?.[1] ?? null
   const [postLocaleAvailability, setPostLocaleAvailability] = useState<{
     slug: string
     locales: SupportedLocale[]
