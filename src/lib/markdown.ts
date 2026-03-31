@@ -115,11 +115,18 @@ Prism.hooks.add('wrap', (environment) => {
 });
 
 /**
- * Generate a URL-friendly slug from text
+ * Generate a URL-friendly slug from text.
+ * Transliterates German umlauts and common diacritics before slugifying.
  */
 function slugify(text: string): string {
   return text
     .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Remove remaining diacritics
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
@@ -151,6 +158,9 @@ function generatePostPath(frontmatter: PostFrontmatter): string {
 /**
  * Find the filename for a post matching the given date-based slug path and locale.
  * slugPath format: "YYYY/MM/DD/slug-text"
+ *
+ * Each locale derives slugs from its own frontmatter, so EN and DE may have
+ * different slug paths for the same post.
  */
 function getPostFilename(slugPath: string, locale: string): string | null {
   const files = fs.readdirSync(postsDirectory);
@@ -158,7 +168,7 @@ function getPostFilename(slugPath: string, locale: string): string | null {
   for (const filename of files) {
     if (!filename.endsWith('.md')) continue;
 
-    // Check locale matching
+    // Filter to the requested locale's files
     const isLocaleFile = filename.endsWith(`.${locale}.md`);
     const isDefaultFile = !filename.includes('.de.md');
 
@@ -168,15 +178,59 @@ function getPostFilename(slugPath: string, locale: string): string | null {
     const fullPath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
-    const frontmatter = data as PostFrontmatter;
 
-    const postPath = generatePostPath(frontmatter);
-    if (postPath === slugPath) {
+    if (generatePostPath(data as PostFrontmatter) === slugPath) {
       return filename;
     }
   }
 
   return null;
+}
+
+/**
+ * Get the base filename shared between EN and DE versions of a post.
+ * e.g. "2026-02-10-review-2025.de.md" → "2026-02-10-review-2025"
+ * e.g. "2026-02-10-review-2025.md" → "2026-02-10-review-2025"
+ */
+function getBaseFilename(filename: string): string {
+  if (filename.endsWith('.de.md')) {
+    return filename.replace('.de.md', '');
+  }
+  return filename.replace('.md', '');
+}
+
+/**
+ * Given a slug path and the current locale, find all available locale versions
+ * by filename pairing. Returns each locale's own slug path.
+ */
+export function getPostLocaleAlternates(
+  slugPath: string,
+  currentLocale: string,
+): Array<{ locale: string; slugPath: string }> {
+  const currentFile = getPostFilename(slugPath, currentLocale);
+  if (!currentFile) return [];
+
+  const base = getBaseFilename(currentFile);
+  const files = fs.readdirSync(postsDirectory);
+  const alternates: Array<{ locale: string; slugPath: string }> = [];
+
+  // Check English version
+  const enFile = `${base}.md`;
+  if (files.includes(enFile)) {
+    const fullPath = path.join(postsDirectory, enFile);
+    const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
+    alternates.push({ locale: 'en', slugPath: generatePostPath(data as PostFrontmatter) });
+  }
+
+  // Check German version
+  const deFile = `${base}.de.md`;
+  if (files.includes(deFile)) {
+    const fullPath = path.join(postsDirectory, deFile);
+    const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
+    alternates.push({ locale: 'de', slugPath: generatePostPath(data as PostFrontmatter) });
+  }
+
+  return alternates;
 }
 
 function isInternalHostname(hostname: string): boolean {

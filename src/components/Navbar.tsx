@@ -21,9 +21,9 @@ export default function Navbar({ locale }: NavbarProps) {
   const t = useTranslations()
   const pathname = usePathname()
   const postSlug = pathname.match(/^\/posts\/(.+?)\/?$/)?.[1] ?? null
-  const [postLocaleAvailability, setPostLocaleAvailability] = useState<{
+  const [postLocaleAlternates, setPostLocaleAlternates] = useState<{
     slug: string
-    locales: SupportedLocale[]
+    alternates: Array<{ locale: SupportedLocale; slugPath: string }>
   } | null>(
     null,
   )
@@ -51,7 +51,8 @@ export default function Navbar({ locale }: NavbarProps) {
       }
     }
 
-    fetch(`/api/post-locales/${encodeURIComponent(postSlug)}`)
+    const encodedSlug = postSlug.split('/').map(encodeURIComponent).join('/')
+    fetch(`/api/post-locales/${encodedSlug}?locale=${locale}`)
       .then(async (response) => {
         if (!response.ok) {
           throw new Error('Failed to load post locales')
@@ -62,24 +63,24 @@ export default function Navbar({ locale }: NavbarProps) {
           return
         }
 
-        if (!Array.isArray(data.availableLocales)) {
+        if (!Array.isArray(data.alternates)) {
           throw new Error('Invalid post locale response')
         }
 
-        const locales = data.availableLocales.filter((value: string): value is SupportedLocale =>
-          allLocales.includes(value as SupportedLocale),
+        const alternates = data.alternates.filter(
+          (alt: { locale: string }) => allLocales.includes(alt.locale as SupportedLocale),
         )
 
-        setPostLocaleAvailability({
+        setPostLocaleAlternates({
           slug: postSlug,
-          locales,
+          alternates,
         })
       })
       .catch(() => {
         if (!cancelled) {
-          setPostLocaleAvailability({
+          setPostLocaleAlternates({
             slug: postSlug,
-            locales: allLocales,
+            alternates: allLocales.map((loc) => ({ locale: loc, slugPath: postSlug })),
           })
         }
       })
@@ -87,15 +88,29 @@ export default function Navbar({ locale }: NavbarProps) {
     return () => {
       cancelled = true
     }
-  }, [postSlug])
+  }, [postSlug, locale])
 
   const availableLocales =
-    postSlug && postLocaleAvailability?.slug === postSlug
-      ? postLocaleAvailability.locales
+    postSlug && postLocaleAlternates?.slug === postSlug
+      ? postLocaleAlternates.alternates.map((alt) => alt.locale)
       : postSlug
         ? []
         : allLocales
   const showLocaleSwitcher = availableLocales.length > 1
+
+  /**
+   * Get the correct path for a locale switcher link.
+   * For blog posts, each locale has its own slug path.
+   */
+  const getLocaleHref = (targetLocale: SupportedLocale): string => {
+    if (postSlug && postLocaleAlternates?.slug === postSlug) {
+      const alt = postLocaleAlternates.alternates.find((a) => a.locale === targetLocale)
+      if (alt) {
+        return `/posts/${alt.slugPath}`
+      }
+    }
+    return pathname
+  }
 
   const renderLocaleSwitcher = (variant: 'desktop' | 'mobile') => {
     if (!showLocaleSwitcher) {
@@ -117,7 +132,7 @@ export default function Navbar({ locale }: NavbarProps) {
             } transition-all ease-in-out duration-150`}
           >
             <Link
-              href={pathname}
+              href={getLocaleHref(languageCode)}
               locale={languageCode}
               data-locale-switcher={languageCode !== locale ? languageCode : undefined}
               data-locale-link={languageCode}
