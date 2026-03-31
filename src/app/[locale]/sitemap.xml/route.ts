@@ -38,7 +38,7 @@ export async function GET(
   }
 
   // Add dynamic blog post routes
-  const posts = getAllPosts(locale);
+  const posts = getAllPosts(locale, { includeHidden: true });
   for (const post of posts) {
     let postDate = defaultLastmod;
     if (post.frontmatter.date) {
