@@ -59,7 +59,7 @@ class ShortcodeRegistry {
       const src = attrs.src || '';
       const alt = this.escapeHtml(attrs.alt || '');
       const width = attrs.width || '100%';
-      const showCaption = attrs.showCaption !== 'false';
+      const showCaption = attrs.showCaption === 'true';
       
       const imageHtml = `<img src="${src}" alt="${alt}" style="display: block; max-width: ${width}; height: auto; margin-left: auto; margin-right: auto; border-radius: 0.75rem;" />`;
       const captionHtml = showCaption && alt ? `<p style="text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">${alt}</p>` : '';
