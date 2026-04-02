@@ -6,7 +6,7 @@ import { getPostBySlug, getAllPostSlugs } from '@/lib/markdown';
 import teamDataEn from '@/data/en/team.json';
 import teamDataDe from '@/data/de/team.json';
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 interface TeamMember {
   id: string;

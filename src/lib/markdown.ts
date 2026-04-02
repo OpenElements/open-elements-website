@@ -116,18 +116,13 @@ Prism.hooks.add('wrap', (environment) => {
 
 /**
  * Generate a URL-friendly slug from text.
- * Transliterates German umlauts and common diacritics before slugifying.
+ * Keeps locale-specific characters (e.g. umlauts) to match Hugo URLs.
  */
 function slugify(text: string): string {
   return text
     .toLowerCase()
-    .replace(/ä/g, 'ae')
-    .replace(/ö/g, 'oe')
-    .replace(/ü/g, 'ue')
-    .replace(/ß/g, 'ss')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '') // Remove remaining diacritics
-    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
+    .replace(/-+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
 
@@ -155,6 +150,49 @@ function generatePostPath(frontmatter: PostFrontmatter): string {
   return `${year}/${month}/${day}/${slug}`;
 }
 
+function normalizeLegacySlugSegment(slug: string): string {
+  return slug
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function isDateBasedSlugMatch(candidatePath: string, requestedPath: string): boolean {
+  if (candidatePath === requestedPath) {
+    return true;
+  }
+
+  const candidateSegments = candidatePath.split('/');
+  const requestedSegments = requestedPath.split('/');
+
+  if (candidateSegments.length !== 4 || requestedSegments.length !== 4) {
+    return false;
+  }
+
+  const candidateDatePrefix = candidateSegments.slice(0, 3).join('/');
+  const requestedDatePrefix = requestedSegments.slice(0, 3).join('/');
+
+  if (candidateDatePrefix !== requestedDatePrefix) {
+    return false;
+  }
+
+  return normalizeLegacySlugSegment(candidateSegments[3]) === normalizeLegacySlugSegment(requestedSegments[3]);
+}
+
+function decodePathSegments(pathValue: string): string {
+  return pathValue
+    .split('/')
+    .map((segment) => {
+      try {
+        return decodeURIComponent(segment);
+      } catch {
+        return segment;
+      }
+    })
+    .join('/');
+}
+
 /**
  * Find the filename for a post matching the given date-based slug path and locale.
  * slugPath format: "YYYY/MM/DD/slug-text"
@@ -164,6 +202,21 @@ function generatePostPath(frontmatter: PostFrontmatter): string {
  */
 function getPostFilename(slugPath: string, locale: string): string | null {
   const files = fs.readdirSync(postsDirectory);
+  const decodedSlugPath = decodePathSegments(slugPath);
+
+  // Legacy NextJS path format: "YYYY-MM-DD-post-slug" (filename base)
+  if (!decodedSlugPath.includes('/')) {
+    if (locale === 'de') {
+      const deFilename = `${decodedSlugPath}.de.md`;
+      return files.includes(deFilename) ? deFilename : null;
+    }
+
+    const enFilename = `${decodedSlugPath}.md`;
+    if (files.includes(enFilename) && !enFilename.includes('.de.md')) {
+      return enFilename;
+    }
+    return null;
+  }
 
   for (const filename of files) {
     if (!filename.endsWith('.md')) continue;
@@ -179,7 +232,7 @@ function getPostFilename(slugPath: string, locale: string): string | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
 
-    if (generatePostPath(data as PostFrontmatter) === slugPath) {
+    if (isDateBasedSlugMatch(generatePostPath(data as PostFrontmatter), decodedSlugPath)) {
       return filename;
     }
   }
@@ -580,18 +633,19 @@ export function getAllPostSlugs(): Array<{ locale: string; slug: string[] }> {
     const { data } = matter(fileContents);
     const frontmatter = data as PostFrontmatter;
 
-    // Skip outdated posts from static generation
-    if (frontmatter.outdated === true) {
-      continue;
-    }
-
     const postPath = generatePostPath(frontmatter);
     const slugSegments = postPath.split('/');
+    const legacyBaseSlug = filename.endsWith('.de.md')
+      ? filename.replace('.de.md', '')
+      : filename.replace('.md', '');
+    const legacySlugSegments = [legacyBaseSlug];
 
     if (filename.endsWith('.de.md')) {
       slugs.push({ locale: 'de', slug: slugSegments });
+      slugs.push({ locale: 'de', slug: legacySlugSegments });
     } else {
       slugs.push({ locale: 'en', slug: slugSegments });
+      slugs.push({ locale: 'en', slug: legacySlugSegments });
     }
   }
 
