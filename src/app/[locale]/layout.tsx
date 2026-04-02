@@ -83,6 +83,75 @@ export default async function LocaleLayout({
             <Footer locale={locale} />
           </div>
           <Script src="https://code.iconify.design/2/2.2.1/iconify.min.js" strategy="afterInteractive" />
+          
+          {/* Iubenda Cookie Consent */}
+          <Script
+            id="iubenda-cookie-config"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                var _iub = _iub || [];
+                var iubendaLang = "${locale === 'de' ? 'de' : 'en'}";
+                _iub.csConfiguration = {
+                  "askConsentAtCookiePolicyUpdate": true,
+                  "countryDetection": true,
+                  "enableFadp": true,
+                  "enableLgpd": true,
+                  "enableUspr": true,
+                  "lang": iubendaLang,
+                  "lgpdAppliesGlobally": false,
+                  "perPurposeConsent": true,
+                  "siteId": 2724482,
+                  "whitelabel": false,
+                  "cookiePolicyId": 15787680,
+                  "banner": {
+                    "acceptButtonColor": "#5CBA9E",
+                    "acceptButtonDisplay": true,
+                    "backgroundColor": "#020147",
+                    "closeButtonDisplay": false,
+                    "customizeButtonColor": "#15649F",
+                    "customizeButtonDisplay": true,
+                    "explicitWithdrawalDisplay": true,
+                    "listPurposes": true,
+                    "logo": null,
+                    "position": "bottom",
+                    "prependOnBody": true,
+                    "rejectButtonColor": "#15649F",
+                    "rejectButtonDisplay": true,
+                    "showPurposesToggles": true
+                  }
+                };
+              `,
+            }}
+          />
+          <Script
+            src="//cdn.iubenda.com/cs/gpp/stub.js"
+            strategy="afterInteractive"
+          />
+          <Script
+            src="//cdn.iubenda.com/cs/iubenda_cs.js"
+            charSet="UTF-8"
+            async
+            strategy="afterInteractive"
+          />
+          
+          {/* Plausible Analytics */}
+          <Script
+            async
+            src="https://plausible.io/js/pa-2UglNOjTjMgrvAyDUEo5D.js"
+            strategy="afterInteractive"
+          />
+          <Script
+            id="plausible-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.plausible = window.plausible || function() { (plausible.q = plausible.q || []).push(arguments) };
+                plausible.init = plausible.init || function(i) { plausible.o = i || {} };
+                plausible.init();
+              `,
+            }}
+          />
         </NextIntlClientProvider>
       </body>
     </html>
