@@ -2,17 +2,24 @@ import { NextResponse } from 'next/server';
 import { getAllPosts } from '@/lib/markdown';
 import { headers } from 'next/headers';
 
-const staticRoutes = [
-  '', // home
-  'about',
-  'contact',
-  'impressum',
-  'newsletter',
-  'posts',
-  'support-care',
-  'support-care-maven',
-  'updates',
-];
+function getStaticRoutes(locale: string): string[] {
+  const routes = [
+    '', // home
+    'about',
+    'contact',
+    'impressum',
+    'posts',
+    'support-care',
+    'support-care-maven',
+    'updates',
+  ];
+
+  if (locale === 'de') {
+    routes.push('newsletter', 'newsletter-archive');
+  }
+
+  return routes;
+}
 
 export async function GET(
   request: Request,
@@ -30,7 +37,7 @@ export async function GET(
   const allUrls: Array<{ loc: string; lastmod: string }> = [];
 
   // Add static routes
-  for (const route of staticRoutes) {
+  for (const route of getStaticRoutes(locale)) {
     const path = route ? `${localePrefix}/${route}` : localePrefix;
     allUrls.push({
       loc: `${baseUrl}${path}`,
