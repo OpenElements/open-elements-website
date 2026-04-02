@@ -1,5 +1,9 @@
 # Open Elements Website
 
+[![CI](https://github.com/OpenElements/open-elements-website/actions/workflows/ci.yml/badge.svg)](https://github.com/OpenElements/open-elements-website/actions/workflows/ci.yml)
+[![E2E Tests](https://github.com/OpenElements/open-elements-website/actions/workflows/e2e-tests.yml/badge.svg)](https://github.com/OpenElements/open-elements-website/actions/workflows/e2e-tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 This repository contains the Open Elements website built with Next.js and Tailwind CSS, with legacy Hugo content kept for migration and historical content.
 
 ## Architecture (2026)
@@ -77,7 +81,6 @@ src/i18n           next-intl routing/messages helpers
 locales            Translation JSON files
 content            Markdown content
 public             Static assets and generated artifacts
-react-src          Web components source (bundled to public/js)
 tests/e2e          Playwright specs
 ```
 
