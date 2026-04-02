@@ -37,8 +37,7 @@ If you use Maven or Gradle as your build tool, you can even automate this proces
 
 As shown in the following example, you only need to configure the maven-jar-plugin for a Maven build:
 
-{{< highlight xml >}}
-<plugin>
+```xml<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-jar-plugin</artifactId>
     <version>3.3.0</version>
@@ -49,19 +48,16 @@ As shown in the following example, you only need to configure the maven-jar-plug
             </manifestEntries>
         </archive>
     </configuration>
-</plugin>
-{{< / highlight >}}
+</plugin>```
 
 In Gradle, you can achieve this by using the Java Library Plugin, which should be part of every Java build.
 Detailed documentation for using Gradle can be found [here](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_modular_auto), while the following code shows a simple integration into a project:
 
-{{< highlight java >}}
-tasks.jar {
+```javatasks.jar {
     manifest {
         attributes("Automatic-Module-Name" to "com.example.lib")
     }
-}
-{{< / highlight >}}
+}```
 
 ## Next Steps
 

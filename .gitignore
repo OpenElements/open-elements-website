@@ -1,5 +1,14 @@
 node_modules/
-public/
 .DS_Store
 .idea
-.DS_Store
+
+# Next.js
+.next/
+dist/
+
+
+# pnpm
+.pnpm-store/
+test-results/
+
+next-env.d.ts

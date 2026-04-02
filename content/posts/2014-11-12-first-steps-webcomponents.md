@@ -22,15 +22,12 @@ As a first step I downloaded the polymer lib. To do so I used [bower](http://bow
 
 After you have installed bower on your system you need to execute the following commands in the folder of your web project:
 
-{{< highlight shell >}}
-bower init
-bower install --save Polymer/polymer
-{{< / highlight >}}
+```shellbower init
+bower install --save Polymer/polymer```
 
 This will create a `bower.json` file in your project and adds polymer as dependency. My file looks like this:
 
-{{< highlight json >}}
-{
+```json{
     "name": "polymer-test",
     "version": "0.0.0",
     "description": "A polymer playground",
@@ -47,14 +44,11 @@ This will create a `bower.json` file in your project and adds polymer as depende
     "dependencies": {
         "polymer": "Polymer/polymer#^0.4.1"
     }
-}
-{{< / highlight >}}
+}```
 
 To download all dependencies you need to call
 
-{{< highlight shell >}}
-bower install
-{{< / highlight >}}
+```shellbower install```
 
 This command will download all defined dependencies and install the in the `bower_components` folder in your project. When committing your project to git you can simply ignore this folder.
 
@@ -66,10 +60,9 @@ As a next step you can create a `index.html` to test your custom components and 
 
 ## General structure of a WebComponent
 
-As said a web component is a custom control for web pages. Top define a component we only need one HTML file. As in other [languages or UT toolkits]({{< ref "/posts/2012-11-17-custom-ui-controls-with-javafx-part-1" >}}) a web component is composed of a layout definition, a style and controller logic. In the web world this means HTML (layout), CSS (style) and JavaScript (controller). By using polymer all 3 parts can combined in one file. Here is a skeleton for the file:
+As said a web component is a custom control for web pages. Top define a component we only need one HTML file. As in other [languages or UT toolkits](/posts/2012-11-17-custom-ui-controls-with-javafx-part-1) a web component is composed of a layout definition, a style and controller logic. In the web world this means HTML (layout), CSS (style) and JavaScript (controller). By using polymer all 3 parts can combined in one file. Here is a skeleton for the file:
 
-{{< highlight html >}}
-<link rel="import" href="../bower_components/polymer/polymer.html">
+```html<link rel="import" href="../bower_components/polymer/polymer.html">
 
 <polymer-element name="lorem-ipsum" attributes="paragraphs">
 
@@ -86,8 +79,7 @@ As said a web component is a custom control for web pages. Top define a componen
     // contains the style of the component in CSS
     </style>
 
-</polymer-element>
-{{< / highlight >}}
+</polymer-element>```
 
 As you can see the code starts with an import. Each custom component must import the `polymer.html` file. Thanks to bower this is already in the `bower_components` folder and can simply be imported. The `polymer-element` tag describes the web component. In the tag there are 3 more tags that describes the layout (template), the style (style) and the controller of the component (script). The `polymer-element` tag has some attributes that describes the name of our component and its attributes.
 
@@ -97,8 +89,7 @@ To create a small web component you don't need to define all 3 inner tags but so
 
 As a start we want to create a minimal web component that will only print an "A" on screen. To do so we create the "Simple-A.html" file in the components folder and add the following content:
 
-{{< highlight html >}}
-<link rel="import" href="../bower_components/polymer/polymer.html">
+```html<link rel="import" href="../bower_components/polymer/polymer.html">
 
 <polymer-element name="simple-a">
 
@@ -110,8 +101,7 @@ As a start we want to create a minimal web component that will only print an "A"
         Polymer({});
     </script>
 
-</polymer-element>
-{{< / highlight >}}
+</polymer-element>```
 
 As far as I know is this the minimum definition that you need to define a component. In the template a paragraph that contains an "A" is defined. This is default HTML and if we don't want to create a reusable component we could write this directly in an HTML file. In the script section the Polymer({}); call registers the component so it's recognized by the browser. Once this is done the component can be used in any HTML file to render the "A" paragraph on screen:
 
@@ -121,8 +111,7 @@ As far as I know is this the minimum definition that you need to define a compon
 
 To include the custom web component in a HTML page you need to import it. In addition the polymer platform lib must included to the page. Here is the code of a HTML page that includes everything and adds the "A" paragraph component several times to the body of the page:
 
-{{< highlight html >}}
-<!DOCTYPE html>
+```html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -138,8 +127,7 @@ To include the custom web component in a HTML page you need to import it. In add
     <simple-a></simple-a>
 </div>
 </body>
-</html>
-{{< / highlight >}}
+</html>```
 
 As you can see in the code the html files that defines the custom component is imported in the web page. Once this is done the custom tag `<simple-a>` can be used in the web page. When having a look at the web developer tools of safari you can see that the A tags are now part of the page:
 

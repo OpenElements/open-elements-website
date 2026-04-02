@@ -1,19 +1,20 @@
 ---
 outdated: false
 showInBlog: true
-title: "Open Elements 2024 Year in Review"
+title: 'Open Elements 2024 Year in Review'
 date: 2025-01-16
 author: hendrik
-excerpt: "In 2024, Open Elements achieved remarkable success and drove groundbreaking developments in the open-source ecosystem with projects like Support & Care for Apache Maven™. CEO Hendrik Ebbers took on key roles at the Eclipse and Linux Foundations, strengthening the global open-source community."
+excerpt: 'In 2024, Open Elements achieved remarkable success and drove groundbreaking developments in the open-source ecosystem with projects like Support & Care for Apache Maven™. CEO Hendrik Ebbers took on key roles at the Eclipse and Linux Foundations, strengthening the global open-source community.'
 categories: [Open Elements]
-preview_image: "/posts/preview-images/openelements-yellow.svg"
+preview_image: '/posts/preview-images/openelements-yellow.svg'
 ---
+
 The year 2024 at Open Elements was marked by growth and successful project developments.
 The company’s strong commitment to the open-source ecosystem was demonstrated by the additional or renewed appointments
-of CEO [Hendrik Ebbers]({{< relref "about-hendrik" >}}) to various positions at the **Eclipse Foundation**,
+of CEO [Hendrik Ebbers](/about-hendrik) to various positions at the **Eclipse Foundation**,
 **Eclipse Adoptium**, **Hiero**, the **Linux Foundation**, and the **Linux Foundation Decentralized Trust**.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/oss-meets-java.png" width="100%" showCaption="false" alt="Open Elements continues to focus on open source and Java">}}
+![Open Elements continues to focus on open source and Java](/posts/2025-01-16-open-elements-in-2024/oss-meets-java.png)
 
 For Hendrik Ebbers and Open Elements, open source is a matter of the heart, reflected in their company values,
 which are consistently upheld and visibly practiced:
@@ -24,7 +25,7 @@ which are consistently upheld and visibly practiced:
 - Providing help and solutions.
 
 From publications and lectures to conference support, Open Elements once again demonstrated in 2024 that great
-dedication pays off, launching the **[Support & Care for Apache Maven™]({{< ref "support-care-maven" >}})**
+dedication pays off, launching the **[Support & Care for Apache Maven™](/support-care-maven)**
 project—a milestone in the open-source space.
 
 ## Engagement
@@ -37,7 +38,7 @@ Additional appointments included seats on the Steering Committees of [Eclipse Ad
 [Linux Foundation Decentralized Trust](https://www.lfdecentralizedtrust.org).
 These re-elections highlight the tangible and lasting impact of Open Elements’ contributions to the open-source ecosystem.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/foundations.png" width="90%" showCaption="false" alt="Foundations and Working Groups Open Elements contributes to">}}
+![Foundations and Working Groups Open Elements contributes to](/posts/2025-01-16-open-elements-in-2024/foundations.png)
 
 Open Elements is also a member of the [Open Regulatory Compliance Working Group (ORCWG)](https://orcwg.org) within the Eclipse Foundation.
 This group facilitates the implementation of the EU Cyber Resilience Act (CRA), bridging the gap between regulatory
@@ -48,7 +49,7 @@ Germany’s federal association for digital sovereignty.
 The alliance provides a platform to promote improvements in the open-source landscape while fostering connections with
 policymakers and public sector organizations. It works to enhance the perception of open source in industry and the broader public.
 
-{{< centered-image src="/illustrations/general/connecting-open-source-gov.svg" width="100%" showCaption="false" alt="Open Elements connects governments and open source">}}
+![Open Elements connects governments and open source](/illustrations/general/connecting-open-source-gov.svg)
 
 ## Sponsoring & Support
 
@@ -58,7 +59,7 @@ Hendrik Ebbers contributed as the program committee chair for the JavaLand confe
 Similarly, he delivered talks at the OCX conference, sharing his knowledge with many attendees.
 Open Elements proudly served as a sponsor for both events.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/javaland-sponsoring.jpg" width="100%" showCaption="false" alt="Open Elements as one of the sponsors of the JavaLand conference">}}
+![Open Elements as one of the sponsors of the JavaLand conference](/posts/2025-01-16-open-elements-in-2024/javaland-sponsoring.jpg)
 
 Another example of sponsorship and personal involvement is Hendrik Ebbers’ active role in the Java community.
 As a co-leader of the JUG Dortmund, several events were organized and funded throughout the year.
@@ -69,7 +70,7 @@ Around 10 participants made their first open-source contributions with guidance 
 Through the Open Elements team’s participation in JUG events, new opportunities were created for exploring open-source
 projects and fostering a sense of real teamwork.
 
-{{< youtube-2 id="NQbSPN68tPY" showCaption="true" alt="Hendrik Ebbers on the benefits of open source contributions">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NQbSPN68tPY" frameborder="0" allowfullscreen></iframe>
 
 Networking opportunities are vital for newcomers and seasoned contributors to experience the community firsthand.
 To ease entry into the open-source world, tasks of varying difficulty were prepared and supported by detailed
@@ -77,17 +78,17 @@ documentation and remote assistance. This was made possible by Open Elements’ 
 Additionally, financial incentives were provided for high-quality contributions, creating a win-win situation.
 For example, a developer from India was rewarded with financial support for his outstanding work and commitment.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/networking.jpg" width="100%" showCaption="true" alt="Through sponsorship and participation in conferences and meetups, Open Elements builds a strong network">}}
+![Through sponsorship and participation in conferences and meetups, Open Elements builds a strong network](/posts/2025-01-16-open-elements-in-2024/networking.jpg)
 
 ## Teaching Assignment at OTH Regensburg
 
 In the winter semester of 2023/24, Hendrik Ebbers held a teaching assignment at OTH Regensburg.
-In his lecture on [Distributed Ledger Technology and Digital Trust]({{< ref "dlt-lecture" >}}),
+In his lecture on [Distributed Ledger Technology and Digital Trust](/dlt-lecture),
 he taught students the foundational skills required to develop DLT-based systems. The course also covered advanced
 topics such as smart contracts and NFTs.
 
-*"The programming aspect of the course creates a highly engaging seminar that appeals to both crypto enthusiasts and
-traditional software developers alike,"* said one student.
+_"The programming aspect of the course creates a highly engaging seminar that appeals to both crypto enthusiasts and
+traditional software developers alike,"_ said one student.
 
 ## Own Open-Source Projects and Contributions
 
@@ -100,7 +101,7 @@ open-source initiative aimed at enhancing security.
 - Open Elements also made a contribution to a Google open-source project for improved security:
   [Reproducible Builds for Google Auto](https://github.com/google/auto/pull/1695).
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/github-contributions.png" width="100%" showCaption="false" alt="Open Elements contributed to open source projects every week in 2024">}}
+![Open Elements contributed to open source projects every week in 2024](/posts/2025-01-16-open-elements-in-2024/github-contributions.png)
 
 ## Hedera & Linux Foundation
 
@@ -114,7 +115,7 @@ Linux Foundation and integrated into the Hiero project.
 The goal is to create a standardized GitHub Action that will be highly beneficial for many automated quality assurance
 measures within the Hiero ecosystem.
 
-{{< youtube-2 id="6jNb3W7ugI8" showCaption="true" alt="Hendrik Ebbers presents Hiero at the OCX Conference of the Eclipse Foundation">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6jNb3W7ugI8" frameborder="0" allowfullscreen></iframe>
 
 As an additional recognition, Hendrik Ebbers, CEO of Open Elements, was appointed as the chair of the Technical Steering Committee
 for the Hiero project within the Linux Foundation and promoted to "Director of Open Source" at Hashgraph.
@@ -123,10 +124,10 @@ for the Hiero project within the Linux Foundation and promoted to "Director of O
 
 A significant milestone for Open Elements came at the end of 2024 with the German government's approval of funding to
 advance Apache Maven.
-This led to the creation of the **[Support & Care for Apache Maven™]({{< ref "support-care-maven" >}})** project,
+This led to the creation of the **[Support & Care for Apache Maven™](/support-care-maven)** project,
 focused on the sustainable support of critical open-source components.
 
-{{< centered-image src="/illustrations/support-care-logos/support-care-maven-logo.svg" width="80%" alt="Logo of Support & Care for Apache Maven">}}
+![Logo of Support & Care for Apache Maven](/illustrations/support-care-logos/support-care-maven-logo.svg)
 
 With this approval, the [Sovereign Tech Agency](https://www.sovereign.tech) provides the necessary financial resources, enabling Open Elements to
 implement much-needed expansions and safeguards for these critical components through mid-2026.
@@ -136,7 +137,7 @@ involvement of experts, some working full-time on the project.
 Apache Maven holds a significant position in the Java ecosystem, with over 100 million downloads annually.
 However, until now, the system has relied primarily on voluntary efforts without consistent financial backing.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/stf-diagram.png" width="100%" showCaption="true" alt="Diagram illustrating the funding process">}}
+![Diagram illustrating the funding process](/posts/2025-01-16-open-elements-in-2024/stf-diagram.png)
 
 Open Elements has taken on the responsibility of managing the allocated funding for Apache Maven and is honored by the
 trust shown by the Maven community.
@@ -144,10 +145,10 @@ The project's status, goals, and funding utilization are transparently documente
 
 Falk Sippach from embarc Software Consulting GmbH described it on
 [Heise Developer](https://www.heise.de/blog/Java-Einladung-zur-Mitgestaltung-des-Programms-Support-Care-for-Apache-Maven-9718336.html) as follows:  
-*"The trust that the Maven community places in Open Elements as a transparent player in the open-source field is
-unparalleled and is what makes this initiative possible in the first place."*
+_"The trust that the Maven community places in Open Elements as a transparent player in the open-source field is
+unparalleled and is what makes this initiative possible in the first place."_
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/habeck.jpg" width="100%" showCaption="true" alt="Hendrik Ebbers discussing this topic with Dr. Robert Habeck, Federal Minister for Economic Affairs and Climate Action, in Lisbon">}}
+![Hendrik Ebbers discussing this topic with Dr. Robert Habeck, Federal Minister for Economic Affairs and Climate Action, in Lisbon](/posts/2025-01-16-open-elements-in-2024/habeck.jpg)
 
 ## Publications & TecTalks
 
@@ -162,7 +163,7 @@ All talks are available via [this YouTube playlist](https://www.youtube.com/play
 - [Open Source as a Factor of Trust](https://www.youtube.com/watch?v=6jNb3W7ugI8&list=PL9r_sTu6nhXSFYknILieFl2YbFBrJIWRW)
 - [How Temurin helps you to get a secure supply chain](https://www.youtube.com/watch?v=Fg_tWsIJ0zo&list=PL9r_sTu6nhXSFYknILieFl2YbFBrJIWRW)
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/speak-at-ocx-2.jpg" width="100%" showCaption="false" alt="Hendrik Ebbers speaking about Open Source Foundations at OCX">}}
+![Hendrik Ebbers speaking about Open Source Foundations at OCX](/posts/2025-01-16-open-elements-in-2024/speak-at-ocx-2.jpg)
 
 As the CEO & Founder of Open Elements GmbH, Hendrik Ebbers is deeply committed to strengthening the community through
 his expertise and experience.
@@ -182,7 +183,7 @@ Other Publications:
 
 Open Elements continues to grow, and on September 1, 2024, the team welcomed Natascha Dönges as a valuable addition to the back office.
 
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/natascha.jpg" width="60%" showCaption="true" alt="Natascha Dönges">}}
+![Natascha Dönges](/posts/2025-01-16-open-elements-in-2024/natascha.jpg)
 
 Jessie Ssebuliba and Noah Tayebwa, developers from Uganda, joined Open Elements at the beginning of 2024 on a part-time basis.
 Since mid-2024, both have been working full-time for the company.
@@ -202,4 +203,4 @@ The young company achieved significant milestones in 2024, whose full impact wil
 Through its unwavering commitment, Open Elements has reaffirmed its leading role in education and technology,
 solidifying its position as a key player in the open source + Java universe.
 
-{{< centered-image src="/illustrations/general/building-open-source-universe.svg" width="100%" alt="Open Elements building the open source + Java universe">}}
+![Open Elements building the open source + Java universe](/illustrations/general/building-open-source-universe.svg)

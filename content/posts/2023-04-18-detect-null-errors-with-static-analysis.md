@@ -41,29 +41,25 @@ If you need a variable that can include null, you must work with a nullable refe
 This is indicated by the `?` character.
 The following code includes a Kotlin example for both references:
 
-{{< highlight java >}}
-var a: String = "abc" // Regular initialization means
+```javavar a: String = "abc" // Regular initialization means
                       // non-null by default
 a = null // compilation error
 
 var b: String? = "abc" // can be set to null
-b = null // ok
-{{< / highlight >}}
+b = null // ok```
 
 Since there is no such native support in Java, attempts are made to integrate it as best as possible through static code analysis.
 In general, two annotations are needed, one (`@Nullable`) defining that a value or variable can be null, and the other annotation defining that a value or variable must never be null (`@NonNull`).
 
 To understand this, let's look at a code example that defines a method and adds the information via annotation that the return value of the method can never be `null`:
 
-{{< highlight java >}}
-@NonNull String getName() {
+```java@NonNull String getName() {
     if(isUnique()) {
         return „Item „ + getId();
     } else {
         return null;
     }
-}
-{{< / highlight >}}
+}```
 
 As you can see in the implementation of the method, it is possible for it to return `null`.
 This would be a case where the static code analysis would show a violation.
@@ -71,11 +67,9 @@ If desired, you can configure tools like IntelliJ to display such problems direc
 
 The following code, which uses the `@Nullable` annotation, leads to a warning in the analysis:
 
-{{< highlight java >}}
-void check(@Nullable String value) {
+```javavoid check(@Nullable String value) {
     Objects.hash(value.toLowerCase());
-}
-{{< / highlight >}}
+}```
 
 In this example, the `@Nullable` annotation defines for the variable `value` that it can have the value `null`.
 However, the fact that the code directly accesses the variable potentially leads to a `NullPointerException` at runtime.
@@ -96,13 +90,11 @@ Unfortunately, there is a plethora of libraries that provide annotations here as
 Examining the individual libraries based on their advantages and disadvantages will be the subject of its own post.
 Therefore, I initially recommend SpotBugs Annotations as a dependency, which you can find under the following Maven coordinates:
 
-{{< highlight xml >}}
-<dependency>
+```xml<dependency>
     <groupId>com.github.spotbugs</groupId>
     <artifactId>spotbugs-annotations</artifactId>
     <version>4.7.3</version>
-</dependency>
-{{< / highlight >}}
+</dependency>```
 
 The abundance of tools and libraries unfortunately does not make it easy to find the perfect and future-oriented combination.
 When I delved deeper into the topic, I was shocked that much in this area is still not defined by standards or generally used best practices.

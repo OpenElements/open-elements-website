@@ -37,15 +37,13 @@ Let's say you have defined a template (or a web component as we will see later) 
 
 Maybe the component was created by a different developer or it is part of a 3rd party module. In this case you maybe don't know about the internal IDs or style classes. When styling or modifying your application you would use the following code:
 
-{{< highlight js >}}
-//JavaScript
+```js//JavaScript
 document.querySelector(".content")
 
 //CSS
 .content {
     color: blue;
-}
-{{< / highlight >}}
+}```
 
 In both cases your code will affect the node in the regular DOM and in the component. But normally you don't want to change the component. Therefore the Shadow DOM was introduced. By using the shadow DOM the nodes of the component are separated from the regular DOM:
 
@@ -53,11 +51,9 @@ In both cases your code will affect the node in the regular DOM and in the compo
 
 Once this is done CSS or JavaScript changes won't affect the component that is capsulated by the Shadow DOM. A component in a Shadow DOM can be created by using JavaScript:
 
-{{< highlight js >}}
-var root = host.createShadowRoot();
+```jsvar root = host.createShadowRoot();
 var clone = document.importNode(template.content, true);
-root.appendChild(clone);
-{{< / highlight >}}
+root.appendChild(clone);```
 
 ## Custom Elements
 
@@ -69,8 +65,7 @@ By using the Custom Elements spec you can define reusable tags for your componen
 
 Normally you need to define a div hierarchy for any entry in the stream. This ends in a lot of boilerplate code like shown in the following snippet:
 
-{{< highlight html >}}
-<div class="activity">
+```html<div class="activity">
     <img class="icon" src="../img/michael.png" width="40" height="40">
     <div class="time">Seconds ago</div>
     <div class="content">
@@ -83,36 +78,30 @@ Normally you need to define a div hierarchy for any entry in the stream. This en
     <div class="content">
         <a href="profiles/hendrick">Hendrik</a> blogged on <a href="http://guigarage.com">GuiGarage</a>.
     </div>
-</div>
-{{< / highlight >}}
+</div>```
 
 This don't look readable and what we really want to do is something like this:
 
-{{< highlight html >}}
-<activity-card iconSrc="../img/michael.png" time="Seconds ago">
+```html<activity-card iconSrc="../img/michael.png" time="Seconds ago">
     <a href="profiles/michael">Michael</a> had fun writing web components.
 </activity-card>
 <activity-card iconSrc="../img/hendrik.png" time="Minutes ago">
     <a href="profiles/hendrick">Hendrik</a> blogged on <a href="http://guigarage.com">GuiGarage</a>.
-</activity-card>
-{{< / highlight >}}
+</activity-card>```
 
 This can be done by using Custom Elements. To do so we first create a template:
 
-{{< highlight html >}}
-<template id="activity-template">
+```html<template id="activity-template">
   <div>
     <img class="icon" src="" width="40" height="40">
     <div class="time"></div>
     <div class="content"><content></content></div>
   </div>
-</template>
-{{< / highlight >}}
+</template>```
 
 Once this is done we need to write some JavaScript code to create a custom element that is based on this template:
 
-{{< highlight js >}}
-var importDoc = document.currentScript.ownerDocument;
+```jsvar importDoc = document.currentScript.ownerDocument;
     var activityPrototype = Object.create(HTMLElement.prototype);
 
     activityPrototype.createdCallback = function() {
@@ -130,8 +119,7 @@ var importDoc = document.currentScript.ownerDocument;
     // Register our new element
     document.registerElement('activity-card', {
         prototype: activityPrototype
-    });
-{{< / highlight >}}
+    });```
 
 Once this is done the `activity-card` tag can be used in our application. In the JavaScript code a method called `createdCallback` is defined. This method is part of the Custom Elements lifecycle and will be called once the component is created. Next to this method the following methods are defined in the lifecycle:
 
@@ -146,9 +134,7 @@ When using the first 3 specs we can define reusable components in our HTML page.
 
 Using the import is easy. You only need to specify an import link that points to the file that contains the component specification:
 
-{{< highlight html >}}
-<link rel="import" href="activity-card.html">
-{{< / highlight >}}
+```html<link rel="import" href="activity-card.html">```
 
 Once this is done you can simply use the custom component in the page.
 

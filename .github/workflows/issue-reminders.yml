@@ -1,0 +1,133 @@
+name: Issue Assignee Reminders
+
+on:
+  schedule:
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  remind-stale-assignees:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remind on stale assigned issues
+        uses: actions/github-script@v7
+        env:
+          REMIND_AFTER_DAYS: ${{ vars.REMIND_AFTER_DAYS }}
+          WORKING_GRACE_DAYS: ${{ vars.WORKING_GRACE_DAYS }}
+          WORKING_LABEL: ${{ vars.WORKING_LABEL }}
+          SKIP_REMINDER_LABELS: ${{ vars.SKIP_REMINDER_LABELS }}
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const remindAfterDays = Number(process.env.REMIND_AFTER_DAYS || 7);
+            const workingGraceDays = Number(process.env.WORKING_GRACE_DAYS || 7);
+            const workingLabel = (process.env.WORKING_LABEL || 'in progress').trim();
+            const skipLabels = (process.env.SKIP_REMINDER_LABELS || 'blocked,needs-triage,do-not-assign')
+              .split(',')
+              .map(v => v.trim().toLowerCase())
+              .filter(Boolean);
+            const nowMs = Date.now();
+            const dayMs = 24 * 60 * 60 * 1000;
+
+            function issueAgeDays(issue) {
+              return (nowMs - Date.parse(issue.created_at)) / dayMs;
+            }
+
+            function hasSkipLabel(issue) {
+              const labels = (issue.labels || []).map(l => (l.name || '').toLowerCase());
+              return labels.some(l => skipLabels.includes(l));
+            }
+
+            function hasOpenLinkedPr(issueNumber, openPrs) {
+              const keywordRef = new RegExp(`\\b(?:fixe[sd]?|close[sd]?|resolve[sd]?)\\s+#${issueNumber}\\b`, 'i');
+              const genericRef = new RegExp(`(^|\\W)#${issueNumber}(\\W|$)`, 'i');
+              for (const pr of openPrs) {
+                const text = `${pr.title || ''}\n${pr.body || ''}`;
+                if (keywordRef.test(text) || genericRef.test(text)) return true;
+              }
+              return false;
+            }
+
+            async function listIssueComments(issueNumber) {
+              return github.paginate(github.rest.issues.listComments, {
+                owner,
+                repo,
+                issue_number: issueNumber,
+                per_page: 100
+              });
+            }
+
+            function extractLatestMarkerTimestamp(comments, markerRegex) {
+              let latest = null;
+              for (const c of comments) {
+                const body = c.body || '';
+                const m = body.match(markerRegex);
+                if (!m) continue;
+                const ts = Date.parse(m[1]);
+                if (Number.isNaN(ts)) continue;
+                if (latest === null || ts > latest) latest = ts;
+              }
+              return latest;
+            }
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              per_page: 100
+            });
+            const openPrs = await github.paginate(github.rest.pulls.list, {
+              owner,
+              repo,
+              state: 'open',
+              per_page: 100
+            });
+
+            for (const issue of issues) {
+              if (issue.pull_request) continue;
+              if (!issue.assignees || issue.assignees.length === 0) continue;
+              if (issueAgeDays(issue) < remindAfterDays) continue;
+              if (hasSkipLabel(issue)) continue;
+              if (hasOpenLinkedPr(issue.number, openPrs)) continue;
+
+              const comments = await listIssueComments(issue.number);
+
+              const latestWorkingTs = extractLatestMarkerTimestamp(
+                comments,
+                /\[bot-working:([^\]]+)\]/
+              );
+              if (latestWorkingTs !== null && ((nowMs - latestWorkingTs) / dayMs) <= workingGraceDays) {
+                continue;
+              }
+
+              const latestReminderTs = extractLatestMarkerTimestamp(
+                comments,
+                /\[bot-reminder:([^\]]+)\]/
+              );
+              if (latestReminderTs !== null && ((nowMs - latestReminderTs) / dayMs) < 7) {
+                continue;
+              }
+
+              const assigneeMentions = issue.assignees.map(a => `@${a.login}`).join(' ');
+              const marker = `[bot-reminder:${new Date().toISOString()}]`;
+              const body = `${marker}
+
+              ${assigneeMentions} friendly reminder: this issue has been assigned for ${Math.floor(issueAgeDays(issue))} day(s) without recent progress signals.
+
+              - Comment \`/working\` if you are still working on this issue.
+              - Comment \`/unassign\` if you are no longer working on it so others can take it.
+
+              Current working label: \`${workingLabel}\`.`;
+
+                            await github.rest.issues.createComment({
+                              owner,
+                              repo,
+                              issue_number: issue.number,
+                              body
+                            });
+                          }

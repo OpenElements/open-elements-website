@@ -8,10 +8,9 @@ categories: [Desktop Application Framework (JSR 377), JavaFX]
 excerpt: 'This post describes how the Concurrency in UI Toolkits can be defined in a unified way.'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-In the [first post]({{< ref "/posts/2015-01-19-concurrency-ui-toolkits-part-1" >}}) of this series I showed how Concurrency is handled in UI Toolkits and how a generic approach to work with the toolkit specific thread may look like. This ends in the following interface:
+In the [first post](/posts/2015-01-19-concurrency-ui-toolkits-part-1) of this series I showed how Concurrency is handled in UI Toolkits and how a generic approach to work with the toolkit specific thread may look like. This ends in the following interface:
 
-{{< highlight java >}}
-public interface UIThread {
+```javapublic interface UIThread {
   
   void runOnUiToolkitThread(Runnable runnable);
 
@@ -31,8 +30,7 @@ public interface UIThread {
     default <T> T runOnUiToolkitThreadAndWait(Callable<T> callable) throws InterruptedException, ExecutionException {
         return runOnUiToolkitThread(callable).get();
     }
-}
-{{< / highlight >}}
+}```
 
 But there are still some problems with this interface:
 
@@ -41,18 +39,15 @@ But there are still some problems with this interface:
 
 Let's start with the first problem. Before we can solve this another question must be answered: I it's a problem to call this methods on the toolkit thread we need a way to check if the current thread is the toolkit thread. To do so most toolkits provide a helper method that checks if the current thread is the toolkit Thread. Examples are shown in the following code snippet.
 
-{{< highlight java >}}
-//JavaFX Helper Method
+```java//JavaFX Helper Method
 Platform.isFxApplicationThread();
 
 //Swing Helper Method
-SwingUtilities.isEventDispatchThread()
-{{< / highlight >}}
+SwingUtilities.isEventDispatchThread()```
 
 Because most Toolkits support this method we can simply add it to our interface:
 
-{{< highlight java >}}
-public interface UIThread {
+```javapublic interface UIThread {
   
   void runOnUiToolkitThread(Runnable runnable);
 
@@ -74,8 +69,7 @@ public interface UIThread {
     default <T> T runOnUiToolkitThreadAndWait(Callable<T> callable) throws InterruptedException, ExecutionException {
         return runOnUiToolkitThread(callable).get();
     }
-}
-{{< / highlight >}}
+}```
 
 Once this is done we can have a deeper look at the methods that will block until a task was executed on the ui toolkit. In the defined interface the two methods that are named `runOnUiToolkitThreadAndWait` defines this behavior. Once the method is called a new task is created and added to the ui thread. Because the thread has a lot of work to do normally a queue will handle this tasks and execute them by using a first in first out approach. The following image shows an example.
 
@@ -85,8 +79,7 @@ By doing so our task will be added to the queue and executed once all task that 
 
 With the help of the new `isUIToolkitThread()` method we can avoid this behavior and refactor the methods to an more fail-safe version. With a simple if-statement we can add a special behavior if the `runOnUiToolkitThreadAndWait` method is called from the ui thread:
 
-{{< highlight java >}}
-default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedException, ExecutionException {
+```javadefault void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedException, ExecutionException {
   if(isUIToolkitThread()) {
     //what should we do now?? 😰
   } else {
@@ -95,8 +88,7 @@ default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedEx
       return null;
     }).get();
   }
-}
-{{< / highlight >}}
+}```
 
 Once this is done we need to decide what we want to do if the method was called join the ui thread. In general there are two different ways how this is handled by ui toolkits:
 
@@ -105,8 +97,7 @@ Once this is done we need to decide what we want to do if the method was called 
 
 Here are the implementations for this approaches:
 
-{{< highlight java >}}
-//unchecked exception
+```java//unchecked exception
 default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedException, ExecutionException {
   if(isUIToolkitThread()) {
     throw new RuntimeException("This method should not be called on the UI Thread")
@@ -144,8 +135,7 @@ default void runOnUiToolkitThreadAndWait(Runnable runnable) throws InterruptedEx
       return null;
     }).get();
   }
-}
-{{< / highlight >}}
+}```
 
 The first 2 methods looks mostly the same. Only the exception type is different. The first method uses an unchecked exception that will end in a more readable code when using the method because you don't need to catch the new exception type all the time. But developers need to know that an unchecked exception will be thrown whenever the method is called on the ui thread to avoid errors at runtime.
 
@@ -153,4 +143,4 @@ The third method can be called on any thread. A developer doesn't need to think 
 
 ![stack](/posts/guigarage-legacy/stack.png)
 
-This will end in code that is unperformant, unstable and can't be maintained anymore. Therefore I would choose one of the first 2 implementations. But that's only how I see this things and maybe you have a complete different opinion. Therefore it would be great if you can leave a comment here about your favorite way how to handle this problems. [JSR-377]({{< ref "/posts/2014-12-30-desktopembedded-application-api-jsr" >}}) will contain such a interface and we want to resolve all the shown problems in an ui toolkit independent way. If you are interested in the JSR or want to share your opinion about this topic you should have a look at the [JSR Mailing List](http://jsr377-api.40747.n7.nabble.com). In the next post I will have a deeper look at the `Future<>` interface in combination with ui threads.
+This will end in code that is unperformant, unstable and can't be maintained anymore. Therefore I would choose one of the first 2 implementations. But that's only how I see this things and maybe you have a complete different opinion. Therefore it would be great if you can leave a comment here about your favorite way how to handle this problems. [JSR-377](/posts/2014-12-30-desktopembedded-application-api-jsr) will contain such a interface and we want to resolve all the shown problems in an ui toolkit independent way. If you are interested in the JSR or want to share your opinion about this topic you should have a look at the [JSR Mailing List](http://jsr377-api.40747.n7.nabble.com). In the next post I will have a deeper look at the `Future<>` interface in combination with ui threads.

@@ -18,13 +18,11 @@ That's right but the JavaFX community is prepared for this problem by offering [
 
 You can automatically test this dialog by using the TestFX API. I coded test might look like this:
 
-{{< highlight java >}}
-click(".text-field").type("steve");
+```javaclick(".text-field").type("steve");
 click(".password-field").type("duke4ever");
 click(".button:default");
 
-assertNodeExists( ".dialog" );
-{{< / highlight >}}
+assertNodeExists( ".dialog" );```
 
 As you can see you can control and fake all user events by using TestFX. At [github](https://github.com/TestFX/TestFX/wiki) you can find a general documentation of the API.
 
@@ -32,8 +30,7 @@ As you can see you can control and fake all user events by using TestFX. At [git
 
 Mostly your application will contain more than a simple login dialog and in that case a test could become confusing:
 
-{{< highlight java >}}
-click("#user-field").type("steve");
+```javaclick("#user-field").type("steve");
 click("#password-field").type("duke4ever");
 click("#login-button");
 click("#menu-button");
@@ -43,8 +40,7 @@ click("#next");
 click("#next");
 click("#next");
 click("#details");
-assertNodeExists( "#user-picture" );
-{{< / highlight >}}
+assertNodeExists( "#user-picture" );```
 
 Web developers already know this problem and introduced a pattern to avoid it: [PageObject](http://martinfowler.com/bliki/PageObject.html)
 
@@ -54,8 +50,7 @@ Since we don't have pages in JavaFX applications I would call it __"View Objects
 
 The applications contains 4 different views. To write tests for the application we should create a view object for each view. Here is an pseudo code example for the album overview:
 
-{{< highlight java >}}
-public class AlbumOverviewView extends ViewObject {
+```javapublic class AlbumOverviewView extends ViewObject {
 
     public AlbumDetailView openAlbum(String name) {
         click((Text t) -> t.getText().contains(name));
@@ -72,8 +67,7 @@ public class AlbumOverviewView extends ViewObject {
         assertTrue(getAlbums().filtered(a -> a.getName().equals(name)).isEmpty());
         return this;
     }
-}
-{{< / highlight >}}
+}```
 
 You can see some important facts in the code:
 
@@ -84,8 +78,7 @@ You can see some important facts in the code:
 
 By doing so it is very easy to write understandable tests. Because all the methods will return a view object you can use it as a fluent API:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void checkSearchResult() {
    new SearchView(this).search("Rise Against").assertContainsAlbum("The Black Market");
 }
@@ -98,5 +91,4 @@ public void checkTrackCount() {
 @Test
 public void checkPlayWorkflow() {
    new SearchView(this).search("Rise Against").openAlbum("The Black Market").play(1);
-}
-{{< / highlight >}}
+}```

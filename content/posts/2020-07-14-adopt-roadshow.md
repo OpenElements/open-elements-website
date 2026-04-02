@@ -12,7 +12,7 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 AdoptOpenJDK is doing a virtual roadshow of the Java User Groups.
 We plan to reach as many groups as possible but we will also live stream the event on YouTube.
 
-{{< centered-image src="/posts/2020-07-14-adopt-roadshow/adopt-logo.png" width="50%" alt=">AdoptOpenJDK logo">}}
+![AdoptOpenJDK logo](/posts/2020-07-14-adopt-roadshow/adopt-logo.png)
 
 ## Abstract of the session
 AdoptOpenJDK is the leading provider of OpenJDK™ binaries.

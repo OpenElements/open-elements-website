@@ -54,47 +54,42 @@ Care must be taken not to log information in a loop.
 Even though user inputs are considered external inputs, one should not log every keystroke directly. 
 The following example shows an excerpt from a problematic log history where exactly this happened:
 
-{{< highlight log >}}
-08:34:23 User mutates id field with new value 'J'
+```log08:34:23 User mutates id field with new value 'J'
 08:34:23 User mutates id field with new value 'JA'
 08:34:23 User mutates id field with new value 'JAV'
 08:34:23 User mutates id field with new value 'JAVA'
-{{< / highlight >}}
+```
 
 One can easily imagine how difficult it becomes to extract important information from a log file with such entries.
 
 The same applies to log messages that contain too much information. 
 Even if we know a user's birthday, we don't need to include this information in our log messages:
 
-{{< highlight log >}}
-08:34:23 User 'Max' with birthday '01/01/1970' \
+```log08:34:23 User 'Max' with birthday '01/01/1970' \
  mutates id field with new value 'JAVA'
-{{< / highlight >}}
+```
 
 While the username in the message can certainly be interesting for later analysis to relate this message to other log entries, the birthdate is rather distracting and makes reading the messages more complicated for the human eye.
 
 A third important point to always keep in mind when creating log messages is data sensitivity. 
 While we have always seen the change of an ID in the log in the previous messages, the following message should never appear in a log file:
 
-{{< highlight log >}}
-08:34:23 User 'Max' mutates password with new value '12#Agj!j7
-{{< / highlight >}}
+```log08:34:23 User 'Max' mutates password with new value '12#Agj!j7
+```
 
 In this case, logging would represent a real security vulnerability of the application. 
 Sensitive data such as the user's password should, of course, never be visible in log messages.
 
 Based on the previous insights, the following log messages appear sensible and well-structured:
 
-{{< highlight log >}}
-08:34:23 User 'Max' mutates id field with new value 'JAVA'
+```log08:34:23 User 'Max' mutates id field with new value 'JAVA'
 08:34:23 User 'Max' mutates password
-{{< / highlight >}}
+```
 
 In addition to these tips, one should always ensure that the source code of an application is not so cluttered with log calls that the source code becomes unreadable and difficult to understand. 
 The following snippet from a Java program shows what happens when logging calls are overdone:
 
-{{< highlight java >}}
-LOG.log("We start the transaction");
+```javaLOG.log("We start the transaction");
 manager.beginTransaction();
 LOG.log("DB query will be executed");
 LOG.log("DB query: select * from users");
@@ -105,16 +100,15 @@ LOG.log("DB query executed in " + (now() - start) + " ms");
 LOG.log("Found " + users.size() + " entities");
 manager.endTransaction();
 LOG.log("Transaction done");
-{{< / highlight >}}
+```
 
 Here, the code and its exact function are hardly recognizable. 
 Without the logging calls, we can understand it at a single glance:
 
-{{< highlight java >}}
-manager.beginTransaction();
+```javamanager.beginTransaction();
 users = manager.query("select * from users");
 manager.endTransaction();
-{{< / highlight >}}
+```
 
 However, one should not completely omit logging, and perhaps this is exactly a place where one would like to see a lot of information in the logs.
 In this case, logging calls must be cleverly integrated into the structure and API of the application. 
@@ -124,8 +118,7 @@ This way, the business logic is cleaned of logging calls, and we still get all t
 If it is not possible to place logging directly in the API for various reasons, complexity related to logging can also be relatively easily "hidden" in reusable lambdas or methods. 
 The following example shows a generic function that executes a query within a transaction and continues to provide all necessary information as log messages:
 
-{{< highlight java >}}
-final Function<String, T> queryInTransaction = query -> {
+```javafinal Function<String, T> queryInTransaction = query -> {
   LOG.log("We start the transaction");
   manager.beginTransaction();
   LOG.log("DB query: " + query);
@@ -137,35 +130,33 @@ final Function<String, T> queryInTransaction = query -> {
   LOG.log("Transaction done");
   return result;
 }
-{{< / highlight >}}
+```
 
 This allows us to call our operations in a readable form with maximum logging in the business logic:
 
-{{< highlight java >}}
-LOG.log("Loading all users from database");
+```javaLOG.log("Loading all users from database");
 users = queryInTransaction("select * from users");
-{{< / highlight >}}
+```
 
 Anyone who has ever worked with logging frameworks will certainly miss the logging level as an important and central element in the previous examples. 
 We will take a closer look at this to conclude. 
 Although different loggers do not always define the same levels, they all have the same functionality: on a one-dimensional scale, the level indicates how important the message is in the context of all messages.
 
-{{< centered-image src="/posts/2023-02-07-logging-in-java-and-other-languages/logging-level-scale.jpg" width="100%" showCaption="true" alt="The scale shows the logging levels.">}}
+![The scale shows the logging levels.](/posts/2023-02-07-logging-in-java-and-other-languages/logging-level-scale.jpg)
 
 As shown in the example image, let's assume we can use three different levels in our logging (note: depending on the specific logging framework, there are several more). 
 At the `ERROR` level, we want to log all faulty behavior of the application, while we use the `INFO` level for general information about the application's process and status. 
 With the `DEBUG` level, we log detailed information that is only important in exceptional cases. 
 Java source code that uses the different levels in logging could look like this:
 
-{{< highlight java >}}
-try {
+```javatry {
   LOG.info("Loading all users from database");
   users = query("select * from users");
   LOG.debug("Found " + users.size() + " users in db");
 } catch (Exception e) {
   LOG.error("Error while loading all users");
 }
-{{< / highlight >}}
+```
 
 At runtime, the logger's level can be configured to filter which messages should actually end up in the log. 
 Typically, messages at the `DEBUG` level are filtered out and only included in the log during error analysis or similar scenarios. 

@@ -35,8 +35,7 @@ For the mentioned Gradle project, we fell back on the "extra-java-module-info" p
 This [open-source plugin](https://github.com/gradlex-org/extra-java-module-info) allows you to add an `Automatic-Module-Name` entry to dependencies at build time.
 Specifically, the plugin is used as in the following example, where for each `automaticModule(...)` call, the Gradle identifier of the dependency is passed as the first parameter and the module name to be used as the second parameter:
 
-{{< highlight java >}}
-plugins {
+```javaplugins {
     id("org.gradlex.extra-java-module-info")
 }
 
@@ -49,8 +48,7 @@ extraJavaModuleInfo {
 	                "io.prometheus.simpleclient_common")
 	automaticModule("io.prometheus:simpleclient_httpserver", 
 	                "io.prometheus.simpleclient.httpserver")
-}
-{{< / highlight >}}
+}```
 
 Together with the author of the plugin, we were even able to significantly extend it in a very productive exchange.
 In addition to automatic modules, the plugin has always been able to create modules with a `module-info.java`.
