@@ -1,6 +1,22 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Blog post language switch', () => {
+  test('keeps direct English post URLs stable for German browser preferences', async ({ browser }) => {
+    const context = await browser.newContext({
+      extraHTTPHeaders: {
+        'Accept-Language': 'de-DE,de',
+      },
+    });
+    const page = await context.newPage();
+
+    await page.goto('/posts/2026/03/12/agentic-wallets-when-ai-agents-need-to-pay');
+
+    await expect(page).toHaveURL(/\/posts\/2026\/03\/12\/agentic-wallets-when-ai-agents-need-to-pay\/?$/);
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Agentic Wallets');
+
+    await context.close();
+  });
+
   test('hides the language switch on an English-only post', async ({ page }) => {
     await page.goto('/posts/2026-03-12-agentic-wallets');
 

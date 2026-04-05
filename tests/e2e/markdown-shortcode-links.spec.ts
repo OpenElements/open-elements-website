@@ -1,32 +1,40 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Markdown shortcode links', () => {
-  test('render relref links inside markdown link syntax', async ({ page }) => {
-    await page.goto('/posts/2026-03-12-java-modules-encapsulation-internal-packages');
+  test('render relref and ref links to post and top-level routes', async ({ page }) => {
+    await page.goto('/posts/2026-02-10-review-2025', {
+      waitUntil: 'domcontentloaded',
+    });
+    await expect(page.locator('main')).toBeVisible();
 
     const articleBody = page.locator('main .prose').first();
     const firstArticleLink = articleBody.locator(
-      'a[href="/posts/2026-01-27-java-modules-maven4-basics"]',
+      'a[href="/posts/2025-01-16-open-elements-in-2024"]',
     );
-    const homeworkLink = articleBody.locator(
-      'a[href="/posts/2026-02-26-java-modules-maven4-basics-homework"]',
+    const supportCareLink = articleBody.locator(
+      'a[href="/support-care-maven"]',
     );
 
     await expect(firstArticleLink).toBeVisible();
-    await expect(firstArticleLink).toContainText('first article');
-    await expect(homeworkLink).toBeVisible();
-    await expect(homeworkLink).toContainText('homework extension');
+    await expect(firstArticleLink).toContainText('growth trajectory from 2024');
+    await expect(supportCareLink.first()).toBeVisible();
   });
 
-  test('preserve relref fragments inside markdown links', async ({ page }) => {
-    await page.goto('/posts/2026-02-26-java-modules-maven4-basics-homework');
+  test('render relref links to nested routes', async ({ page }) => {
+    await page.goto('/posts/2026-02-10-review-2025', {
+      waitUntil: 'domcontentloaded',
+    });
+    await expect(page.locator('main')).toBeVisible();
 
     const articleBody = page.locator('main .prose').first();
-    const fragmentLink = articleBody.locator(
-      'a[href="/posts/2026-01-27-java-modules-maven4-basics#the-module-source-hierarchy"]',
+    const articleLink = articleBody.locator(
+      'a[href="/articles/what-is-maven"]',
     );
+    const employeeLink = articleBody.locator('a[href="/employees/jessie"]');
 
-    await expect(fragmentLink).toBeVisible();
-    await expect(fragmentLink).toContainText('module source hierarchy');
+    await expect(articleLink).toBeVisible();
+    await expect(articleLink).toContainText('work on Apache Maven');
+    await expect(employeeLink).toBeVisible();
+    await expect(employeeLink).toContainText('Jessy Ssebuliba');
   });
 });
