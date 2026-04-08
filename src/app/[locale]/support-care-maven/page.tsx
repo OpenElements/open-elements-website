@@ -112,7 +112,8 @@ export default function SupportCareMavenPage() {
               <a
                 href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                className="text-purple-700 hover:underline">
                 {t('problemBullet2Link')}
               </a>
               {t('problemBullet2').split('Log4Shell')[1]}
@@ -234,7 +235,7 @@ export default function SupportCareMavenPage() {
               href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Schwachstelle-log4Shell-Java-Bibliothek/log4j_node.html"
               target="_blank"
               rel="noopener"
-              className="text-sky hover:underline">
+              className="text-purple-700 hover:underline">
               Log4Shell
             </a>
             {t('layersHighlight').split('Log4Shell')[1]}
