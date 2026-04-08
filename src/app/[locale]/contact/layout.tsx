@@ -1,14 +1,16 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact us - Open Elements',
-  description: 'Get in touch with Open Elements. Schedule a meeting, send us an email, or give us a call.',
+  description:
+    'Get in touch with Open Elements. Schedule a meeting, send us an email, or give us a call.',
   keywords: ['Contact', 'Open Elements', 'Get in touch', 'Schedule meeting'],
   openGraph: {
     type: 'website',
     url: 'https://open-elements.com/contact',
     title: 'Contact us - Open Elements',
-    description: 'Get in touch with Open Elements. Schedule a meeting, send us an email, or give us a call.',
+    description:
+      'Get in touch with Open Elements. Schedule a meeting, send us an email, or give us a call.',
     siteName: 'Open Elements',
     images: [
       {
@@ -20,12 +22,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
   },
-}
+};
 
 export default function ContactLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return <>{children}</>
+  return <>{children}</>;
 }

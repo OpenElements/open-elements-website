@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function NotFound() {
-  const t = useTranslations()
+  const t = useTranslations();
 
   return (
     <div className="relative">
@@ -36,12 +36,11 @@ export default function NotFound() {
         <div className="mt-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-8 py-3 text-lg font-semibold text-white transition-all duration-150 ease-in-out bg-purple-700 rounded-full hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-offset-2"
-          >
+            className="inline-flex items-center gap-2 px-8 py-3 text-lg font-semibold text-white transition-all duration-150 ease-in-out bg-purple-700 rounded-full hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-offset-2">
             {t('home')}
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

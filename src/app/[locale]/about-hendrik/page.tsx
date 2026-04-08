@@ -1,10 +1,10 @@
-import { redirect } from 'next/navigation'
+import { redirect } from 'next/navigation';
 
 export default async function AboutHendrikPage({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params
-  redirect(`/${locale}/employees/hendrik`)
+  const { locale } = await params;
+  redirect(`/${locale}/employees/hendrik`);
 }

@@ -31,4 +31,3 @@ export default async function UpdatesPage({
 
   return <UpdatesClient updates={updates} />;
 }
-

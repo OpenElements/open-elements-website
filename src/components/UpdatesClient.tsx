@@ -99,8 +99,7 @@ function CollapsibleSection({ section }: { section: UpdateSection }) {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2"
-        >
+          className="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2">
           <span>{open ? t('seeLess') : t('seeMore')}</span>
           <svg
             className={`size-3.5 mt-px transition-all ${open ? 'rotate-180' : ''}`}
@@ -108,8 +107,7 @@ function CollapsibleSection({ section }: { section: UpdateSection }) {
             height="12"
             viewBox="0 0 10 10"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.56859 8.25969C5.77951 9.46983 4.00704 9.46983 3.21796 8.25968L1.57727 5.74348L0.218515 3.06449C-0.434962 1.77606 0.451277 0.241051 1.89383 0.162762L4.89328 -2.09808e-05L7.89272 0.162762C9.33528 0.241051 10.2215 1.77606 9.56804 3.06449L8.20929 5.74348L6.56859 8.25969Z"
               fill="#7573FF"
@@ -131,16 +129,19 @@ function TruncatedSection({ section }: { section: UpdateSection }) {
   return (
     <div className="py-6 flex flex-col gap-3 last:pb-0">
       <div className="relative mb-2 sm:block flex flex-col gap-2 items-start">
-        <h3 className="font-bold sm:text-2xl text-base inline">{section.title}</h3>
+        <h3 className="font-bold sm:text-2xl text-base inline">
+          {section.title}
+        </h3>
         <span className="sm:text-sm text-xs bg-rose-100 text-rose font-bold sm:px-4 px-2.5 sm:py-2 py-1.5 rounded-full sm:ml-2 sm:absolute inline-block">
           {t('badge')}
         </span>
       </div>
-      <h4 className="font-semibold sm:text-base text-sm sm:mb-0 -mb-2.5">{t('newFeatures')}</h4>
+      <h4 className="font-semibold sm:text-base text-sm sm:mb-0 -mb-2.5">
+        {t('newFeatures')}
+      </h4>
       <div className="text-sm space-y-2">
         <ul
-          className={`space-y-2 text-sm leading-6 relative ${!open ? 'h-28 overflow-hidden' : ''}`}
-        >
+          className={`space-y-2 text-sm leading-6 relative ${!open ? 'h-28 overflow-hidden' : ''}`}>
           {!open && (
             <div className="bg-linear-to-t from-white via-white/50 h-16 w-full absolute bottom-0"></div>
           )}
@@ -162,8 +163,7 @@ function TruncatedSection({ section }: { section: UpdateSection }) {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2"
-        >
+          className="text-purple-700 sm:text-lg text-base font-bold flex items-center gap-2">
           <span>{open ? t('seeLess') : t('seeMore')}</span>
           <svg
             className={`size-3.5 mt-px transition-all ${open ? 'rotate-180' : ''}`}
@@ -171,8 +171,7 @@ function TruncatedSection({ section }: { section: UpdateSection }) {
             height="12"
             viewBox="0 0 10 10"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.56859 8.25969C5.77951 9.46983 4.00704 9.46983 3.21796 8.25968L1.57727 5.74348L0.218515 3.06449C-0.434962 1.77606 0.451277 0.241051 1.89383 0.162762L4.89328 -2.09808e-05L7.89272 0.162762C9.33528 0.241051 10.2215 1.77606 9.56804 3.06449L8.20929 5.74348L6.56859 8.25969Z"
               fill="#7573FF"
@@ -191,8 +190,7 @@ function UpdateCard({ update, isLast }: { update: Update; isLast?: boolean }) {
   return (
     <li className="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
       <div
-        className={`absolute ${isLast ? 'bottom-0' : '-bottom-12'} left-0 top-0 flex sm:w-6 w-5 justify-center`}
-      >
+        className={`absolute ${isLast ? 'bottom-0' : '-bottom-12'} left-0 top-0 flex sm:w-6 w-5 justify-center`}>
         <div className="w-px bg-purple"></div>
       </div>
       {isLast && (
@@ -253,8 +251,7 @@ function UpdateCard({ update, isLast }: { update: Update; isLast?: boolean }) {
                   height="14"
                   viewBox="0 0 13 14"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M11.3537 4.95005C12.5638 5.73913 12.5638 7.5116 11.3537 8.30068L7.3845 10.8888L3.15851 13.0322C1.87008 13.6857 0.335071 12.7994 0.256782 11.3569L-3.93402e-07 6.62537L0.256782 1.89387C0.335071 0.451317 1.87008 -0.434922 3.15851 0.218555L7.3845 2.36192L11.3537 4.95005Z"
                     fill="#5DB9F5"
@@ -336,7 +333,9 @@ export default function UpdatesClient({ updates }: { updates: Update[] }) {
         <div className="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
           <div className="relative flex flex-col items-center justify-center w-full">
             <h1 className="text-center h1">{t('title')}</h1>
-            <p className="max-w-3xl mx-auto text-center text-base">{t('description')}</p>
+            <p className="max-w-3xl mx-auto text-center text-base">
+              {t('description')}
+            </p>
             <Image
               src="/illustrations/line-p.svg"
               alt={t('underlineAlt')}
@@ -350,10 +349,13 @@ export default function UpdatesClient({ updates }: { updates: Update[] }) {
 
       <ul
         role="list"
-        className="sm:space-y-12 space-y-8 container lg:max-w-6xl w-full relative lg:pt-16 pt-12 pb-28 lg:pl-28"
-      >
+        className="sm:space-y-12 space-y-8 container lg:max-w-6xl w-full relative lg:pt-16 pt-12 pb-28 lg:pl-28">
         {updates.map((update, idx) => (
-          <UpdateCard key={update.version} update={update} isLast={idx === updates.length - 1} />
+          <UpdateCard
+            key={update.version}
+            update={update}
+            isLast={idx === updates.length - 1}
+          />
         ))}
       </ul>
     </div>

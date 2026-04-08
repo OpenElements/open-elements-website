@@ -43,7 +43,8 @@ const EXTERNAL_LINK_ICON_HTML =
   '<span class="iconify inline" data-icon="mdi-open-in-new" aria-hidden="true"></span>';
 const HEADING_ANCHOR_ICON_HTML =
   '<span class="iconify w-7 h-7 shrink-0 text-lightgray inline" data-icon="mdi-link-variant" aria-hidden="true"></span>';
-const CODE_BLOCK_PATTERN = /<pre><code class="language-([^"]+)">([\s\S]*?)<\/code><\/pre>/gi;
+const CODE_BLOCK_PATTERN =
+  /<pre><code class="language-([^"]+)">([\s\S]*?)<\/code><\/pre>/gi;
 const PRISM_TOKEN_COLORS = new Map<string, string>([
   ['comment', '#75715e'],
   ['prolog', '#75715e'],
@@ -93,9 +94,9 @@ loadLanguages([
   'xml',
 ]);
 
-Prism.hooks.add('wrap', (environment) => {
+Prism.hooks.add('wrap', environment => {
   const tokenClass = environment.classes.find(
-    (className) => className !== 'token' && PRISM_TOKEN_COLORS.has(className),
+    className => className !== 'token' && PRISM_TOKEN_COLORS.has(className),
   );
 
   if (!tokenClass) {
@@ -158,7 +159,10 @@ function normalizeLegacySlugSegment(slug: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-function isDateBasedSlugMatch(candidatePath: string, requestedPath: string): boolean {
+function isDateBasedSlugMatch(
+  candidatePath: string,
+  requestedPath: string,
+): boolean {
   if (candidatePath === requestedPath) {
     return true;
   }
@@ -177,13 +181,16 @@ function isDateBasedSlugMatch(candidatePath: string, requestedPath: string): boo
     return false;
   }
 
-  return normalizeLegacySlugSegment(candidateSegments[3]) === normalizeLegacySlugSegment(requestedSegments[3]);
+  return (
+    normalizeLegacySlugSegment(candidateSegments[3]) ===
+    normalizeLegacySlugSegment(requestedSegments[3])
+  );
 }
 
 function decodePathSegments(pathValue: string): string {
   return pathValue
     .split('/')
-    .map((segment) => {
+    .map(segment => {
       try {
         return decodeURIComponent(segment);
       } catch {
@@ -232,7 +239,12 @@ function getPostFilename(slugPath: string, locale: string): string | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
 
-    if (isDateBasedSlugMatch(generatePostPath(data as PostFrontmatter), decodedSlugPath)) {
+    if (
+      isDateBasedSlugMatch(
+        generatePostPath(data as PostFrontmatter),
+        decodedSlugPath,
+      )
+    ) {
       return filename;
     }
   }
@@ -272,7 +284,10 @@ export function getPostLocaleAlternates(
   if (files.includes(enFile)) {
     const fullPath = path.join(postsDirectory, enFile);
     const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
-    alternates.push({ locale: 'en', slugPath: generatePostPath(data as PostFrontmatter) });
+    alternates.push({
+      locale: 'en',
+      slugPath: generatePostPath(data as PostFrontmatter),
+    });
   }
 
   // Check German version
@@ -280,7 +295,10 @@ export function getPostLocaleAlternates(
   if (files.includes(deFile)) {
     const fullPath = path.join(postsDirectory, deFile);
     const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
-    alternates.push({ locale: 'de', slugPath: generatePostPath(data as PostFrontmatter) });
+    alternates.push({
+      locale: 'de',
+      slugPath: generatePostPath(data as PostFrontmatter),
+    });
   }
 
   return alternates;
@@ -327,12 +345,15 @@ function ensureSafeRel(attributes: string): string {
   const relPattern = /\brel\s*=\s*(["'])(.*?)\1/i;
 
   if (relPattern.test(attributes)) {
-    return attributes.replace(relPattern, (_match, quote: string, relValue: string) => {
-      const tokens = new Set(relValue.split(/\s+/).filter(Boolean));
-      tokens.add('noopener');
-      tokens.add('noreferrer');
-      return `rel=${quote}${Array.from(tokens).join(' ')}${quote}`;
-    });
+    return attributes.replace(
+      relPattern,
+      (_match, quote: string, relValue: string) => {
+        const tokens = new Set(relValue.split(/\s+/).filter(Boolean));
+        tokens.add('noopener');
+        tokens.add('noreferrer');
+        return `rel=${quote}${Array.from(tokens).join(' ')}${quote}`;
+      },
+    );
   }
 
   return `${attributes} rel="noopener noreferrer"`;
@@ -439,18 +460,23 @@ function extractHeadingText(headingHtml: string): string {
 
 function appendHtmlAttribute(attributes: string, attribute: string): string {
   const normalizedAttributes = attributes.trimEnd();
-  return normalizedAttributes ? `${normalizedAttributes} ${attribute}` : ` ${attribute}`;
+  return normalizedAttributes
+    ? `${normalizedAttributes} ${attribute}`
+    : ` ${attribute}`;
 }
 
 function ensureHtmlClass(attributes: string, className: string): string {
   const classPattern = /\bclass\s*=\s*(["'])(.*?)\1/i;
 
   if (classPattern.test(attributes)) {
-    return attributes.replace(classPattern, (_match, quote: string, classValue: string) => {
-      const classes = new Set(classValue.split(/\s+/).filter(Boolean));
-      classes.add(className);
-      return `class=${quote}${Array.from(classes).join(' ')}${quote}`;
-    });
+    return attributes.replace(
+      classPattern,
+      (_match, quote: string, classValue: string) => {
+        const classes = new Set(classValue.split(/\s+/).filter(Boolean));
+        classes.add(className);
+        return `class=${quote}${Array.from(classes).join(' ')}${quote}`;
+      },
+    );
   }
 
   return appendHtmlAttribute(attributes, `class="${className}"`);
@@ -480,7 +506,10 @@ function decorateHeadlinesWithAnchors(contentHtml: string): string {
 
       let nextAttributes = attributes;
       if (!existingIdMatch) {
-        nextAttributes = appendHtmlAttribute(nextAttributes, `id="${headingId}"`);
+        nextAttributes = appendHtmlAttribute(
+          nextAttributes,
+          `id="${headingId}"`,
+        );
       }
       nextAttributes = ensureHtmlClass(nextAttributes, 'scroll-mt-10');
 
@@ -518,7 +547,10 @@ function normalizeCodeLanguage(language: string): string | null {
   ];
 
   for (const [prefix, mappedLanguage] of aliases) {
-    if (normalizedLanguage === prefix || normalizedLanguage.startsWith(prefix)) {
+    if (
+      normalizedLanguage === prefix ||
+      normalizedLanguage.startsWith(prefix)
+    ) {
       return mappedLanguage;
     }
   }
@@ -565,7 +597,10 @@ function highlightCodeBlocks(contentHtml: string): string {
  * By default, posts with showInBlog === false are excluded (for the blog listing UI).
  * Pass includeHidden = true to include all posts (e.g. for sitemap generation).
  */
-export function getAllPosts(locale: string, { includeHidden = false }: { includeHidden?: boolean } = {}): PostData[] {
+export function getAllPosts(
+  locale: string,
+  { includeHidden = false }: { includeHidden?: boolean } = {},
+): PostData[] {
   const files = fs.readdirSync(postsDirectory);
 
   const posts: PostData[] = [];
@@ -680,7 +715,9 @@ export async function getPostBySlug(
       .process(transformedContent);
     const contentHtml = highlightCodeBlocks(
       decorateHeadlinesWithAnchors(
-        decorateExternalLinks(centerStandaloneHtmlImages(processedContent.toString())),
+        decorateExternalLinks(
+          centerStandaloneHtmlImages(processedContent.toString()),
+        ),
       ),
     );
 
@@ -691,7 +728,10 @@ export async function getPostBySlug(
       contentHtml,
     };
   } catch (error) {
-    console.error(`Error fetching post ${slugPath} for locale ${locale}:`, error);
+    console.error(
+      `Error fetching post ${slugPath} for locale ${locale}:`,
+      error,
+    );
     return null;
   }
 }

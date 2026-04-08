@@ -1,37 +1,37 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import AboutSidebar from '@/components/about/AboutSidebar'
-import TeamSection from '@/components/about/TeamSection'
-import EngagementsSection from '@/components/about/EngagementsSection'
-import PartnersSection from '@/components/about/PartnersSection'
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import AboutSidebar from '@/components/about/AboutSidebar';
+import TeamSection from '@/components/about/TeamSection';
+import EngagementsSection from '@/components/about/EngagementsSection';
+import PartnersSection from '@/components/about/PartnersSection';
 
 export default function AboutPage() {
-  const [activeSection, setActiveSection] = useState('')
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
       threshold: 0.2,
-    }
+    };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id)
+          setActiveSection(entry.target.id);
         }
-      })
-    }, options)
+      });
+    }, options);
 
-    const sections = document.querySelectorAll('.scroll-section')
-    sections.forEach((section) => observer.observe(section))
+    const sections = document.querySelectorAll('.scroll-section');
+    sections.forEach(section => observer.observe(section));
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section))
-    }
-  }, [])
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <>
@@ -90,11 +90,11 @@ export default function AboutPage() {
         />
 
         <div className="relative flex xl:flex-row flex-col gap-24 pt-60 sm:pt-64 lg:pt-72 pb-16 w-full">
-          <AboutSidebar 
-            activeSection={activeSection} 
-            onSectionClick={setActiveSection} 
+          <AboutSidebar
+            activeSection={activeSection}
+            onSectionClick={setActiveSection}
           />
-          
+
           <div className="flex flex-col gap-20 lg:gap-32 w-full">
             <TeamSection />
             <EngagementsSection />
@@ -103,6 +103,5 @@ export default function AboutPage() {
         </div>
       </div>
     </>
- 
-  )
+  );
 }

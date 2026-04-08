@@ -1,14 +1,23 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Support & Care - Open Elements',
-  description: 'Support & Care is a program for the sustainable further development, stabilization and support of open source software (OSS).',
-  keywords: ['Open Source', 'Support', 'Care', 'Java', 'Eclipse Temurin', 'Apache Maven'],
+  description:
+    'Support & Care is a program for the sustainable further development, stabilization and support of open source software (OSS).',
+  keywords: [
+    'Open Source',
+    'Support',
+    'Care',
+    'Java',
+    'Eclipse Temurin',
+    'Apache Maven',
+  ],
   openGraph: {
     type: 'website',
     url: 'https://open-elements.com/support-care',
     title: 'Support & Care - Open Elements',
-    description: 'Support & Care is a program for the sustainable further development, stabilization and support of open source software (OSS).',
+    description:
+      'Support & Care is a program for the sustainable further development, stabilization and support of open source software (OSS).',
     siteName: 'Open Elements',
     images: [
       {
@@ -20,12 +29,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
   },
-}
+};
 
 export default function SupportCareLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return <>{children}</>
+  return <>{children}</>;
 }

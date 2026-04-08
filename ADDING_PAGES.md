@@ -10,6 +10,7 @@ This guide explains how to add new pages to the Open Elements website, using the
 ## Overview
 
 The Open Elements website uses a hybrid architecture:
+
 - **Next.js** for page rendering and routing (`src/app/[locale]/`)
 - **Markdown files** for content (`content/`)
 - **i18n support** for English (EN) and German (DE) versions
@@ -31,11 +32,11 @@ content/
 
 ```markdown
 ---
-title: "Your Page Title"
-description: "Brief description for SEO and meta tags"
-layout: "article"
-url: "/your-page-name"
-keywords: ["keyword1", "keyword2", "keyword3"]
+title: 'Your Page Title'
+description: 'Brief description for SEO and meta tags'
+layout: 'article'
+url: '/your-page-name'
+keywords: ['keyword1', 'keyword2', 'keyword3']
 ---
 
 Your page content here in Markdown format...
@@ -53,11 +54,11 @@ More content...
 
 ```markdown
 ---
-title: "Ihr Seitentitel"
-description: "Kurze Beschreibung für SEO und Meta-Tags"
-layout: "article"
-url: "/de/your-page-name"
-keywords: ["Schlüsselwort1", "Schlüsselwort2"]
+title: 'Ihr Seitentitel'
+description: 'Kurze Beschreibung für SEO und Meta-Tags'
+layout: 'article'
+url: '/de/your-page-name'
+keywords: ['Schlüsselwort1', 'Schlüsselwort2']
 ---
 
 Ihr Seiteninhalt hier im Markdown-Format...
@@ -69,15 +70,15 @@ Inhalt für diesen Abschnitt...
 
 ### 2. Frontmatter Fields Explained
 
-| Field | Required | Description | Example Values |
-|-------|----------|-------------|----------------|
-| `title` | Yes | Page title (appears in browser tab and meta tags) | "DLT & Digital Trust Lecture" |
-| `description` | Yes | Page description for SEO and social sharing | "Since 2023 Hendrik Ebbers has been offering..." |
-| `layout` | Yes | Layout template to use | `"article"`, `"single"`, `"contact"`, `"about-us"` |
-| `url` | Yes | URL path for the page (EN: `/page-name`, DE: `/de/page-name`) | `/dlt-lecture` or `/de/dlt-lecture` |
-| `keywords` | No | SEO keywords | `["Java", "Open Source", "Support"]` |
-| `aliases` | No | Alternative URLs that redirect to this page | `['/old-url', '/another-old-url']` |
-| `newsletterPopup` | No | Whether to show newsletter popup | `true` or `false` |
+| Field             | Required | Description                                                   | Example Values                                     |
+| ----------------- | -------- | ------------------------------------------------------------- | -------------------------------------------------- |
+| `title`           | Yes      | Page title (appears in browser tab and meta tags)             | "DLT & Digital Trust Lecture"                      |
+| `description`     | Yes      | Page description for SEO and social sharing                   | "Since 2023 Hendrik Ebbers has been offering..."   |
+| `layout`          | Yes      | Layout template to use                                        | `"article"`, `"single"`, `"contact"`, `"about-us"` |
+| `url`             | Yes      | URL path for the page (EN: `/page-name`, DE: `/de/page-name`) | `/dlt-lecture` or `/de/dlt-lecture`                |
+| `keywords`        | No       | SEO keywords                                                  | `["Java", "Open Source", "Support"]`               |
+| `aliases`         | No       | Alternative URLs that redirect to this page                   | `['/old-url', '/another-old-url']`                 |
+| `newsletterPopup` | No       | Whether to show newsletter popup                              | `true` or `false`                                  |
 
 ### 3. Available Layout Types
 
@@ -88,7 +89,7 @@ Choose the appropriate layout for your page:
   - Best for: Text-heavy content pages, documentation
 
 - **`single`** - Simple single-column layout
-  - Used by: support-care-landingpage, support-care-temurin
+  - Used by: support-care-maven, support-care-temurin
   - Best for: Landing pages, promotional content
 
 - **`contact`** - Contact form layout
@@ -106,7 +107,7 @@ Choose the appropriate layout for your page:
   - Used by: newsletter page
 
 - **`index`** - Homepage layout
-  - Used by: _index.md (homepage only)
+  - Used by: \_index.md (homepage only)
 
 ### 4. Create Next.js Page Component
 
@@ -121,25 +122,27 @@ src/app/[locale]/
 #### Minimal Page Component Template
 
 ```tsx
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface YourPageProps {
   params: Promise<{
-    locale: string
-  }>
+    locale: string;
+  }>;
 }
 
-export async function generateMetadata({ params }: YourPageProps): Promise<Metadata> {
-  const { locale } = await params
+export async function generateMetadata({
+  params,
+}: YourPageProps): Promise<Metadata> {
+  const { locale } = await params;
 
-  const title = locale === 'de' 
-    ? 'Ihr Seitentitel - Open Elements'
-    : 'Your Page Title - Open Elements'
-  
-  const description = locale === 'de'
-    ? 'Beschreibung auf Deutsch'
-    : 'Description in English'
+  const title =
+    locale === 'de'
+      ? 'Ihr Seitentitel - Open Elements'
+      : 'Your Page Title - Open Elements';
+
+  const description =
+    locale === 'de' ? 'Beschreibung auf Deutsch' : 'Description in English';
 
   return {
     title,
@@ -151,11 +154,11 @@ export async function generateMetadata({ params }: YourPageProps): Promise<Metad
       siteName: 'Open Elements',
       locale: locale === 'de' ? 'de_DE' : 'en_US',
     },
-  }
+  };
 }
 
 export default async function YourPage({ params }: YourPageProps) {
-  const { locale } = await params
+  const { locale } = await params;
 
   return (
     <div>
@@ -169,17 +172,16 @@ export default async function YourPage({ params }: YourPageProps) {
         <h1 className="text-4xl font-bold mb-6">
           {locale === 'de' ? 'Ihr Seitentitel' : 'Your Page Title'}
         </h1>
-        
-        <div className="prose max-w-none">
-          {/* Page content */}
-        </div>
+
+        <div className="prose max-w-none">{/* Page content */}</div>
       </div>
     </div>
-  )
+  );
 }
 ```
 
 #### Notes on Page Components:
+
 - Use the `locale` parameter to render different content for EN/DE
 - Use `notFound()` if a locale isn't supported: `if (locale !== 'de') { notFound() }`
 - Import and use shared components from `src/components/`
@@ -226,7 +228,7 @@ public/
 ##### Next.js Image Component (in page.tsx):
 
 ```tsx
-import Image from 'next/image'
+import Image from 'next/image';
 
 <Image
   src="/images/logo.svg"
@@ -234,9 +236,11 @@ import Image from 'next/image'
   width={200}
   height={100}
   className="..."
-/>
+/>;
 
-{/* For full-width background images */}
+{
+  /* For full-width background images */
+}
 <div className="relative w-full h-64">
   <Image
     src="/illustrations/hero-bg.svg"
@@ -245,13 +249,13 @@ import Image from 'next/image'
     className="object-cover"
     priority
   />
-</div>
+</div>;
 ```
 
 #### Image Best Practices
 
 1. **Naming**: Use lowercase, hyphenated names: `team-photo.jpg`, `process-diagram.svg`
-2. **Formats**: 
+2. **Formats**:
    - Use `.svg` for logos and simple graphics
    - Use `.webp` or `.jpg` for photos
    - Use `.png` for images requiring transparency
@@ -298,6 +302,7 @@ See existing content files for more shortcode examples.
 ### 8. Testing Your New Page
 
 1. **Start the development server:**
+
    ```bash
    pnpm run dev
    ```
@@ -332,23 +337,25 @@ See existing content files for more shortcode examples.
 ### Example 1: Simple Article Page
 
 **Content structure:**
+
 ```
 content/my-article/
   index.md
   index.de.md
-  
+
 public/my-article/
   hero.jpg
   diagram.svg
 ```
 
 **Markdown frontmatter:**
+
 ```yaml
 ---
-title: "My Article Title"
-description: "Article description"
-layout: "article"
-url: "/my-article"
+title: 'My Article Title'
+description: 'Article description'
+layout: 'article'
+url: '/my-article'
 ---
 ```
 
@@ -358,10 +365,10 @@ url: "/my-article"
 content/support-program/
   index.md          # English version
   index.de.md       # German version
-  
+
 src/app/[locale]/support-program/
   page.tsx          # Handles both locales
-  
+
 public/support-program/
   logo.svg
   screenshot.png
@@ -371,10 +378,10 @@ public/support-program/
 
 ```markdown
 ---
-title: "Complex Page"
-description: "A page with multiple sections"
-layout: "single"
-url: "/complex-page"
+title: 'Complex Page'
+description: 'A page with multiple sections'
+layout: 'single'
+url: '/complex-page'
 ---
 
 ## Section 1
@@ -395,21 +402,25 @@ More detailed content...
 ## Troubleshooting
 
 ### Page not found (404)
+
 - Check that the URL in frontmatter matches the folder structure
 - Verify the Next.js component is in the correct location
 - Ensure the locale routing is set up correctly
 
 ### Images not displaying
+
 - Verify the image path is relative to `public/` without including "public" in the path
 - Check that the image file exists in the correct location
 - Verify file name capitalization matches exactly
 
 ### Content not updating
+
 - Restart the development server: `pnpm run dev`
 - Clear Next.js cache: `rm -rf .next` then restart
 - Check for typos in frontmatter YAML
 
 ### Layout not working as expected
+
 - Verify the layout value matches one of the available layouts
 - Check if the layout requires specific frontmatter fields
 - Look at similar pages for reference
@@ -424,6 +435,7 @@ More detailed content...
 ## Need Help?
 
 If you encounter issues not covered in this guide:
+
 1. Check existing pages in `content/` and `src/app/[locale]/` for reference
 2. Review the project [README.md](README.md)
 3. Ask the development team for guidance

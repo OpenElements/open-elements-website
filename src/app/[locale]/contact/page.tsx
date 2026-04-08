@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import CalendlyButton from '@/components/contact/CalendlyButton'
-import ContactInfo from '@/components/contact/ContactInfo'
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import CalendlyButton from '@/components/contact/CalendlyButton';
+import ContactInfo from '@/components/contact/ContactInfo';
 
 export default function ContactPage() {
-  const t = useTranslations('contact')
-  
+  const t = useTranslations('contact');
+
   return (
     <div className="relative">
       <div className="container relative max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full xl:pb-36 pb-28">
@@ -43,7 +43,7 @@ export default function ContactPage() {
 
         <div className="relative flex flex-col gap-24 2xl:gap-40 lg:gap-32">
           <CalendlyButton />
-          
+
           <div className="relative flex flex-col-reverse items-center justify-center w-full gap-16 lg:flex-row xl:gap-12 lg:gap-6">
             <Image
               className="absolute lg:w-[450px] w-80 lg:-left-44 -left-24 lg:top-12 top-[500px] sm:block hidden"
@@ -59,9 +59,9 @@ export default function ContactPage() {
               width={450}
               height={450}
             />
-            
+
             <ContactInfo />
-            
+
             <Image
               className="w-full max-w-sm xl:max-w-md shrink-0 xl:mt-16"
               src="/illustrations/contact.svg"
@@ -73,5 +73,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

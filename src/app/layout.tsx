@@ -1,15 +1,23 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Open Elements - Open Source made right',
-  description: 'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
-  keywords: ['open source', 'Java', 'OSS', 'open source Support', 'Java Support'],
+  description:
+    'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
+  keywords: [
+    'open source',
+    'Java',
+    'OSS',
+    'open source Support',
+    'Java Support',
+  ],
   openGraph: {
     type: 'website',
     url: 'https://open-elements.com/',
     title: 'Open Elements - Open Source made right',
-    description: 'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
+    description:
+      'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
     siteName: 'Open Elements',
     images: [
       {
@@ -21,12 +29,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return children;
 }
