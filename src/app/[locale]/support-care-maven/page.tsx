@@ -24,8 +24,8 @@ export default function SupportCareMavenPage() {
           </div>
           <div className="text-center mb-6">
             <p
-              className="text-xl font-normal max-w-3xl mx-auto mb-4 leading-relaxed"
-              style={{ color: '#5CBA9E' }}>
+              className="text-[1.2rem] max-w-[900px] mx-auto mb-4 leading-relaxed"
+              style={{ color: '#5CBA9E', fontWeight: 400 }}>
               {t('heroParagraph')}
             </p>
             {/* Component logos row */}
@@ -33,40 +33,40 @@ export default function SupportCareMavenPage() {
               <Image
                 src="/support-care-maven/component-logos/eclipse-temurin.svg"
                 alt="Eclipse Temurin"
-                width={100}
-                height={28}
+                width={225}
+                height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
                 src="/support-care-maven/component-logos/apache-maven.svg"
                 alt="Apache Maven"
-                width={100}
-                height={28}
+                width={190}
+                height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
                 src="/support-care-maven/component-logos/junit.svg"
                 alt="JUnit"
-                width={60}
-                height={28}
+                width={169}
+                height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
                 src="/support-care-maven/component-logos/apache-log4j.png"
                 alt="Apache Log4j"
-                width={100}
-                height={28}
+                width={116}
+                height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
                 src="/support-care-maven/component-logos/apache-commons.svg"
                 alt="Apache Commons"
-                width={100}
-                height={28}
+                width={110}
+                height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
             </div>
-            <p className="text-base mx-auto mb-6 leading-relaxed max-w-3xl">
+            <p className="text-base mx-auto mb-6 leading-relaxed">
               {t('heroBody')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
@@ -93,11 +93,12 @@ export default function SupportCareMavenPage() {
           </h2>
           <p>{t('problemP1')}</p>
           <div
-            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-lg font-semibold"
+            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-[1.1rem]"
             style={{
               backgroundColor: '#DFF1FD',
               borderColor: '#5DB9F5',
               color: '#020144',
+              fontWeight: 600,
             }}>
             {t('problemHighlight')}
           </div>
@@ -134,45 +135,52 @@ export default function SupportCareMavenPage() {
                 name: t('temurin.name'),
                 desc: t('temurin.desc'),
                 alt: 'Eclipse Temurin',
+                width: 225,
               },
               {
                 img: '/support-care-maven/component-logos/apache-maven.svg',
                 name: t('maven.name'),
                 desc: t('maven.desc'),
                 alt: 'Apache Maven',
+                width: 190,
               },
               {
                 img: '/support-care-maven/component-logos/junit.svg',
                 name: t('junit.name'),
                 desc: t('junit.desc'),
                 alt: 'JUnit',
+                width: 169,
               },
               {
                 img: '/support-care-maven/component-logos/apache-log4j.png',
                 name: t('log4j.name'),
                 desc: t('log4j.desc'),
                 alt: 'Apache Log4j',
+                width: 116,
               },
               {
                 img: '/support-care-maven/component-logos/apache-commons.svg',
                 name: t('commons.name'),
                 desc: t('commons.desc'),
                 alt: 'Apache Commons',
+                width: 110,
               },
             ].map(comp => (
               <div
                 key={comp.alt}
-                className="text-center p-6 border border-gray-200 rounded-2xl w-72 flex-shrink-0">
+                className="text-center p-6 border border-gray-200 rounded-2xl w-80 flex-shrink-0">
                 <Image
                   src={comp.img}
                   alt={comp.alt}
-                  width={100}
+                  width={comp.width}
                   height={48}
-                  className="h-12 mx-auto mb-4 object-contain"
+                  className="h-12 w-auto mx-auto mb-4 object-contain"
                 />
-                <strong className="block text-blue">{comp.name}</strong>
+                <strong className="block text-[0.95rem] text-blue">
+                  {comp.name}
+                </strong>
                 <p
-                  className="mt-3 text-sm leading-relaxed text-blue"
+                  className="mt-3 text-[0.9rem] leading-relaxed text-blue"
                   dangerouslySetInnerHTML={{ __html: comp.desc }}
                 />
               </div>
@@ -180,11 +188,12 @@ export default function SupportCareMavenPage() {
           </div>
 
           <div
-            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-lg font-semibold"
+            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-[1.1rem]"
             style={{
               backgroundColor: '#DFF1FD',
               borderColor: '#5DB9F5',
               color: '#020144',
+              fontWeight: 600,
             }}>
             {t('componentsHighlight')}
           </div>
@@ -200,8 +209,8 @@ export default function SupportCareMavenPage() {
               src="/support-care-maven/pyramid.png"
               alt={t('pyramidAlt')}
               className="w-3/5"
-              width={600}
-              height={400}
+              width={1902}
+              height={1496}
             />
           </div>
 
@@ -224,11 +233,12 @@ export default function SupportCareMavenPage() {
           </ol>
 
           <div
-            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-lg font-semibold"
+            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-[1.1rem]"
             style={{
               backgroundColor: '#DFF1FD',
               borderColor: '#5DB9F5',
               color: '#020144',
+              fontWeight: 600,
             }}>
             {t('layersHighlight').split('Log4Shell')[0]}
             <a
@@ -282,7 +292,7 @@ export default function SupportCareMavenPage() {
             ].map(svc => (
               <div
                 key={svc.name}
-                className="text-center p-6 border border-gray-200 rounded-2xl w-72 flex-shrink-0">
+                className="text-center p-6 border border-gray-200 rounded-2xl w-80 flex-shrink-0">
                 <Image
                   src={svc.img}
                   alt={svc.name}
@@ -290,8 +300,10 @@ export default function SupportCareMavenPage() {
                   height={96}
                   className="h-24 mx-auto mb-4 object-contain"
                 />
-                <strong className="block text-blue">{svc.name}</strong>
-                <p className="mt-3 text-sm leading-relaxed text-blue">
+                <strong className="block text-[0.95rem] text-blue">
+                  {svc.name}
+                </strong>
+                <p className="mt-3 text-[0.9rem] leading-relaxed text-blue">
                   {svc.desc}
                 </p>
               </div>
@@ -315,11 +327,12 @@ export default function SupportCareMavenPage() {
             <li>{t('craBullet6')}</li>
           </ul>
           <div
-            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-lg font-semibold"
+            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-[1.1rem]"
             style={{
               backgroundColor: '#DFF1FD',
               borderColor: '#5DB9F5',
               color: '#020144',
+              fontWeight: 600,
             }}>
             {t('craHighlight')}
           </div>
@@ -346,8 +359,8 @@ export default function SupportCareMavenPage() {
               src="/support-care-maven/oe-delivers-container.png"
               alt={t('containersImgAlt')}
               className="w-3/5"
-              width={600}
-              height={400}
+              width={3330}
+              height={1218}
             />
           </div>
           <p className="text-center text-sm text-gray-500 -mt-4">
@@ -379,11 +392,12 @@ export default function SupportCareMavenPage() {
           </ul>
 
           <div
-            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-lg font-semibold"
+            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-[1.1rem]"
             style={{
               backgroundColor: '#DFF1FD',
               borderColor: '#5DB9F5',
               color: '#020144',
+              fontWeight: 600,
             }}>
             {t('modelHighlight')}
           </div>
@@ -402,8 +416,8 @@ export default function SupportCareMavenPage() {
                   src="/illustrations/support-care-subscription/basic.svg"
                   className="size-48 object-contain mt-2 mb-0"
                   alt=""
-                  width={768}
-                  height={300}
+                  width={800}
+                  height={800}
                 />
                 <ul className="mt-2 text-sm list-none pl-0 flex flex-col gap-1">
                   {[
@@ -449,8 +463,8 @@ export default function SupportCareMavenPage() {
                   src="/illustrations/support-care-subscription/standard.svg"
                   className="size-48 object-contain mt-2 mb-0"
                   alt=""
-                  width={768}
-                  height={300}
+                  width={800}
+                  height={800}
                 />
                 <ul className="mt-2 text-sm list-none pl-0 flex flex-col gap-1">
                   {[
@@ -498,8 +512,8 @@ export default function SupportCareMavenPage() {
                   src="/illustrations/support-care-subscription/premium.svg"
                   className="size-48 object-contain mt-2 mb-0"
                   alt=""
-                  width={768}
-                  height={300}
+                  width={800}
+                  height={800}
                 />
                 <ul className="mt-2 text-sm list-none pl-0 flex flex-col gap-1">
                   {[
@@ -555,12 +569,12 @@ export default function SupportCareMavenPage() {
                 alt="Hendrik Ebbers"
                 width={120}
                 height={120}
-                className="w-28 h-28 rounded-full object-cover mx-auto mb-3 border-4 border-sky-300"
+                className="w-[120px] h-[120px] rounded-full object-cover mx-auto mb-3 border-[3px] border-[#5DB9F5]"
               />
-              <strong className="block text-sm text-blue">
+              <strong className="block text-[0.95rem] text-blue">
                 Hendrik Ebbers
               </strong>
-              <span className="text-xs" style={{ color: '#5CBA9E' }}>
+              <span className="text-[0.8rem]" style={{ color: '#5CBA9E' }}>
                 {t('hendrikRole')}
               </span>
             </Link>
@@ -573,12 +587,12 @@ export default function SupportCareMavenPage() {
                 alt="Sandra Parsick"
                 width={120}
                 height={120}
-                className="w-28 h-28 rounded-full object-cover mx-auto mb-3 border-4 border-sky-300"
+                className="w-[120px] h-[120px] rounded-full object-cover mx-auto mb-3 border-[3px] border-[#5DB9F5]"
               />
-              <strong className="block text-sm text-blue">
+              <strong className="block text-[0.95rem] text-blue">
                 Sandra Parsick
               </strong>
-              <span className="text-xs" style={{ color: '#5CBA9E' }}>
+              <span className="text-[0.8rem]" style={{ color: '#5CBA9E' }}>
                 {t('sandraRole')}
               </span>
             </Link>
@@ -591,12 +605,12 @@ export default function SupportCareMavenPage() {
                 alt="Sebastian Tiemann"
                 width={120}
                 height={120}
-                className="w-28 h-28 rounded-full object-cover mx-auto mb-3 border-4 border-sky-300"
+                className="w-[120px] h-[120px] rounded-full object-cover mx-auto mb-3 border-[3px] border-[#5DB9F5]"
               />
-              <strong className="block text-sm text-blue">
+              <strong className="block text-[0.95rem] text-blue">
                 Sebastian Tiemann
               </strong>
-              <span className="text-xs" style={{ color: '#5CBA9E' }}>
+              <span className="text-[0.8rem]" style={{ color: '#5CBA9E' }}>
                 {t('sebastianRole')}
               </span>
             </Link>
@@ -630,7 +644,7 @@ export default function SupportCareMavenPage() {
             ].map(f => (
               <div
                 key={f.name}
-                className="text-center p-6 border border-gray-200 rounded-2xl w-72 flex-shrink-0">
+                className="text-center p-6 border border-gray-200 rounded-2xl w-80 flex-shrink-0">
                 <Image
                   src={f.img}
                   alt={f.name}
@@ -638,8 +652,10 @@ export default function SupportCareMavenPage() {
                   height={f.imgHeight}
                   className="h-16 mx-auto mb-4 object-contain"
                 />
-                <strong className="block text-blue">{f.name}</strong>
-                <p className="mt-3 text-sm leading-relaxed text-blue">
+                <strong className="block text-[0.95rem] text-blue">
+                  {f.name}
+                </strong>
+                <p className="mt-3 text-[0.9rem] leading-relaxed text-blue">
                   {f.desc}
                 </p>
               </div>
@@ -647,11 +663,12 @@ export default function SupportCareMavenPage() {
           </div>
 
           <div
-            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-lg font-semibold"
+            className="bg-blue-50 border-l-4 border-sky-300 rounded-lg px-6 py-5 my-6 text-[1.1rem]"
             style={{
               backgroundColor: '#DFF1FD',
               borderColor: '#5DB9F5',
               color: '#020144',
+              fontWeight: 600,
             }}>
             {t('whyHighlight')}
           </div>
@@ -675,8 +692,11 @@ export default function SupportCareMavenPage() {
                 key={i}
                 className="border border-gray-200 rounded-xl px-6 py-5 cursor-pointer">
                 <summary
-                  className="font-bold text-lg"
-                  style={{ color: '#020144' }}>
+                  style={{
+                    color: '#020144',
+                    fontSize: '1.05rem',
+                    fontWeight: 700,
+                  }}>
                   {faq.q}
                 </summary>
                 <p className="mt-3 leading-relaxed text-blue">{faq.a}</p>
