@@ -545,7 +545,7 @@ export default function SupportCareMavenPage() {
           <p>{t('whyP1')}</p>
 
           <div className="flex flex-wrap justify-center gap-8 my-8 not-prose">
-            <a
+            <Link
               href="/about-hendrik/"
               className="text-center w-44 no-underline"
               style={{ color: 'inherit' }}>
@@ -562,8 +562,8 @@ export default function SupportCareMavenPage() {
               <span className="text-xs" style={{ color: '#5CBA9E' }}>
                 {t('hendrikRole')}
               </span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/employees/sandra"
               className="text-center w-44 no-underline"
               style={{ color: 'inherit' }}>
@@ -580,8 +580,8 @@ export default function SupportCareMavenPage() {
               <span className="text-xs" style={{ color: '#5CBA9E' }}>
                 {t('sandraRole')}
               </span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/employees/sebastian"
               className="text-center w-44 no-underline"
               style={{ color: 'inherit' }}>
@@ -598,7 +598,7 @@ export default function SupportCareMavenPage() {
               <span className="text-xs" style={{ color: '#5CBA9E' }}>
                 {t('sebastianRole')}
               </span>
-            </a>
+            </Link>
           </div>
 
           <p>{t('whyP2')}</p>
