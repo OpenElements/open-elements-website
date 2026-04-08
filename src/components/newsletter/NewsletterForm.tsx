@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import Script from 'next/script'
+import Script from 'next/script';
 
 const formHtml = `
 <div id="sib-form-container" class="sib-form-container">
@@ -139,14 +139,15 @@ const formHtml = `
     </form>
   </div>
 </div>
-`
+`;
 
 export default function NewsletterForm() {
   return (
     <>
       {/* Brevo form styles */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
           @font-face {
             font-display: block;
             font-family: Roboto;
@@ -186,12 +187,15 @@ export default function NewsletterForm() {
             text-decoration: underline;
             color: #2BB2FC;
           }
-        `
-      }} />
+        `,
+        }}
+      />
 
       {/* Brevo stylesheet */}
-      {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
+      <link
+        rel="stylesheet"
+        href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+      />
 
       {/* Form */}
       <div
@@ -236,5 +240,5 @@ export default function NewsletterForm() {
         Brevo.push(["init", { client_key: "v3lh6minrpfap69vhy5am8if" }]);
       `}</Script>
     </>
-  )
+  );
 }
