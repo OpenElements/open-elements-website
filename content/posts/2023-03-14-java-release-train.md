@@ -22,7 +22,7 @@ The following diagram shows the release date and lifecycle of Java 6, 7, and 8.
 The lifecycle of the versions is defined by the availability of free security updates for the respective version.
 Once there are no more free updates for a version, its lifecycle ends in the diagram.
 
-{{< centered-image src="/posts/2023-03-14-java-release-train/lifecycle.jpg" width="100%" showCaption="false" alt="Java Lifecycle">}}
+![Java Lifecycle](/posts/2023-03-14-java-release-train/lifecycle.jpg)
 
 In the diagram, you can see different points.
 It is important to note that there is always a period during which at least two releases with security updates are supported.
@@ -60,11 +60,10 @@ Such APIs are in a special incubator package and are only moved to their correct
 The preview status can be used to make new language features of the Java platform available in advance.
 Such features must be activated via a command-line parameter:
 
-{{< highlight bash >}}
-$ javac HelloWorld.java
+```bash$ javac HelloWorld.java
 $ javac --release 14 --enable-preview HelloWorld.java
 $ java --enable-preview HelloWorld
-{{< / highlight >}}
+```
 
 ## Long-Term Support and Critical Patch Updates
 
@@ -85,7 +84,7 @@ Consequently, Java 21 will be the next LTS release in September 2023.
 
 Based on these definitions, the release graph of Java versions since Java 9 looks as follows:
 
-{{< centered-image src="/posts/2023-03-14-java-release-train/releases.jpg" width="100%" showCaption="false" alt="Java Releases">}}
+![Java Releases](/posts/2023-03-14-java-release-train/releases.jpg)
 
 Since all work is done in OpenJDK, the release date of individual Java distributions may vary slightly.
 Once the release is published in OpenJDK, the work to create the distributions like Eclipse Temurin, Oracle JDK, or Azul Zulu begins.

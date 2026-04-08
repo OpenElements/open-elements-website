@@ -10,4 +10,4 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 I created a new demo for my JGrid talk this week in Münster, Germany. I will release the code, a webstart link & my presentation later this week.
 
-{{< youtube 3aCDywUeTw4 >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3aCDywUeTw4" frameborder="0" allowfullscreen></iframe>

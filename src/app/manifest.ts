@@ -1,0 +1,32 @@
+import type { MetadataRoute } from 'next';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Open Elements',
+    short_name: 'Open Elements',
+    description:
+      'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
+    id: '/',
+    start_url: '/',
+    display: 'minimal-ui',
+    background_color: '#010149',
+    theme_color: '#010149',
+    icons: [
+      {
+        src: '/icons/icon.svg',
+        type: 'image/svg+xml',
+        sizes: 'any',
+      },
+      {
+        src: '/icons/icon-192.png',
+        type: 'image/png',
+        sizes: '192x192',
+      },
+      {
+        src: '/icons/icon-512.png',
+        type: 'image/png',
+        sizes: '512x512',
+      },
+    ],
+  };
+}

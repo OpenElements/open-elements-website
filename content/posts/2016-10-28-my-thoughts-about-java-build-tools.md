@@ -49,8 +49,7 @@ A static module definition should contain a readable description of the module. 
 
 Based on this information a module description might look like this:
 
-{{< highlight json >}}
-{
+```json{
 "name": "My cool API",
 "description": "A very cool API",
 "licence": "Apache 2.0",
@@ -67,35 +66,29 @@ Based on this information a module description might look like this:
   "name": "John Doe",
   "mail": "john.doe@mail.com"
   }]
-}
-{{< / highlight >}}
+}```
 
 Next to this information a project needs a unique identifier. Since in Maven and Gradle this can easily be defined by the groupId and artifactId a static definition should reuse this properties:
 
-{{< highlight json >}}
-{
+```json{
 "groupId": "com.cool.api",
 "artifactId": "cool-api"
-}
-{{< / highlight >}}
+}```
 
 To define a specific version of a project the versionId should be added, too. Based on this information everything to provide the module to Maven Central or JCenter is defined. In addition a Maven pom.xml can easily be created based on this information and other modules can depend on this module. After adding the properties a static project definition might look like this:
 
-{{< highlight json >}}
-{
+```json{
   "name": "My cool API",
   "description": "A very cool API",
   "licence": "Apache 2.0",
   "groupId": "com.cool.api",
   "artifactId": "cool-api",
   "version": "2.1.9"
-}
-{{< / highlight >}}
+}```
 
 To compile a java module we need some additional information. I think the most basic informations are the source encoding and the Java version that should be used to compile. Here we need to specify a Java version that defines the minimum version that is needed to compile the sources and a java version that defined the compile target version. Adding this information to a module description might end in the following file:
 
-{{< highlight json >}}
-{
+```json{
 "name": "My cool API",
 "description": "A very cool API",
 "licence": "Apache 2.0",
@@ -107,15 +100,13 @@ To compile a java module we need some additional information. I think the most b
 "encoding": "UTF-8",
 "source-java": "8",
 "target-java": "8"
-}
-{{< / highlight >}}
+}```
 
 Based on this information a project that needs no additional classes next to the basic Java classes in the class path can easily be compiled. Since the complete module definition is provided in a static way a support for this can easily be integrated in any IDE or build tool.
 
 Since most projects depend on external APIs and modules the static module definition should provide information about the dependencies of the module. Like in Maven or Gradle a definition of the dependencies based on artifactId, groupId and version is the best way to do it. At compilation a build tool or IDE can than easily download the (transitive) dependencies from Maven Central or JCenter. A static project definition should offer mostly all features that are part of the Maven dependency definition but in most use cases simply adding the needed dependencies is all you need. By adding dependency information a module definition will look like this:
 
-{{< highlight json >}}
-{
+```json{
 "name": "My cool API",
 "description": "A very cool API",
 "licence": "Apache 2.0",
@@ -137,8 +128,7 @@ Since most projects depend on external APIs and modules the static module defini
   "artifactId": "cool-logging",
   "version": "1.0.0"
   }]
-}
-{{< / highlight >}}
+}```
 
 A Java module that is defined by such a static structure must follow some best practices and basic rules that are well known from Maven and Gradle based project:
 
@@ -152,10 +142,8 @@ A Java module that is defined by such a static structure must follow some best p
 
 Most of you will already use a build tool like Maven, Gradle or maybe Ant to define the build of a Java project. I think this is quite fine and should be used in future, too. But especially when using Gradle, which is the newest of the mentioned build tools, developers have so many possibilities to create a custom build file that normally each build works in a different way and it can be hard to understand the build process. In all this files the information about the build process (like a build script) and the metadata of a project are mixed. By encapsulating the metadata from the build it will be much easier to get a general overview of a module or a build. In addition each build file or script depends on the used build system. This means that a developer that always used Maven often can not read or interpret a Gradle build script. By defining the metadata in a tool independent way any developer can understand the information of any Java project as soon as he worked at least with one project that provide static metadata. But the metadata will not only offer a better readability for developers. Build tools could provide support to interpret the metadata. By doing so all information that is part of the metadata file should not be redefined in the build script. The build tool can directly use the information of the metadata file to build the project. By doing so a Gradle file only build a JAR file based on a module that has a static metadata description can look like this:
 
-{{< highlight java >}}
-apply plugin: 'java'
-apply plugin: 'jmm'
-{{< / highlight >}}
+```javaapply plugin: 'java'
+apply plugin: 'jmm'```
 
 This will be enough to compile all sources of the project, run all unit tests and build a JAR which name is created by the artifactId and version value of the metadata file.
 

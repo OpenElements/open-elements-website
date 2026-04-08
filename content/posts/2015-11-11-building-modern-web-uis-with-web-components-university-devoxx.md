@@ -12,4 +12,4 @@ On Monday [Michael Heinrichs](https://twitter.com/net0pyr) and did a 3 hour univ
 
 Next to this the Devoxx team is really fast with the video post production and therefore or talk is already online:
 
-{{< youtube muqOStp3A_o >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/muqOStp3A_o" frameborder="0" allowfullscreen></iframe>

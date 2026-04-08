@@ -11,14 +11,12 @@ preview_image: "/posts/preview-images/software-development-green.svg"
 ---
 In this tutorial I will show you how to visualize more complex data with renderers. First we have to create a data model. For this tutorial we will work with the `java.awt.Color` class and create a ListModel with some colors in it:
 
-{{< highlight java >}}
-DefaultListModel model = new DefaultListModel();
+```javaDefaultListModel model = new DefaultListModel();
 Random random = new Random();
 for(int i=0; i <= 100; i++) {
 model.addElement(new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
 }
-grid.setModel(model);
-{{< / highlight >}}
+grid.setModel(model);```
 
 After assigning this model to the JGrid the result will look like this:
 
@@ -28,8 +26,7 @@ The JGrid uses a default renderer to visualize data. This renderer based on a JL
 
 To visualize the colors inside the grid we need a new renderer. All renderers for the JGrid must implement the interface GridCellRenderer. Here is the code for a simple renderer for colors:
 
-{{< highlight java >}}
-public class GridColorCellRenderer extends JPanel implements GridCellRenderer {
+```javapublic class GridColorCellRenderer extends JPanel implements GridCellRenderer {
 
   private static final long serialVersionUID = 1L;
 
@@ -40,16 +37,13 @@ public class GridColorCellRenderer extends JPanel implements GridCellRenderer {
     }
     return this;
   }
-}
-{{< / highlight >}}
+}```
 
 Now we have to assign the renderer to the JGrid. Here is a different to the default JList or JTable behavior. The renderer for JGrid are stored in a special handler. You can refer to this handler by `grid.getCellRendererManager()` / `grid.setCellRendererManager()`. By using this handlers you can manage the same renderers for different grids (On a later JGrid release I will add SPI support to the handlers).
 
 To add the custom renderer to your grid you have to add it to the handler:
 
-{{< highlight java >}}
-grid.getCellRendererManager().setDefaultRenderer(new GridColorCellRenderer());
-{{< / highlight >}}
+```javagrid.getCellRendererManager().setDefaultRenderer(new GridColorCellRenderer());```
 
 Now our application shows the right colors inside the grid cells:
 

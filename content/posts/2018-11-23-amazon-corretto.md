@@ -22,19 +22,15 @@ Amazon decided to not cooperate with a given JDK vendor and provide its distribu
 
 Currently, a Java 8 based preview can be downloaded for Linux, Mac, and Windows. Until now, Amazon provides only 64 bit version. Against some other distributions, the download contains an installer (at least for Windows and Mac) that will install the Java distribution on your machine. This is a huge benefit compared to some other vendors that only offer a packed (like tar or zip) folder of the JDK. Plus, Amazon already offers ready to use docker support. If you want to run a java application in a container by using the Corretto JDK you only need to build the open source image:
 
-{{< highlight shell >}}
-docker build -t amazon-corretto-8 github.com/corretto/corretto-8-docker
-{{< / highlight >}}
+```shelldocker build -t amazon-corretto-8 github.com/corretto/corretto-8-docker```
 
 I am sure that Amazon will offer the images in the official docker hub in the near future.
 
 Once you have installed Corretto it is ready to use. By calling `java -version` the current preview build of Corretto will give you the following version information:
 
-{{< highlight shell >}}
-openjdk version "1.8.0_192"
+```shellopenjdk version "1.8.0_192"
 OpenJDK Runtime Environment (build 1.8.0_192-amazon-corretto-preview-b12)
-OpenJDK 64-Bit Server VM (build 25.192-b12, mixed mode)
-{{< / highlight >}}
+OpenJDK 64-Bit Server VM (build 25.192-b12, mixed mode)```
 
 ## Is Corretto a no-cost JDK?
 

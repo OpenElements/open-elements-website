@@ -8,7 +8,7 @@ categories: [DataFX, JavaFX]
 excerpt: 'This is the 4th tutorial about DataFX. In this tutorial I will show how you can manage central actions and navigation of a flow.'
 preview_image: "/posts/preview-images/software-development-green.svg"
 ---
-This is the 4th tutorial about navigation with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) and the DataFX flow API. An overview of all tutorials can be found [here]({{< ref "/posts/2014-05-19-datafx-8-0-tutorials" >}}). In this tutorial I will show how you can manage the action handling and navigation of a flow from outside of the flow. To do so we will refactor the wizard that was created in [tutorial 3]({{< ref "/posts/2014-05-31-datafx-tutorial-3" >}}).
+This is the 4th tutorial about navigation with [DataFX]({{ site.baseurl }}{% link pages/projects/datafx.md %}) and the DataFX flow API. An overview of all tutorials can be found [here](/posts/2014-05-19-datafx-8-0-tutorials). In this tutorial I will show how you can manage the action handling and navigation of a flow from outside of the flow. To do so we will refactor the wizard that was created in [tutorial 3](/posts/2014-05-31-datafx-tutorial-3).
 
 As described in tutorial 3 the wizard will be composed of some views that define the steps of the wizard. In addition a toolbar with some buttons is placed on the bottom. The views will look like this:
 
@@ -20,8 +20,7 @@ All views of the wizard are linked by a navigation model. In tutorial 3 this was
 
 As always we want to start by defining the views in FXML. Because the toolbar will look the same on each view we can extract it in a seperate FXML file. As shown in tutorial 3 a FXML file can included in another one by using the `fx:include` tag. Here is the FXML definition of the toolbar:
 
-{{< highlight xml >}}
-<?xml version="1.0" encoding="UTF-8"?>
+```xml<?xml version="1.0" encoding="UTF-8"?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.geometry.*?>
@@ -37,13 +36,11 @@ As always we want to start by defining the views in FXML. Because the toolbar wi
 <padding>
   <insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
 </padding>
-</hbox>
-{{< / highlight >}}
+</hbox>```
 
 The definition of the toolbar is the same as in the last tutorial. The definition of the wizard steps is the same, too. Here is a FXML definition of one step:
 
-{{< highlight xml >}}
-<?xml version="1.0" encoding="UTF-8"?>
+```xml<?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -69,21 +66,17 @@ The definition of the toolbar is the same as in the last tutorial. The definitio
               </children>
           </stackpane>
       </center>
-</borderpane>
-{{< / highlight >}}
+</borderpane>```
 
 As a next step we need view controller classes for all views in the wizard. As a first step we will create empty classes that are annoted with the `FXMLController` annotation:
 
-{{< highlight java >}}
-@FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
+```java@FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
 public class Wizard1Controller {
-}
-{{< / highlight >}}
+}```
 
 All the actions of the wizard will be triggered by the toolbar. Because the toolbar is defined on each view we can create an abstract class for the toolbar components that can be used as a superclass for the view controller classes:
 
-{{< highlight java >}}
-public class AbstractWizardController {
+```javapublic class AbstractWizardController {
     @FXML
     @ActionTrigger("back")
     private Button backButton;
@@ -102,23 +95,19 @@ public class AbstractWizardController {
     public Button getNextButton() {
         return nextButton;
     }
-}
-{{< / highlight >}}
+}```
 
 All view controller classes can now extend the class:
 
-{{< highlight java >}}
-@FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
+```java@FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
 public class Wizard1Controller extends AbstractWizardController {
-}
-{{< / highlight >}}
+}```
 
 Mainly the same structure was created in tutorial 3 but here we have one big different. In Chapter 3 the next button can't be defined in the super class because  it was annotated with the `@LinkAction` annotation. This must be done in each controller class because the target of the navigation must be defined as an parameter of the annotation definition (see tutorial 3 for a more detailed description). As already mentioned we want to extract the action handling in this tutorial. So all buttons can be defined and injected in the `AbstractWizardController` class. As you can see in the code the buttons are annoted by the `@ActionTrigger` annotation that was already used in some other tutorials. By using this annotation an action id is defined and the flow will trigger the action that is specified by this id each time the button will be pressed. 
 
 The last thing that is missing is the main class. This class will look different to the main classes of the first three tutorials. Here we want to define all the actions of the wizard and link its views. To do so we start with a simple class and show the flow. You should know this kind of class from the other tutorials:
 
-{{< highlight java >}}
-public class Tutorial4Main extends Application {
+```javapublic class Tutorial4Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
@@ -126,23 +115,19 @@ public class Tutorial4Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         new Flow(WizardStartController.class).startInStage(primaryStage);
     }
-}
-{{< / highlight >}}
+}```
 
 As a next step we want to bind all the different views and create a navigation model. To do so the `Flow` class contains some methods that can be used to define links between views of the flow. The `Flow` class is defined as a fluent API and navigation links or action can be simply added to it. Here is a example for a flow with one link:
 
-{{< highlight java >}}
-new Flow(View1Controller.class).
+```javanew Flow(View1Controller.class).
 withLink(View1Controller.class, "link-id", View2Controller.class).
-startInStage(primaryStage);
-{{< / highlight >}}
+startInStage(primaryStage);```
 
 In the flow a link from view 1 to view 2 is defined. Both views are specified by their controller classes (View1Controller.class and View2Controller.class) and the link is defined by the unique id "link-id". Once this is done you can simply add the `@ActionTrigger("link-id")` annotation to a defined node in the `View1Controller` class. DataFX will register the navigation to view 2 for this node. So whenever the node is clicked the navigation will be transformed.
 
 For the current example the code of the main class will look like this:
 
-{{< highlight java >}}
-public class Tutorial4Main extends Application {
+```javapublic class Tutorial4Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
@@ -157,8 +142,7 @@ public class Tutorial4Main extends Application {
                 withGlobalLink("finish", WizardDoneController.class).
                 startInStage(primaryStage);
     }
-}
-{{< / highlight >}}
+}```
 
 Next to the `withLink(...)` method two additional methods of the `Flow` class are used in the code. The withGlobalLink(...) method defines a navigation action that will be registered for each view in the flow. So the `@ActionTrigger("finish")` annotation can be used in each view and will navigate to the last view of the wizard. For each action type that can be registered to a DataFX flow the `Flow` class provides methods to register the action for only one view or as a global action for all views. This is done for the back action, too. The "back" button is visible on each view of the wizard and therefore the `withGlobalBackAction("back")` method is used here. So whenever a action with the id "back" is triggered in any view of the flow a back action will be called. This is exactly the same as adding a @BackAction annotation to the node that should trigger the back action.
 
@@ -180,34 +164,28 @@ As you can see in this overview all the actions that were created by using annot
 
 In this example the ViewController1.class, ViewController2.class and CustomAction.class don't know each other. With the help of the DataFX flow API you can simply combine them by using:
 
-{{< highlight java >}}
-new Flow(View1Controller.class).
+```javanew Flow(View1Controller.class).
 withLink(View1Controller.class, "link-id", View2Controller.class).
 withAction(View2Controller.class "callAction", new CustomAction()).
-startInStage(primaryStage);
-{{< / highlight >}}
+startInStage(primaryStage);```
 
 As a last step I want to extent the example application and add a help output. This should be a global action that prints some help on the console. To do so the action is registered for the flow:
 
-{{< highlight java >}}
-new Flow(WizardStartController.class).
+```javanew Flow(WizardStartController.class).
 withLink(WizardStartController.class, "next", Wizard1Controller.class).
 ...
 withGlobalTaskAction("help", () -> System.out.println("## There is no help for the application :( ##")).
-startInStage(primaryStage);
-{{< / highlight >}}
+startInStage(primaryStage);```
 
 As you can see in the code you can simply pass a lambda expression as a action to the flow because the `FlowTaskAction` class that is used internally here defines the action as a `Runnable` that is a function interface since Java8.
 Once this is done the action can be triggered in any view:
 
-{{< highlight java >}}
-@FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
+```java@FXMLController(value="wizard1.fxml", title = "Wizard: Step 1")
 public class Wizard1Controller extends AbstractWizardController {
     @FXML
     @ActionTrigger("help")
     private Hyperlink helpLink;
-}
-{{< / highlight >}}
+}```
 
 When looking at the [source code of the tutorial](https://bitbucket.org/datafx/datafx/src/7c6009a86ac83709855bd75e9f795b68747756f4/datafx-tutorial4/?at=default) you will see that the "help" action isn't triggered in all views. That is no problem for DataFX. A global action mustn't be called in each view and even a normal action mustn't be called in the defined controller. The API only defines that there is an action with the given id that could be called. For this last step a hyperlink tag is added to the FXML files. Here is a screenshot of the final wizard:
 

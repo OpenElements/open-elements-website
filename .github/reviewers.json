@@ -1,0 +1,35 @@
+{
+  "default_reviewers": [],
+  "path_reviewers": [
+    {
+      "glob": "/**",
+      "reviewers": [
+        "danielmarv",
+        "hendrikebbers",
+        "Jexsie",
+        "sebtiem",
+        "Ndacyayisenga-droid"
+      ]
+    },
+    {
+      "glob": ".github/**",
+      "reviewers": [
+        "danielmarv",
+        "hendrikebbers",
+        "Jexsie",
+        "sebtiem",
+        "Ndacyayisenga-droid"
+      ]
+    },
+    {
+      "glob": "docs/**",
+      "reviewers": [
+        "danielmarv",
+        "hendrikebbers",
+        "Jexsie",
+        "sebtiem",
+        "Ndacyayisenga-droid"
+      ]
+    }
+  ]
+}

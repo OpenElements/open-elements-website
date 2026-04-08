@@ -31,7 +31,7 @@ With [over 200 million downloads](https://dash.adoptium.net/), no other Java dis
 This is [underscored by a recent Gartner report](https://www.gartner.com/en/documents/4540799), which predicts that by 2026, over 80% of all Java applications will not run on an Oracle distribution.
 Eclipse Temurin will likely take the largest share of this market.
 
-{{< centered-image src="/posts/2023-08-03-distributions-and-support-without-oracle/distributions.jpg" width="100%" showCaption="false" alt="Distributions Java">}}
+![Distributions Java](/posts/2023-08-03-distributions-and-support-without-oracle/distributions.jpg)
 
 ## Java Support
 
@@ -50,7 +50,7 @@ Therefore, now might be the right time to look at alternative Java support offer
 Organizations like Azul and the Eclipse Adoptium working group have responded to these events.
 Mike Milinkovich, the Executive Director of the [Eclipse Foundation](https://www.eclipse.org/), commented on the situation on X / Twitter:
 
-{{< centered-image src="/posts/2023-08-03-distributions-and-support-without-oracle/tweet.jpg" width="100%" showCaption="true" alt="(Picture: Twitter / X)">}}
+![(Picture: Twitter / X)](/posts/2023-08-03-distributions-and-support-without-oracle/tweet.jpg)
 
 But beyond this comment, Adoptium has also taken action and set up a page for [commercial support for Eclipse Temurin](https://adoptium.net/temurin/commercial-support/).
 On this page, support for Eclipse Temurin is offered by three industry experts: Red Hat, IBM, and Open Elements.

@@ -1,0 +1,134 @@
+name: First Timer Issue Guidance
+
+on:
+  issues:
+    types: [assigned]
+
+permissions:
+  issues: write
+  pull-requests: read
+  contents: read
+
+jobs:
+  post-guidance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post guidance for first-time or first-issue assignees
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue = context.payload.issue;
+            const assignee = context.payload.assignee?.login;
+            if (!assignee || issue.pull_request) return;
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number: issue.number,
+              per_page: 100
+            });
+            if (comments.some(c => (c.body || '').includes('[bot-first-timer-guide]'))) return;
+
+            const issueLabels = (issue.labels || []).map(l => (l.name || '').toLowerCase());
+            const isFirstIssueLabel = issueLabels.includes('good first issue') || issueLabels.includes('first timers');
+
+            const prSearch = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${owner}/${repo} is:pr author:${assignee}`,
+              per_page: 1
+            });
+            const issueSearch = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${owner}/${repo} is:issue author:${assignee}`,
+              per_page: 1
+            });
+            const assignedIssueSearch = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${owner}/${repo} is:issue assignee:${assignee}`,
+              per_page: 2
+            });
+
+            let hasCommit = false;
+            try {
+              const commits = await github.rest.repos.listCommits({
+                owner,
+                repo,
+                author: assignee,
+                per_page: 1
+              });
+              hasCommit = (commits.data || []).length > 0;
+            } catch (e) {
+              hasCommit = false;
+            }
+
+            const noPriorPrs = (prSearch.data.total_count || 0) === 0;
+            const noPriorIssues = (issueSearch.data.total_count || 0) === 0;
+            const noPriorActivity = noPriorPrs && noPriorIssues && !hasCommit;
+            const firstAssignedIssue = (assignedIssueSearch.data.total_count || 0) <= 1;
+            const qualifies = noPriorActivity || (isFirstIssueLabel && firstAssignedIssue);
+            if (!qualifies) return;
+
+            async function readRepoFile(path) {
+              try {
+                const res = await github.rest.repos.getContent({ owner, repo, path });
+                if (!('content' in res.data)) return null;
+                return Buffer.from(res.data.content, 'base64').toString('utf8');
+              } catch (e) {
+                return null;
+              }
+            }
+
+            function detectScripts(packageJsonContent) {
+              if (!packageJsonContent) return {};
+              try {
+                const pkg = JSON.parse(packageJsonContent);
+                return pkg.scripts || {};
+              } catch {
+                return {};
+              }
+            }
+
+            function pickScript(scripts, choices) {
+              for (const name of choices) {
+                if (scripts[name]) return `npm run ${name}`;
+              }
+              return null;
+            }
+
+            function buildDefaultGuide(issueNumber, scripts) {
+              const runCmd = pickScript(scripts, ['dev', 'start', 'serve']) || 'npm run dev';
+              const lintCmd = pickScript(scripts, ['lint']) || 'npm run lint';
+              const testCmd = pickScript(scripts, ['test', 'test:unit']) || 'npm test';
+              return [
+                '### First-time contributor guide',
+                '',
+                '- Setup: clone the repo, install dependencies with `npm install`.',
+                `- Run locally: \`${runCmd}\``,
+                `- Lint: \`${lintCmd}\``,
+                `- Test: \`${testCmd}\``,
+                '- Branch naming: use a focused branch such as `fix/issue-' + issueNumber + '-short-summary`.',
+                '- Commit messages: short imperative style, e.g. `fix(auth): handle token refresh`.',
+                '- Open a draft PR early so maintainers can provide guidance before final polish.',
+                '- Link your PR with `fixes #' + issueNumber + '` (or `closes`/`resolves`).',
+                '- Comment `/working` periodically while actively working on this issue.',
+                '- If blocked or unavailable, comment `/unassign` so others can pick it up.',
+                '',
+                '[bot-first-timer-guide]'
+              ].join('\n');
+            }
+
+            const [guideFromRepo, packageJsonContent] = await Promise.all([
+              readRepoFile('.github/FIRST_TIMER_GUIDE.md'),
+              readRepoFile('package.json')
+            ]);
+            const scripts = detectScripts(packageJsonContent);
+            const body = guideFromRepo
+              ? `${guideFromRepo.trim()}\n\n[bot-first-timer-guide]`
+              : buildDefaultGuide(issue.number, scripts);
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body
+            });
+

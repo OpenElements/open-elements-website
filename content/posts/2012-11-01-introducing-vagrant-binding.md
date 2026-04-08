@@ -18,8 +18,7 @@ The simplest way to start building your virtual machines in Java is the Builder-
 
 Here is a short example that creates an Ubuntu 32bit vm:
 
-{{< highlight java >}}
-VagrantVmConfig vmConfig = VagrantVmConfigBuilder
+```javaVagrantVmConfig vmConfig = VagrantVmConfigBuilder
 .create()
 .withLucid32Box()
 .withName("myVM")
@@ -35,44 +34,36 @@ Vagrant vagrant = new Vagrant(true);
 VagrantEnvironment environment = vagrant
 .createEnvironment(new File("my/locale/path"), environmentConfig);
 
-environment.up();
-{{< / highlight >}}
+environment.up();```
 
 You can configure your vm by using a static ip and some port forwarding for example:
 
-{{< highlight java >}}
-VagrantPortForwarding portForwarding = new VagrantPortForwarding("custom", 7777, 1399);
+```javaVagrantPortForwarding portForwarding = new VagrantPortForwarding("custom", 7777, 1399);
 
 VagrantVmConfig vmConfig = VagrantVmConfigBuilder
 .create()
 .withLucid32Box()
 .withName("myVM").
 .withHostOnlyIp("192.168.50.4")
-.withVagrantPortForwarding(portForwarding).build();
-{{< / highlight >}}
+.withVagrantPortForwarding(portForwarding).build();```
 
 The code creates a VmConfig with some special features. This VmConfig is put into a VagrantEnvironment. One Environment can capsulate as many virtual machines as you want. You can start the whole environment by calling `environment.up()`. This creates and starts up every virtual machine that is defined in the environment within a fe minutes. If you want you can access every machine and start or stop it manually:
 
-{{< highlight java >}}
-for(VagrantVm vm : environment.getAllVms()) {
+```javafor(VagrantVm vm : environment.getAllVms()) {
   vm.destroy();
-}
-{{< / highlight >}}
+}```
 
 Each vm has a lifecycle. You can change the state of the lifecycle easily:
 
-{{< highlight java >}}
-vm.start();
+```javavm.start();
 vm.suspend();
 vm.resume();
 vm.halt();
-vm.destroy();
-{{< / highlight >}}
+vm.destroy();```
 
 To configure the software, which will be installed on the virtual machine you need a Puppet configuration script. [Puppet](http://puppetlabs.com) is a tool that automates the installation and administration of software. Each virtual machine that is created by Vagrant runs Puppet by default. So you only need a configuration script. Here is a simple example that edits the welcome message of a virtual machine:
 
-{{< highlight java >}}
-group { "puppet":
+```javagroup { "puppet":
 ensure => "present",
 }
 
@@ -81,13 +72,11 @@ File { owner => 0, group => 0, mode => 0644 }
 file { '/etc/motd':
 content => "Welcome to your Vagrant-built virtual machine!
 Managed by Puppet.\n"
-}
-{{< / highlight >}}
+}```
 
 You can easily use your puppet scripts with Vagrant-Binding:
 
-{{< highlight java >}}
-PuppetProvisionerConfig puppetConfig = PuppetProvisionerConfigBuilder
+```javaPuppetProvisionerConfig puppetConfig = PuppetProvisionerConfigBuilder
 .create()
 .withManifestPath("path/to/puppetscript")
 .withManifestFile("config.pp")
@@ -97,22 +86,18 @@ VagrantVmConfig vmConfig = VagrantVmConfigBuilder
 .create()
 .withLucid32Box()
 .withPuppetProvisionerConfig(puppetConfig)
-.build();
-{{< / highlight >}}
+.build();```
 
 After starting your virtual machine you can use SHH to connect on the machine. "Vagrant-Binding" provides a class for file upload and process execution over ssh. You can start your jobs on the virtual machine by simple using a code like this:
 
-{{< highlight java >}}
-VagrantSSHConnection connection = vm.createConnection();
-connection.execute("touch /path/to/any/file", true);
-{{< / highlight >}}
+```javaVagrantSSHConnection connection = vm.createConnection();
+connection.execute("touch /path/to/any/file", true);```
 
 ## Using Vagrant-Binding for real sandbox testing
 
 Vagrant-Binding offers a special [@Rule for JUnit](http://www.junit.org/node/580). By using this Rule you can capsule each of your tests with a fully vm lifecycle. Let us assume we have the following Unit Test:
 
-{{< highlight java >}}
-@Test
+```java@Test
 public void testJdbc() {
   System.out.println("Test starts");
   try {
@@ -140,21 +125,17 @@ public void testJdbc() {
     e.printStackTrace();
     Assert.fail();
   }
-}
-{{< / highlight >}}
+}```
 
 The test creates the table "mytable", adds 100 rows into it and checks the rowcount. To run this test successfully you need a machine with the hard ip "192.168.50.4" and a MySQL Server. You need a database "testapp" on the server too. On this database there must not be a table called "mytable". So you can only run this Unit Test one time because it doesn't drop the table "mytable" at the end. You can expand the test and drop the table at the end but what will happen in case of an error? Every time the test starts automatically you do not know the state of the server, database and table. Another problem is that you can't run the test parallel.
 
 With Vagrant-Binding you can create your database server as a vm on the fly. All you need to do is adding a `VagrantTestRule` to your test class:
 
-{{< highlight java >}}
-public VagrantTestRule testRule = new VagrantTestRule(createConfig());
-{{< / highlight >}}
+```javapublic VagrantTestRule testRule = new VagrantTestRule(createConfig());```
 
 The Rule needs a configuration that is easily created:
 
-{{< highlight java >}}
-public static VagrantConfiguration createConfig() {
+```javapublic static VagrantConfiguration createConfig() {
   PuppetProvisionerConfig puppetConfig = PuppetProvisionerConfigBuilder
   .create()
   .withManifestPath("/path/to/manifests")
@@ -188,8 +169,7 @@ public static VagrantConfiguration createConfig() {
   .build();
   
   return configuration;
-}
-{{< / highlight >}}
+}```
 
 The "VagrantTestRule" syncs every single test with the livecycle of the Vagrant environment. Each vm that is defined in the environments starts before the UnitTests runs and stops after the test:
 
