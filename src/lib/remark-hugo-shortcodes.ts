@@ -55,31 +55,34 @@ class ShortcodeRegistry {
    */
   private registerDefaultHandlers(): void {
     // Centered image shortcode
-    this.register('centered-image', (attrs) => {
+    this.register('centered-image', attrs => {
       const src = attrs.src || '';
       const alt = this.escapeHtml(attrs.alt || '');
       const width = attrs.width || '100%';
       const showCaption = attrs.showCaption === 'true';
-      
+
       const imageHtml = `<img src="${src}" alt="${alt}" style="display: block; max-width: ${width}; height: auto; margin-left: auto; margin-right: auto; border-radius: 0.75rem;" />`;
-      const captionHtml = showCaption && alt ? `<p style="text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">${alt}</p>` : '';
-      
+      const captionHtml =
+        showCaption && alt
+          ? `<p style="text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">${alt}</p>`
+          : '';
+
       return `<div style="text-align: center; margin: 2rem 0;">${imageHtml}${captionHtml}</div>`;
     });
 
     // Relative reference shortcode
-    this.register('relref', (attrs) => {
+    this.register('relref', attrs => {
       // Extract path from first attribute or 'path' key
       const path = attrs._content || attrs.path || '';
       return `/${path.replace(/^\/+/, '')}`;
     });
 
-    this.register('ref', (attrs) => {
+    this.register('ref', attrs => {
       const path = attrs._content || attrs.path || '';
       return `/${path.replace(/^\/+/, '')}`;
     });
 
-    this.register('youtube', (attrs) => {
+    this.register('youtube', attrs => {
       const videoId = this.escapeHtml(attrs._content || attrs.id || '');
 
       if (!videoId) {
@@ -107,7 +110,7 @@ class ShortcodeRegistry {
       '"': '&quot;',
       "'": '&#39;',
     };
-    return text.replace(/[&<>"']/g, (char) => escapeMap[char] || char);
+    return text.replace(/[&<>"']/g, char => escapeMap[char] || char);
   }
 }
 
@@ -127,7 +130,10 @@ function replaceShortcodes(text: string, registry: ShortcodeRegistry): string {
 
     if (handler) {
       const replacement = handler(shortcode.attributes);
-      result = result.slice(0, shortcode.startIndex) + replacement + result.slice(shortcode.endIndex);
+      result =
+        result.slice(0, shortcode.startIndex) +
+        replacement +
+        result.slice(shortcode.endIndex);
     }
   }
 
@@ -142,8 +148,10 @@ export function transformHugoShortcodes(text: string): string {
  * Parser for Hugo shortcodes
  */
 class ShortcodeParser {
-  private static readonly SHORTCODE_PATTERN = /\{\{<\s*([a-z-]+)\s+([^>]*?)\s*>\}\}/g;
-  private static readonly ATTRIBUTE_PATTERN = /(\w+)=(?:"([^"]*)"|([^\s"]+))|"([^"]*)"|([^\s"]+)/g;
+  private static readonly SHORTCODE_PATTERN =
+    /\{\{<\s*([a-z-]+)\s+([^>]*?)\s*>\}\}/g;
+  private static readonly ATTRIBUTE_PATTERN =
+    /(\w+)=(?:"([^"]*)"|([^\s"]+))|"([^"]*)"|([^\s"]+)/g;
 
   /**
    * Parse all shortcodes in a text string
@@ -213,21 +221,25 @@ export const remarkHugoShortcodes: Plugin<[], Root> = () => {
   const registry = new ShortcodeRegistry();
 
   return (tree: Root) => {
-    visit(tree, 'text', (node: Text, index: number | undefined, parent: Parent | undefined) => {
-      if (!node.value || typeof index !== 'number' || !parent) {
-        return;
-      }
+    visit(
+      tree,
+      'text',
+      (node: Text, index: number | undefined, parent: Parent | undefined) => {
+        if (!node.value || typeof index !== 'number' || !parent) {
+          return;
+        }
 
-      const result = replaceShortcodes(node.value, registry);
+        const result = replaceShortcodes(node.value, registry);
 
-      // Replace text node with HTML node if changes were made
-      if (result !== node.value) {
-        const htmlNode: Html = {
-          type: 'html',
-          value: result,
-        };
-        parent.children[index] = htmlNode;
-      }
-    });
+        // Replace text node with HTML node if changes were made
+        if (result !== node.value) {
+          const htmlNode: Html = {
+            type: 'html',
+            value: result,
+          };
+          parent.children[index] = htmlNode;
+        }
+      },
+    );
   };
 };

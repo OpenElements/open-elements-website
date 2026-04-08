@@ -13,22 +13,25 @@ interface BlogPageProps {
   }>;
 }
 
-export default async function BlogPage({ params, searchParams }: BlogPageProps) {
+export default async function BlogPage({
+  params,
+  searchParams,
+}: BlogPageProps) {
   const { locale } = await params;
   const { page } = await searchParams;
-  
+
   const currentPage = parseInt(page || '1', 10);
   const postsPerPage = 7;
-  
+
   // Fetch all posts for the current locale
   const allPosts = getAllPosts(locale);
   const totalPages = Math.ceil(allPosts.length / postsPerPage);
-  
+
   // Paginate posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = allPosts.slice(indexOfFirstPost, indexOfLastPost);
-  
+
   // Transform posts to match BlogCard expected format
   const formattedPosts = currentPosts.map((post, index) => ({
     id: index.toString(),
@@ -37,7 +40,9 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
     date: new Date(post.frontmatter.date).toISOString().split('T')[0],
     author: post.frontmatter.author || 'Open Elements',
     categories: post.frontmatter.categories || [],
-    preview_image: post.frontmatter.preview_image || '/posts/preview-images/software-development-green.svg',
+    preview_image:
+      post.frontmatter.preview_image ||
+      '/posts/preview-images/software-development-green.svg',
     slug: post.slug,
   }));
 
@@ -81,15 +86,13 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
 
       {/* Blog posts */}
       {formattedPosts.length > 0 ? (
-        formattedPosts.map((post) => (
+        formattedPosts.map(post => (
           <BlogCard key={post.id} post={post} locale={locale} />
         ))
       ) : (
         <div className="container mx-auto px-4 py-16 text-center">
           <p className="text-lg text-gray-600">
-            {locale === 'de' 
-              ? 'Keine Artikel gefunden.' 
-              : 'No articles found.'}
+            {locale === 'de' ? 'Keine Artikel gefunden.' : 'No articles found.'}
           </p>
         </div>
       )}

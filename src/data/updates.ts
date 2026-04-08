@@ -20,13 +20,17 @@ export const updatesData: Update[] = [
         title: 'Refactored Documentation:',
         collapsible: true,
         items: [
-          { text: 'docs: added changelog conflict resolution examples to docs/common_issues.md' },
+          {
+            text: 'docs: added changelog conflict resolution examples to docs/common_issues.md',
+          },
           {
             text: 'docs: added "One Issue Per Pull Request" section to examples/sdk_developers/common_issues.md.',
           },
           { text: 'docs: update pyproject.toml maintainers list.' },
           { text: 'docs: added to README a social follow section' },
-          { text: 'docs: added changelog conflict resolution examples to docs/common_issues.md' },
+          {
+            text: 'docs: added changelog conflict resolution examples to docs/common_issues.md',
+          },
           {
             text: 'docs: added "One Issue Per Pull Request" section to examples/sdk_developers/common_issues.md.',
           },
@@ -72,16 +76,24 @@ export const updatesData: Update[] = [
           {
             text: 'Quis quam pellentesque at sed in sed orci. Purus varius non arcu cursus malesuada convallis nisl sem pulvinar.',
           },
-          { text: 'Nisl commodo quis blandit nibh. Odio mauris id eget quis tempor.' },
-          { text: 'Sed gravida morbi elit a sit. Nec non amet tortor purus neque amet libero.' },
+          {
+            text: 'Nisl commodo quis blandit nibh. Odio mauris id eget quis tempor.',
+          },
+          {
+            text: 'Sed gravida morbi elit a sit. Nec non amet tortor purus neque amet libero.',
+          },
           {
             text: 'Consequat consectetur cras neque mattis. In quam aliquam mattis ut risus risus dis proin lorem.',
           },
           {
             text: 'Quis quam pellentesque at sed in sed orci. Purus varius non arcu cursus malesuada convallis nisl sem pulvinar.',
           },
-          { text: 'Nisl commodo quis blandit nibh. Odio mauris id eget quis tempor.' },
-          { text: 'Sed gravida morbi elit a sit. Nec non amet tortor purus neque amet libero.' },
+          {
+            text: 'Nisl commodo quis blandit nibh. Odio mauris id eget quis tempor.',
+          },
+          {
+            text: 'Sed gravida morbi elit a sit. Nec non amet tortor purus neque amet libero.',
+          },
           {
             text: 'Consequat consectetur cras neque mattis. In quam aliquam mattis ut risus risus dis proin lorem.',
           },
@@ -107,7 +119,8 @@ export const updatesData: Update[] = [
     tags: ['Tortor', 'Tellus', 'Mattis', 'Luctus', 'Tellus'],
     contributors: Array(23).fill({
       name: 'Contributor',
-      avatar: 'https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg',
+      avatar:
+        'https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg',
       url: '#',
     }),
     contributorNote:
@@ -137,7 +150,8 @@ export const updatesData: Update[] = [
     assets: 2,
     contributors: Array(5).fill({
       name: 'Contributor',
-      avatar: 'https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg',
+      avatar:
+        'https://cdn.pixabay.com/photo/2025/04/02/18/48/background-9509852_1280.jpg',
       url: '#',
     }),
     contributorNote:

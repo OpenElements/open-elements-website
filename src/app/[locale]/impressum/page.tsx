@@ -1,17 +1,20 @@
-import Image from 'next/image'
-import type { Metadata } from 'next'
+import Image from 'next/image';
+import type { Metadata } from 'next';
 
 interface ImpressumPageProps {
   params: Promise<{
-    locale: string
-  }>
+    locale: string;
+  }>;
 }
 
-export async function generateMetadata({ params }: ImpressumPageProps): Promise<Metadata> {
-  const { locale } = await params
+export async function generateMetadata({
+  params,
+}: ImpressumPageProps): Promise<Metadata> {
+  const { locale } = await params;
 
-  const title = locale === 'de' ? 'Impressum - Open Elements' : 'Impressum - Open Elements'
-  const description = locale === 'de' ? 'Impressum' : 'Impressum'
+  const title =
+    locale === 'de' ? 'Impressum - Open Elements' : 'Impressum - Open Elements';
+  const description = locale === 'de' ? 'Impressum' : 'Impressum';
 
   return {
     title,
@@ -23,11 +26,11 @@ export async function generateMetadata({ params }: ImpressumPageProps): Promise<
       siteName: 'Open Elements',
       locale: locale === 'de' ? 'de_DE' : 'en_US',
     },
-  }
+  };
 }
 
 export default async function ImpressumPage({ params }: ImpressumPageProps) {
-  const { locale } = await params
+  const { locale } = await params;
 
   const contentHtml =
     locale === 'de'
@@ -59,7 +62,7 @@ export default async function ImpressumPage({ params }: ImpressumPageProps) {
   Sales tax identification number: DE 355815175<br /><br />
   Responsible for the content according to § 55 paragraph 2 RStV: Hendrik Ebbers, Gerhart-Hauptmann-Str. 49B, 51379 Leverkusen
 </p>
-`
+`;
 
   return (
     <div className="relative">
@@ -88,5 +91,5 @@ export default async function ImpressumPage({ params }: ImpressumPageProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

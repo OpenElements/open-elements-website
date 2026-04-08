@@ -20,9 +20,15 @@ interface TeamMember {
   visible?: boolean;
 }
 
-function getAuthorById(locale: string, authorId: string): TeamMember | undefined {
+function getAuthorById(
+  locale: string,
+  authorId: string,
+): TeamMember | undefined {
   const localizedTeam = locale === 'de' ? teamDataDe : teamDataEn;
-  return localizedTeam.find((member) => member.id === authorId) || teamDataEn.find((member) => member.id === authorId);
+  return (
+    localizedTeam.find(member => member.id === authorId) ||
+    teamDataEn.find(member => member.id === authorId)
+  );
 }
 
 interface PostPageProps {
@@ -42,7 +48,9 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const slugPath = slug.join('/');
   const post = await getPostBySlug(slugPath, locale);
@@ -54,7 +62,9 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   }
 
   const author = getAuthorById(locale, post.frontmatter.author);
-  const authorName = author ? `${author.firstName} ${author.lastName}` : post.frontmatter.author;
+  const authorName = author
+    ? `${author.firstName} ${author.lastName}`
+    : post.frontmatter.author;
 
   return {
     title: `${post.frontmatter.title} - Open Elements`,
@@ -102,11 +112,13 @@ export default async function PostPage({ params }: PostPageProps) {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
-    }
+    },
   );
 
   const author = getAuthorById(locale, post.frontmatter.author);
-  const authorName = author ? `${author.firstName} ${author.lastName}` : post.frontmatter.author;
+  const authorName = author
+    ? `${author.firstName} ${author.lastName}`
+    : post.frontmatter.author;
 
   return (
     <div className="">
@@ -132,17 +144,27 @@ export default async function PostPage({ params }: PostPageProps) {
               <div className="space-y-6 sm:space-y-5">
                 <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                   <div className="flex items-center gap-2 text-purple">
-                    <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <svg
+                      className="w-6 h-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor">
                       <path
                         fillRule="evenodd"
                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
                         clipRule="evenodd"
                       />
                     </svg>
-                    <time className="text-base font-medium">{formattedDate}</time>
+                    <time className="text-base font-medium">
+                      {formattedDate}
+                    </time>
                   </div>
                   <div className="flex items-center gap-2 text-purple hover:text-purple-700 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6">
                       <path
                         fillRule="evenodd"
                         d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
@@ -150,11 +172,15 @@ export default async function PostPage({ params }: PostPageProps) {
                       />
                     </svg>
                     {author?.link ? (
-                      <Link href={author.link} className="text-lg font-medium text-purple group-hover:text-purple-700 transition-colors">
+                      <Link
+                        href={author.link}
+                        className="text-lg font-medium text-purple group-hover:text-purple-700 transition-colors">
                         {authorName}
                       </Link>
                     ) : (
-                      <span className="text-base font-medium">{authorName}</span>
+                      <span className="text-base font-medium">
+                        {authorName}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -201,7 +227,9 @@ export default async function PostPage({ params }: PostPageProps) {
                   <div>
                     <h4 className="mb-2 text-lg font-bold">
                       {author.link ? (
-                        <Link href={author.link} className="hover:text-purple transition-colors">
+                        <Link
+                          href={author.link}
+                          className="hover:text-purple transition-colors">
                           {authorName}
                         </Link>
                       ) : (

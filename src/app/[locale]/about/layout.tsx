@@ -1,14 +1,22 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About us - Open Elements',
-  description: 'An overview of the engagement of Open Elements and its partners and customers.',
-  keywords: ['Open Source', 'Java', 'OSS', 'Open Source Support', 'Java Support'],
+  description:
+    'An overview of the engagement of Open Elements and its partners and customers.',
+  keywords: [
+    'Open Source',
+    'Java',
+    'OSS',
+    'Open Source Support',
+    'Java Support',
+  ],
   openGraph: {
     type: 'website',
     url: 'https://open-elements.com/about',
     title: 'About us - Open Elements',
-    description: 'An overview of the engagement of Open Elements and its partners and customers.',
+    description:
+      'An overview of the engagement of Open Elements and its partners and customers.',
     siteName: 'Open Elements',
     images: [
       {
@@ -20,12 +28,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
   },
-}
+};
 
 export default function AboutLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return <>{children}</>
+  return <>{children}</>;
 }

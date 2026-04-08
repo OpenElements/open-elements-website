@@ -27,7 +27,10 @@ function localePrefix(locale: string): string {
   return locale === 'de' ? '/de' : '';
 }
 
-function maybeRedirectLegacyPath(locale: string, requestPath: string): string | null {
+function maybeRedirectLegacyPath(
+  locale: string,
+  requestPath: string,
+): string | null {
   const normalizedPath = requestPath.replace(/^\/+|\/+$/g, '');
   const prefix = localePrefix(locale);
 
@@ -39,7 +42,11 @@ function maybeRedirectLegacyPath(locale: string, requestPath: string): string | 
     return `${prefix}/about`;
   }
 
-  if (REDIRECTS_TO_POSTS.has(normalizedPath) || normalizedPath.startsWith('categories/') || normalizedPath.startsWith('tags/')) {
+  if (
+    REDIRECTS_TO_POSTS.has(normalizedPath) ||
+    normalizedPath.startsWith('categories/') ||
+    normalizedPath.startsWith('tags/')
+  ) {
     return `${prefix}/posts`;
   }
 
@@ -62,7 +69,14 @@ function findMarkdownFile(locale: string, requestPath: string): string | null {
   return null;
 }
 
-async function loadPageData(locale: string, requestPath: string): Promise<{ title: string; description?: string; contentHtml: string } | null> {
+async function loadPageData(
+  locale: string,
+  requestPath: string,
+): Promise<{
+  title: string;
+  description?: string;
+  contentHtml: string;
+} | null> {
   const markdownFile = findMarkdownFile(locale, requestPath);
 
   if (!markdownFile) {
@@ -72,16 +86,22 @@ async function loadPageData(locale: string, requestPath: string): Promise<{ titl
   const fileContents = fs.readFileSync(markdownFile, 'utf8');
   const { data, content } = matter(fileContents);
   const transformedContent = transformHugoShortcodes(content);
-  const processedContent = await remark().use(remarkGfm).use(html, { sanitize: false }).process(transformedContent);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
+    .process(transformedContent);
 
   return {
     title: typeof data.title === 'string' ? data.title : 'Open Elements',
-    description: typeof data.description === 'string' ? data.description : undefined,
+    description:
+      typeof data.description === 'string' ? data.description : undefined,
     contentHtml: processedContent.toString(),
   };
 }
 
-export async function generateMetadata({ params }: CatchAllPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: CatchAllPageProps): Promise<Metadata> {
   const { locale, rest } = await params;
   const requestPath = rest.join('/');
 
@@ -105,7 +125,9 @@ export async function generateMetadata({ params }: CatchAllPageProps): Promise<M
   };
 }
 
-export default async function LocaleCatchAllPage({ params }: CatchAllPageProps) {
+export default async function LocaleCatchAllPage({
+  params,
+}: CatchAllPageProps) {
   const { locale, rest } = await params;
   const requestPath = rest.join('/');
 

@@ -1,47 +1,49 @@
-import Image from 'next/image'
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
-import teamDataEn from '@/data/en/team.json'
-import teamDataDe from '@/data/de/team.json'
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import teamDataEn from '@/data/en/team.json';
+import teamDataDe from '@/data/de/team.json';
 
 interface TeamMember {
-  id: string
-  firstName: string
-  lastName: string
-  bio: string
-  picture: string
-  role: string
-  socials?: Array<{ name: string; link: string; icon: string }>
+  id: string;
+  firstName: string;
+  lastName: string;
+  bio: string;
+  picture: string;
+  role: string;
+  socials?: Array<{ name: string; link: string; icon: string }>;
 }
 
 function getMember(locale: string, slug: string): TeamMember | undefined {
-  const teamData = locale === 'de' ? teamDataDe : teamDataEn
-  return teamData.find((member) => member.id === slug)
+  const teamData = locale === 'de' ? teamDataDe : teamDataEn;
+  return teamData.find(member => member.id === slug);
 }
 
 export async function generateStaticParams() {
-  const slugs = Array.from(new Set([...teamDataEn, ...teamDataDe].map((member) => member.id)))
+  const slugs = Array.from(
+    new Set([...teamDataEn, ...teamDataDe].map(member => member.id)),
+  );
 
-  return ['en', 'de'].flatMap((locale) =>
-    slugs.map((slug) => ({
+  return ['en', 'de'].flatMap(locale =>
+    slugs.map(slug => ({
       locale,
       slug,
-    }))
-  )
+    })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { locale, slug } = await params
-  const member = getMember(locale, slug) ?? getMember('en', slug)
+  const { locale, slug } = await params;
+  const member = getMember(locale, slug) ?? getMember('en', slug);
 
   if (!member) {
     return {
       title: 'Employee Not Found - Open Elements',
-    }
+    };
   }
 
   return {
@@ -59,19 +61,19 @@ export async function generateMetadata({
         },
       ],
     },
-  }
+  };
 }
 
 export default async function EmployeePage({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = await params
-  const member = getMember(locale, slug) ?? getMember('en', slug)
+  const { locale, slug } = await params;
+  const member = getMember(locale, slug) ?? getMember('en', slug);
 
   if (!member) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -127,16 +129,17 @@ export default async function EmployeePage({
             <div className="text-base text-blue leading-7">{member.bio}</div>
             {member.socials && member.socials.length > 0 ? (
               <div className="flex items-center lg:justify-start justify-center gap-2 mt-6">
-                {member.socials.map((social) => (
+                {member.socials.map(social => (
                   <a
                     key={social.name}
                     href={social.link}
                     aria-label={social.name}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center transition-colors duration-150 ease-in-out rounded-full focus:outline-none size-9 shrink-0 bg-blue/90 hover:bg-purple-700"
-                  >
-                    <span className="iconify text-xl text-white fill-current" data-icon={social.icon}></span>
+                    className="flex items-center justify-center transition-colors duration-150 ease-in-out rounded-full focus:outline-none size-9 shrink-0 bg-blue/90 hover:bg-purple-700">
+                    <span
+                      className="iconify text-xl text-white fill-current"
+                      data-icon={social.icon}></span>
                   </a>
                 ))}
               </div>
@@ -145,5 +148,5 @@ export default async function EmployeePage({
         </div>
       </div>
     </div>
-  )
+  );
 }

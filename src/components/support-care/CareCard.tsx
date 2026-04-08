@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface CareCard {
-  title: string
-  text: string
-  logo: string
-  link?: string
+  title: string;
+  text: string;
+  logo: string;
+  link?: string;
 }
 
 interface CareCardProps {
-  card: CareCard
+  card: CareCard;
 }
 
 export default function CareCard({ card }: CareCardProps) {
@@ -19,18 +19,18 @@ export default function CareCard({ card }: CareCardProps) {
         <div className="flex items-center justify-center w-40 mx-auto h-52">
           {card.link ? (
             <Link href={card.link} target="_blank" rel="noopener noreferrer">
-              <Image 
-                className="w-full" 
-                src={card.logo} 
+              <Image
+                className="w-full"
+                src={card.logo}
                 alt={`${card.title} logo`}
                 width={160}
                 height={208}
               />
             </Link>
           ) : (
-            <Image 
-              className="w-full" 
-              src={card.logo} 
+            <Image
+              className="w-full"
+              src={card.logo}
               alt={`${card.title} logo`}
               width={160}
               height={208}
@@ -38,13 +38,15 @@ export default function CareCard({ card }: CareCardProps) {
           )}
         </div>
         <div className="mt-2 space-y-6">
-          <h2 className="pr-2 text-lg font-bold text-center text-blue">{card.title}</h2>
-          <div 
+          <h2 className="pr-2 text-lg font-bold text-center text-blue">
+            {card.title}
+          </h2>
+          <div
             className="text-sm leading-6 text-blue"
             dangerouslySetInnerHTML={{ __html: card.text }}
           />
         </div>
       </div>
     </div>
-  )
+  );
 }

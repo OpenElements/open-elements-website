@@ -39,7 +39,9 @@ function parseMarkdownSections(content: string): {
       }
 
       const title = line.substring(3).trim();
-      isOverview = title.toLowerCase() === 'overview' || title.toLowerCase() === 'überblick';
+      isOverview =
+        title.toLowerCase() === 'overview' ||
+        title.toLowerCase() === 'überblick';
 
       if (!isOverview) {
         // Start new section
@@ -57,8 +59,8 @@ function parseMarkdownSections(content: string): {
       const comment = line.trim().slice(4, -3).trim();
       if (currentSection) {
         // Parse metadata from comment
-        const parts = comment.split(',').map((p) => p.trim());
-        parts.forEach((part) => {
+        const parts = comment.split(',').map(p => p.trim());
+        parts.forEach(part => {
           if (!currentSection) return;
           if (part === 'collapsible') {
             currentSection.metadata.collapsible = true;
@@ -87,12 +89,12 @@ function parseMarkdownSections(content: string): {
   }
 
   // Convert raw sections to UpdateSection format
-  const sections: UpdateSection[] = rawSections.map((rawSection) => {
+  const sections: UpdateSection[] = rawSections.map(rawSection => {
     // Parse list items from content
     const items = rawSection.content
       .split('\n')
-      .filter((line) => line.trim().startsWith('-'))
-      .map((line) => ({
+      .filter(line => line.trim().startsWith('-'))
+      .map(line => ({
         text: line.trim().substring(1).trim(),
       }));
 
@@ -128,7 +130,7 @@ export function getUpdateFiles(locale: string): string[] {
 
   const files = fs.readdirSync(updatesDirectory);
   return files
-    .filter((file) => file.endsWith(`.${locale}.md`))
+    .filter(file => file.endsWith(`.${locale}.md`))
     .sort()
     .reverse(); // Most recent first
 }
@@ -136,7 +138,10 @@ export function getUpdateFiles(locale: string): string[] {
 /**
  * Parse a single update file
  */
-export function parseUpdateFile(filename: string, locale: string): Update | null {
+export function parseUpdateFile(
+  filename: string,
+  locale: string,
+): Update | null {
   const fullPath = path.join(updatesDirectory, filename);
 
   if (!fs.existsSync(fullPath)) {
@@ -199,7 +204,10 @@ export function getAllUpdates(locale: string): Update[] {
 /**
  * Get a single update by version
  */
-export function getUpdateByVersion(version: string, locale: string): Update | null {
+export function getUpdateByVersion(
+  version: string,
+  locale: string,
+): Update | null {
   const filename = `${version}.${locale}.md`;
   return parseUpdateFile(filename, locale);
 }

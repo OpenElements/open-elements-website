@@ -1,26 +1,29 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import Image from 'next/image'
-import NewsletterForm from '@/components/newsletter/NewsletterForm'
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import NewsletterForm from '@/components/newsletter/NewsletterForm';
 
 interface NewsletterPageProps {
   params: Promise<{
-    locale: string
-  }>
+    locale: string;
+  }>;
 }
 
-export async function generateMetadata({ params }: NewsletterPageProps): Promise<Metadata> {
-  const { locale } = await params
+export async function generateMetadata({
+  params,
+}: NewsletterPageProps): Promise<Metadata> {
+  const { locale } = await params;
 
   if (locale !== 'de') {
     return {
       title: 'Page Not Available - Open Elements',
       description: 'This page is not available in this language',
-    }
+    };
   }
 
-  const title = 'Newsletter - Open Elements'
-  const description = 'Melde dich zu unserem Newsletter an, um auf dem Laufenden zu bleiben.'
+  const title = 'Newsletter - Open Elements';
+  const description =
+    'Melde dich zu unserem Newsletter an, um auf dem Laufenden zu bleiben.';
 
   return {
     title,
@@ -41,14 +44,14 @@ export async function generateMetadata({ params }: NewsletterPageProps): Promise
       ],
       locale: 'de_DE',
     },
-  }
+  };
 }
 
 export default async function NewsletterPage({ params }: NewsletterPageProps) {
-  const { locale } = await params
+  const { locale } = await params;
 
   if (locale !== 'de') {
-    notFound()
+    notFound();
   }
 
   return (
@@ -85,12 +88,13 @@ export default async function NewsletterPage({ params }: NewsletterPageProps) {
         <div className="container mt-12 xl:max-w-1xl">
           <div className="flex flex-col items-center justify-center gap-8">
             <p className="text-center text-blue max-w-xl text-lg">
-              Bleib auf dem Laufenden über Open Source, Java und die neuesten Nachrichten von Open Elements.
+              Bleib auf dem Laufenden über Open Source, Java und die neuesten
+              Nachrichten von Open Elements.
             </p>
             <NewsletterForm />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

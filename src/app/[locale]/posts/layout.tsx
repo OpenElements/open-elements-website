@@ -1,18 +1,22 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
 interface LayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
-  
+
   const titles = {
     en: 'Articles - Open Elements',
     de: 'Artikel - Open Elements',
   };
-  
+
   const descriptions = {
     en: 'Read our latest articles about Open Source, Java, and software development.',
     de: 'Lesen Sie unsere neuesten Artikel über Open Source, Java und Softwareentwicklung.',
@@ -20,13 +24,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     title: titles[locale as keyof typeof titles] || titles.en,
-    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    keywords: ['Open Source', 'Java', 'Blog', 'Articles', 'Software Development'],
+    description:
+      descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    keywords: [
+      'Open Source',
+      'Java',
+      'Blog',
+      'Articles',
+      'Software Development',
+    ],
     openGraph: {
       type: 'website',
-      url: locale === 'de' ? 'https://open-elements.com/de/posts' : 'https://open-elements.com/posts',
+      url:
+        locale === 'de'
+          ? 'https://open-elements.com/de/posts'
+          : 'https://open-elements.com/posts',
       title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      description:
+        descriptions[locale as keyof typeof descriptions] || descriptions.en,
       siteName: 'Open Elements',
       images: [
         {
@@ -41,8 +56,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function BlogLayout({
-  children,
-}: LayoutProps) {
-  return <>{children}</>
+export default async function BlogLayout({ children }: LayoutProps) {
+  return <>{children}</>;
 }
