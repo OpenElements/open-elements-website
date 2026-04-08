@@ -266,6 +266,146 @@
         "bulletpoint7": "10% Trainingsrabatt",
         "bulletpoint8": "Individueller monatlicher Call mit Expert:innen<sup>4,5</sup>"
       }
+    },
+    "landingpage": {
+      "logoAlt": "Support & Care Logo",
+      "heroParagraph": "Professionelle Wartung, Sicherheitsupdates und Long Term Support für die geschäftskritischsten Open-Source-Komponenten im Java-Ökosystem — direkt von den Maintainern.",
+      "heroBody": "Moderne Software besteht zu über 70 % aus Open-Source-Komponenten. Ab 2027 macht der Cyber Resilience Act (CRA) Hersteller für 100 % ihrer Software verantwortlich — einschließlich aller OSS-Abhängigkeiten. Support & Care sichert die Basis Ihrer Java-Anwendungen: von der Laufzeitumgebung über Build-Tools bis zur Teststrategie.",
+      "heroContact": "Kontakt aufnehmen",
+      "heroDiscover": "Leistungen entdecken",
+      "problemTitle": "Das Problem: Unsichtbare Abhängigkeiten",
+      "problemP1": "Ein einfaches Java-Projekt mit Spring Boot bringt über 70 transitive Abhängigkeiten mit — die meisten davon Open Source. Ihr individueller Code ist nur die Spitze des Eisbergs. Darunter liegen Laufzeitumgebungen, Build-Tools, Logging-Frameworks, Test-Bibliotheken und Utility-Libraries, die den eigentlichen Betrieb Ihrer Anwendung tragen.",
+      "problemHighlight": "70 % von Software basiert auf Open Source und liegt somit außerhalb Ihrer direkten Kontrolle.",
+      "problemP2": "Diese Basiskomponenten werden häufig von einzelnen Entwicklern in ihrer Freizeit gepflegt. Gleichzeitig tragen sie den Großteil der technischen Risiken: Sicherheitslücken, transitive Abhängigkeiten, fehlende Dokumentation und Compliance-Verantwortung.",
+      "problemBulletTitle": "Was das für Sie bedeutet:",
+      "problemBullet1": "Schwachstellen in Basiskomponenten bleiben oft unbemerkt, bis es zu spät ist",
+      "problemBullet2Link": "Log4Shell",
+      "problemBullet2": "Framework-Support allein schützt nicht vor Lücken in der Basis — das hat Log4Shell eindeutig gezeigt",
+      "problemBullet3": "Der CRA macht Sie ab 2027 für die gesamte Software-Lieferkette haftbar",
+      "componentsTitle": "Die betreuten Komponenten",
+      "componentsIntro": "Support & Care betreut gezielt fünf geschäftskritischste Open-Source-Basiskomponenten des Java-Ökosystems. Gemeinsam bilden sie die technische Vertrauenskette für fast jede Java-Anwendung.",
+      "temurin": {
+        "name": "Eclipse Temurin — Java-Runtime",
+        "desc": "Führende herstellerunabhängige OpenJDK-Distribution weltweit<br/>Über 500.000 Downloads pro Tag<br/>TCK-zertifiziert, AQAvit-verifiziert, Community-getragen"
+      },
+      "maven": {
+        "name": "Apache Maven — Build & Dependency Management",
+        "desc": "Über 75 % aller Java-Projekte setzen auf Maven<br/>Ca. 2 Milliarden Downloads jährlich"
+      },
+      "junit": {
+        "name": "JUnit — Testframework",
+        "desc": "Über 1 Milliarde Downloads pro Monat<br/>Ca. 85 % Marktanteil im Java-Ökosystem"
+      },
+      "log4j": {
+        "name": "Apache Log4j — Logging",
+        "desc": "Ca. 76 % aller Java-Anwendungen nutzen Log4j<br/>Geschäftskritisch für Protokollierung, Monitoring und Fehleranalyse"
+      },
+      "commons": {
+        "name": "Apache Commons — Standard-Libraries",
+        "desc": "Ca. 49 % der Java-Entwickler setzen Apache Commons aktiv ein<br/>Modulare Sammlung: Lang, IO, Collections und weitere"
+      },
+      "componentsHighlight": "Kurz gesagt: Die essentielle Basis der technischen Vertrauenskette Ihrer Java-Anwendungen.",
+      "layersTitle": "Wo Support & Care ansetzt",
+      "layersIntro": "Java-Anwendungen lassen sich in drei Schichten gliedern:",
+      "pyramidAlt": "Die 3 Schichten einer Java-Anwendung",
+      "layer1": "Anwendungsspezifischer Code",
+      "layer1Desc": "Ihr individueller Geschäfts- und Fachlogik-Code. Diese Ebene ist höchst wertvoll, aber relativ klein im Umfang — sie baut auf Frameworks und Basistechnologien auf.",
+      "layer2": "Frameworks & Anwendungsplattformen",
+      "layer2Desc": "Spring Boot, Quarkus, Jakarta EE und andere. Für diese Ebene gibt es vielfach kommerziellen Support der jeweiligen Anbieter.",
+      "layer3": "Basiskomponenten — Hier setzt Support & Care an.",
+      "layer3Desc": "Laufzeitumgebung, Build- und Dependency-Management, Standardbibliotheken, Logging- und Test-Frameworks. Diese Komponenten kommen in praktisch jedem Java-Projekt vor — doch professionellen Support gibt es dafür bisher kaum.",
+      "layersHighlight": "Framework-Support allein reicht nicht. Die Log4Shell-Schwachstelle hat gezeigt: Eine kritische Sicherheitslücke in einer Basiskomponente kann Millionen von Anwendungen treffen — trotz aktueller Framework-Updates. Support & Care schließt genau diese Lücke.",
+      "servicesTitle": "Unsere Leistungen",
+      "servicesIntro": "Alle Leistungen werden direkt von den Maintainern und Committern der betreuten Projekte erbracht — nicht von einem nachgelagerten Support-Team.",
+      "lts": {
+        "name": "Long Term Support (LTS)",
+        "desc": "Weiterführung für die wichtigsten Versionen zur besseren Planung und Organisation Ihrer Updates. Sie müssen keine unsicheren oder nicht gewarteten Versionen einsetzen."
+      },
+      "security": {
+        "name": "Sicherheitsupdates & Bugfixes",
+        "desc": "Frühzeitige Informationen und Benachrichtigungen zu Schwachstellen und Patches. Schnelle Reaktionszeiten durch direkten Zugang zu den Entwicklern."
+      },
+      "documentation": {
+        "name": "Dokumentation & Transparenz",
+        "desc": "Unterstützung bei SBOM-Strategien und technischer Dokumentation — auf Deutsch oder Englisch. Transparente Nachvollziehbarkeit aller Änderungen."
+      },
+      "workshops": {
+        "name": "Workshops & Beratung",
+        "desc": "Direkter Austausch mit den Maintainern und Committern der Projekte — auf Deutsch oder Englisch. Individuelle Beratung zu Migration, Best Practices und Architekturentscheidungen."
+      },
+      "webinars": {
+        "name": "Regelmäßige Webinare & Statusupdates",
+        "desc": "Quartalsweise Webinare zu aktuellen Sicherheitsrisiken, wichtigen Versionsänderungen, Best-Practice-Empfehlungen und konkreten Auswirkungen auf Ihre OSS-Lieferkette."
+      },
+      "customBuilds": {
+        "name": "Kundenspezifische Builds & Tooling",
+        "desc": "Maßgeschneiderte Umsetzungen direkt durch die Maintainer — von speziellen Build-Konfigurationen bis zu individualisierten Tooling-Lösungen."
+      },
+      "craTitle": "Vorbereitet auf den Cyber Resilience Act",
+      "craP1": "Ab 2027 sind Hersteller im Rahmen des Cyber Resilience Act (CRA) für 100 % ihrer Software verantwortlich — einschließlich aller Open-Source-Abhängigkeiten. Das betrifft Patchzeiten, Schwachstellenmanagement, Dokumentation und langfristige Wartbarkeit. Open Elements agiert als Open-Source-Steward und gestaltet die regulatorischen Rahmenbedingungen aktiv mit. Als Gründungsmitglied der Open Regulatory Compliance Working Group (ORC WG) der Eclipse Foundation arbeiten wir gemeinsam mit führenden Open-Source-Foundations, großen Technologieunternehmen und Vertretern der EU an konkreten Spezifikationen und Praxisleitfäden zur CRA-Umsetzung.",
+      "craBulletTitle": "Support & Care hilft Ihnen konkret bei:",
+      "craBullet1": "Deutliche Reduzierung von Patchzeiten",
+      "craBullet2": "Systematische Schwachstellenüberwachung",
+      "craBullet3": "Planbare Verfügbarkeit von Updates",
+      "craBullet4": "Sicherstellung von Dokumentation und Transparenz (inkl. SBOM)",
+      "craBullet5": "Langfristige Wartbarkeitsgarantie",
+      "craBullet6": "Perspektivisch: CRA-konforme Attestierungen für betreute Projekte",
+      "craHighlight": "Open Elements ist Gründungsmitglied der ORC WG und arbeitet direkt an den Best Practices, die definieren, wie CRA-Compliance für Open-Source-Software umgesetzt wird. Diese Expertise fließt unmittelbar in Support & Care ein.",
+      "containersTitle": "Gehärtete Container für Staat und Verwaltung",
+      "containersP1": "Auch das ist Support & Care: Gehärtete Container für die deutsche Verwaltung.",
+      "containersP2": "Open Elements gehört zu einer exklusiven Gruppe von Organisationen, die gehärtete Container-Images für container.gov.de bereitstellen dürfen — neben dem Zentrum für Digitale Souveränität (ZenDiS) und dem Auswärtigen Amt. Für Support & Care Kunden bedeutet das: Die gehärteten Eclipse-Temurin-Images für alle aktuellen Java-LTS-Versionen (Java 11, 17, 21, 25+) sind Teil des Leistungsumfangs. Verifiziert, signiert und kontinuierlich gegen aktuelle Schwachstellendatenbanken abgeglichen.",
+      "containersBulletTitle": "Was gehärtete Container auszeichnet:",
+      "containersBullet1": "Verifizierte Herkunft und Qualitätssicherung",
+      "containersBullet2": "Aktuelle Abhängigkeiten ohne bekannte Schwachstellen",
+      "containersBullet3": "Software Bill of Materials (SBOM) für volle Transparenz",
+      "containersBullet4": "Kryptographische Signierung gegen Manipulation",
+      "containersBullet5": "Minimierte Angriffsfläche durch systematisches Hardening",
+      "containersImgAlt": "Open Elements liefert in Zukunft offizielle gehärtete Container-Images für die deutsche öffentliche Verwaltung",
+      "modelTitle": "Mehr als nur Support: Unser Modell",
+      "modelP1": "Support & Care funktioniert anders als klassischer Vendor-Support. Sie tragen gemeinsam mit uns die laufenden Pflege- und Verbesserungsaufwände für die betreuten Open-Source-Komponenten — offen, nachvollziehbar und messbar.",
+      "modelSubtitle": "Hier folgt Support & Care drei wichtigen Prinzipien:",
+      "modelPrinciple1": "Gelder fließen direkt an die Maintainer: Statt oberflächliche Support-Schichten darüber zu legen, investieren wir in die Vitalität des jeweiligen Projekt-Kerns. Die Menschen, die den Code tatsächlich pflegen, Sicherheitsupdates bereitstellen und neue Features entwickeln, werden direkt bezahlt.",
+      "modelPrinciple2": "Ihre Prioritäten in den Roadmaps: Kundenanforderungen werden aktiv in die Entwicklungs-Roadmaps der betreuten Projekte integriert. So spiegeln Weiterentwicklungen direkt reale Unternehmensbedürfnisse wider.",
+      "modelPrinciple3": "Proaktive Kommunikation: Sie werden nicht nur bei Problemen informiert, sondern kontinuierlich über relevante Entwicklungen auf dem Laufenden gehalten:",
+      "modelBullet1": "Sicherheitswarnungen und neue Patches",
+      "modelBullet2": "Geplante API- oder Major-Version-Änderungen",
+      "modelBullet3": "Empfehlungen zu Versionsupdates und Abhängigkeitsbereinigungen",
+      "modelBullet4": "Trends und Risiken im OSS-Ökosystem",
+      "modelHighlight": "Nicht genutzte Support-Stunden verfallen nicht — sie fließen direkt in die Weiterentwicklung der Open-Source-Komponenten. Jede Subscription stärkt die Projekte, auf die Sie sich verlassen.",
+      "modelP2": "Hierbei liefern wir flexible Leistungsmodelle für nachhaltige Sicherheit. Wählen Sie das Modell, das zu Ihren Anforderungen in Verfügbarkeit, Compliance und SLA passt.",
+      "whyTitle": "Warum Open Elements",
+      "whyP1": "Wir sind die Maintainer — nicht nur Berater: Unsere Mitarbeiter sind keine externen Consultants, die Projekte erst kennenlernen müssen. Sie sind die Menschen, die diese Projekte pflegen, weiterentwickeln und in den Foundations mitgestalten.",
+      "hendrikRole": "Founder & Eclipse Board Member",
+      "sandraRole": "Java Champion & OSS Maintainer",
+      "sebastianRole": "OSS Engineer & Maintainer Log4j",
+      "whyP2": "Open Elements ist ein bekanntes und aktives Mitglied der Open Source Community und arbeitet nicht nur auf technischer Basis sondern auch auf leitender Ebene in vielen Open Source Foundation mit:",
+      "eclipseDesc": "Wir sind im Board der Eclipse Foundation vertreten und aktives Mitglied in Arbeitsgruppen wie Eclipse Adoptium, Eclipse JakartaEE oder ORC WG.",
+      "lfDesc": "TODO",
+      "asfDesc": "TODO",
+      "whyHighlight": "Open Source — aber richtig. Unsere Einnahmen aus Support & Care fließen direkt in die betreuten Open-Source-Projekte.",
+      "faqTitle": "Häufig gestellte Fragen",
+      "faq1Q": "Ist Support & Care nur für Apache Maven?",
+      "faq1A": "Nein. Support & Care deckt fünf geschäftskritische Java-Basiskomponenten ab: Eclipse Temurin, Apache Maven, JUnit, Apache Log4j und Apache Commons. Das Programm startete 2024 mit Maven und wurde seitdem kontinuierlich erweitert.",
+      "faq2Q": "Wer leistet den Support?",
+      "faq2A": "Committer und Maintainer der jeweiligen Open-Source-Projekte — die Personen, die den Code tatsächlich schreiben und pflegen. Kein nachgelagertes Support-Team, sondern direkter Zugang zu den Experten.",
+      "faq3Q": "Was passiert mit meiner Subscription-Gebühr?",
+      "faq3A": "Die Einnahmen fließen transparent und nachvollziehbar in die betreuten Open-Source-Projekte: Bezahlung der Maintainer, Sicherheitsupdates, Bugfixes, Dokumentation und Infrastruktur.",
+      "faq4Q": "Muss ich alle fünf Komponenten abonnieren?",
+      "faq4A": "Sprechen Sie uns an — wir schneiden das Angebot auf Ihre konkreten Anforderungen zu.",
+      "faq5Q": "Hilft Support & Care bei der CRA-Compliance?",
+      "faq5A": "Ja. Support & Care adressiert zentrale CRA-Anforderungen: Schwachstellenüberwachung, Patchzeiten, Dokumentation, SBOM und langfristige Wartbarkeit. Perspektivisch unterstützen wir auch bei CRA-konformen Attestierungen.",
+      "faq6Q": "In welchen Sprachen wird Support geleistet?",
+      "faq6A": "Deutsch und Englisch — sowohl für Helpdesk-Anfragen als auch für Workshops, Beratung und Dokumentation.",
+      "faq7Q": "Was ist der Unterschied zu Framework-Support (z.B. bei Spring Boot)?",
+      "faq7A": "Framework-Support deckt die mittlere Schicht Ihres Software-Stacks ab. Support & Care betreut die Basisschicht darunter: Laufzeit, Build-Tools, Logging, Testing und Utility-Libraries. Beides ergänzt sich — Log4Shell hat gezeigt, dass Framework-Support allein nicht ausreicht.",
+      "ctaTitle": "Sichern Sie die Basis Ihrer Java-Anwendungen",
+      "ctaP1": "Lassen Sie uns gemeinsam besprechen, wie Support & Care Ihre Software-Lieferkette absichert. Ob Privatwirtschaft oder öffentliche Verwaltung — wir finden das passende Modell für Sie.",
+      "ctaContact": "Kontakt aufnehmen",
+      "footnote1": "Nicht genutzte Support-Stunden verfallen monatlich und fließen in die Weiterentwicklung der betreuten Projekte.",
+      "footnote2": "Werktage ohne Feiertage in NRW.",
+      "footnote3": "Helpdesk DSGVO-konform und EU-gehostet.",
+      "footnote4": "Expert:innen sind Committer und Maintainer der betreuten OSS-Projekte.",
+      "footnote5": "Webinare und Calls per Videokonferenz."
     }
   },
   "blog": {
