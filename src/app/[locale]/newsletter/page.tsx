@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import { redirect } from '@/i18n/routing';
 import NewsletterForm from '@/components/newsletter/NewsletterForm';
 
 interface NewsletterPageProps {
@@ -13,13 +13,6 @@ export async function generateMetadata({
   params,
 }: NewsletterPageProps): Promise<Metadata> {
   const { locale } = await params;
-
-  if (locale !== 'de') {
-    return {
-      title: 'Page Not Available - Open Elements',
-      description: 'This page is not available in this language',
-    };
-  }
 
   const title = 'Newsletter - Open Elements';
   const description =
@@ -51,7 +44,7 @@ export default async function NewsletterPage({ params }: NewsletterPageProps) {
   const { locale } = await params;
 
   if (locale !== 'de') {
-    notFound();
+    redirect({ href: '/newsletter', locale: 'de' });
   }
 
   return (
