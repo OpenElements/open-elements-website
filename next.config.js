@@ -14,6 +14,25 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/support-care-maven',
+        destination: '/support-care',
+        permanent: true,
+      },
+      {
+        source: '/en/support-care-maven',
+        destination: '/en/support-care',
+        permanent: true,
+      },
+      {
+        source: '/de/support-care-maven',
+        destination: '/de/support-care',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
