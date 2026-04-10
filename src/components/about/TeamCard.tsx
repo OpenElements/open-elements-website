@@ -34,7 +34,7 @@ export default function TeamCard({ member }: TeamCardProps) {
           />
           {member.tag ? (
             <span
-              className="pointer-events-none absolute top-5 left-1/2 z-10 inline-flex min-w-28 max-w-36 -translate-x-1/2 items-center justify-center rounded-full border border-white/75 px-4 py-2 text-center text-[13px] font-semibold leading-none text-white backdrop-blur-[2px]"
+              className="pointer-events-none absolute top-30 left-1/2 z-10 inline-flex min-w-28 max-w-36 -translate-x-1/2 items-center justify-center rounded-full border border-white/75 px-4 py-2 text-center text-[13px] font-semibold leading-none text-white backdrop-blur-[2px]"
               style={tagStyle}>
               {member.tag}
             </span>
