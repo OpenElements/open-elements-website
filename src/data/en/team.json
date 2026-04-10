@@ -247,5 +247,22 @@
       }
     ],
     "visible": true
+  },
+  {
+    "id": "motseki",
+    "firstName": "Motseki",
+    "lastName": "Khoarai",
+    "link": "/employees/motseki",
+    "bio": "Motseki is a passionate team lead, bridging technical expertise with people development. With a technical-lead background from his time in South Africa, he now leads the Uganda team remotely from Germany. As a lifelong learner, he is always happy to share knowledge and help his team and the wider tech community grow.",
+    "picture": "/team/motseki.jpg",
+    "role": "Team Lead",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/motseki-khoarai-24070239",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
   }
 ]

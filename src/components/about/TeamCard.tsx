@@ -8,6 +8,11 @@ interface TeamCardProps {
 
 export default function TeamCard({ member }: TeamCardProps) {
   const tagColor = member.tagColor ?? DEFAULT_TEAM_TAG_COLOR;
+  const tagStyle = {
+    backgroundColor: tagColor,
+    boxShadow:
+      '0 12px 28px rgba(2, 1, 68, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.18)',
+  };
 
   return (
     <Link href={member.link} className="group block">
@@ -28,8 +33,8 @@ export default function TeamCard({ member }: TeamCardProps) {
         />
         {member.tag ? (
           <span
-            className="bottom-8 left-8 z-10 absolute inline-flex max-w-40 items-center rounded-full border border-white/70 px-4 py-2 text-sm font-bold text-white shadow-[0_10px_30px_rgba(18,29,73,0.18)]"
-            style={{ backgroundColor: tagColor }}>
+            className="pointer-events-none absolute bottom-6 left-1/2 z-10 inline-flex min-w-28 max-w-36 -translate-x-1/2 items-center justify-center rounded-full border border-white/75 px-4 py-2 text-center text-[13px] font-semibold leading-none text-white backdrop-blur-[2px]"
+            style={tagStyle}>
             {member.tag}
           </span>
         ) : null}
