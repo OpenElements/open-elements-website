@@ -210,5 +210,42 @@
       }
     ],
     "visible": true
+  },
+  {
+    "id": "marc",
+    "firstName": "Marc",
+    "lastName": "Philipp",
+    "link": "/employees/marc",
+    "bio": "Marc Philipp is the JUnit team lead, a Java Champion, and an independent engineering consultant specializing in JUnit and Gradle. He has extensive experience in developing business and consumer applications as a software engineer, as well as in training and coaching other developers. His focus area is working on open-source frameworks (such as JUnit) and tools (such as Gradle) to improve the productivity of fellow software developers.",
+    "picture": "/team/marc.jpg",
+    "role": "JUnit Team Lead & Java Champion",
+    "socials": [
+      {
+        "name": "Web",
+        "link": "https://marcphilipp.de/",
+        "icon": "mdi:web"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/marcphilipp",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "Mastodon",
+        "link": "https://chaos.social/@marcphilipp",
+        "icon": "mdi:mastodon"
+      },
+      {
+        "name": "Bluesky",
+        "link": "https://bsky.app/profile/marcphilipp.de",
+        "icon": "simple-icons:bluesky"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/marcphilipp",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
   }
 ]

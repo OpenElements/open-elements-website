@@ -42,5 +42,25 @@ test.describe('About Page', () => {
         page.getByText(locale === 'de' ? 'Freelancerin' : 'Freelancer').first(),
       ).toBeVisible();
     });
+
+    test(`shows Marc Philipp on the about page for ${locale}`, async ({
+      page,
+    }) => {
+      await page.goto(localePath(locale, 'about'));
+
+      const marcCard = page
+        .getByRole('link', { name: /Marc Philipp/i })
+        .first();
+      await expect(marcCard).toBeVisible();
+
+      await marcCard.click();
+
+      await expect(page).toHaveURL(
+        locale === 'de' ? /\/de\/employees\/marc$/ : /\/employees\/marc$/,
+      );
+      await expect(
+        page.getByRole('heading', { name: 'Marc Philipp' }),
+      ).toBeVisible();
+    });
   }
 });
