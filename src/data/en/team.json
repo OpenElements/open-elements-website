@@ -117,6 +117,8 @@
     "bio": "Sandra is a Java Champion and works as a freelance software developer and consultant in the Java environment. She has been involved in agile software development in various roles since 2008. She specialises in Java Enterprise, Cloud, Software Craftsmanship, Open Source and the automation of development processes. She is involved in various programme committees and community groups. She also contributes to various OSS projects.",
     "picture": "/team/sandra.jpg",
     "role": "Java Champion & OSS Maintainer",
+    "tag": "Freelancer",
+    "tagColor": "#5CBB9E",
     "socials": [
       {
         "name": "GitHub",
@@ -144,6 +146,8 @@
     "bio": "Gerd brings years of intensive experience as a software architect with a strong development and operations background (DevOps). His particular strength lies in guiding his team and the organizations of his clients toward new technologies and approaches, and establishing new methods on a long-term basis.",
     "picture": "/team/gerd.jpg",
     "role": "OSS Maintainer",
+    "tag": "Freelancer",
+    "tagColor": "#5CBB9E",
     "socials": [
       {
         "name": "Twitter",
@@ -202,6 +206,62 @@
       {
         "name": "LinkedIn",
         "link": "https://www.linkedin.com/in/ntege-daniel-a85486242",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
+  },
+  {
+    "id": "marc",
+    "firstName": "Marc",
+    "lastName": "Philipp",
+    "link": "/employees/marc",
+    "bio": "Marc Philipp is the JUnit team lead, a Java Champion, and an independent engineering consultant specializing in JUnit and Gradle. He has extensive experience in developing business and consumer applications as a software engineer, as well as in training and coaching other developers. His focus area is working on open-source frameworks (such as JUnit) and tools (such as Gradle) to improve the productivity of fellow software developers.",
+    "picture": "/team/marc.jpg",
+    "role": "JUnit Team Lead & Java Champion",
+    "tag": "Freelancer",
+    "tagColor": "#5CBB9E",
+    "socials": [
+      {
+        "name": "Web",
+        "link": "https://marcphilipp.de/",
+        "icon": "mdi:web"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/marcphilipp",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "Mastodon",
+        "link": "https://chaos.social/@marcphilipp",
+        "icon": "mdi:mastodon"
+      },
+      {
+        "name": "Bluesky",
+        "link": "https://bsky.app/profile/marcphilipp.de",
+        "icon": "simple-icons:bluesky"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/marcphilipp",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
+  },
+  {
+    "id": "motseki",
+    "firstName": "Motseki",
+    "lastName": "Khoarai",
+    "link": "/employees/motseki",
+    "bio": "Motseki is a passionate team lead, bridging technical expertise with people development. With a technical-lead background from his time in South Africa, he now leads the Uganda team remotely from Germany. As a lifelong learner, he is always happy to share knowledge and help his team and the wider tech community grow.",
+    "picture": "/team/motseki.jpg",
+    "role": "Team Lead",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/motseki-khoarai-24070239",
         "icon": "mdi:linkedin"
       }
     ],

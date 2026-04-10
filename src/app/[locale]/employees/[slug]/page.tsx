@@ -3,16 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import teamDataEn from '@/data/en/team.json';
 import teamDataDe from '@/data/de/team.json';
-
-interface TeamMember {
-  id: string;
-  firstName: string;
-  lastName: string;
-  bio: string;
-  picture: string;
-  role: string;
-  socials?: Array<{ name: string; link: string; icon: string }>;
-}
+import type { TeamMember } from '@/types/team';
 
 function getMember(locale: string, slug: string): TeamMember | undefined {
   const teamData = locale === 'de' ? teamDataDe : teamDataEn;
