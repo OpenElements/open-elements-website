@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import {
-  DEFAULT_TEAM_TAG_COLOR,
-  type TeamMember,
-} from '@/types/team';
+import { DEFAULT_TEAM_TAG_COLOR, type TeamMember } from '@/types/team';
 
 interface TeamCardProps {
   member: TeamMember;
