@@ -207,6 +207,8 @@
     "bio": "Marc Philipp ist der Team Lead von JUnit, ein Java Champion, und ein unabhängiger Engineering Consultant, spezialisiert auf JUnit und Gradle. Er hat umfangreiche Erfahrung in der Entwicklung von Software für Unternehmen und Endanwender sowie als Trainer und Coach für andere Entwickler. Sein Fokus liegt dabei in der Arbeit an Open-Source-Frameworks (wie JUnit) und Tools (wie Gradle), die die Produktivität von Entwickler:innen verbessern.",
     "picture": "/team/marc.jpg",
     "role": "JUnit Team Lead & Java Champion",
+    "tag": "Freelancer",
+    "tagColor": "#5CBB9E",
     "socials": [
       {
         "name": "Web",
