@@ -5,20 +5,9 @@ import type { Metadata } from 'next';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/markdown';
 import teamDataEn from '@/data/en/team.json';
 import teamDataDe from '@/data/de/team.json';
+import type { TeamMember } from '@/types/team';
 
 export const dynamicParams = true;
-
-interface TeamMember {
-  id: string;
-  firstName: string;
-  lastName: string;
-  link?: string;
-  bio?: string;
-  picture?: string;
-  role?: string;
-  socials?: Array<{ name: string; link: string; icon: string }>;
-  visible?: boolean;
-}
 
 function getAuthorById(
   locale: string,

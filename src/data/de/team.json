@@ -100,6 +100,8 @@
     "bio": "Sandra ist Java Champion und arbeitet als freiberufliche Softwareentwicklerin und Consultant im Java-Umfeld. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen. Ihre Schwerpunkte liegen im Bereich Java Enterprise, Cloud, Software Craftsmanship, Open Source und in der Automatisierung von Entwicklungsprozessen. Sie engagiert sich in verschiedenen Programmkommitees und Community-Gruppen. Überdies trägt sie zu verschiedenen OSS-Projekten bei.",
     "picture": "/team/sandra.jpg",
     "role": "Java Champion & OSS Maintainer",
+    "tag": "Freelancerin",
+    "tagColor": "#5CBB9E",
     "socials": [
       {
         "name": "Twitter",
@@ -132,6 +134,8 @@
     "bio": "Gerd zeichnet sich durch seine jahrelange intensive Erfahrung als Software-Architekt mit starkem Entwicklungs- und Betriebshintergrund (DevOps) aus. Seine besondere Stärke liegt darin, sein Team und die Organisation seiner Kunden an neue Technologien und Vorgehensweisen heranzuführen und langfristig neue Methoden zu etablieren.",
     "picture": "/team/gerd.jpg",
     "role": "OSS Maintainer",
+    "tag": "Freelancer",
+    "tagColor": "#5CBB9E",
     "socials": [
       {
         "name": "Twitter",

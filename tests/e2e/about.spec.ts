@@ -34,5 +34,13 @@ test.describe('About Page', () => {
         await expect(page).toHaveURL(/\/de\/about/);
       }
     });
+
+    test(`shows team tags for ${locale}`, async ({ page }) => {
+      await page.goto(localePath(locale, 'about'));
+
+      await expect(
+        page.getByText(locale === 'de' ? 'Freelancerin' : 'Freelancer').first(),
+      ).toBeVisible();
+    });
   }
 });
