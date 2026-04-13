@@ -15,7 +15,7 @@ export default function SupportCareMavenPage() {
           {/* Hero Section */}
           <div className="flex items-center justify-center pt-16 sm:pt-24">
             <Image
-              src="/support-care-maven/support-and-care-logo.svg"
+              src="/support-care/support-and-care-logo.svg"
               alt={t('logoAlt')}
               className="w-4/5"
               width={768}
@@ -31,35 +31,35 @@ export default function SupportCareMavenPage() {
             {/* Component logos row */}
             <div className="flex flex-wrap justify-center items-center gap-5 mx-auto mb-5">
               <Image
-                src="/support-care-maven/component-logos/eclipse-temurin.svg"
+                src="/support-care/component-logos/eclipse-temurin.svg"
                 alt="Eclipse Temurin"
                 width={225}
                 height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
-                src="/support-care-maven/component-logos/apache-maven.svg"
+                src="/support-care/component-logos/apache-maven.svg"
                 alt="Apache Maven"
                 width={190}
                 height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
-                src="/support-care-maven/component-logos/junit.svg"
+                src="/support-care/component-logos/junit.svg"
                 alt="JUnit"
                 width={169}
                 height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
-                src="/support-care-maven/component-logos/apache-log4j.png"
+                src="/support-care/component-logos/apache-log4j.png"
                 alt="Apache Log4j"
                 width={116}
                 height={48}
                 className="h-7 w-auto opacity-70 my-0"
               />
               <Image
-                src="/support-care-maven/component-logos/apache-commons.svg"
+                src="/support-care/component-logos/apache-commons.svg"
                 alt="Apache Commons"
                 width={110}
                 height={48}
@@ -131,35 +131,35 @@ export default function SupportCareMavenPage() {
           <div className="flex flex-wrap justify-center gap-8 my-8 not-prose">
             {[
               {
-                img: '/support-care-maven/component-logos/eclipse-temurin.svg',
+                img: '/support-care/component-logos/eclipse-temurin.svg',
                 name: t('temurin.name'),
                 desc: t('temurin.desc'),
                 alt: 'Eclipse Temurin',
                 width: 225,
               },
               {
-                img: '/support-care-maven/component-logos/apache-maven.svg',
+                img: '/support-care/component-logos/apache-maven.svg',
                 name: t('maven.name'),
                 desc: t('maven.desc'),
                 alt: 'Apache Maven',
                 width: 190,
               },
               {
-                img: '/support-care-maven/component-logos/junit.svg',
+                img: '/support-care/component-logos/junit.svg',
                 name: t('junit.name'),
                 desc: t('junit.desc'),
                 alt: 'JUnit',
                 width: 169,
               },
               {
-                img: '/support-care-maven/component-logos/apache-log4j.png',
+                img: '/support-care/component-logos/apache-log4j.png',
                 name: t('log4j.name'),
                 desc: t('log4j.desc'),
                 alt: 'Apache Log4j',
                 width: 116,
               },
               {
-                img: '/support-care-maven/component-logos/apache-commons.svg',
+                img: '/support-care/component-logos/apache-commons.svg',
                 name: t('commons.name'),
                 desc: t('commons.desc'),
                 alt: 'Apache Commons',
@@ -206,7 +206,7 @@ export default function SupportCareMavenPage() {
 
           <div className="flex items-center justify-center my-6">
             <Image
-              src="/support-care-maven/pyramid.png"
+              src="/support-care/pyramid.png"
               alt={t('pyramidAlt')}
               className="w-3/5"
               width={1902}
@@ -260,32 +260,32 @@ export default function SupportCareMavenPage() {
           <div className="flex flex-wrap justify-center gap-8 my-8 not-prose">
             {[
               {
-                img: '/support-care-maven/services-pictograms/long-term-support.svg',
+                img: '/support-care/services-pictograms/long-term-support.svg',
                 name: t('lts.name'),
                 desc: t('lts.desc'),
               },
               {
-                img: '/support-care-maven/services-pictograms/security.svg',
+                img: '/support-care/services-pictograms/security.svg',
                 name: t('security.name'),
                 desc: t('security.desc'),
               },
               {
-                img: '/support-care-maven/services-pictograms/documentation.svg',
+                img: '/support-care/services-pictograms/documentation.svg',
                 name: t('documentation.name'),
                 desc: t('documentation.desc'),
               },
               {
-                img: '/support-care-maven/services-pictograms/workshops.svg',
+                img: '/support-care/services-pictograms/workshops.svg',
                 name: t('workshops.name'),
                 desc: t('workshops.desc'),
               },
               {
-                img: '/support-care-maven/services-pictograms/workshops.svg',
+                img: '/support-care/services-pictograms/workshops.svg',
                 name: t('webinars.name'),
                 desc: t('webinars.desc'),
               },
               {
-                img: '/support-care-maven/services-pictograms/custom-containers.svg',
+                img: '/support-care/services-pictograms/custom-containers.svg',
                 name: t('customBuilds.name'),
                 desc: t('customBuilds.desc'),
               },
@@ -356,7 +356,7 @@ export default function SupportCareMavenPage() {
 
           <div className="flex items-center justify-center my-6">
             <Image
-              src="/support-care-maven/oe-delivers-container.png"
+              src="/support-care/oe-delivers-container.png"
               alt={t('containersImgAlt')}
               className="w-3/5"
               width={3330}
@@ -621,21 +621,21 @@ export default function SupportCareMavenPage() {
           <div className="flex flex-wrap justify-center gap-8 my-8 not-prose">
             {[
               {
-                img: '/support-care-maven/foundation-logos/eclipse.png',
+                img: '/support-care/foundation-logos/eclipse.png',
                 name: 'Eclipse Foundation',
                 desc: t('eclipseDesc'),
                 imgWidth: 180,
                 imgHeight: 64,
               },
               {
-                img: '/support-care-maven/foundation-logos/lf.svg',
+                img: '/support-care/foundation-logos/lf.svg',
                 name: 'Linux Foundation',
                 desc: t('lfDesc'),
                 imgWidth: 120,
                 imgHeight: 64,
               },
               {
-                img: '/support-care-maven/foundation-logos/afs.svg',
+                img: '/support-care/foundation-logos/afs.svg',
                 name: 'Apache Software Foundation',
                 desc: t('asfDesc'),
                 imgWidth: 120,

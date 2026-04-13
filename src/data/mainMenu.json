@@ -27,7 +27,7 @@
     "name": "Support & Care",
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",
-    "link": "/support-care-maven/",
+    "link": "/support-care/",
     "visibleInNavigation": true,
     "visibleInFooter": true
   },
@@ -51,7 +51,7 @@
         "name": "Support & Care for Maven",
         "i18nKey": "mavenSupport",
         "altI18nKey": "mavenSupportDescription",
-        "link": "/support-care-maven/",
+        "link": "/support-care/",
         "visibleInNavigation": false,
         "visibleInFooter": false
       },
