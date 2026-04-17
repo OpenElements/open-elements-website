@@ -87,11 +87,11 @@ export default async function NewsletterPage({ params }: NewsletterPageProps) {
         </div>
       </div>
       <div className="container max-w-sm lg:max-w-7xl md:max-w-2xl sm:max-w-xl sm:w-full relative flex items-center justify-center">
-        <img
-          src="/illustrations/book.png"
-          alt=""
-          className="shrink-0 sm:mt-14 mt-28 lg:scale-100 scale-110 relative z-10"
-        />
+        <a
+          href="#newsletter-form-section"
+          className="shrink-0 sm:mt-14 mt-28 lg:scale-100 scale-110 relative z-10 hover:opacity-95 transition-opacity">
+          <img src="/illustrations/book.png" alt="" />
+        </a>
         <img
           src="/illustrations/plane.svg"
           alt=""
@@ -130,7 +130,9 @@ export default async function NewsletterPage({ params }: NewsletterPageProps) {
             alt=""
             className="absolute lg:size-56 sm:size-40 size-24 lg:right-10 sm:-right-5 right-2 sm:top-16 top-8"
           />
-          <div className="pb-28 pt-36 max-w-2xl mx-auto relative">
+          <div
+            id="newsletter-form-section"
+            className="pb-28 pt-36 max-w-2xl mx-auto relative">
             <NewsletterForm />
           </div>
         </div>
