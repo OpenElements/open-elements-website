@@ -99,6 +99,28 @@ export default function Footer({ locale }: FooterProps) {
                       </Link>
                     );
                   })}
+                  {locale === 'de' && (
+                    <>
+                      <Link
+                        href="/newsletter"
+                        className="flex items-start gap-3 group">
+                        <span
+                          className="iconify footer-link-icon"
+                          data-icon="ph:arrow-right-bold"></span>
+                        <span className="footer-link">{t('newsletter')}</span>
+                      </Link>
+                      <Link
+                        href="/newsletter-archive"
+                        className="flex items-start gap-3 group">
+                        <span
+                          className="iconify footer-link-icon"
+                          data-icon="ph:arrow-right-bold"></span>
+                        <span className="footer-link">
+                          {t('newsletterArchive')}
+                        </span>
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
 
