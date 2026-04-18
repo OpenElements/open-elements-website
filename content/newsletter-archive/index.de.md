@@ -5,7 +5,7 @@ layout: "article"
 url: "/de/newsletter-archive"
 ---
 
-Die folgenden Einträge sind alle [deutschen Newsletter]({{< relref "newsletter" >}}) die Open Elements bisher verschickt hat:
+Die folgenden Einträge sind alle [deutschen Newsletter]({{< relref "de/newsletter" >}}) die Open Elements bisher verschickt hat:
 
 - [DiWoDo 2025 - Digitale Souveränität im Zeitalter von ChatGPT](https://sh1.sendinblue.com/vts9wmlj9pfe.html)
 - [DiWoDo 2025 - Der Cyber Resilience Act (CRA) aus Entwickler Perspektive](https://sh1.sendinblue.com/vxzz8mlj9pfe.html)
