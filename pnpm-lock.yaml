@@ -4,6 +4,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  postcss: ^8.5.12
+  next>postcss: 8.5.12
+  next@16.2.4>postcss: 8.5.12
+  postcss@8.4.31: 8.5.12
+
 pnpmfileChecksum: sha256-roe9mPwl+dZzQ/EVTrDROzzVp+7/Aw9aXFj1MCpeG/8=
 
 importers:
@@ -1247,7 +1253,7 @@ packages:
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
-      postcss: ^8.1.0
+      postcss: 8.5.12
 
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
