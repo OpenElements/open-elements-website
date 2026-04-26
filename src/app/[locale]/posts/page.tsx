@@ -55,14 +55,14 @@ export default async function BlogPage({
       <Image
         src="/illustrations/blog-arrow.svg"
         alt=""
-        className="absolute w-32 sm:w-64 2xl:w-96 lg:w-80  xl:left-9 lg:top-36 sm:top-28 top-12 shrink-0"
+        className="absolute w-32 sm:w-64 2xl:w-96 lg:w-80 h-auto xl:left-9 lg:top-36 sm:top-28 top-12 shrink-0"
         width={384}
         height={100}
       />
       <Image
         src="/illustrations/blog-shape.svg"
         alt=""
-        className="sm:block hidden absolute xl:w-32 md:w-24 w-20 md:right-[10%] right-[7%] top-48 shrink-0"
+        className="sm:block hidden absolute xl:w-32 md:w-24 w-20 h-auto md:right-[10%] right-[7%] top-48 shrink-0"
         width={128}
         height={128}
       />

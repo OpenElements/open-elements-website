@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
+  "pnpm": {
+    "overrides": {
+      "postcss": "^8.5.12",
+      "next>postcss": "8.5.12",
+      "next@16.2.4>postcss": "8.5.12",
+      "postcss@8.4.31": "8.5.12"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
