@@ -116,7 +116,7 @@ jobs:
             }
 
             // Assignment rules
-            const allowedLabels = ['ready', 'help wanted', 'good first issue', 'available'];
+            const allowedLabels = ['ready for dev', 'help wanted', 'good first issue', 'available'];
             const restrictedLabels = ['security', 'private'];
             const frontendLabel = 'frontend';
             const backendLabel = 'backend';
