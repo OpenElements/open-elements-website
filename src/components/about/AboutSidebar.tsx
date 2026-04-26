@@ -43,7 +43,7 @@ export default function AboutSidebar({
             <Image
               src="/illustrations/underline.svg"
               alt="Underline"
-              className="-bottom-3 absolute sm:-mr-24 w-48 lg:w-72 shrink-0"
+              className="-bottom-3 absolute sm:-mr-24 w-48 lg:w-72 h-auto shrink-0"
               width={288}
               height={24}
             />

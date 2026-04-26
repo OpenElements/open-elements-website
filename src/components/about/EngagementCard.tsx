@@ -22,9 +22,9 @@ export default function EngagementCard({ engagement }: EngagementCardProps) {
             href={engagement.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 object-contain w-24">
+            className="shrink-0 object-contain w-24 h-auto">
             <Image
-              className="object-contain w-24"
+              className="object-contain w-24 h-auto"
               src={engagement.logo}
               alt={`${engagement.title} logo`}
               width={96}
@@ -33,7 +33,7 @@ export default function EngagementCard({ engagement }: EngagementCardProps) {
           </Link>
         ) : (
           <Image
-            className="shrink-0 w-24 object-contain"
+            className="shrink-0 w-24 h-auto object-contain"
             src={engagement.logo}
             alt={`${engagement.title} logo`}
             width={96}

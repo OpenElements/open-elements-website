@@ -73,7 +73,7 @@ export default async function DltLecturePage({ params }: DltLecturePageProps) {
               alt={t('underlineAlt')}
               width={288}
               height={24}
-              className="absolute w-48 -bottom-3 sm:w-72 sm:-mr-24 shrink-0"
+              className="absolute w-48 -bottom-3 sm:w-72 h-auto sm:-mr-24 shrink-0"
             />
           </div>
         </div>
