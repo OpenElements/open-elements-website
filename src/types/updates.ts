@@ -1,29 +1,26 @@
-export interface Contributor {
-  name: string;
-  avatar: string;
-  url: string;
-}
+export type ItemType =
+  | 'FEATURE'
+  | 'BUG_FIX'
+  | 'IMPROVEMENT'
+  | 'DOCUMENTATION'
+  | 'SECURITY'
+  | 'MAINTENANCE';
 
 export interface UpdateItem {
   text: string;
+  link?: string;
+  type: ItemType;
 }
 
-export interface UpdateSection {
+export interface UpdateCategory {
   title: string;
   items: UpdateItem[];
-  icon?: 'red' | 'green' | 'purple' | 'star';
-  collapsible?: boolean;
 }
 
-export interface Update {
-  version: string;
-  date: string;
+export interface MonthlyUpdate {
   month: string;
-  isLatest?: boolean;
-  overview?: string[];
-  sections: UpdateSection[];
-  assets?: number;
-  tags?: string[];
-  contributors?: Contributor[];
-  contributorNote?: string;
+  year: number;
+  excerpt: string;
+  categories: UpdateCategory[];
+  contributors: string[];
 }

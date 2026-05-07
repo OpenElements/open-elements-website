@@ -380,18 +380,14 @@
     }
   },
   "updates": {
-    "metaTitle": "Updates & Changelog | Open Elements",
-    "metaDescription": "Stay up to date with the latest features, improvements, and bug fixes for Open Elements.",
-    "title": "Updates & Changelog",
-    "description": "Stay up to date with the latest features, improvements, and bug fixes",
+    "metaTitle": "Monthly Updates | Open Elements",
+    "metaDescription": "Follow our monthly progress on open-source projects — features, fixes, and community contributions.",
+    "title": "Monthly Updates",
+    "description": "A transparent look at our monthly work on open-source projects",
     "latest": "Latest",
-    "overview": "Overview",
     "contributors": "Contributors",
-    "assets": "Assets",
     "seeMore": "See More",
     "seeLess": "See Less",
-    "badge": "Semper",
-    "newFeatures": "New Features",
     "decorationAlt": "Decorative element",
     "underlineAlt": "Graphical element that underlines the text"
   }

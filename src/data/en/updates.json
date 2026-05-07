@@ -1,0 +1,210 @@
+[
+  {
+    "month": "APRIL",
+    "year": 2026,
+    "excerpt": "Focus on security supply-chain improvements, Maven 3.10.0 preparation, and continued Surefire modernization with JUnit 5 migration.",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Validate and improve the Java core library for the CycloneDX 1.7 specification",
+            "link": "https://github.com/CycloneDX/cyclonedx-core-java/pull/786",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Better reproducible builds, detect version range usage in Maven Artifact Plugin",
+            "link": "https://github.com/apache/maven-artifact-plugin/pull/206",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance",
+        "items": [
+          {
+            "text": "Prepare for Maven 3.10.0 Release",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Modernization of Core Features",
+        "items": [
+          {
+            "text": "Update architecture documentation for Surefire 3.6: add information about the new unified testing provider",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Finish migration of JUnit3 based tests that use AbstractMojoTestCase to JUnit 5 in 3.x branches",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/201",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Documentation",
+        "items": [
+          {
+            "text": "Researched and evaluated documentation platforms and tools",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/hendrikebbers",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy",
+      "https://github.com/slawekjaranowski"
+    ]
+  },
+  {
+    "month": "MARCH",
+    "year": 2026,
+    "excerpt": "Major progress on supply chain security with CycloneDX 1.7 validation, Maven 3.10.0 release preparation, and JUnit 5 migration.",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Validate and improve the Java core library for the CycloneDX 1.7 specification",
+            "link": "https://github.com/CycloneDX/cyclonedx-core-java/pull/786",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Better reproducible builds, detect version range usage in Maven Artifact Plugin",
+            "link": "https://github.com/apache/maven-artifact-plugin/pull/206",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance",
+        "items": [
+          {
+            "text": "Prepare for Maven 3.10.0 Release",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Modernization of Core Features",
+        "items": [
+          {
+            "text": "Update architecture documentation for Surefire 3.6: add information about the new unified testing provider",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Finish migration of JUnit3 based tests that use AbstractMojoTestCase to JUnit 5 in 3.x branches",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/201",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Documentation",
+        "items": [
+          {
+            "text": "Researched and evaluated documentation platforms and tools",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/hendrikebbers",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid"
+    ]
+  },
+  {
+    "month": "FEBRUARY",
+    "year": 2026,
+    "excerpt": "Surefire JUnit Platform PR merged, continued work on Maven modernization, and supply chain security improvements.",
+    "categories": [
+      {
+        "title": "Modernization of Core Features",
+        "items": [
+          {
+            "text": "Surefire JUnit Platform PR merged — unified testing provider now available",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Continued migration of legacy test infrastructure to JUnit 5",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Ongoing validation of CycloneDX 1.7 core library improvements",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance",
+        "items": [
+          {
+            "text": "Bug fixes for Maven Wrapper and dependency resolution edge cases",
+            "type": "BUG_FIX"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/hendrikebbers",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem"
+    ]
+  },
+  {
+    "month": "JANUARY",
+    "year": 2026,
+    "excerpt": "Kickoff for 2026 — planning for Maven 3.10.0 release, initializing Surefire testing provider work, and documentation research.",
+    "categories": [
+      {
+        "title": "Maintenance",
+        "items": [
+          {
+            "text": "Initial planning and scoping for Maven 3.10.0 release",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/195",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Modernization of Core Features",
+        "items": [
+          {
+            "text": "Started Surefire unified testing provider implementation",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Documentation",
+        "items": [
+          {
+            "text": "Began evaluating documentation tooling and static site generators",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/hendrikebbers",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  }
+]
