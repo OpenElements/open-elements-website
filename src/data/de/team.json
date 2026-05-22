@@ -254,5 +254,44 @@
       }
     ],
     "visible": true
+  },
+  {
+    "id": "christian",
+    "firstName": "Christian",
+    "lastName": "Grobmeier",
+    "link": "/employees/christian",
+    "bio": "Christian Grobmeier ist Java Champion, Open-Source-Experte und unabhängiger Engineering Consultant mit Fokus auf Open Source, Sicherheit, Datenschutz und KI-Systeme. Er ist langjähriger Contributor der Apache Software Foundation und arbeitet unter anderem an Apache Log4j, Commons und Struts. Als VP Data Privacy der ASF beschäftigt er sich mit Datenschutz sowie den menschlichen, ethischen und organisatorischen Folgen moderner Softwareentwicklung.",
+    "picture": "/team/christian.jpg",
+    "role": "Java Champion & Open Source Consultant",
+    "tag": "Independent",
+    "tagColor": "#5CBB9E",
+    "socials": [
+      {
+        "name": "Web",
+        "link": "https://grobmeier.de",
+        "icon": "mdi:web"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/grobmeier",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "Mastodon",
+        "link": "https://mastodon.social/@grobmeier",
+        "icon": "mdi:mastodon"
+      },
+      {
+        "name": "Bluesky",
+        "link": "https://bsky.app/profile/grobmeier.de",
+        "icon": "simple-icons:bluesky"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/grobmeier",
+        "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
   }
 ]
