@@ -428,18 +428,14 @@
     "german": "Deutsch"
   },
   "updates": {
-    "metaTitle": "Updates & Changelog | Open Elements",
-    "metaDescription": "Bleiben Sie auf dem Laufenden über die neuesten Funktionen, Verbesserungen und Fehlerbehebungen für Open Elements.",
-    "title": "Updates & Changelog",
-    "description": "Bleiben Sie auf dem Laufenden über die neuesten Funktionen, Verbesserungen und Fehlerbehebungen",
-    "latest": "Neueste",
-    "overview": "Überblick",
+    "metaTitle": "Monatliche Updates | Open Elements",
+    "metaDescription": "Verfolgen Sie unseren monatlichen Fortschritt bei Open-Source-Projekten — Funktionen, Fixes und Community-Beiträge.",
+    "title": "Monatliche Updates",
+    "description": "Ein transparenter Blick auf unsere monatliche Arbeit an Open-Source-Projekten",
+    "latest": "Aktuell",
     "contributors": "Mitwirkende",
-    "assets": "Ressourcen",
     "seeMore": "Mehr anzeigen",
     "seeLess": "Weniger anzeigen",
-    "badge": "Semper",
-    "newFeatures": "Neue Funktionen",
     "decorationAlt": "Dekoratives Element",
     "underlineAlt": "Grafisches Element zum Unterstreichen des Textes"
   }

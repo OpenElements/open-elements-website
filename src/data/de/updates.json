@@ -1,0 +1,233 @@
+[
+  {
+    "month": "APRIL",
+    "year": 2026,
+    "excerpt": "Fokus auf Verbesserungen der Sicherheit in der Lieferkette, Vorbereitung von Maven 3.10.0 und Beginn einer besseren Tool-Unterstützung für den internen Release-Prozess von Apache Maven",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Verbesserung der Inkonsistenzen der Cyclonedx 1.7 ECMA-Spezifikation mit OWASP",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Verbesserung der buildinfo-Dateibehandlung für Multimodulprojektes",
+            "link": "https://github.com/apache/maven-artifact-plugin/issues/93",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Vorbereitung für die Maven 3.10.0 Veröffentlichung",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Veröffentlichung von Maven 3.9.15 – aufgrund einer Sicherheitslücke in plexus-utils (CVE-2025-67030)",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Starten eines Tools zur Automatisierung von teilweisen Freigabeprozessen/-schritten",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Dokumentation für Surefire 3.6 aktualisieren",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Initialisiere die Dokumentationswerkzeuge für die 'Erste Schritte'-Dokumentation",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
+    "month": "MARCH",
+    "year": 2026,
+    "excerpt": "Fortschritte bei der Sicherheit der Lieferkette mit CycloneDX 1.7-Validierung, Vorbereitung der Maven 3.10.0-Veröffentlichung und JUnit 5-Migration.",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Validierung und Verbesserung der Java-Kernbibliothek für die CycloneDX 1.7 Spezifikation",
+            "link": "https://github.com/CycloneDX/cyclonedx-core-java/pull/786",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Bessere reproduzierbare Builds, Erkennung der Verwendung von Versionsbereichen im Maven Artifact Plugin",
+            "link": "https://github.com/apache/maven-artifact-plugin/pull/206",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Vorbereitung für die Maven 3.10.0 Veröffentlichung",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Architekturdokumentation für Surefire 3.6 aktualisieren: Informationen zum neuen vereinheitlichten Test-Provider hinzufügen",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Migration von JUnit3-basierten Tests, die AbstractMojoTestCase verwenden, auf JUnit 5 in 3.x-Branches abgeschlossen",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/201",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Dokumentationsplattformen und -tools recherchiert und evaluiert",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
+    "month": "FEBRUARY",
+    "year": 2026,
+    "excerpt": "Surefire JUnit Platform PR zusammengeführt, Dokumentation und Fehlerbehebung im Initializer for Apache Maven",
+    "categories": [
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Surefire JUnit Platform PR zusammengeführt – einheitlicher Testprovider jetzt verfügbar",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Fortschritte bei der Migration von JUnit3-basierten Tests auf JUnit 5",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/136",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Erstellen Sie eine Dokumentation über die Architektur des Initializers for Apache Maven",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Fehlerbehebung nach der ersten Veröffentlichung von Initializer for Apache Maven",
+            "link": "https://maven-starter.io",
+            "type": "BUG_FIX"
+          }
+
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
+    "month": "JANUARY",
+    "year": 2026,
+    "excerpt": "Start der 'Getting Started'-Dokumentation, Finalisierung der Migration des Maven Surefire Plugins zur JUnit Platform, Ankündigung des Initializers for Apache Maven",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Unterstützung beim Hinzufügen von GitHub Ruleset in PyGitHub. Es ist eine Basisbibliothek, die verwendet wird, um Branch-Schutzregeln in Apache-Projekten durchzusetzen.",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/121",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Fortschritte bei der Migration von JUnit3-basierten Tests auf JUnit 5",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/136",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Abschluss des Refactorings des Surefire-Plugins, um nur die Junit-Plattform zum Ausführen von Tests für Junit 3, 4, 5, 6 und TestNG zu verwenden.",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Begonnen mit der Erstellung von Architektur-Dokumentationen und Blog-Beiträgen zur Java-Module Unterstützung in Maven 4",
+            "type": "DOCUMENTATION"
+          }
+
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Kick off Meeting für 'Getting started' Dokumentation",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Ankündigung des ersten Releases des Initializer for Apache Maven",
+            "link": "https://maven-starter.io",
+            "type": "MAINTENANCE"
+          }
+
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/hendrikebbers",
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/Bukama",
+      "https://github.com/ascheman",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  }
+]
