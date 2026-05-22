@@ -2,19 +2,18 @@
   {
     "month": "APRIL",
     "year": 2026,
-    "excerpt": "Schwerpunkt auf Sicherheitsverbesserungen der Lieferkette, Vorbereitung von Maven 3.10.0 und fortgesetzte Surefire-Modernisierung mit JUnit 5-Migration.",
+    "excerpt": "Fokus auf Verbesserungen der Sicherheit in der Lieferkette, Vorbereitung von Maven 3.10.0 und Beginn einer besseren Tool-Unterstützung für den internen Release-Prozess von Apache Maven",
     "categories": [
       {
-        "title": "Sicherheit der Lieferkette",
+        "title": "Lieferkettensicherheit",
         "items": [
           {
-            "text": "Validierung und Verbesserung der Java-Kernbibliothek für die CycloneDX 1.7-Spezifikation",
-            "link": "https://github.com/CycloneDX/cyclonedx-core-java/pull/786",
+            "text": "Verbesserung der Inkonsistenzen der Cyclonedx 1.7 ECMA-Spezifikation mit OWASP",
             "type": "SECURITY"
           },
           {
-            "text": "Bessere reproduzierbare Builds, Erkennung von Versionsbereichen im Maven Artifact Plugin",
-            "link": "https://github.com/apache/maven-artifact-plugin/pull/206",
+            "text": "Verbesserung der buildinfo-Dateibehandlung für Multimodulprojektes",
+            "link": "https://github.com/apache/maven-artifact-plugin/issues/93",
             "type": "IMPROVEMENT"
           }
         ]
@@ -23,85 +22,27 @@
         "title": "Wartung",
         "items": [
           {
-            "text": "Vorbereitung für Maven 3.10.0 Release",
+            "text": "Vorbereitung für die Maven 3.10.0 Veröffentlichung",
             "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
             "type": "MAINTENANCE"
-          }
-        ]
-      },
-      {
-        "title": "Modernisierung der Kernfunktionen",
-        "items": [
-          {
-            "text": "Aktualisierung der Architekturdokumentation für Surefire 3.6: Informationen über den neuen einheitlichen Testanbieter",
-            "type": "DOCUMENTATION"
           },
           {
-            "text": "Abschluss der Migration von JUnit3-basierten Tests, die AbstractMojoTestCase verwenden, zu JUnit 5 in 3.x-Branches",
-            "link": "https://github.com/support-and-care/maven-support-and-care/issues/201",
-            "type": "IMPROVEMENT"
-          }
-        ]
-      },
-      {
-        "title": "Dokumentation",
-        "items": [
-          {
-            "text": "Recherche und Evaluierung von Dokumentationsplattformen und -werkzeugen",
-            "type": "DOCUMENTATION"
-          }
-        ]
-      }
-    ],
-    "contributors": [
-      "https://github.com/hendrikebbers",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem",
-      "https://github.com/olamy",
-      "https://github.com/slawekjaranowski"
-    ]
-  },
-  {
-    "month": "MÄRZ",
-    "year": 2026,
-    "excerpt": "Große Fortschritte bei der Sicherheit der Lieferkette mit CycloneDX 1.7-Validierung, Vorbereitung des Maven 3.10.0 Release und JUnit 5-Migration.",
-    "categories": [
-      {
-        "title": "Sicherheit der Lieferkette",
-        "items": [
-          {
-            "text": "Validierung und Verbesserung der Java-Kernbibliothek für die CycloneDX 1.7-Spezifikation",
-            "link": "https://github.com/CycloneDX/cyclonedx-core-java/pull/786",
+            "text": "Veröffentlichung von Maven 3.9.15 – aufgrund einer Sicherheitslücke in plexus-utils (CVE-2025-67030)",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
             "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Starten eines Tools zur Automatisierung von teilweisen Freigabeprozessen/-schritten",
+            "type": "IMPROVEMENT"
           },
           {
-            "text": "Bessere reproduzierbare Builds, Erkennung von Versionsbereichen im Maven Artifact Plugin",
-            "link": "https://github.com/apache/maven-artifact-plugin/pull/206",
-            "type": "IMPROVEMENT"
-          }
-        ]
-      },
-      {
-        "title": "Wartung",
-        "items": [
-          {
-            "text": "Vorbereitung für Maven 3.10.0 Release",
-            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
-            "type": "MAINTENANCE"
-          }
-        ]
-      },
-      {
-        "title": "Modernisierung der Kernfunktionen",
-        "items": [
-          {
-            "text": "Aktualisierung der Architekturdokumentation für Surefire 3.6: Informationen über den neuen einheitlichen Testanbieter",
+            "text": "Dokumentation für Surefire 3.6 aktualisieren",
             "type": "DOCUMENTATION"
-          },
-          {
-            "text": "Abschluss der Migration von JUnit3-basierten Tests, die AbstractMojoTestCase verwenden, zu JUnit 5 in 3.x-Branches",
-            "link": "https://github.com/support-and-care/maven-support-and-care/issues/201",
-            "type": "IMPROVEMENT"
           }
         ]
       },
@@ -109,84 +50,61 @@
         "title": "Dokumentation",
         "items": [
           {
-            "text": "Recherche und Evaluierung von Dokumentationsplattformen und -werkzeugen",
+            "text": "Initialisiere die Dokumentationswerkzeuge für die 'Erste Schritte'-Dokumentation",
             "type": "DOCUMENTATION"
           }
         ]
       }
     ],
     "contributors": [
-      "https://github.com/hendrikebbers",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem",
       "https://github.com/slawekjaranowski",
-      "https://github.com/Ndacyayisenga-droid"
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
     ]
   },
   {
-    "month": "FEBRUAR",
+    "month": "MARCH",
     "year": 2026,
-    "excerpt": "Surefire JUnit Platform PR zusammengeführt, fortgesetzte Arbeiten an der Maven-Modernisierung und Verbesserungen der Lieferkettensicherheit.",
+    "excerpt": "Fortschritte bei der Sicherheit der Lieferkette mit CycloneDX 1.7-Validierung, Vorbereitung der Maven 3.10.0-Veröffentlichung und JUnit 5-Migration.",
     "categories": [
       {
-        "title": "Modernisierung der Kernfunktionen",
+        "title": "Lieferkettensicherheit",
         "items": [
           {
-            "text": "Surefire JUnit Platform PR zusammengeführt — einheitlicher Testanbieter jetzt verfügbar",
-            "type": "FEATURE"
+            "text": "Validierung und Verbesserung der Java-Kernbibliothek für die CycloneDX 1.7 Spezifikation",
+            "link": "https://github.com/CycloneDX/cyclonedx-core-java/pull/786",
+            "type": "SECURITY"
           },
           {
-            "text": "Fortgesetzte Migration der Legacy-Testinfrastruktur zu JUnit 5",
+            "text": "Bessere reproduzierbare Builds, Erkennung der Verwendung von Versionsbereichen im Maven Artifact Plugin",
+            "link": "https://github.com/apache/maven-artifact-plugin/pull/206",
             "type": "IMPROVEMENT"
           }
         ]
       },
       {
-        "title": "Sicherheit der Lieferkette",
-        "items": [
-          {
-            "text": "Laufende Validierung der CycloneDX 1.7 Kernbibliothek-Verbesserungen",
-            "type": "SECURITY"
-          }
-        ]
-      },
-      {
         "title": "Wartung",
         "items": [
           {
-            "text": "Fehlerbehebungen für Maven Wrapper und Randfälle bei der Abhängigkeitsauflösung",
-            "type": "BUG_FIX"
-          }
-        ]
-      }
-    ],
-    "contributors": [
-      "https://github.com/hendrikebbers",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem"
-    ]
-  },
-  {
-    "month": "JANUAR",
-    "year": 2026,
-    "excerpt": "Auftakt für 2026 — Planung des Maven 3.10.0 Release, Start der Surefire-Testanbieter-Arbeit und Dokumentationsrecherche.",
-    "categories": [
-      {
-        "title": "Wartung",
-        "items": [
-          {
-            "text": "Erste Planung und Umfangsbestimmung für das Maven 3.10.0 Release",
-            "link": "https://github.com/support-and-care/maven-support-and-care/issues/195",
+            "text": "Vorbereitung für die Maven 3.10.0 Veröffentlichung",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211",
             "type": "MAINTENANCE"
           }
         ]
       },
       {
-        "title": "Modernisierung der Kernfunktionen",
+        "title": "Modernisierung zentraler Funktionen",
         "items": [
           {
-            "text": "Start der Implementierung des einheitlichen Surefire-Testanbieters",
-            "type": "FEATURE"
+            "text": "Architekturdokumentation für Surefire 3.6 aktualisieren: Informationen zum neuen vereinheitlichten Test-Provider hinzufügen",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Migration von JUnit3-basierten Tests, die AbstractMojoTestCase verwenden, auf JUnit 5 in 3.x-Branches abgeschlossen",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/201",
+            "type": "IMPROVEMENT"
           }
         ]
       },
@@ -194,14 +112,119 @@
         "title": "Dokumentation",
         "items": [
           {
-            "text": "Beginn der Evaluierung von Dokumentationswerkzeugen und statischen Seitengeneratoren",
+            "text": "Dokumentationsplattformen und -tools recherchiert und evaluiert",
             "type": "DOCUMENTATION"
           }
         ]
       }
     ],
     "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
+    "month": "FEBRUARY",
+    "year": 2026,
+    "excerpt": "Surefire JUnit Platform PR zusammengeführt, Dokumentation und Fehlerbehebung im Initializer for Apache Maven",
+    "categories": [
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Surefire JUnit Platform PR zusammengeführt – einheitlicher Testprovider jetzt verfügbar",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Fortschritte bei der Migration von JUnit3-basierten Tests auf JUnit 5",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/136",
+            "type": "MAINTENANCE"
+          },
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Erstellen Sie eine Dokumentation über die Architektur des Initializers for Apache Maven",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Fehlerbehebung nach der ersten Veröffentlichung von Initializer for Apache Maven",
+            "link": "https://maven-starter.io",
+            "type": "BUG_FIX"
+          },
+
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
+    "month": "JANUARY",
+    "year": 2026,
+    "excerpt": "Start der 'Getting Started'-Dokumentation, Finalisierung der Migration des Maven Surefire Plugins zur JUnit Platform, Ankündigung des Initializers for Apache Maven",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Unterstützung beim Hinzufügen von GitHub Ruleset in PyGitHub. Es ist eine Basisbibliothek, die verwendet wird, um Branch-Schutzregeln in Apache-Projekten durchzusetzen.",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/121",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Fortschritte bei der Migration von JUnit3-basierten Tests auf JUnit 5",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/136",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Abschluss des Refactorings des Surefire-Plugins, um nur die Junit-Plattform zum Ausführen von Tests für Junit 3, 4, 5, 6 und TestNG zu verwenden.",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Begonnen mit der Erstellung von Architektur-Dokumentationen und Blog-Beiträgen zur Java-Module Unterstützung in Maven 4",
+            "type": "DOCUMENTATION"
+          },
+
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Kick off Meeting für 'Getting started' Dokumentation",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Ankündigung des ersten Releases des Initializer for Apache Maven",
+            "link": "https://maven-starter.io",
+            "type": "MAINTENANCES"
+          },
+
+        ]
+      }
+    ],
+    "contributors": [
       "https://github.com/hendrikebbers",
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/Bukama",
+      "https://github.com/ascheman",
       "https://github.com/sparsick",
       "https://github.com/sebtiem",
       "https://github.com/olamy"
