@@ -142,7 +142,7 @@
             "text": "Make progress in migration of JUnit3 based tests JUnit 5 ",
             "link": "https://github.com/support-and-care/maven-support-and-care/issues/136",
             "type": "MAINTENANCE"
-          },
+          }
         ]
       },
       {
@@ -156,8 +156,7 @@
             "text": "Bug fixing after first release of Initializer for Apache Maven",
             "link": "https://maven-starter.io",
             "type": "BUG_FIX"
-          },
-
+          }
         ]
       }
     ],
@@ -199,8 +198,7 @@
           {
             "text": "Start creating Architecture Documentation and Blog Posts about Java Module support in Maven 4",
             "type": "DOCUMENTATION"
-          },
-
+          }
         ]
       },
       {
@@ -213,9 +211,8 @@
           {
             "text": "Announce the first release of Initializer for Apache Maven",
             "link": "https://maven-starter.io",
-            "type": "MAINTENANCES"
-          },
-
+            "type": "MAINTENANCE"
+          }
         ]
       }
     ],
