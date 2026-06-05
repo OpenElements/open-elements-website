@@ -277,9 +277,9 @@ export default function LandingPage() {
     <div className="bg-white text-blue">
       <section className="mx-auto">
         {/* Hero Background Illustrations */}
-        <div className="absolute -top-10 left-0 right-0 flex w-full items-start">
+        <div className="pointer-events-none absolute -top-10 left-0 right-0 flex w-full items-start justify-center overflow-hidden">
           <div className="hidden h-full w-full bg-blue 2xl:block" />
-          <div className="w-full 2xl:shrink-0">
+          <div className="w-full min-w-[1536px] shrink-0">
             <Image
               className="hidden w-full xl:mt-0 lg:block"
               src="/illustrations/home-bg-2.svg"
@@ -301,13 +301,13 @@ export default function LandingPage() {
         </div>
 
         <div className="container-box relative pb-8 sm:pb-0">
-          <div className="flex flex-col items-center gap-6 pt-6 lg:flex-row lg:gap-8 lg:pt-16">
+          <div className="flex flex-col items-center gap-6 pt-6 lg:flex-row lg:items-start lg:gap-6 lg:pt-16">
             <div className="relative w-full lg:flex-1 lg:min-w-0">
-              <h1 className="max-w-2xl">
-                <span className="block text-4xl font-light leading-[1.1] tracking-tight text-blue sm:text-5xl lg:text-[4.25rem]">
+              <h1 className="max-w-[738px]">
+                <span className="block text-4xl font-light leading-[1.05] tracking-[-2.2px] sm:text-6xl lg:text-[88px] lg:leading-[92px]">
                   {t('hero.titlePrefix')}
                 </span>
-                <span className="mt-2 flex items-center gap-3 text-[2rem] font-black italic leading-none sm:mt-3 sm:gap-4 sm:text-[3.25rem] lg:text-[4.25rem]">
+                <span className="mt-2 flex items-center gap-3 text-[2rem] font-black italic leading-none sm:mt-3 sm:gap-4 sm:text-[3.25rem] lg:text-[88px] lg:leading-[92px]">
                   <span
                     aria-hidden="true"
                     className="h-0.75 w-10 shrink-0 rounded-full bg-blue sm:w-16 lg:w-20"
@@ -317,11 +317,11 @@ export default function LandingPage() {
                 </span>
               </h1>
 
-              <p className="mt-4 max-w-xl text-sm text-blue sm:text-base">
+              <p className="mt-4 max-w-[646px] text-base font-normal leading-[26px]">
                 {t('hero.body')}
               </p>
 
-              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <PrimaryButton href="#why">
                   {t('hero.primaryCta')}
                 </PrimaryButton>
@@ -345,7 +345,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <div className="container-box border-b border-green/50 py-8 text-center text-sm font-medium sm:text-right">
+      <div className="container-box border-b border-[#A8DAC8] pb-4 pt-8 text-right text-base font-normal leading-[26px]">
         {t('tagline')}
       </div>
 
