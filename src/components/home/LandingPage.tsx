@@ -594,51 +594,51 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-green-100 py-16 lg:py-24">
-        <div className="container-box grid gap-12 lg:grid-cols-[0.95fr_1fr] lg:items-center">
-          <div>
+      <section className="bg-[#E2F0EA] py-16 lg:py-24">
+        <div className="container-box flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-16">
+          <div className="flex-1">
             <SectionKicker />
             <h2 className="text-3xl font-light leading-tight tracking-normal sm:text-4xl lg:text-[2.75rem]">
               {t('values.titlePrefix')}{' '}
               <span className="font-bold">{t('values.titleHighlight')}</span>
             </h2>
-            <p className="mt-6 max-w-2xl text-sm font-medium leading-7 sm:text-base">
+            <p className="mt-6 max-w-[608px] text-xl font-normal leading-8">
               {t('values.body')}
             </p>
             <Image
               src="/illustrations/general/building-open-source-universe.svg"
               alt={t('values.imageAlt')}
-              width={640}
-              height={520}
+              width={608}
+              height={421}
               loading="eager"
               unoptimized
-              className="mt-8 h-auto w-full max-w-xl"
+              className="mt-6 h-auto w-full"
             />
           </div>
 
-          <div className="grid gap-6">
+          <div className="flex flex-1 flex-col gap-4">
             {valueKeys.map((key, index) => (
               <article
                 key={key}
-                className="rounded-3xl border border-sky-100 bg-white p-7 sm:p-10">
-                <div className="flex items-center gap-3">
+                className="rounded-3xl border border-[#C5DEF3] bg-white p-6">
+                <div className="flex items-center gap-2.5">
                   <span
-                    className={`h-1 w-8 rounded-full ${
+                    className={`h-[3px] w-[26px] rounded-full ${
                       index === 0
-                        ? 'bg-green'
+                        ? 'bg-[#28A58A]'
                         : index === 1
-                          ? 'bg-rose'
-                          : 'bg-sky'
+                          ? 'bg-[#E6357B]'
+                          : 'bg-[#4A87D6]'
                     }`}
                   />
-                  <span className="text-sm font-bold text-blue/70">
+                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#3A559A]">
                     {String(index + 1).padStart(2, '0')}/03
                   </span>
                 </div>
-                <h3 className="mt-5 text-2xl font-light leading-tight tracking-normal sm:text-[1.75rem]">
+                <h3 className="mt-4 text-[30px] font-normal leading-[38px] tracking-[-0.45px]">
                   {t(`values.items.${key}.title`)}
                 </h3>
-                <p className="mt-4 text-sm font-medium leading-7">
+                <p className="mt-6 text-base font-normal leading-[26px]">
                   {t(`values.items.${key}.body`)}
                 </p>
               </article>
@@ -649,23 +649,23 @@ export default function LandingPage() {
 
       <section className="bg-white py-16 lg:py-24">
         <div className="container-box">
-          <div className="grid gap-12 lg:grid-cols-[0.95fr_1fr] lg:items-center">
-            <div>
-              <div aria-hidden="true" className="mb-7 flex items-center gap-2">
-                <span className="size-3 rounded-full bg-green" />
-                <span className="size-3 rounded-full bg-rose" />
-                <span className="size-3 rounded-full bg-sky" />
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-6">
+            <div className="flex-1">
+              <div aria-hidden="true" className="mb-6 flex items-center gap-2">
+                <span className="size-3 rounded-full bg-[#28A58A]" />
+                <span className="size-3 rounded-full bg-[#E6357B]" />
+                <span className="size-3 rounded-full bg-[#4A87D6]" />
               </div>
-              <h2 className="text-3xl font-light leading-tight tracking-normal sm:text-4xl lg:text-[2.75rem]">
+              <h2 className="text-5xl font-light leading-[72px] tracking-[-1.28px] sm:text-6xl lg:text-[64px]">
                 {t('contact.titlePrefix')}{' '}
                 <span className="font-black italic">
                   {t('contact.titleHighlight')}
                 </span>
               </h2>
-              <p className="mt-6 max-w-2xl text-sm font-medium leading-7 sm:text-base">
+              <p className="mt-6 max-w-[629px] text-xl font-normal leading-8">
                 {t('contact.body')}
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-6 sm:flex-row">
                 <PrimaryButton href="/contact/">
                   {t('contact.primaryCta')}
                 </PrimaryButton>
@@ -675,35 +675,37 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <Image
-              src="/illustrations/general/many-care-tree.svg"
-              alt={t('contact.imageAlt')}
-              width={720}
-              height={480}
-              loading="eager"
-              unoptimized
-              className="mx-auto h-auto w-full max-w-xl"
-            />
+            <div className="flex-1">
+              <Image
+                src="/illustrations/general/many-care-tree.svg"
+                alt={t('contact.imageAlt')}
+                width={629}
+                height={428}
+                loading="eager"
+                unoptimized
+                className="h-auto w-full"
+              />
+            </div>
           </div>
 
-          <div className="mt-16 border-t border-sky-100 pt-8 text-center">
-            <p className="text-base font-medium text-blue/80">
+          <div className="mt-8 border-t border-[#C5DEF3] pt-4 text-center">
+            <p className="text-base font-normal leading-[26px] text-[#3A559A]">
               {t('contact.awardsIntro')}
             </p>
-            <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:flex-row">
+            <div className="mt-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Image
                 src="/soft1.png"
                 alt={t('contact.hostedBadge')}
-                width={200}
-                height={100}
-                className="h-16 w-auto"
+                width={153}
+                height={85}
+                className="h-[85px] w-auto"
               />
               <Image
                 src="/soft2.png"
                 alt={t('contact.madeBadge')}
-                width={200}
-                height={100}
-                className="h-16 w-auto"
+                width={151}
+                height={85}
+                className="h-[85px] w-auto"
               />
             </div>
           </div>
