@@ -33,7 +33,7 @@ export default function HeroSection() {
           <div className="hidden h-full w-full bg-blue 2xl:block" />
         </div>
 
-        <div className="container-box relative pb-8 mt-16 sm:pb-0">
+        <div className="container-box relative pb-8 pt-16 sm:pb-0">
           <div className="flex flex-col items-center gap-6 pt-6 lg:flex-row lg:items-start lg:gap-6 lg:pt-16">
             <div className="relative w-full lg:flex-1 lg:min-w-0">
               <h1 className="max-w-[738px]">

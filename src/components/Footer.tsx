@@ -153,10 +153,7 @@ export default function Footer({ locale }: FooterProps) {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 flex flex-col items-start gap-2.5 border-t border-[#3A559A] pt-4 lg:flex-row lg:items-start lg:justify-between">
-          <span className="text-base leading-[26px] text-[#C5DEF3]">
-            {t('footerCopyright')}
-          </span>
+        <div className="mt-16 border-t border-[#3A559A] pt-4 text-center">
           <span className="text-base leading-[26px] text-[#C5DEF3]">
             {t('footerTagline')}
           </span>
