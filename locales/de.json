@@ -12,7 +12,17 @@
   "OpenSourceJava": "Open Source Java",
   "OpenElements2023": "Open Elements 2023",
   "contactUs": "Kontakt",
-  "footerPhrase": "Open Source, aber richtig",
+  "footerPhrase": "Open Source richtig gemacht.",
+  "footerNavigation": "Navigation",
+  "footerCompany": "Unternehmen",
+  "footerContact": "Kontakt",
+  "footerEmail": "info@open-elements.com",
+  "footerLocation": "Deutschland / Europe",
+  "footerBookAppointment": "Termin buchen",
+  "footerCopyright": "©2025",
+  "footerTagline": "Wer Open Source ernst nimmt, gestaltet es mit.",
+  "footerCodeOfConduct": "Code of Conduct",
+  "footerKarriere": "Karriere",
   "privacy": "Datenschutz",
   "privacyPolicy": "Datenschutzerklärung",
   "privacySettings": "Datenschutzeinstellungen",
@@ -57,6 +67,152 @@
     "title3": "",
     "title4": "Zusammenarbeit!",
     "description": "Wir sind davon überzeugt, dass Offenheit und Transparenz einen substanziellen Wert für Unternehmen, Projekte und Einzelpersonen schafft. Unser Ziel ist es, unsere Partner dabei zu unterstützen, wichtige Konzepte wie Open Source und Open Data zu etablieren. Dadurch werden automatisch zentrale Aspekte der IT wie Standards und Sicherheit im Unternehmen gestärkt. Durch unsere Arbeit fördern wir zudem die aktive Teilnahme in der IT-Szene und darüber hinaus."
+  },
+  "homeLanding": {
+    "tagline": "Wer Open Source ernst nimmt, gestaltet es mit.",
+    "hero": {
+      "titlePrefix": "Open Source",
+      "titleLead": "aber",
+      "titleHighlight": "richtig.",
+      "body": "Das heißt für uns: Wir kuratieren nicht nur, sondern pflegen die Java-Komponenten, auf die Du täglich setzt. Wir gestalten die offenen Standards mit, die die Zukunft nachhaltig prägen. Wir bauen eine Open-Source-Produktfamilie.",
+      "primaryCta": "Warum wir?",
+      "secondaryCta": "Erfolgsgeschichten",
+      "imageAlt": "Menschen gestalten gemeinsam ein Open-Source-Ökosystem"
+    },
+    "business": {
+      "title": "Was wir tun.",
+      "intro": "Drei Geschäftsbereiche, gleich gedacht: Jeder stärkt sich, alle drei verstärken Transparenz, Open Source und nachhaltige Digitalisierung.",
+      "areas": {
+        "supportCare": {
+          "headline": "Online Java Infrastruktur Support.",
+          "body": "Wir arbeiten mit Kubernetes, Maven, Jenkins sowie typischen Java Open-Source-Werkzeugen. Wir unterstützen Teams bei Qualitätssicherung, Build Pipelines und nachhaltigem Betrieb.",
+          "category": "Java Infrastruktur",
+          "bullets": [
+            "Langfristige Betreuung",
+            "Produktive Unterstützung",
+            "Continuous Integration"
+          ],
+          "cta": "Mehr über Support & Care",
+          "imageAlt": "Support-Mitarbeiterin mit Chat-Symbol"
+        },
+        "digitalTrust": {
+          "headline": "Authentizität durch verifizierbare Informationen.",
+          "body": "Mit offenen technischen Mitteln schaffen wir vertrauenswürdige digitale Prozesse. Dazu gehören Identitäten, Nachweise und nachvollziehbare Kommunikation.",
+          "category": "Digitale Identitäten",
+          "bullets": [
+            "Verifizierbarkeit",
+            "Technische Vertrauensmodelle",
+            "Offene Infrastruktur"
+          ],
+          "cta": "Mehr über Digital Trust",
+          "imageAlt": "Vernetzte Personen als digitale Identitäten"
+        },
+        "labs": {
+          "headline": "Software für die nächste Generation digitaler Anwendungen.",
+          "body": "In den Labs entwickeln wir technologische Grundlagen für dezentrale Infrastrukturen, nachhaltige Systeme und moderne digitale Werkzeuge.",
+          "category": "Self-Sovereign Identity",
+          "bullets": [
+            "Open-Source-Entwicklung",
+            "Interoperabilität",
+            "Innovative Systeme"
+          ],
+          "cta": "Mehr über OpenElements Labs",
+          "imageAlt": "Rakete als Symbol für neue Technologien"
+        }
+      }
+    },
+    "metrics": {
+      "share": {
+        "value": "~75%",
+        "label": "Open-Source-Anteil bei Projekten"
+      },
+      "components": {
+        "value": "500K+",
+        "label": "Komponenten im täglichen Einsatz"
+      },
+      "year": {
+        "value": "2027",
+        "label": "Langfristige Vision & Weiterentwicklung"
+      },
+      "focus": {
+        "value": "6",
+        "label": "Kernbereiche & Technologien"
+      }
+    },
+    "distinguish": {
+      "titlePrefix": "Was uns von anderen",
+      "titleHighlight": "unterscheidet.",
+      "body": "Langfristige Strategien, offene Standards und echtes Engagement in der Open-Source-Welt. Das ist es, was uns von klassischen Agenturen unterscheidet.",
+      "cta": "Open Elements ist in diesen Bereichen aktiv",
+      "imageAlt": "Open-Source-Netzwerk zwischen Europa und Deutschland",
+      "summary": "Viele Netzwerke arbeiten zusammen an Grundlagen für Open Source, digitale Identität und nachhaltige Infrastruktur.",
+      "summaryCta": "Open Elements ist in diesen Bereichen aktiv",
+      "category": "Lehre & Community",
+      "allEngagements": "Alle Engagements",
+      "engagements": {
+        "eclipse": {
+          "category": "Self-Sovereign Identity",
+          "logoAlt": "Eclipse Foundation Logo",
+          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+        },
+        "linux": {
+          "category": "Self-Sovereign Identity",
+          "logoAlt": "The Linux Foundation Logo",
+          "body": "In unseren hochmodernen Laboren entwickeln."
+        },
+        "hiero": {
+          "category": "Self-Sovereign Identity",
+          "logoAlt": "Hiero Logo",
+          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+        },
+        "decentralizedTrust": {
+          "category": "Self-Sovereign Identity",
+          "logoAlt": "Decentralized Trust Logo",
+          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+        },
+        "orc": {
+          "category": "Self-Sovereign Identity",
+          "logoAlt": "Open Regulatory Compliance Logo",
+          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+        },
+        "asf": {
+          "category": "Self-Sovereign Identity",
+          "logoAlt": "The ASF Logo",
+          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+        }
+      }
+    },
+    "values": {
+      "titlePrefix": "Was uns",
+      "titleHighlight": "leitet.",
+      "body": "Langfristige Strategien, offene Standards und echtes Engagement in der Open-Source-Welt. Das ist es, was uns von klassischen Agenturen unterscheidet.",
+      "imageAlt": "Menschen bauen gemeinsam an einem offenen digitalen Universum",
+      "items": {
+        "openness": {
+          "title": "Offenheit als Verantwortung.",
+          "body": "Wir entwickeln Lösungen transparent und nachvollziehbar. Zusammenarbeit und Wissensaustausch stehen im Mittelpunkt unserer täglichen Arbeit."
+        },
+        "community": {
+          "title": "Community vor Produkten.",
+          "body": "Nachhaltige Software entsteht durch starke Communities. Deshalb investieren wir langfristig in offene Zusammenarbeit."
+        },
+        "depth": {
+          "title": "Tiefe vor Breite.",
+          "body": "Wir konzentrieren uns auf ausgewählte Technologien und bauen darin echte Expertise auf."
+        }
+      }
+    },
+    "contact": {
+      "titlePrefix": "Lass uns",
+      "titleHighlight": "sprechen.",
+      "body": "Hast Du ein konkretes Vorhaben, bei dem Open Source eine zentrale Rolle spielt? Dann lass uns gemeinsam denken.",
+      "primaryCta": "Kontakt aufnehmen",
+      "secondaryCta": "Über uns",
+      "imageAlt": "Team arbeitet gemeinsam an einem wachsenden Baum",
+      "awardsIntro": "Wer Open Source ernst nimmt, gestaltet es mit.",
+      "hostedBadge": "Hosted in Europe",
+      "madeBadge": "Made in Europe"
+    }
   },
   "sections": {
     "openKnowledge": "Offenes Wissen",

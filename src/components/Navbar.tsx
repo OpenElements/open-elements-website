@@ -122,8 +122,9 @@ export default function Navbar({ locale }: NavbarProps) {
       return null;
     }
 
-    const gapClass = variant === 'desktop' ? 'gap-2' : 'gap-3';
+    const gapClass = variant === 'desktop' ? 'gap-2' : 'gap-0';
     const paddingClass = variant === 'desktop' ? 'px-2 py-1' : 'px-2 py-[3px]';
+    const textClass = variant === 'desktop' ? 'text-xs' : 'text-sm';
 
     return (
       <div
@@ -132,9 +133,9 @@ export default function Navbar({ locale }: NavbarProps) {
         {availableLocales.map(languageCode => (
           <span
             key={languageCode}
-            className={`rounded-full ${paddingClass} text-xs font-medium leading-none text-center ${
+            className={`rounded-full ${paddingClass} ${textClass} font-normal leading-[22px] text-center ${
               locale === languageCode
-                ? 'bg-green text-blue'
+                ? 'bg-white text-[#001452]'
                 : 'bg-transparent text-white hover:bg-white/20'
             } transition-all ease-in-out duration-150`}>
             <Link
@@ -160,7 +161,7 @@ export default function Navbar({ locale }: NavbarProps) {
       <div className="">
         <div className="container pt-16">
           <div
-            className={`fixed inset-x-0 top-0 z-30 w-full bg-blue ${pathname !== '/' ? 'border-b border-white/15' : ''}`}>
+            className={`fixed inset-x-0 top-0 z-30 w-full bg-blue border-b border-[#182A6B] ${pathname !== '/' ? 'xl:border-white/15' : 'xl:border-transparent'}`}>
             {pathname !== '/' && (
               <div
                 className="absolute inset-x-0 top-0 flex items-start w-full pointer-events-none"
@@ -184,14 +185,21 @@ export default function Navbar({ locale }: NavbarProps) {
               </div>
             )}
             <div className="mx-auto relative container-box">
-              <nav className="flex items-center justify-between py-5">
+              <nav className="flex items-center justify-between pt-5 pb-3.5 xl:py-5">
                 <Link href="/">
+                  <Image
+                    src="/icons/icon-192.png"
+                    alt="logo"
+                    width={42}
+                    height={42}
+                    className="h-[30px] w-[30px] object-contain sm:hidden"
+                  />
                   <Image
                     src="/images/logo.svg"
                     alt="logo"
                     width={120}
                     height={28}
-                    className="h-5 sm:h-7 w-full object-contain"
+                    className="hidden h-7 w-auto object-contain sm:block"
                   />
                 </Link>
 
@@ -291,17 +299,42 @@ export default function Navbar({ locale }: NavbarProps) {
                   </div>
                 </div>
 
-                <button
-                  className="xl:hidden cursor-pointer"
-                  onClick={() => setIsOpen(!isOpen)}>
-                  <Image
-                    src="/illustrations/burger-menu.svg"
-                    alt="menu"
-                    width={32}
-                    height={32}
-                    className="w-8"
-                  />
-                </button>
+                <div className="flex items-center gap-4 xl:hidden">
+                  {showLocaleSwitcher && (
+                    <div className="flex items-center gap-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="size-[22px] text-white">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+                        />
+                      </svg>
+                      {renderLocaleSwitcher('mobile')}
+                    </div>
+                  )}
+                  <button
+                    className="cursor-pointer"
+                    onClick={() => setIsOpen(!isOpen)}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
+                      <line x1="3" y1="9" x2="21" y2="9" />
+                      <line x1="3" y1="15" x2="21" y2="15" />
+                    </svg>
+                  </button>
+                </div>
               </nav>
             </div>
           </div>
