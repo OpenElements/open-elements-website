@@ -125,12 +125,6 @@ export default function Footer({ locale }: FooterProps) {
                   className="text-base leading-[26px] text-[#C5DEF3] hover:text-white transition-colors">
                   {t('impressum')}
                 </Link>
-                <span className="text-base leading-[26px] text-[#C5DEF3]">
-                  {t('footerCodeOfConduct')}
-                </span>
-                <span className="text-base leading-[26px] text-[#C5DEF3]">
-                  {t('footerKarriere')}
-                </span>
               </div>
             </div>
 

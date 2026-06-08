@@ -14,7 +14,7 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
   if (kind === 'supportCare') {
     return (
       <Image
-        src="/illustrations/support-care-logos/support-care-logo.svg"
+        src="/Support&Care.png"
         alt="Support & Care by Open Elements"
         width={260}
         height={56}
@@ -27,59 +27,28 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
 
   if (kind === 'digitalTrust') {
     return (
-      <div className="flex items-center gap-3">
-        <span className="relative size-12 shrink-0">
-          <span className="absolute left-1/2 top-1/2 size-9 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-sky" />
-          <span className="absolute left-1 top-2 size-3 rounded-full bg-rose" />
-          <span className="absolute right-1 top-2 size-3 rounded-full bg-sky" />
-          <span className="absolute bottom-1 left-3 size-3 rounded-full bg-purple" />
-          <span className="absolute bottom-2 right-2 size-3 rounded-full bg-green" />
-          <span className="absolute left-1/2 top-1/2 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white ring-2 ring-blue" />
-        </span>
-        <span className="leading-none">
-          <span className="block text-2xl font-bold tracking-normal text-blue sm:text-3xl">
-            Digital Trust
-          </span>
-          <span className="block text-right text-xs font-medium text-blue/70">
-            by Open Elements
-          </span>
-        </span>
-      </div>
+      <Image
+        src="/image1.png"
+        alt="Digital Trust by Open Elements"
+        width={260}
+        height={56}
+        loading="eager"
+        unoptimized
+        className="h-14 w-auto max-w-full"
+      />
     );
   }
 
   return (
-    <div className="flex items-center gap-3">
-      <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-green">
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 24 24"
-          fill="none"
-          className="size-7 text-white">
-          <path
-            d="M9 3h6M10 3v5.5l-4.5 7.8A3 3 0 0 0 8.1 21h7.8a3 3 0 0 0 2.6-4.5L14 8.5V3"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M8.2 15h7.6"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-          />
-        </svg>
-      </span>
-      <span className="leading-none">
-        <span className="text-2xl font-bold text-blue sm:text-3xl">
-          OpenElements
-        </span>
-        <span className="ml-2 text-2xl font-semibold italic text-green sm:text-3xl">
-          Labs
-        </span>
-      </span>
-    </div>
+    <Image
+      src="/image2.png"
+      alt="Open Elements Labs"
+      width={260}
+      height={56}
+      loading="eager"
+      unoptimized
+      className="h-14 w-auto max-w-full"
+    />
   );
 }
 

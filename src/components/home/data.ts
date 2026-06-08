@@ -48,6 +48,7 @@ export const businessAreas: BusinessAreaConfig[] = [
     accent: 'text-[#001452]',
     borderColor: 'border-[#3A559A]',
     dividerColor: 'divide-[#3A559A]',
+    image: '/card-service-img.png',
   },
 ];
 
