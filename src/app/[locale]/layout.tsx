@@ -36,6 +36,9 @@ export async function generateMetadata({
     de: 'Open Source, aber richtig - Open Elements ist ein modernes Unternehmen mit einem Fokus auf Open Source und Java',
   };
 
+  const feedTitle =
+    locale === 'de' ? 'Open Elements – Artikel' : 'Open Elements – Articles';
+
   return {
     title: titles[locale as keyof typeof titles] || titles.en,
     description:
@@ -47,6 +50,15 @@ export async function generateMetadata({
       'open source Support',
       'Java Support',
     ],
+    alternates: {
+      types: {
+        'application/rss+xml': [
+          { url: '/feed.xml', title: feedTitle },
+          { url: '/rss.xml', title: feedTitle },
+          { url: '/posts/index.xml', title: feedTitle },
+        ],
+      },
+    },
     openGraph: {
       type: 'website',
       url:
@@ -92,6 +104,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icons/favicon.ico" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </head>
       <body
         className={`${montserrat.className} bg-blue`}
