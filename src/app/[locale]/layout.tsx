@@ -52,11 +52,7 @@ export async function generateMetadata({
     ],
     alternates: {
       types: {
-        'application/rss+xml': [
-          { url: '/feed.xml', title: feedTitle },
-          { url: '/rss.xml', title: feedTitle },
-          { url: '/posts/index.xml', title: feedTitle },
-        ],
+        'application/rss+xml': [{ url: '/feed.xml', title: feedTitle }],
       },
     },
     openGraph: {
