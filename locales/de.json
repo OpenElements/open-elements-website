@@ -17,12 +17,11 @@
   "footerCompany": "Unternehmen",
   "footerContact": "Kontakt",
   "footerEmail": "info@open-elements.com",
-  "footerLocation": "Deutschland / Europe",
+  "footerLocation": "Deutschland / Europa",
   "footerBookAppointment": "Termin buchen",
-  "footerCopyright": "©2025",
   "footerTagline": "Wer Open Source ernst nimmt, gestaltet es mit.",
-  "footerCodeOfConduct": "Code of Conduct",
-  "footerKarriere": "Karriere",
+  "openMenu": "Navigationsmenü öffnen",
+  "closeMenu": "Navigationsmenü schließen",
   "privacy": "Datenschutz",
   "privacyPolicy": "Datenschutzerklärung",
   "privacySettings": "Datenschutzeinstellungen",
@@ -122,21 +121,21 @@
       }
     },
     "metrics": {
-      "share": {
-        "value": "~75%",
-        "label": "Open-Source-Anteil bei Projekten"
-      },
-      "components": {
+      "downloads": {
         "value": "500K+",
-        "label": "Komponenten im täglichen Einsatz"
+        "label": "Tägliche Downloads von Eclipse Temurin, das wir mitbetreuen"
       },
-      "year": {
+      "foundations": {
+        "value": "3",
+        "label": "Stiftungen, in denen wir Governance-Sitze halten"
+      },
+      "champions": {
+        "value": "4",
+        "label": "Java Champions in unserem Team"
+      },
+      "cra": {
         "value": "2027",
-        "label": "Langfristige Vision & Weiterentwicklung"
-      },
-      "focus": {
-        "value": "6",
-        "label": "Kernbereiche & Technologien"
+        "label": "CRA tritt in Kraft — wir sind heute schon bereit"
       }
     },
     "distinguish": {
@@ -151,34 +150,34 @@
       "allEngagements": "Alle Engagements",
       "engagements": {
         "eclipse": {
-          "category": "Self-Sovereign Identity",
+          "category": "Board of Directors",
           "logoAlt": "Eclipse Foundation Logo",
-          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+          "body": "Wir helfen, Europas größte Open-Source-Stiftung zu lenken — die Heimat von Jakarta EE, Adoptium/Temurin und der Eclipse-IDE."
         },
         "linux": {
-          "category": "Self-Sovereign Identity",
+          "category": "Mitglied",
           "logoAlt": "The Linux Foundation Logo",
-          "body": "In unseren hochmodernen Laboren entwickeln."
+          "body": "Wir engagieren uns in der einflussreichsten Open-Source-Stiftung der Welt — von Decentralized Trust bis zu Standards für KI-Agenten."
         },
         "hiero": {
-          "category": "Self-Sovereign Identity",
+          "category": "TSC Chair",
           "logoAlt": "Hiero Logo",
-          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+          "body": "Wir leiten die technische Ausrichtung dieses quelloffenen Distributed-Ledger-Projekts unter dem Dach der LFDT."
         },
         "decentralizedTrust": {
-          "category": "Self-Sovereign Identity",
+          "category": "TAB Vice Chair",
           "logoAlt": "Decentralized Trust Logo",
-          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+          "body": "Wir gestalten den technischen Fahrplan für digitales Vertrauen, Identität und sichere Lieferketten mit."
         },
         "orc": {
-          "category": "Self-Sovereign Identity",
+          "category": "Gründungsmitglied",
           "logoAlt": "Open Regulatory Compliance Logo",
-          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+          "body": "Wir übersetzen den Cyber Resilience Act in praxistaugliche Regeln für Open Source."
         },
         "asf": {
-          "category": "Self-Sovereign Identity",
-          "logoAlt": "The ASF Logo",
-          "body": "In unseren hochmodernen Laboren entwickeln wir die nächste Generation digitaler Werkzeuge."
+          "category": "Maintainer",
+          "logoAlt": "Apache Software Foundation Logo",
+          "body": "Wir pflegen und verantworten Projekte, auf die ihr baut — Maven, Log4j, Commons."
         }
       }
     },

@@ -319,6 +319,10 @@ export default function Navbar({ locale }: NavbarProps) {
                     </div>
                   )}
                   <button
+                    type="button"
+                    aria-label={t('openMenu')}
+                    aria-expanded={isOpen}
+                    aria-controls="mobile-navigation"
                     className="cursor-pointer"
                     onClick={() => setIsOpen(!isOpen)}>
                     <svg
@@ -343,7 +347,9 @@ export default function Navbar({ locale }: NavbarProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed inset-0 top-0 z-30 h-full bg-blue xl:hidden">
+        <div
+          id="mobile-navigation"
+          className="fixed inset-0 top-0 z-30 h-full bg-blue xl:hidden">
           <div className="relative w-full h-screen">
             <Image
               className="absolute inset-0 object-cover w-full h-full"
@@ -363,7 +369,11 @@ export default function Navbar({ locale }: NavbarProps) {
                   className="h-5 sm:h-7 w-auto"
                 />
               </Link>
-              <button className="xl:hidden" onClick={() => setIsOpen(false)}>
+              <button
+                type="button"
+                aria-label={t('closeMenu')}
+                className="xl:hidden"
+                onClick={() => setIsOpen(false)}>
                 <Image
                   className="w-7 cursor-pointer"
                   alt="close button icon"

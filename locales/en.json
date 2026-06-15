@@ -17,12 +17,11 @@
   "footerCompany": "Company",
   "footerContact": "Contact",
   "footerEmail": "info@open-elements.com",
-  "footerLocation": "Deutschland / Europe",
+  "footerLocation": "Germany / Europe",
   "footerBookAppointment": "Book appointment",
-  "footerCopyright": "©2025",
   "footerTagline": "Those who take Open Source seriously help shape it.",
-  "footerCodeOfConduct": "Code of Conduct",
-  "footerKarriere": "Careers",
+  "openMenu": "Open navigation menu",
+  "closeMenu": "Close navigation menu",
   "privacy": "Privacy",
   "privacyPolicy": "Privacy Policy",
   "privacySettings": "Privacy Config",
@@ -122,21 +121,21 @@
       }
     },
     "metrics": {
-      "share": {
-        "value": "~75%",
-        "label": "Open-source share in projects"
-      },
-      "components": {
+      "downloads": {
         "value": "500K+",
-        "label": "Components in daily use"
+        "label": "Daily downloads of Eclipse Temurin we co-maintain"
       },
-      "year": {
+      "foundations": {
+        "value": "3",
+        "label": "Foundations where we hold governance seats"
+      },
+      "champions": {
+        "value": "4",
+        "label": "Java Champions in our team"
+      },
+      "cra": {
         "value": "2027",
-        "label": "Long-term vision & development"
-      },
-      "focus": {
-        "value": "6",
-        "label": "Core areas & technologies"
+        "label": "CRA in force — we're ready today"
       }
     },
     "distinguish": {
@@ -151,34 +150,34 @@
       "allEngagements": "All engagements",
       "engagements": {
         "eclipse": {
-          "category": "Self-sovereign identity",
+          "category": "Board of Directors",
           "logoAlt": "Eclipse Foundation logo",
-          "body": "In our modern labs, we develop the next generation of digital tools."
+          "body": "We help govern Europe's largest open-source foundation — home to Jakarta EE, Adoptium/Temurin and the Eclipse IDE."
         },
         "linux": {
-          "category": "Self-sovereign identity",
+          "category": "Member",
           "logoAlt": "The Linux Foundation logo",
-          "body": "In our modern labs, we develop."
+          "body": "We contribute across the world's most influential open-source foundation, from decentralized trust to standards for AI agents."
         },
         "hiero": {
-          "category": "Self-sovereign identity",
+          "category": "TSC Chair",
           "logoAlt": "Hiero logo",
-          "body": "In our modern labs, we develop the next generation of digital tools."
+          "body": "We lead the technical direction of this open-source distributed-ledger project under LFDT."
         },
         "decentralizedTrust": {
-          "category": "Self-sovereign identity",
+          "category": "TAB Vice Chair",
           "logoAlt": "Decentralized Trust logo",
-          "body": "In our modern labs, we develop the next generation of digital tools."
+          "body": "We co-set the technical roadmap for digital trust, identity and secure supply chains."
         },
         "orc": {
-          "category": "Self-sovereign identity",
+          "category": "Founding member",
           "logoAlt": "Open Regulatory Compliance logo",
-          "body": "In our modern labs, we develop the next generation of digital tools."
+          "body": "We turn the Cyber Resilience Act into practical, workable rules for open source."
         },
         "asf": {
-          "category": "Self-sovereign identity",
-          "logoAlt": "The ASF logo",
-          "body": "In our modern labs, we develop the next generation of digital tools."
+          "category": "Maintainers",
+          "logoAlt": "Apache Software Foundation logo",
+          "body": "We maintain and govern projects you depend on — Maven, Log4j, Commons."
         }
       }
     },

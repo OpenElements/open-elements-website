@@ -21,6 +21,7 @@ function ChevronDown({ className }: { className?: string }) {
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
       className={className}>
       <polyline points="6 9 12 15 18 9" />
     </svg>
@@ -60,17 +61,24 @@ export default function Footer({ locale }: FooterProps) {
           <div className="flex flex-col gap-[53px] lg:flex-row lg:gap-[53px]">
             {/* Navigation column */}
             <div className="flex flex-col gap-6 lg:gap-4">
-              <button
-                className="flex items-center justify-between lg:pointer-events-none"
-                onClick={() => toggleSection('nav')}>
-                <h3 className="text-xs font-bold uppercase leading-[26px] tracking-[1.2px] text-white">
+              <h3 className="w-full text-xs font-bold uppercase leading-[26px] tracking-[1.2px] text-white">
+                <button
+                  type="button"
+                  aria-expanded={openSection === 'nav'}
+                  aria-controls="footer-navigation-links"
+                  className="flex w-full items-center justify-between lg:hidden"
+                  onClick={() => toggleSection('nav')}>
                   {t('footerNavigation')}
-                </h3>
-                <ChevronDown
-                  className={`lg:hidden transition-transform ${openSection === 'nav' ? 'rotate-180' : ''}`}
-                />
-              </button>
+                  <ChevronDown
+                    className={`transition-transform ${openSection === 'nav' ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                <span className="hidden lg:inline">
+                  {t('footerNavigation')}
+                </span>
+              </h3>
               <div
+                id="footer-navigation-links"
                 className={`flex-col gap-4 ${openSection === 'nav' ? 'flex' : 'hidden'} lg:flex`}>
                 {mainMenu.map((item, index) => {
                   if (!item.visibleInFooter) return null;
@@ -102,17 +110,22 @@ export default function Footer({ locale }: FooterProps) {
 
             {/* Company column */}
             <div className="flex flex-col gap-6 lg:gap-4">
-              <button
-                className="flex items-center justify-between lg:pointer-events-none"
-                onClick={() => toggleSection('company')}>
-                <h3 className="text-xs font-bold uppercase leading-[26px] tracking-[1.2px] text-white">
+              <h3 className="w-full text-xs font-bold uppercase leading-[26px] tracking-[1.2px] text-white">
+                <button
+                  type="button"
+                  aria-expanded={openSection === 'company'}
+                  aria-controls="footer-company-links"
+                  className="flex w-full items-center justify-between lg:hidden"
+                  onClick={() => toggleSection('company')}>
                   {t('footerCompany')}
-                </h3>
-                <ChevronDown
-                  className={`lg:hidden transition-transform ${openSection === 'company' ? 'rotate-180' : ''}`}
-                />
-              </button>
+                  <ChevronDown
+                    className={`transition-transform ${openSection === 'company' ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                <span className="hidden lg:inline">{t('footerCompany')}</span>
+              </h3>
               <div
+                id="footer-company-links"
                 className={`flex-col gap-4 ${openSection === 'company' ? 'flex' : 'hidden'} lg:flex`}>
                 <a
                   href="https://www.iubenda.com/privacy-policy/63821551"

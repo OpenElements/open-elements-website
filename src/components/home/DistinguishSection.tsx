@@ -2,24 +2,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import SectionKicker from '@/components/ui/SectionKicker';
 import SecondaryButton from '@/components/ui/SecondaryButton';
-import { engagements, type EngagementConfig } from './data';
-
-function EngagementMark({ kind }: { kind: EngagementConfig['key'] }) {
-  if (kind === 'decentralizedTrust') {
-    return (
-      <div className="leading-none text-sky">
-        <span className="block text-2xl font-black uppercase tracking-normal sm:text-3xl">
-          LFDT
-        </span>
-        <span className="block text-2xl font-light uppercase tracking-normal sm:text-3xl">
-          Decentralized Trust
-        </span>
-      </div>
-    );
-  }
-
-  return null;
-}
+import { engagements } from './data';
 
 export default function DistinguishSection() {
   const t = useTranslations('homeLanding');
@@ -77,21 +60,17 @@ export default function DistinguishSection() {
                     {t(`distinguish.engagements.${engagement.key}.category`)}
                   </p>
                   <div className="mt-4 flex h-[86px] items-center">
-                    {engagement.logo ? (
-                      <Image
-                        src={engagement.logo}
-                        alt={t(
-                          `distinguish.engagements.${engagement.key}.logoAlt`,
-                        )}
-                        width={280}
-                        height={120}
-                        loading="eager"
-                        unoptimized
-                        className={engagement.logoClassName}
-                      />
-                    ) : (
-                      <EngagementMark kind={engagement.key} />
-                    )}
+                    <Image
+                      src={engagement.logo}
+                      alt={t(
+                        `distinguish.engagements.${engagement.key}.logoAlt`,
+                      )}
+                      width={280}
+                      height={120}
+                      loading="eager"
+                      unoptimized
+                      className={engagement.logoClassName}
+                    />
                   </div>
                   <p className="mt-4 text-base font-normal leading-[26px]">
                     {t(`distinguish.engagements.${engagement.key}.body`)}

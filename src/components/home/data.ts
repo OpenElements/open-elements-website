@@ -14,7 +14,7 @@ export interface BusinessAreaConfig {
 
 export interface EngagementConfig {
   key: 'eclipse' | 'linux' | 'hiero' | 'decentralizedTrust' | 'orc' | 'asf';
-  logo?: string;
+  logo: string;
   logoClassName?: string;
 }
 
@@ -52,7 +52,12 @@ export const businessAreas: BusinessAreaConfig[] = [
   },
 ];
 
-export const metricKeys = ['share', 'components', 'year', 'focus'] as const;
+export const metricKeys = [
+  'downloads',
+  'foundations',
+  'champions',
+  'cra',
+] as const;
 
 export const engagements: EngagementConfig[] = [
   {
@@ -72,6 +77,8 @@ export const engagements: EngagementConfig[] = [
   },
   {
     key: 'decentralizedTrust',
+    logo: '/lfdt.png',
+    logoClassName: 'h-16 w-auto sm:h-20',
   },
   {
     key: 'orc',

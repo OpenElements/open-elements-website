@@ -144,13 +144,14 @@ export default function BusinessAreasSection() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex shrink-0 items-center">
+                  <div className="relative h-36 w-40 shrink-0">
                     {area.image ? (
-                      /* eslint-disable-next-line @next/next/no-img-element */
-                      <img
+                      <Image
                         src={area.image}
                         alt={t(`business.areas.${area.key}.imageAlt`)}
-                        className="h-36 w-auto"
+                        fill
+                        sizes="160px"
+                        className="object-contain"
                       />
                     ) : (
                       <svg

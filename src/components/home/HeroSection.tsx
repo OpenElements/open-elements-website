@@ -11,26 +11,24 @@ export default function HeroSection() {
       <section className="mx-auto">
         {/* Hero Background Illustrations */}
         <div className="pointer-events-none absolute -top-10 left-0 right-0 flex w-full items-start justify-center overflow-hidden">
-          <div className="hidden h-full w-full bg-blue 2xl:block" />
-          <div className="w-full min-w-[1536px] shrink-0">
+          <div className=" hidden h-[662px] w-full min-w-[1536px] shrink-0 lg:block">
             <Image
-              className="hidden w-full xl:mt-0 lg:block"
+              className="object-fill"
               src="/illustrations/home-bg-2.svg"
               alt="Hero background"
-              width={2000}
-              height={600}
-              priority
-            />
-            <Image
-              className="absolute inset-0 -top-10 block w-full object-cover object-center sm:-top-24 md:-top-28 lg:hidden"
-              src="/illustrations/m-bg-hero.svg"
-              alt="Hero background for mobile"
-              width={800}
-              height={600}
+              fill
+              sizes="100vw"
               priority
             />
           </div>
-          <div className="hidden h-full w-full bg-blue 2xl:block" />
+          <Image
+            className="absolute inset-0 -top-10 block w-full object-cover object-center sm:-top-24 md:-top-28 lg:hidden"
+            src="/illustrations/m-bg-hero.svg"
+            alt="Hero background for mobile"
+            width={800}
+            height={600}
+            priority
+          />
         </div>
 
         <div className="container-box relative pb-8 pt-16 sm:pb-0">
