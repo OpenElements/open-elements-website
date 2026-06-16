@@ -14,7 +14,7 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
   if (kind === 'supportCare') {
     return (
       <Image
-        src="/Support&Care.png"
+        src="/illustrations/landing-page/support-care-logo.svg"
         alt="Support & Care by Open Elements"
         width={260}
         height={56}
@@ -28,7 +28,7 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
   if (kind === 'digitalTrust') {
     return (
       <Image
-        src="/image1.png"
+        src="/illustrations/landing-page/digital-trust-logo.svg"
         alt="Digital Trust by Open Elements"
         width={260}
         height={56}
@@ -41,7 +41,7 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
 
   return (
     <Image
-      src="/image2.png"
+      src="/illustrations/landing-page/open-elements-labs-logo.svg"
       alt="Open Elements Labs"
       width={260}
       height={56}
@@ -123,12 +123,14 @@ export default function BusinessAreasSection() {
                 <p className="mt-3 text-sm font-medium leading-7">
                   {t(`business.areas.${area.key}.body`)}
                 </p>
-                <div className="mt-7">
-                  <AreaLink
-                    area={area}
-                    label={t(`business.areas.${area.key}.cta`)}
-                  />
-                </div>
+                {!area.hideCta && (
+                  <div className="mt-7">
+                    <AreaLink
+                      area={area}
+                      label={t(`business.areas.${area.key}.cta`)}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className={`${area.borderColor} lg:border-l lg:pl-10`}>

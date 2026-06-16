@@ -5,6 +5,7 @@ export interface BusinessAreaConfig {
   number: string;
   href: string;
   external?: boolean;
+  hideCta?: boolean;
   background: string;
   accent: string;
   borderColor: string;
@@ -27,12 +28,13 @@ export const businessAreas: BusinessAreaConfig[] = [
     accent: 'text-[#28A58A]',
     borderColor: 'border-[#C9E4D9]',
     dividerColor: 'divide-[#A8DAC8]',
-    image: '/19-helper 1.png',
+    image: '/illustrations/landing-page/19-helper.svg',
   },
   {
     key: 'digitalTrust',
     number: '02',
     href: '/dlt-lecture/',
+    hideCta: true,
     background: 'bg-[#E5EFF9]',
     accent: 'text-[#E6357B]',
     borderColor: 'border-[#C5DEF3]',
@@ -48,7 +50,7 @@ export const businessAreas: BusinessAreaConfig[] = [
     accent: 'text-[#001452]',
     borderColor: 'border-[#3A559A]',
     dividerColor: 'divide-[#3A559A]',
-    image: '/card-service-img.png',
+    image: '/illustrations/landing-page/05-software-launch.svg',
   },
 ];
 
@@ -77,7 +79,7 @@ export const engagements: EngagementConfig[] = [
   },
   {
     key: 'decentralizedTrust',
-    logo: '/lfdt.png',
+    logo: '/illustrations/landing-page/lfdt-stacked-color.svg',
     logoClassName: 'h-16 w-auto sm:h-20',
   },
   {

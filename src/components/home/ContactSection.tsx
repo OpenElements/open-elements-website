@@ -47,28 +47,6 @@ export default function ContactSection() {
             />
           </div>
         </div>
-
-        <div className="mt-8 border-t border-[#C5DEF3] pt-4 text-center">
-          <p className="text-base font-normal leading-[26px] text-[#3A559A]">
-            {t('contact.awardsIntro')}
-          </p>
-          <div className="mt-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Image
-              src="/soft1.png"
-              alt={t('contact.hostedBadge')}
-              width={153}
-              height={85}
-              className="h-[85px] w-auto"
-            />
-            <Image
-              src="/soft2.png"
-              alt={t('contact.madeBadge')}
-              width={151}
-              height={85}
-              className="h-[85px] w-auto"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -83,27 +83,26 @@
       "intro": "Drei Geschäftsbereiche, gleich gedacht: Jeder stärkt sich, alle drei verstärken Transparenz, Open Source und nachhaltige Digitalisierung.",
       "areas": {
         "supportCare": {
-          "headline": "Online Java Infrastruktur Support.",
-          "body": "Wir arbeiten mit Kubernetes, Maven, Jenkins sowie typischen Java Open-Source-Werkzeugen. Wir unterstützen Teams bei Qualitätssicherung, Build Pipelines und nachhaltigem Betrieb.",
-          "category": "Java Infrastruktur",
+          "headline": "Wir pflegen die Open Source, auf der euer Stack läuft.",
+          "body": "Wir nutzen Open Source nicht nur — wir pflegen sie. Als Maintainer hinter Basiskomponenten wie Maven, JUnit, Log4j und Temurin sind wir der vertragliche Ansprechpartner für Sicherheit, langfristige Wartung und CRA-Konformität des Codes, auf dem euer Stack aufbaut.",
+          "category": "Java-Basiskomponenten",
           "bullets": [
-            "Langfristige Betreuung",
-            "Produktive Unterstützung",
-            "Continuous Integration"
+            "Sicherheits-Updates & LTS",
+            "CRA-Konformität",
+            "Direkt von den Maintainern"
           ],
           "cta": "Mehr über Support & Care",
           "imageAlt": "Support-Mitarbeiterin mit Chat-Symbol"
         },
         "digitalTrust": {
-          "headline": "Authentizität durch verifizierbare Informationen.",
-          "body": "Mit offenen technischen Mitteln schaffen wir vertrauenswürdige digitale Prozesse. Dazu gehören Identitäten, Nachweise und nachvollziehbare Kommunikation.",
-          "category": "Digitale Identitäten",
+          "headline": "Vertrauen, das sich überprüfen lässt.",
+          "body": "Wir bauen die offene Infrastruktur für digitales Vertrauen: Wir arbeiten aktiv an der quelloffene Distributed Ledger Technologie (DLT) Hiero unter der Linux Foundation und entwickeln eine Lösung, um fälschungssichere digitale Nachweise auszustellen und zu prüfen.",
+          "category": "Digitales Vertrauen",
           "bullets": [
-            "Verifizierbarkeit",
-            "Technische Vertrauensmodelle",
+            "Verifizierbare Nachweise",
+            "Distributed Ledger Hiero",
             "Offene Infrastruktur"
           ],
-          "cta": "Mehr über Digital Trust",
           "imageAlt": "Vernetzte Personen als digitale Identitäten"
         },
         "labs": {
@@ -144,10 +143,6 @@
       "body": "Langfristige Strategien, offene Standards und echtes Engagement in der Open-Source-Welt. Das ist es, was uns von klassischen Agenturen unterscheidet.",
       "cta": "Open Elements ist in diesen Bereichen aktiv",
       "imageAlt": "Open-Source-Netzwerk zwischen Europa und Deutschland",
-      "summary": "Viele Netzwerke arbeiten zusammen an Grundlagen für Open Source, digitale Identität und nachhaltige Infrastruktur.",
-      "summaryCta": "Open Elements ist in diesen Bereichen aktiv",
-      "category": "Lehre & Community",
-      "allEngagements": "Alle Engagements",
       "engagements": {
         "eclipse": {
           "category": "Board of Directors",
@@ -207,10 +202,7 @@
       "body": "Hast Du ein konkretes Vorhaben, bei dem Open Source eine zentrale Rolle spielt? Dann lass uns gemeinsam denken.",
       "primaryCta": "Kontakt aufnehmen",
       "secondaryCta": "Über uns",
-      "imageAlt": "Team arbeitet gemeinsam an einem wachsenden Baum",
-      "awardsIntro": "Wer Open Source ernst nimmt, gestaltet es mit.",
-      "hostedBadge": "Hosted in Europe",
-      "madeBadge": "Made in Europe"
+      "imageAlt": "Team arbeitet gemeinsam an einem wachsenden Baum"
     }
   },
   "sections": {

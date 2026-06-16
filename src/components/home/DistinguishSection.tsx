@@ -80,30 +80,6 @@ export default function DistinguishSection() {
             })}
           </div>
         </div>
-
-        <div className="mt-6 grid gap-6 rounded-3xl border border-[#C5DEF3] bg-white p-6 lg:grid-cols-[1fr_auto] lg:items-center">
-          <p className="text-xl font-normal leading-8">
-            {t('distinguish.summary')}
-          </p>
-          <SecondaryButton href="/about/#div2">
-            {t('distinguish.summaryCta')}
-          </SecondaryButton>
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-end gap-6 border-b border-[#9EC5EC] pb-6 sm:justify-between">
-          <div className="flex items-center gap-4">
-            <span className="inline-block size-3 rotate-45 rounded-sm bg-blue" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-black">
-              {t('distinguish.category')}
-            </span>
-            <span className="text-base font-normal leading-[26px] text-[#3A559A]">
-              {t('tagline')}
-            </span>
-          </div>
-          <SecondaryButton href="/about/#div2">
-            {t('distinguish.allEngagements')}
-          </SecondaryButton>
-        </div>
       </div>
     </section>
   );
