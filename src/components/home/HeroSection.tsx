@@ -56,9 +56,9 @@ export default function HeroSection() {
                 <PrimaryButton href="#why">
                   {t('hero.primaryCta')}
                 </PrimaryButton>
-                <SecondaryButton href="#engagements">
+                {/* <SecondaryButton href="#engagements">
                   {t('hero.secondaryCta')}
-                </SecondaryButton>
+                </SecondaryButton> */}
               </div>
             </div>
 
