@@ -28,7 +28,7 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
   if (kind === 'digitalTrust') {
     return (
       <Image
-        src="/illustrations/landing-page/digital-trust-logo.svg"
+        src="/illustrations/landing-page/open-elements-labs-logo.svg"
         alt="Digital Trust by Open Elements"
         width={260}
         height={56}
@@ -41,7 +41,7 @@ function ProductLogo({ kind }: { kind: ProductKind }) {
 
   return (
     <Image
-      src="/illustrations/landing-page/open-elements-labs-logo.svg"
+      src="/illustrations/landing-page/digital-trust-logo.svg"
       alt="Open Elements Labs"
       width={260}
       height={56}
