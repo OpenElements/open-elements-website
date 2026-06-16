@@ -12,7 +12,16 @@
   "OpenSourceJava": "Open Source Java",
   "OpenElements2023": "Open Elements 2023",
   "contactUs": "Contact us",
-  "footerPhrase": "Open Source made right",
+  "footerPhrase": "Open Source done right.",
+  "footerNavigation": "Navigation",
+  "footerCompany": "Company",
+  "footerContact": "Contact",
+  "footerEmail": "info@open-elements.com",
+  "footerLocation": "Germany / Europe",
+  "footerBookAppointment": "Book appointment",
+  "footerTagline": "Those who take Open Source seriously help shape it.",
+  "openMenu": "Open navigation menu",
+  "closeMenu": "Close navigation menu",
   "privacy": "Privacy",
   "privacyPolicy": "Privacy Policy",
   "privacySettings": "Privacy Config",
@@ -57,6 +66,144 @@
     "title3": "of",
     "title4": "Open Collaboration!",
     "description": "We believe that openness and transparency create substantial value for companies, projects, and individuals. Our goal is to support our partners in establishing important concepts such as Open Source and Open Data. This strengthens core aspects of IT, such as standards and security automatically within the company. Through our work, we also promote active engagement in the IT scene and beyond."
+  },
+  "homeLanding": {
+    "tagline": "Those who take Open Source seriously help shape it.",
+    "hero": {
+      "titlePrefix": "Open Source",
+      "titleLead": "done",
+      "titleHighlight": "right.",
+      "body": "For us, that means more: we don't just use open source — we maintain and take responsibility for the Java components you build on every day. We help shape the open standards that sustainably define the future. We are building an open-source product family.",
+      "primaryCta": "Why us?",
+      "secondaryCta": "Success stories",
+      "imageAlt": "People collaboratively shaping an open-source ecosystem"
+    },
+    "business": {
+      "title": "What we do.",
+      "intro": "Three business areas, one shared idea: each strengthens the others, and together they advance transparency, open source, and sustainable digitalization.",
+      "areas": {
+        "supportCare": {
+          "headline": "We maintain the open source your stack runs on.",
+          "body": "We don't just use open source — we maintain it. As the maintainers behind base components like Maven, JUnit, Log4j and Temurin, we are the contractual partner for the security, long-term maintenance and CRA compliance of the code your stack depends on.",
+          "category": "Java base components",
+          "bullets": [
+            "Security updates & LTS",
+            "CRA compliance",
+            "Direct line to the maintainers"
+          ],
+          "cta": "More about Support & Care",
+          "imageAlt": "Support specialist with a chat symbol"
+        },
+        "digitalTrust": {
+          "headline": "Trust you can verify.",
+          "body": "We build the open infrastructure for digital trust: we are maintainers of the open-source Hiero distributed ledger Technology (DLT) under the Linux Foundation and develop a solution for issuing and verifying tamper-proof digital credentials.",
+          "category": "Digital trust",
+          "bullets": [
+            "Verifiable credentials",
+            "Hiero distributed ledger",
+            "Open infrastructure"
+          ],
+          "imageAlt": "Networked people as digital identities"
+        },
+        "labs": {
+          "headline": "Software for the next generation of digital applications.",
+          "body": "In the labs, we develop technological foundations for decentralized infrastructure, sustainable systems, and modern digital tools.",
+          "category": "Self-sovereign identity",
+          "bullets": [
+            "Open-source development",
+            "Interoperability",
+            "Innovative systems"
+          ],
+          "cta": "More about OpenElements Labs",
+          "imageAlt": "Rocket symbolizing new technologies"
+        }
+      }
+    },
+    "metrics": {
+      "downloads": {
+        "value": "500K+",
+        "label": "Daily downloads of Eclipse Temurin we co-maintain"
+      },
+      "foundations": {
+        "value": "3",
+        "label": "Foundations where we hold governance seats"
+      },
+      "champions": {
+        "value": "4",
+        "label": "Java Champions in our team"
+      },
+      "cra": {
+        "value": "2027",
+        "label": "CRA in force — we're ready today"
+      }
+    },
+    "distinguish": {
+      "titlePrefix": "What makes us",
+      "titleHighlight": "different.",
+      "body": "Long-term strategies, open standards, and genuine commitment in the open-source world. That is what distinguishes us from traditional agencies.",
+      "cta": "Open Elements is active in these areas",
+      "imageAlt": "Open-source network between Europe and Germany",
+      "engagements": {
+        "eclipse": {
+          "category": "Board of Directors",
+          "logoAlt": "Eclipse Foundation logo",
+          "body": "We help govern Europe's largest open-source foundation — home to Jakarta EE, Adoptium/Temurin and the Eclipse IDE."
+        },
+        "linux": {
+          "category": "Member",
+          "logoAlt": "The Linux Foundation logo",
+          "body": "We contribute across the world's most influential open-source foundation, from decentralized trust to standards for AI agents."
+        },
+        "hiero": {
+          "category": "TSC Chair",
+          "logoAlt": "Hiero logo",
+          "body": "We lead the technical direction of this open-source distributed-ledger project under LFDT."
+        },
+        "decentralizedTrust": {
+          "category": "TAB Vice Chair",
+          "logoAlt": "Decentralized Trust logo",
+          "body": "We co-set the technical roadmap for digital trust, identity and secure supply chains."
+        },
+        "orc": {
+          "category": "Founding member",
+          "logoAlt": "Open Regulatory Compliance logo",
+          "body": "We turn the Cyber Resilience Act into practical, workable rules for open source."
+        },
+        "asf": {
+          "category": "Maintainers",
+          "logoAlt": "Apache Software Foundation logo",
+          "body": "We maintain and govern projects you depend on — Maven, Log4j, Commons."
+        }
+      }
+    },
+    "values": {
+      "titlePrefix": "What guides",
+      "titleHighlight": "us.",
+      "body": "Long-term strategies, open standards, and genuine commitment in the open-source world. That is what distinguishes us from traditional agencies.",
+      "imageAlt": "People building an open digital universe together",
+      "items": {
+        "openness": {
+          "title": "Openness as responsibility.",
+          "body": "We develop solutions transparently and traceably. Collaboration and knowledge sharing are at the center of our daily work."
+        },
+        "community": {
+          "title": "Community before products.",
+          "body": "Sustainable software is created by strong communities. That is why we invest long-term in open collaboration."
+        },
+        "depth": {
+          "title": "Depth before breadth.",
+          "body": "We focus on selected technologies and build real expertise within them."
+        }
+      }
+    },
+    "contact": {
+      "titlePrefix": "Let's",
+      "titleHighlight": "talk.",
+      "body": "Do you have a concrete project where open source plays a central role? Then let's think it through together.",
+      "primaryCta": "Contact us",
+      "secondaryCta": "About us",
+      "imageAlt": "Team working together on a growing tree"
+    }
   },
   "sections": {
     "openKnowledge": "Open Knowledge",

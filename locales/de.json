@@ -12,7 +12,16 @@
   "OpenSourceJava": "Open Source Java",
   "OpenElements2023": "Open Elements 2023",
   "contactUs": "Kontakt",
-  "footerPhrase": "Open Source, aber richtig",
+  "footerPhrase": "Open Source richtig gemacht.",
+  "footerNavigation": "Navigation",
+  "footerCompany": "Unternehmen",
+  "footerContact": "Kontakt",
+  "footerEmail": "info@open-elements.com",
+  "footerLocation": "Deutschland / Europa",
+  "footerBookAppointment": "Termin buchen",
+  "footerTagline": "Wer Open Source ernst nimmt, gestaltet es mit.",
+  "openMenu": "Navigationsmenü öffnen",
+  "closeMenu": "Navigationsmenü schließen",
   "privacy": "Datenschutz",
   "privacyPolicy": "Datenschutzerklärung",
   "privacySettings": "Datenschutzeinstellungen",
@@ -57,6 +66,144 @@
     "title3": "",
     "title4": "Zusammenarbeit!",
     "description": "Wir sind davon überzeugt, dass Offenheit und Transparenz einen substanziellen Wert für Unternehmen, Projekte und Einzelpersonen schafft. Unser Ziel ist es, unsere Partner dabei zu unterstützen, wichtige Konzepte wie Open Source und Open Data zu etablieren. Dadurch werden automatisch zentrale Aspekte der IT wie Standards und Sicherheit im Unternehmen gestärkt. Durch unsere Arbeit fördern wir zudem die aktive Teilnahme in der IT-Szene und darüber hinaus."
+  },
+  "homeLanding": {
+    "tagline": "Wer Open Source ernst nimmt, gestaltet es mit.",
+    "hero": {
+      "titlePrefix": "Open Source",
+      "titleLead": "aber",
+      "titleHighlight": "richtig.",
+      "body": "Das heißt für uns: Wir nutzen Open Source nicht nur, wir pflegen und verantworten die Java-Komponenten, auf die Du täglich baust. Wir gestalten die offenen Standards mit, die die Zukunft nachhaltig prägen. Wir bauen eine Open-Source-Produktfamilie.",
+      "primaryCta": "Warum wir?",
+      "secondaryCta": "Erfolgsgeschichten",
+      "imageAlt": "Menschen gestalten gemeinsam ein Open-Source-Ökosystem"
+    },
+    "business": {
+      "title": "Was wir tun.",
+      "intro": "Drei Geschäftsbereiche, gleich gedacht: Jeder stärkt sich, alle drei verstärken Transparenz, Open Source und nachhaltige Digitalisierung.",
+      "areas": {
+        "supportCare": {
+          "headline": "Wir pflegen die Open Source, auf der euer Stack läuft.",
+          "body": "Wir nutzen Open Source nicht nur — wir pflegen sie. Als Maintainer hinter Basiskomponenten wie Maven, JUnit, Log4j und Temurin sind wir der vertragliche Ansprechpartner für Sicherheit, langfristige Wartung und CRA-Konformität des Codes, auf dem euer Stack aufbaut.",
+          "category": "Java-Basiskomponenten",
+          "bullets": [
+            "Sicherheits-Updates & LTS",
+            "CRA-Konformität",
+            "Direkt von den Maintainern"
+          ],
+          "cta": "Mehr über Support & Care",
+          "imageAlt": "Support-Mitarbeiterin mit Chat-Symbol"
+        },
+        "digitalTrust": {
+          "headline": "Vertrauen, das sich überprüfen lässt.",
+          "body": "Wir bauen die offene Infrastruktur für digitales Vertrauen: Wir arbeiten aktiv an der quelloffene Distributed Ledger Technologie (DLT) Hiero unter der Linux Foundation und entwickeln eine Lösung, um fälschungssichere digitale Nachweise auszustellen und zu prüfen.",
+          "category": "Digitales Vertrauen",
+          "bullets": [
+            "Verifizierbare Nachweise",
+            "Distributed Ledger Hiero",
+            "Offene Infrastruktur"
+          ],
+          "imageAlt": "Vernetzte Personen als digitale Identitäten"
+        },
+        "labs": {
+          "headline": "Software für die nächste Generation digitaler Anwendungen.",
+          "body": "In den Labs entwickeln wir technologische Grundlagen für dezentrale Infrastrukturen, nachhaltige Systeme und moderne digitale Werkzeuge.",
+          "category": "Self-Sovereign Identity",
+          "bullets": [
+            "Open-Source-Entwicklung",
+            "Interoperabilität",
+            "Innovative Systeme"
+          ],
+          "cta": "Mehr über OpenElements Labs",
+          "imageAlt": "Rakete als Symbol für neue Technologien"
+        }
+      }
+    },
+    "metrics": {
+      "downloads": {
+        "value": "500K+",
+        "label": "Tägliche Downloads von Eclipse Temurin, das wir mitbetreuen"
+      },
+      "foundations": {
+        "value": "3",
+        "label": "Stiftungen, in denen wir Governance-Sitze halten"
+      },
+      "champions": {
+        "value": "4",
+        "label": "Java Champions in unserem Team"
+      },
+      "cra": {
+        "value": "2027",
+        "label": "CRA tritt in Kraft — wir sind heute schon bereit"
+      }
+    },
+    "distinguish": {
+      "titlePrefix": "Was uns von anderen",
+      "titleHighlight": "unterscheidet.",
+      "body": "Langfristige Strategien, offene Standards und echtes Engagement in der Open-Source-Welt. Das ist es, was uns von klassischen Agenturen unterscheidet.",
+      "cta": "Open Elements ist in diesen Bereichen aktiv",
+      "imageAlt": "Open-Source-Netzwerk zwischen Europa und Deutschland",
+      "engagements": {
+        "eclipse": {
+          "category": "Board of Directors",
+          "logoAlt": "Eclipse Foundation Logo",
+          "body": "Wir helfen, Europas größte Open-Source-Stiftung zu lenken — die Heimat von Jakarta EE, Adoptium/Temurin und der Eclipse-IDE."
+        },
+        "linux": {
+          "category": "Mitglied",
+          "logoAlt": "The Linux Foundation Logo",
+          "body": "Wir engagieren uns in der einflussreichsten Open-Source-Stiftung der Welt — von Decentralized Trust bis zu Standards für KI-Agenten."
+        },
+        "hiero": {
+          "category": "TSC Chair",
+          "logoAlt": "Hiero Logo",
+          "body": "Wir leiten die technische Ausrichtung dieses quelloffenen Distributed-Ledger-Projekts unter dem Dach der LFDT."
+        },
+        "decentralizedTrust": {
+          "category": "TAB Vice Chair",
+          "logoAlt": "Decentralized Trust Logo",
+          "body": "Wir gestalten den technischen Fahrplan für digitales Vertrauen, Identität und sichere Lieferketten mit."
+        },
+        "orc": {
+          "category": "Gründungsmitglied",
+          "logoAlt": "Open Regulatory Compliance Logo",
+          "body": "Wir übersetzen den Cyber Resilience Act in praxistaugliche Regeln für Open Source."
+        },
+        "asf": {
+          "category": "Maintainer",
+          "logoAlt": "Apache Software Foundation Logo",
+          "body": "Wir pflegen und verantworten Projekte, auf die ihr baut — Maven, Log4j, Commons."
+        }
+      }
+    },
+    "values": {
+      "titlePrefix": "Was uns",
+      "titleHighlight": "leitet.",
+      "body": "Langfristige Strategien, offene Standards und echtes Engagement in der Open-Source-Welt. Das ist es, was uns von klassischen Agenturen unterscheidet.",
+      "imageAlt": "Menschen bauen gemeinsam an einem offenen digitalen Universum",
+      "items": {
+        "openness": {
+          "title": "Offenheit als Verantwortung.",
+          "body": "Wir entwickeln Lösungen transparent und nachvollziehbar. Zusammenarbeit und Wissensaustausch stehen im Mittelpunkt unserer täglichen Arbeit."
+        },
+        "community": {
+          "title": "Community vor Produkten.",
+          "body": "Nachhaltige Software entsteht durch starke Communities. Deshalb investieren wir langfristig in offene Zusammenarbeit."
+        },
+        "depth": {
+          "title": "Tiefe vor Breite.",
+          "body": "Wir konzentrieren uns auf ausgewählte Technologien und bauen darin echte Expertise auf."
+        }
+      }
+    },
+    "contact": {
+      "titlePrefix": "Lass uns",
+      "titleHighlight": "sprechen.",
+      "body": "Hast Du ein konkretes Vorhaben, bei dem Open Source eine zentrale Rolle spielt? Dann lass uns gemeinsam denken.",
+      "primaryCta": "Kontakt aufnehmen",
+      "secondaryCta": "Über uns",
+      "imageAlt": "Team arbeitet gemeinsam an einem wachsenden Baum"
+    }
   },
   "sections": {
     "openKnowledge": "Offenes Wissen",
