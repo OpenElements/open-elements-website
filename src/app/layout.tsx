@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://open-elements.com'),
   title: 'Open Elements - Open Source made right',
   description:
     'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
@@ -28,6 +29,13 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Open Elements - Open Source made right',
+    description:
+      'Open Source made right - Open Elements is a modern company with a clear focus on Open Source and Java',
+    images: ['/open-graph/open-elements.png'],
   },
 };
 

@@ -40,6 +40,7 @@ export async function generateMetadata({
     locale === 'de' ? 'Open Elements – Artikel' : 'Open Elements – Articles';
 
   return {
+    metadataBase: new URL('https://open-elements.com'),
     title: titles[locale as keyof typeof titles] || titles.en,
     description:
       descriptions[locale as keyof typeof descriptions] || descriptions.en,
@@ -74,6 +75,13 @@ export async function generateMetadata({
         },
       ],
       locale: locale === 'de' ? 'de_DE' : 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description:
+        descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      images: ['/open-graph/open-elements.png'],
     },
   };
 }
