@@ -69,7 +69,7 @@ Drei Ebenen, eine Erkenntnis: Digitale Souveränität ist keine PR-Folie, sonder
 
 Ein möglicher Kurzschluss vorweg: Wenn der Staat die gemeinsame Infrastruktur finanziert — muss ein Unternehmen dann selbst überhaupt noch etwas tun? Ja, und zwar auf einer anderen Ebene. Selbst wenn die öffentliche Hand über die nächsten Jahre die Pflege einer souveränen, offenen Infrastruktur übernimmt, **bleiben Firmen für die Open-Source-Komponenten in ihren eigenen Produkten verantwortlich** — und unter dem CRA sogar haftbar. Gut instandgehaltene Autobahnen nehmen schließlich niemandem die Wartung des eigenen Fuhrparks ab. Genau diese zweite Ebene ist gemeint, wenn es im Folgenden um Verantwortung geht.
 
-{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/connect-oss-politics" width="100%" showCaption=true alt="Open Elements ist ein Bindeglied zwischen Open-Source und Politik">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/connect-oss-politics.svg" width="100%" showCaption=true alt="Open Elements ist ein Bindeglied zwischen Open-Source und Politik">}}
 
 Für alle, die Verantwortung für reale Systeme tragen, heißt das dreierlei:
 
