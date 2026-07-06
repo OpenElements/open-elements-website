@@ -17,13 +17,13 @@ In wenigen Wochen habe ich an drei Tischen gesessen, die kaum weiter auseinander
 
 Von der globalen über die nationale bis auf die kommunale Ebene steht ein Thema inzwischen überall auf der Tagesordnung: **digitale Souveränität**. Das ist die gute Nachricht. Die unbequeme lautet: Zwischen dem _Reden_ über Souveränität und dem _Bauen_ souveräner Systeme klafft noch eine große Lücke. Geschlossen werden muss diese nicht an einem einzigen Ort, sondern auf jeder Ebene. Bis hinunter in die eigene Stadt.
 
-{{< centered-image src="/api/files/019f2834-d183-719b-a84c-e95ba41b4d80/Bildschirmfoto_2026-07-03_um_15.39.07.png" width="100%" showCaption=true alt="Ebenen, in denen Digitale Souveränität aktuell diskutiert wird">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/TODO.jpeg" width="100%" showCaption=true alt="Ebenen, in denen Digitale Souveränität aktuell diskutiert wird">}}
 
 ## United Nations – die globale Ebene
 
 Die [UN Open Source Week](https://www.unopensource.org) (22.–26. Juni 2026) ist innerhalb weniger Jahre aus einem kleinen Treffen zu einem globalen Forum mit Expert\*innen aus rund 75 Ländern gewachsen. Ich war dort, um die Perspektive der unabhängigen Open-Source-Stiftungen einzubringen und konkret die **Eclipse Foundation** und **LF Decentralized Trust** zu vertreten.
 
-{{< centered-image src="/api/files/019f281e-097e-76c9-aee2-ffc2e2cdd49a/1782137148556.jpeg" width="100%" alt="Hendrik Ebbers bei der UN Open Source Week in New York">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/at-un.jpeg" width="100%" alt="Hendrik Ebbers bei der UN Open Source Week in New York">}}
 
 Das Leitthema der Konferenz war klar definiert: Open Source als Weg, kritische digitale Infrastruktur _gemeinsam_ aufzubauen, statt sie in den Händen weniger Anbieter zu konzentrieren. Diese Sorge vor wenigen mächtigen Anbietern zog sich durch die Woche und hat eine neue Dimension bekommen: Auch KI wird heute überwiegend auf den Werken weniger (der westlichen Welt) trainiert und bildet die Vielfalt der Menschen, die sie nutzen, kaum ab.
 
@@ -33,13 +33,13 @@ Inhaltlicher Höhepunkt war der Konferenztag **„OSPOs for Good"** — mit Keyn
 - **Finanzierung ist Staatsaufgabe, nicht Wohltätigkeit.** Auf dem Finanzierungs-Panel brachte es die Sovereign Tech Agency auf den Punkt: Kritische Open-Source-Technologien sind die Straßen und Brücken des digitalen Zeitalters — in sie zu investieren ist keine Wohltätigkeit, sondern im 21. Jahrhundert schlicht Staatsaufgabe. Entsprechend gehört nachhaltige Finanzierung in die öffentliche Hand — mit Rechenschaft, aber ohne die Last weiter auf einzelne Maintainer abzuwälzen. Die deutschen Initiativen [Sovereign Tech Agency](https://www.sovereign.tech) und das Zentrum für Digitale Souveränität (ZenDiS) wurden über die Woche mehrmals als klare Piloten und Vorzeigeprojekte dieser Bewegung benannt. Klar gemacht wird auch, dass solche Initiativen nicht von Wahlzyklen abhängig gemacht werden dürfen. Verlässlichkeit kann hier vor allem in der Zusammenarbeit mit dem privaten Sektor entstehen. Hier freue ich mich natürlich sehr, dass Open Elements mit beiden dieser positiven Piloten ([Sovereign Tech Agency](https://www.sovereign.tech) und ZenDiS) aktiv zusammenarbeitet.
 - **Regierungen handeln bereits.** Besonders greifbar wurde das an den Regierungs-OSPOs einkommensschwächerer Länder — EU-finanzierte Pilotprojekte etwa in Kenia (im Ministerium verankert, mit Fokus auf Schulung, lokale Entwickler-Community und einen souveränen Open-Source-Stack) und in Trinidad & Tobago (neue nationale „Open Source First"-Politik inklusive öffentlicher Beschaffung).
 
-{{< centered-image src="/api/files/019f2818-33b8-75fa-8944-8d5952f278a9/IMG_3254_2.jpeg" width="100%" alt="Konferenztag „OSPOs for Good" bei der UN Open Source Week">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/un-africa-panel.jpeg" width="100%" alt="Panel zur digitalen Souveränität in Afrika bei der UN Open Source Week">}}
 
 Wie ernst diese Bewegung ist, zeigt ein Papier, das UNDP in genau dieser Woche veröffentlicht hat: _Digital Public Infrastructure in Africa (LINK)_. Darin wird digitale öffentliche Infrastruktur, wie etwa Identität, Zahlungen oder Datenaustausch, ausdrücklich nicht als reine Technik beschrieben, sondern als _kritische Souveränitätsschicht_.
 
 Offene Standards, Digital Public Goods und wiederverwendbare Open-Source-Bausteine sind der Weg, Vendor-Lock-in zu vermeiden und die Kontrolle über die eigenen Daten zu behalten. Wer das versäumt, so die Warnung, wird zum Konsumenten von kostspieligen Plattformen oder KI, die auf fremden Realitäten trainiert wurde. Und als konkreten Baustein nennt das Papier ausgerechnet Open Source Program Offices — dieselbe Idee, die auch bei „OSPOs for Good" im Zentrum stand.
 
-{{< centered-image src="/api/files/019f2819-39c7-71df-ad89-4ce6b8eee9f1/Bildschirmfoto_2026-07-03_um_15.09.02.png" width="100%" alt="UNDP-Papier zu Digital Public Infrastructure in Africa">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/africa-paper.png" width="100%" alt="UNDP-Papier zu Digital Public Infrastructure in Africa">}}
 
 Wie eng die globale und die deutsche Ebene zusammenhängen, wurde in New York übrigens sehr sichtbar: Die Eröffnungs-Keynote im ECOSOC-Saal der Vereinten Nationen hielt mit Thomas Jarzombek ein deutscher Parlamentarischer Staatssekretär (Bundesministerium für Digitales und Staatsmodernisierung). Bemerkenswert war, wie konkret er wurde: Statt allgemeiner Bekenntnisse nannte er eine Reihe deutscher Vorzeigeprojekte nach dem Prinzip _Public Money, Public Code_ — neben der bereits erwähnten Sovereign Tech Agency etwa die Plattform OpenCode des Zentrums für Digitale Souveränität (ZenDiS), die quelloffene EUDI-Wallet, GovStack für die Digitalisierung von Verwaltungen weltweit und OpenDesk, das inzwischen sogar der Internationale Strafgerichtshof einsetzt. Amandeep Gill, Untergeneralsekretär des UN-Büros für digitale und neue Technologien (UN ODET), nannte Deutschland und die STA daraufhin eine tragende Säule dieser Arbeit. Bei aller berechtigten Kritik an der konkreten Umsetzung von _Public Money, Public Code_: International muss sich Deutschland nicht verstecken. Womit wir bei der zweiten Ebene wären.
 
@@ -47,7 +47,7 @@ Wie eng die globale und die deutsche Ebene zusammenhängen, wurde in New York ü
 
 Dass das Thema in Deutschland angekommen ist, lässt sich an einem Ort besonders gut ablesen: dem Parlament. Beim Roundtable im Deutschen Bundestag saßen Politik, Verwaltung und Praxis an einem Tisch und die Tonlage hat sich in den letzten Monaten wirklich spürbar verschoben: Open Source ist nicht länger ein Nischenthema für Idealisten, sondern wird als strategische Frage der staatlichen Handlungsfähigkeit verhandelt: Wer kontrolliert die Software, auf der unsere Verwaltung, unsere Banken und unsere Industrie laufen?
 
-{{< centered-image src="/api/files/019f2822-6c1c-753e-9742-04e8e7c3f2e5/Unbenannt-1.png" width="100%" alt="Roundtable zu Open Source im Deutschen Bundestag">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/oss-bundestag.png" width="100%" alt="Roundtable zu Open Source im Deutschen Bundestag">}}
 
 Mein Eindruck aus Berlin: Der politische Wille ist da. Was jetzt entscheidet, ist die Übersetzung dieses Willens in operative Realität — in Beschaffung, in Pflege, in verlässliche Verantwortlichkeiten.
 
@@ -57,7 +57,7 @@ Und dann die dritte Ebene — die, die mir am nächsten ist. In meiner Heimatsta
 
 Für mich ist das keine Beobachtung aus der Distanz: Open Elements ist Mitglied im BVMW und Mitgründer von dessen Dortmunder Arbeitsgruppe „Digitale Souveränität", die den Sitz der Wirtschaft im Board übernimmt. Gemeinsam mit Mausbrand und Do-FOSS treten wir hier gerade in Vorleistung — von der Initiative bis zu den Gründungsdokumenten, die wir zusammen erarbeitet haben.
 
-{{< centered-image src="/api/files/019f361b-2e74-76d4-bd8a-b49628366f3f/Bildschirmfoto_2026-07-06_um_08.25.51.png" width="100%" showCaption=true alt="Treffen des Fachkreises „Digitale Souveränität" in Dortmund">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/bvmw-fachkreis.jpeg" width="100%" showCaption=true alt="Treffen des Fachkreises „Digitale Souveränität" in Dortmund">}}
 
 Das Board berät die Kommune, analysiert und priorisiert gemeinsam mit der Wirtschaftsförderung — eingebettet in deren Strategie „WFDO 2030: Digitale Souveränität und Open Source". Dortmund nutzt damit seine Rolle als IT-Standort und wirtschaftliches Oberzentrum, um Souveränität nicht nur zu fordern, sondern die dafür nötigen Dienstleistungen und Güter lokal und in kooperativen Modellen bereitzustellen. Die erste Sitzung ist für die DiWoDo 2026 geplant; Charter und Governance liegen von Anfang an offen auf Codeberg und werden in Zukunft auf OpenCode umziehen.
 
@@ -68,6 +68,8 @@ Was auf UN-Ebene „OSPO" heißt und in Berlin als politisches Bekenntnis verhan
 Drei Ebenen, eine Erkenntnis: Digitale Souveränität ist keine PR-Folie, sondern eine **Bau-Entscheidung**. Sie fällt nicht im Plenarsaal, sondern in der Architektur — und zwar auf jeder Ebene neu.
 
 Ein möglicher Kurzschluss vorweg: Wenn der Staat die gemeinsame Infrastruktur finanziert — muss ein Unternehmen dann selbst überhaupt noch etwas tun? Ja, und zwar auf einer anderen Ebene. Selbst wenn die öffentliche Hand über die nächsten Jahre die Pflege einer souveränen, offenen Infrastruktur übernimmt, **bleiben Firmen für die Open-Source-Komponenten in ihren eigenen Produkten verantwortlich** — und unter dem CRA sogar haftbar. Gut instandgehaltene Autobahnen nehmen schließlich niemandem die Wartung des eigenen Fuhrparks ab. Genau diese zweite Ebene ist gemeint, wenn es im Folgenden um Verantwortung geht.
+
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/connect-oss-politics" width="100%" showCaption=true alt="Open Elements ist ein Bindeglied zwischen Open-Source und Politik">}}
 
 Für alle, die Verantwortung für reale Systeme tragen, heißt das dreierlei:
 
