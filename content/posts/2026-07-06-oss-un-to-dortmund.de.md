@@ -17,7 +17,7 @@ In wenigen Wochen habe ich an drei Tischen gesessen, die kaum weiter auseinander
 
 Von der globalen über die nationale bis auf die kommunale Ebene steht ein Thema inzwischen überall auf der Tagesordnung: **digitale Souveränität**. Das ist die gute Nachricht. Die unbequeme lautet: Zwischen dem _Reden_ über Souveränität und dem _Bauen_ souveräner Systeme klafft noch eine große Lücke. Geschlossen werden muss diese nicht an einem einzigen Ort, sondern auf jeder Ebene. Bis hinunter in die eigene Stadt.
 
-{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/TODO.jpeg" width="100%" showCaption=true alt="Ebenen, in denen Digitale Souveränität aktuell diskutiert wird">}}
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/un-to-do.png" width="100%" showCaption=true alt="Ebenen, in denen Digitale Souveränität aktuell diskutiert wird">}}
 
 ## United Nations – die globale Ebene
 
