@@ -6,7 +6,7 @@ date: 2026-07-06
 author: hendrik
 excerpt: "Drei Termine, ein Thema — von der UN Open Source Week über einen Roundtable im Bundestag bis zu einem neuen Open Source Board in meiner Heimatstadt. Auf allen Ebenen ging es in den letzten Wochen um das Thema \"Digitale Souveränität\"."
 categories: [Open Elements, Open-Source, Security]
-preview_image: "/posts/preview-images/open-source-2-green.svg"
+preview_image: "/posts/preview-images/oss-world.svg"
 ---
 
 In wenigen Wochen habe ich an drei Tischen gesessen, die kaum weiter auseinanderliegen könnten. Trotzdem ging es doch um exakt dasselbe:
