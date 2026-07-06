@@ -2,7 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Genug geredet: Wie digitale Souveränität von der UN bis Dortmund konkret wird"
-date: 2026-03-19
+date: 2026-07-06
 author: hendrik
 excerpt: "Drei Termine, ein Thema — von der UN Open Source Week über einen Roundtable im Bundestag bis zu einem neuen Open Source Board in meiner Heimatstadt. Auf allen Ebenen ging es in den letzten Wochen um das Thema \"Digitale Souveränität\"."
 categories: [Open Elements, Open-Source, Security]
