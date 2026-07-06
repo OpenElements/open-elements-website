@@ -77,6 +77,8 @@ Für alle, die Verantwortung für reale Systeme tragen, heißt das dreierlei:
 - Kritische OSS braucht eine adressierbare Verantwortung — eine Bibliothek in Ihrem Produktivsystem ohne vertraglichen Ansprechpartner ist ein Risiko, kein Geschenk. Mit unserem [Support & Care Angebot](/de/support-care) bietet Open Elements eine klare Risikominimierung für Java-basierte Anwendungen.
 - Compliance kommt ohnehin. Ab **2027** verantworten Hersteller unter dem Cyber Resilience Act (CRA) 100 % ihrer Software, inklusive aller Open-Source-Bausteine. Mehr dazu in unserem [Artikel zum CRA](/de/posts/2025/12/15/cyber-resilience-act-übersicht-und-auswirkungen).
 
+{{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/support-and-care.png" width="100%" alt="Support and Care by Open Elements">}}
+
 ## Unsere Position
 
 Open Elements arbeitet seit Jahren an genau diesem Übersetzungsschritt — von der politischen Absicht zur betriebsfähigen Realität. Wir sind der vertragliche Partner für jene „geschenkten Werkzeuge", auf denen Ihre IT läuft: kritische Java-Komponenten wie Eclipse Temurin, Apache Maven, JUnit oder Apache Log4j, professionell gepflegt, mit Gewährleistung und einem benennbaren Ansprechpartner. Über unsere Rolle in der Eclipse Foundation, in LF Decentralized Trust und in der [Open Regulatory Compliance Working Group (ORC WG)](https://orcwg.org) gestalten wir die Regeln mit, über die in New York und Berlin gesprochen wird — und in Dortmund fangen wir vor der eigenen Haustür damit an.
