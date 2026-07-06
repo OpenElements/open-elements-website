@@ -35,7 +35,7 @@ Inhaltlicher Höhepunkt war der Konferenztag **„OSPOs for Good"** — mit Keyn
 
 {{< centered-image src="/posts/2026-07-06-oss-un-to-dortmund/un-africa-panel.jpeg" width="100%" showCaption=true alt="Panel zur digitalen Souveränität in Afrika bei der UN Open Source Week">}}
 
-Wie ernst diese Bewegung ist, zeigt ein Papier, das UNDP in genau dieser Woche veröffentlicht hat: _Digital Public Infrastructure in Africa (LINK)_. Darin wird digitale öffentliche Infrastruktur, wie etwa Identität, Zahlungen oder Datenaustausch, ausdrücklich nicht als reine Technik beschrieben, sondern als _kritische Souveränitätsschicht_.
+Wie ernst diese Bewegung ist, zeigt ein Papier, das UNDP in genau dieser Woche veröffentlicht hat: [_Digital Public Infrastructure in Africa_](https://www.undp.org/sites/g/files/zskgke326/files/2026-06/undp-africa-dpi-full_report-digital-version-v2.3_compr2.pdf). Darin wird digitale öffentliche Infrastruktur, wie etwa Identität, Zahlungen oder Datenaustausch, ausdrücklich nicht als reine Technik beschrieben, sondern als _kritische Souveränitätsschicht_.
 
 Offene Standards, Digital Public Goods und wiederverwendbare Open-Source-Bausteine sind der Weg, Vendor-Lock-in zu vermeiden und die Kontrolle über die eigenen Daten zu behalten. Wer das versäumt, so die Warnung, wird zum Konsumenten von kostspieligen Plattformen oder KI, die auf fremden Realitäten trainiert wurde. Und als konkreten Baustein nennt das Papier ausgerechnet Open Source Program Offices — dieselbe Idee, die auch bei „OSPOs for Good" im Zentrum stand.
 
