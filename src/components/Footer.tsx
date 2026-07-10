@@ -5,6 +5,7 @@ import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { useState } from 'react';
 import mainMenu from '@/data/mainMenu.json';
+import Script from 'next/script';
 
 interface FooterProps {
   locale: string;
@@ -173,7 +174,9 @@ export default function Footer({ locale }: FooterProps) {
         </div>
       </div>
 
-      <script
+      <Script
+        id="iubenda-loader"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
           (function (w,d) {
