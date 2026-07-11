@@ -1,51 +1,125 @@
 name: Sitemap Parity
 
-# Fires whenever a deployment status changes on any commit — Netlify posts one
-# of these every time it finishes a build (both PR previews and prod).
-# We only act on successful `deploy-preview` deployments and check every URL
-# listed in the current production sitemap against the freshly-deployed
-# preview. If a page in prod has become unreachable on the preview, the check
-# fails and blocks the PR.
+# Ensures every URL currently listed in the production sitemap is still
+# reachable on the deployment that will be produced by this branch. Runs on:
+#   - pull_request  -> waits for the Netlify deploy-preview, then checks
+#   - push to main  -> waits for the Netlify production deploy, then checks
+#
+# In both cases the job blocks until the Netlify deployment for the exact
+# commit under test reports success (via GitHub's Deployments API), then runs
+# the check against that deploy's target URL. If any prod URL is unreachable
+# on the new deploy, the check fails and blocks the merge.
+
 on:
-  deployment_status:
+  pull_request:
+    branches: ['main']
+  push:
+    branches: ['main']
 
 permissions:
   contents: read
-  # Needed so failed check runs show up on the PR conversation timeline.
-  statuses: read
+  deployments: read
 
 concurrency:
-  group: sitemap-parity-${{ github.event.deployment.sha }}
+  group: sitemap-parity-${{ github.event.pull_request.head.sha || github.sha }}
   cancel-in-progress: true
 
 jobs:
   check:
-    # Only run when a Netlify deploy preview has just succeeded.
-    if: >-
-      github.event.deployment_status.state == 'success' &&
-      startsWith(github.event.deployment.environment, 'deploy-preview')
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps:
-      - name: Checkout code at the deployed commit
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.deployment.sha }}
+          # For PRs, check out the PR head commit so the script matches what
+          # Netlify actually deployed. For pushes, this is the pushed commit.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Check sitemap parity
-        env:
-          PREVIEW_URL: ${{ github.event.deployment_status.target_url }}
+      - name: Determine expected Netlify environment
+        id: env
         run: |
-          if [ -z "$PREVIEW_URL" ]; then
-            echo "::error::No preview URL available on this deployment_status event."
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "expected=deploy-preview" >> "$GITHUB_OUTPUT"
+            echo "sha=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "expected=production" >> "$GITHUB_OUTPUT"
+            echo "sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Wait for Netlify deployment
+        id: wait
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ steps.env.outputs.sha }}
+          EXPECTED_ENV_PREFIX: ${{ steps.env.outputs.expected }}
+          # Total wait budget in seconds (default 15 min) and poll interval.
+          WAIT_TIMEOUT: '900'
+          WAIT_INTERVAL: '15'
+        run: |
+          set -euo pipefail
+          echo "Waiting for a successful Netlify deployment on commit $SHA ..."
+          echo "Expected environment prefix: $EXPECTED_ENV_PREFIX"
+
+          deadline=$(( $(date +%s) + WAIT_TIMEOUT ))
+          preview_url=""
+
+          while [ "$(date +%s)" -lt "$deadline" ]; do
+            # List deployments GitHub knows about for this SHA. Netlify posts
+            # one per build (deploy-preview-<PR#> for PRs, production for main).
+            deployments_json=$(gh api \
+              "repos/${{ github.repository }}/deployments?sha=$SHA&per_page=100")
+
+            ids=$(printf '%s' "$deployments_json" \
+              | jq -r --arg prefix "$EXPECTED_ENV_PREFIX" \
+                '.[] | select(.environment | startswith($prefix)) | .id')
+
+            for id in $ids; do
+              status_json=$(gh api \
+                "repos/${{ github.repository }}/deployments/$id/statuses?per_page=100")
+              latest_state=$(printf '%s' "$status_json" | jq -r '.[0].state // ""')
+              latest_target=$(printf '%s' "$status_json" | jq -r '.[0].target_url // ""')
+              latest_env_url=$(printf '%s' "$status_json" | jq -r '.[0].environment_url // ""')
+
+              if [ "$latest_state" = "success" ]; then
+                # Prefer environment_url (canonical site URL) over target_url
+                # (which Netlify sometimes sets to the deploy log page).
+                if [ -n "$latest_env_url" ] && [ "$latest_env_url" != "null" ]; then
+                  preview_url="$latest_env_url"
+                else
+                  preview_url="$latest_target"
+                fi
+                if [ -n "$preview_url" ] && [ "$preview_url" != "null" ]; then
+                  echo "Found successful deployment: $id -> $preview_url"
+                  break 2
+                fi
+              elif [ "$latest_state" = "failure" ] || [ "$latest_state" = "error" ]; then
+                echo "::error::Netlify deployment $id reported state=$latest_state for commit $SHA."
+                exit 1
+              fi
+            done
+
+            echo "No successful deployment yet, sleeping ${WAIT_INTERVAL}s ..."
+            sleep "$WAIT_INTERVAL"
+          done
+
+          if [ -z "$preview_url" ]; then
+            echo "::error::Timed out after ${WAIT_TIMEOUT}s waiting for a Netlify deployment on $SHA."
             exit 1
           fi
+
+          echo "preview_url=$preview_url" >> "$GITHUB_OUTPUT"
+
+      - name: Check sitemap parity
+        env:
+          PREVIEW_URL: ${{ steps.wait.outputs.preview_url }}
+        run: |
           echo "Preview URL: $PREVIEW_URL"
           node scripts/check-sitemap-parity.mjs \
             --prod-base=https://open-elements.com \
