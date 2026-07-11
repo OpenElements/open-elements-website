@@ -1,0 +1,54 @@
+name: Sitemap Parity
+
+# Fires whenever a deployment status changes on any commit — Netlify posts one
+# of these every time it finishes a build (both PR previews and prod).
+# We only act on successful `deploy-preview` deployments and check every URL
+# listed in the current production sitemap against the freshly-deployed
+# preview. If a page in prod has become unreachable on the preview, the check
+# fails and blocks the PR.
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+  # Needed so failed check runs show up on the PR conversation timeline.
+  statuses: read
+
+concurrency:
+  group: sitemap-parity-${{ github.event.deployment.sha }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # Only run when a Netlify deploy preview has just succeeded.
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      startsWith(github.event.deployment.environment, 'deploy-preview')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code at the deployed commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check sitemap parity
+        env:
+          PREVIEW_URL: ${{ github.event.deployment_status.target_url }}
+        run: |
+          if [ -z "$PREVIEW_URL" ]; then
+            echo "::error::No preview URL available on this deployment_status event."
+            exit 1
+          fi
+          echo "Preview URL: $PREVIEW_URL"
+          node scripts/check-sitemap-parity.mjs \
+            --prod-base=https://open-elements.com \
+            --preview-base="$PREVIEW_URL" \
+            --concurrency=4 \
+            --retries=4
