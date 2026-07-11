@@ -5,10 +5,11 @@ name: Sitemap Parity
 #   - pull_request  -> waits for the Netlify deploy-preview, then checks
 #   - push to main  -> waits for the Netlify production deploy, then checks
 #
-# In both cases the job blocks until the Netlify deployment for the exact
-# commit under test reports success (via GitHub's Deployments API), then runs
-# the check against that deploy's target URL. If any prod URL is unreachable
-# on the new deploy, the check fails and blocks the merge.
+# In both cases the job blocks until Netlify posts a successful commit status
+# for the exact commit under test (Netlify integrates via the GitHub Commit
+# Status API, not the Deployments API), then runs the check against the URL
+# from that status. If any prod URL is unreachable on the new deploy, the
+# check fails and blocks the merge.
 
 on:
   pull_request:
@@ -18,7 +19,6 @@ on:
 
 permissions:
   contents: read
-  deployments: read
 
 concurrency:
   group: sitemap-parity-${{ github.event.pull_request.head.sha || github.sha }}
@@ -42,70 +42,56 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Determine expected Netlify environment
-        id: env
-        run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "expected=deploy-preview" >> "$GITHUB_OUTPUT"
-            echo "sha=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
-          else
-            echo "expected=production" >> "$GITHUB_OUTPUT"
-            echo "sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Wait for Netlify deployment
         id: wait
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHA: ${{ steps.env.outputs.sha }}
-          EXPECTED_ENV_PREFIX: ${{ steps.env.outputs.expected }}
+          SHA: ${{ github.event.pull_request.head.sha || github.sha }}
           # Total wait budget in seconds (default 15 min) and poll interval.
           WAIT_TIMEOUT: '900'
           WAIT_INTERVAL: '15'
         run: |
           set -euo pipefail
-          echo "Waiting for a successful Netlify deployment on commit $SHA ..."
-          echo "Expected environment prefix: $EXPECTED_ENV_PREFIX"
+          echo "Waiting for a Netlify commit status on commit $SHA ..."
 
+          # Netlify reports build status via the GitHub Commit Status API
+          # (context typically `netlify/<site-name>/deploy-preview`) rather
+          # than the Deployments API, so we poll that endpoint.
           deadline=$(( $(date +%s) + WAIT_TIMEOUT ))
           preview_url=""
 
           while [ "$(date +%s)" -lt "$deadline" ]; do
-            # List deployments GitHub knows about for this SHA. Netlify posts
-            # one per build (deploy-preview-<PR#> for PRs, production for main).
-            deployments_json=$(gh api \
-              "repos/${{ github.repository }}/deployments?sha=$SHA&per_page=100")
+            status_json=$(gh api "repos/${{ github.repository }}/commits/$SHA/status")
 
-            ids=$(printf '%s' "$deployments_json" \
-              | jq -r --arg prefix "$EXPECTED_ENV_PREFIX" \
-                '.[] | select(.environment | startswith($prefix)) | .id')
+            # Grab the first status whose context looks like a Netlify one.
+            # `map(select(...)) | .[0]` normalises the jq stream into a single
+            # (possibly null) object so downstream extraction is unambiguous.
+            netlify_state=$(printf '%s' "$status_json" | jq -r '
+              .statuses
+              | map(select(.context | ascii_downcase | startswith("netlify/")))
+              | .[0].state // ""')
+            netlify_target=$(printf '%s' "$status_json" | jq -r '
+              .statuses
+              | map(select(.context | ascii_downcase | startswith("netlify/")))
+              | .[0].target_url // ""')
 
-            for id in $ids; do
-              status_json=$(gh api \
-                "repos/${{ github.repository }}/deployments/$id/statuses?per_page=100")
-              latest_state=$(printf '%s' "$status_json" | jq -r '.[0].state // ""')
-              latest_target=$(printf '%s' "$status_json" | jq -r '.[0].target_url // ""')
-              latest_env_url=$(printf '%s' "$status_json" | jq -r '.[0].environment_url // ""')
-
-              if [ "$latest_state" = "success" ]; then
-                # Prefer environment_url (canonical site URL) over target_url
-                # (which Netlify sometimes sets to the deploy log page).
-                if [ -n "$latest_env_url" ] && [ "$latest_env_url" != "null" ]; then
-                  preview_url="$latest_env_url"
-                else
-                  preview_url="$latest_target"
-                fi
-                if [ -n "$preview_url" ] && [ "$preview_url" != "null" ]; then
-                  echo "Found successful deployment: $id -> $preview_url"
-                  break 2
-                fi
-              elif [ "$latest_state" = "failure" ] || [ "$latest_state" = "error" ]; then
-                echo "::error::Netlify deployment $id reported state=$latest_state for commit $SHA."
+            if [ "$netlify_state" = "success" ]; then
+              if [ -z "$netlify_target" ] || [ "$netlify_target" = "null" ]; then
+                echo "::error::Netlify status is success but has no target_url."
                 exit 1
               fi
-            done
+              preview_url="$netlify_target"
+              echo "Found successful Netlify deployment -> $preview_url"
+              break
+            elif [ "$netlify_state" = "failure" ] || [ "$netlify_state" = "error" ]; then
+              echo "::error::Netlify build reported state=$netlify_state for commit $SHA."
+              exit 1
+            elif [ -n "$netlify_state" ]; then
+              echo "Netlify status is currently: $netlify_state. Waiting ${WAIT_INTERVAL}s ..."
+            else
+              echo "No Netlify status posted yet. Waiting ${WAIT_INTERVAL}s ..."
+            fi
 
-            echo "No successful deployment yet, sleeping ${WAIT_INTERVAL}s ..."
             sleep "$WAIT_INTERVAL"
           done
 
