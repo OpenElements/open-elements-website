@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JRating Preview'
+slug: jrating-preview
 date: "2011-08-17"
 author: hendrik
 categories: [General]

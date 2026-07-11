@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Introducing Vagrant-Binding'
+slug: introducing-vagrant-binding
 date: "2012-11-01"
 author: hendrik
 categories: [General, Vagrant-Binding]

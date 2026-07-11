@@ -1,6 +1,7 @@
 ---
 outdated: true
 title: 'Maven vs. Gradle and the Best of Both Worlds'
+slug: maven-vs-gradle-and-the-best-of-both-worlds
 date: "2016-10-28"
 author: hendrik
 categories: [Java]

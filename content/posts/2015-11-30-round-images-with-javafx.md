@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Round images with JavaFX'
+slug: round-images-with-javafx
 date: "2015-11-30"
 author: hendrik
 categories: [JavaFX, Layout & UI]

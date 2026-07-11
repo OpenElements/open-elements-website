@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Aquatecture'
+slug: aquatecture
 date: "2013-05-09"
 author: hendrik
 categories: [AquaFX, General, JavaFX]

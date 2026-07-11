@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'sbt-fxml: The missing link between FXML and your code'
+slug: sbt-fxml-the-missing-link-between-fxml-and-your-code
 date: "2013-05-01"
 author: phdoerfler
 categories: [JavaFX]

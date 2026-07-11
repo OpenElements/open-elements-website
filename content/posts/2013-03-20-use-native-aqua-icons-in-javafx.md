@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Use native Aqua icons in JavaFX'
+slug: use-native-aqua-icons-in-javafx
 date: "2013-03-20"
 author: hendrik
 categories: [AquaFX, JavaFX]

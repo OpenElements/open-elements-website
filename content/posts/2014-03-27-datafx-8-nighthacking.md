@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX 8 @ Nighthacking'
+slug: datafx-8-nighthacking
 date: "2014-03-27"
 author: hendrik
 categories: [DataFX]

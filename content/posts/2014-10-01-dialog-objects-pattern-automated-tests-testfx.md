@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'The View Objects Pattern & automated tests with TestFX'
+slug: the-view-objects-pattern-automated-tests-with-testfx
 date: "2014-10-01"
 author: hendrik
 categories: [JavaFX]

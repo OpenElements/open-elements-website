@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Extreme Gui Makeover @ JavaOne'
+slug: extreme-gui-makeover-javaone
 date: "2014-10-26"
 author: hendrik
 categories: [JavaFX]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaOne Preview: Enterprise JavaFX'
+slug: javaone-preview-enterprise-javafx
 date: "2014-09-11"
 author: hendrik
 categories: [JavaFX]

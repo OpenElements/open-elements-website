@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'A short introduction to Bower'
+slug: a-short-introduction-to-bower
 date: "2015-02-12"
 author: hendrik
 categories: [Web Frontends]

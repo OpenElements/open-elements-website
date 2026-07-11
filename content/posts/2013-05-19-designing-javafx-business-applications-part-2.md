@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Designing JavaFX Business Applications (Part 2)'
+slug: designing-javafx-business-applications-part-2
 date: "2013-05-19"
 author: hendrik
 categories: [General, JavaFX]

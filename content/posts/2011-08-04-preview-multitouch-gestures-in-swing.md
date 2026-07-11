@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Preview: Multitouch gestures in swing'
+slug: preview-multitouch-gestures-in-swing
 date: "2011-08-04"
 author: hendrik
 categories: [General]

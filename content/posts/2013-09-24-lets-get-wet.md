@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Let''s get wet'
+slug: let-s-get-wet
 date: "2013-09-24"
 author: hendrik
 categories: [AquaFX, Flatter, JavaFX]

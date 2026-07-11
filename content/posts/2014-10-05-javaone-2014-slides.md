@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaOne 2014 Slides'
+slug: javaone-2014-slides
 date: "2014-10-05"
 author: hendrik
 categories: [DataFX, JavaFX]

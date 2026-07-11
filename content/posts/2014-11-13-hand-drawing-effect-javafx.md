@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Hand drawing effect with JavaFX'
+slug: hand-drawing-effect-with-javafx
 date: "2014-11-13"
 author: hendrik
 categories: [JavaFX]

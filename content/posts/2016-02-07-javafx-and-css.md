@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaFX and CSS'
+slug: javafx-and-css
 date: "2016-02-07"
 author: hendrik
 categories: [JavaFX]

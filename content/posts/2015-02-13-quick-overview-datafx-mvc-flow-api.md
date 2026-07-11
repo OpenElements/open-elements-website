@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'A quick overview to the DataFX MVC and Flow API'
+slug: a-quick-overview-to-the-datafx-mvc-and-flow-api
 date: "2015-02-13"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]

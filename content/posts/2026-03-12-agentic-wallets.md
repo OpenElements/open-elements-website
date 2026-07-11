@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Agentic Wallets - When AI Agents Need to Pay"
+slug: agentic-wallets-when-ai-agents-need-to-pay
 date: 2026-03-12
 author: hendrik
 excerpt: "AI agents are becoming autonomous actors — but they cannot pay for things. I explore the challenges behind agentic wallets, the emerging specifications that make them possible, and propose a concrete architecture that works across decentralized and centralized payment providers."

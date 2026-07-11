@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'How to choose the right color'
+slug: how-to-choose-the-right-color
 date: "2016-02-02"
 author: hendrik
 categories: [General, Layout & UI]

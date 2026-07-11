@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Introducing MarvinFx'
+slug: introducing-marvinfx
 date: "2013-03-17"
 author: hendrik
 categories: [JavaFX]

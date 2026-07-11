@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaFX 8 RefCard'
+slug: javafx-8-refcard
 date: "2015-10-19"
 author: hendrik
 categories: [JavaFX]

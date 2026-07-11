@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Win a copy of "Mastering JavaFX 8 Controls"'
+slug: win-a-copy-of-mastering-javafx-8-controls
 date: "2014-07-08"
 author: hendrik
 categories: [General]

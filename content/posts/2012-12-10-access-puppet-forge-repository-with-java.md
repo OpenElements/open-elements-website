@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Access Puppet Forge Repository with Java'
+slug: access-puppet-forge-repository-with-java
 date: "2012-12-10"
 author: hendrik
 categories: [Vagrant-Binding]

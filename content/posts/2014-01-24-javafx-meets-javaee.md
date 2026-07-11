@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaFX meets JavaEE'
+slug: javafx-meets-javaee
 date: "2014-01-24"
 author: hendrik
 categories: [DataFX]

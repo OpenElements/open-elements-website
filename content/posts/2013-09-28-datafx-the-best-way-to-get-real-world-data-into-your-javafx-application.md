@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX: The best way to get real-world data into your JavaFX application'
+slug: datafx-the-best-way-to-get-real-world-data-into-your-javafx-application
 date: "2013-09-28"
 author: hendrik
 categories: [DataFX, JavaFX]

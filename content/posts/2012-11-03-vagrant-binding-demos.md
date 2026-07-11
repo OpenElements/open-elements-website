@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Vagrant-Binding-Demos'
+slug: vagrant-binding-demos
 date: "2012-11-03"
 author: hendrik
 categories: [Vagrant-Binding]

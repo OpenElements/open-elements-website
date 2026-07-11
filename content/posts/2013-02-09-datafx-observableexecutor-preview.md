@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX: ObservableExecutor Preview'
+slug: datafx-observableexecutor-preview
 date: "2013-02-09"
 author: hendrik
 categories: [DataFX, JavaFX]

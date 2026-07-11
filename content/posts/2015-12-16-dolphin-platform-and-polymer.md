@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform and Polymer'
+slug: dolphin-platform-and-polymer
 date: "2015-12-16"
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer, Web Frontends, WebComponents]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Guigarage Logo'
+slug: guigarage-logo
 date: "2014-07-16"
 author: hendrik
 categories: [General]

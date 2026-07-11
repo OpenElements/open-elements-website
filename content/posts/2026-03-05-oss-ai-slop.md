@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "When \"Contributions\" Become a Burden"
+slug: when-contributions-become-a-burden
 date: 2026-03-05
 author: hendrik
 excerpt: "Generative AI is changing open source: An increasing number of automatically generated pull requests are overwhelming maintainers and presenting new challenges for review processes. How projects are trying to preserve quality and openness despite the growing flood of AI slop."

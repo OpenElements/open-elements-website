@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Material Design in JavaFX'
+slug: material-design-in-javafx
 date: "2015-07-10"
 author: hendrik
 categories: [JavaFX]

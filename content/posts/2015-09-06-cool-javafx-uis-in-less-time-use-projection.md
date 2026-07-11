@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Cool JavaFX UIs in less time? Use projection!'
+slug: cool-javafx-uis-in-less-time-use-projection
 date: "2015-09-06"
 author: hendrik
 categories: [JavaFX]

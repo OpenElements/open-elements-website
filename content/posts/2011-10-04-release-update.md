@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Release & Update'
+slug: release-update
 date: "2011-10-04"
 author: hendrik
 categories: [General]

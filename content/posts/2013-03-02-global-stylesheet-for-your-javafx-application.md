@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Global Stylesheet for your JavaFX Application'
+slug: global-stylesheet-for-your-javafx-application
 date: "2013-03-02"
 author: hendrik
 categories: [General, JavaFX]

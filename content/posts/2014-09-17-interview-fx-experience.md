@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Interview at FX Experience'
+slug: interview-at-fx-experience
 date: "2014-09-17"
 author: hendrik
 categories: [JavaFX]

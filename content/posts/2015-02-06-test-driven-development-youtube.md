@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'How to test your JavaFX application'
+slug: how-to-test-your-javafx-application
 date: "2015-02-06"
 author: hendrik
 categories: [DataFX, JavaFX]

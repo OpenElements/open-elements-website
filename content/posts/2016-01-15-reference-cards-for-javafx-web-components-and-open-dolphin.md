@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Reference Cards for JavaFX, Web Components and Open Dolphin'
+slug: reference-cards-for-javafx-web-components-and-open-dolphin
 date: "2016-01-15"
 author: hendrik
 categories: [JavaFX, Web Frontends, WebComponents]

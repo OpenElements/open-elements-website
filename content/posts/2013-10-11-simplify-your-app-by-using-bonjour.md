@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Simplify your app by using Bonjour'
+slug: simplify-your-app-by-using-bonjour
 date: "2013-10-11"
 author: hendrik
 categories: [General]

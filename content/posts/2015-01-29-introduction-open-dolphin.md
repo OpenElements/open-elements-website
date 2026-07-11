@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'An introduction to Open Dolphin'
+slug: an-introduction-to-open-dolphin
 date: "2015-01-29"
 author: hendrik
 categories: [JavaFX]

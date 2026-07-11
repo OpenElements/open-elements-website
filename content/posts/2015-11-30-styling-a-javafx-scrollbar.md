@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Styling a JavaFX Scrollbar'
+slug: styling-a-javafx-scrollbar
 date: "2015-11-30"
 author: hendrik
 categories: [General, JavaFX]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'First steps with WebComponents'
+slug: first-steps-with-webcomponents
 date: "2014-11-12"
 author: hendrik
 categories: [Polymer, Web Frontends, WebComponents]

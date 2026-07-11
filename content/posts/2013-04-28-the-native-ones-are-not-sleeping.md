@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'The native ones are not sleeping'
+slug: the-native-ones-are-not-sleeping
 date: "2013-04-28"
 author: claudine
 categories: [AquaFX, JavaFX]

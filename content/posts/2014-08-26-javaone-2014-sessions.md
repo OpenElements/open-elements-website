@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'My JavaOne 2014 Sessions'
+slug: my-javaone-2014-sessions
 date: "2014-08-26"
 author: hendrik
 categories: [JavaFX]

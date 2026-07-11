@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Integration tests with Docker'
+slug: integration-tests-with-docker
 date: "2019-01-09"
 author: hendrik
 origin: "https://dev.karakun.com"

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'A short preview of the JavaOne Voting Machine'
+slug: a-short-preview-of-the-javaone-voting-machine
 date: "2015-10-23"
 author: hendrik
 categories: [IoT, JavaFX]

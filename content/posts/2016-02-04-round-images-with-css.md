@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Round Images with CSS'
+slug: round-images-with-css
 date: "2016-02-04"
 author: hendrik
 categories: [Web Frontends]

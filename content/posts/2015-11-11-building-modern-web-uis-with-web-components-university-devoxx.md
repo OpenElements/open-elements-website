@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Building modern web UIs with Web Components University @ Devoxx'
+slug: building-modern-web-uis-with-web-components-university-devoxx
 date: "2015-11-11"
 author: hendrik
 categories: [Polymer, Web Frontends]

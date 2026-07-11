@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Reactive Programming with JavaFX'
+slug: reactive-programming-with-javafx
 date: "2014-03-28"
 author: hendrik
 categories: [JavaFX]

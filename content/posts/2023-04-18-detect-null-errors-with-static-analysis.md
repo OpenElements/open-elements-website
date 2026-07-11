@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Detecting NullPointerExceptions with Static Code Analysis"
+slug: detecting-nullpointerexceptions-with-static-code-analysis
 date: 2023-04-18
 author: hendrik
 excerpt: "NullPointerExceptions are one of the most common sources of errors in Java. However, these errors can be significantly minimized through static code analysis. This post gives an overview of annotations can be used to handle 'null' in Java in a better way."

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'More fun with layered icons in javaFX'
+slug: more-fun-with-layered-icons-in-javafx
 date: "2015-09-18"
 author: hendrik
 categories: [JavaFX, Layout & UI]

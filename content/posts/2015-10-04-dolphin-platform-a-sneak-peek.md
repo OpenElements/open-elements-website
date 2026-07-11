@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform: A Sneak Peek'
+slug: dolphin-platform-a-sneak-peek
 date: "2015-10-04"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), Dolphin Platform, JavaFX]

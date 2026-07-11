@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Custom UI Controls with JavaFX - Part 1'
+slug: custom-ui-controls-with-javafx-part-1
 date: "2012-11-17"
 author: hendrik
 categories: [JavaFX]

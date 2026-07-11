@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX 8.0b3 has been released'
+slug: datafx-8-0b3-has-been-released
 date: "2014-05-16"
 author: hendrik
 categories: [DataFX, JavaFX]

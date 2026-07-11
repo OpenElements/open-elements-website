@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Assertions and Rules in MarvinFX'
+slug: assertions-and-rules-in-marvinfx
 date: "2013-03-20"
 author: hendrik
 categories: [JavaFX]

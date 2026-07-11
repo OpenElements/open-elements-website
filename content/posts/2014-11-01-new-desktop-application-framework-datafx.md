@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'New Desktop Application Framework & DataFX'
+slug: new-desktop-application-framework-datafx
 date: "2014-11-01"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]

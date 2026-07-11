@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform: A Sneak Peek of the view API'
+slug: dolphin-platform-a-sneak-peek-of-the-view-api
 date: "2015-10-07"
 author: hendrik
 categories: [Dolphin Platform, JavaFX]

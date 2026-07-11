@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaFX JumpStart @ JavaOne'
+slug: javafx-jumpstart-javaone
 date: "2016-09-20"
 author: hendrik
 categories: [JavaFX]

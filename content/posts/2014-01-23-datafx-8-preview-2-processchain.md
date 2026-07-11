@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX 8 Preview 2: The ProcessChain'
+slug: datafx-8-preview-2-the-processchain
 date: "2014-01-23"
 author: hendrik
 categories: [DataFX, JavaFX]

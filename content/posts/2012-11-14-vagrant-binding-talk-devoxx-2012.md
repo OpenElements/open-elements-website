@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Vagrant-Binding talk @ Devoxx 2012'
+slug: vagrant-binding-talk-devoxx-2012
 date: "2012-11-14"
 author: hendrik
 categories: [Vagrant-Binding]

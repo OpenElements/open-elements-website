@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JGrid @ NetBeans Platform Certified Training'
+slug: jgrid-netbeans-platform-certified-training
 date: "2011-07-15"
 author: hendrik
 categories: [Swing]

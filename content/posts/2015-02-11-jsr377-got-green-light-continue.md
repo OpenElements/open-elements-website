@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JSR377 got green light to continue!'
+slug: jsr377-got-green-light-to-continue
 date: "2015-02-11"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]

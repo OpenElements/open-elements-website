@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Best Practices and Anti-Pattern for Logging in Java and other Languages"
+slug: best-practices-and-anti-pattern-for-logging-in-java-and-other-languages
 date: 2023-02-07
 author: hendrik
 excerpt: "Logging is an important instrument, but it's not easy to find the right amount of information to log. This post will show some best pratices that help to get the best results out of a logging system."

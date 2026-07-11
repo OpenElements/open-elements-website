@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Logging Facades for Java"
+slug: logging-facades-for-java
 date: 2023-06-22
 author: hendrik
 excerpt: "Logging is an important part of error analysis. However, consolidating different logging libs in Java applications is always a challenge. If you want to know how several different logging libs in a single application can be handled, this post is for you."

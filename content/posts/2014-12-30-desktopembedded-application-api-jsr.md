@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Desktop & Embedded Application JSR'
+slug: desktop-embedded-application-jsr
 date: "2014-12-30"
 author: hendrik
 categories: [DataFX, Desktop Application Framework (JSR 377), JavaFX]

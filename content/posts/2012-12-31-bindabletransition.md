@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'BindableTransition'
+slug: bindabletransition
 date: "2012-12-31"
 author: hendrik
 categories: [General, JavaFX]

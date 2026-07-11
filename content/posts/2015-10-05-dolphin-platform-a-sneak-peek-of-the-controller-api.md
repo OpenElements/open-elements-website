@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform: A Sneak Peek of the controller API'
+slug: dolphin-platform-a-sneak-peek-of-the-controller-api
 date: "2015-10-05"
 author: hendrik
 categories: [Dolphin Platform, JavaFX]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'Amazon Corretto announced'
+slug: amazon-corretto-announced
 date: "2018-11-23"
 author: hendrik
 excerpt: 'At the Devoxx conference 2 weeks ago, Amazon announced Corretto as a new player in the OpenJDK market. Next to companies like SAP, Oracle or Bellsoft, the cloud computing company now provides a custom OpenJDK build. On the website Amazon Corretto is described as 
