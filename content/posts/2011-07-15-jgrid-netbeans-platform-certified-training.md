@@ -4,6 +4,7 @@ showInBlog: false
 title: 'JGrid @ NetBeans Platform Certified Training'
 date: "2011-07-15"
 author: hendrik
+slug: jjjjjjjjjjjfsdfsdfsdfadfafasdfasf
 categories: [Swing]
 excerpt: 'Together with Geertjan Wielenga from Oracle I will introduce the jGrid-Component and its integration into a NetBeans Platform app'
 preview_image: "/posts/preview-images/software-development-green.svg"
