@@ -1,0 +1,114 @@
+name: Sitemap Parity
+
+# Ensures every URL currently listed in the production sitemap is still
+# reachable on the deployment that will be produced by this branch. Runs on:
+#   - pull_request  -> waits for the Netlify deploy-preview, then checks
+#   - push to main  -> waits for the Netlify production deploy, then checks
+#
+# In both cases the job blocks until Netlify posts a successful commit status
+# for the exact commit under test (Netlify integrates via the GitHub Commit
+# Status API, not the Deployments API), then runs the check against the URL
+# from that status. If any prod URL is unreachable on the new deploy, the
+# check fails and blocks the merge.
+
+on:
+  pull_request:
+    branches: ['main']
+  push:
+    branches: ['main']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sitemap-parity-${{ github.event.pull_request.head.sha || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # For PRs, check out the PR head commit so the script matches what
+          # Netlify actually deployed. For pushes, this is the pushed commit.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Wait for Netlify deployment
+        id: wait
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          # Total wait budget in seconds (default 15 min) and poll interval.
+          WAIT_TIMEOUT: '900'
+          WAIT_INTERVAL: '15'
+        run: |
+          set -euo pipefail
+          echo "Waiting for a Netlify commit status on commit $SHA ..."
+
+          # Netlify reports build status via the GitHub Commit Status API
+          # (context typically `netlify/<site-name>/deploy-preview`) rather
+          # than the Deployments API, so we poll that endpoint.
+          deadline=$(( $(date +%s) + WAIT_TIMEOUT ))
+          preview_url=""
+
+          while [ "$(date +%s)" -lt "$deadline" ]; do
+            status_json=$(gh api "repos/${{ github.repository }}/commits/$SHA/status")
+
+            # Grab the first status whose context looks like a Netlify one.
+            # `map(select(...)) | .[0]` normalises the jq stream into a single
+            # (possibly null) object so downstream extraction is unambiguous.
+            netlify_state=$(printf '%s' "$status_json" | jq -r '
+              .statuses
+              | map(select(.context | ascii_downcase | startswith("netlify/")))
+              | .[0].state // ""')
+            netlify_target=$(printf '%s' "$status_json" | jq -r '
+              .statuses
+              | map(select(.context | ascii_downcase | startswith("netlify/")))
+              | .[0].target_url // ""')
+
+            if [ "$netlify_state" = "success" ]; then
+              if [ -z "$netlify_target" ] || [ "$netlify_target" = "null" ]; then
+                echo "::error::Netlify status is success but has no target_url."
+                exit 1
+              fi
+              preview_url="$netlify_target"
+              echo "Found successful Netlify deployment -> $preview_url"
+              break
+            elif [ "$netlify_state" = "failure" ] || [ "$netlify_state" = "error" ]; then
+              echo "::error::Netlify build reported state=$netlify_state for commit $SHA."
+              exit 1
+            elif [ -n "$netlify_state" ]; then
+              echo "Netlify status is currently: $netlify_state. Waiting ${WAIT_INTERVAL}s ..."
+            else
+              echo "No Netlify status posted yet. Waiting ${WAIT_INTERVAL}s ..."
+            fi
+
+            sleep "$WAIT_INTERVAL"
+          done
+
+          if [ -z "$preview_url" ]; then
+            echo "::error::Timed out after ${WAIT_TIMEOUT}s waiting for a Netlify deployment on $SHA."
+            exit 1
+          fi
+
+          echo "preview_url=$preview_url" >> "$GITHUB_OUTPUT"
+
+      - name: Check sitemap parity
+        env:
+          PREVIEW_URL: ${{ steps.wait.outputs.preview_url }}
+        run: |
+          echo "Preview URL: $PREVIEW_URL"
+          node scripts/check-sitemap-parity.mjs \
+            --prod-base=https://open-elements.com \
+            --preview-base="$PREVIEW_URL" \
+            --concurrency=4 \
+            --retries=4
