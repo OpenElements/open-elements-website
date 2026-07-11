@@ -20,48 +20,38 @@ Guidance for AI coding agents (Claude, Copilot, etc.) working in this repository
 
 ### Blog post slugs
 
-Every new post **must** declare an explicit `slug:` field in its frontmatter. Do not rely on the title-based fallback.
+The URL slug for a post is resolved in this order (see `generatePostSlug()` in [src/lib/markdown.ts](./src/lib/markdown.ts)):
 
-```yaml
----
-title: 'Dependency Health Checks for Maven Builds'
-slug: dependency-health
-date: 2026-02-27
-# ...
----
+1. Explicit `slug:` in the post's frontmatter (highest priority — protects legacy URLs).
+2. Filename stem with the `YYYY-MM-DD-` date prefix and `.md` / `.de.md` extension stripped. This is the canonical default for new posts.
+
+```text
+content/posts/2026-02-27-dependency-health.md    -> /posts/2026/02/27/dependency-health
+content/posts/2026-03-19-container-gov.de.md     -> /de/posts/2026/03/19/container-gov
 ```
 
 Rules:
 
-- Short, kebab-case, ASCII (1–4 words).
-- Do not repeat the date — the date comes from the `date:` field.
-- Use the **same slug** in the EN and DE files of a post.
-- Never change the slug of an already-published post — that breaks existing URLs and backlinks.
-- Legacy posts have long, title-derived slugs (including umlauts) for backward compatibility. Do not "clean them up" — those slugs are load-bearing for existing links.
+- **New posts should not set `slug:`.** Pick a short, kebab-case, ASCII filename (`YYYY-MM-DD-<short-slug>.md`) and the filename becomes the URL.
+- Only set `slug:` explicitly when you need to override the filename (e.g. keeping backward compatibility with a legacy URL).
+- If you do set `slug:`, keep it short (1–4 words), kebab-case, ASCII.
+- Never change the filename or `slug:` of an already-published post — either moves the URL and breaks backlinks.
+- Legacy posts carry an explicit `slug:` (often long, sometimes with umlauts) that pins them to their historical URL. Do not "clean these up" — those values are load-bearing for existing links.
 
 Full rules and rationale: [docs/04-adding-blog-post.md § Slug convention](./docs/04-adding-blog-post.md#slug-convention).
-
-Reference implementation: `generatePostSlug()` / `generatePostPath()` in [src/lib/markdown.ts](./src/lib/markdown.ts).
 
 ### Legacy filename alias
 
 Every post is also reachable via `/posts/<filename-without-extension>` (the legacy Hugo-style alias, produced by `getAllPostSlugs()`). This alias is intentional backward-compat plumbing — do not remove it, and do not use it in new links.
 
-## Scripts
-
-Helper scripts live in `scripts/` and run with plain `node`:
-
-- `scripts/backfill-post-slugs.mjs` — inserts an explicit `slug:` into every post that lacks one, computed from the current title so URLs stay unchanged. Idempotent. Pass `--dry-run` to preview. Should only be needed once; kept for reproducibility.
-- `scripts/dump-post-slugs.mjs` — prints the full sorted list of URL slugs `getAllPostSlugs()` would emit. Useful as a before/after diff when changing anything in the slug generation path.
-
 ## Do
 
 - Read the referenced `docs/*.md` before making structural changes to content or routing.
-- When touching slug logic in `src/lib/markdown.ts`, run `scripts/dump-post-slugs.mjs` before and after and diff — the diff must be empty unless the change is _intended_ to move URLs.
+- When touching slug logic in `src/lib/markdown.ts`, dump every URL that `getAllPostSlugs()` emits before and after your change and diff — the diff must be empty unless the change is _intended_ to move URLs.
 - Preserve line-ending style when editing legacy markdown files (some are CRLF).
 
 ## Don't
 
 - Don't remove or rewrite the legacy filename-based alias in `getAllPostSlugs()` without explicit sign-off — it protects old inbound links.
-- Don't run `matter.stringify()` (gray-matter) to rewrite existing post frontmatter. It reorders keys, changes quoting, and reformats dates. Do targeted line-level edits on the raw text instead (see `scripts/backfill-post-slugs.mjs` for the pattern).
-- Don't add `slug:` to old posts by hand as a "cleanup" — the backfill has already done that, and the values must exactly match the title-derived slug.
+- Don't run `matter.stringify()` (gray-matter) to rewrite existing post frontmatter. It reorders keys, changes quoting, and reformats dates. Do targeted line-level edits on the raw text instead.
+- Don't strip the explicit `slug:` from legacy posts as a "cleanup" — those slugs are pinned to already-indexed URLs and must not change.

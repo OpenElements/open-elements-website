@@ -116,38 +116,45 @@ Prism.hooks.add('wrap', environment => {
 });
 
 /**
- * Generate a URL-friendly slug from text.
- * Keeps locale-specific characters (e.g. umlauts) to match Hugo URLs.
+ * Derive the canonical slug segment from a post filename.
+ * Strips the `.md` / `.de.md` extension and any leading `YYYY-MM-DD-` date
+ * prefix, so e.g. `2026-03-19-container-gov.de.md` -> `container-gov`.
  */
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-+|-+$/g, '');
+function slugFromFilename(filename: string): string {
+  const base = filename.endsWith('.de.md')
+    ? filename.slice(0, -'.de.md'.length)
+    : filename.slice(0, -'.md'.length);
+  return base.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 }
 
 /**
- * Generate a post slug from frontmatter.
- * Uses the explicit `slug` property if defined, otherwise slugifies the title.
+ * Generate a post slug.
+ * Prefers an explicit `slug` frontmatter field (kept for legacy posts whose
+ * URLs must not change); otherwise derives the slug from the filename stem.
  */
-function generatePostSlug(frontmatter: PostFrontmatter): string {
+function generatePostSlug(
+  frontmatter: PostFrontmatter,
+  filename: string,
+): string {
   if (frontmatter.slug) {
     return frontmatter.slug;
   }
-  return slugify(frontmatter.title);
+  return slugFromFilename(filename);
 }
 
 /**
  * Generate the full date-based post path from frontmatter.
  * Format: YYYY/MM/DD/slug-text
  */
-function generatePostPath(frontmatter: PostFrontmatter): string {
+function generatePostPath(
+  frontmatter: PostFrontmatter,
+  filename: string,
+): string {
   const date = new Date(frontmatter.date);
   const year = date.getUTCFullYear().toString();
   const month = String(date.getUTCMonth() + 1).padStart(2, '0');
   const day = String(date.getUTCDate()).padStart(2, '0');
-  const slug = generatePostSlug(frontmatter);
+  const slug = generatePostSlug(frontmatter, filename);
   return `${year}/${month}/${day}/${slug}`;
 }
 
@@ -241,7 +248,7 @@ function getPostFilename(slugPath: string, locale: string): string | null {
 
     if (
       isDateBasedSlugMatch(
-        generatePostPath(data as PostFrontmatter),
+        generatePostPath(data as PostFrontmatter, filename),
         decodedSlugPath,
       )
     ) {
@@ -286,7 +293,7 @@ export function getPostLocaleAlternates(
     const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
     alternates.push({
       locale: 'en',
-      slugPath: generatePostPath(data as PostFrontmatter),
+      slugPath: generatePostPath(data as PostFrontmatter, enFile),
     });
   }
 
@@ -297,7 +304,7 @@ export function getPostLocaleAlternates(
     const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
     alternates.push({
       locale: 'de',
-      slugPath: generatePostPath(data as PostFrontmatter),
+      slugPath: generatePostPath(data as PostFrontmatter, deFile),
     });
   }
 
@@ -632,7 +639,7 @@ export function getAllPosts(
       continue;
     }
 
-    const slug = generatePostPath(frontmatter);
+    const slug = generatePostPath(frontmatter, filename);
 
     posts.push({
       slug,
@@ -668,7 +675,7 @@ export function getAllPostSlugs(): Array<{ locale: string; slug: string[] }> {
     const { data } = matter(fileContents);
     const frontmatter = data as PostFrontmatter;
 
-    const postPath = generatePostPath(frontmatter);
+    const postPath = generatePostPath(frontmatter, filename);
     const slugSegments = postPath.split('/');
     const legacyBaseSlug = filename.endsWith('.de.md')
       ? filename.replace('.de.md', '')

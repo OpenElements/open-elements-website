@@ -27,7 +27,7 @@ content/posts/2026-02-27-dependency-health-checks.md
 content/posts/2026-02-27-dependency-health-checks.de.md
 ```
 
-Filenames follow a `YYYY-MM-DD-something.md` pattern for readability and sort order. The **public URL** is built from the `date:` field and the `slug:` field in the frontmatter — not from the filename. See section 2 for the `slug:` convention.
+Filenames follow a `YYYY-MM-DD-<name>.md` pattern. The **public URL** is built from the `date:` field and the slug — where the slug defaults to `<name>` (i.e. the filename stem without the date prefix and extension) unless overridden by a `slug:` field in the frontmatter. See section 2 for the full slug convention.
 
 There is also a legacy filename-based alias route: every post is also reachable at `/posts/<filename-without-extension>` (e.g. `/posts/2026-02-27-dependency-health-checks`). This exists for backward compatibility with old links and should not be used in new content.
 
@@ -40,7 +40,6 @@ Posts in this repository are parsed by `src/lib/markdown.ts` and must use this s
 outdated: false
 showInBlog: true
 title: 'Dependency Health Checks for Maven Builds'
-slug: dependency-health-checks
 date: 2026-02-27
 author: sebastian
 excerpt: 'A short teaser shown in article cards and metadata.'
@@ -52,7 +51,7 @@ preview_image: '/posts/preview-images/open-source-green.svg'
 Field notes:
 
 - `title`: display title and SEO title base
-- `slug`: short, kebab-case URL segment (see "Slug convention" below)
+- `slug` _(optional)_: override the URL segment (see "Slug convention" below); if omitted, the filename stem is used
 - `date`: `YYYY-MM-DD`
 - `author`: author id (not free text). Match an id in `src/data/en/team.json` and `src/data/de/team.json`
 - `excerpt`: used in listing cards and metadata description
@@ -70,23 +69,28 @@ The final URL of a post is:
 /de/posts/YYYY/MM/DD/<slug>
 ```
 
+Resolution order in `generatePostSlug()` (see [src/lib/markdown.ts](../src/lib/markdown.ts)):
+
+1. Explicit `slug:` field in the post's frontmatter (highest priority — kept so legacy posts whose URLs are already indexed do not move).
+2. Filename stem with the `YYYY-MM-DD-` prefix and `.md` / `.de.md` extension stripped. This is the canonical default for **new** posts.
+
 Rules for `slug`:
 
-- **Always set it explicitly** on new posts. Do not rely on the title-based fallback.
-- Keep it **short and human-readable** — 1 to 4 words, kebab-case, ASCII only.
+- **New posts should NOT set `slug:`** unless there is a reason to override the filename. Just pick a good, short filename — `content/posts/2026-02-27-dependency-health.md` is enough to give you `/posts/2026/02/27/dependency-health`.
+- If you do set `slug:`, keep it **short and human-readable** — 1 to 4 words, kebab-case, ASCII only.
 - Do **not** repeat the date. The date is added automatically from the `date:` field.
-- Use the **same slug** in the EN and DE files so both locales have symmetric URLs.
-- Once a post is published, do **not** change its slug. Existing URLs and backlinks will break.
+- If EN and DE files should share a URL segment, either use the same filename base for both (`foo.md` + `foo.de.md`) or set the same `slug:` on both.
+- Once a post is published, do **not** rename its file or change its `slug:` — either will move the URL and break existing links.
 
 Examples:
 
-| Title                                                         | Good `slug:`        | Resulting URL                         |
-| ------------------------------------------------------------- | ------------------- | ------------------------------------- |
-| Dependency Health Checks for Maven Builds                     | `dependency-health` | `/posts/2026/02/27/dependency-health` |
-| Open Elements liefert gehärtete Software für container.gov.de | `container-gov`     | `/de/posts/2026/03/19/container-gov`  |
-| Year in Review 2025                                           | `review-2025`       | `/posts/2026/02/10/review-2025`       |
+| Filename                                          | Frontmatter         | Resulting URL                         |
+| ------------------------------------------------- | ------------------- | ------------------------------------- |
+| `content/posts/2026-02-27-dependency-health.md`   | (no `slug:`)        | `/posts/2026/02/27/dependency-health` |
+| `content/posts/2026-03-19-container-gov.de.md`    | (no `slug:`)        | `/de/posts/2026/03/19/container-gov`  |
+| `content/posts/2026-02-10-year-in-review-2025.md` | `slug: review-2025` | `/posts/2026/02/10/review-2025`       |
 
-If `slug:` is omitted, the URL is auto-derived from the title. That fallback exists only to keep old posts working; it produces long, hard-to-read URLs (especially with umlauts) and should not be used for new content.
+Legacy posts (everything predating this convention) carry an explicit `slug:` that pins them to their historical URL — including long, title-derived slugs with umlauts. Do **not** "clean these up" — those slug values are load-bearing for existing links and search-engine indexing.
 
 ## 3. Write Content and Use Correct Links
 
@@ -137,8 +141,8 @@ Reference them with web paths:
 - `author` not matching a team id
 - Using filesystem-like image paths (`public/...`) instead of web paths (`/...`)
 - Missing `excerpt` or `preview_image`, causing weak list cards and metadata
-- Missing `slug:` in frontmatter — the post still works via the title-based fallback, but the URL will be long and hard to read. Always set an explicit `slug:` on new posts.
-- Renaming `slug:` on an already-published post — this breaks existing URLs and backlinks. Don't do it.
+- Choosing a long or awkward filename for a new post — remember the URL slug comes from the filename by default, so `2026-03-19-a-really-long-title-that-explains-everything.md` becomes an equally long URL. Prefer short filenames.
+- Renaming a post file (or changing its `slug:`) after it has been published — either move will change the URL and break existing links.
 
 ## Related Docs
 
