@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'Java 11 release event'
+slug: java-11-release-event
 date: "2018-09-25"
 author: hendrik
 excerpt: 'Together with Oracle and Heise we will do a Java 11 release event.

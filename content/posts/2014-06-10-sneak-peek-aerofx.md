@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Sneak Peek: AeroFX'
+slug: sneak-peek-aerofx
 date: "2014-06-10"
 author: hendrik
 categories: [AeroFX, AquaFX, JavaFX]

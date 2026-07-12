@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX Controller API'
+slug: datafx-controller-api
 date: "2013-09-13"
 author: hendrik
 categories: [DataFX, JavaFX]

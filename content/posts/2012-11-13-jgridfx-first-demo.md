@@ -2,6 +2,7 @@
 draft: false
 showInBlog: false
 title: 'JGridFX First Demo'
+slug: jgridfx-first-demo
 date: "2012-11-13"
 author: hendrik
 categories: [JavaFX]

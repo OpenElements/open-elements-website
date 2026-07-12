@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'An overview of the Web Component specifications'
+slug: an-overview-of-the-web-component-specifications
 date: "2015-02-15"
 author: hendrik
 categories: [General, WebComponents]

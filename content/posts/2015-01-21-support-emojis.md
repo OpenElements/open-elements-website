@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'How to support Emojis (Part1)'
+slug: how-to-support-emojis-part1
 date: "2015-01-21"
 author: hendrik
 categories: [JavaFX]

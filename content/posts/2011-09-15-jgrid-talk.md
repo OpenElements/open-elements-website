@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JGrid Talk'
+slug: jgrid-talk
 date: "2011-09-15"
 author: hendrik
 categories: [Swing]

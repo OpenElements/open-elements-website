@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Make your app smile :D'
+slug: make-your-app-smile-d
 date: "2013-09-24"
 author: hendrik
 categories: [JavaFX]

@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "DCO Signing and Validation for Open Source Projects"
+slug: dco-signing-and-validation-for-open-source-projects
 date: 2025-01-03
 author: hendrik
 excerpt: "The Developer Certificate of Origin (DCO) is a lightweight mechanism for developers to certify that they wrote or have the right to contribute the code they are submitting. This article explores the purpose, usage, and validation of the DCO in open-source projects next to a critical analysis of the DCO’s effectiveness in ensuring legal compliance for open-source contributions."

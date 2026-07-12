@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Jira Issue to GitHub Issue Migration in Apache Maven"
+slug: jira-issue-to-github-issue-migration-in-apache-maven
 date: 2025-08-08
 author: sandra
 excerpt: "This blog post details the Apache Maven Support and Care team’s funded effort to migrate issues from Jira to GitHub, supported by the German Sovereign Tech Fund. This post provides valuable insights into the challenges of migrating large-scale issue tracking systems and the importance of thorough planning and adaptation and why this was only possible with a funding."

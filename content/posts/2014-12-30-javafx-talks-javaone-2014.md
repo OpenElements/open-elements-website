@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaFX Talks JavaOne 2014'
+slug: javafx-talks-javaone-2014
 date: "2014-12-30"
 author: hendrik
 categories: [JavaFX]

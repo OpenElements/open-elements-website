@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'The future of Vagrant-Binding'
+slug: the-future-of-vagrant-binding
 date: "2012-11-29"
 author: hendrik
 categories: [General, Vagrant-Binding]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'About the Java release model'
+slug: about-the-java-release-model
 date: "2018-09-16"
 author: hendrik
 excerpt: 'Based on the confusion and rumors about the new Java release model a group of Java Champions has written

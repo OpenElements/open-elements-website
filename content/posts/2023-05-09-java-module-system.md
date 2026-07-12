@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Java's Module System: Help, My Dependencies Are Not Java Modules!"
+slug: java-s-module-system-help-my-dependencies-are-not-java-modules
 date: 2023-05-09
 author: hendrik
 excerpt: "With Java, you can now modularize applications quite well, but you also have to consider dependencies. When these are not Java modules, it gets interesting. In this post you can learn more about the Java module system and how it can be used in your projects."

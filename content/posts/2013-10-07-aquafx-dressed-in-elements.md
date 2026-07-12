@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'AquaFX dressed in Elements'
+slug: aquafx-dressed-in-elements
 date: "2013-10-07"
 author: claudine
 categories: [AquaFX, JavaFX]

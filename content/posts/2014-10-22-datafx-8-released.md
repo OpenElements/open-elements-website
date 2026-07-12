@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX 8 has been released & DataFX core overview'
+slug: datafx-8-has-been-released-datafx-core-overview
 date: "2014-10-22"
 author: hendrik
 categories: [DataFX, JavaFX]

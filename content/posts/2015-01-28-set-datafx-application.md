@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'How to set up a DataFX application'
+slug: how-to-set-up-a-datafx-application
 date: "2015-01-28"
 author: hendrik
 categories: [DataFX, JavaFX]

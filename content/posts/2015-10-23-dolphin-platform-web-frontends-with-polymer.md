@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform Web Frontends with Polymer'
+slug: dolphin-platform-web-frontends-with-polymer
 date: "2015-10-23"
 author: hendrik
 categories: [Dolphin Platform, Polymer, Web Frontends, WebComponents]

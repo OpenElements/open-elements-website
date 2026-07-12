@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Update for the native ones'
+slug: update-for-the-native-ones
 date: "2013-03-02"
 author: claudine
 categories: [AquaFX, General, JavaFX]

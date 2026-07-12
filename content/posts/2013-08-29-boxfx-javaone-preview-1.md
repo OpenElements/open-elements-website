@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'BoxFX (JavaOne Preview 1)'
+slug: boxfx-javaone-preview-1
 date: "2013-08-29"
 author: hendrik
 categories: [IoT, JavaFX]

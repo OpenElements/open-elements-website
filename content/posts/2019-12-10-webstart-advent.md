@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'How open source saved WebStart'
+slug: how-open-source-saved-webstart
 date: "2019-12-10"
 author: hendrik
 excerpt: 'Everyone who has developed Java desktop applications within the last 15 years used WebStart or at least heard about it. This post gives an overview how the technology evolves as an open source project after Oracle announced its removal from the Oracle JDK.'

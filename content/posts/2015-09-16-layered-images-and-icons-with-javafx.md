@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Layered images and icons with JavaFX'
+slug: layered-images-and-icons-with-javafx
 date: "2015-09-16"
 author: hendrik
 categories: [JavaFX, Layout & UI]

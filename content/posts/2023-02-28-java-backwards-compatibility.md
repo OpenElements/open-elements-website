@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Write Once, Run Anywhere - how good is Java's Backwards Compatibility?"
+slug: write-once-run-anywhere-how-good-is-java-s-backwards-compatibility
 date: 2023-02-28
 author: hendrik
 excerpt: "As programming paradigms and language features continue to evolve, a question arises: Can Java still maintain the always advertised backwards compatibility?"

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Enrich your List UI by using the MediaListCell'
+slug: enrich-your-list-ui-by-using-the-medialistcell
 date: "2014-09-30"
 author: hendrik
 categories: [JavaFX]

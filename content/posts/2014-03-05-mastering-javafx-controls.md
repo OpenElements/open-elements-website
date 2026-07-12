@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Mastering JavaFX Controls'
+slug: mastering-javafx-controls
 date: "2014-03-05"
 author: hendrik
 categories: [General]

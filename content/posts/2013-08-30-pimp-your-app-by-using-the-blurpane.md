@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Pimp your App by using the BlurPane'
+slug: pimp-your-app-by-using-the-blurpane
 date: "2013-08-30"
 author: hendrik
 categories: [JavaFX]

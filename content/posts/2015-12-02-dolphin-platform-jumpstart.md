@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform Jumpstart'
+slug: dolphin-platform-jumpstart
 date: "2015-12-02"
 author: hendrik
 categories: [Dolphin Platform, JavaFX]

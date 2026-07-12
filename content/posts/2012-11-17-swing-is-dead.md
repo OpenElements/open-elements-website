@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Swing is dead'
+slug: swing-is-dead
 date: "2012-11-17"
 author: hendrik
 categories: [JavaFX, Swing]

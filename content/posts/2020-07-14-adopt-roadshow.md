@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'AdoptOpenJDK Virtual Roadshow'
+slug: adoptopenjdk-virtual-roadshow
 date: "2020-07-14"
 author: hendrik
 excerpt: 'AdoptOpenJDK is doing a virtual roadshow of the Java User Groups. We plan to reach as many groups as possible but we will also live stream the event on YouTube.'

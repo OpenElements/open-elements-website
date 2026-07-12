@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Iconify your application the resolution independent way'
+slug: iconify-your-application-the-resolution-independent-way
 date: "2014-10-05"
 author: hendrik
 categories: [JavaFX]

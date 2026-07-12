@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Responsive Design for JavaFX'
+slug: responsive-design-for-javafx
 date: "2014-11-04"
 author: hendrik
 categories: [JavaFX]

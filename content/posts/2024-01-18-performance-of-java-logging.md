@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Performance of Java Logging"
+slug: performance-of-java-logging
 date: 2024-01-18
 author: hendrik
 excerpt: "For Java, there is an abundance of different logging libraries and possibilities to output log messages. But which of them are really performant?"

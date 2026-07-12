@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX 8 Preview 2'
+slug: datafx-8-preview-2
 date: "2014-04-17"
 author: hendrik
 categories: [DataFX, JavaFX]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform in 15 minutes @ Nighthacking'
+slug: dolphin-platform-in-15-minutes-nighthacking
 date: "2015-11-12"
 author: hendrik
 categories: [Dolphin Platform]

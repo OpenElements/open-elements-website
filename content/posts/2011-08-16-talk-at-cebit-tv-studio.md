@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Talk at CeBIT TV studio'
+slug: talk-at-cebit-tv-studio
 date: "2011-08-16"
 author: hendrik
 categories: [General]

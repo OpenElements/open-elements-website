@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform has been released'
+slug: dolphin-platform-has-been-released
 date: "2015-11-09"
 author: hendrik
 categories: [Dolphin Platform, JavaFX, Polymer, Web Frontends]

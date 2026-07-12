@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaOne Sessions at Canoo'
+slug: javaone-sessions-at-canoo
 date: "2014-10-13"
 author: hendrik
 categories: [JavaFX]

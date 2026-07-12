@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX 8.0 Tutorials'
+slug: datafx-8-0-tutorials
 date: "2014-05-19"
 author: hendrik
 categories: [DataFX, JavaFX]

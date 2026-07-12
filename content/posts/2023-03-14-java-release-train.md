@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Every Six Months an Update: The Path to the Java Release Train"
+slug: every-six-months-an-update-the-path-to-the-java-release-train
 date: 2023-03-14
 author: hendrik
 excerpt: "In recent years, there have been various changes in the Java Release Train, leading to confusion and misunderstandings within the community. This post will give an overview of the changes and how you can be better prepared for the next Java releases."

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaFX and CSS: Pseudo Classes'
+slug: javafx-and-css-pseudo-classes
 date: "2016-02-09"
 author: hendrik
 categories: [JavaFX]

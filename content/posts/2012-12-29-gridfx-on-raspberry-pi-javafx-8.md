@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'GridFX on Raspberry Pi & JavaFX 8'
+slug: gridfx-on-raspberry-pi-javafx-8
 date: "2012-12-29"
 author: hendrik
 categories: [IoT, JavaFX]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'JavaOne 2014 Preview'
+slug: javaone-2014-preview
 date: "2014-09-09"
 author: hendrik
 categories: [JavaFX]

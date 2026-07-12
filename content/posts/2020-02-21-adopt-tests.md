@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'How AdoptOpenJDK provides enterprise ready OpenJDK builds'
+slug: how-adoptopenjdk-provides-enterprise-ready-openjdk-builds
 date: "2020-02-21"
 author: hendrik
 excerpt: 'With the new licence of the Oracle JDK a lot of companies need to switch to a new JDK vendor.

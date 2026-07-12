@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'AeroFX: It''s getting closer'
+slug: aerofx-it-s-getting-closer
 date: "2014-06-17"
 author: hendrik
 categories: [AeroFX, JavaFX]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Adding JavaFX to your Eclipse project'
+slug: adding-javafx-to-your-eclipse-project
 date: "2012-10-28"
 author: hendrik
 categories: [JavaFX]

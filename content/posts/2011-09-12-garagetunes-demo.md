@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'GarageTunes demo'
+slug: garagetunes-demo
 date: "2011-09-12"
 author: hendrik
 categories: [Swing]

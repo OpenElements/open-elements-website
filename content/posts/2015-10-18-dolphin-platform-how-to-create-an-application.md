@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Dolphin Platform: How to create an application'
+slug: dolphin-platform-how-to-create-an-application
 date: "2015-10-18"
 author: hendrik
 categories: [Dolphin Platform, JavaFX]

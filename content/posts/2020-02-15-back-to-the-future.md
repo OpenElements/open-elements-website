@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'Back to the future - with Java'
+slug: back-to-the-future-with-java
 date: "2020-02-15"
 author: hendrik
 excerpt: "Each year several Java applications might show wrong date information for the days around New

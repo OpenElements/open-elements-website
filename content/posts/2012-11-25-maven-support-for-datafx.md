@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Maven support for DataFX'
+slug: maven-support-for-datafx
 date: "2012-11-25"
 author: hendrik
 categories: [DataFX, JavaFX]

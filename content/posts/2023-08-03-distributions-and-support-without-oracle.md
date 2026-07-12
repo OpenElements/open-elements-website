@@ -2,6 +2,7 @@
 outdated: false
 showInBlog: true
 title: "Java Without Headaches: Distributions and Support Beyond Oracle"
+slug: java-without-headaches-distributions-and-support-beyond-oracle
 date: 2023-08-03
 author: hendrik
 excerpt: "There isn't just one provider for Java distributions and support. Gartner has analyzed the options in a report, and Oracle doesn't fare well. If you are searching for a good alternative to a costly Oracle contract, this post gives insights into alternative OpenJDK builds and Java distributions."

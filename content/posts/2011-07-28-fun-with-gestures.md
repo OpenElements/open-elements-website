@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Fun with gestures'
+slug: fun-with-gestures
 date: "2011-07-28"
 author: hendrik
 categories: [General]

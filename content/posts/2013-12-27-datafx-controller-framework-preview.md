@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'DataFX Controller Framework Preview'
+slug: datafx-controller-framework-preview
 date: "2013-12-27"
 author: hendrik
 categories: [DataFX, General, JavaFX]

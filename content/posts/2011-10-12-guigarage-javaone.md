@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'GuiGarage @ JavaOne'
+slug: guigarage-javaone
 date: "2011-10-12"
 author: hendrik
 categories: [General]

@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Change Java version on Mac OS'
+slug: change-java-version-on-mac-os
 date: "2013-02-08"
 author: hendrik
 categories: [JavaFX]

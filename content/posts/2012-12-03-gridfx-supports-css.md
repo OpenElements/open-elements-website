@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'GridFX supports CSS'
+slug: gridfx-supports-css
 date: "2012-12-03"
 author: hendrik
 categories: [JavaFX]

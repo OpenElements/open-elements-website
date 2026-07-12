@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title:  'Do I need to pay for Java now?'
+slug: do-i-need-to-pay-for-java-now
 date: "2018-06-25"
 author: hendrik
 excerpt: 'This post gives an overview of the new Java release train as it was announced by Oracle. Plus, the article provides some important 

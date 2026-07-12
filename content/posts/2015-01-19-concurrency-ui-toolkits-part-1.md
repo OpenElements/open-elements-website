@@ -2,6 +2,7 @@
 outdated: true
 showInBlog: false
 title: 'Concurrency in UI Toolkits (Part 1)'
+slug: concurrency-in-ui-toolkits-part-1
 date: "2015-01-19"
 author: hendrik
 categories: [Desktop Application Framework (JSR 377), JavaFX]
