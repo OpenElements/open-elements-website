@@ -442,7 +442,8 @@ function rewriteInternalLinks(contentHtml: string, locale: string): string {
       let newHref = normalizedHref;
       if (!hasLocalePrefix && locale !== 'en') {
         const prefix = `/${locale}`;
-        newHref = normalizedHref === '/' ? prefix : `${prefix}${normalizedHref}`;
+        newHref =
+          normalizedHref === '/' ? prefix : `${prefix}${normalizedHref}`;
       }
 
       return `<a${attributesBeforeHref}href=${quote}${newHref}${quote}${attributesAfterHref}>${linkContent}</a>`;
