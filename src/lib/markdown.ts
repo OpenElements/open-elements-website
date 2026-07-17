@@ -398,6 +398,59 @@ function decorateExternalLinks(contentHtml: string): string {
   );
 }
 
+function rewriteInternalLinks(contentHtml: string, locale: string): string {
+  return contentHtml.replace(
+    /<a\b([^>]*?)href=(["'])(.*?)\2([^>]*)>([\s\S]*?)<\/a>/gi,
+    (
+      fullMatch,
+      attributesBeforeHref: string,
+      quote: string,
+      href: string,
+      attributesAfterHref: string,
+      linkContent: string,
+    ) => {
+      const trimmedHref = href.trim();
+
+      // Only process root-relative paths (starting with '/' but not '//')
+      if (!trimmedHref.startsWith('/') || trimmedHref.startsWith('//')) {
+        return fullMatch;
+      }
+
+      // Leave asset paths untouched (path segment containing a file extension)
+      const pathPart = trimmedHref.split(/[?#]/)[0];
+      const lastSegment = pathPart.split('/').pop() || '';
+      if (lastSegment.includes('.')) {
+        return fullMatch;
+      }
+
+      // Check if it already has a locale prefix (e.g. /de/ or /de)
+      const hasLocalePrefix = /^\/(de|en)(?:[\/?#]|$)/.test(trimmedHref);
+
+      // Normalize trailing slash
+      let normalizedHref = trimmedHref;
+      const match = trimmedHref.match(/^([^?#]*)(.*)$/);
+      if (match) {
+        let pPart = match[1];
+        const queryAndHash = match[2];
+        if (pPart !== '/' && pPart.endsWith('/')) {
+          pPart = pPart.slice(0, -1);
+        }
+        normalizedHref = pPart + queryAndHash;
+      }
+
+      // Prepend locale prefix if needed
+      let newHref = normalizedHref;
+      if (!hasLocalePrefix && locale !== 'en') {
+        const prefix = `/${locale}`;
+        newHref =
+          normalizedHref === '/' ? prefix : `${prefix}${normalizedHref}`;
+      }
+
+      return `<a${attributesBeforeHref}href=${quote}${newHref}${quote}${attributesAfterHref}>${linkContent}</a>`;
+    },
+  );
+}
+
 const STANDALONE_IMAGE_STYLE =
   'display: block; max-width: 100%; height: auto; margin-left: auto; margin-right: auto;';
 
@@ -722,8 +775,11 @@ export async function getPostBySlug(
       .process(transformedContent);
     const contentHtml = highlightCodeBlocks(
       decorateHeadlinesWithAnchors(
-        decorateExternalLinks(
-          centerStandaloneHtmlImages(processedContent.toString()),
+        rewriteInternalLinks(
+          decorateExternalLinks(
+            centerStandaloneHtmlImages(processedContent.toString()),
+          ),
+          locale,
         ),
       ),
     );
