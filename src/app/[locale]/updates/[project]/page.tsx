@@ -3,7 +3,7 @@ import { getAllUpdates } from '@/lib/updates';
 import { getTranslations } from 'next-intl/server';
 import UpdatesClient from '@/components/UpdatesClient';
 
-const PROJECTS = ['maven', 'junit'] as const;
+export const PROJECTS = ['maven', 'junit'] as const;
 
 export function generateStaticParams() {
   return PROJECTS.map(project => ({ project }));
