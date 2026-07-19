@@ -575,7 +575,7 @@
     "german": "Deutsch"
   },
   "updates": {
-    "metaTitle": "Monatliche Updates | Open Elements",
+    "metaTitle": "Monatliche Updates zu {project} | Open Elements",
     "metaDescription": "Verfolgen Sie unseren monatlichen Fortschritt bei Open-Source-Projekten — Funktionen, Fixes und Community-Beiträge.",
     "title": "Monatliche Updates",
     "description": "Ein transparenter Blick auf unsere monatliche Arbeit an {project}",

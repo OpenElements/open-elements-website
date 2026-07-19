@@ -527,7 +527,7 @@
     }
   },
   "updates": {
-    "metaTitle": "Monthly Updates | Open Elements",
+    "metaTitle": "{project} Monthly Updates | Open Elements",
     "metaDescription": "Follow our monthly progress on open-source projects — features, fixes, and community contributions.",
     "title": "Monthly Updates",
     "description": "A transparent look at our monthly work on {project}",

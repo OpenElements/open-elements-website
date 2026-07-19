@@ -5,6 +5,7 @@ import Image from 'next/image';
 import type { MonthlyUpdate, UpdateCategory, ItemType } from '@/types/updates';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { PROJECTS, getProject } from '@/lib/projects';
 
 const MONTHS = [
   'JANUARY',
@@ -31,23 +32,10 @@ function localizeMonth(month: string, locale: string): string {
     .toUpperCase();
 }
 
-const PROJECT_NAV = [
-  {
-    project: 'maven',
-    name: 'Apache Maven',
-    logo: '/support-care/component-logos/apache-maven.svg',
-  },
-  {
-    project: 'junit',
-    name: 'JUnit',
-    logo: '/support-care/component-logos/junit.svg',
-  },
-];
-
 function ProjectNav({ active }: { active: string }) {
   return (
     <nav className="flex flex-wrap items-center justify-center gap-3 mt-8">
-      {PROJECT_NAV.map(({ project, name, logo }) => {
+      {PROJECTS.map(({ project, name, logo }) => {
         const isActive = project === active;
         return (
           <Link
@@ -283,8 +271,7 @@ export default function UpdatesClient({
   project: string;
 }) {
   const t = useTranslations('updates');
-  const projectName =
-    PROJECT_NAV.find(p => p.project === project)?.name ?? project;
+  const projectName = getProject(project)?.name ?? project;
 
   return (
     <div className="relative bg-white">
