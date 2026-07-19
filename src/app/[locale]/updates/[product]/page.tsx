@@ -1,6 +1,16 @@
+import { notFound } from 'next/navigation';
 import { getAllUpdates } from '@/lib/updates';
 import { getTranslations } from 'next-intl/server';
 import UpdatesClient from '@/components/UpdatesClient';
+
+const PROJECTS: Record<string, string> = {
+  maven: 'Apache Maven',
+  junit: 'JUnit',
+};
+
+export function generateStaticParams() {
+  return Object.keys(PROJECTS).map(product => ({ product }));
+}
 
 export async function generateMetadata({
   params,
@@ -24,10 +34,13 @@ export async function generateMetadata({
 export default async function UpdatesPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string; product: string }>;
 }) {
-  const { locale } = await params;
-  const updates = getAllUpdates(locale);
+  const { locale, product } = await params;
+  const project = PROJECTS[product];
+  if (!project) notFound();
 
-  return <UpdatesClient updates={updates} />;
+  const updates = getAllUpdates(locale, product);
+
+  return <UpdatesClient updates={updates} project={project} />;
 }

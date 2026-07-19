@@ -207,8 +207,10 @@ function UpdateCard({
 
 export default function UpdatesClient({
   updates,
+  project,
 }: {
   updates: MonthlyUpdate[];
+  project: string;
 }) {
   const t = useTranslations('updates');
 
@@ -241,7 +243,7 @@ export default function UpdatesClient({
           <div className="relative flex flex-col items-center justify-center w-full">
             <h1 className="text-center h1">{t('title')}</h1>
             <p className="max-w-3xl mx-auto text-center text-base">
-              {t('description')}
+              {t('description', { project })}
             </p>
             <Image
               src="/illustrations/line-p.svg"

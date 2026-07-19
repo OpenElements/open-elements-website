@@ -157,7 +157,6 @@
             "link": "https://maven-starter.io",
             "type": "BUG_FIX"
           }
-
         ]
       }
     ],
@@ -200,7 +199,6 @@
             "text": "Begonnen mit der Erstellung von Architektur-Dokumentationen und Blog-Beiträgen zur Java-Module Unterstützung in Maven 4",
             "type": "DOCUMENTATION"
           }
-
         ]
       },
       {
@@ -215,7 +213,6 @@
             "link": "https://maven-starter.io",
             "type": "MAINTENANCE"
           }
-
         ]
       }
     ],

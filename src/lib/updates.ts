@@ -2,13 +2,16 @@ import fs from 'fs';
 import path from 'path';
 import type { MonthlyUpdate } from '@/types/updates';
 
-export function getAllUpdates(locale: string): MonthlyUpdate[] {
+export function getAllUpdates(
+  locale: string,
+  product: string,
+): MonthlyUpdate[] {
   const filePath = path.join(
     process.cwd(),
     'src',
     'data',
     locale,
-    'updates-maven.json',
+    `updates-${product}.json`,
   );
 
   if (!fs.existsSync(filePath)) {
