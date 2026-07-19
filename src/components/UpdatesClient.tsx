@@ -4,6 +4,49 @@ import { useState } from 'react';
 import Image from 'next/image';
 import type { MonthlyUpdate, UpdateCategory, ItemType } from '@/types/updates';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+
+const PROJECT_NAV = [
+  {
+    project: 'maven',
+    name: 'Apache Maven',
+    logo: '/support-care/component-logos/apache-maven.svg',
+  },
+  {
+    project: 'junit',
+    name: 'JUnit',
+    logo: '/support-care/component-logos/junit.svg',
+  },
+];
+
+function ProjectNav({ active }: { active: string }) {
+  return (
+    <nav className="flex flex-wrap items-center justify-center gap-3 mt-8">
+      {PROJECT_NAV.map(({ project, name, logo }) => {
+        const isActive = project === active;
+        return (
+          <Link
+            key={project}
+            href={`/updates/${project}`}
+            aria-current={isActive ? 'page' : undefined}
+            className={`flex items-center rounded-full border px-5 py-2.5 transition-colors ${
+              isActive
+                ? 'border-green bg-green-100'
+                : 'border-slate opacity-60 hover:opacity-100 hover:border-green/40'
+            }`}>
+            <Image
+              src={logo}
+              alt={name}
+              width={120}
+              height={32}
+              className="h-8 w-auto shrink-0"
+            />
+          </Link>
+        );
+      })}
+    </nav>
+  );
+}
 
 const ITEM_TYPE_CONFIG: Record<
   ItemType,
@@ -213,6 +256,8 @@ export default function UpdatesClient({
   project: string;
 }) {
   const t = useTranslations('updates');
+  const projectName =
+    PROJECT_NAV.find(p => p.project === project)?.name ?? project;
 
   return (
     <div className="relative bg-white">
@@ -243,7 +288,7 @@ export default function UpdatesClient({
           <div className="relative flex flex-col items-center justify-center w-full">
             <h1 className="text-center h1">{t('title')}</h1>
             <p className="max-w-3xl mx-auto text-center text-base">
-              {t('description', { project })}
+              {t('description', { project: projectName })}
             </p>
             <Image
               src="/illustrations/line-p.svg"
@@ -254,6 +299,7 @@ export default function UpdatesClient({
             />
           </div>
         </div>
+        <ProjectNav active={project} />
       </div>
 
       <ul

@@ -4,14 +4,14 @@ import type { MonthlyUpdate } from '@/types/updates';
 
 export function getAllUpdates(
   locale: string,
-  product: string,
+  project: string,
 ): MonthlyUpdate[] {
   const filePath = path.join(
     process.cwd(),
     'src',
     'data',
     locale,
-    `updates-${product}.json`,
+    `updates-${project}.json`,
   );
 
   if (!fs.existsSync(filePath)) {

@@ -3,13 +3,10 @@ import { getAllUpdates } from '@/lib/updates';
 import { getTranslations } from 'next-intl/server';
 import UpdatesClient from '@/components/UpdatesClient';
 
-const PROJECTS: Record<string, string> = {
-  maven: 'Apache Maven',
-  junit: 'JUnit',
-};
+const PROJECTS = ['maven', 'junit'] as const;
 
 export function generateStaticParams() {
-  return Object.keys(PROJECTS).map(product => ({ product }));
+  return PROJECTS.map(project => ({ project }));
 }
 
 export async function generateMetadata({
@@ -34,13 +31,12 @@ export async function generateMetadata({
 export default async function UpdatesPage({
   params,
 }: {
-  params: Promise<{ locale: string; product: string }>;
+  params: Promise<{ locale: string; project: string }>;
 }) {
-  const { locale, product } = await params;
-  const project = PROJECTS[product];
-  if (!project) notFound();
+  const { locale, project } = await params;
+  if (!(PROJECTS as readonly string[]).includes(project)) notFound();
 
-  const updates = getAllUpdates(locale, product);
+  const updates = getAllUpdates(locale, project);
 
   return <UpdatesClient updates={updates} project={project} />;
 }
