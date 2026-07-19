@@ -147,7 +147,7 @@
           {
             "text": "JUnit 6.1.0",
             "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.1.0",
-            "type": "MAINTENANCE"
+            "type": "FEATURE"
           }
         ]
       },
@@ -227,7 +227,7 @@
           {
             "text": "JUnit 6.1.0-RC1",
             "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.1.0-RC1",
-            "type": "MAINTENANCE"
+            "type": "FEATURE"
           }
         ]
       },
