@@ -1,0 +1,589 @@
+[
+  {
+    "month": "JUNE",
+    "year": 2026,
+    "excerpt": "JUnit 6.1.1 und Open Test Reporting 0.2.6 veröffentlicht, die Lieferkette abgesichert, das Verhalten von Memory-Cleanup und parametrisierten Tests verbessert sowie die Build-Infrastruktur optimiert.",
+    "categories": [
+      {
+        "title": "Releases",
+        "items": [
+          {
+            "text": "JUnit 6.1.1",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.1.1",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Open Test Reporting 0.2.6",
+            "link": "https://github.com/ota4j-team/open-test-reporting/releases/tag/r0.2.6",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Umgehung der plexus-utils-CVE im Build",
+            "link": "https://github.com/junit-team/junit-framework/pull/5757",
+            "type": "SECURITY"
+          },
+          {
+            "text": "sha256/sha512-Prüfsummen wieder veröffentlichen und dabei Prüfsummen von Signaturdateien herausfiltern",
+            "link": "https://github.com/junit-team/junit-framework/pull/5796",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Repository zur Ausfallsicherheit auf Codeberg spiegeln",
+            "link": "https://github.com/junit-team/junit-framework/pull/5776",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Umgehung von CVEs in jackson-databind 2.21.x (CVE-2026-54512)",
+            "link": "https://github.com/junit-team/junit-framework/commit/f8d0db64a83d4dea1da9f5ed26f92f49ed4c1002",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Ausschluss einzelner Engines vom Memory-Cleanup-Modus ermöglichen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5786",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Performanceproblem im Memory-Cleanup-Modus für JUnit-3.x-Tests der Vintage-Engine behoben",
+            "link": "https://github.com/junit-team/junit-framework/issues/5740",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Ursprüngliche @SetSystemProperty-Werte innerhalb eines @ParameterizedTest wiederherstellen",
+            "link": "https://github.com/junit-team/junit-framework/issues/5717",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Deaktivieren einer @Suite über @org.junit.platform.suite.api.Disabled unterstützen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5792",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Absicherung gegen nicht-positive Werte von junit.jupiter.params.displayname.argument.maxlength, die parametrisierte Tests zum Absturz bringen",
+            "link": "https://github.com/junit-team/junit-framework/issues/5810",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Aufarbeitung einer Reihe von Test-Discovery- und @Nested-Randfällen (umgekehrte Ausführungsreihenfolge, fälschliche Discovery-Probleme bei abstrakten/inneren Klassen, Unterstützung statischer @Nested-Klassen)",
+            "link": "https://github.com/junit-team/junit-framework/issues/4600",
+            "type": "BUG_FIX"
+          }
+        ]
+      },
+      {
+        "title": "Open Test Reporting",
+        "items": [
+          {
+            "text": "Ausführungszeit in der Test-Baum-Seitenleiste des HTML-Berichts anzeigen",
+            "link": "https://github.com/ota4j-team/open-test-reporting/pull/1078",
+            "type": "FEATURE"
+          },
+          {
+            "text": "FreeBSD zur CI hinzufügen und den Build unter FreeBSD reparieren",
+            "link": "https://github.com/ota4j-team/open-test-reporting/pull/1061",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Angehängte Videos direkt im Bericht einbetten",
+            "link": "https://github.com/ota4j-team/open-test-reporting/issues/736",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation & Website",
+        "items": [
+          {
+            "text": "Fehlende API-Dokumentation für das Aggregator-Modul org.junit.jupiter ergänzen",
+            "link": "https://github.com/junit-team/junit-framework/issues/5784",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastruktur",
+        "items": [
+          {
+            "text": "Build der Dokumentationswebsite durch Caching generierter versionsspezifischer Ressourcen wie Javadoc beschleunigen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5808",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Umfangreiche automatisierte Abhängigkeitspflege über alle Repositories hinweg via Renovate — 234 Update-PRs geprüft und gemergt",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/marcphilipp",
+      "https://github.com/sbrannen",
+      "https://github.com/mpkorstanje",
+      "https://github.com/sormuras"
+    ]
+  },
+  {
+    "month": "MAY",
+    "year": 2026,
+    "excerpt": "JUnit 6.1.0 veröffentlicht, das Klassenladen des ConsoleLauncher abgesichert und die Veröffentlichung auf Maven Central auf das nmcp-Gradle-Plugin umgestellt.",
+    "categories": [
+      {
+        "title": "Releases",
+        "items": [
+          {
+            "text": "JUnit 6.1.0",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.1.0",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Umgehung von CVE-2026-3505 für Bouncy Castle",
+            "link": "https://github.com/junit-team/junit-framework/commit/4a6adc656e05f5088e9bd78e9912ff92b4252bf5",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Den vom ConsoleLauncher erzeugten ClassLoader nicht schließbar machen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5672",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Eine unveränderliche Menge aus AbstractTestDescriptor.getChildren() zurückgeben",
+            "link": "https://github.com/junit-team/junit-framework/pull/5639",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Einen Hinweis zum Aktivieren von Thread-Dumps in Timeout-Fehlermeldungen aufnehmen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5673",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastruktur",
+        "items": [
+          {
+            "text": "Zum nmcp-Gradle-Plugin für die Veröffentlichung auf Maven Central wechseln",
+            "link": "https://github.com/junit-team/junit-framework/pull/5648",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Workflows um einen einzigen \"status\"-Job umstrukturieren und Merge-Queue aktivieren",
+            "link": "https://github.com/junit-team/junit-framework/pull/5670",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Umfangreiche automatisierte Abhängigkeitspflege über alle Repositories hinweg via Renovate — 124 Update-PRs geprüft und gemergt",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/marcphilipp",
+      "https://github.com/mpkorstanje"
+    ]
+  },
+  {
+    "month": "APRIL",
+    "year": 2026,
+    "excerpt": "JUnit 5.14.4 und 6.1.0-RC1 veröffentlicht, den experimentellen Memory-Cleanup-Modus und eine TempDirDeletionStrategy eingeführt sowie die Build-Unterstützung für JDK 26/27 vorbereitet.",
+    "categories": [
+      {
+        "title": "Releases",
+        "items": [
+          {
+            "text": "JUnit 5.14.4",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r5.14.4",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "JUnit 6.1.0-RC1",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.1.0-RC1",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Umgehung von CVE-2026-3505 in Bouncy Castle",
+            "link": "https://github.com/junit-team/junit-framework/commit/974b343d2fee58d7222e05913d5bdedac4e9e178",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Experimentellen Memory-Cleanup-Modus einführen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5588",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Eine TempDirDeletionStrategy einführen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5424",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Ein type-Attribut für @EmptySource einführen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5630",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Fehlerbehebungen für fehlende @ParameterizedClass-Parameter in Legacy-XML-Berichten und eine Race-Condition in NodeTestTask zurückportieren",
+            "link": "https://github.com/junit-team/junit-framework/issues/5619",
+            "type": "BUG_FIX"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation & Website",
+        "items": [
+          {
+            "text": "Unterabschnitte im User Guide einführen, um die Auffindbarkeit zu verbessern",
+            "link": "https://github.com/junit-team/junit-framework/pull/5631",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Kotlin-Snippets für weitere Abschnitte des User Guide ergänzen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5590",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastruktur",
+        "items": [
+          {
+            "text": "Temurin-Distribution für JDK 26 verwenden und den Build unter JDK 27-ea bedingt deaktivieren",
+            "link": "https://github.com/junit-team/junit-framework/pull/5576",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Den GitHub-Actions-Build von JUnit 4 reparieren",
+            "link": "https://github.com/junit-team/junit4/pull/1790",
+            "type": "BUG_FIX"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Umfangreiche automatisierte Abhängigkeitspflege über alle Repositories hinweg via Renovate — 150 Update-PRs geprüft und gemergt",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/marcphilipp",
+      "https://github.com/mpkorstanje",
+      "https://github.com/sormuras"
+    ]
+  },
+  {
+    "month": "MARCH",
+    "year": 2026,
+    "excerpt": "Zwei Race-Conditions bei paralleler Ausführung behoben, eine Kotlin-Variante von assertThrowsExactly ergänzt, das Legacy-XML-Reporting verbessert und die Kotlin-Beispiele im User Guide erweitert.",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Umgehung von CVE-2025-67030 in plexus-utils",
+            "link": "https://github.com/junit-team/junit-framework/commit/4ec1a904ae216cd7ae7670716db9b0a911438bed",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Zwei Race-Conditions bei paralleler Ausführung beheben (NodeTestTask und WorkerThreadPoolHierarchicalTestExecutorService)",
+            "link": "https://github.com/junit-team/junit-framework/pull/5427",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Eine Kotlin-Variante von assertThrowsExactly einführen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5436",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Den vollständigen Anzeigenamen und den Class-Template-Invocation-Index in Legacy-XML-Berichte aufnehmen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5524",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation & Website",
+        "items": [
+          {
+            "text": "Kotlin-Snippets in weiteren Abschnitten des User Guide ergänzen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5432",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Die Dokumentation zu TestKit Executions verbessern",
+            "link": "https://github.com/junit-team/junit-framework/pull/5534",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastruktur",
+        "items": [
+          {
+            "text": "Auf dem GA-Release von JDK 26 bauen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5532",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Umfangreiche automatisierte Abhängigkeitspflege über alle Repositories hinweg via Renovate — 221 Update-PRs geprüft und gemergt",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/marcphilipp",
+      "https://github.com/mpkorstanje"
+    ]
+  },
+  {
+    "month": "FEBRUARY",
+    "year": 2026,
+    "excerpt": "JUnit 5.14.3 und 6.0.3 veröffentlicht, einen Deadlock im NamespacedHierarchicalStore behoben, die Discovery-Selektoren für Classpath-Ressourcen erweitert und JRE.OTHER als veraltet markiert.",
+    "categories": [
+      {
+        "title": "Releases",
+        "items": [
+          {
+            "text": "JUnit 5.14.3",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r5.14.3",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "JUnit 6.0.3",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.0.3",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Jackson-Abhängigkeiten (direkt und transitiv) aktualisieren, um GHSA-72hv-8253-57qq zu beheben",
+            "link": "https://github.com/junit-team/junit-framework/commit/2b17f78430d9a52add5c37cab0647330e780fdd6",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Einen Deadlock in NamespacedHierarchicalStore.computeIfAbsent() beheben",
+            "link": "https://github.com/junit-team/junit-framework/pull/5348",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Discovery-Selektoren selectClasspathResources(String...) hinzufügen und das Sammeln von Discovery-Issues von deren Erzeugung trennen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5322",
+            "type": "FEATURE"
+          },
+          {
+            "text": "JRE.OTHER als veraltet markieren und eine Test-Double-Variante des JRE-Enums einführen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5376",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Jupiters Constants in das API-Paket verschieben",
+            "link": "https://github.com/junit-team/junit-framework/pull/5379",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation & Website",
+        "items": [
+          {
+            "text": "Javadoc-Links auf den User Guide auf eine bestimmte Version fixieren",
+            "link": "https://github.com/junit-team/junit-framework/pull/5290",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Kotlin-Codebeispiele zum User Guide hinzufügen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5316",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastruktur",
+        "items": [
+          {
+            "text": "Byte Buddy aktualisieren und die Ausrichtung seiner Artefakte sicherstellen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5386",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Umfangreiche automatisierte Abhängigkeitspflege über alle Repositories hinweg via Renovate — 126 Update-PRs geprüft und gemergt",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/marcphilipp",
+      "https://github.com/sbrannen",
+      "https://github.com/mpkorstanje",
+      "https://github.com/sormuras"
+    ]
+  },
+  {
+    "month": "JANUARY",
+    "year": 2026,
+    "excerpt": "JUnit 5.14.2 und 6.0.2 veröffentlicht, am SystemPropertyExtension-Beitrag von JUnit Pioneer gearbeitet und eine einseitige HTML-Version des User Guide ergänzt.",
+    "categories": [
+      {
+        "title": "Releases",
+        "items": [
+          {
+            "text": "JUnit 5.14.2",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r5.14.2",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "JUnit 6.0.2",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.0.2",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Umgehung von CVE-2026-1225 in logback-classic",
+            "link": "https://github.com/junit-team/junit-framework/commit/0eb1d428a5f6daf2087d89156a73b0a1f2f8bd5f",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Den SystemPropertyExtension-Beitrag von JUnit Pioneer annehmen und verbessern",
+            "link": "https://github.com/junit-team/junit-framework/pull/5258",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Vorschlagen, die Standard-Implementierung des Executor-Service auf worker_thread_pool umzustellen",
+            "link": "https://github.com/junit-team/junit-framework/issues/5291",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation & Website",
+        "items": [
+          {
+            "text": "Eine einseitige HTML-Version des User Guide beifügen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5321",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Dokumentieren, wie runTest für Kotlin-Coroutine-Tests verwendet wird",
+            "link": "https://github.com/junit-team/junit-framework/pull/5271",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "junit.org auf Hosting bei statichost.eu umziehen",
+            "link": "https://github.com/junit-team/junit.org/pull/73",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Den Contributor Covenant 3.0 Code of Conduct übernehmen",
+            "link": "https://github.com/junit-team/.github/pull/2",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastruktur",
+        "items": [
+          {
+            "text": "Build-Time-Abhängigkeit auf Jackson 3.0 aktualisieren",
+            "link": "https://github.com/junit-team/junit-framework/pull/5301",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Den OpenJ9-Build mit JDK 25 ausführen",
+            "link": "https://github.com/junit-team/junit-framework/pull/5268",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Umfangreiche automatisierte Abhängigkeitspflege über alle Repositories hinweg via Renovate — 180 Update-PRs geprüft und gemergt",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/marcphilipp",
+      "https://github.com/sbrannen",
+      "https://github.com/mpkorstanje",
+      "https://github.com/sormuras"
+    ]
+  }
+]
