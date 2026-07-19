@@ -3,8 +3,33 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import type { MonthlyUpdate, UpdateCategory, ItemType } from '@/types/updates';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
+
+const MONTHS = [
+  'JANUARY',
+  'FEBRUARY',
+  'MARCH',
+  'APRIL',
+  'MAY',
+  'JUNE',
+  'JULY',
+  'AUGUST',
+  'SEPTEMBER',
+  'OCTOBER',
+  'NOVEMBER',
+  'DECEMBER',
+];
+
+// Data stores months as uppercase English (e.g. "APRIL"); render them in the
+// active locale, keeping the existing all-caps styling.
+function localizeMonth(month: string, locale: string): string {
+  const idx = MONTHS.indexOf(month.toUpperCase());
+  if (idx < 0) return month;
+  return new Intl.DateTimeFormat(locale, { month: 'long' })
+    .format(new Date(Date.UTC(2000, idx, 1)))
+    .toUpperCase();
+}
 
 const PROJECT_NAV = [
   {
@@ -184,6 +209,8 @@ function UpdateCard({
   isLast: boolean;
 }) {
   const t = useTranslations('updates');
+  const locale = useLocale();
+  const month = localizeMonth(update.month, locale);
 
   return (
     <li className="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
@@ -198,7 +225,7 @@ function UpdateCard({
 
       {/* Month label (desktop) */}
       <p className="-top-3 font-semibold absolute lg:block hidden -left-16 text-xs uppercase tracking-wider text-green-300">
-        {update.month}
+        {month}
       </p>
 
       {/* Timeline dot */}
@@ -213,7 +240,7 @@ function UpdateCard({
         {/* Header */}
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <h3 className="font-light text-2xl sm:text-3xl">
-            {update.month} {update.year}
+            {month} {update.year}
           </h3>
           {isFirst && (
             <span className="text-xs bg-green-100 text-green-300 font-bold px-3 py-1 rounded-full">
