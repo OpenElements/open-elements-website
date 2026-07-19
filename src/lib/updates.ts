@@ -8,7 +8,7 @@ export function getAllUpdates(locale: string): MonthlyUpdate[] {
     'src',
     'data',
     locale,
-    'updates.json',
+    'updates-maven.json',
   );
 
   if (!fs.existsSync(filePath)) {

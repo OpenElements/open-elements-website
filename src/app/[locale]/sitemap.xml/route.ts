@@ -11,7 +11,7 @@ function getStaticRoutes(locale: string): string[] {
     'posts',
     'support-care',
     'support-care-maven',
-    'updates',
+    'updates/maven',
   ];
 
   if (locale === 'de') {
