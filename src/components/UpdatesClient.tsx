@@ -3,7 +3,63 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import type { MonthlyUpdate, UpdateCategory, ItemType } from '@/types/updates';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import { PROJECTS, getProject } from '@/lib/projects';
+
+const MONTHS = [
+  'JANUARY',
+  'FEBRUARY',
+  'MARCH',
+  'APRIL',
+  'MAY',
+  'JUNE',
+  'JULY',
+  'AUGUST',
+  'SEPTEMBER',
+  'OCTOBER',
+  'NOVEMBER',
+  'DECEMBER',
+];
+
+// Data stores months as uppercase English (e.g. "APRIL"); render them in the
+// active locale, keeping the existing all-caps styling.
+function localizeMonth(month: string, locale: string): string {
+  const idx = MONTHS.indexOf(month.toUpperCase());
+  if (idx < 0) return month;
+  return new Intl.DateTimeFormat(locale, { month: 'long' })
+    .format(new Date(Date.UTC(2000, idx, 1)))
+    .toUpperCase();
+}
+
+function ProjectNav({ active }: { active: string }) {
+  return (
+    <nav className="flex flex-wrap items-center justify-center gap-3 mt-8">
+      {PROJECTS.map(({ project, name, logo }) => {
+        const isActive = project === active;
+        return (
+          <Link
+            key={project}
+            href={`/updates/${project}`}
+            aria-current={isActive ? 'page' : undefined}
+            className={`flex items-center rounded-full border px-5 py-2.5 transition-colors ${
+              isActive
+                ? 'border-green bg-green-100'
+                : 'border-slate opacity-60 hover:opacity-100 hover:border-green/40'
+            }`}>
+            <Image
+              src={logo}
+              alt={name}
+              width={120}
+              height={32}
+              className="h-8 w-auto shrink-0"
+            />
+          </Link>
+        );
+      })}
+    </nav>
+  );
+}
 
 const ITEM_TYPE_CONFIG: Record<
   ItemType,
@@ -141,6 +197,8 @@ function UpdateCard({
   isLast: boolean;
 }) {
   const t = useTranslations('updates');
+  const locale = useLocale();
+  const month = localizeMonth(update.month, locale);
 
   return (
     <li className="relative flex md:gap-x-9 sm:gap-x-5 gap-x-3">
@@ -155,7 +213,7 @@ function UpdateCard({
 
       {/* Month label (desktop) */}
       <p className="-top-3 font-semibold absolute lg:block hidden -left-16 text-xs uppercase tracking-wider text-green-300">
-        {update.month}
+        {month}
       </p>
 
       {/* Timeline dot */}
@@ -170,7 +228,7 @@ function UpdateCard({
         {/* Header */}
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <h3 className="font-light text-2xl sm:text-3xl">
-            {update.month} {update.year}
+            {month} {update.year}
           </h3>
           {isFirst && (
             <span className="text-xs bg-green-100 text-green-300 font-bold px-3 py-1 rounded-full">
@@ -207,10 +265,13 @@ function UpdateCard({
 
 export default function UpdatesClient({
   updates,
+  project,
 }: {
   updates: MonthlyUpdate[];
+  project: string;
 }) {
   const t = useTranslations('updates');
+  const projectName = getProject(project)?.name ?? project;
 
   return (
     <div className="relative bg-white">
@@ -241,7 +302,7 @@ export default function UpdatesClient({
           <div className="relative flex flex-col items-center justify-center w-full">
             <h1 className="text-center h1">{t('title')}</h1>
             <p className="max-w-3xl mx-auto text-center text-base">
-              {t('description')}
+              {t('description', { project: projectName })}
             </p>
             <Image
               src="/illustrations/line-p.svg"
@@ -252,6 +313,7 @@ export default function UpdatesClient({
             />
           </div>
         </div>
+        <ProjectNav active={project} />
       </div>
 
       <ul
