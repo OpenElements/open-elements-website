@@ -1,8 +1,9 @@
 name: PR Automation
 
 on:
-  pull_request:
-    types: [opened, reopened, ready_for_review, synchronize, review_request_removed]
+  pull_request_target:
+    types:
+      [opened, reopened, ready_for_review, synchronize, review_request_removed]
 
 permissions:
   pull-requests: write
@@ -14,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Get changed files
         id: files
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const response = await github.rest.pulls.listFiles({
@@ -28,10 +29,10 @@ jobs:
               repo: context.repo.repo,
               pull_number: context.issue.number,
             });
-            
+
             const files = response.data || [];
             const labels = new Set();
-            
+
             files.forEach(fileObj => {
               const file = fileObj.filename || '';
               if (file.match(/\.(ts|tsx|jsx|js)$/)) labels.add('typescript');
@@ -41,11 +42,11 @@ jobs:
               if (file.match(/README|\.md$/)) labels.add('documentation');
               if (file.match(/next\.config|public/)) labels.add('build');
             });
-            
+
             core.setOutput('labels', Array.from(labels).join(','));
 
       - name: Enforce reviewers config edit policy
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           MAINTAINER_ALLOWLIST: ${{ vars.MAINTAINER_ALLOWLIST }}
         with:
@@ -74,7 +75,7 @@ jobs:
 
       - name: Auto-label PR
         if: steps.files.outputs.labels != ''
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const labels = '${{ steps.files.outputs.labels }}'.split(',').filter(l => l);
@@ -88,7 +89,7 @@ jobs:
             }
 
       - name: Auto-assign PR to author
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             github.rest.issues.addAssignees({
@@ -101,7 +102,7 @@ jobs:
             })
 
       - name: Auto-request reviewers from JSON config
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           MAINTAINER_ALLOWLIST: ${{ vars.MAINTAINER_ALLOWLIST }}
         with:
