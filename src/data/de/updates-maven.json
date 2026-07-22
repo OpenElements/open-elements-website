@@ -1,5 +1,166 @@
 [
   {
+    "month": "JUNE",
+    "year": 2026,
+    "excerpt": "Abhängigkeits‑Schwachstellen‑Überwachung, Arbeit am buildinfo des Maven Artifact‑Plugins, Surefire und 3.10.0 Vorbereitung, erste atr-maven-plugin‑Veröffentlichung und Getting Started‑Dokumentation",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Verbesserung der Abhängigkeits‑Schwachstellen‑Überwachung für die Apache Maven Projektfamilie",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Analyse des Maven Artifact‑Plugins, um Verbesserungen bei der buildinfo‑Erstellung und dem Build‑Vergleich zu erzielen",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Entfernen der veralteten Bereitstellungsfunktion für buildinfo‑Dateien aus dem Maven Artifact‑Plugin",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Beheben von Problemen des neuen Surefire‑Modus, der ausschließlich die JUnit‑Plattform verwendet",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Vorbereitung der Veröffentlichung 3.10.0",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Vorbereitung des Upgrades von Release Drafter von 6.x auf 7.x",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Arbeiten am atr-maven-plugin, um den Release‑Prozess mit dem ATR (Apache Trusted Releases)-Dienst zu unterstützen; erste Veröffentlichung des Plugins",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Migration von JUnit‑3‑basierten Tests, die AbstractMojoTestCase verwenden, zu JUnit 5 im Maven Changelog‑Plugin",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Erstellung der Getting Started‑Dokumentation",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Erstellung eines Schreibleitfadens für Dokumentation im Allgemeinen",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
+    "month": "MAY",
+    "year": 2026,
+    "excerpt": "Fortschritt beim Maven 3.10.0 Release-Train, CycloneDX- und buildinfo-Verbesserungen, ATR-Release-Tools und Getting Started-Dokumentation",
+    "categories": [
+      {
+        "title": "Lieferkettensicherheit",
+        "items": [
+          {
+            "text": "Verbesserung der buildinfo-Dateibehandlung für Multimodulprojektes",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/apache/maven-artifact-plugin/issues/93"
+          },
+          {
+            "text": "Verbesserung der CycloneDX 1.7 ECMA-Spezifikationsimplementierung für Java",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Der Release-Train für 3.10.0 wurde gestartet, indem Features aus dem 4.x‑Zweig zurückportiert wurden",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Testen und Beheben des 3.10.0 Release-Trains",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Überprüfung und Korrektur von ASF‑gepflegten Maven‑Plugins mit 3.10.0",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Veröffentlichung von Maven 3.9.16 mit Fehlerbehebungen",
+            "type": "BUG_FIX"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung zentraler Funktionen",
+        "items": [
+          {
+            "text": "Werkzeug zur Automatisierung des lokalen Release‑Prozesses für Apache Maven",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Arbeiten am atr-maven-plugin, um den Release‑Prozess mit dem ATR (Apache Trusted Releases)-Dienst zu unterstützen",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Vorschlag für den Inhalt von \"Getting Started\" ausarbeiten",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Konzeption für Lernpfade ausarbeiten",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Getting Started‑Dokumentationsinhalt initialisiert",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Umfassende Reviews der ersten beiden \"Getting Started\"‑PRs",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Diskussion über globale Schreibstile, z. B. die Ansprache des Lesers in formeller oder informeller Weise",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": [
+      "https://github.com/slawekjaranowski",
+      "https://github.com/Ndacyayisenga-droid",
+      "https://github.com/sparsick",
+      "https://github.com/sebtiem",
+      "https://github.com/olamy"
+    ]
+  },
+  {
     "month": "APRIL",
     "year": 2026,
     "excerpt": "Fokus auf Verbesserungen der Sicherheit in der Lieferkette, Vorbereitung von Maven 3.10.0 und Beginn einer besseren Tool-Unterstützung für den internen Release-Prozess von Apache Maven",
