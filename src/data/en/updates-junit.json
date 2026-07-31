@@ -129,12 +129,19 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/sbrannen",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/sbrannen",
+        "https://github.com/mpkorstanje",
+        "https://github.com/sormuras",
+        "https://github.com/adamretter",
+        "https://github.com/big-cir",
+        "https://github.com/whytox"
+      ]
+    }
   },
   {
     "month": "MAY",
@@ -206,10 +213,14 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/mpkorstanje"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/mpkorstanje"
+      ]
+    }
   },
   {
     "month": "APRIL",
@@ -306,11 +317,16 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/mpkorstanje",
+        "https://github.com/sormuras",
+        "https://github.com/yalishevant"
+      ]
+    }
   },
   {
     "month": "MARCH",
@@ -382,10 +398,16 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/mpkorstanje"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/mpkorstanje",
+        "https://github.com/jaschdoc",
+        "https://github.com/yalishevant"
+      ]
+    }
   },
   {
     "month": "FEBRUARY",
@@ -477,12 +499,18 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/sbrannen",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/sbrannen",
+        "https://github.com/mpkorstanje",
+        "https://github.com/sormuras",
+        "https://github.com/JINU-CHANG",
+        "https://github.com/yalishevant"
+      ]
+    }
   },
   {
     "month": "JANUARY",
@@ -579,11 +607,16 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/sbrannen",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/sbrannen",
+        "https://github.com/mpkorstanje",
+        "https://github.com/sormuras",
+        "https://github.com/HyungGeun94"
+      ]
+    }
   }
 ]
