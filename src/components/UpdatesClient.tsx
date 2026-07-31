@@ -2,7 +2,12 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import type { MonthlyUpdate, UpdateCategory, ItemType } from '@/types/updates';
+import type {
+  Contributors,
+  MonthlyUpdate,
+  UpdateCategory,
+  ItemType,
+} from '@/types/updates';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { PROJECTS, getProject } from '@/lib/projects';
@@ -161,7 +166,7 @@ function CategorySection({ category }: { category: UpdateCategory }) {
   );
 }
 
-function ContributorAvatars({ contributors }: { contributors: string[] }) {
+function AvatarRow({ contributors }: { contributors: string[] }) {
   return (
     <div className="flex flex-wrap gap-2">
       {contributors.map(url => {
@@ -183,6 +188,31 @@ function ContributorAvatars({ contributors }: { contributors: string[] }) {
           </a>
         );
       })}
+    </div>
+  );
+}
+
+function ContributorAvatars({ contributors }: { contributors: Contributors }) {
+  const t = useTranslations('updates');
+
+  return (
+    <div className="flex flex-wrap gap-x-8 gap-y-3">
+      {contributors.supportAndCare.length > 0 && (
+        <div>
+          <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
+            {t('supportAndCare')}
+          </p>
+          <AvatarRow contributors={contributors.supportAndCare} />
+        </div>
+      )}
+      {contributors.community && contributors.community.length > 0 && (
+        <div>
+          <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
+            {t('community')}
+          </p>
+          <AvatarRow contributors={contributors.community} />
+        </div>
+      )}
     </div>
   );
 }
@@ -250,7 +280,9 @@ function UpdateCard({
         </div>
 
         {/* Contributors */}
-        {update.contributors.length > 0 && (
+        {update.contributors.supportAndCare.length +
+          (update.contributors.community?.length ?? 0) >
+          0 && (
           <div className="mt-5 pt-5 border-t border-slate">
             <h4 className="font-semibold text-sm mb-2.5">
               {t('contributors')}

@@ -56,13 +56,15 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/slawekjaranowski",
-      "https://github.com/Ndacyayisenga-droid",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem",
-      "https://github.com/olamy"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
   },
   {
     "month": "MARCH",
@@ -118,13 +120,15 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/slawekjaranowski",
-      "https://github.com/Ndacyayisenga-droid",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem",
-      "https://github.com/olamy"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
   },
   {
     "month": "FEBRUARY",
@@ -160,13 +164,15 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/slawekjaranowski",
-      "https://github.com/Ndacyayisenga-droid",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem",
-      "https://github.com/olamy"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
   },
   {
     "month": "JANUARY",
@@ -216,15 +222,17 @@
         ]
       }
     ],
-    "contributors": [
-      "https://github.com/hendrikebbers",
-      "https://github.com/slawekjaranowski",
-      "https://github.com/Ndacyayisenga-droid",
-      "https://github.com/Bukama",
-      "https://github.com/ascheman",
-      "https://github.com/sparsick",
-      "https://github.com/sebtiem",
-      "https://github.com/olamy"
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/hendrikebbers",
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/Bukama",
+        "https://github.com/ascheman",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
   }
 ]
