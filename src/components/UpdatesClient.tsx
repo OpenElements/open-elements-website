@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import type {
-  Contributor,
+  Contributors,
   MonthlyUpdate,
   UpdateCategory,
   ItemType,
@@ -166,10 +166,10 @@ function CategorySection({ category }: { category: UpdateCategory }) {
   );
 }
 
-function AvatarRow({ contributors }: { contributors: Contributor[] }) {
+function AvatarRow({ contributors }: { contributors: string[] }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {contributors.map(({ url }) => {
+      {contributors.map(url => {
         const username = url.replace('https://github.com/', '');
         return (
           <a
@@ -192,27 +192,25 @@ function AvatarRow({ contributors }: { contributors: Contributor[] }) {
   );
 }
 
-function ContributorAvatars({ contributors }: { contributors: Contributor[] }) {
+function ContributorAvatars({ contributors }: { contributors: Contributors }) {
   const t = useTranslations('updates');
-  const internal = contributors.filter(c => !c.external);
-  const external = contributors.filter(c => c.external);
 
   return (
     <div className="flex flex-wrap gap-x-8 gap-y-3">
-      {internal.length > 0 && (
+      {contributors.supportAndCare.length > 0 && (
         <div>
           <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
             {t('supportAndCare')}
           </p>
-          <AvatarRow contributors={internal} />
+          <AvatarRow contributors={contributors.supportAndCare} />
         </div>
       )}
-      {external.length > 0 && (
+      {contributors.community.length > 0 && (
         <div>
           <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
             {t('community')}
           </p>
-          <AvatarRow contributors={external} />
+          <AvatarRow contributors={contributors.community} />
         </div>
       )}
     </div>
@@ -282,7 +280,9 @@ function UpdateCard({
         </div>
 
         {/* Contributors */}
-        {update.contributors.length > 0 && (
+        {update.contributors.supportAndCare.length +
+          update.contributors.community.length >
+          0 && (
           <div className="mt-5 pt-5 border-t border-slate">
             <h4 className="font-semibold text-sm mb-2.5">
               {t('contributors')}

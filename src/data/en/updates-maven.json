@@ -56,25 +56,17 @@
         ]
       }
     ],
-    "contributors": [
-      {
-        "url": "https://github.com/slawekjaranowski",
-        "external": true
-      },
-      {
-        "url": "https://github.com/Ndacyayisenga-droid"
-      },
-      {
-        "url": "https://github.com/sparsick"
-      },
-      {
-        "url": "https://github.com/sebtiem"
-      },
-      {
-        "url": "https://github.com/olamy",
-        "external": true
-      }
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem"
+      ],
+      "community": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/olamy"
+      ]
+    }
   },
   {
     "month": "MARCH",
@@ -130,25 +122,17 @@
         ]
       }
     ],
-    "contributors": [
-      {
-        "url": "https://github.com/slawekjaranowski",
-        "external": true
-      },
-      {
-        "url": "https://github.com/Ndacyayisenga-droid"
-      },
-      {
-        "url": "https://github.com/sparsick"
-      },
-      {
-        "url": "https://github.com/sebtiem"
-      },
-      {
-        "url": "https://github.com/olamy",
-        "external": true
-      }
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem"
+      ],
+      "community": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/olamy"
+      ]
+    }
   },
   {
     "month": "FEBRUARY",
@@ -184,25 +168,17 @@
         ]
       }
     ],
-    "contributors": [
-      {
-        "url": "https://github.com/slawekjaranowski",
-        "external": true
-      },
-      {
-        "url": "https://github.com/Ndacyayisenga-droid"
-      },
-      {
-        "url": "https://github.com/sparsick"
-      },
-      {
-        "url": "https://github.com/sebtiem"
-      },
-      {
-        "url": "https://github.com/olamy",
-        "external": true
-      }
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem"
+      ],
+      "community": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/olamy"
+      ]
+    }
   },
   {
     "month": "JANUARY",
@@ -252,34 +228,19 @@
         ]
       }
     ],
-    "contributors": [
-      {
-        "url": "https://github.com/hendrikebbers"
-      },
-      {
-        "url": "https://github.com/slawekjaranowski",
-        "external": true
-      },
-      {
-        "url": "https://github.com/Ndacyayisenga-droid"
-      },
-      {
-        "url": "https://github.com/Bukama",
-        "external": true
-      },
-      {
-        "url": "https://github.com/ascheman"
-      },
-      {
-        "url": "https://github.com/sparsick"
-      },
-      {
-        "url": "https://github.com/sebtiem"
-      },
-      {
-        "url": "https://github.com/olamy",
-        "external": true
-      }
-    ]
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/hendrikebbers",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/ascheman",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem"
+      ],
+      "community": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Bukama",
+        "https://github.com/olamy"
+      ]
+    }
   }
 ]

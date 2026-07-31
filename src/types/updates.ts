@@ -17,9 +17,9 @@ export interface UpdateCategory {
   items: UpdateItem[];
 }
 
-export interface Contributor {
-  url: string;
-  external?: boolean;
+export interface Contributors {
+  supportAndCare: string[];
+  community: string[];
 }
 
 export interface MonthlyUpdate {
@@ -27,5 +27,5 @@ export interface MonthlyUpdate {
   year: number;
   excerpt: string;
   categories: UpdateCategory[];
-  contributors: Contributor[];
+  contributors: Contributors;
 }
