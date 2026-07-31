@@ -2,7 +2,12 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import type { MonthlyUpdate, UpdateCategory, ItemType } from '@/types/updates';
+import type {
+  Contributor,
+  MonthlyUpdate,
+  UpdateCategory,
+  ItemType,
+} from '@/types/updates';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { PROJECTS, getProject } from '@/lib/projects';
@@ -161,10 +166,10 @@ function CategorySection({ category }: { category: UpdateCategory }) {
   );
 }
 
-function ContributorAvatars({ contributors }: { contributors: string[] }) {
+function AvatarRow({ contributors }: { contributors: Contributor[] }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {contributors.map(url => {
+      {contributors.map(({ url }) => {
         const username = url.replace('https://github.com/', '');
         return (
           <a
@@ -183,6 +188,33 @@ function ContributorAvatars({ contributors }: { contributors: string[] }) {
           </a>
         );
       })}
+    </div>
+  );
+}
+
+function ContributorAvatars({ contributors }: { contributors: Contributor[] }) {
+  const t = useTranslations('updates');
+  const internal = contributors.filter(c => !c.external);
+  const external = contributors.filter(c => c.external);
+
+  return (
+    <div className="flex flex-wrap gap-x-8 gap-y-3">
+      {internal.length > 0 && (
+        <div>
+          <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
+            {t('openElements')}
+          </p>
+          <AvatarRow contributors={internal} />
+        </div>
+      )}
+      {external.length > 0 && (
+        <div>
+          <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
+            {t('community')}
+          </p>
+          <AvatarRow contributors={external} />
+        </div>
+      )}
     </div>
   );
 }

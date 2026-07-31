@@ -581,6 +581,8 @@
     "description": "Ein transparenter Blick auf unsere monatliche Arbeit an {project}",
     "latest": "Aktuell",
     "contributors": "Mitwirkende",
+    "openElements": "Open Elements",
+    "community": "Community",
     "seeMore": "Mehr anzeigen",
     "seeLess": "Weniger anzeigen",
     "decorationAlt": "Dekoratives Element",

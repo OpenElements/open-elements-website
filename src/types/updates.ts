@@ -17,10 +17,15 @@ export interface UpdateCategory {
   items: UpdateItem[];
 }
 
+export interface Contributor {
+  url: string;
+  external?: boolean;
+}
+
 export interface MonthlyUpdate {
   month: string;
   year: number;
   excerpt: string;
   categories: UpdateCategory[];
-  contributors: string[];
+  contributors: Contributor[];
 }

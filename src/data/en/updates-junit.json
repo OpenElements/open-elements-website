@@ -130,10 +130,21 @@
       }
     ],
     "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/sbrannen",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
+      {
+        "url": "https://github.com/marcphilipp"
+      },
+      {
+        "url": "https://github.com/sbrannen",
+        "external": true
+      },
+      {
+        "url": "https://github.com/mpkorstanje",
+        "external": true
+      },
+      {
+        "url": "https://github.com/sormuras",
+        "external": true
+      }
     ]
   },
   {
@@ -207,8 +218,13 @@
       }
     ],
     "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/mpkorstanje"
+      {
+        "url": "https://github.com/marcphilipp"
+      },
+      {
+        "url": "https://github.com/mpkorstanje",
+        "external": true
+      }
     ]
   },
   {
@@ -307,9 +323,17 @@
       }
     ],
     "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
+      {
+        "url": "https://github.com/marcphilipp"
+      },
+      {
+        "url": "https://github.com/mpkorstanje",
+        "external": true
+      },
+      {
+        "url": "https://github.com/sormuras",
+        "external": true
+      }
     ]
   },
   {
@@ -383,8 +407,13 @@
       }
     ],
     "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/mpkorstanje"
+      {
+        "url": "https://github.com/marcphilipp"
+      },
+      {
+        "url": "https://github.com/mpkorstanje",
+        "external": true
+      }
     ]
   },
   {
@@ -478,10 +507,21 @@
       }
     ],
     "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/sbrannen",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
+      {
+        "url": "https://github.com/marcphilipp"
+      },
+      {
+        "url": "https://github.com/sbrannen",
+        "external": true
+      },
+      {
+        "url": "https://github.com/mpkorstanje",
+        "external": true
+      },
+      {
+        "url": "https://github.com/sormuras",
+        "external": true
+      }
     ]
   },
   {
@@ -580,10 +620,21 @@
       }
     ],
     "contributors": [
-      "https://github.com/marcphilipp",
-      "https://github.com/sbrannen",
-      "https://github.com/mpkorstanje",
-      "https://github.com/sormuras"
+      {
+        "url": "https://github.com/marcphilipp"
+      },
+      {
+        "url": "https://github.com/sbrannen",
+        "external": true
+      },
+      {
+        "url": "https://github.com/mpkorstanje",
+        "external": true
+      },
+      {
+        "url": "https://github.com/sormuras",
+        "external": true
+      }
     ]
   }
 ]

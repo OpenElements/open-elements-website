@@ -533,6 +533,8 @@
     "description": "A transparent look at our monthly work on {project}",
     "latest": "Latest",
     "contributors": "Contributors",
+    "openElements": "Open Elements",
+    "community": "Community",
     "seeMore": "See More",
     "seeLess": "See Less",
     "decorationAlt": "Decorative element",
