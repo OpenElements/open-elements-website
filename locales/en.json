@@ -458,6 +458,7 @@
         "name": "Custom Builds & Tooling",
         "desc": "Tailored implementations directly by the maintainers — from special build configurations to individualized tooling solutions."
       },
+      "christianRole": "Java Champion & ASF Member",
       "craTitle": "Prepared for the Cyber Resilience Act",
       "craP1": "From 2027, manufacturers will be responsible for 100% of their software under the Cyber Resilience Act (CRA) — including all open source dependencies. This covers patch times, vulnerability management, documentation and long-term maintainability. Open Elements acts as an open source steward and actively shapes the regulatory framework. As a founding member of the Open Regulatory Compliance Working Group (ORC WG) of the Eclipse Foundation, we work together with leading open source foundations, major technology companies and EU representatives on concrete specifications and practical guidelines for CRA implementation.",
       "craBulletTitle": "Support & Care specifically helps you with:",
