@@ -19,7 +19,7 @@ export interface UpdateCategory {
 
 export interface Contributors {
   supportAndCare: string[];
-  community: string[];
+  community?: string[];
 }
 
 export interface MonthlyUpdate {
