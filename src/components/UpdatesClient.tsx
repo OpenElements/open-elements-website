@@ -202,7 +202,7 @@ function ContributorAvatars({ contributors }: { contributors: Contributor[] }) {
       {internal.length > 0 && (
         <div>
           <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
-            {t('openElements')}
+            {t('supportAndCare')}
           </p>
           <AvatarRow contributors={internal} />
         </div>
