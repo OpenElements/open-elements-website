@@ -5,10 +5,13 @@
   "private": true,
   "pnpm": {
     "overrides": {
-      "postcss": "^8.5.12",
-      "next>postcss": "8.5.12",
-      "next@16.2.4>postcss": "8.5.12",
-      "postcss@8.4.31": "8.5.12"
+      "postcss": "^8.5.18",
+      "sharp": "^0.35.0",
+      "@babel/core": "^7.29.6",
+      "js-yaml@^3": "^3.15.0",
+      "js-yaml@^4": "^4.3.0",
+      "brace-expansion@^1": "^1.1.16",
+      "brace-expansion@^5": "^5.0.8"
     }
   },
   "scripts": {
@@ -33,10 +36,10 @@
     "autoprefixer": "^10.4.23",
     "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
-    "eslint-config-next": "^16.2.4",
+    "eslint-config-next": "^16.2.11",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "postcss": "^8.5.12",
+    "postcss": "^8.5.18",
     "prettier": "^3.8.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
@@ -46,8 +49,8 @@
     "@netlify/plugin-nextjs": "^5.15.3",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
-    "next": "^16.2.4",
-    "next-intl": "^4.9.1",
+    "next": "^16.2.11",
+    "next-intl": "^4.9.2",
     "prismjs": "^1.30.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
