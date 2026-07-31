@@ -1,5 +1,121 @@
 [
   {
+    "month": "JULY",
+    "year": 2026,
+    "excerpt": "Shipped JUnit 6.1.2 and Open Test Reporting 0.2.7, addressed Jackson and Logback CVEs, adopted Gradle's configuration cache, and migrated junit.org from Squarespace/Cloudflare to INWX.",
+    "categories": [
+      {
+        "title": "Releases",
+        "items": [
+          {
+            "text": "JUnit 6.1.2",
+            "link": "https://github.com/junit-team/junit-framework/releases/tag/r6.1.2",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Open Test Reporting 0.2.7",
+            "link": "https://github.com/ota4j-team/open-test-reporting/releases/tag/r0.2.7",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Update Jackson to address CVE-2026-54515",
+            "link": "https://github.com/junit-team/junit-framework/commit/1ccd59133b51f0e275186663dbc64e78e0b4cb17",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Update Logback to address CVE-2026-9828 and CVE-2026-10532",
+            "link": "https://github.com/junit-team/junit-framework/commit/dbc3384f0b6c94b4cf7f8eafcb8fd99f465bdfe8",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "JUnit Framework",
+        "items": [
+          {
+            "text": "Improve @CsvSource.value parsing by parsing elements separately and rejecting comment records",
+            "link": "https://github.com/junit-team/junit-framework/pull/5886",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Fix NoTestsDiscoveredException for suites containing only dynamic tests",
+            "link": "https://github.com/junit-team/junit-framework/pull/5839",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Add assertThrows variants that accept exceptions as values",
+            "link": "https://github.com/junit-team/junit-framework/pull/5819",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Open Test Reporting",
+        "items": [
+          {
+            "text": "Adopt JSpecify null-safety annotations across the codebase",
+            "link": "https://github.com/ota4j-team/open-test-reporting/pull/1156",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Fix conversion of variously ordered events",
+            "link": "https://github.com/ota4j-team/open-test-reporting/pull/1118",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Fix sidebar icons being shrunk on small screens in the HTML report",
+            "link": "https://github.com/ota4j-team/open-test-reporting/pull/1153",
+            "type": "BUG_FIX"
+          }
+        ]
+      },
+      {
+        "title": "Build & Infrastructure",
+        "items": [
+          {
+            "text": "Adopt Gradle's configuration cache and enable it for all CI builds",
+            "link": "https://github.com/junit-team/junit-framework/pull/5885",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Implement custom Javadoc task for configuration cache compatibility",
+            "link": "https://github.com/junit-team/junit-framework/pull/5907",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Migrate junit.org from Squarespace/Cloudflare to INWX",
+            "link": "https://github.com/junit-team/dns/pull/11",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance",
+        "items": [
+          {
+            "text": "Extensive automated dependency maintenance across all repositories via Renovate — 205 update PRs reviewed and merged",
+            "type": "MAINTENANCE"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/marcphilipp"
+      ],
+      "community": [
+        "https://github.com/mpkorstanje",
+        "https://github.com/adamretter",
+        "https://github.com/mdedetrich"
+      ]
+    }
+  },
+  {
     "month": "JUNE",
     "year": 2026,
     "excerpt": "Shipped JUnit 6.1.1 and Open Test Reporting 0.2.6, hardened the supply chain, improved memory-cleanup and parameterized-test behavior, and improved the build infrastructure.",
