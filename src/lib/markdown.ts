@@ -39,6 +39,11 @@ const INTERNAL_HOSTNAMES = new Set([
   '::1',
 ]);
 
+const DEFAULT_LOCALE = 'en';
+const LOCALE_PATH_PREFIXES = new Set(['en', 'de']);
+// Root-relative targets that end in a file extension are assets, not routes.
+const ASSET_PATH_PATTERN = /\.[a-z0-9]{2,5}$/i;
+
 const EXTERNAL_LINK_ICON_HTML =
   '<span class="iconify inline" data-icon="mdi-open-in-new" aria-hidden="true"></span>';
 const HEADING_ANCHOR_ICON_HTML =
@@ -338,6 +343,62 @@ function isExternalContentLink(href: string): boolean {
   } catch {
     return false;
   }
+}
+
+function localizeInternalHref(href: string, locale: string): string {
+  const normalizedHref = href.trim();
+
+  // Only root-relative links are locale-scoped; protocol-relative URLs are external.
+  if (!normalizedHref.startsWith('/') || normalizedHref.startsWith('//')) {
+    return href;
+  }
+
+  const [, pathname, suffix] = /^([^?#]*)([\s\S]*)$/.exec(normalizedHref) ?? [];
+
+  if (pathname === undefined) {
+    return href;
+  }
+
+  const firstSegment = pathname.split('/')[1] ?? '';
+
+  if (LOCALE_PATH_PREFIXES.has(firstSegment)) {
+    return href;
+  }
+
+  if (ASSET_PATH_PATTERN.test(pathname)) {
+    return href;
+  }
+
+  const normalizedPathname = pathname.replace(/\/+$/, '');
+
+  // A post that only exists in the default locale must stay unprefixed, otherwise
+  // the localized URL would 404.
+  const postSlugPath = /^\/posts\/(.+)$/.exec(normalizedPathname)?.[1];
+
+  if (postSlugPath && !postExistsForLocale(postSlugPath, locale)) {
+    return href;
+  }
+
+  return `/${locale}${normalizedPathname}${suffix ?? ''}`;
+}
+
+/**
+ * Rewrite locale-neutral internal links so they resolve within the rendered locale.
+ * Authors write `/posts/2025/12/15/foo`; a German page renders `/de/posts/2025/12/15/foo`.
+ */
+export function localizeInternalLinks(
+  contentHtml: string,
+  locale: string,
+): string {
+  if (locale === DEFAULT_LOCALE) {
+    return contentHtml;
+  }
+
+  return contentHtml.replace(
+    /(<a\b[^>]*?\bhref=)(["'])(.*?)\2/gi,
+    (_fullMatch, beforeHref: string, quote: string, href: string) =>
+      `${beforeHref}${quote}${localizeInternalHref(href, locale)}${quote}`,
+  );
 }
 
 function ensureBlankTarget(attributes: string): string {
@@ -723,7 +784,10 @@ export async function getPostBySlug(
     const contentHtml = highlightCodeBlocks(
       decorateHeadlinesWithAnchors(
         decorateExternalLinks(
-          centerStandaloneHtmlImages(processedContent.toString()),
+          localizeInternalLinks(
+            centerStandaloneHtmlImages(processedContent.toString()),
+            locale,
+          ),
         ),
       ),
     );
