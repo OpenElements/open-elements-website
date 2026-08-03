@@ -1,0 +1,11 @@
+---
+- title: "Migrating Apache Maven issues to Github"
+  description: "We are migrating the Apache Maven issues to Github. This will make
+    it easier for the community to report issues and contribute to the project."
+  link: https://github.com/support-and-care/jira-to-gh-issues
+  authors:
+    - gerd
+    - sandra
+  date: 2021-09-01
+  project: support-care-maven
+  category: documentation
