@@ -1,3 +1,16 @@
+---
+outdated: false
+showInBlog: true
+title: "Von der Supply Chain, lokal gebauten Artefakten und wie Maven damit umgeht"
+slug: genug-geredet-wie-digitale-souveränität-von-der-un-bis-dortmund-konkret-wird
+date: 2026-08-12
+author: sebastian
+excerpt: "Lokal gebaute Artefakte können ein Problem für Reproducible Builds sein und damit ein Risiko für die Supply Chain. Ich zeige hier, wie das Auflösen von Artefakten in Maven passiert und wie man sehen kann, ob ein selbstgebautes Artefakt fäschlicher Weise verwerndet wurde."
+categories: [Open Elements, Open-Source, Security, Java]
+preview_image: "/posts/preview-images/oss-world.svg"
+---
+
+
 # Woher kommt dieses Artefakt eigentlich? Maven, das lokale Repository und die Datei `_remote.repositories`
 
 Reproducible Builds beruhen auf einer einfachen Zusage: derselbe Quellcode, dieselbe Build-Umgebung, dasselbe Ergebnis, Byte für Byte. Wer diese Zusage überprüfen will, braucht eine verlässliche Referenz, und genau an dieser Stelle wird es interessant, denn die Referenz liegt bei Maven im lokalen Repository, also in einem Verzeichnis, dem man auf den ersten Blick nicht ansehen kann, woher sein Inhalt stammt.
