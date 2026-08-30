@@ -29,7 +29,7 @@ und der Vorgang wiederholt sich. Dieses Verfahren heißt autoregressive Generier
 Mehr passiert bei einem Aufruf nicht. Ein LLM ist eine reine Funktion von Text nach Text. Das ist keine Verkürzung,
 sondern die vollständige Beschreibung der Schnittstelle.
 
-{{< centered-image src="/posts/2026-08-30-ki-und-agenten/llm.jpeg" width="100%" showCaption=true alt="Vereinfachte Darstellung eines LLM">}}
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/llm.png" width="100%" showCaption=true alt="Vereinfachte Darstellung eines LLM">}}
 
 Daraus folgen drei Eigenschaften, die in der Praxis regelmäßig unterschätzt werden.
 
@@ -74,7 +74,7 @@ auf Zwischenergebnisse zu reagieren und eigene Fehler zu korrigieren.
 Ein fehlgeschlagener Test liefert eine Fehlermeldung, die Fehlermeldung geht zurück ins Modell, das Modell schlägt eine Korrektur vor,
 der Agent wendet sie an und startet den Test erneut. Diese Rückkopplung ist der eigentliche Fortschritt gegenüber einem reinen Chat.
 
-{{< centered-image src="/posts/2026-08-30-ki-und-agenten/agents-flow.jpeg" width="100%" showCaption=true alt="Ablauf eines Agenten">}}
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/agents-flow.png" width="100%" showCaption=true alt="Ablauf eines Agenten">}}
 
 ## Der Punkt, an dem die meisten Erklärungen ungenau werden
 
@@ -91,7 +91,7 @@ Genau dort gehören Berechtigungsprüfung, Freigabedialoge und Protokollierung (
 Wer unerwünschtes Verhalten allein über die Formulierung von Prompts zu verhindern versucht, verlagert eine Sicherheitsentscheidung in eine Schicht,
 die statistisch arbeitet und keine Garantien geben kann.
 
-TODO ![](/api/files/01a018af-398c-751b-831d-f66db2647bfd/Bildschirmfoto_2026-08-19_um_08.21.33.png)
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/agents-internals.png" width="100%" showCaption=true alt="Interner Ablauf eines Agenten">}}
 
 Zwei Einschränkungen gehören dazu. Erstens liegt diese Codeschicht **nicht** immer bei Ihnen:
 Bei anbieterseitig ausgeführten Werkzeugen – Websuche, Code-Sandbox, serverseitig eingebundene Konnektoren – führt der Modellanbieter aus,
