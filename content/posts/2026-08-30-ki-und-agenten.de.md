@@ -118,7 +118,7 @@ Die letzte Zeile ist die kaufmännisch interessanteste, die vorletzte die sicher
 Ein Chatbot, der irrt, sagt etwas Falsches – ein Mensch prüft es und verwirft es.
 Ein Agent, der irrt, handelt. Und weil jeder Schritt auf dem vorherigen aufbaut, kann sich ein früher Fehler über die Schleife verstärken, statt sich auszumitteln.
 
-TODO ![](/api/files/01a018af-7ec5-77cf-a830-d1e3ebd97e84/Bildschirmfoto_2026-08-19_um_08.20.53.png)
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/chatbot-vs-agent.png" width="100%" showCaption=true alt="Unterschied zwischen Chatbot und Agent">}}
 
 ## Das Kontextfenster als eigentliche Grenze
 
@@ -133,7 +133,7 @@ sondern im Verknüpfen über mehrere Stellen hinweg, sinkt die Trefferquote mit 
 **Kosten:** Weil jeder Durchlauf den gewachsenen Kontext erneut übergibt, summieren sich die Eingabe-Token über _n_ Schritte quadratisch statt linear.
 Prompt Caching senkt den Faktor erheblich, nicht die Struktur.
 
-TODO ![](/api/files/01a018af-ba11-7609-9aa6-21084394a9ef/Bildschirmfoto_2026-08-19_um_08.21.09.png)
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/context-window.png" width="100%" showCaption=true alt="Größenanstieg des Kontextfensters">}}
 
 Daraus folgt die zentrale Betriebsregel: **„Gib der KI einfach alles“ ist genau der falsche Instinkt.**
 Erfolgreiche Agentensysteme unterscheiden sich von erfolglosen weniger durch das gewählte Modell als durch die Disziplin,
