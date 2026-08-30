@@ -49,7 +49,7 @@ Daraus folgen drei Eigenschaften, die in der Praxis regelmäßig unterschätzt w
   und gängige Benchmarks belohnen bis heute Raten stärker als das Zugeben von Nichtwissen.
   Das ist der Kern dessen, was umgangssprachlich „Halluzination“ heißt: kein Implementierungsfehler, sondern eine Konsequenz aus Trainings- und Bewertungsanreizen.
 
-TODO **Ein LLM kann folglich nichts speichern, nichts abrufen, nichts versenden und nichts ausführen. Es produziert Sprache, keine Wirkung.**
+**Ein LLM kann folglich nichts speichern, nichts abrufen, nichts versenden und nichts ausführen. Es produziert Sprache, keine Wirkung.**
 
 ## Was einen Agenten daraus macht
 
