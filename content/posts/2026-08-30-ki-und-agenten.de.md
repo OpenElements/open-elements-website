@@ -29,7 +29,7 @@ und der Vorgang wiederholt sich. Dieses Verfahren heißt autoregressive Generier
 Mehr passiert bei einem Aufruf nicht. Ein LLM ist eine reine Funktion von Text nach Text. Das ist keine Verkürzung,
 sondern die vollständige Beschreibung der Schnittstelle.
 
-TODO ![](/api/files/01a0166f-2421-757a-b629-cfe51bca2329/llm.jpg)
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/llm.jpeg" width="100%" showCaption=true alt="Vereinfachte Darstellung eines LLM">}}
 
 Daraus folgen drei Eigenschaften, die in der Praxis regelmäßig unterschätzt werden.
 
@@ -74,7 +74,7 @@ auf Zwischenergebnisse zu reagieren und eigene Fehler zu korrigieren.
 Ein fehlgeschlagener Test liefert eine Fehlermeldung, die Fehlermeldung geht zurück ins Modell, das Modell schlägt eine Korrektur vor,
 der Agent wendet sie an und startet den Test erneut. Diese Rückkopplung ist der eigentliche Fortschritt gegenüber einem reinen Chat.
 
-TODO ![](/api/files/01a01671-4b3c-724e-b1f1-26e993187b31/loop.jpg)
+{{< centered-image src="/posts/2026-08-30-ki-und-agenten/agents-flow.jpeg" width="100%" showCaption=true alt="Ablauf eines Agenten">}}
 
 ## Der Punkt, an dem die meisten Erklärungen ungenau werden
 
