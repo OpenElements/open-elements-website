@@ -7,7 +7,7 @@ date: 2026-08-30
 author: hendrik
 excerpt: "Ein Sprachmodell schreibt Text. Ein Agent handelt. Dazwischen liegt eine überschaubare Menge Technik – und viele Verständnisprobleme. Wie diese Dinge Zusammenspiel und noch souverän in der EU betrieben werden können, wird in diesem Artikel aufgezeigt."
 categories: [Open Elements, AI]
-preview_image: "/posts/preview-images/oss-world.svg"
+preview_image: "/posts/preview-images/agent-yellow.svg"
 ---
 
 In Besprechungen, Ausschreibungen und Pressemitteilungen werden „KI“ und „KI-Agent“ derzeit weitgehend synonym verwendet.
