@@ -484,6 +484,94 @@ function centerStandaloneHtmlImages(contentHtml: string): string {
   );
 }
 
+type MarkdownAlertType = 'NOTE' | 'TIP' | 'IMPORTANT' | 'WARNING' | 'CAUTION';
+
+interface MarkdownAlertStyle {
+  containerClass: string;
+  iconClass: string;
+  icon: string;
+  labels: { en: string; de: string };
+}
+
+const MARKDOWN_ALERT_STYLES: Record<MarkdownAlertType, MarkdownAlertStyle> = {
+  NOTE: {
+    containerClass: 'bg-sky-100',
+    iconClass: 'text-sky-200',
+    icon: 'mdi-information-outline',
+    labels: { en: 'Note', de: 'Hinweis' },
+  },
+  TIP: {
+    containerClass: 'bg-green-100',
+    iconClass: 'text-green-300',
+    icon: 'mdi-lightbulb-on-outline',
+    labels: { en: 'Tip', de: 'Tipp' },
+  },
+  IMPORTANT: {
+    containerClass: 'bg-purple-200',
+    iconClass: 'text-purple-700',
+    icon: 'mdi-message-alert-outline',
+    labels: { en: 'Important', de: 'Wichtig' },
+  },
+  WARNING: {
+    containerClass: 'bg-yellow-50',
+    iconClass: 'text-yellow-400',
+    icon: 'mdi-alert-outline',
+    labels: { en: 'Warning', de: 'Warnung' },
+  },
+  CAUTION: {
+    containerClass: 'bg-rose-100',
+    iconClass: 'text-rose',
+    icon: 'mdi-alert-octagon-outline',
+    labels: { en: 'Caution', de: 'Achtung' },
+  },
+};
+
+const MARKDOWN_ALERT_BASE_CLASS =
+  'my-8 rounded-3xl px-6 py-5 sm:px-8 [&>p:first-of-type]:mt-0 [&>p:last-child]:mb-0';
+
+const MARKDOWN_ALERT_PATTERN =
+  /<blockquote>\s*<p>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*([\s\S]*?)<\/p>([\s\S]*?)<\/blockquote>/gi;
+
+/**
+ * Renders GitHub-style alerts (`> [!NOTE]`, `> [!WARNING]`, ...) as info boxes.
+ * remark-gfm keeps the marker as literal text, so the generated blockquote
+ * markup is rewritten here.
+ */
+export function renderMarkdownAlerts(
+  contentHtml: string,
+  locale: string,
+): string {
+  return contentHtml.replace(
+    MARKDOWN_ALERT_PATTERN,
+    (
+      _match,
+      alertType: string,
+      firstParagraphRest: string,
+      remainingBlocks: string,
+    ) => {
+      const style =
+        MARKDOWN_ALERT_STYLES[alertType.toUpperCase() as MarkdownAlertType];
+      const label = locale === 'de' ? style.labels.de : style.labels.en;
+      const firstParagraph = firstParagraphRest.trim()
+        ? `<p>${firstParagraphRest.trim()}</p>`
+        : '';
+
+      return [
+        `<div class="${MARKDOWN_ALERT_BASE_CLASS} ${style.containerClass}">`,
+        '<div class="mb-2 flex items-center gap-2 font-semibold not-italic text-blue">',
+        `<span class="iconify size-5 shrink-0 ${style.iconClass}" data-icon="${style.icon}" aria-hidden="true"></span>`,
+        label,
+        '</div>',
+        firstParagraph,
+        remainingBlocks.trim(),
+        '</div>',
+      ]
+        .filter(line => line.length > 0)
+        .join('\n');
+    },
+  );
+}
+
 function escapeHtml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
@@ -785,7 +873,9 @@ export async function getPostBySlug(
       decorateHeadlinesWithAnchors(
         decorateExternalLinks(
           localizeInternalLinks(
-            centerStandaloneHtmlImages(processedContent.toString()),
+            centerStandaloneHtmlImages(
+              renderMarkdownAlerts(processedContent.toString(), locale),
+            ),
             locale,
           ),
         ),

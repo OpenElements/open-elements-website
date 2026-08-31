@@ -18,6 +18,13 @@ Der Unterschied lässt sich in einem Satz sagen: **Ein Sprachmodell erzeugt Text
 Alles Weitere ist die Frage, welche Bausteine zwischen diesen beiden Polen liegen.
 Genau darum geht es in diesem Artikel – und im zweiten Teil darum, wer diese beiden Ebenen heute anbietet und unter welchen Lizenzbedingungen.
 
+> [!NOTE]
+> **Begriffsklärung vorweg:** Wenn im Alltag von „KI“ gesprochen wird, sind fast immer große Sprachmodelle gemeint – also ein recht kleiner Ausschnitt des Feldes.
+> Künstliche Intelligenz umfasst deutlich mehr: klassisches maschinelles Lernen, Bild- und Spracherkennung, Optimierung und Planung, Robotik, regel- und wissensbasierte Systeme.
+> Sprachmodelle sind eine Technik darunter, nicht das Ganze.
+> Dieser Artikel folgt dem üblichen Sprachgebrauch und verwendet „KI“ im Sinne von „Sprachmodell“ – der Unterschied ist aber keine Wortklauberei:
+> Wer „KI“ sagt und ein Sprachmodell meint, schreibt die Grenzen einer einzelnen Technik einem ganzen Forschungsfeld zu – und dessen Versprechen dieser einen Technik.
+
 ## Was ein Large Language Model tatsächlich ist
 
 Ein [Large Language Model (LLM)](https://de.wikipedia.org/wiki/Large_Language_Model), auf Deutsch: großes Sprachmodell, ist ein statistisches Modell über Token-Sequenzen.
