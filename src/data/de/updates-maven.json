@@ -1,5 +1,261 @@
 [
   {
+    "month": "JULY",
+    "year": 2026,
+    "excerpt": "Maven Artifact plugin buildinfo-Arbeit für reproduzierbare Builds, Surefire 3.6.0-M2 und Maven 3.10.0-rc-1, Settings-Aliase und Plexus-Plugin-DI, und Dokumentationsarchitektur",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Maven Artifact plugin analysieren, um Verbesserungen für die Buildinfo-Generierung und den Build-Vergleich im Kontext reproduzierbarer Builds vorzunehmen",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/242"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Probleme des neuen Surefire-Modus, der ausschließlich die JUnit Platform verwendet, beheben; neue Version 3.6.0-M2 vorbereiten",
+            "type": "BUG_FIX",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246"
+          },
+          {
+            "text": "Upgrade von Release Drafter von Version 6.x auf 7.x vorbereiten",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/241"
+          },
+          {
+            "text": "Maven 3.10.0 testen und gemeldete Probleme beheben",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211"
+          },
+          {
+            "text": "Unterstützung der Veröffentlichung von Maven 3.10.0-rc-1",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung",
+        "items": [
+          {
+            "text": "Unterstützung für Aliase in Servern in Maven settings.xml hinzufügen",
+            "type": "FEATURE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211"
+          },
+          {
+            "text": "Validierung für Plexus-basierte Plugin-Abhängigkeitsinjektion in Maven-Plugins hinzufügen",
+            "type": "FEATURE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Einen Schreibleitfaden aktivieren",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/issues/12"
+          },
+          {
+            "text": "Mit der Arbeit an einer Informationsarchitektur beginnen",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/issues/13"
+          },
+          {
+            "text": "Beginnen, ein Kapitel über das Hinzufügen und Ausschließen von Abhängigkeiten zu schreiben",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/issues/18"
+          },
+          {
+            "text": "Beginnen, ein Kapitel über den Abhängigkeitsmechanismus zu schreiben",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/issues/19"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
+  },
+  {
+    "month": "JUNE",
+    "year": 2026,
+    "excerpt": "Überwachung von Abhängigkeitslücken, Arbeit am Buildinfo des Maven Artifact-Plugins, Surefire und Vorbereitung von 3.10.0, erste atr-maven-plugin-Veröffentlichung und Getting Started-Dokumentation",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Verbesserung der Überwachung von Abhängigkeitslücken für die Apache Maven-Projektfamilie",
+            "type": "SECURITY"
+          },
+          {
+            "text": "Analyse des Maven Artifact-Plugins, um Verbesserungen bei der Buildinfo-Erstellung und dem Build-Vergleich vorzunehmen",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Entfernen der veralteten Bereitstellungsfunktion für Buildinfo-Dateien aus dem Maven Artifact-Plugin",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Behebung von Problemen des neuen Surefire-Modus, der ausschließlich die JUnit-Plattform verwendet",
+            "type": "BUG_FIX"
+          },
+          {
+            "text": "Vorbereitung von Release 3.10.0",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Vorbereitung des Upgrades von Release Drafter von 6.x auf 7.x",
+            "type": "MAINTENANCE"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung",
+        "items": [
+          {
+            "text": "Arbeiten am atr-maven-plugin, um den Release-Prozess mit dem ATR (Apache Trusted Releases)-Dienst zu unterstützen; erste Veröffentlichung des Plugins",
+            "type": "FEATURE"
+          },
+          {
+            "text": "Migration von JUnit-3-basierten Tests, die AbstractMojoTestCase verwenden, zu JUnit 5 im Maven Changelog-Plugin",
+            "type": "IMPROVEMENT"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Erstellung der Getting Started-Dokumentation",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Erstellung eines Schreibleitfadens für Dokumentation im Allgemeinen",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
+  },
+  {
+    "month": "MAY",
+    "year": 2026,
+    "excerpt": "Fortschritt beim Maven 3.10.0 Release-Train, CycloneDX- und Buildinfo-Verbesserungen, ATR-Release-Tools und Getting Started-Dokumentation",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Verbesserung der buildinfo-Dateibehandlung für Multimodulprojektes",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/apache/maven-artifact-plugin/issues/93"
+          },
+          {
+            "text": "Verbesserung der CycloneDX 1.7 ECMA-Spezifikationsimplementierung für Java",
+            "type": "SECURITY"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Der Release-Train für 3.10.0 wurde gestartet, indem Features aus dem 4.x-Branch zurückportiert wurden",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Testen und Beheben des 3.10.0 Release-Trains",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Überprüfung und Korrektur von von ASF gepflegten Maven-Plugins mit 3.10.0",
+            "type": "MAINTENANCE"
+          },
+          {
+            "text": "Veröffentlichung von Maven 3.9.16 mit Fehlerbehebungen",
+            "type": "BUG_FIX"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung",
+        "items": [
+          {
+            "text": "Werkzeug zur Automatisierung des lokalen Release-Prozesses für Apache Maven",
+            "type": "IMPROVEMENT"
+          },
+          {
+            "text": "Arbeiten am atr-maven-plugin, um den Release-Prozess mit dem ATR (Apache Trusted Releases)-Dienst zu unterstützen",
+            "type": "FEATURE"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Vorschlag für den Inhalt von \"Getting Started\" ausarbeiten",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Konzeption für Lernpfade ausarbeiten",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Getting Started-Dokumentationsinhalt initialisiert",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Umfassende Reviews der ersten beiden \"Getting Started\"-PRs",
+            "type": "DOCUMENTATION"
+          },
+          {
+            "text": "Diskussion über globale Schreibstile, z. B. die Ansprache des Lesers in formeller oder informeller Weise",
+            "type": "DOCUMENTATION"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/slawekjaranowski",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/sparsick",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
+  },
+  {
     "month": "APRIL",
     "year": 2026,
     "excerpt": "Fokus auf Verbesserungen der Sicherheit in der Lieferkette, Vorbereitung von Maven 3.10.0 und Beginn einer besseren Tool-Unterstützung für den internen Release-Prozess von Apache Maven",
