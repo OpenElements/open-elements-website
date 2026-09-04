@@ -1,5 +1,69 @@
 [
   {
+    "month": "AUGUST",
+    "year": 2026,
+    "excerpt": "Fortgesetzte Modernisierungs- und Wartungsarbeiten, einschließlich der Fertigstellung der Migration von JUnit3 zu JUnit5, während gleichzeitig Fortschritte bei der Projektdokumentation erzielt werden.",
+    "categories": [
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Automatisiere die Veröffentlichung monatlicher Maven-Updates auf der Open Elements-Website",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/pull/244"
+          },
+          {
+            "text": "Testen von Maven 3.10.0 und Beheben gemeldeter Probleme, Verbesserung beim IT-Testing",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211"
+          },
+          {
+            "text": "Veröffentlichung von Maven Surefire 3.6.0 (nur mit JUnit-Plattform) und Behebung verwandter Probleme",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung",
+        "items": [
+          {
+            "text": "Abgeschlossene Migration von Tests, die in JUnit3 geschrieben wurden, zu JUnit5",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/136"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "Veröffentliche die Anleitung zum Hinzufügen und Ausschließen von Abhängigkeiten",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/pull/20"
+          },
+          {
+            "text": "Veröffentliche das Kapitel zu den Schlüsselkonzepten des Maven-Abhängigkeitsmechanismus",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/pull/21"
+          },
+          {
+            "text": "Beginne das Tutorial zum Schreiben eines ersten Maven-Plugins in Java",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/pull/24"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/sparsick",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/slawekjaranowski"
+      ]
+    }
+  },
+  {
     "month": "APRIL",
     "year": 2026,
     "excerpt": "Fokus auf Verbesserungen der Sicherheit in der Lieferkette, Vorbereitung von Maven 3.10.0 und Beginn einer besseren Tool-Unterstützung für den internen Release-Prozess von Apache Maven",
