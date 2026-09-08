@@ -27,7 +27,7 @@ Genauso wichtig ist, was **nicht** beginnt: CE-Kennzeichnung, Konformitätsbewer
 zur vollen Anwendbarkeit des CRA am* *11.12.2027** _(Quelle: [Article 71, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
 Wer heute versucht, beides gleichzeitig zu erledigen, arbeitet an der falschen Frist.
 
-## Die Bausteine, die Sie nicht gebaut haben
+## Die Schicht unter Ihrem Code
 
 Ein durchschnittliches Java-Projekt zieht mit den ersten Abhängigkeiten dutzende weitere transitive Abhängigkeiten hinein,
 bevor eine Zeile Geschäftslogik geschrieben ist:
@@ -45,7 +45,6 @@ und wer entscheidet, ob eine Standardbibliothek weiterentwickelt wird.
 Das sind vier verschiedene Projekte mit vier verschiedenen Gemeinschaften, und in mehreren davon hängt die Arbeit an einer sehr kleinen Zahl von Menschen _(Quellen: [Quarkus](https://github.com/quarkusio/quarkus/blob/main/MAINTAINERS.adoc); [Spring Boot](https://github.com/spring-projects/spring-boot/graphs/contributors?from=1.1.2020&to=9.6.2026), bezogen auf regelmäßige Contributions; [log4j](https://logging.apache.org/team-list.html))_.
 
 {{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/alone.svg" width="80%" showCaption=false alt="Alleine mit dem Problem">}}
-
 
 Der CRA kennt keinen Passus, der diese Schicht ausnimmt.
 Wenn eine Schwachstelle in einer eingebundenen Bibliothek aktiv ausgenutzt wird und Ihr Produkt betroffen ist, ist die Meldepflicht Ihre.
