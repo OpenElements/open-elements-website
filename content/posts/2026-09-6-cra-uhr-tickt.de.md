@@ -7,7 +7,7 @@ date: 2026-09-06
 author: hendrik
 excerpt: "Ab 11.09.2026 gilt die CRA-Meldepflicht: 24 Stunden für aktiv ausgenutzte Schwachstellen — auch in Open-Source-Bausteinen tief in Ihrer Software. Was das praktisch bedeutet."
 categories: [CRA]
-preview_image: "/posts/preview-images/agent-yellow.svg"
+preview_image: "/posts/preview-images/alarm.svg"
 ---
 Am 11.September 2026 nimmt die Single Reporting Platform der ENISA den Betrieb auf.
 Ab diesem Tag müssen Hersteller von Produkten mit digitalen Elementen eine aktiv ausgenutzte Schwachstelle innerhalb von
@@ -44,7 +44,7 @@ Er sagt nichts darüber, wer die Laufzeitumgebung härtet, wer das Build-Werkzeu
 und wer entscheidet, ob eine Standardbibliothek weiterentwickelt wird.
 Das sind vier verschiedene Projekte mit vier verschiedenen Gemeinschaften, und in mehreren davon hängt die Arbeit an einer sehr kleinen Zahl von Menschen _(Quellen: [Quarkus](https://github.com/quarkusio/quarkus/blob/main/MAINTAINERS.adoc); [Spring Boot](https://github.com/spring-projects/spring-boot/graphs/contributors?from=1.1.2020&to=9.6.2026), bezogen auf regelmäßige Contributions; [log4j](https://logging.apache.org/team-list.html))_.
 
-{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/alone.png" width="100%" showCaption=false alt="Alleine mit dem Problem">}}
+{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/alone.svg" width="80%" showCaption=false alt="Alleine mit dem Problem">}}
 
 
 Der CRA kennt keinen Passus, der diese Schicht ausnimmt.
@@ -108,7 +108,7 @@ Wer Ihnen heute vollständige CRA-Sicherheit verkauft, verkauft eine Zahl, die e
 
 {{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/team.svg" width="100%" showCaption=false alt="Team and open source">}}
 
-##### Was am 11. September nicht passiert
+## Was am 11. September nicht passiert
 
 Am Stichtag beginnt eine Pflicht, keine Prüfungswelle.
 Die Meldeplattform [ENISA](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp) selbst geht an diesem Tag erst in Betrieb.
