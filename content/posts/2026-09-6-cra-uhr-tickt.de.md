@@ -24,7 +24,7 @@ Drei Fristen, gestaffelt: eine Frühwarnung binnen **24 Stunden** nach Kenntnis,
 eine vollständige Meldung binnen **72 Stunden**, ein Abschlussbericht binnen **14 Tagen** _(Quelle: [Article 14, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
 Meldepflichtig sind aktiv ausgenutzte Schwachstellen und schwerwiegende Sicherheitsvorfälle.Adressat ist der Hersteller.
 Genauso wichtig ist, was **nicht** beginnt: CE-Kennzeichnung, Konformitätsbewertung und technische Dokumentation gehören
-zur vollen Anwendbarkeit des CRA am**11.12.2027** _(Quelle: [Article 71, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
+zur vollen Anwendbarkeit des CRA am* *11.12.2027** _(Quelle: [Article 71, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
 Wer heute versucht, beides gleichzeitig zu erledigen, arbeitet an der falschen Frist.
 
 ## Die Bausteine, die Sie nicht gebaut haben
@@ -44,6 +44,9 @@ Er sagt nichts darüber, wer die Laufzeitumgebung härtet, wer das Build-Werkzeu
 und wer entscheidet, ob eine Standardbibliothek weiterentwickelt wird.
 Das sind vier verschiedene Projekte mit vier verschiedenen Gemeinschaften, und in mehreren davon hängt die Arbeit an einer sehr kleinen Zahl von Menschen _(Quellen: [Quarkus](https://github.com/quarkusio/quarkus/blob/main/MAINTAINERS.adoc); [Spring Boot](https://github.com/spring-projects/spring-boot/graphs/contributors?from=1.1.2020&to=9.6.2026), bezogen auf regelmäßige Contributions; [log4j](https://logging.apache.org/team-list.html))_.
 
+{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/alone.png" width="100%" showCaption=false alt="Alleine mit dem Problem">}}
+
+
 Der CRA kennt keinen Passus, der diese Schicht ausnimmt.
 Wenn eine Schwachstelle in einer eingebundenen Bibliothek aktiv ausgenutzt wird und Ihr Produkt betroffen ist, ist die Meldepflicht Ihre.
 Nicht die des Projekts, in dessen Repository der Fehler steht.
@@ -56,6 +59,8 @@ Die 24 Stunden laufen ab Kenntnis. Bis zur Meldung liegen aber vier Schritten:
 - **Zuordnen**, ob sie in Ihrem Produkt steckt und nicht in irgendeiner Version, sondern in der ausgelieferten.
 - **Bewerten**, ob der betroffene Codepfad in Ihrem Kontext überhaupt erreichbar ist.
 - Und erst dann **melden**.
+
+{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/steps.png" width="100%" showCaption=false alt="Die 4 Steps">}}
 
 Eine Software-Stückliste hilft beim zweiten Schritt.
 Sie hilft nicht beim dritten, und sie beantwortet die Frage nicht, die dahinter steht:
@@ -100,6 +105,8 @@ Wer Ihnen heute vollständige CRA-Sicherheit verkauft, verkauft eine Zahl, die e
 3. **Schreiben Sie für die fünf bis zehn kritischsten Open-Source-Bausteine auf, wer sie pflegt und wie Sie diese Person erreichen.** Nicht welche Version — welcher Mensch.
 4. **Prüfen Sie, ob Ihre Überwachung „aktiv ausgenutzt" von „bekannt" unterscheiden kann.** Die Meldepflicht hängt an der Ausnutzung, nicht an der Veröffentlichung.
 5. **Fangen Sie jetzt nicht mit der technischen Dokumentation für 2027 an.** Die hat ihren eigenen Termin.
+
+{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/team.svg" width="100%" showCaption=false alt="Team and open source">}}
 
 ##### Was am 11. September nicht passiert
 
