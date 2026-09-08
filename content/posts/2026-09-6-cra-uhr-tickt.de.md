@@ -1,11 +1,11 @@
 ---
 outdated: false
 showInBlog: true
-title: "Am 11. September beginnt die 24-Stunden-Uhr — auch für Code, den Sie nicht geschrieben haben"
+title: "Am 11. September beginnt die 24-Stunden-Frist — auch für Code, den Sie nicht geschrieben haben"
 slug: cra-clock-is-ticking
 date: 2026-09-06
 author: hendrik
-excerpt: "Ab 11.09.2026 gilt die CRA-Meldepflicht: 24 Stunden für aktiv ausgenutzte Schwachstellen — auch in Open-Source-Bausteinen. Was das praktisch bedeutet."
+excerpt: "Ab 11.09.2026 gilt die CRA-Meldepflicht: 24 Stunden für aktiv ausgenutzte Schwachstellen — auch in Open-Source-Bausteinen tief in Ihrer Software. Was das praktisch bedeutet."
 categories: [CRA]
 preview_image: "/posts/preview-images/agent-yellow.svg"
 ---
