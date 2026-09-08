@@ -29,14 +29,14 @@ Drei Fristen, gestaffelt: eine Frühwarnung binnen **24 Stunden** nach Kenntnis,
 eine vollständige Meldung binnen **72 Stunden**, ein Abschlussbericht binnen **14 Tagen** _(Quelle: [Article 14, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
 Meldepflichtig sind aktiv ausgenutzte Schwachstellen und schwerwiegende Sicherheitsvorfälle.Adressat ist der Hersteller.
 Genauso wichtig ist, was **nicht** beginnt: CE-Kennzeichnung, Konformitätsbewertung und technische Dokumentation gehören
-zur vollen Anwendbarkeit des CRA am* *11.12.2027** _(Quelle: [Article 71, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
+zur vollen Anwendbarkeit des CRA am **11.12.2027** _(Quelle: [Article 71, CRA](https://www.cyberresilienceact.eu/regulation.html))_.
 Wer heute versucht, beides gleichzeitig zu erledigen, arbeitet an der falschen Frist.
 
 ## Die Schicht unter Ihrem Code
 
 Ein durchschnittliches Java-Projekt zieht mit den ersten Abhängigkeiten dutzende weitere transitive Abhängigkeiten hinein,
 bevor eine Zeile Geschäftslogik geschrieben ist:
-In der SBOM eines üblichen Projekts auf Basis des Spring-Frameworks finden sich in Summe über 150 Abhängigkeiten _(Quelle: angehängte SBOM)_.
+In der SBOM eines üblichen Projekts auf Basis des Spring-Frameworks finden sich in Summe über 150 Abhängigkeiten.
 
 Diese Bausteine — Laufzeitumgebung, Build-Werkzeug, Logging, Testframework, Standardbibliotheken — sind die Schicht, auf der alles andere steht.
 Sie sind auch die Schicht, in der Log4Shell saß _(Quelle: [BSI](https://www.allianz-fuer-cybersicherheit.de/Webs/ACS/DE/Informationen-und-Empfehlungen/Cyber-Sicherheitslage-fuer-die-Wirtschaft/gravierende-Cyber-Risiken/log4j/log4j_node.html))_.
@@ -132,4 +132,4 @@ Wenn dort mehr als drei Zeilen leer bleiben, haben Sie das Ergebnis, mit dem Sie
 Und wenn Sie wissen wollen, wie Sie die Spalten für Laufzeit, Build, Test, Logging und Standardbibliotheken ausfüllen können:
 Das ist genau das, was wir mit [Support&Care](https://open-elements.com/de/support-care) machen.
 
-{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/support-and-care-logo.svg" width="100%" showCaption=false alt="Support&Care Logo">}}
+{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/support-and-care-logo.svg" width="80%" showCaption=false alt="Support&Care Logo">}}
