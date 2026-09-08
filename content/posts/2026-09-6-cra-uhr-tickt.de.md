@@ -18,6 +18,11 @@ Die Frist selbst ist inzwischen von vielen Seiten erklärt worden.
 Was in diesen Erklärungen meist fehlt, ist der Teil, der in der Praxis am schwersten wiegt:
 Der überwiegende Teil des Codes in einem typischen Software-Produkt stammt nicht vom Hersteller.
 
+Wer den CRA im Überblick sucht — Anforderungen, CE-Kennzeichnung, SBOM-Pflicht und die Rolle der Open-Source-Stewards —,
+findet ihn in unserer [Übersicht zum Cyber Resilience Act](/posts/2025/12/15/cyber-resilience-act-übersicht-und-auswirkungen);
+über unseren [Newsletter](/newsletter/) teilen wir seitdem laufend Beiträge und Videos dazu.
+Dieser Post fokusiert sich auf die Frist, die bereits ab September 2026 greift.
+
 ## Was am 11. September tatsächlich beginnt
 
 Drei Fristen, gestaffelt: eine Frühwarnung binnen **24 Stunden** nach Kenntnis,
