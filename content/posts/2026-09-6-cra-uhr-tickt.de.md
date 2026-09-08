@@ -127,3 +127,5 @@ Füllen Sie sie für die zehn wichtigsten Einträge aus, mit Namen, nicht mit Pr
 Wenn dort mehr als drei Zeilen leer bleiben, haben Sie das Ergebnis, mit dem Sie in Ihre nächste Produktsicherheitsrunde gehen sollten.
 Und wenn Sie wissen wollen, wie Sie die Spalten für Laufzeit, Build, Test, Logging und Standardbibliotheken ausfüllen können:
 Das ist genau das, was wir mit [Support&Care](https://open-elements.com/de/support-care) machen.
+
+{{< centered-image src="/posts/2026-09-6-cra-uhr-tickt/support-and-care-logo.svg" width="100%" showCaption=false alt="Support&Care Logo">}}
