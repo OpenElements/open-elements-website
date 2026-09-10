@@ -632,6 +632,24 @@ export default function SupportCareMavenPage() {
                 {t('marcRole')}
               </span>
             </Link>
+            <Link
+              href="/employees/christian"
+              className="text-center w-44 no-underline"
+              style={{ color: 'inherit' }}>
+              <Image
+                src="/team/christian.jpg"
+                alt="Christian Grobmeier"
+                width={120}
+                height={120}
+                className="w-[120px] h-[120px] rounded-full object-cover mx-auto mb-3 border-[3px] border-[#5DB9F5]"
+              />
+              <strong className="block text-[0.95rem] text-blue">
+                Christian Grobmeier
+              </strong>
+              <span className="text-[0.8rem]" style={{ color: '#5CBA9E' }}>
+                {t('christianRole')}
+              </span>
+            </Link>
           </div>
 
           <p>{t('whyP2')}</p>

@@ -6,6 +6,7 @@ import { notFound, redirect } from 'next/navigation';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
+import { localizeInternalLinks, renderMarkdownAlerts } from '@/lib/markdown';
 import { transformHugoShortcodes } from '@/lib/remark-hugo-shortcodes';
 
 type CatchAllPageProps = {
@@ -95,7 +96,10 @@ async function loadPageData(
     title: typeof data.title === 'string' ? data.title : 'Open Elements',
     description:
       typeof data.description === 'string' ? data.description : undefined,
-    contentHtml: processedContent.toString(),
+    contentHtml: localizeInternalLinks(
+      renderMarkdownAlerts(processedContent.toString(), locale),
+      locale,
+    ),
   };
 }
 

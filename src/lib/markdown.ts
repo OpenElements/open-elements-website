@@ -39,6 +39,11 @@ const INTERNAL_HOSTNAMES = new Set([
   '::1',
 ]);
 
+const DEFAULT_LOCALE = 'en';
+const LOCALE_PATH_PREFIXES = new Set(['en', 'de']);
+// Root-relative targets that end in a file extension are assets, not routes.
+const ASSET_PATH_PATTERN = /\.[a-z0-9]{2,5}$/i;
+
 const EXTERNAL_LINK_ICON_HTML =
   '<span class="iconify inline" data-icon="mdi-open-in-new" aria-hidden="true"></span>';
 const HEADING_ANCHOR_ICON_HTML =
@@ -340,6 +345,62 @@ function isExternalContentLink(href: string): boolean {
   }
 }
 
+function localizeInternalHref(href: string, locale: string): string {
+  const normalizedHref = href.trim();
+
+  // Only root-relative links are locale-scoped; protocol-relative URLs are external.
+  if (!normalizedHref.startsWith('/') || normalizedHref.startsWith('//')) {
+    return href;
+  }
+
+  const [, pathname, suffix] = /^([^?#]*)([\s\S]*)$/.exec(normalizedHref) ?? [];
+
+  if (pathname === undefined) {
+    return href;
+  }
+
+  const firstSegment = pathname.split('/')[1] ?? '';
+
+  if (LOCALE_PATH_PREFIXES.has(firstSegment)) {
+    return href;
+  }
+
+  if (ASSET_PATH_PATTERN.test(pathname)) {
+    return href;
+  }
+
+  const normalizedPathname = pathname.replace(/\/+$/, '');
+
+  // A post that only exists in the default locale must stay unprefixed, otherwise
+  // the localized URL would 404.
+  const postSlugPath = /^\/posts\/(.+)$/.exec(normalizedPathname)?.[1];
+
+  if (postSlugPath && !postExistsForLocale(postSlugPath, locale)) {
+    return href;
+  }
+
+  return `/${locale}${normalizedPathname}${suffix ?? ''}`;
+}
+
+/**
+ * Rewrite locale-neutral internal links so they resolve within the rendered locale.
+ * Authors write `/posts/2025/12/15/foo`; a German page renders `/de/posts/2025/12/15/foo`.
+ */
+export function localizeInternalLinks(
+  contentHtml: string,
+  locale: string,
+): string {
+  if (locale === DEFAULT_LOCALE) {
+    return contentHtml;
+  }
+
+  return contentHtml.replace(
+    /(<a\b[^>]*?\bhref=)(["'])(.*?)\2/gi,
+    (_fullMatch, beforeHref: string, quote: string, href: string) =>
+      `${beforeHref}${quote}${localizeInternalHref(href, locale)}${quote}`,
+  );
+}
+
 function ensureBlankTarget(attributes: string): string {
   if (/\btarget\s*=/i.test(attributes)) {
     return attributes.replace(/\btarget\s*=\s*(["']).*?\1/i, 'target="_blank"');
@@ -420,6 +481,94 @@ function centerStandaloneHtmlImages(contentHtml: string): string {
     /(^|\n)\s*(<img\b[^>]*>)\s*(?=\n|$)/gi,
     (_match, prefix: string, imageHtml: string) =>
       `${prefix}<div style="text-align: center; margin: 2rem 0;">${applyStandaloneImageStyle(imageHtml)}</div>`,
+  );
+}
+
+type MarkdownAlertType = 'NOTE' | 'TIP' | 'IMPORTANT' | 'WARNING' | 'CAUTION';
+
+interface MarkdownAlertStyle {
+  containerClass: string;
+  iconClass: string;
+  icon: string;
+  labels: { en: string; de: string };
+}
+
+const MARKDOWN_ALERT_STYLES: Record<MarkdownAlertType, MarkdownAlertStyle> = {
+  NOTE: {
+    containerClass: 'bg-sky-100',
+    iconClass: 'text-sky-200',
+    icon: 'mdi-information-outline',
+    labels: { en: 'Note', de: 'Hinweis' },
+  },
+  TIP: {
+    containerClass: 'bg-green-100',
+    iconClass: 'text-green-300',
+    icon: 'mdi-lightbulb-on-outline',
+    labels: { en: 'Tip', de: 'Tipp' },
+  },
+  IMPORTANT: {
+    containerClass: 'bg-purple-200',
+    iconClass: 'text-purple-700',
+    icon: 'mdi-message-alert-outline',
+    labels: { en: 'Important', de: 'Wichtig' },
+  },
+  WARNING: {
+    containerClass: 'bg-yellow-50',
+    iconClass: 'text-yellow-400',
+    icon: 'mdi-alert-outline',
+    labels: { en: 'Warning', de: 'Warnung' },
+  },
+  CAUTION: {
+    containerClass: 'bg-rose-100',
+    iconClass: 'text-rose',
+    icon: 'mdi-alert-octagon-outline',
+    labels: { en: 'Caution', de: 'Achtung' },
+  },
+};
+
+const MARKDOWN_ALERT_BASE_CLASS =
+  'my-8 rounded-3xl px-6 py-5 sm:px-8 [&>p:first-of-type]:mt-0 [&>p:last-child]:mb-0';
+
+const MARKDOWN_ALERT_PATTERN =
+  /<blockquote>\s*<p>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*([\s\S]*?)<\/p>([\s\S]*?)<\/blockquote>/gi;
+
+/**
+ * Renders GitHub-style alerts (`> [!NOTE]`, `> [!WARNING]`, ...) as info boxes.
+ * remark-gfm keeps the marker as literal text, so the generated blockquote
+ * markup is rewritten here.
+ */
+export function renderMarkdownAlerts(
+  contentHtml: string,
+  locale: string,
+): string {
+  return contentHtml.replace(
+    MARKDOWN_ALERT_PATTERN,
+    (
+      _match,
+      alertType: string,
+      firstParagraphRest: string,
+      remainingBlocks: string,
+    ) => {
+      const style =
+        MARKDOWN_ALERT_STYLES[alertType.toUpperCase() as MarkdownAlertType];
+      const label = locale === 'de' ? style.labels.de : style.labels.en;
+      const firstParagraph = firstParagraphRest.trim()
+        ? `<p>${firstParagraphRest.trim()}</p>`
+        : '';
+
+      return [
+        `<div class="${MARKDOWN_ALERT_BASE_CLASS} ${style.containerClass}">`,
+        '<div class="mb-2 flex items-center gap-2 font-semibold not-italic text-blue">',
+        `<span class="iconify size-5 shrink-0 ${style.iconClass}" data-icon="${style.icon}" aria-hidden="true"></span>`,
+        label,
+        '</div>',
+        firstParagraph,
+        remainingBlocks.trim(),
+        '</div>',
+      ]
+        .filter(line => line.length > 0)
+        .join('\n');
+    },
   );
 }
 

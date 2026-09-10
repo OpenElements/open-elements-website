@@ -98,12 +98,15 @@ Write markdown below the front matter. Keep heading structure consistent between
 
 Internal link rules:
 
-- Standard pages:
-  - EN: `/about`, `/contact`
-  - DE: `/de/about`, `/de/contact`
-- Blog posts:
-  - EN: `/posts/YYYY/MM/DD/<slug>`
-  - DE: `/de/posts/YYYY/MM/DD/<slug>`
+- Write internal links **locale-neutral**, without the `/de` prefix — the renderer adds the
+  prefix of the post's locale automatically (see `localizeInternalLinks()` in
+  [src/lib/markdown.ts](../src/lib/markdown.ts)).
+- Standard pages: `/about`, `/contact`
+- Blog posts: `/posts/YYYY/MM/DD/<slug>`
+
+Already existing `/de/...` links keep working — the rewriter never double-prefixes. External
+links, anchors (`#…`), `mailto:`/`tel:` and asset paths (`/images/foo.png`) stay untouched.
+A link to a post that only exists in English also stays unprefixed so it does not 404.
 
 Do not use `/blog/...` in new content. The active route is `/posts/...`.
 Do not link to the legacy `/posts/<filename>` alias in new content either — use the canonical `/posts/YYYY/MM/DD/<slug>` form.
