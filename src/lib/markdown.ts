@@ -695,6 +695,31 @@ export function getAllPostSlugs(): Array<{ locale: string; slug: string[] }> {
 }
 
 /**
+ * Render markdown body text to the HTML used across the site.
+ *
+ * Expands Hugo shortcodes, runs remark/GFM, then applies the shared HTML
+ * decorations (centered standalone images, external-link icons, heading
+ * anchors, syntax-highlighted code blocks). Shared by posts and articles so
+ * both render identically.
+ */
+export async function renderMarkdownToHtml(content: string): Promise<string> {
+  const transformedContent = transformHugoShortcodes(content);
+
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
+    .process(transformedContent);
+
+  return highlightCodeBlocks(
+    decorateHeadlinesWithAnchors(
+      decorateExternalLinks(
+        centerStandaloneHtmlImages(processedContent.toString()),
+      ),
+    ),
+  );
+}
+
+/**
  * Get a single post by slug path and locale.
  * slugPath can be a joined path like "2026/03/26/slug-text" or segments joined with "/".
  */
@@ -713,20 +738,7 @@ export async function getPostBySlug(
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    const transformedContent = transformHugoShortcodes(content);
-
-    // Convert markdown to HTML
-    const processedContent = await remark()
-      .use(remarkGfm)
-      .use(html, { sanitize: false })
-      .process(transformedContent);
-    const contentHtml = highlightCodeBlocks(
-      decorateHeadlinesWithAnchors(
-        decorateExternalLinks(
-          centerStandaloneHtmlImages(processedContent.toString()),
-        ),
-      ),
-    );
+    const contentHtml = await renderMarkdownToHtml(content);
 
     return {
       slug: slugPath,
