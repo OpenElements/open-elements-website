@@ -1,5 +1,81 @@
 [
   {
+    "month": "AUGUST",
+    "year": 2026,
+    "excerpt": "Fortgesetzte Modernisierungs‑ und Wartungsarbeiten, einschließlich der Fertigstellung der JUnit3‑zu‑JUnit5‑Testmigration, und Fortschritte bei der Projektdokumentation.",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "Maven Artifact‑Plugin angepasst, um Verbesserungen bei der Buildinfo‑Generierung und dem Build‑Vergleich im Kontext reproduzierbarer Builds zu ermöglichen (GitHub Issue https://github.com/support-and-care/maven-support-and-care/issues/242)",
+            "type": "FEATURE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/242"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Monatliche Veröffentlichung von Maven‑Updates auf der Open Elements‑Website automatisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/pull/244"
+          },
+          {
+            "text": "Maven 3.10.0 getestet und gemeldete Probleme behoben, Verbesserung beim IT‑Testing.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/211"
+          },
+          {
+            "text": "Maven Surefire 3.6.0 veröffentlicht (nur JUnit‑Plattform) und verwandte Probleme behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246"
+          }
+        ]
+      },
+      {
+        "title": "Modernisierung",
+        "items": [
+          {
+            "text": "Migration von in JUnit3 geschriebenen Tests zu JUnit5 abgeschlossen.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/136"
+          }
+        ]
+      },
+      {
+        "title": "Dokumentation",
+        "items": [
+          {
+            "text": "How‑to zum Hinzufügen und Ausschließen von Abhängigkeiten veröffentlicht.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/pull/20"
+          },
+          {
+            "text": "Kapitel zu den Schlüsselkonzepten des Maven‑Abhängigkeitsmechanismus veröffentlicht.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/pull/21"
+          },
+          {
+            "text": "Tutorial zum Schreiben eines ersten Maven‑Plugins in Java gestartet.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/support-and-care/doc-for-maven/pull/24"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/sparsick",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/slawekjaranowski",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
+  },
+  {
     "month": "APRIL",
     "year": 2026,
     "excerpt": "Fokus auf Verbesserungen der Sicherheit in der Lieferkette, Vorbereitung von Maven 3.10.0 und Beginn einer besseren Tool-Unterstützung für den internen Release-Prozess von Apache Maven",
