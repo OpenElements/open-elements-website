@@ -166,12 +166,12 @@ Open Elements wächst stetig und hat am 01.09.2024 mit Natascha Dönges eine wun
 
 ![Natascha Dönges](/posts/2025-01-16-open-elements-in-2024/natascha.jpg)
 
-Jessie Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
-Jessie Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
+Jessy Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
+Jessy Ssebuliba und Noah Tayebwa sind Entwickler aus Uganda und haben bereits zu Beginn des letzten Jahres bei Open Elements angefangen – vorerst in Teilzeit.
 Seit Mitte 2024 sind die beiden in Vollzeit für das Unternehmen tätig.
 
-![Tayebwa Noah und Jessie Ssebuliba](/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg)
-{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Noah Tayebwa und Jessie Ssebuliba">}}
+![Tayebwa Noah und Jessy Ssebuliba](/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg)
+{{< centered-image src="/posts/2025-01-16-open-elements-in-2024/noah-jessie.jpg" width="80%" showCaption="true" alt="Noah Tayebwa und Jessy Ssebuliba">}}
 
 In dieser Konstellation zeigt sich deutlich, wie sich die globale Zusammenarbeit an Open-Source-Projekten auswirken kann.
 Geschäftsführer Hendrik Ebbers hat das Potential der jungen Männer erkannt und beiden eine Stelle angeboten.
