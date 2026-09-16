@@ -11,9 +11,9 @@ preview_image: "/posts/preview-images/oss-world.svg"
 ---
 
 
-# Woher kommt dieses Artefakt eigentlich? Vom Maven Repository und der Datei `_remote.repositories`
+# Von der Supply Chain, Maven Repositories und der Datei `_remote.repositories`
 
-Reproducible Builds beruhen auf einer einfachen Zusage: derselbe Quellcode, dieselbe Build-Umgebung, dasselbe Ergebnis, 
+[Reproducible Builds](https://reproducible-builds.org/) beruhen auf einer einfachen Zusage: derselbe Quellcode, dieselbe Build-Umgebung, dasselbe Ergebnis, 
 Byte für Byte. Wer diese Zusage überprüfen will, braucht eine verlässliche Referenz, und genau an dieser Stelle wird es 
 interessant, denn die Referenz liegt bei Maven im lokalen Repository, also in einem Verzeichnis, dem man auf den 
 ersten Blick nicht ansehen kann, woher sein Inhalt stammt. Technisch haben wir das Thema Reproducible Builds bereits 
@@ -32,9 +32,9 @@ Build-Ergebnisses inklusive Checksummen, und `artifact:compare` vergleicht das E
 Referenz. Wenn beide übereinstimmen, ist gezeigt, dass die veröffentlichten Artefakte tatsächlich aus dem angegebenen 
 Quellcode entstanden sein können.
 
-Ein Vergleich ist allerdings nur so gut wie sein Vergleichsmaßstab. Wenn eine der beteiligten Abhängigkeiten nicht aus 
+Problematisc ist allerdings, wenn eine der beteiligten Abhängigkeiten nicht aus 
 einem öffentlichen Repository stammt, sondern lokal via `mvn install` vor drei Wochen auf demselben Rechner 
-gebaut worden sind, dann vergleicht man am Ende ein lokales Ergebnis mit einem anderen lokalen Ergebnis. Das Resultat 
+gebaut worden sind. Dann vergleicht man am Ende ein lokales Ergebnis mit einem anderen lokalen Ergebnis. Das Resultat 
 sieht sauber aus, es sagt aber nichts über die veröffentlichten Artefakte aus. Aus Supply-Chain-Perspektive ist ein 
 lokal installiertes Artefakt ein Input in den Build, der von niemandem geprüft wurde, weder durch eine Signatur noch 
 durch eine Checksumme gegen ein Remote-Repository. Wie sich in der Vergangenheit gezeigt hat, könnte hier bereits 
@@ -58,7 +58,7 @@ allein lässt sich die Herkunft folglich nicht ablesen.
 
 ## Wie Maven das lokale Repository verwaltet
 
-Unterhalb von Maven arbeitet der Maven Artifact Resolver, das frühere Aether. Es kapselt alles, was mit Repositories 
+Unterhalb von Maven arbeitet der Maven Artifact Resolver. Es kapselt alles, was mit Repositories 
 zu tun hat, also das Auflösen von Koordinaten, das Herunterladen, das Zwischenspeichern und das Installieren. 
 Für das lokale Repository ist dabei eine eigene Verwaltungsschicht zuständig, und die zur Laufzeit verwendete Variante 
 tut mehr, als Dateien an der richtigen Stelle abzulegen. Sie führt Buch darüber, aus welchem Repository ein 
@@ -90,8 +90,7 @@ artifact-1.0.pom>my_repo_id=
 Der entscheidende Sonderfall ist die leere Repository-Id. Ein Eintrag der Form `artifact-1.0.jar>=` bedeutet, dass diese 
 Datei nicht heruntergeladen, sondern lokal installiert wurde. Fehlt zu einer vorhandenen Datei jeglicher Eintrag, 
 dann gilt sie intern ebenfalls als lokal installiert.
-
-Diese Datei ist damit essentiell für die Basis für die Lösung von MARTIFACT-58. 
+ 
 Über die API lässt sich herausbekommen, aus welchem Repository ein Artefakt kam, und im Fall einer lokalen Installation 
 ist das eben das lokale Repository selbst.
 
