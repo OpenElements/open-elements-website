@@ -3,7 +3,7 @@ outdated: false
 showInBlog: true
 title: "Von der Supply Chain, lokal gebauten Artefakten und wie Maven damit umgeht"
 slug: von-der-supply-chain-lokal-gebauten-artefakten-und-wie-maven-damit-umgeht
-date: 2026-08-12
+date: 2026-09-16
 author: sebastian
 excerpt: "Lokal gebaute Artefakte können ein Problem für Reproducible Builds sein und damit ein Risiko für die Supply Chain. Ich zeige hier, wie das Auflösen von Artefakten in Maven passiert und wie man sehen kann, ob ein selbstgebautes Artefakt fäschlicher Weise verwerndet wurde."
 categories: [Open Elements, Open-Source, Security, Java]
