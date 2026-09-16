@@ -10,9 +10,6 @@ categories: [Open Elements, Open-Source, Security, Java]
 preview_image: "/posts/preview-images/oss-world.svg"
 ---
 
-
-# Von der Supply Chain, Maven Repositories und der Datei `_remote.repositories`
-
 [Reproducible Builds](https://reproducible-builds.org/) beruhen auf einer einfachen Zusage: derselbe Quellcode, dieselbe Build-Umgebung, dasselbe Ergebnis, 
 Byte für Byte. Wer diese Zusage überprüfen will, braucht eine verlässliche Referenz, und genau an dieser Stelle wird es 
 interessant, denn die Referenz liegt bei Maven im lokalen Repository, also in einem Verzeichnis, dem man auf den 
