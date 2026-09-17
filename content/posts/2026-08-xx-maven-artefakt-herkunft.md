@@ -105,9 +105,9 @@ recommendation to check the build and to potentially delete artifacts found loca
 repository are used instead:
 
 ```
-The artifact org.slf4j:slf4j-api:1.7.36 is stemming from a local install to your
+The dependency org.slf4j:slf4j-api:1.7.36 is stemming from a local install to your
 local Maven repository. Please ensure that this is intended. If not, consider
-removing this artifact and rebuilding and that your locally installed artifact
+removing this artifact and rebuilding or that your locally installed artifact
 from /home/user/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
 matches public reference from remote.
 ```
