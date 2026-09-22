@@ -100,6 +100,11 @@ const ITEM_TYPE_CONFIG: Record<
     label: 'Maintenance',
     color: 'bg-slate text-blue',
   },
+  COMMUNITY: {
+    icon: '/icons/star.svg',
+    label: 'Community',
+    color: 'bg-amber-100 text-amber-800',
+  },
 };
 
 function CategorySection({ category }: { category: UpdateCategory }) {
@@ -192,15 +197,22 @@ function AvatarRow({ contributors }: { contributors: string[] }) {
   );
 }
 
-function ContributorAvatars({ contributors }: { contributors: Contributors }) {
+function ContributorAvatars({
+  contributors,
+  project,
+}: {
+  contributors: Contributors;
+  project: string;
+}) {
   const t = useTranslations('updates');
+  const teamLabelKey = getProject(project)?.teamLabelKey ?? 'supportAndCare';
 
   return (
     <div className="flex flex-wrap gap-x-8 gap-y-3">
       {contributors.supportAndCare.length > 0 && (
         <div>
           <p className="text-xs uppercase tracking-wider text-blue/50 mb-1.5">
-            {t('supportAndCare')}
+            {t(teamLabelKey)}
           </p>
           <AvatarRow contributors={contributors.supportAndCare} />
         </div>
@@ -219,10 +231,12 @@ function ContributorAvatars({ contributors }: { contributors: Contributors }) {
 
 function UpdateCard({
   update,
+  project,
   isFirst,
   isLast,
 }: {
   update: MonthlyUpdate;
+  project: string;
   isFirst: boolean;
   isLast: boolean;
 }) {
@@ -287,7 +301,10 @@ function UpdateCard({
             <h4 className="font-semibold text-sm mb-2.5">
               {t('contributors')}
             </h4>
-            <ContributorAvatars contributors={update.contributors} />
+            <ContributorAvatars
+              contributors={update.contributors}
+              project={project}
+            />
           </div>
         )}
       </div>
@@ -355,6 +372,7 @@ export default function UpdatesClient({
           <UpdateCard
             key={`${update.year}-${update.month}`}
             update={update}
+            project={project}
             isFirst={idx === 0}
             isLast={idx === updates.length - 1}
           />
