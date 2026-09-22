@@ -44,13 +44,13 @@
     "visible": false
   },
   {
-    "id": "jessie",
-    "firstName": "Jessie",
+    "id": "jessy",
+    "firstName": "Jessy",
     "lastName": "Ssebuliba",
-    "link": "/employees/jessie",
+    "link": "/employees/jessy",
     "bio": "Jessy is passionate about Web3 technologies and blockchain. He regularly contributes to the Eclipse Foundation, actively participating in and supporting various open-source development projects. As a dedicated learner, he is always happy to share his knowledge and contribute to the growth of the wider tech community.",
-    "picture": "/team/jessie.jpg",
-    "role": "Junior Developer",
+    "picture": "/team/jessy.jpg",
+    "role": "Junior Software Engineer",
     "socials": [
       {
         "name": "Twitter",
@@ -59,7 +59,7 @@
       },
       {
         "name": "LinkedIn",
-        "link": "https://www.linkedin.com/in/ssebuliba/",
+        "link": "https://www.linkedin.com/in/jexsie/",
         "icon": "mdi:linkedin"
       },
       {
@@ -174,7 +174,7 @@
     "link": "/employees/sebastian",
     "bio": "Sebastian is a seasoned IT professional with 15+ years of expertise across development, consulting, and community work. As contributor to the Apache Foundation and organizer of the Java Group Dortmund, Sebastian is a committed advocate for tech, learning and collaboration, bridging gaps between developers and industry trends.",
     "picture": "/team/sebastian.jpg",
-    "role": "Open Source Software Engineer",
+    "role": "Senior Software Engineer",
     "socials": [
       {
         "name": "GitHub",
@@ -196,7 +196,7 @@
     "link": "/employees/daniel",
     "bio": "Daniel is a passionate software developer with a keen interest in open source technologies. He enjoys collaborating on projects that drive innovation and community growth. With a background in computer science, Daniel is dedicated to continuous learning and contributing to the tech ecosystem.",
     "picture": "/team/daniel.jpg",
-    "role": "Junior Developer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "GitHub",
@@ -302,6 +302,33 @@
         "name": "LinkedIn",
         "link": "https://www.linkedin.com/in/grobmeier",
         "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
+  },
+  {
+    "id": "maya",
+    "firstName": "Aishat",
+    "lastName": "Muibudeen",
+    "link": "/employees/maya",
+    "bio": "Maya is a technical product designer who loves making developer tools feel less complicated. Open source is where she grew, building design systems used by contributors around the world, sitting on governance and code of conduct committees, and mentoring people through their first contributions. She cares a lot about community, good design, and getting the details right. That's exactly what she brings to Open Elements.",
+    "picture": "/team/maya.jpg",
+    "role": "Technical Product Designer",
+    "socials": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/Mayaleeeee",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/aishatmuibudeen/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "Medium",
+        "link": "https://medium.com/@muibudeenaishat",
+        "icon": "mdi:medium"
       }
     ],
     "visible": true
