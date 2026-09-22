@@ -20,7 +20,7 @@
     "i18nKey": "updatesNav",
     "altI18nKey": "updatesNavDescription",
     "link": "/updates/",
-    "visibleInNavigation": false,
+    "visibleInNavigation": true,
     "visibleInFooter": true
   },
   {
