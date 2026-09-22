@@ -58,7 +58,7 @@
         "title": "Dokumentation",
         "items": [
           {
-            "text": "Schreibleitfaden aktiviert.",
+            "text": "Leitfaden zum Erstellen von Dokumentation bereitgestellt.",
             "type": "DOCUMENTATION",
             "link": "https://github.com/support-and-care/doc-for-maven/issues/12"
           },
