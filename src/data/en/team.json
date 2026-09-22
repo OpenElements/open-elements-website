@@ -305,5 +305,32 @@
       }
     ],
     "visible": true
+  },
+  {
+    "id": "maya",
+    "firstName": "Aishat",
+    "lastName": "Muibudeen",
+    "link": "/employees/maya",
+    "bio": "Maya is a technical product designer who loves making developer tools feel less complicated. Open source is where she grew, building design systems used by contributors around the world, sitting on governance and code of conduct committees, and mentoring people through their first contributions. She cares a lot about community, good design, and getting the details right. That's exactly what she brings to Open Elements.",
+    "picture": "/team/maya.jpg",
+    "role": "Technical Product Designer",
+    "socials": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/Mayaleeeee",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/aishatmuibudeen/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "Medium",
+        "link": "https://medium.com/@muibudeenaishat",
+        "icon": "mdi:medium"
+      }
+    ],
+    "visible": true
   }
 ]
