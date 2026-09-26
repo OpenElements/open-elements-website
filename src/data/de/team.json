@@ -27,13 +27,13 @@
     "visible": false
   },
   {
-    "id": "jessie",
-    "firstName": "Jessie",
+    "id": "jessy",
+    "firstName": "Jessy",
     "lastName": "Ssebuliba",
-    "link": "/employees/jessie",
+    "link": "/employees/jessy",
     "bio": "Jessy interessiert sich für Web3-Technologien und Blockchain. Er arbeitet regelmäßig an Projekten der Eclipse Foundation und unterstützt somit die Open Source Gemeinschaft. Als engagierter Lerner freut er sich immer, sein Wissen zu teilen und zum Wachstum der breiteren Tech-Community beizutragen.",
-    "picture": "/team/jessie.jpg",
-    "role": "Junior Developer",
+    "picture": "/team/jessy.jpg",
+    "role": "Junior Software Engineer",
     "socials": [
       {
         "name": "Twitter",
@@ -42,7 +42,7 @@
       },
       {
         "name": "LinkedIn",
-        "link": "https://www.linkedin.com/in/ssebuliba/",
+        "link": "https://www.linkedin.com/in/jexsie/",
         "icon": "mdi:linkedin"
       },
       {
@@ -77,7 +77,7 @@
     "link": "/employees/noah",
     "bio": "Noah lernt am liebsten durch Ausprobieren und teilt sein Wissen gerne weiter. Seine Neugier führte ihn in die Welt des Open Source, wo er zu Projekten wie Jakarta EE, Eclipse Adoptium, Apache Maven und Hiero beiträgt. Bei Open Elements bringt er einen überlegten, gemeinschaftsorientierten Ansatz für die Softwareentwicklung mit.",
     "picture": "/team/noah.jpg",
-    "role": "Junior Developer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "LinkedIn",
@@ -162,7 +162,7 @@
     "link": "/employees/sebastian",
     "bio": "Sebastian ist ein erfahrener IT-Profi mit mehr als 15 Jahren Erfahrung in den Bereichen Entwicklung, Beratung und Community-Arbeit. Als Contributor der Apache Foundation und Organisator der Java Group Dortmund ist Sebastian ein engagierter Verfechter von Technologie, Lernen und Zusammenarbeit.",
     "picture": "/team/sebastian.jpg",
-    "role": "Open Source Software Engineer",
+    "role": "Senior Software Engineer",
     "socials": [
       {
         "name": "GitHub",
@@ -184,7 +184,7 @@
     "link": "/employees/daniel",
     "bio": "Daniel ist ein leidenschaftlicher Softwareentwickler mit einem starken Interesse an Open-Source-Technologien. Er arbeitet gerne an Projekten, die Innovation und das Wachstum der Gemeinschaft fördern. Mit einem Hintergrund in Informatik widmet sich Daniel dem kontinuierlichen Lernen und dem Beitrag zum Technologie-Ökosystem.",
     "picture": "/team/daniel.jpg",
-    "role": "Junior Developer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "GitHub",
