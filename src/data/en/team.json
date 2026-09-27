@@ -332,5 +332,32 @@
       }
     ],
     "visible": true
-  }
+  },
+    {
+      "id": "azeez",
+      "firstName": "Azeez",
+      "lastName": "Elegbede",
+      "link": "/employees/azeez",
+      "bio": "Azeez is an Artisanal Developer Advocate and Software Engineer specializing in building (and occasionally writing) exceptional digital experiences. Currently, I’m focused on turning contributors to life-long maintainers through opensource mentorships, and creating exceptional educational content at Open Elements.",
+      "picture": "/team/azeez.png",
+      "role": "Developer Relations Engineer",
+      "socials": [
+        {
+          "name": "GitHub",
+          "link": "https://github.com/acethecreator",
+          "icon": "mdi:github"
+        },
+        {
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/aelegbede/",
+          "icon": "mdi:linkedin"
+        },
+        {
+          "name": "Website",
+          "link": "https://aelegbede.com",
+          "icon": "mdi:web"
+        }
+      ],
+      "visible": true
+    }
 ]
