@@ -9,6 +9,7 @@ function getStaticRoutes(locale: string): string[] {
     'about',
     'contact',
     'impressum',
+    'newsletter',
     'posts',
     'support-care',
     'support-care-maven',
@@ -18,7 +19,7 @@ function getStaticRoutes(locale: string): string[] {
   ];
 
   if (locale === 'de') {
-    routes.push('newsletter', 'newsletter-archive');
+    routes.push('newsletter-archive');
   }
 
   return routes;
