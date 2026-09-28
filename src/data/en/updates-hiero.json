@@ -1,0 +1,240 @@
+[
+  {
+    "month": "AUGUST",
+    "year": 2026,
+    "excerpt": "Community calls and office hours continued for the Python SDK and Hiero community, with HIP implementations in the Python SDK, NFT client APIs in Enterprise Java, and website work including the Issue Explorer.",
+    "categories": [
+      {
+        "title": "Community",
+        "items": [
+          {
+            "type": "COMMUNITY",
+            "text": "Led Python SDK Community Calls on PRs, HIPs, automation, TCK, and blocked issues",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/9"
+          },
+          {
+            "type": "COMMUNITY",
+            "text": "Led Python SDK Office Hours for blocked issues, bugs, and errors",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "type": "COMMUNITY",
+            "text": "Led Hiero Community Management Calls covering the website, SDKs, HIPs, automation, and TCK",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "type": "DOCUMENTATION",
+            "text": "Published Links of the Week posts on the Hiero blog",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/632"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Java",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Expand NftClient with delete, update, wipe, freeze, and unfreeze operations",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/297"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Add metadata key support for createNftType and updateNftMetadata",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/283"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Add network address book support",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/251"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Add custom maxTransactionFee and gas support to createContract and callContract",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/249"
+          },
+          {
+            "type": "BUG_FIX",
+            "text": "Align mirror node response fields with the specification",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/239"
+          },
+          {
+            "type": "SECURITY",
+            "text": "Publish SBOMs to Dependency-Track",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/50"
+          },
+          {
+            "type": "SECURITY",
+            "text": "Review branch protection, fuzz testing, and the OpenSSF badge for hiero-enterprise-java",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/54"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Add project status badges",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/326"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Enable CodeRabbit review on hiero-enterprise-java",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/185"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Bump Solo to v0.88.0 in hiero-solo-action",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/pull/144"
+          }
+        ]
+      },
+      {
+        "title": "Hiero Website",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Implement the Issue Explorer page",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/437"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Redesign the Issue Explorer",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/630"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Update navbar functionality",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/569"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Extract shared helper functions in logger and validation scripts",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/586"
+          },
+          {
+            "type": "BUG_FIX",
+            "text": "Fix Lychee configuration and repair broken links across the site",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/604"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Update website dependencies after the logger and validation modularization",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/588"
+          }
+        ]
+      },
+      {
+        "title": "Python SDK",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Implement HIP-1313 high-volume entity creation",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2308"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Implement HIP-1261 fee estimation query",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2231"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Add opt-in receipt and record query failover to other nodes",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2527"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Add RejectToken, Create Schedule, and Sign Schedule methods to the TCK",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2442"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Replace PublicKey with Key in the contract and schedule modules",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2532"
+          },
+          {
+            "type": "DOCUMENTATION",
+            "text": "Improve documentation for Windows users",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/1958"
+          },
+          {
+            "type": "BUG_FIX",
+            "text": "Fix failing TCK methods",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2513"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Deprecate AccountBalanceQuery and Transaction node account id setters",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2647"
+          },
+          {
+            "type": "SECURITY",
+            "text": "Start SBOM deployment for the Python SDK",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/51"
+          }
+        ]
+      },
+      {
+        "title": "Java SDK",
+        "items": [
+          {
+            "type": "IMPROVEMENT",
+            "text": "Decouple JSON-RPC result serialization from json-smart bean serialization",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2899"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Convert TCK response classes to records",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2920"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript SDK",
+        "items": [
+          {
+            "type": "IMPROVEMENT",
+            "text": "Add unit tests for the legacy key derivation function in the cryptography package",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4315"
+          }
+        ]
+      },
+      {
+        "title": "Analytics",
+        "items": [
+          {
+            "type": "MAINTENANCE",
+            "text": "Enable CodeRabbit planning on hiero-hackers/analytics",
+            "link": "https://github.com/hiero-hackers/analytics/pull/282"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise JavaScript",
+        "items": [
+          {
+            "type": "MAINTENANCE",
+            "text": "Add feature, bug, and question issue templates",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/35"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Add issue moderator flows",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/175"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Enable CodeRabbit planning on hiero-enterprise-js",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/156"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/danielmarv",
+        "https://github.com/jexsie"
+      ],
+      "community": [
+        "https://github.com/aceppaluni",
+        "https://github.com/manishdait"
+      ]
+    }
+  }
+]
