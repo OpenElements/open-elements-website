@@ -1,0 +1,185 @@
+[
+  {
+    "month": "SEPTEMBER",
+    "year": 2026,
+    "excerpt": "Community calls and office hours continued for the Python SDK and Hiero community, with HIP implementations in the Python SDK, NFT client APIs in Enterprise Java, and website work including the Issue Explorer.",
+    "categories": [
+      {
+        "title": "Community",
+        "items": [
+          {
+            "type": "COMMUNITY",
+            "text": "Led Python SDK Community Calls on PRs, HIPs, automation, TCK, and blocked issues",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/9"
+          },
+          {
+            "type": "COMMUNITY",
+            "text": "Led Python SDK Office Hours for blocked issues, bugs, and errors",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "type": "COMMUNITY",
+            "text": "Led Hiero Community Management Calls covering the website, SDKs, HIPs, automation, and TCK",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "type": "DOCUMENTATION",
+            "text": "Published Links of the Week posts on the Hiero blog",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/632"
+          },
+          {
+            "type": "COMMUNITY",
+            "text": "Reviewed and merged contributor and dependency PRs across the Python SDK, Hiero website, and Analytics",
+            "link": "https://github.com/pulls?q=is%3Apr+reviewed-by%3Adanielmarv+user%3Ahiero-ledger+user%3Ahiero-hackers+merged%3A2026-09-01..2026-09-30"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Aligned the Code of Conduct reference with the LFDT standard in the Mirror Node Explorer",
+            "link": "https://github.com/hiero-ledger/hiero-mirror-node-explorer/pull/2757"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Aligned the Code of Conduct reference with the LFDT standard in the consensus specifications",
+            "link": "https://github.com/hiero-ledger/hiero-consensus-specifications/pull/43"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Java",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Expand NftClient with pause and unpause operations",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/327"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Added CLI sample using picocli",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/130"
+          }
+        ]
+      },
+      {
+        "title": "Hiero Website",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Added Links of the week for September",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/677"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Update website dependencies",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/668"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Redesigned the home page",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/617"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Redesigned the blog page",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/642"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Shipped version 2 of the website redesign",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/643"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Added the Issue Explorer with filtering and pagination",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/647"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Improved footer navigation and added header-only menu items",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/654"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Integrated Plausible Analytics into the website layout",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/657"
+          },
+          {
+            "type": "SECURITY",
+            "text": "Fixed security vulnerabilities in website dependencies",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/644"
+          }
+        ]
+      },
+      {
+        "title": "Python SDK",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Corrected the From_bytes Transaction-type Dispatch Map",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2637"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Implemented MirroNodeAccountBalanaceQuery",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2656"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Added the signSchedule method to the TCK server",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2630"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Added the contractGetBytecode method to the TCK server",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2664"
+          }
+        ]
+      },
+      {
+        "title": "Analytics",
+        "items": [
+          {
+            "type": "FEATURE",
+            "text": "Rendered every dashboard chart from API data instead of static images and refreshed the dashboard UI",
+            "link": "https://github.com/hiero-hackers/analytics/pull/490"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Added printing and downloading of a single chart",
+            "link": "https://github.com/hiero-hackers/analytics/pull/502"
+          },
+          {
+            "type": "FEATURE",
+            "text": "Added repository and contributor detail views",
+            "link": "https://github.com/hiero-hackers/analytics/pull/504"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Fixed the CodeQL workflow to use one codeql-action release across init and analyze",
+            "link": "https://github.com/hiero-hackers/analytics/pull/505"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise JavaScript",
+        "items": [
+          {
+            "type": "IMPROVEMENT",
+            "text": "Reduce Total Pipeline Time by Trimming Redundant Network Setup",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/issues/103"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/danielmarv",
+        "https://github.com/jexsie"
+      ],
+      "community": [
+        "https://github.com/aceppaluni",
+        "https://github.com/manishdait"
+      ]
+    }
+  }
+]
