@@ -105,10 +105,24 @@
     "visible": true
   },
   {
+    "title": "Open Source Business Alliance",
+    "text": "Die <a class=\"link-purple\" href=\"https://osb-alliance.de\", target=\"_blank\">Open Source Business Alliance (OSBA)</a> ist der Bundesverband für digitale Souveränität und der größte Open-Source-Verband Europas. Sie setzt sich für Open Source Software und offene Standards als Grundlage digitaler Souveränität ein und will Open Source als Standard in der öffentlichen Beschaffung verankern. Als Mitglied bringt Open Elements seine Expertise in der Pflege des Java-Ökosystems, in der Supply-Chain-Security und zum Cyber Resilience Act in die Verbandsarbeit ein.",
+    "logo": "/illustrations/logos/osba.svg",
+    "link": "https://osb-alliance.de",
+    "visible": true
+  },
+  {
+    "title": "Sovereign AI Foundation",
+    "text": "Die <a class=\"link-purple\" href=\"https://aieclipse.org/sovereign-ai-foundation/\", target=\"_blank\">Sovereign AI Foundation (SAIF)</a> ist eine Industrie-Kollaboration der Eclipse Foundation und bietet ein herstellerneutrales Forum für Open-Source-KI. Ihre Mitgliedsorganisationen tauschen Erfahrungen und Use Cases aus, bewerten Technologien und Trends und erarbeiten praktische Hilfsmittel. Diese verschaffen ihnen mehr Transparenz und Kontrolle über die KI-Technologien, von denen sie abhängen. Open Elements ist Gründungsmitglied der SAIF.",
+    "logo": "/illustrations/logos/sovereign-ai-foundation.jpg",
+    "link": "https://aieclipse.org/sovereign-ai-foundation/",
+    "visible": true
+  },
+  {
     "title": "Der Mittelstand",
     "text": "Open Elements ist Mitglied im <a class=\"link-purple\" href=\"https://www.bvmw.de\" target=\"_blank\">BVMW – Bundesverband mittelständische Wirtschaft e.V.</a> und Gründungsmitglied des <a class=\"link-purple\" href=\"https://www.bvmw.de/de/ruhrgebiet-ost-und-mitte/fachkreis-digitale-souveraenitaet\" target=\"_blank\">Fachkreises 'Digitale Souveränität'</a> und unterstützt sowohl Kommunen als auch KMUs bei der Nutzung von Open Source Software (OSS).",
     "logo": "/illustrations/logos/bvmw-logo.svg",
-    "link": "https://www.ijug.eu/de/home/",
+    "link": "https://www.bvmw.de",
     "visible": true
   }
 ]
