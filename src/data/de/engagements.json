@@ -42,6 +42,13 @@
     "visible": true
   },
   {
+    "title": "AsyncAPI Initiative",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.asyncapi.com\" target=\"_blank\">AsyncAPI Initiative</a> ist die Heimat des offenen Standards zur Definition asynchroner, event-getriebener APIs. Die Open-Elements-Teammitglieder <a class=\"link-purple\" href=\"/employees/maya\">Aishat Muibudeen</a> und <a class=\"link-purple\" href=\"/employees/azeez\">Azeez Elegbede</a> sind Mitglieder des Technical Steering Committee (TSC) und des Code-of-Conduct-Komitees (CoCC) des Projekts; Aishat ist zudem Mitglied des Governance Boards der Initiative.",
+    "logo": "/illustrations/logo-asyncapi.svg",
+    "link": "https://www.asyncapi.com",
+    "visible": true
+  },
+  {
     "title": "OSPO Alliance",
     "text": "Open Source ist in den meisten IT-Abteilungen zu einem elementaren Bestandteil geworden und die Einrichtung eines Open Source Program Office (OSPO) ist heute für Unternehmen ein wichtiger Schritt. In der <a class=\"link-purple\" href=\"https://ospo.zone\" target=\"_blank\">OSPO Alliance</a> nutzt Open Elements den Wissensaustausch, um Best Practices und Strukturen für die Einrichtung von Open Source Program Offices zu definieren.",
     "logo": "/illustrations/logo-ospo.svg",
