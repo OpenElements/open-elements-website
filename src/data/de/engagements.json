@@ -124,5 +124,12 @@
     "logo": "/illustrations/logos/bvmw-logo.svg",
     "link": "https://www.bvmw.de",
     "visible": true
+  },
+  {
+    "title": "Open Source Board Dortmund",
+    "text": "Das Open Source Board Dortmund wurde am 18. September 2026 auf der #diwodo gegründet, auf Initiative von Do-FOSS und dem BVMW-Fachkreis Digitale Souveränität. Es begleitet den Weg der Stadt Dortmund hin zu Open Source und digitaler Souveränität und bringt dafür unterschiedliche Perspektiven an einen Tisch. <a class=\"link-purple\" href=\"https://open-elements.com/about-hendrik\">Hendrik Ebbers</a> vertritt im Board die Wirtschaft.",
+    "logo": "/illustrations/logos/osbd.svg",
+    "link": "",
+    "visible": true
   }
 ]
