@@ -105,6 +105,20 @@
     "visible": true
   },
   {
+    "title": "Open Source Business Alliance",
+    "text": "The <a class=\"link-purple\" href=\"https://osb-alliance.de\" target=\"_blank\">Open Source Business Alliance (OSBA)</a> is the German federal association for digital sovereignty and Europe's largest open source industry association. It advocates for open source software and open standards as the foundation of digital sovereignty and works to establish open source as the default in public procurement. As a member, Open Elements contributes its expertise in Java ecosystem maintenance, supply chain security and the Cyber Resilience Act to the association's work.",
+    "logo": "/illustrations/logos/osba.svg",
+    "link": "https://osb-alliance.de",
+    "visible": true
+  },
+  {
+    "title": "Sovereign AI Foundation",
+    "text": "The <a class=\"link-purple\" href=\"https://aieclipse.org/sovereign-ai-foundation/\" target=\"_blank\">Sovereign AI Foundation (SAIF)</a> is an industry collaboration of the Eclipse Foundation that provides a vendor-neutral forum for open source AI. Its member organisations share experiences and use cases, assess technologies and trends, and develop practical resources. These give them more visibility into, and control over, the AI technologies they depend on. Open Elements is a founding member of SAIF.",
+    "logo": "/illustrations/logos/sovereign-ai-foundation.jpg",
+    "link": "https://aieclipse.org/sovereign-ai-foundation/",
+    "visible": true
+  },
+  {
     "title": "BVMW e.V.",
     "text": "Open Elements is a member of the <a class=\"link-purple\" href=\"https://www.bvmw.de\" target=\"_blank\">BVMW – German Association for Small and Medium-Sized Businesses</a> and a founding member of the Expert Group on 'Digital Sovereignty' that supports both municipalities and SMEs in adopting and leveraging Open Source Software (OSS).",
     "logo": "/illustrations/logos/bvmw-logo.svg",
