@@ -1,16 +1,15 @@
-providers = ["...", "node", "pnpm"]
-
+# Coolify build (Nixpacks). Node 22 is pinned explicitly; the nixpkgs snapshot
+# Nixpacks uses has no Node 24. `pnpm` there is 10.x, which self-switches to the
+# version in package.json#packageManager, so that field is the single pnpm pin.
 [phases.setup]
-nixPkgs = ["...", "nodejs_24"] 
+nixPkgs = ["nodejs_22", "pnpm"]
 
 [phases.install]
-cmds = [
-  "corepack enable", 
-  "pnpm install --frozen-lockfile"
-]
+cmds = ["pnpm install --frozen-lockfile"]
 
 [phases.build]
 cmds = ["pnpm run build"]
 
+# Runs `next start` (SSR, middleware, API routes) on $PORT, which Coolify injects.
 [start]
-cmd = "node .next/server/server.js" 
+cmd = "pnpm start"
