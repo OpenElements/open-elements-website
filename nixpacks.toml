@@ -1,4 +1,4 @@
-providers = ["...", "node"]
+providers = ["...", "node", "pnpm"]
 
 [phases.setup]
 nixPkgs = ["...", "nodejs_24"] 
