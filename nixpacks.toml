@@ -1,11 +1,16 @@
+providers = ["...", "node"]
+
 [phases.setup]
-nixPkgs = ["nodejs_22", "pnpm"]
+nixPkgs = ["...", "nodejs_24"] 
 
 [phases.install]
-cmds = ["pnpm install --frozen-lockfile"]
+cmds = [
+  "corepack enable", 
+  "pnpm install --frozen-lockfile"
+]
 
 [phases.build]
 cmds = ["pnpm run build"]
 
 [start]
-cmd = "pnpm start"
+cmd = "node .next/server/server.js" 

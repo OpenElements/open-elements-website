@@ -33,7 +33,7 @@
     "link": "/employees/jessy",
     "bio": "Jessy interessiert sich für Web3-Technologien und Blockchain. Er arbeitet regelmäßig an Projekten der Eclipse Foundation und unterstützt somit die Open Source Gemeinschaft. Als engagierter Lerner freut er sich immer, sein Wissen zu teilen und zum Wachstum der breiteren Tech-Community beizutragen.",
     "picture": "/team/jessy.jpg",
-    "role": "Junior Software Engineer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "Twitter",
@@ -49,6 +49,11 @@
         "name": "GitHub",
         "link": "https://github.com/jexsie",
         "icon": "mdi:github"
+      },
+      {
+        "name": "Portifolio",
+        "link": "https://jexsie.com",
+        "icon": "mdi:web"
       }
     ],
     "visible": true
