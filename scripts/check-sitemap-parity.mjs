@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Verify that every URL currently listed in the production sitemap is still
- * reachable on a preview deployment (typically a Netlify PR preview).
+ * reachable on a preview deployment (typically a Coolify PR preview).
  *
  * How it works:
  *   1. Downloads `${prodBase}/en/sitemap.xml` and `${prodBase}/de/sitemap.xml`
@@ -17,7 +17,7 @@
  *
  * Usage:
  *   node scripts/check-sitemap-parity.mjs \
- *     --preview-base=https://deploy-preview-42--my-site.netlify.app \
+ *     --preview-base=https://42.open-elements.cloud \
  *     [--prod-base=https://open-elements.com] \
  *     [--concurrency=8] \
  *     [--timeout=15000]

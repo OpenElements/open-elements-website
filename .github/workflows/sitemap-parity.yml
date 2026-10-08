@@ -1,7 +1,17 @@
 name: Sitemap Parity
 
 # Ensures every URL currently listed in the production sitemap is still
-# reachable on the deployment that will be produced by this branch. Runs on:
+# reachable on the Coolify PR preview built from this branch.
+#
+# Coolify reports preview deployments through a single PR comment per
+# application (posted by the Coolify GitHub App and edited in place on every
+# deploy), not through commit statuses or the Deployments API. The job polls
+# that comment until it reports "ready" with an update newer than the event
+# that triggered this run, then checks against the preview URL in the comment.
+# If any prod URL is unreachable on the preview, the check fails and blocks
+# the merge.
+
+on:
 #   - pull_request  -> waits for the Netlify deploy-preview, then checks
 #   - push to main  -> waits for the Netlify production deploy, then checks
 #
@@ -34,61 +44,60 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
 
-      - name: Wait for Netlify deployment
+      - name: Wait for Coolify preview deployment
         id: wait
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          # Only a comment edited after the push/open that triggered this run
+          # can describe this commit's deployment; older ones are stale.
+          SINCE: ${{ github.event.pull_request.updated_at }}
+          COOLIFY_BOT: openelements-coolify-integration[bot]
+          # Name of the Coolify application, as shown in bold in its comment.
+          COOLIFY_APP: Open Elements Website
           # Total wait budget in seconds (default 15 min) and poll interval.
           WAIT_TIMEOUT: '900'
           WAIT_INTERVAL: '15'
         run: |
           set -euo pipefail
-          echo "Waiting for a Netlify commit status on commit $SHA ..."
+          echo "Waiting for the Coolify preview of '$COOLIFY_APP' on PR #$PR_NUMBER (updated after $SINCE) ..."
 
-          # Netlify reports build status via the GitHub Commit Status API
-          # (context typically `netlify/<site-name>/deploy-preview`) rather
-          # than the Deployments API, so we poll that endpoint.
           deadline=$(( $(date +%s) + WAIT_TIMEOUT ))
           preview_url=""
 
           while [ "$(date +%s)" -lt "$deadline" ]; do
-            status_json=$(gh api "repos/${{ github.repository }}/commits/$SHA/status")
+            comment_json=$(gh api --paginate "repos/${{ github.repository }}/issues/$PR_NUMBER/comments" \
+              | jq -s --arg bot "$COOLIFY_BOT" --arg app "$COOLIFY_APP" '
+                  add
+                  | map(select(.user.login == $bot and (.body | contains("**" + $app + "**"))))
+                  | sort_by(.updated_at) | last // {}')
+            updated_at=$(printf '%s' "$comment_json" | jq -r '.updated_at // ""')
+            body=$(printf '%s' "$comment_json" | jq -r '.body // ""')
 
-            # Grab the first status whose context looks like a Netlify one.
-            # `map(select(...)) | .[0]` normalises the jq stream into a single
-            # (possibly null) object so downstream extraction is unambiguous.
-            netlify_state=$(printf '%s' "$status_json" | jq -r '
-              .statuses
-              | map(select(.context | ascii_downcase | startswith("netlify/")))
-              | .[0].state // ""')
-            netlify_target=$(printf '%s' "$status_json" | jq -r '
-              .statuses
-              | map(select(.context | ascii_downcase | startswith("netlify/")))
-              | .[0].target_url // ""')
-
-            if [ "$netlify_state" = "success" ]; then
-              if [ -z "$netlify_target" ] || [ "$netlify_target" = "null" ]; then
-                echo "::error::Netlify status is success but has no target_url."
+            if [ -z "$updated_at" ]; then
+              echo "No Coolify comment yet. Waiting ${WAIT_INTERVAL}s ..."
+            elif [[ ! "$updated_at" > "$SINCE" ]]; then
+              echo "Coolify comment is from an earlier deployment ($updated_at). Waiting ${WAIT_INTERVAL}s ..."
+            elif [[ "$body" == *"is ready."* ]]; then
+              preview_url=$(printf '%s' "$body" | sed -n 's/.*\[Open Preview\](\([^)]*\)).*/\1/p' | head -n1)
+              if [ -z "$preview_url" ]; then
+                echo "::error::Coolify reports ready but the comment has no preview link."
                 exit 1
               fi
-              preview_url="$netlify_target"
-              echo "Found successful Netlify deployment -> $preview_url"
+              echo "Found ready Coolify preview -> $preview_url"
               break
-            elif [ "$netlify_state" = "failure" ] || [ "$netlify_state" = "error" ]; then
-              echo "::error::Netlify build reported state=$netlify_state for commit $SHA."
+            elif [[ "$body" == *"failed."* ]]; then
+              echo "::error::Coolify preview deployment failed for PR #$PR_NUMBER. See the build logs linked in the PR comment."
               exit 1
-            elif [ -n "$netlify_state" ]; then
-              echo "Netlify status is currently: $netlify_state. Waiting ${WAIT_INTERVAL}s ..."
             else
-              echo "No Netlify status posted yet. Waiting ${WAIT_INTERVAL}s ..."
+              echo "Coolify preview is still deploying. Waiting ${WAIT_INTERVAL}s ..."
             fi
 
             sleep "$WAIT_INTERVAL"
           done
 
           if [ -z "$preview_url" ]; then
-            echo "::error::Timed out after ${WAIT_TIMEOUT}s waiting for a Netlify deployment on $SHA."
+            echo "::error::Timed out after ${WAIT_TIMEOUT}s waiting for the Coolify preview of PR #$PR_NUMBER."
             exit 1
           fi
 
