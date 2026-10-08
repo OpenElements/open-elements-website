@@ -187,7 +187,7 @@
     "firstName": "Daniel",
     "lastName": "Ntege",
     "link": "/employees/daniel",
-    "bio": "Daniel ist ein leidenschaftlicher Softwareentwickler mit einem starken Interesse an Open-Source-Technologien. Er arbeitet gerne an Projekten, die Innovation und das Wachstum der Gemeinschaft fördern. Mit einem Hintergrund in Informatik widmet sich Daniel dem kontinuierlichen Lernen und dem Beitrag zum Technologie-Ökosystem.",
+    "bio": "Daniel ist Software Engineer bei Open Elements und arbeitet remote aus Uganda mit einem Schwerpunkt auf Open Source und Decentralized Trust. Er ist Maintainer im Hiero-Projekt der Linux Foundation Decentralized Trust, wo er am Hiero Python SDK und an Community-Tooling arbeitet und neue Contributors beim Einstieg unterstützt. Außerdem ist er Maintainer von Record Store, dem selbst gehosteten, S3-kompatiblen Object-Storage-Service von Open Elements.",
     "picture": "/team/daniel.jpg",
     "role": "Software Engineer",
     "socials": [
