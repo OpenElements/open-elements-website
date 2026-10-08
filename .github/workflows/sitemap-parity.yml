@@ -12,16 +12,6 @@ name: Sitemap Parity
 # the merge.
 
 on:
-#   - pull_request  -> waits for the Netlify deploy-preview, then checks
-#   - push to main  -> waits for the Netlify production deploy, then checks
-#
-# In both cases the job blocks until Netlify posts a successful commit status
-# for the exact commit under test (Netlify integrates via the GitHub Commit
-# Status API, not the Deployments API), then runs the check against the URL
-# from that status. If any prod URL is unreachable on the new deploy, the
-# check fails and blocks the merge.
-
-on:
   pull_request:
     branches: ['main']
     
