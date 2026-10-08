@@ -69,7 +69,7 @@ Ein Sitz für die Wirtschaft ist allerdings nur so stark wie seine Legitimation.
 
 Kurz nach der Gründung gab es bereits den ersten großen Schritt: Am 1. Oktober hat der Rat der Stadt Dortmund die [Strategie zur Stärkung der digitalen Souveränität der Stadtverwaltung](https://www.dortmund.de/newsroom/nachrichten-dortmund.de/rat-bringt-zusaetzliche-schulplaetze-auf-den-weg.html) einstimmig beschlossen, die Katharina Flisikowski an diesem Abend vorgestellt hatte.
 
-Auch das Board selbst war in der Ratssitzung Thema: Die Linke hat sich dort sehr positiv zur Gründung des Open Source Boards geäußert.
+Auch das Board selbst war in der Ratssitzung Thema: Die Partie "Die Linke" hat sich dort sehr positiv zur Gründung des Open Source Boards geäußert.
 
 Die Strategie versteht sich ausdrücklich als Anfang und nicht als fertiges Werk. Sie soll innerhalb der Stadtverwaltung ein gemeinsames Verständnis schaffen, auf dem weitere Maßnahmen und Ideen aufbauen. Und sie ist ganz im Sinne von Open Source angelegt: Sie steht allen Akteurinnen und Akteuren des kommunalen Ökosystems zur Verfügung, um darüber zu diskutieren, Teile davon zu übernehmen oder sie gemeinsam weiterzuentwickeln. So wie der Impuls für die Strategie aus der Zivilgesellschaft kam, insbesondere von DO-FOSS, soll auch ihre Weiterentwicklung gemeinsam mit der Gesellschaft geschehen.
 
