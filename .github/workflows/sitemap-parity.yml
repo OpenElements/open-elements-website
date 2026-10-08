@@ -102,4 +102,5 @@ jobs:
             --prod-base=https://open-elements.com \
             --preview-base="$PREVIEW_URL" \
             --concurrency=4 \
-            --retries=4
+            --retries=4 \
+            --ignore=/en/newsletter

@@ -20,7 +20,8 @@
  *     --preview-base=https://42.open-elements.cloud \
  *     [--prod-base=https://open-elements.com] \
  *     [--concurrency=8] \
- *     [--timeout=15000]
+ *     [--timeout=15000] \
+ *     [--ignore=/en/some-path]   (repeatable; exact path, skipped in the check)
  *
  * Exits 0 if every prod URL is reachable on the preview, 1 otherwise.
  */
@@ -38,6 +39,7 @@ function parseArgs(argv) {
     concurrency: 4,
     timeoutMs: 15000,
     retries: 3,
+    ignore: new Set(),
   };
   for (const arg of argv.slice(2)) {
     if (arg.startsWith('--prod-base=')) {
@@ -50,6 +52,8 @@ function parseArgs(argv) {
       out.timeoutMs = Number(arg.slice('--timeout='.length));
     } else if (arg.startsWith('--retries=')) {
       out.retries = Number(arg.slice('--retries='.length));
+    } else if (arg.startsWith('--ignore=')) {
+      out.ignore.add(arg.slice('--ignore='.length));
     } else if (arg === '--help' || arg === '-h') {
       out.help = true;
     } else {
@@ -179,7 +183,7 @@ async function main() {
   const args = parseArgs(process.argv);
   if (args.help || !args.previewBase) {
     console.error(
-      'Usage: node scripts/check-sitemap-parity.mjs --preview-base=<url> [--prod-base=<url>] [--concurrency=N] [--timeout=ms]',
+      'Usage: node scripts/check-sitemap-parity.mjs --preview-base=<url> [--prod-base=<url>] [--concurrency=N] [--timeout=ms] [--ignore=<path>]...',
     );
     process.exit(args.help ? 0 : 2);
   }
@@ -219,10 +223,17 @@ async function main() {
     for (const p of missingFromPreviewSitemap) console.log(`  - ${p}`);
   }
 
-  console.log('');
-  console.log(`Checking reachability of ${prodPaths.size} paths on preview...`);
+  const ignored = [...prodPaths].filter(p => args.ignore.has(p)).sort();
+  if (ignored.length > 0) {
+    console.log('');
+    console.log(`Ignoring ${ignored.length} path(s) passed via --ignore:`);
+    for (const p of ignored) console.log(`  ~ ${p}`);
+  }
 
-  const pathList = [...prodPaths].sort();
+  const pathList = [...prodPaths].filter(p => !args.ignore.has(p)).sort();
+
+  console.log('');
+  console.log(`Checking reachability of ${pathList.length} paths on preview...`);
   const results = await runWithConcurrency(
     pathList,
     args.concurrency,
