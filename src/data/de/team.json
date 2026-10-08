@@ -33,7 +33,7 @@
     "link": "/employees/jessy",
     "bio": "Jessy interessiert sich für Web3-Technologien und Blockchain. Er arbeitet regelmäßig an Projekten der Eclipse Foundation und unterstützt somit die Open Source Gemeinschaft. Als engagierter Lerner freut er sich immer, sein Wissen zu teilen und zum Wachstum der breiteren Tech-Community beizutragen.",
     "picture": "/team/jessy.jpg",
-    "role": "Junior Software Engineer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "Twitter",
@@ -49,6 +49,11 @@
         "name": "GitHub",
         "link": "https://github.com/jexsie",
         "icon": "mdi:github"
+      },
+      {
+        "name": "Portifolio",
+        "link": "https://jexsie.com",
+        "icon": "mdi:web"
       }
     ],
     "visible": true
@@ -182,7 +187,7 @@
     "firstName": "Daniel",
     "lastName": "Ntege",
     "link": "/employees/daniel",
-    "bio": "Daniel ist ein leidenschaftlicher Softwareentwickler mit einem starken Interesse an Open-Source-Technologien. Er arbeitet gerne an Projekten, die Innovation und das Wachstum der Gemeinschaft fördern. Mit einem Hintergrund in Informatik widmet sich Daniel dem kontinuierlichen Lernen und dem Beitrag zum Technologie-Ökosystem.",
+    "bio": "Daniel ist Software Engineer bei Open Elements und arbeitet remote aus Uganda mit einem Schwerpunkt auf Open Source und Decentralized Trust. Er ist Maintainer im Hiero-Projekt der Linux Foundation Decentralized Trust, wo er am Hiero Python SDK und an Community-Tooling arbeitet und neue Contributors beim Einstieg unterstützt. Außerdem ist er Maintainer von Record Store, dem selbst gehosteten, S3-kompatiblen Object-Storage-Service von Open Elements.",
     "picture": "/team/daniel.jpg",
     "role": "Software Engineer",
     "socials": [
