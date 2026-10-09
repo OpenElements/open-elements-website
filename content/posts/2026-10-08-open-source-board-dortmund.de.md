@@ -11,11 +11,11 @@ preview_image: "/posts/preview-images/community-green.svg"
 
 {{< centered-image src="/posts/2026-10-08-open-source-board-dortmund/osbd-logo.svg" width="80%" alt="Logo des Open Source Boards Dortmund">}}
 
-Über digitale Souveränität wird viel in Brüssel und Berlin gesprochen. Im Juli haben wir deshalb geschrieben: [Genug geredet!](/posts/2026/07/06/genug-geredet-wie-digitale-souveränität-von-der-un-bis-dortmund-konkret-wird) Schon damals war Dortmund unser Beispiel dafür, wie digitale Souveränität konkret wird. Entschieden wird sie aber oft vor Ort: in der Stadtverwaltung, die ihre Software beschafft, im mittelständischen Unternehmen, das seine Abhängigkeiten kennen muss, an der Hochschule, die die nächsten Entwicklerinnen und Entwickler ausbildet. Genau hier setzt das neue Open Source Board Dortmund an.
+Über digitale Souveränität wird viel in Brüssel und Berlin gesprochen. Im Juli haben wir deshalb geschrieben: [Genug geredet!]({{< relref "posts/2026-07-06-oss-un-to-dortmund" >}}). Schon damals war Dortmund unser Beispiel dafür, wie digitale Souveränität konkret wird. Entschieden wird sie aber oft vor Ort: in der Stadtverwaltung, die ihre Software beschafft, im mittelständischen Unternehmen, das seine Abhängigkeiten kennen muss, an der Hochschule, die die nächsten Entwicklerinnen und Entwickler ausbildet. Genau hier setzt das neue Open Source Board Dortmund an.
 
 ## Die Gründung
 
-Gegründet wurden die Open Source Factory und das Open Source Board Dortmund im Rahmen der Digitalen Woche Dortmund im Projektspeicher. Die Initiative ist aus der Zusammenarbeit von [DO-FOSS](https://blog.do-foss.de), der Initiative für Freie und Offene Software für Dortmund, und dem [Fachkreis Digitale Souveränität](https://www.bvmw.de/de/ruhrgebiet/fachkreis-digitale-souveraenitaet) des Mittelstandsverbands BVMW entstanden.
+Gegründet wurden die Open Source Factory und das Open Source Board Dortmund im Rahmen der Digitalen Woche Dortmund im Projektspeicher. Die Initiative ist aus der Zusammenarbeit von [Do-FOSS](https://blog.do-foss.de), der Initiative für Freie und Offene Software für Dortmund, und dem [Fachkreis Digitale Souveränität](https://www.bvmw.de/de/ruhrgebiet/fachkreis-digitale-souveraenitaet) des Mittelstandsverbands BVMW entstanden.
 
 Den Auftakt machte Hendrik Ebbers mit seinem Vortrag „Auf Augenhöhe: Wie Open-Source-Stiftungen gemeinsame Entwicklung organisieren“. In Stiftungen wie der [Eclipse Foundation](https://www.eclipse.org/), der [Apache Software Foundation](https://www.apache.org/) oder der [Linux Foundation](https://www.linuxfoundation.org/) bestimmt kein einzelnes Unternehmen, was in die Software kommt. Stattdessen gilt eine offene Governance: Wer mitarbeitet, entscheidet mit, egal wie groß das Unternehmen oder das Budget ist. So sitzen Konzerne, mittelständische Unternehmen und öffentliche Verwaltung am selben Tisch.
 
@@ -23,11 +23,11 @@ Aus seiner Arbeit im Board of Directors der Eclipse Foundation und in Gremien de
 
 {{< youtube 5bTDHwfHZDo >}}
 
-Danach stellte Katharina Flisikowski, Koordinatorin für Digitale Souveränität und Open Source der Stadt Dortmund, die neue Open-Source-Strategie der Stadt vor: wie sie entstanden ist und welche Leitgedanken sie trägt.
+Danach stellte Katharina Flisikowski, Koordinatorin für Digitale Souveränität und Open Source der Stadt Dortmund, die [neue Open-Source-Strategie der Stadt](https://projekt.do-foss.de/api/v3/attachments/6331/content) vor: wie sie entstanden ist und welche Leitgedanken sie trägt.
 
 {{< centered-image src="/posts/2026-10-08-open-source-board-dortmund/strategie-vortrag.jpg" width="100%" showCaption=true alt="Katharina Flisikowski stellt die neue Open-Source-Strategie der Stadt Dortmund vor. Foto: Torsten Tullius">}}
 
-Auf dem Gründungspodium stellten die Vertreterinnen und Vertreter der beteiligten Bereiche die Idee vor und diskutierten, wie es weitergehen soll: [Hendrik Ebbers](https://www.linkedin.com/in/hendrik-ebbers) (Open Elements), [Till Schäfer](https://www.linkedin.com/in/till-dr-sch%C3%A4fer-a68091311/) (DO-FOSS), [Christopher Reinbothe](https://www.linkedin.com/in/christopher-reinbothe-993552113/) (Mausbrand Informationssysteme), [Katharina Flisikowski](https://www.linkedin.com/in/katharina-flisikowski/) (Koordinatorin für Digitale Souveränität und Open Source der Stadt Dortmund) und [Thorsten Hülsmann](https://www.linkedin.com/in/huelsmannt/) (Open Logistics Foundation). Moderiert hat [Kai Bünseler](https://www.linkedin.com/in/kai-buenseler/).
+Auf dem Gründungspodium stellten die Vertreterinnen und Vertreter der beteiligten Bereiche die Idee vor und diskutierten, wie es weitergehen soll: [Hendrik Ebbers](https://www.linkedin.com/in/hendrik-ebbers) (Open Elements), [Till Schäfer](https://www.linkedin.com/in/till-dr-sch%C3%A4fer-a68091311/) (Do-FOSS), [Christopher Reinbothe](https://www.linkedin.com/in/christopher-reinbothe-993552113/) (Mausbrand Informationssysteme), [Katharina Flisikowski](https://www.linkedin.com/in/katharina-flisikowski/) (Koordinatorin für Digitale Souveränität und Open Source der Stadt Dortmund) und [Thorsten Hülsmann](https://www.linkedin.com/in/huelsmannt/) (Open Logistics Foundation). Moderiert hat [Kai Bünseler](https://www.linkedin.com/in/kai-buenseler/).
 
 {{< centered-image src="/posts/2026-10-08-open-source-board-dortmund/board.jpg" width="100%" showCaption=true alt="Das Open Source Board Dortmund bei seiner Gründung auf der #diwodo. Foto: Torsten Tullius">}}
 
@@ -41,7 +41,7 @@ Dortmund ist beim Thema Open Source schon lange Vorreiterin. Die Stadt hat früh
 
 Das Board soll genau das sein: ein kooperatives Gremium, in dem Verwaltung, Forschung und Lehre, Wirtschaft und Zivilgesellschaft ihre Perspektiven zusammenbringen. Denn Open Source funktioniert nur, wenn Nutzerinnen und Nutzer, Entwicklerinnen und Entwickler und alle, die Software betreiben und pflegen, miteinander reden.
 
-Entsprechend hat das Board vier Gründungsmitglieder, eines für jeden Bereich: die Stadt Dortmund für die Verwaltung, die Open Logistics Foundation für Forschung und Lehre, DO-FOSS für die Zivilgesellschaft und den Fachkreis Digitale Souveränität des BVMW für die Wirtschaft.
+Entsprechend hat das Board vier Gründungsmitglieder, eines für jeden Bereich: die Stadt Dortmund für die Verwaltung, die Open Logistics Foundation für Forschung und Lehre, Do-FOSS für die Zivilgesellschaft und den Fachkreis Digitale Souveränität des BVMW für die Wirtschaft.
 
 ## Offen für alle: die Regeln des Boards
 
@@ -69,9 +69,9 @@ Ein Sitz für die Wirtschaft ist allerdings nur so stark wie seine Legitimation.
 
 Kurz nach der Gründung gab es bereits den ersten großen Schritt: Am 1. Oktober hat der Rat der Stadt Dortmund die [Strategie zur Stärkung der digitalen Souveränität der Stadtverwaltung](https://www.dortmund.de/newsroom/nachrichten-dortmund.de/rat-bringt-zusaetzliche-schulplaetze-auf-den-weg.html) einstimmig beschlossen, die Katharina Flisikowski an diesem Abend vorgestellt hatte.
 
-Auch das Board selbst war in der Ratssitzung Thema: Die Partie "Die Linke" hat sich dort sehr positiv zur Gründung des Open Source Boards geäußert.
+Auch das Board selbst war in der Ratssitzung Thema: Die Partei "Die Linke" hat sich dort sehr positiv zur Gründung des Open Source Boards geäußert.
 
-Die Strategie versteht sich ausdrücklich als Anfang und nicht als fertiges Werk. Sie soll innerhalb der Stadtverwaltung ein gemeinsames Verständnis schaffen, auf dem weitere Maßnahmen und Ideen aufbauen. Und sie ist ganz im Sinne von Open Source angelegt: Sie steht allen Akteurinnen und Akteuren des kommunalen Ökosystems zur Verfügung, um darüber zu diskutieren, Teile davon zu übernehmen oder sie gemeinsam weiterzuentwickeln. So wie der Impuls für die Strategie aus der Zivilgesellschaft kam, insbesondere von DO-FOSS, soll auch ihre Weiterentwicklung gemeinsam mit der Gesellschaft geschehen.
+Die Strategie versteht sich ausdrücklich als Anfang und nicht als fertiges Werk. Sie soll innerhalb der Stadtverwaltung ein gemeinsames Verständnis schaffen, auf dem weitere Maßnahmen und Ideen aufbauen. Und sie ist ganz im Sinne von Open Source angelegt: Sie steht allen Akteurinnen und Akteuren des kommunalen Ökosystems zur Verfügung, um darüber zu diskutieren, Teile davon zu übernehmen oder sie gemeinsam weiterzuentwickeln. So wie der Impuls für die Strategie aus der Zivilgesellschaft kam, insbesondere von Do-FOSS, soll auch ihre Weiterentwicklung gemeinsam mit der Gesellschaft geschehen.
 
 Katharina bringt es auf den Punkt: _„Digital souverän sind wir nur gemeinsam!“_
 
