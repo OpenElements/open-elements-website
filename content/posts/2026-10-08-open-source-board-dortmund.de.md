@@ -11,7 +11,7 @@ preview_image: "/posts/preview-images/community-green.svg"
 
 {{< centered-image src="/posts/2026-10-08-open-source-board-dortmund/osbd-logo.svg" width="80%" alt="Logo des Open Source Boards Dortmund">}}
 
-Über digitale Souveränität wird viel in Brüssel und Berlin gesprochen. Im Juli haben wir deshalb geschrieben: [Genug geredet!]({{< relref "posts/2026-07-06-oss-un-to-dortmund" >}}). Schon damals war Dortmund unser Beispiel dafür, wie digitale Souveränität konkret wird. Entschieden wird sie aber oft vor Ort: in der Stadtverwaltung, die ihre Software beschafft, im mittelständischen Unternehmen, das seine Abhängigkeiten kennen muss, an der Hochschule, die die nächsten Entwicklerinnen und Entwickler ausbildet. Genau hier setzt das neue Open Source Board Dortmund an.
+Über digitale Souveränität wird viel in Brüssel und Berlin gesprochen. Im Juli haben wir deshalb geschrieben: [Genug geredet!]({{< relref "de/posts/2026/07/06/genug-geredet-wie-digitale-souveränität-von-der-un-bis-dortmund-konkret-wird" >}}). Schon damals war Dortmund unser Beispiel dafür, wie digitale Souveränität konkret wird. Entschieden wird sie aber oft vor Ort: in der Stadtverwaltung, die ihre Software beschafft, im mittelständischen Unternehmen, das seine Abhängigkeiten kennen muss, an der Hochschule, die die nächsten Entwicklerinnen und Entwickler ausbildet. Genau hier setzt das neue Open Source Board Dortmund an.
 
 ## Die Gründung
 
