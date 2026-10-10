@@ -42,6 +42,13 @@
     "visible": true
   },
   {
+    "title": "AsyncAPI Initiative",
+    "text": "Die <a class=\"link-purple\" href=\"https://www.asyncapi.com\" target=\"_blank\">AsyncAPI Initiative</a> ist die Heimat des offenen Standards zur Definition asynchroner, event-getriebener APIs. Die Open-Elements-Teammitglieder <a class=\"link-purple\" href=\"/employees/maya\">Aishat Muibudeen</a> und <a class=\"link-purple\" href=\"/employees/azeez\">Azeez Elegbede</a> sind Mitglieder des Technical Steering Committee (TSC) und des Code-of-Conduct-Komitees (CoCC) des Projekts; Aishat ist zudem Mitglied des Governance Boards der Initiative.",
+    "logo": "/illustrations/logo-asyncapi.svg",
+    "link": "https://www.asyncapi.com",
+    "visible": true
+  },
+  {
     "title": "OSPO Alliance",
     "text": "Open Source ist in den meisten IT-Abteilungen zu einem elementaren Bestandteil geworden und die Einrichtung eines Open Source Program Office (OSPO) ist heute für Unternehmen ein wichtiger Schritt. In der <a class=\"link-purple\" href=\"https://ospo.zone\" target=\"_blank\">OSPO Alliance</a> nutzt Open Elements den Wissensaustausch, um Best Practices und Strukturen für die Einrichtung von Open Source Program Offices zu definieren.",
     "logo": "/illustrations/logo-ospo.svg",
@@ -105,10 +112,31 @@
     "visible": true
   },
   {
+    "title": "Open Source Business Alliance",
+    "text": "Die <a class=\"link-purple\" href=\"https://osb-alliance.de\", target=\"_blank\">Open Source Business Alliance (OSBA)</a> ist der Bundesverband für digitale Souveränität und der größte Open-Source-Verband Europas. Sie setzt sich für Open Source Software und offene Standards als Grundlage digitaler Souveränität ein und will Open Source als Standard in der öffentlichen Beschaffung verankern. Als Mitglied bringt Open Elements seine Expertise in der Pflege des Java-Ökosystems, in der Supply-Chain-Security und zum Cyber Resilience Act in die Verbandsarbeit ein.",
+    "logo": "/illustrations/logos/osba.svg",
+    "link": "https://osb-alliance.de",
+    "visible": true
+  },
+  {
+    "title": "Sovereign AI Foundation",
+    "text": "Die <a class=\"link-purple\" href=\"https://aieclipse.org/sovereign-ai-foundation/\", target=\"_blank\">Sovereign AI Foundation (SAIF)</a> ist eine Industrie-Kollaboration der Eclipse Foundation und bietet ein herstellerneutrales Forum für Open-Source-KI. Ihre Mitgliedsorganisationen tauschen Erfahrungen und Use Cases aus, bewerten Technologien und Trends und erarbeiten praktische Hilfsmittel. Diese verschaffen ihnen mehr Transparenz und Kontrolle über die KI-Technologien, von denen sie abhängen. Open Elements ist Gründungsmitglied der SAIF.",
+    "logo": "/illustrations/logos/sovereign-ai-foundation.jpg",
+    "link": "https://aieclipse.org/sovereign-ai-foundation/",
+    "visible": true
+  },
+  {
     "title": "Der Mittelstand",
     "text": "Open Elements ist Mitglied im <a class=\"link-purple\" href=\"https://www.bvmw.de\" target=\"_blank\">BVMW – Bundesverband mittelständische Wirtschaft e.V.</a> und Gründungsmitglied des <a class=\"link-purple\" href=\"https://www.bvmw.de/de/ruhrgebiet-ost-und-mitte/fachkreis-digitale-souveraenitaet\" target=\"_blank\">Fachkreises 'Digitale Souveränität'</a> und unterstützt sowohl Kommunen als auch KMUs bei der Nutzung von Open Source Software (OSS).",
     "logo": "/illustrations/logos/bvmw-logo.svg",
-    "link": "https://www.ijug.eu/de/home/",
+    "link": "https://www.bvmw.de",
+    "visible": true
+  },
+  {
+    "title": "Open Source Board Dortmund",
+    "text": "Das Open Source Board Dortmund wurde am 18. September 2026 auf der #diwodo gegründet, auf Initiative von Do-FOSS und dem BVMW-Fachkreis Digitale Souveränität. Es begleitet den Weg der Stadt Dortmund hin zu Open Source und digitaler Souveränität und bringt dafür unterschiedliche Perspektiven an einen Tisch. <a class=\"link-purple\" href=\"https://open-elements.com/about-hendrik\">Hendrik Ebbers</a> vertritt im Board die Wirtschaft.",
+    "logo": "/illustrations/logos/osbd.svg",
+    "link": "",
     "visible": true
   }
 ]

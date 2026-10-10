@@ -33,7 +33,7 @@
     "link": "/employees/jessy",
     "bio": "Jessy interessiert sich für Web3-Technologien und Blockchain. Er arbeitet regelmäßig an Projekten der Eclipse Foundation und unterstützt somit die Open Source Gemeinschaft. Als engagierter Lerner freut er sich immer, sein Wissen zu teilen und zum Wachstum der breiteren Tech-Community beizutragen.",
     "picture": "/team/jessy.jpg",
-    "role": "Junior Software Engineer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "Twitter",
@@ -49,6 +49,11 @@
         "name": "GitHub",
         "link": "https://github.com/jexsie",
         "icon": "mdi:github"
+      },
+      {
+        "name": "Portifolio",
+        "link": "https://jexsie.com",
+        "icon": "mdi:web"
       }
     ],
     "visible": true
@@ -77,7 +82,7 @@
     "link": "/employees/noah",
     "bio": "Noah lernt am liebsten durch Ausprobieren und teilt sein Wissen gerne weiter. Seine Neugier führte ihn in die Welt des Open Source, wo er zu Projekten wie Jakarta EE, Eclipse Adoptium, Apache Maven und Hiero beiträgt. Bei Open Elements bringt er einen überlegten, gemeinschaftsorientierten Ansatz für die Softwareentwicklung mit.",
     "picture": "/team/noah.jpg",
-    "role": "Junior Developer",
+    "role": "Software Engineer",
     "socials": [
       {
         "name": "LinkedIn",
@@ -160,7 +165,7 @@
     "firstName": "Sebastian",
     "lastName": "Tiemann",
     "link": "/employees/sebastian",
-    "bio": "Sebastian ist ein erfahrener IT-Profi mit mehr als 15 Jahren Erfahrung in den Bereichen Entwicklung, Beratung und Community-Arbeit. Als Contributor der Apache Foundation und Organisator der Java Group Dortmund ist Sebastian ein engagierter Verfechter von Technologie, Lernen und Zusammenarbeit.",
+    "bio": "Sebastian ist ein erfahrener IT-Profi mit mehr als 15 Jahren Erfahrung in den Bereichen Entwicklung, Beratung und Community-Arbeit. Als aktives Mitglied der ORCWG, Contributor der Apache Foundation und Organisator der Java Group Dortmund ist Sebastian ein engagierter Verfechter von Technologie, Lernen und Zusammenarbeit.",
     "picture": "/team/sebastian.jpg",
     "role": "Senior Software Engineer",
     "socials": [
@@ -182,7 +187,7 @@
     "firstName": "Daniel",
     "lastName": "Ntege",
     "link": "/employees/daniel",
-    "bio": "Daniel ist ein leidenschaftlicher Softwareentwickler mit einem starken Interesse an Open-Source-Technologien. Er arbeitet gerne an Projekten, die Innovation und das Wachstum der Gemeinschaft fördern. Mit einem Hintergrund in Informatik widmet sich Daniel dem kontinuierlichen Lernen und dem Beitrag zum Technologie-Ökosystem.",
+    "bio": "Daniel ist Software Engineer bei Open Elements und arbeitet remote aus Uganda mit einem Schwerpunkt auf Open Source und Decentralized Trust. Er ist Maintainer im Hiero-Projekt der Linux Foundation Decentralized Trust, wo er am Hiero Python SDK und an Community-Tooling arbeitet und neue Contributors beim Einstieg unterstützt. Außerdem ist er Maintainer von Record Store, dem selbst gehosteten, S3-kompatiblen Object-Storage-Service von Open Elements.",
     "picture": "/team/daniel.jpg",
     "role": "Software Engineer",
     "socials": [
@@ -290,6 +295,60 @@
         "name": "LinkedIn",
         "link": "https://www.linkedin.com/in/grobmeier",
         "icon": "mdi:linkedin"
+      }
+    ],
+    "visible": true
+  },
+  {
+    "id": "maya",
+    "firstName": "Aishat",
+    "lastName": "Muibudeen",
+    "link": "/employees/maya",
+    "bio": "Maya ist Technical Product Designerin und sorgt mit Leidenschaft dafür, dass sich Entwickler-Tools weniger kompliziert anfühlen. Gewachsen ist sie in der Open-Source-Welt: Sie ist Mitglied des Governance Boards und des Code of Conduct Committees der AsyncAPI Initiative – nach fünf Jahren im Projekt, in denen sie von Contributor zu Design Lead gewachsen ist und Design-Systeme gebaut hat, die Contributors weltweit nutzen. Community, gutes Design und Sorgfalt im Detail liegen ihr besonders am Herzen. Genau das bringt sie bei Open Elements ein.",
+    "picture": "/team/maya.jpg",
+    "role": "Technical Product Designer",
+    "socials": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/Mayaleeeee",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/aishatmuibudeen/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "Medium",
+        "link": "https://medium.com/@muibudeenaishat",
+        "icon": "mdi:medium"
+      }
+    ],
+    "visible": true
+  },
+  {
+    "id": "azeez",
+    "firstName": "Azeez",
+    "lastName": "Elegbede",
+    "link": "/employees/azeez",
+    "bio": "Azeez ist Developer Advocate und Software Engineer mit einem Faible für Handwerk. Er erstellt mit Leidenschaft digitale Inhalte und schreibt gelegentlich auch darüber. Seine Open-Source-Arbeit verbindet Community, Bildung und Mentoring: Er ist Mitglied des Technical Steering Committee (TSC) und des Code of Conduct Committee von AsyncAPI und erstellt zusätzlich Lerninhalte, um die Beteiligung an den Projekten zu fördern und neuen Contributors den Einstieg erleichtern. Ihm liegt daran, Wissen zugänglich zu machen und Contributors auf ihrem Weg zu langfristigen Maintainern zu begleiten. Diesen Geist bringt er bei Open Elements ein.",
+    "picture": "/team/azeez.png",
+    "role": "Developer Relations Engineer",
+    "socials": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/acethecreator",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/aelegbede/",
+        "icon": "mdi:linkedin"
+      },
+      {
+        "name": "Website",
+        "link": "https://aelegbede.com",
+        "icon": "mdi:web"
       }
     ],
     "visible": true

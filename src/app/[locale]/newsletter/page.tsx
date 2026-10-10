@@ -1,4 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import NewsletterForm from '@/components/newsletter/NewsletterForm';
@@ -9,28 +12,85 @@ interface NewsletterPageProps {
   }>;
 }
 
+interface NewsletterContent {
+  title: string;
+  description?: string;
+  headline: string;
+  headlineHighlight?: string;
+  intro?: string;
+  cta?: string;
+  ctaHighlight?: string;
+}
+
+function optionalString(value: unknown): string | undefined {
+  return typeof value === 'string' ? value : undefined;
+}
+
+function loadNewsletterContent(locale: string): NewsletterContent | null {
+  const filename = locale === 'de' ? 'index.de.md' : 'index.md';
+  const filePath = path.join(process.cwd(), 'content', 'newsletter', filename);
+
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+
+  const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+  const title = optionalString(data.title) ?? 'Newsletter';
+
+  return {
+    title,
+    description: optionalString(data.description),
+    headline: optionalString(data.headline) ?? title,
+    headlineHighlight: optionalString(data.headline_highlight),
+    intro: optionalString(data.intro),
+    cta: optionalString(data.cta),
+    ctaHighlight: optionalString(data.cta_highlight),
+  };
+}
+
+// Wraps the first occurrence of `highlight` in `text` using `wrap`.
+function renderHighlighted(
+  text: string,
+  highlight: string | undefined,
+  wrap: (highlight: string) => React.ReactNode,
+) {
+  const index = highlight ? text.indexOf(highlight) : -1;
+
+  if (!highlight || index === -1) {
+    return text;
+  }
+
+  return (
+    <>
+      {text.slice(0, index)}
+      {wrap(highlight)}
+      {text.slice(index + highlight.length)}
+    </>
+  );
+}
+
 export async function generateMetadata({
   params,
 }: NewsletterPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const page = loadNewsletterContent(locale);
 
-  if (locale !== 'de') {
+  if (!page) {
     return {
-      title: 'Page Not Available - Open Elements',
-      description: 'This page is not available in this language',
+      title: 'Page Not Found',
     };
   }
 
-  const title = 'Newsletter - Open Elements';
-  const description =
-    'Melde dich zu unserem Newsletter an, um auf dem Laufenden zu bleiben.';
+  const title = `${page.title} - Open Elements`;
+  const description = page.description;
+  const localePrefix = locale === 'de' ? '/de' : '';
 
   return {
     title,
     description,
     openGraph: {
       type: 'website',
-      url: 'https://open-elements.com/de/newsletter',
+      url: `https://open-elements.com${localePrefix}/newsletter`,
       title,
       description,
       siteName: 'Open Elements',
@@ -42,15 +102,16 @@ export async function generateMetadata({
           alt: 'OpenElements Logo',
         },
       ],
-      locale: 'de_DE',
+      locale: locale === 'de' ? 'de_DE' : 'en_US',
     },
   };
 }
 
 export default async function NewsletterPage({ params }: NewsletterPageProps) {
   const { locale } = await params;
+  const page = loadNewsletterContent(locale);
 
-  if (locale !== 'de') {
+  if (!page) {
     notFound();
   }
 
@@ -65,18 +126,15 @@ export default async function NewsletterPage({ params }: NewsletterPageProps) {
         <div className="flex items-center justify-center pt-16 pb-4 sm:pt-36 sm:pb-12">
           <div className="relative flex flex-col items-center justify-center w-full">
             <h1 className="text-center h1">
-              Join our <span className="text-green">Newsletter</span>
+              {renderHighlighted(page.headline, page.headlineHighlight, h => (
+                <span className="text-green">{h}</span>
+              ))}
             </h1>
             <p className="max-w-3xl mx-auto text-center text-base">
-              You want to better understand digital sovereignty and learn why
-              topics like open-source software play such an important role?
-              <br />
-              Then subscribe to our newsletter! As a thank-you,{' '}
-              <b>
-                you’ll receive our whitepaper on modern open-source development
-                for free,
-              </b>{' '}
-              delivered straight to your inbox.
+              {page.intro}
+              {page.intro && page.cta && <br />}
+              {page.cta &&
+                renderHighlighted(page.cta, page.ctaHighlight, h => <b>{h}</b>)}
             </p>
             <img
               src="/illustrations/line-p.svg"

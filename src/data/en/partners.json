@@ -15,7 +15,7 @@
   },
   {
     "title": "Sovereign Tech Agency",
-    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> supports the development, improvement, and maintenance of open digital infrastructure. Its goal is to sustainably strengthen the open source ecosystem, focusing on security, resilience, technological diversity, and the people behind the code. The Sovereign Tech Agency invests in the Apache Maven™ Open Source project by providing financial support to <b>Open Elements</b> as a contributor of the project.",
+    "text": "The <a class=\"link-purple\" href=\"https://www.sovereign.tech\" target=\"_blank\">Sovereign Tech Agency</a> strengthens the open source ecosystem with a focus on security, resilience, technological diversity and the people behind the code. <b>Open Elements</b> works with the agency in two ways. Through the Sovereign Tech Fund, the agency funds our contributions to Apache Maven™. And as an industry partner in the Sovereign Tech Resilience program, we help critical open source projects reduce technical debt and become more secure and easier to maintain in the long run.",
     "logo": "/illustrations/logos/sta-logo.svg",
     "link": "https://www.sovereign.tech",
     "visible": true
@@ -38,7 +38,7 @@
     "title": "Hashgraph",
     "text": "<a class=\"link-purple\" href=\"https://www.hashgraph.com\" target=\"_blank\">Hashgraph</a> is a company that provides development and support for the <b>Hedera Hashgraph</b> and builds open-source components that enable faster deployment of industry solutions. <b>Open Elements</b> helps Hashgraph to build the platform of the Hedera Hashgraph. <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is the director of Open Source at Hashgraph.",
     "logo": "/illustrations/logo-hashgraph.svg",
-    "link": "https://swirldslabs.com",
+    "link": "https://www.hashgraph.com",
     "visible": true
   },
   {
