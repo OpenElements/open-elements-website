@@ -2,7 +2,7 @@
   {
     "month": "SEPTEMBER",
     "year": 2026,
-    "excerpt": "Community-Calls und Office Hours wurden für die Python SDK- und Hiero-Community fortgesetzt, mit HIP-Implementierungen im Python SDK, NFT-Client-APIs in Enterprise Java und Website-Arbeiten einschließlich des Issue Explorer.",
+    "excerpt": "Community‑Calls und Office‑Hours für die Python‑SDK‑ und Hiero‑Community wurden fortgesetzt, mit HIP‑Implementierungen im Python SDK, NFT‑Client‑APIs in Enterprise Java und Website‑Arbeiten einschließlich des Issue Explorer.",
     "categories": [
       {
         "title": "Community",
@@ -18,12 +18,12 @@
             "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
           },
           {
-            "text": "Hiero Community Management Calls, die die Website, SDKs, HIPs, Automatisierung und TCK abdeckten, geleitet.",
+            "text": "Hiero Community Management Calls zur Website, zu SDKs, HIPs, Automatisierung und TCK geleitet.",
             "type": "COMMUNITY",
             "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
           },
           {
-            "text": "Links of the Week-Beiträge im Hiero-Blog veröffentlicht.",
+            "text": "Links of the Week‑Beiträge im Hiero‑Blog veröffentlicht.",
             "type": "DOCUMENTATION",
             "link": "https://github.com/hiero-ledger/hiero-website/pull/632"
           },
@@ -271,6 +271,16 @@
             "text": "Gesamt-Pipeline-Zeit reduziert, indem redundante Netzwerk-Setups gekürzt wurden.",
             "type": "IMPROVEMENT",
             "link": "https://github.com/hiero-hackers/hiero-enterprise-js/issues/103"
+          },
+          {
+            "text": "pnpm/action-setup von 6.0.10 auf 6.1.0 aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/222"
+          },
+          {
+            "text": "codeql-action-Gruppe aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/225"
           }
         ]
       }

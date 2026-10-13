@@ -271,6 +271,16 @@
             "type": "IMPROVEMENT",
             "text": "Reduce Total Pipeline Time by Trimming Redundant Network Setup",
             "link": "https://github.com/hiero-hackers/hiero-enterprise-js/issues/103"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Update pnpm/action-setup from 6.0.10 to 6.1.0",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/222"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Update codeql-action group",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/225"
           }
         ]
       }
