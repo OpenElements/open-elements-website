@@ -1,5 +1,56 @@
 [
   {
+    "month": "SEPTEMBER",
+    "year": 2026,
+    "excerpt": "Supply-Chain-Arbeit an PR-Verifizierungs-Workflows und an der Konfiguration von Apache Trusted Releases (ATR) gestartet und dem Release von Maven Surefire 3.6.0 mit Fehlerbehebungen für Maven 4‑Integrationstests und die Lebenszyklusausführung nachgegangen.",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "GitHub-Workflow für PR-Verifizierungen erstellen, z. B. erforderliche Lizenzen.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/257#issuecomment-5969227974"
+          },
+          {
+            "text": "Konfiguration für ATR (Apache trust release) vorbereiten.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/256#issuecomment-5969391216"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Dem Release von Maven Surefire 3.6.0 (nur JUnit‑Platform) gefolgt, um verwandte Probleme zu beheben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246#issuecomment-5964175256"
+          },
+          {
+            "text": "Maven‑4‑bezogene IT‑Probleme in Maven Surefire behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/253"
+          },
+          {
+            "text": "Ausführung optimiert, wenn Phasen desselben Lebenszyklus aufgerufen werden.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/252"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/sparsick",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/slawekjaranowski",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
+  },
+  {
     "month": "AUGUST",
     "year": 2026,
     "excerpt": "Fortgesetzte Modernisierungs‑ und Wartungsarbeiten, einschließlich der Fertigstellung der JUnit3‑zu‑JUnit5‑Testmigration, und Fortschritte bei der Projektdokumentation.",
