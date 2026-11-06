@@ -1,5 +1,102 @@
 [
   {
+    "month": "OCTOBER",
+    "year": 2026,
+    "excerpt": "Erweiterte Apache Trusted Releases (ATR)-Einführung für Maven-Projekte und das atr-maven-Plugin, SBOM Reporting mit Dependency-Track-Integration gestartet und Maven Surefire 3.6.1 veröffentlicht sowie Integration‑Test‑Fehlerbehebungen für Maven 3.10.0 und Maven 4 bereitgestellt.",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "text": "GH-Workflow für PR‑Verifizierungen erstellen, z. B. erforderliche Lizenzen, pull_request_target zu workflow_run migrieren.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/257#issuecomment-6346743155"
+          },
+          {
+            "text": "Konfiguration für ATR in Maven-Projekten vorbereiten.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/256#issuecomment-6586654726"
+          },
+          {
+            "text": "Maven-Projektkonfiguration in ATR bereinigt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/256#issuecomment-6586920109"
+          },
+          {
+            "text": "atr-maven-plugin für automatische Releases vorbereiten.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/259#issuecomment-6586791739"
+          },
+          {
+            "text": "SBOM Reporting-Landing‑Page erstellen.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/sbom-reporting/pull/23"
+          },
+          {
+            "text": "SBOM Reporting mit Dependency-Track für Live‑Projekt‑ und Artefaktdaten verbinden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/sbom-reporting/pull/29"
+          },
+          {
+            "text": "Kompakte SBOM-Erklärungsseite hinzufügen.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/sbom-reporting/pull/27"
+          },
+          {
+            "text": "Landing‑Page für das SBOM Reporting‑Frontend entwerfen, einschließlich Navigation, Projektübersicht und Suche.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/sbom-reporting/issues/3"
+          },
+          {
+            "text": "Projekt‑Detailseite entwerfen, die alle Artefakte pro Projekt mit Versionsauswahl, Verwundbarkeitszahlen und Lizenzen anzeigt, einschließlich alternativer Layout‑Erkundungen nach Team‑Review.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/sbom-reporting/issues/4"
+          },
+          {
+            "text": "Artefakt‑Detailseite entwerfen, die versionsabhängige Inhalte, Lizenzen, SBOM‑Download, Abhängigkeiten und die Darstellung bekannter Verwundbarkeiten abdeckt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/support-and-care/sbom-reporting/issues/5"
+          }
+        ]
+      },
+      {
+        "title": "Wartung",
+        "items": [
+          {
+            "text": "Maven Surefire 3.6.1 (nur JUnit‑Plattform) veröffentlicht, um verwandte Probleme zu beheben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246#issuecomment-6551558117"
+          },
+          {
+            "text": "Maven‑4-bezogene IT‑Probleme in Maven Surefire behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/253"
+          },
+          {
+            "text": "ITs für Maven 3.10.0 in Surefire 3.6.x und 3.5.x behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246#issuecomment-6551558117"
+          },
+          {
+            "text": "Ausführung optimiert, wenn Phasen desselben Lebenszyklus aufgerufen werden.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/252"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/sparsick",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/slawekjaranowski",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy",
+        "https://github.com/Mayaleeeee"
+      ]
+    }
+  },
+  {
     "month": "AUGUST",
     "year": 2026,
     "excerpt": "Fortgesetzte Modernisierungs‑ und Wartungsarbeiten, einschließlich der Fertigstellung der JUnit3‑zu‑JUnit5‑Testmigration, und Fortschritte bei der Projektdokumentation.",
