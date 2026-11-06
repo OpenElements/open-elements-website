@@ -1,5 +1,56 @@
 [
   {
+    "month": "SEPTEMBER",
+    "year": 2026,
+    "excerpt": "Started supply-chain work on PR verification workflows and Apache Trusted Releases (ATR) configuration, and followed up on the Maven Surefire 3.6.0 release with fixes for Maven 4 integration tests and lifecycle execution.",
+    "categories": [
+      {
+        "title": "Security of the Supply Chain",
+        "items": [
+          {
+            "type": "IMPROVEMENT",
+            "text": "Create GH workflow for PR verifications, like required licenses",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/257#issuecomment-5969227974"
+          },
+          {
+            "type": "IMPROVEMENT",
+            "text": "Prepare configuration for ATR (Apache trust release)",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/256#issuecomment-5969391216"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance",
+        "items": [
+          {
+            "type": "MAINTENANCE",
+            "text": "Follow of release of Maven Surefire 3.6.0 (using Junit platform only) to fix related issues",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/246#issuecomment-5964175256"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Fix Maven 4 related IT issues in Maven Surefire",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/253"
+          },
+          {
+            "type": "MAINTENANCE",
+            "text": "Optimize execution when phases of same lifecycle are called",
+            "link": "https://github.com/support-and-care/maven-support-and-care/issues/252"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/sparsick",
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/slawekjaranowski",
+        "https://github.com/sebtiem",
+        "https://github.com/olamy"
+      ]
+    }
+  },
+  {
     "month": "AUGUST",
     "year": 2026,
     "excerpt": "Continued modernization and maintenance work, including completing the JUnit3 to JUnit5 test migration, while also making progress on project documentation.",
