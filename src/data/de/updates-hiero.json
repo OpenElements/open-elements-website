@@ -1,5 +1,573 @@
 [
   {
+    "month": "OCTOBER",
+    "year": 2026,
+    "excerpt": "Community-Calls und Office Hours wurden für das Python SDK und die Hiero-Community fortgesetzt, mit HIP-Implementierungen im Python SDK, NFT-Client-APIs in Enterprise Java, Mirror Node, Hooks und Atomic-Batch-Unterstützung in Enterprise JavaScript sowie Website-Arbeiten einschließlich des Issue Explorer.",
+    "categories": [
+      {
+        "title": "Community",
+        "items": [
+          {
+            "text": "Beitrags- und Abhängigkeits-PRs im Python SDK und Hiero Enterprise Java geprüft und zusammengeführt.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/pulls/search?q=is%3Apr+reviewed-by%3Amanishdait+%28repo%3Ahiero-ledger%2Fhiero-sdk-python+OR+repo%3Ahiero-ledger%2Fhiero-enterprise-java%29+merged%3A2026-10-01..2026-10-31+sort%3Aupdated-desc"
+          },
+          {
+            "text": "Beitragende- und Abhängigkeits-PRs über Hiero Enterprise Java, Hiero Solo Action und das Java SDK geprüft und zusammengeführt.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/pulls?q=is%3Apr+reviewed-by%3ANdacyayisenga-droid+org%3Ahiero-ledger+merged%3A2026-10-01..2026-10-31"
+          },
+          {
+            "text": "Wurde Maintainer von Hiero Solo Action.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/pull/163"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Java",
+        "items": [
+          {
+            "text": "EventLog für ContractEventListener-Funktionalität hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/415"
+          },
+          {
+            "text": "EventParam für ContractEventListener-Funktionalität hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/405"
+          },
+          {
+            "text": "Projektversion auf nächsten Release-Snapshot erhöht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/378"
+          },
+          {
+            "text": "NftClient um rejectNft- und rejectNfts-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/368"
+          },
+          {
+            "text": "NftClient um approveNftAllowance- und approveNftAllowances-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/380"
+          },
+          {
+            "text": "NftClient um transferApprovedNft- und transferApprovedNfts-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/386"
+          },
+          {
+            "text": "NftClient um updateNftFeeSchedule-Operation erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/394"
+          },
+          {
+            "text": "hiero-solo-action auf v0.26.0 erhöht und den Java-REST-Endpunkt für Netzwerk‑Node‑Abfragen behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/395"
+          },
+          {
+            "text": "Hiero Enterprise Java v0.22.0 veröffentlicht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/releases/tag/v0.22.0"
+          },
+          {
+            "text": "Nächste Entwicklungsiteration mit 0.23.0-SNAPSHOT-Versionen vorbereitet.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/400"
+          },
+          {
+            "text": "TopicClient wird um Auto‑Renew, Expiration, Immutable‑Topic und Clear-Operationen erweitert (in Arbeit).",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/407"
+          },
+          {
+            "text": "hiero-solo-action refaktoriert, indem die Aktionslogik in Skripte verschoben, ShellCheck-Linting hinzugefügt und Solo-Versionen unter 0.44.0 entfernt wurden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/pull/157"
+          },
+          {
+            "text": "Hiero Solo Action v0.26.0 veröffentlicht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/releases/tag/v0.26.0"
+          }
+        ]
+      },
+      {
+        "title": "Hiero-Website",
+        "items": [
+          {
+            "text": "Blog‑Posts für den Monat Oktober erstellt.",
+            "type": "FEATURE",
+            "link": "https://hiero.org/blog/hiero-links-of-october-twentysixth"
+          },
+          {
+            "text": "Neuen Abschnitt für Event‑Showcase hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://hiero.org"
+          }
+        ]
+      },
+      {
+        "title": "Python-SDK",
+        "items": [
+          {
+            "text": "Kostenabschätzung für Abfragen mittels get_cost ohne Operator ermöglicht.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2703"
+          },
+          {
+            "text": "werkzeug in uv.lock auf 3.1.9 erhöht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2707"
+          },
+          {
+            "text": "AddressBookQuery-Unterstützung hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2714"
+          },
+          {
+            "text": "createNode- und deleteNode-Methoden zum TCK‑Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2722"
+          },
+          {
+            "text": "Python‑3.10‑Support entfernt und Abhängigkeits‑Constraints aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2750"
+          },
+          {
+            "text": "getAddressBook-Methode zum TCK‑Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2751"
+          },
+          {
+            "text": "MirrorNodeTokenBalance‑Abfrageunterstützung hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2733"
+          }
+        ]
+      },
+      {
+        "title": "Java-SDK",
+        "items": [
+          {
+            "text": "ContractFunctionResult‑Konstruktions‑Hack bereinigt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/3032"
+          },
+          {
+            "text": "MirrorNode‑Abfragen refaktoriert, um den MirrorNodeHttpClient zu verwenden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/3004"
+          },
+          {
+            "text": "MirrorNodeContractQueries‑execute‑Methode überladen, um expliziten Timeout zu handhaben.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/3027"
+          },
+          {
+            "text": "JSR-305 durch JSpecify für Nullbarkeits‑Annotationen ersetzt.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2938"
+          }
+        ]
+      },
+      {
+        "title": "Go SDK",
+        "items": [
+          {
+            "text": "getAccountInfo‑Methode zum TCK‑Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-go/pull/1853"
+          },
+          {
+            "text": "deleteSchedule‑Methode zum TCK‑Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-go/pull/1855"
+          },
+          {
+            "text": "getScheduleInfo‑Methode zum TCK‑Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-go/pull/1857"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript-SDK",
+        "items": [
+          {
+            "text": "custom-grpc-web-proxies-network‑Beispiel von Create React App zu Vite migriert.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4462"
+          },
+          {
+            "text": "Unbenutzte Abhängigkeiten entfernt.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4514"
+          },
+          {
+            "text": "Letzten Fehler bei Request‑Timeout sichtbar gemacht und HIP-1300‑Tests schnell fehlschlagen lassen.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4536"
+          },
+          {
+            "text": "Standard‑Block‑Node‑Chart in solo-setup auf eines festgelegt, das Consensus‑Node v0.73.0 unterstützt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4548"
+          },
+          {
+            "text": "Mock‑gRPC‑Server in Unit‑Tests an vom OS zugewiesene Ports gebunden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4558"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise JavaScript",
+        "items": [
+          {
+            "text": "Account‑Records‑Abfrage hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/364"
+          },
+          {
+            "text": "PRNG‑Operation hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/365"
+          },
+          {
+            "text": "Address‑Book‑Abfrage hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/366"
+          },
+          {
+            "text": "Ethereum‑Transaktions‑Operation hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/367"
+          },
+          {
+            "text": "Contract‑Calls simuliert und Gas auf dem Mirror‑Node geschätzt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/395"
+          },
+          {
+            "text": "Gebühr einer Transaktion auf dem Mirror‑Node geschätzt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/396"
+          },
+          {
+            "text": "Hooks auf Accounts und Contracts erstellt und gelöscht.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/397"
+          },
+          {
+            "text": "Hook‑Storage‑Update‑Operation hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/398"
+          },
+          {
+            "text": "Atomare Batches von SDK‑Transaktionen eingereicht.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/399"
+          },
+          {
+            "text": "SDK als Peer‑Dependency festgelegt und das Re‑Exportieren eingestellt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/407"
+          },
+          {
+            "text": "SDK‑Tuning‑Variablen aus der Umgebung gelesen.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/307"
+          },
+          {
+            "text": "grpcDeadlineMs auf den SDK‑Client angewendet.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/272"
+          },
+          {
+            "text": "Validierungsfehler mit dediziertem INPUT_INVALID‑Code gemeldet.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/291"
+          },
+          {
+            "text": "Jede Mirror‑Node‑Zeile für eine Transaktions‑ID zurückgegeben.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/326"
+          },
+          {
+            "text": "Diagnose des Mirror‑Node‑Error‑Body auf MirrorError.detail übertragen.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/325"
+          },
+          {
+            "text": "Mirror‑Node‑Base‑URL, die bereits auf /api/v1 endet, abgelehnt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/346"
+          },
+          {
+            "text": "SDK‑Format‑Transaktions‑IDs in Mirror‑Node‑Lookups akzeptiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/348"
+          },
+          {
+            "text": "Operator‑Private‑Key aus HieroContext‑Konfiguration und -Inspektion herausgehalten.",
+            "type": "SECURITY",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/286"
+          },
+          {
+            "text": "@grpc/grpc-js auf eine gepatchte Version überschrieben.",
+            "type": "SECURITY",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/303"
+          },
+          {
+            "text": "fast-uri auf gepatchte Versionen erhöht.",
+            "type": "SECURITY",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/351"
+          },
+          {
+            "text": "Transaction‑Listener‑Fehler daran gehindert, Ergebnisse zu ändern.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/269"
+          },
+          {
+            "text": "Operator‑Credentials vor Erstellung des SDK‑Clients geparst.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/271"
+          },
+          {
+            "text": "Non‑Error‑Ursachen auf HieroError beibehalten, indem cause als unknown typisiert wird.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/290"
+          },
+          {
+            "text": "Topic‑Subscription‑Fehler gemeldet, wenn kein errorHandler angegeben ist.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/292"
+          },
+          {
+            "text": "Numerische Topic‑Subscription‑Zeit als Epoch‑Millisekunden gelesen.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/306"
+          },
+          {
+            "text": "registered-node‑Endpoint‑Rollen im Mirror‑Client als Objekte typisiert.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/324"
+          },
+          {
+            "text": "Balance‑accountId aus der Mirror‑Node‑Antwort entnommen.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/339"
+          },
+          {
+            "text": "Wiederholungen von 501 Not Implemented‑Mirror‑Node‑Antworten gestoppt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/340"
+          },
+          {
+            "text": "Ungültige timeoutMs und maxRetries im Mirror‑Client abgelehnt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/341"
+          },
+          {
+            "text": "Fehlende Transaktions‑Typen zu TransactionType hinzugefügt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/342"
+          },
+          {
+            "text": "Deklaration von Dezimalstellen bei Account‑Token‑Balances gestoppt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/343"
+          },
+          {
+            "text": "Balance‑Next‑Links gefolgt, ohne den Zeitstempel zu pinnen.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/344"
+          },
+          {
+            "text": "Freigegebenen RequestGate‑Slot direkt an den nächsten Wartenden übergeben.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/345"
+          },
+          {
+            "text": "Wiederholungen gestoppt, wenn Retry-After das Backoff‑Limit überschreitet.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/347"
+          },
+          {
+            "text": "Null‑Felder, die der Mirror‑Node sendet, verarbeitet.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/349"
+          },
+          {
+            "text": "Topic mit Admin‑Key und ohne Auto‑Renew‑Account erlaubt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/385"
+          },
+          {
+            "text": "Account‑Auto‑Renew‑Period‑Range dem Netzwerk überlassen.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/386"
+          },
+          {
+            "text": "Fehlende accountId in updateAccount abgelehnt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/387"
+          },
+          {
+            "text": "Leeren delegatingSpender in NFT‑Allowances abgelehnt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/388"
+          },
+          {
+            "text": "Rest‑Java‑ und Web3‑Anfragen eines lokalen Mirror‑Node auf deren Ports beibehalten.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/394"
+          },
+          {
+            "text": "Jeden REST‑Aufruf an mirrorNodeUrl gesendet, wenn mehrere Mirror‑Nodes konfiguriert sind.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/401"
+          },
+          {
+            "text": "Mirror‑Contract‑Call‑Optionen vor dem Senden validiert.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/402"
+          },
+          {
+            "text": "Jede Abfrage über QueryExecutor ausgeführt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/276"
+          },
+          {
+            "text": "Operation‑Skeleton geteilt und Topic‑Operationen migriert.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/293"
+          },
+          {
+            "text": "Verbleibende unnötige Type‑Assertions entfernt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/305"
+          },
+          {
+            "text": "Echtes SDK in den Core‑Unit‑Tests verwendet.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/287"
+          },
+          {
+            "text": "Solo‑Integrationstests für UpdateAccount, Schedules und TokenClaimAirdrop hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/294"
+          },
+          {
+            "text": "Unit‑Tests für CreateAccountValidator und UpdateAccountValidator hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/308"
+          },
+          {
+            "text": "Unit‑Tests für UpdateAccountOperation hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/320"
+          },
+          {
+            "text": "FileService‑Content‑Splitting und das size‑Limit von scheduleUpdateFile mit Tests abgedeckt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/321"
+          },
+          {
+            "text": "Gebühren‑Cap für den 4 KiB‑File‑Update‑Integrationstest erhöht.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/392"
+          },
+          {
+            "text": "Changelog neu geschrieben, um nur benutzerseitige Änderungen zu erfassen.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/274"
+          },
+          {
+            "text": "README neu geschrieben, um zu beschreiben, was die Pakete tun.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/309"
+          },
+          {
+            "text": "Installations‑Abschnitt für die öffentlichen npm‑Pakete geschrieben.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/310"
+          },
+          {
+            "text": "Framework‑Adapter‑Pakete veraltet und CHANGELOG hinzugefügt.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/239"
+          },
+          {
+            "text": "Framework‑Adapter‑Pakete entfernt.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/300"
+          },
+          {
+            "text": "CI bei Lint‑ und Formatierungs‑Problemen fehlschlagen lassen und veraltete Docs behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/240"
+          },
+          {
+            "text": "@hiero-ledger/sdk auf 2.89.1 aktualisiert und Balances vom Mirror‑Node gelesen.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/279"
+          },
+          {
+            "text": "Dependabot daran gehindert, bignumber.js zu erhöhen.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/282"
+          },
+          {
+            "text": "Automatisch veröffentlicht, wenn ein Versions‑Bump in main gemerged wird.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/322"
+          },
+          {
+            "text": "Mirror‑Node‑OpenAPI‑Snapshot auf v0.166.0-SNAPSHOT aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/327"
+          },
+          {
+            "text": "Pull‑Request ohne Assignee fehlschlagen lassen.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/368"
+          },
+          {
+            "text": "Auf Mirror‑Node‑Gebührenschätzungen vor den Integrationstests gewartet.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/405"
+          },
+          {
+            "text": "Hiero Enterprise JavaScript v0.4.0 veröffentlicht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/301"
+          },
+          {
+            "text": "Hiero Enterprise JavaScript v0.5.0 veröffentlicht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/352"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/danielmarv",
+        "https://github.com/jexsie"
+      ],
+      "community": [
+        "https://github.com/aceppaluni",
+        "https://github.com/manishdait"
+      ]
+    }
+  },
+  {
     "month": "SEPTEMBER",
     "year": 2026,
     "excerpt": "Community-Calls und Office Hours wurden für die Python SDK- und Hiero-Community fortgesetzt, mit HIP-Implementierungen im Python SDK, NFT-Client-APIs in Enterprise Java und Website-Arbeiten einschließlich des Issue Explorer.",
