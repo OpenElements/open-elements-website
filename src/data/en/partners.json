@@ -21,10 +21,10 @@
     "visible": true
   },
   {
-    "title": "Wilo SE",
-    "text": "<a class=\"link-purple\" href=\"https://wilo.de\" target=\"_blank\">Wilo SE</a> is a pioneer for intelligent premium solutions to address global challenges along the water cycles. Open Elements supports Wilo in the area of open interfaces and artificial intelligence. Together, we create an architecture that makes data and systems accessible through open standards, providing a solid, vendor-independent foundation for AI-powered applications.\n",
+    "title": "Wilo",
+    "text": "<a class=\"link-purple\" href=\"https://wilo.com\" target=\"_blank\">Wilo</a> is a pioneer for intelligent premium solutions to address global challenges along the water cycles. Open Elements supports Wilo in the area of open interfaces and artificial intelligence. Together, we create an architecture that makes data and systems accessible through open standards, providing a solid, vendor-independent foundation for AI-powered applications.\n",
     "logo": "/illustrations/logos/wilo-logo.svg",
-    "link": "https://wilo.de",
+    "link": "https://wilo.com",
     "visible": true
   },
   {

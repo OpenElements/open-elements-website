@@ -21,8 +21,8 @@
     "visible": true
   },
   {
-    "title": "Wilo SE",
-    "text": "<a class=\"link-purple\" href=\"https://wilo.de\" target=\"_blank\">Wilo SE</a> ist ein Pionier für intelligente Premium-Lösungen zur Bewältigung globaler Herausforderungen entlang der Wasserkreisläufe. Open Elements unterstützt Wilo im Bereich offener Schnittstellen und künstlicher Intelligenz. Gemeinsam schaffen wir eine Architektur, die Daten und Systeme über offene Standards zugänglich macht und so eine solide, herstellerunabhängige Basis für KI-gestützte Anwendungen bildet.\n",
+    "title": "Wilo",
+    "text": "<a class=\"link-purple\" href=\"https://wilo.de\" target=\"_blank\">Wilo</a> ist ein Pionier für intelligente Premium-Lösungen zur Bewältigung globaler Herausforderungen entlang der Wasserkreisläufe. Open Elements unterstützt Wilo im Bereich offener Schnittstellen und künstlicher Intelligenz. Gemeinsam schaffen wir eine Architektur, die Daten und Systeme über offene Standards zugänglich macht und so eine solide, herstellerunabhängige Basis für KI-gestützte Anwendungen bildet.\n",
     "logo": "/illustrations/logos/wilo-logo.svg",
     "link": "https://wilo.de",
     "visible": true
