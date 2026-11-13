@@ -21,6 +21,13 @@
     "visible": true
   },
   {
+    "title": "Wilo SE",
+    "text": "Die <a class=\"link-purple\" href=\"https://wilo.de\" target=\"_blank\">Wilo SE</a> mit Sitz in Dortmund ist einer der weltweit führenden Hersteller von Pumpen und Pumpensystemen für Gebäudetechnik, Wasserwirtschaft und Industrie. Open Elements unterstützt Wilo im Bereich offener Schnittstellen und künstlicher Intelligenz. Gemeinsam schaffen wir eine Architektur, die Daten und Systeme über offene Standards zugänglich macht und so eine solide, herstellerunabhängige Basis für KI-gestützte Anwendungen bildet.",
+    "logo": "/illustrations/logos/wilo-logo.svg",
+    "link": "https://wilo.de",
+    "visible": true
+  },
+  {
     "title": "Hedera",
     "text": "<a class=\"link-purple\" href=\"https://hedera.com\" target=\"_blank\">Hedera</a> ist das Unternehmen hinter dem Hedera Hashgraph, dem einzigen öffentlichen und verteilten Ledger, der auf dem Hashgraph-Algorithmus basiert. Hedera Hashgraph ist OSS und wurde in Java entwickelt. Hedera wird von einem Verwaltungsrat aus globalen Unternehmen und Einrichtungen verwaltet, darunter <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b> und weiteren bekannten Namen. <b>Open Elements</b> trägt aktiv zur <a class=\"link-purple\" href=\"https://github.com/hashgraph/hedera-services\" target=\"_blank\">Open Source Platform und der Implementierung der Services des Hedera Hashgraph</a> bei.",
     "logo": "/illustrations/logo-hedera.svg",
