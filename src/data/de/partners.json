@@ -22,7 +22,7 @@
   },
   {
     "title": "Wilo SE",
-    "text": "Die <a class=\"link-purple\" href=\"https://wilo.de\" target=\"_blank\">Wilo SE</a> mit Sitz in Dortmund ist einer der weltweit führenden Hersteller von Pumpen und Pumpensystemen für Gebäudetechnik, Wasserwirtschaft und Industrie. Open Elements unterstützt Wilo im Bereich offener Schnittstellen und künstlicher Intelligenz. Gemeinsam schaffen wir eine Architektur, die Daten und Systeme über offene Standards zugänglich macht und so eine solide, herstellerunabhängige Basis für KI-gestützte Anwendungen bildet.",
+    "text": "<a class=\"link-purple\" href=\"https://wilo.de\" target=\"_blank\">Wilo SE</a> ist ein Pionier für intelligente Premium-Lösungen zur Bewältigung globaler Herausforderungen entlang der Wasserkreisläufe. Open Elements unterstützt Wilo im Bereich offener Schnittstellen und künstlicher Intelligenz. Gemeinsam schaffen wir eine Architektur, die Daten und Systeme über offene Standards zugänglich macht und so eine solide, herstellerunabhängige Basis für KI-gestützte Anwendungen bildet.\n",
     "logo": "/illustrations/logos/wilo-logo.svg",
     "link": "https://wilo.de",
     "visible": true
