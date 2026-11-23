@@ -3,7 +3,7 @@ outdated: false
 showInBlog: true
 title: "On the supply chain, locally built artifacts and how Maven handles them"
 slug: on-the-supply-chain-locally-built-artifacts-and-how-maven-handles-them
-date: 2026-09-16
+date: 2026-11-23
 author: sebastian
 excerpt: "Locally built artifacts can become a problem for reproducible builds and therefore a risk for the supply chain. In this post I show how Maven resolves artifacts and how you can tell whether a self-built artifact was used by mistake."
 categories: [Open Elements, Open-Source, Security, Java]
