@@ -42,6 +42,13 @@
     "visible": true
   },
   {
+    "title": "AsyncAPI Initiative",
+    "text": "The <a class=\"link-purple\" href=\"https://www.asyncapi.com\" target=\"_blank\">AsyncAPI Initiative</a> is home to the open standard for defining asynchronous, event-driven APIs. Open Elements team members <a class=\"link-purple\" href=\"/employees/maya\">Aishat Muibudeen</a> and <a class=\"link-purple\" href=\"/employees/azeez\">Azeez Elegbede</a> serve on the project's Technical Steering Committee (TSC) and Code of Conduct Committee (CoCC); Aishat also serves on the Governance Board of the initiative.",
+    "logo": "/illustrations/logo-asyncapi.svg",
+    "link": "https://www.asyncapi.com",
+    "visible": true
+  },
+  {
     "title": "AdoptOpenJDK",
     "text": "Even before the existence of the Eclipse Adoptium Working Group, the idea was born in <a class=\"link-purple\" href=\"ttps://github.com/AdoptOpenJDK\" target=\"_blank\">AdoptOpenJDK</a> to provide vendor-neutral and freely available Java binaries. Open Elements is part of the project and has a seat on the Technical Steering Committee (TSC).",
     "logo": "/illustrations/logo-adoptopenjdk.svg",
@@ -102,6 +109,20 @@
     "text": "In <a class=\"link-purple\" href=\"https://www.ijug.eu\" target=\"_blank\">iJUG e.V.</a>, all Java User Groups in Germany are united. As the leader of the JUG Dortmund, <a class=\"link-purple\" href=\"/about-hendrik/\">Hendrik Ebbers</a> is actively involved and also contributes to the leadership of various projects of the iJUG, such as JavaLand or Cyberland.",
     "logo": "/illustrations/logo-ijug.svg",
     "link": "https://www.ijug.eu",
+    "visible": true
+  },
+  {
+    "title": "Open Source Business Alliance",
+    "text": "The <a class=\"link-purple\" href=\"https://osb-alliance.de\" target=\"_blank\">Open Source Business Alliance (OSBA)</a> is the German federal association for digital sovereignty and Europe's largest open source industry association. It advocates for open source software and open standards as the foundation of digital sovereignty and works to establish open source as the default in public procurement. As a member, Open Elements contributes its expertise in Java ecosystem maintenance, supply chain security and the Cyber Resilience Act to the association's work.",
+    "logo": "/illustrations/logos/osba.svg",
+    "link": "https://osb-alliance.de",
+    "visible": true
+  },
+  {
+    "title": "Sovereign AI Foundation",
+    "text": "The <a class=\"link-purple\" href=\"https://aieclipse.org/sovereign-ai-foundation/\" target=\"_blank\">Sovereign AI Foundation (SAIF)</a> is an industry collaboration of the Eclipse Foundation that provides a vendor-neutral forum for open source AI. Its member organisations share experiences and use cases, assess technologies and trends, and develop practical resources. These give them more visibility into, and control over, the AI technologies they depend on. Open Elements is a founding member of SAIF.",
+    "logo": "/illustrations/logos/sovereign-ai-foundation.jpg",
+    "link": "https://aieclipse.org/sovereign-ai-foundation/",
     "visible": true
   },
   {

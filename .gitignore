@@ -13,3 +13,6 @@ test-results/
 
 next-env.d.ts
 .claude/settings.local.json
+
+# TypeScript incremental build info
+*.tsbuildinfo

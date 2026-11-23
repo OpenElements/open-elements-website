@@ -1,6 +1,7 @@
 {
   "home": "Startseite",
   "blogNav": "Blog",
+  "updatesNav": "Monatliche Updates",
   "aboutUs": "Über uns",
   "projects": "Projekte",
   "supportCare": "Support & Care",
@@ -583,6 +584,7 @@
     "latest": "Aktuell",
     "contributors": "Mitwirkende",
     "supportAndCare": "Support & Care",
+    "openElements": "Open Elements",
     "community": "Community",
     "seeMore": "Mehr anzeigen",
     "seeLess": "Weniger anzeigen",

@@ -4,7 +4,8 @@ export type ItemType =
   | 'IMPROVEMENT'
   | 'DOCUMENTATION'
   | 'SECURITY'
-  | 'MAINTENANCE';
+  | 'MAINTENANCE'
+  | 'COMMUNITY';
 
 export interface UpdateItem {
   text: string;

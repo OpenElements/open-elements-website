@@ -30,7 +30,7 @@ test.describe('Markdown shortcode links', () => {
     const articleLink = articleBody.locator(
       'a[href="/articles/what-is-maven"]',
     );
-    const employeeLink = articleBody.locator('a[href="/employees/jessie"]');
+    const employeeLink = articleBody.locator('a[href="/employees/jessy"]');
 
     await expect(articleLink).toBeVisible();
     await expect(articleLink).toContainText('work on Apache Maven');

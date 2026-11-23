@@ -1,3 +1,6 @@
+# Coolify build (Nixpacks). Node 22 is pinned explicitly; the nixpkgs snapshot
+# Nixpacks uses has no Node 24. `pnpm` there is 10.x, which self-switches to the
+# version in package.json#packageManager, so that field is the single pnpm pin.
 [phases.setup]
 nixPkgs = ["nodejs_22", "pnpm"]
 
@@ -6,6 +9,11 @@ cmds = ["pnpm install --frozen-lockfile"]
 
 [phases.build]
 cmds = ["pnpm run build"]
+# Explicit list replaces the provider defaults, which include a cache mount on
+# tsconfig.tsbuildinfo. Cache mounts are directories, so mounting one over that
+# file breaks the build ("not a directory").
+cacheDirectories = [".next/cache", "node_modules/.cache"]
 
+# Runs `next start` (SSR, middleware, API routes) on $PORT, which Coolify injects.
 [start]
 cmd = "pnpm start"

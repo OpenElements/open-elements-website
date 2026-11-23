@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getAllPosts } from '@/lib/markdown';
+import { getAllArticleSlugs } from '@/lib/articles';
 import { headers } from 'next/headers';
 
 function getStaticRoutes(locale: string): string[] {
@@ -8,15 +9,17 @@ function getStaticRoutes(locale: string): string[] {
     'about',
     'contact',
     'impressum',
+    'newsletter',
     'posts',
     'support-care',
     'support-care-maven',
     'updates/maven',
     'updates/junit',
+    'updates/hiero',
   ];
 
   if (locale === 'de') {
-    routes.push('newsletter', 'newsletter-archive');
+    routes.push('newsletter-archive');
   }
 
   return routes;
@@ -42,6 +45,15 @@ export async function GET(
     const path = route ? `${localePrefix}/${route}` : localePrefix;
     allUrls.push({
       loc: `${baseUrl}${path}`,
+      lastmod: defaultLastmod,
+    });
+  }
+
+  // Add standalone articles authored in this locale
+  for (const article of getAllArticleSlugs()) {
+    if (article.locale !== locale) continue;
+    allUrls.push({
+      loc: `${baseUrl}${localePrefix}/articles/${article.slug}`,
       lastmod: defaultLastmod,
     });
   }
