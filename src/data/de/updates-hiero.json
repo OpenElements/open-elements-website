@@ -1,0 +1,528 @@
+[
+  {
+    "month": "SEPTEMBER",
+    "year": 2026,
+    "excerpt": "Community-Calls und Office Hours wurden für die Python SDK- und Hiero-Community fortgesetzt, mit HIP-Implementierungen im Python SDK, NFT-Client-APIs in Enterprise Java und Website-Arbeiten einschließlich des Issue Explorer.",
+    "categories": [
+      {
+        "title": "Community",
+        "items": [
+          {
+            "text": "Python SDK Community Calls zu PRs, HIPs, Automatisierung, TCK und blockierten Issues geleitet.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/9"
+          },
+          {
+            "text": "Python SDK Office Hours zu blockierten Issues, Bugs und Fehlern geleitet.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "text": "Hiero Community Management Calls, die die Website, SDKs, HIPs, Automatisierung und TCK abdeckten, geleitet.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "text": "Links of the Week-Beiträge im Hiero-Blog veröffentlicht.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/632"
+          },
+          {
+            "text": "Beitrags- und Abhängigkeits-PRs im Python SDK, der Hiero-Website und Analytics geprüft und zusammengeführt.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/pulls?q=is%3Apr+reviewed-by%3Adanielmarv+user%3Ahiero-ledger+user%3Ahiero-hackers+merged%3A2026-09-01..2026-09-30"
+          },
+          {
+            "text": "Referenz des Code of Conduct an den LFDT-Standard im Mirror Node Explorer angepasst.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-mirror-node-explorer/pull/2757"
+          },
+          {
+            "text": "Referenz des Code of Conduct an den LFDT-Standard in den Konsensspezifikationen angepasst.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-consensus-specifications/pull/43"
+          },
+          {
+            "text": "Beitrags- und Abhängigkeits-PRs im Python SDK und Hiero Enterprise Java geprüft und zusammengeführt.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/pulls/search?q=is%3Apr+reviewed-by%3Amanishdait+%28repo%3Ahiero-ledger%2Fhiero-sdk-python+OR+repo%3Ahiero-ledger%2Fhiero-enterprise-java%29+merged%3A2026-09-01..2026-09-30+sort%3Aupdated-desc"
+          },
+          {
+            "text": "Beitrags- und Abhängigkeits-PRs in Hiero Enterprise Java und Hiero Solo Action geprüft und zusammengeführt.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/pulls?q=is%3Apr+reviewed-by%3ANdacyayisenga-droid+org%3Ahiero-ledger+merged%3A2026-09-01..2026-09-30"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Java",
+        "items": [
+          {
+            "text": "NftClient um pause- und unpause-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/327"
+          },
+          {
+            "text": "CLI-Beispiel mit picocli hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/130"
+          },
+          {
+            "text": "SmartContractClient um deleteContract-Operation erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/298"
+          },
+          {
+            "text": "TopicClient um subscribeTopic-Operation erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/356"
+          },
+          {
+            "text": "contractVerification refaktoriert, um sourcify.dev zu verwenden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/357"
+          },
+          {
+            "text": "NftClient um grantKycNft- und revokeKycNft-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/330"
+          },
+          {
+            "text": "NftClient um airdropNft- und airdropNfts-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/340"
+          },
+          {
+            "text": "NftClient um cancelAirdropNft- und cancelAirdropNfts-Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/366"
+          },
+          {
+            "text": "Hiero Enterprise Java v0.21.0 veröffentlicht.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/releases/tag/v0.21.0"
+          },
+          {
+            "text": "Solo auf v0.91.0 in hiero-solo-action aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/pull/148"
+          },
+          {
+            "text": "@hiero-ledger/sdk auf 2.88.0 für Solo-Versionen unter 0.44.0 in hiero-solo-action festgelegt.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/pull/151"
+          },
+          {
+            "text": "Unterstützung für ScheduleRepository und Mirror-Node-Plan-API geplant (in Bearbeitung).",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/issues/328"
+          }
+        ]
+      },
+      {
+        "title": "Hiero-Website",
+        "items": [
+          {
+            "text": "Links of the week für September hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/677"
+          },
+          {
+            "text": "Website-Abhängigkeiten aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/668"
+          },
+          {
+            "text": "Startseite neu gestaltet.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/617"
+          },
+          {
+            "text": "Blogseite neu gestaltet.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/642"
+          },
+          {
+            "text": "Version 2 des Website-Redesigns ausgeliefert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/643"
+          },
+          {
+            "text": "Issue Explorer mit Filterung und Pagination hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/647"
+          },
+          {
+            "text": "Footer-Navigation verbessert und ausschließlich Header-Menüpunkte hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/654"
+          },
+          {
+            "text": "Plausible Analytics in das Website-Layout integriert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/657"
+          },
+          {
+            "text": "Sicherheitslücken in Website-Abhängigkeiten behoben.",
+            "type": "SECURITY",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/644"
+          }
+        ]
+      },
+      {
+        "title": "Python-SDK",
+        "items": [
+          {
+            "text": "From_bytes Transaction-type Dispatch Map korrigiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2637"
+          },
+          {
+            "text": "MirroNodeAccountBalanaceQuery implementiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2656"
+          },
+          {
+            "text": "signSchedule-Methode zum TCK-Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2630"
+          },
+          {
+            "text": "contractGetBytecode-Methode zum TCK-Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2664"
+          },
+          {
+            "text": "contractInfoQuery-Methode zum TCK-Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2667"
+          },
+          {
+            "text": "contractCallQuery-Methode zum TCK-Server hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2661"
+          },
+          {
+            "text": "uv.lock-Abhängigkeiten aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2642"
+          },
+          {
+            "text": "Transaction.to_bytes() aktualisiert, um TransactionList zu serialisieren – #2660.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2660"
+          }
+        ]
+      },
+      {
+        "title": "Java-SDK",
+        "items": [
+          {
+            "text": "Reflektive No-Arg-Instanziierung von JSON-RPC-Parametern durch ein typisiertes Parser-Register ersetzt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2933"
+          },
+          {
+            "text": "Examples-Workflow behoben.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2953"
+          },
+          {
+            "text": "Lombok aus dem TCK entfernt, indem JSON-RPC-Parameter in Records konvertiert wurden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2962"
+          },
+          {
+            "text": "JSR-305 durch JSpecify für Nullbarkeits-Annotationen ersetzt (in Bearbeitung).",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2938"
+          }
+        ]
+      },
+      {
+        "title": "Analytics",
+        "items": [
+          {
+            "text": "Alle Dashboard-Diagramme aus API-Daten statt statischer Bilder gerendert und das Dashboard-UI aktualisiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/analytics/pull/490"
+          },
+          {
+            "text": "Drucken und Herunterladen eines einzelnen Diagramms hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/analytics/pull/502"
+          },
+          {
+            "text": "Repository- und Beitrags-Detailansichten hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-hackers/analytics/pull/504"
+          },
+          {
+            "text": "CodeQL-Workflow behoben, um ein codeql-action-Release sowohl bei init als auch bei analyze zu verwenden.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/analytics/pull/505"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise JavaScript",
+        "items": [
+          {
+            "text": "Gesamt-Pipeline-Zeit reduziert, indem redundante Netzwerk-Setups gekürzt wurden.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/issues/103"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/danielmarv",
+        "https://github.com/jexsie"
+      ],
+      "community": [
+        "https://github.com/aceppaluni",
+        "https://github.com/manishdait"
+      ]
+    }
+  },
+  {
+    "month": "AUGUST",
+    "year": 2026,
+    "excerpt": "Community‑Calls und Office‑Hours für die Python‑SDK‑ und Hiero‑Community wurden fortgesetzt, mit HIP‑Implementierungen im Python SDK, NFT‑Client‑APIs in Enterprise Java und Website‑Arbeiten einschließlich des Issue Explorer.",
+    "categories": [
+      {
+        "title": "Community",
+        "items": [
+          {
+            "text": "Python SDK Community Calls zu PRs, HIPs, Automatisierung, TCK und blockierten Issues geleitet.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/9"
+          },
+          {
+            "text": "Python SDK Office Hours zu blockierten Issues, Bugs und Fehlern geleitet.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "text": "Hiero Community Management Calls zur Website, zu SDKs, HIPs, Automatisierung und TCK geleitet.",
+            "type": "COMMUNITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/35"
+          },
+          {
+            "text": "Links of the Week‑Beiträge im Hiero‑Blog veröffentlicht.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/632"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Java",
+        "items": [
+          {
+            "text": "NftClient um Delete‑, Update‑, Wipe‑, Freeze‑ und Unfreeze‑Operationen erweitert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/297"
+          },
+          {
+            "text": "Unterstützung für Metadaten‑Schlüssel bei createNftType und updateNftMetadata hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/283"
+          },
+          {
+            "text": "Unterstützung für Netzwerk‑Adressbuch hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/251"
+          },
+          {
+            "text": "Unterstützung für benutzerdefinierte maxTransactionFee und Gas zu createContract und callContract hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/249"
+          },
+          {
+            "text": "Mirror‑Node‑Antwortfelder an die Spezifikation angepasst.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/239"
+          },
+          {
+            "text": "SBOMs zu Dependency-Track veröffentlicht.",
+            "type": "SECURITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/50"
+          },
+          {
+            "text": "Branch‑Protection, Fuzz‑Testing und das OpenSSF‑Badge für hiero-enterprise-java überprüft.",
+            "type": "SECURITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/54"
+          },
+          {
+            "text": "Projekt‑Status‑Badges hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/326"
+          },
+          {
+            "text": "CodeRabbit‑Review für hiero-enterprise-java aktiviert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-enterprise-java/pull/185"
+          },
+          {
+            "text": "Solo in hiero-solo-action auf v0.88.0 aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-solo-action/pull/144"
+          }
+        ]
+      },
+      {
+        "title": "Hiero-Website",
+        "items": [
+          {
+            "text": "Issue Explorer‑Seite implementiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/437"
+          },
+          {
+            "text": "Issue Explorer neu gestaltet.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/630"
+          },
+          {
+            "text": "Navbar‑Funktionalität aktualisiert.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/569"
+          },
+          {
+            "text": "Gemeinsame Hilfsfunktionen in Logger‑ und Validierungsskripten extrahiert.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/586"
+          },
+          {
+            "text": "Lychee‑Konfiguration behoben und defekte Links auf der gesamten Seite repariert.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/604"
+          },
+          {
+            "text": "Website‑Abhängigkeiten nach der Modularisierung von Logger und Validierung aktualisiert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-website/pull/588"
+          }
+        ]
+      },
+      {
+        "title": "Python-SDK",
+        "items": [
+          {
+            "text": "HIP‑1313‑High‑Volume‑Entitätserstellung implementiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2308"
+          },
+          {
+            "text": "HIP‑1261‑Gebührenschätzungs‑Abfrage implementiert.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2231"
+          },
+          {
+            "text": "Opt‑In‑Receipt‑ und Record‑Query‑Failover zu anderen Nodes hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2527"
+          },
+          {
+            "text": "RejectToken‑, Create‑Schedule‑ und Sign‑Schedule‑Methoden zum TCK hinzugefügt.",
+            "type": "FEATURE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2442"
+          },
+          {
+            "text": "PublicKey im Vertrag‑ und Schedule‑Modul durch Key ersetzt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2532"
+          },
+          {
+            "text": "Dokumentation für Windows‑Nutzer verbessert.",
+            "type": "DOCUMENTATION",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/1958"
+          },
+          {
+            "text": "Fehlerhafte TCK‑Methoden behoben.",
+            "type": "BUG_FIX",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2513"
+          },
+          {
+            "text": "AccountBalanceQuery und Transaction‑Node‑Account‑ID‑Setter veraltet.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-python/pull/2647"
+          },
+          {
+            "text": "SBOM‑Bereitstellung für das Python SDK gestartet.",
+            "type": "SECURITY",
+            "link": "https://github.com/OpenElements/Hiero-Funding/issues/51"
+          }
+        ]
+      },
+      {
+        "title": "Java-SDK",
+        "items": [
+          {
+            "text": "JSON‑RPC‑Ergebnis‑Serialisierung von json‑smart‑Bean‑Serialisierung entkoppelt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2899"
+          },
+          {
+            "text": "TCK‑Antwortklassen in Records umgewandelt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-java/pull/2920"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript-SDK",
+        "items": [
+          {
+            "text": "Unit‑Tests für die Legacy‑Key‑Derivation‑Funktion im cryptography‑Package hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-ledger/hiero-sdk-js/pull/4315"
+          }
+        ]
+      },
+      {
+        "title": "Analytics",
+        "items": [
+          {
+            "text": "CodeRabbit‑Planung für hiero-hackers/analytics aktiviert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/analytics/pull/282"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise JavaScript",
+        "items": [
+          {
+            "text": "Feature‑, Bug‑ und Question‑Issue‑Templates hinzugefügt.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/35"
+          },
+          {
+            "text": "Issue‑Moderator‑Flows hinzugefügt.",
+            "type": "IMPROVEMENT",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/175"
+          },
+          {
+            "text": "CodeRabbit‑Planung für hiero-enterprise-js aktiviert.",
+            "type": "MAINTENANCE",
+            "link": "https://github.com/hiero-hackers/hiero-enterprise-js/pull/156"
+          }
+        ]
+      }
+    ],
+    "contributors": {
+      "supportAndCare": [
+        "https://github.com/Ndacyayisenga-droid",
+        "https://github.com/danielmarv",
+        "https://github.com/jexsie"
+      ],
+      "community": [
+        "https://github.com/aceppaluni",
+        "https://github.com/manishdait"
+      ]
+    }
+  }
+]
