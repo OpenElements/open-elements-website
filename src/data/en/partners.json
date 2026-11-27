@@ -21,6 +21,20 @@
     "visible": true
   },
   {
+    "title": "GovStack",
+    "text": "<a class=\"link-purple\" href=\"https://govstack.global\" target=\"_blank\">GovStack</a> is a global initiative led by the German Federal Ministry for Economic Cooperation and Development (BMZ), GIZ, the Government of Estonia, ITU and DIAL. It provides open specifications and reusable building blocks that help governments build sovereign, interoperable digital public services. Open Elements actively contributes to several GovStack working groups and to the specification of individual building blocks. As a listed service company in the <a class=\"link-purple\" href=\"https://govstack.global/companies/\" target=\"_blank\">GovStack Marketplace</a>, we support governments and partners in implementing GovStack-based solutions with our open source expertise.",
+    "logo": "/illustrations/logos/gov-stack-logo.svg",
+    "link": "https://govstack.global",
+    "visible": true
+  },
+  {
+    "title": "Wilo",
+    "text": "<a class=\"link-purple\" href=\"https://wilo-group.com/en/\" target=\"_blank\">Wilo</a> is a pioneer for intelligent premium solutions to address global challenges along the water cycles. Open Elements supports Wilo in the area of open interfaces and artificial intelligence. Together, we create an architecture that makes data and systems accessible through open standards, providing a solid, vendor-independent foundation for AI-powered applications.\n",
+    "logo": "/illustrations/logos/wilo-logo.svg",
+    "link": "https://wilo-group.com/en/",
+    "visible": true
+  },
+  {
     "title": "Hedera",
     "text": "<a class=\"link-purple\" href=\"https://hedera.com\" target=\"_blank\">Hedera</a> is the company behind the <b>Hedera Hashgraph</b>, the only public distributed ledger based on the Hashgraph algorithm. Hedera Hashgraph is open source software (OSS) and developed in Java. Hedera is owned and managed by a \"governing council\" of global companies and entities, including <b>Google</b>, <b>Boeing</b>, <b>IBM</b>, <b>Deutsche Telekom</b>, <b>LG</b>, <b>Dell</b>, <b>Ubisoft</b>, and several others. <b>Open Elements</b> contribute to <a class=\"link-purple\" href=\"https://github.com/hashgraph/hedera-services\" target=\"_blank\">the base implementation and services</a> of the Hedera Hashgraph OSS.",
     "logo": "/illustrations/logo-hedera.svg",
