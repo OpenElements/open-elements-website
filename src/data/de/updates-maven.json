@@ -8,7 +8,7 @@
         "title": "Security of the Supply Chain",
         "items": [
           {
-            "text": "GH-Workflow für PR‑Verifizierungen erstellen, z. B. erforderliche Lizenzen, pull_request_target zu workflow_run migrieren.",
+            "text": "GH-Workflow für PR‑Verifizierungen erstellen, z. B. erforderliche Lizenzzustimmung, pull_request_target zu workflow_run migrieren.",
             "type": "IMPROVEMENT",
             "link": "https://github.com/support-and-care/maven-support-and-care/issues/257#issuecomment-6346743155"
           },
