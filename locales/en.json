@@ -30,6 +30,137 @@
   "impressum": "Impressum",
   "notFound": "Page Not Found!!",
   "digitalTrustLecture": "Digital Trust Lecture",
+  "eudiploSupport": "Support & Care: EUDIPLO",
+  "eudiplo": {
+    "metaTitle": "Support & Care for EUDIPLO - Open Elements",
+    "metaDescription": "Support, integration and further development for EUDIPLO, the open source middleware for connecting EUDI wallets – straight from active contributors to the project.",
+    "hero": {
+      "badge": "Support & Care for EUDIPLO",
+      "title": "Connect EUDI wallets – open, and with backup.",
+      "intro": "EUDIPLO is the open source middleware that public authorities and companies use to issue digital credentials to EUDI wallets and to request them from there. We actively contribute to the project and make sure it runs reliably in your operations.",
+      "ctaPrimary": "Schedule a call",
+      "ctaProject": "Visit the project"
+    },
+    "banner": {
+      "label": "Part of Support & Care",
+      "logoAlt": "Support & Care by Open Elements",
+      "text": "<strong>Support & Care is now also available for EUDIPLO.</strong> This is how we guarantee sustainable and open maintenance and further development of EUDIPLO – in the project itself, not in a fork of our own.",
+      "link": "More about Support & Care →"
+    },
+    "about": {
+      "title": "What is EUDIPLO?",
+      "intro": "EUDIPLO sits between your backend and the wallets. Your system talks to a single, consistent HTTP API, and EUDIPLO takes care of protocols and cryptography. You focus on your business logic, not on standards.",
+      "moreLink": "More on eudiplo.dev →",
+      "githubLink": "Code on GitHub →",
+      "features": {
+        "issuance": "<strong>Issuance and presentation</strong> of credentials, including presentation during issuance",
+        "conformance": "<strong>OIDF conformance tests</strong> for OID4VCI and OID4VP",
+        "docker": "<strong>Runs on Docker</strong> in your own infrastructure",
+        "license": "<strong>Apache 2.0</strong>, originally developed at <sprind>SPRIND</sprind>, now a Linux Foundation project (<lfdt>LF Decentralized Trust</lfdt>)"
+      }
+    },
+    "architecture": {
+      "label": "Architecture with EUDIPLO",
+      "title": "How it fits together",
+      "walletTitle": "EUDI wallet",
+      "walletDesc": "on your users' smartphones",
+      "walletProtocol": "OID4VCI · OID4VP",
+      "walletTransport": "encrypted",
+      "infraLabel": "Your infrastructure",
+      "badge": "Support & Care",
+      "eudiploTitle": "EUDIPLO",
+      "eudiploDesc": "Protocols, cryptography and credential verification. Keys stay in your HSM.",
+      "apiProtocol": "HTTP API",
+      "apiTransport": "JSON via webhook",
+      "serviceTitle": "Your enterprise service",
+      "serviceDesc": "Backend or business application. Receives a clear result instead of protocol details.",
+      "trustTitle": "Trust ecosystem",
+      "trustDesc": "EUDIPLO checks issuers against trusted lists, detects revoked credentials and uses the certificates from the registrar for your services.",
+      "privacy": "The wallet's response is only decrypted on your server. Personal data stays with you – no cloud service in between."
+    },
+    "whySupport": {
+      "title": "Why support?",
+      "text": "EUDI wallets are coming, and with them the obligation for many public authorities and regulated companies to accept them. Open source gives you independence. But for production use, you need someone who reliably helps when something gets stuck and who keeps developing the project alongside you."
+    },
+    "offer": {
+      "title": "What we offer",
+      "support": {
+        "title": "Technical support",
+        "desc": "Helpdesk in German and English with guaranteed response times, directly with developers who work on the code."
+      },
+      "integration": {
+        "title": "Adoption and integration",
+        "desc": "We help with configuration, credential design, connecting your backend and testing with the wallets."
+      },
+      "development": {
+        "title": "Further development",
+        "desc": "We develop the features and fixes you need on your behalf. They flow back into the project, so you don't have to maintain a fork of your own."
+      },
+      "security": {
+        "title": "Security and CRA",
+        "desc": "Vulnerability monitoring, updates, SBOM and documentation – backed by our experience from Support & Care and the ORC Working Group. In the future, we will provide and maintain the official hardened container images for EUDIPLO via <link>container.gov.de</link>."
+      },
+      "hosting": "<strong>EUDIPLO runs on your infrastructure.</strong> Need hosting? <contact>Talk to us</contact> – we are currently evaluating an offering with a partner."
+    },
+    "whyUs": {
+      "title": "Why Open Elements?",
+      "contributors": {
+        "title": "We work on the code.",
+        "desc": "We are active contributors to EUDIPLO. Your requests reach people who know the project."
+      },
+      "standards": {
+        "title": "Standards, not lock-in.",
+        "desc": "Many vendors have their own wallet or integration and add proprietary features. It then often becomes unclear what is standard and what is vendor lock-in. We rely on the open standard and on EUDIPLO – without a competing product of our own."
+      },
+      "governance": {
+        "title": "Governance experience.",
+        "desc": "EUDIPLO is a Linux Foundation project, specifically part of LF Decentralized Trust. There, as Vice Chair of the Technical Advisory Council, we help shape the technical direction."
+      },
+      "openSource": {
+        "title": "Open source made right.",
+        "desc": "With Support & Care, we have been maintaining critical open source components for years. We are bringing this model to EUDIPLO."
+      }
+    },
+    "steps": {
+      "title": "How we get started",
+      "stepLabel": "Step {number}",
+      "intro": {
+        "title": "Initial call",
+        "desc": "You tell us about your plans and your environment."
+      },
+      "scope": {
+        "title": "Tailoring",
+        "desc": "Together we define the support scope, response times and development topics."
+      },
+      "start": {
+        "title": "Kick-off",
+        "desc": "You get access to the helpdesk and a dedicated contact person."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "cost": {
+        "q": "Does EUDIPLO cost anything?",
+        "a": "No. EUDIPLO is open source under Apache 2.0. You pay us for support and development, not for the software."
+      },
+      "hosting": {
+        "q": "Do you host EUDIPLO for us?",
+        "a": "Not at the moment. You run EUDIPLO yourselves, and we support you. We are currently evaluating a hosted offering together with a partner. If you need hosting, talk to us – we'll work out together what fits your needs."
+      },
+      "fork": {
+        "q": "Do we have to maintain a fork?",
+        "a": "No. Whatever we develop for you, we contribute to the project."
+      },
+      "languages": {
+        "q": "In which languages is support available?",
+        "a": "German and English."
+      }
+    },
+    "cta": {
+      "title": "Let's talk about your EUDI wallet integration.",
+      "button": "Book an appointment"
+    }
+  },
   "dltLecture": {
     "metaTitle": "DLT & Digital Trust Lecture - Open Elements",
     "metaDescription": "Since 2023 Hendrik Ebbers has been offering the lecture 'Distribution Ledger Technology and Digital Trust'.",

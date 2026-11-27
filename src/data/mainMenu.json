@@ -40,6 +40,14 @@
     "visibleInFooter": true
   },
   {
+    "name": "Support & Care: EUDIPLO",
+    "i18nKey": "eudiploSupport",
+    "altI18nKey": "supportAndCareDescription",
+    "link": "/support-care-eudiplo/",
+    "visibleInNavigation": true,
+    "visibleInFooter": true
+  },
+  {
     "name": "Support & Care",
     "i18nKey": "supportAndCare",
     "altI18nKey": "supportAndCareDescription",
