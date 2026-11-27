@@ -21,6 +21,13 @@
     "visible": true
   },
   {
+    "title": "GovStack",
+    "text": "<a class=\"link-purple\" href=\"https://govstack.global\" target=\"_blank\">GovStack</a> is a global initiative led by the German Federal Ministry for Economic Cooperation and Development (BMZ), GIZ, the Government of Estonia, ITU and DIAL. It provides open specifications and reusable building blocks that help governments build sovereign, interoperable digital public services. Open Elements actively contributes to several GovStack working groups and to the specification of individual building blocks. As a listed service company in the <a class=\"link-purple\" href=\"https://govstack.global/companies/\" target=\"_blank\">GovStack Marketplace</a>, we support governments and partners in implementing GovStack-based solutions with our open source expertise.",
+    "logo": "/illustrations/logos/gov-stack-logo.svg",
+    "link": "https://govstack.global",
+    "visible": true
+  },
+  {
     "title": "Wilo",
     "text": "<a class=\"link-purple\" href=\"https://wilo-group.com/en/\" target=\"_blank\">Wilo</a> is a pioneer for intelligent premium solutions to address global challenges along the water cycles. Open Elements supports Wilo in the area of open interfaces and artificial intelligence. Together, we create an architecture that makes data and systems accessible through open standards, providing a solid, vendor-independent foundation for AI-powered applications.\n",
     "logo": "/illustrations/logos/wilo-logo.svg",
