@@ -8,7 +8,7 @@
         "title": "Security of the Supply Chain",
         "items": [
           {
-            "text": "GitHub-Workflow für PR-Verifizierungen erstellen, z. B. erforderliche Lizenzen.",
+            "text": "GitHub-Workflow für PR-Verifizierungen erstellen, z. B. erforderliche Lizenzzustimmung.",
             "type": "IMPROVEMENT",
             "link": "https://github.com/support-and-care/maven-support-and-care/issues/257#issuecomment-5969227974"
           },
@@ -23,7 +23,7 @@
         "title": "Wartung",
         "items": [
           {
-            "text": "Dem Release von Maven Surefire 3.6.0 (nur JUnit‑Platform) gefolgt, um verwandte Probleme zu beheben.",
+            "text": "Fehler behoben (nur JUnit‑Platform), die zum Release von Maven Surefire 3.6.0 gemeldet wurden.",
             "type": "MAINTENANCE",
             "link": "https://github.com/support-and-care/maven-support-and-care/issues/246#issuecomment-5964175256"
           },
