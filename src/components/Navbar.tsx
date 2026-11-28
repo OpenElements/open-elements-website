@@ -15,8 +15,29 @@ interface NavbarProps {
   locale: string;
 }
 
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      className={`w-4 h-4 transition-transform duration-150 ${open ? 'rotate-180' : ''}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true">
+      <path
+        fillRule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
 export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<number | null>(
+    null,
+  );
   const [illustrationOffset, setIllustrationOffset] = useState(0);
   const t = useTranslations();
   const pathname = usePathname();
@@ -208,45 +229,78 @@ export default function Navbar({ locale }: NavbarProps) {
                     {mainMenu.map((item, index) => {
                       if (!item.visibleInNavigation) return null;
 
+                      const submenuOpen = openSubmenu === index;
+                      const submenuId = `desktop-submenu-${index}`;
+
                       return (
-                        <div key={index} className="nav-item group relative">
+                        <div
+                          key={index}
+                          className="nav-item relative"
+                          onMouseEnter={
+                            item.children
+                              ? () => setOpenSubmenu(index)
+                              : undefined
+                          }
+                          onMouseLeave={
+                            item.children
+                              ? () => setOpenSubmenu(null)
+                              : undefined
+                          }
+                          onBlur={
+                            item.children
+                              ? event => {
+                                  if (
+                                    !event.currentTarget.contains(
+                                      event.relatedTarget as Node | null,
+                                    )
+                                  ) {
+                                    setOpenSubmenu(null);
+                                  }
+                                }
+                              : undefined
+                          }
+                          onKeyDown={
+                            item.children
+                              ? event => {
+                                  if (event.key === 'Escape') {
+                                    setOpenSubmenu(null);
+                                  }
+                                }
+                              : undefined
+                          }>
                           {item.children ? (
                             <>
-                              <button className="flex items-center justify-between nav-link">
+                              <button
+                                type="button"
+                                className="nav-link inline-flex items-center gap-1 cursor-pointer"
+                                aria-haspopup="true"
+                                aria-expanded={submenuOpen}
+                                aria-controls={submenuId}
+                                onClick={() =>
+                                  setOpenSubmenu(submenuOpen ? null : index)
+                                }>
                                 {item.i18nKey ? t(item.i18nKey) : item.name}
-                                <svg
-                                  className="ml-1 w-4 h-4"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor">
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
+                                <ChevronIcon open={submenuOpen} />
                               </button>
-                              <div className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 group-hover:block">
-                                <div className="dropdownBox w-screen max-w-md flex-auto overflow-hidden bg-blue text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 rounded-lg">
-                                  <div className="p-4">
-                                    {item.children.map((child, childIndex) => (
-                                      <div
-                                        key={childIndex}
-                                        className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                        <div>
-                                          <Link
-                                            href={child.link}
-                                            className="nav-link whitespace-nowrap">
-                                            {child.i18nKey
-                                              ? t(child.i18nKey)
-                                              : child.name}
-                                            <span className="absolute inset-0"></span>
-                                          </Link>
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
+                              <div
+                                id={submenuId}
+                                className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-3 ${
+                                  submenuOpen ? 'block' : 'hidden'
+                                }`}>
+                                <ul className="min-w-48 rounded-lg bg-blue p-2 shadow-lg ring-1 ring-white/15">
+                                  {item.children.map((child, childIndex) => (
+                                    <li key={childIndex}>
+                                      <Link
+                                        href={child.link}
+                                        className="nav-link block whitespace-nowrap rounded-md px-4 py-2 hover:bg-white/10"
+                                        onClick={() => setOpenSubmenu(null)}>
+                                        {child.i18nKey
+                                          ? t(child.i18nKey)
+                                          : child.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
                               </div>
                             </>
                           ) : (
@@ -389,46 +443,47 @@ export default function Navbar({ locale }: NavbarProps) {
                   {mainMenu.map((item, index) => {
                     if (!item.visibleInNavigation) return null;
 
+                    const submenuOpen = openMobileSubmenu === index;
+                    const submenuId = `mobile-submenu-${index}`;
+
                     return (
-                      <div key={index} className="nav-item group relative">
+                      <div
+                        key={index}
+                        className="nav-item flex flex-col sm:items-center gap-4">
                         {item.children ? (
                           <>
-                            <button className="flex items-center justify-between nav-link">
+                            <button
+                              type="button"
+                              className="nav-link inline-flex items-center gap-1 cursor-pointer"
+                              aria-expanded={submenuOpen}
+                              aria-controls={submenuId}
+                              onClick={() =>
+                                setOpenMobileSubmenu(submenuOpen ? null : index)
+                              }>
                               {item.i18nKey ? t(item.i18nKey) : item.name}
-                              <svg
-                                className="ml-1 w-4 h-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                  fillRule="evenodd"
-                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
+                              <ChevronIcon open={submenuOpen} />
                             </button>
-                            <div className="hidden absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 group-hover:block">
-                              <div className="dropdownBox w-screen max-w-md flex-auto overflow-hidden bg-blue text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                                <div className="p-4">
-                                  {item.children.map((child, childIndex) => (
-                                    <div
-                                      key={childIndex}
-                                      className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                      <div>
-                                        <Link
-                                          href={child.link}
-                                          className="nav-link whitespace-nowrap">
-                                          {child.i18nKey
-                                            ? t(child.i18nKey)
-                                            : child.name}
-                                          <span className="absolute inset-0"></span>
-                                        </Link>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
+                            {submenuOpen && (
+                              <ul
+                                id={submenuId}
+                                className="flex flex-col sm:items-center gap-4 pl-4 sm:pl-0">
+                                {item.children.map((child, childIndex) => (
+                                  <li key={childIndex}>
+                                    <Link
+                                      href={child.link}
+                                      className="nav-link inline-flex items-center"
+                                      onClick={() => {
+                                        setOpenMobileSubmenu(null);
+                                        setIsOpen(false);
+                                      }}>
+                                      {child.i18nKey
+                                        ? t(child.i18nKey)
+                                        : child.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </>
                         ) : (
                           <Link

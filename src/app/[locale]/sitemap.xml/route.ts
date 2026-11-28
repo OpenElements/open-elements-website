@@ -13,6 +13,7 @@ function getStaticRoutes(locale: string): string[] {
     'posts',
     'support-care',
     'support-care-maven',
+    'support-care-eudiplo',
     'updates/maven',
     'updates/junit',
     'updates/hiero',

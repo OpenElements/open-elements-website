@@ -37,6 +37,32 @@
     "altI18nKey": "supportAndCareDescription",
     "link": "/support-care/",
     "visibleInNavigation": true,
+    "visibleInFooter": true,
+    "children": [
+      {
+        "name": "Java",
+        "i18nKey": "supportCareJava",
+        "altI18nKey": "supportAndCareDescription",
+        "link": "/support-care/",
+        "visibleInNavigation": true,
+        "visibleInFooter": false
+      },
+      {
+        "name": "EUDIPLO",
+        "i18nKey": "supportCareEudiplo",
+        "altI18nKey": "supportAndCareDescription",
+        "link": "/support-care-eudiplo/",
+        "visibleInNavigation": true,
+        "visibleInFooter": false
+      }
+    ]
+  },
+  {
+    "name": "Support & Care: EUDIPLO",
+    "i18nKey": "eudiploSupport",
+    "altI18nKey": "supportAndCareDescription",
+    "link": "/support-care-eudiplo/",
+    "visibleInNavigation": false,
     "visibleInFooter": true
   },
   {
