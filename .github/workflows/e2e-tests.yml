@@ -9,7 +9,6 @@ on:
 jobs:
   test:
     timeout-minutes: 15
-    # Pinned: ubuntu-latest now resolves to 26.04, where Playwright can't install Chromium yet.
     runs-on: ubuntu-24.04
     
     steps:
