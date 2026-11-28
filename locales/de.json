@@ -31,6 +31,8 @@
   "notFound": "Seite nicht gefunden!!",
   "digitalTrustLecture": "Vorlesung zu Digital Trust",
   "eudiploSupport": "Support & Care: EUDIPLO",
+  "supportCareJava": "Java",
+  "supportCareEudiplo": "EUDIPLO",
   "eudiplo": {
     "metaTitle": "Support & Care für EUDIPLO - Open Elements",
     "metaDescription": "Support, Integration und Weiterentwicklung für EUDIPLO, die Open-Source-Middleware zur Anbindung von EUDI-Wallets – direkt von aktiven Mitwirkenden des Projekts.",

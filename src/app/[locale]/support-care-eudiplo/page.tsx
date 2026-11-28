@@ -369,9 +369,9 @@ export default async function EudiploPage({ params }: EudiploPageProps) {
                   src={`${ASSETS}/${item.icon}`}
                   alt=""
                   aria-hidden="true"
-                  width={72}
-                  height={72}
-                  className="size-[72px]"
+                  width={112}
+                  height={112}
+                  className="size-28 self-center"
                 />
                 <h3 className="m-0 text-xl font-bold text-blue">
                   {t(`offer.${item.key}.title`)}
@@ -388,7 +388,7 @@ export default async function EudiploPage({ params }: EudiploPageProps) {
               </article>
             ))}
           </div>
-          <p className="m-0 self-start rounded-xl bg-yellow-50 px-5 py-4 text-base leading-normal">
+          <p className="m-0 rounded-xl bg-yellow-50 px-5 py-4 text-base leading-normal">
             {t.rich('offer.hosting', {
               strong,
               contact: chunks => (
@@ -453,7 +453,8 @@ export default async function EudiploPage({ params }: EudiploPageProps) {
 
       {/* FAQ */}
       <section className="border-t border-[#e8e6dc]">
-        <div className="max-w-[880px] mx-auto px-6 sm:px-8 py-16 lg:py-[88px] flex flex-col gap-8">
+        <div
+          className={`${sectionInner} py-16 lg:py-[88px] flex flex-col gap-8`}>
           <h2 className={h2Class}>{t('faq.title')}</h2>
           <div className="flex flex-col border-t border-[#e8e6dc]">
             {FAQ_KEYS.map(key => (
